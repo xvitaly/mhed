@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="mhed.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ShBin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">explorer.exe</Value>
+    </Setting>
+    <Setting Name="ShParam" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/select,</Value>
+    </Setting>
+    <Setting Name="EditorBin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">notepad.exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
