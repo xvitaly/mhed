@@ -166,4 +166,10 @@
   <data name="AHE_NoAdminRights" xml:space="preserve">
     <value>Local admin rights is required to perform requested action!</value>
   </data>
+  <data name="HtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HtTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="TmplFileName" xml:space="preserve">
+    <value>mhed.Resources.HtTemplate.txt</value>
+  </data>
 </root>
