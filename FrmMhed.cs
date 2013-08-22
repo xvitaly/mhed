@@ -50,47 +50,15 @@ namespace mhed
         private string GetHostsFileFullPath(int PlatformID = 0)
         {
             string Result = "";
-            if (PlatformID == 0)
-            {
-                try
-                {
-                    RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false);
-                    if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); }
-                    if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); }
-                }
-                catch
-                {
-                    Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
-                }
-                Result = Path.Combine(Result, "hosts");
-            }
-            else
-            {
-                Result = Path.Combine("/etc", "hosts");
-            }
+            if (PlatformID == 0) { try { RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false); if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); } if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } } catch { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } Result = Path.Combine(Result, "hosts"); } else { Result = Path.Combine("/etc", "hosts"); }
             return Result;
         }
 
         private string CleanStrWx(string RecvStr, bool CleanQuotes = false)
         {
-            while (RecvStr.IndexOf("\t") != -1)
-            {
-                RecvStr = RecvStr.Replace("\t", " ");
-            }
-
-            while (RecvStr.IndexOf("  ") != -1)
-            {
-                RecvStr = RecvStr.Replace("  ", " ");
-            }
-
-            if (CleanQuotes)
-            {
-                while (RecvStr.IndexOf('"') != -1)
-                {
-                    RecvStr = RecvStr.Replace(@"""", "");
-                }
-            }
-
+            while (RecvStr.IndexOf("\t") != -1) { RecvStr = RecvStr.Replace("\t", " "); }
+            while (RecvStr.IndexOf("  ") != -1) { RecvStr = RecvStr.Replace("  ", " "); }
+            if (CleanQuotes) { while (RecvStr.IndexOf('"') != -1) { RecvStr = RecvStr.Replace(@"""", ""); } }
             return RecvStr;
         }
 
@@ -100,24 +68,7 @@ namespace mhed
             HEd_Table.Rows.Clear();
             using (StreamReader OpenedHosts = new StreamReader(@FilePath, Encoding.Default))
             {
-                while (OpenedHosts.Peek() >= 0)
-                {
-                    ImpStr = OpenedHosts.ReadLine();
-                    ImpStr = ImpStr.Trim();
-                    if (!(String.IsNullOrEmpty(ImpStr)))
-                    {
-                        if (ImpStr[0] != '#')
-                        {
-                            ImpStr = CleanStrWx(ImpStr);
-                            if (ImpStr.IndexOf(" ") != -1)
-                            {
-                                Buf = ImpStr.Substring(0, ImpStr.IndexOf(" "));
-                                ImpStr = ImpStr.Remove(0, ImpStr.IndexOf(" ") + 1);
-                                HEd_Table.Rows.Add(Buf, ImpStr);
-                            }
-                        }
-                    }
-                }
+                while (OpenedHosts.Peek() >= 0) { ImpStr = OpenedHosts.ReadLine(); ImpStr = ImpStr.Trim(); if (!(String.IsNullOrEmpty(ImpStr))) { if (ImpStr[0] != '#') { ImpStr = CleanStrWx(ImpStr); if (ImpStr.IndexOf(" ") != -1) { Buf = ImpStr.Substring(0, ImpStr.IndexOf(" ")); ImpStr = ImpStr.Remove(0, ImpStr.IndexOf(" ") + 1); HEd_Table.Rows.Add(Buf, ImpStr); } } } }
             }
         }
 
