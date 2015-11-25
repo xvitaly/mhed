@@ -118,9 +118,9 @@ namespace mhed
         private void frmHEd_Load(object sender, EventArgs e)
         {
             if (!(IsCurrentUserAdmin())) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
-            this.Text = String.Format(this.Text, Assembly.GetEntryAssembly().GetName().Version.ToString());
+            Text = String.Format(Text, Assembly.GetEntryAssembly().GetName().Version.ToString());
             HostsFilePath = GetHostsFileFullPath(DetectRunningOS());
-            if (File.Exists(HostsFilePath)) { HEd_St_Wrn.Text = HostsFilePath; try { ReadHostsToTable(HostsFilePath); } catch { MessageBox.Show(String.Format(RM.GetString("AHE_ExceptionDetected"), HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning)); } } else { MessageBox.Show(String.Format(RM.GetString("AHE_NoFileDetected"), HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); this.Close(); }
+            if (File.Exists(HostsFilePath)) { HEd_St_Wrn.Text = HostsFilePath; try { ReadHostsToTable(HostsFilePath); } catch { MessageBox.Show(String.Format(RM.GetString("AHE_ExceptionDetected"), HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning)); } } else { MessageBox.Show(String.Format(RM.GetString("AHE_NoFileDetected"), HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); Close(); }
         }
 
         private void HEd_T_Refresh_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace mhed
 
         private void HEd_M_Quit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void HEd_M_RestDef_Click(object sender, EventArgs e)
