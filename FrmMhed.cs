@@ -115,7 +115,6 @@ namespace mhed
                         }
                     }
                 }
-                CFile.Close();
             }
         }
 
