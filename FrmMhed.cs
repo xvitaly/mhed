@@ -65,11 +65,13 @@ namespace mhed
 
         private void ReadHostsToTable(string FilePath)
         {
-            string ImpStr, Buf;
             HEd_Table.Rows.Clear();
-            using (StreamReader OpenedHosts = new StreamReader(@FilePath, Encoding.Default))
+            if (File.Exists(FilePath))
             {
-                while (OpenedHosts.Peek() >= 0) { ImpStr = OpenedHosts.ReadLine(); ImpStr = ImpStr.Trim(); if (!(String.IsNullOrEmpty(ImpStr))) { if (ImpStr[0] != '#') { ImpStr = CleanStrWx(ImpStr); if (ImpStr.IndexOf(" ") != -1) { Buf = ImpStr.Substring(0, ImpStr.IndexOf(" ")); ImpStr = ImpStr.Remove(0, ImpStr.IndexOf(" ") + 1); HEd_Table.Rows.Add(Buf, ImpStr); } } } }
+                using (StreamReader OpenedHosts = new StreamReader(FilePath, Encoding.Default))
+                {
+                    while (OpenedHosts.Peek() >= 0) { string ImpStr = CleanStrWx(OpenedHosts.ReadLine()); if (!(String.IsNullOrEmpty(ImpStr))) { if (ImpStr[0] != '#') { int SpPos = ImpStr.IndexOf(" "); if (SpPos != -1) { HEd_Table.Rows.Add(ImpStr.Substring(0, SpPos), ImpStr.Remove(0, SpPos + 1)); } } } }
+                }
             }
         }
 
