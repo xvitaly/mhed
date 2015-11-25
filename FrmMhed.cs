@@ -20,10 +20,11 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using System.IO;
+using System.Resources;
 using System.Diagnostics;
 using System.Reflection;
 using System.Security.Principal;
-using System.Resources;
+using System.Security.Permissions;
 using System.Net;
 
 namespace mhed
@@ -117,6 +118,12 @@ namespace mhed
                 CFile.Close();
             }
         }
+
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        private void OpenWebPage(string URI)
+        {
+            try { Process.Start(URI); } catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+        }
         
         private void frmHEd_Load(object sender, EventArgs e)
         {
@@ -153,7 +160,7 @@ namespace mhed
 
         private void HEd_M_OnlHelp_Click(object sender, EventArgs e)
         {
-            Process.Start(Properties.Resources.AppHelpURL);
+            OpenWebPage(Properties.Resources.AppHelpURL);
         }
 
         private void HEd_M_About_Click(object sender, EventArgs e)
@@ -213,7 +220,7 @@ namespace mhed
 
         private void HEd_M_RepBug_Click(object sender, EventArgs e)
         {
-            Process.Start(Properties.Resources.AppBtURL);
+            OpenWebPage(Properties.Resources.AppBtURL);
         }
         #endregion
     }
