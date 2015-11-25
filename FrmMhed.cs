@@ -24,6 +24,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Security.Principal;
 using System.Resources;
+using System.Net;
 
 namespace mhed
 {
@@ -109,9 +110,11 @@ namespace mhed
                 {
                     if ((HEd_Table.Rows[i].Cells[0].Value != null) && (HEd_Table.Rows[i].Cells[1].Value != null))
                     {
-                        CFile.Write(HEd_Table.Rows[i].Cells[0].Value.ToString());
-                        CFile.Write(" ");
-                        CFile.WriteLine(HEd_Table.Rows[i].Cells[1].Value.ToString());
+                        IPAddress IPAddr;
+                        if (IPAddress.TryParse(HEd_Table.Rows[i].Cells[0].Value.ToString(), out IPAddr))
+                        {
+                            CFile.WriteLine("{0} {1}", IPAddr, HEd_Table.Rows[i].Cells[1].Value);
+                        }
                     }
                 }
                 CFile.Close();
