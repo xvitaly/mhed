@@ -54,12 +54,13 @@ namespace mhed
             return Result;
         }
 
-        private string CleanStrWx(string RecvStr, bool CleanQuotes = false)
+        private string CleanStrWx(string RecvStr, bool CleanQuotes = false, bool CleanSlashes = false)
         {
             while (RecvStr.IndexOf("\t") != -1) { RecvStr = RecvStr.Replace("\t", " "); }
             while (RecvStr.IndexOf("  ") != -1) { RecvStr = RecvStr.Replace("  ", " "); }
             if (CleanQuotes) { while (RecvStr.IndexOf('"') != -1) { RecvStr = RecvStr.Replace(@"""", ""); } }
-            return RecvStr;
+            if (CleanSlashes) { while (RecvStr.IndexOf(@"\\") != -1) { RecvStr = RecvStr.Replace(@"\\", @"\"); } }
+            return RecvStr.Trim();
         }
 
         private void ReadHostsToTable(string FilePath)
