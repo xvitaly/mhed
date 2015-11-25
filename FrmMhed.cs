@@ -103,7 +103,7 @@ namespace mhed
 
         private void WriteTableToHosts(string Path)
         {
-            using (StreamWriter CFile = new StreamWriter(Path))
+            using (StreamWriter CFile = new StreamWriter(Path, false, Encoding.Default))
             {
                 try { if (DetectRunningOS() == 0) { CFile.WriteLine(GetTemplateFromResource(Properties.Resources.TmplFileName)); } } catch { }
                 for (int i = 0; i < HEd_Table.Rows.Count - 1; i++)
