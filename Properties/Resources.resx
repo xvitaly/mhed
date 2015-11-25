@@ -172,4 +172,7 @@
   <data name="TmplFileName" xml:space="preserve">
     <value>mhed.Resources.HtTemplate.txt</value>
   </data>
+  <data name="AppHelpURL" xml:space="preserve">
+    <value>https://www.easycoding.org/projects/mhed</value>
+  </data>
 </root>

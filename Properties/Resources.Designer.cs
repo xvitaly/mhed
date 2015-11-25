@@ -88,6 +88,15 @@ namespace mhed.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://www.easycoding.org/projects/mhed.
+        /// </summary>
+        internal static string AppHelpURL {
+            get {
+                return ResourceManager.GetString("AppHelpURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Micro Hosts Editor.
         /// </summary>
         internal static string AppName {

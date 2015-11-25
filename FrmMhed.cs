@@ -156,7 +156,7 @@ namespace mhed
 
         private void HEd_M_OnlHelp_Click(object sender, EventArgs e)
         {
-            Process.Start(String.Format("http://code.google.com/p/srcrepair/wiki/HostsEditorPlugin_{0}", RM.GetString("AppLangPrefix")));
+            Process.Start(Properties.Resources.AppHelpURL);
         }
 
         private void HEd_M_About_Click(object sender, EventArgs e)
