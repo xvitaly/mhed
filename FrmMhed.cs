@@ -90,15 +90,12 @@ namespace mhed
 
         private string GetTemplateFromResource(string FileName)
         {
-            string result = "";
-            using (Stream Strm = Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName))
+            string Result = "";
+            using (StreamReader Reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName)))
             {
-                using (StreamReader Reader = new StreamReader(Strm))
-                {
-                    result = Reader.ReadToEnd();
-                }
+                Result = Reader.ReadToEnd();
             }
-            return result;
+            return Result;
         }
 
         private void WriteTableToHosts(string Path)
