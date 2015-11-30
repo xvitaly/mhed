@@ -164,7 +164,7 @@ namespace mhed
 
         private void HEd_M_About_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(String.Format("{0} by {1}. Version: {2}.", Properties.Resources.AppName, "V1TSK", Assembly.GetEntryAssembly().GetName().Version.ToString()), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(String.Format("{0} by {1}. Version: {2}.", Properties.Resources.AppName, "EasyCoding Team", Assembly.GetEntryAssembly().GetName().Version.ToString()), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void HEd_T_RemRw_Click(object sender, EventArgs e)
