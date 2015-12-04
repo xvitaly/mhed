@@ -130,6 +130,11 @@ namespace mhed
             object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
             return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : null;
         }
+
+        private Version GetAppVersion()
+        {
+            return Assembly.GetEntryAssembly().GetName().Version;
+        }
         
         private void frmHEd_Load(object sender, EventArgs e)
         {
@@ -171,7 +176,7 @@ namespace mhed
 
         private void HEd_M_About_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(String.Format("{0} by {1}. Version: {2}.", Properties.Resources.AppName, GetAppCompany(), Assembly.GetEntryAssembly().GetName().Version.ToString()), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(String.Format("{0} by {1}. Version: {2}.", Properties.Resources.AppName, GetAppCompany(), GetAppVersion()), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void HEd_T_RemRw_Click(object sender, EventArgs e)
