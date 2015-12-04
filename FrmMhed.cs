@@ -42,6 +42,13 @@ namespace mhed
         #endregion
 
         #region IM
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        private void OpenWebPage(string URI)
+        {
+            try { Process.Start(URI); }
+            catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+        }
+
         private bool IsCurrentUserAdmin()
         {
             bool Result;
@@ -116,12 +123,6 @@ namespace mhed
                     }
                 }
             }
-        }
-
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
-        private void OpenWebPage(string URI)
-        {
-            try { Process.Start(URI); } catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
         
         private void frmHEd_Load(object sender, EventArgs e)
