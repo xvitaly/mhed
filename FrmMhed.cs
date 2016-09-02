@@ -51,22 +51,17 @@ namespace mhed
         [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
         private void OpenWebPage(string URI)
         {
-            try { Process.Start(URI); }
-            catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            try { Process.Start(URI); } catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private bool IsCurrentUserAdmin()
         {
-            bool Result;
-            try { WindowsPrincipal UP = new WindowsPrincipal(WindowsIdentity.GetCurrent()); Result = UP.IsInRole(WindowsBuiltInRole.Administrator); } catch { Result = false; }
-            return Result;
+            bool Result; try { WindowsPrincipal UP = new WindowsPrincipal(WindowsIdentity.GetCurrent()); Result = UP.IsInRole(WindowsBuiltInRole.Administrator); } catch { Result = false; } return Result;
         }
 
         private string GetHostsFileFullPath(int PlatformID = 0)
         {
-            string Result = "";
-            if (PlatformID == 0) { try { RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false); if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); } if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } } catch { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } Result = Path.Combine(Result, "hosts"); } else { Result = Path.Combine("/etc", "hosts"); }
-            return Result;
+            string Result = ""; if (PlatformID == 0) { try { RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false); if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); } if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } } catch { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } Result = Path.Combine(Result, "hosts"); } else { Result = Path.Combine("/etc", "hosts"); } return Result;
         }
 
         private string CleanStrWx(string RecvStr, bool CleanQuotes = false, bool CleanSlashes = false)
@@ -104,12 +99,7 @@ namespace mhed
 
         private string GetTemplateFromResource(string FileName)
         {
-            string Result = "";
-            using (StreamReader Reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName)))
-            {
-                Result = Reader.ReadToEnd();
-            }
-            return Result;
+            string Result = String.Empty; using (StreamReader Reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName))) { Result = Reader.ReadToEnd(); } return Result;
         }
 
         private void WriteTableToHosts(string Path)
@@ -134,7 +124,7 @@ namespace mhed
         private string GetAppCompany()
         {
             object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-            return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : null;
+            return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty;
         }
 
         private Version GetAppVersion()
@@ -145,7 +135,7 @@ namespace mhed
         private void frmHEd_Load(object sender, EventArgs e)
         {
             if (!(IsCurrentUserAdmin())) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
-            Text = String.Format(Text, Assembly.GetEntryAssembly().GetName().Version.ToString());
+            Text = String.Format(Text, GetAppVersion());
             HostsFilePath = GetHostsFileFullPath(DetectRunningOS());
             if (File.Exists(HostsFilePath)) { HEd_St_Wrn.Text = HostsFilePath; try { ReadHostsToTable(HostsFilePath); } catch { MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning)); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); Close(); }
         }
