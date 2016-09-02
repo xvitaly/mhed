@@ -138,4 +138,7 @@
   <data name="AppLangPrefix" xml:space="preserve">
     <value>en</value>
   </data>
+  <data name="AHE_NoAdminRights" xml:space="preserve">
+    <value>Local admin rights is required to perform requested action!</value>
+  </data>
 </root>

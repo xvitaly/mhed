@@ -138,4 +138,7 @@
   <data name="AppLangPrefix" xml:space="preserve">
     <value>ru</value>
   </data>
+  <data name="AHE_NoAdminRights" xml:space="preserve">
+    <value>Для выполнения этого действия необходимы права локального администратора!</value>
+  </data>
 </root>
