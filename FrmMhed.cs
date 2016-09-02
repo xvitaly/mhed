@@ -107,14 +107,14 @@ namespace mhed
             using (StreamWriter CFile = new StreamWriter(Path, false, Encoding.Default))
             {
                 try { if (DetectRunningOS() == 0) { CFile.WriteLine(GetTemplateFromResource(Properties.Resources.TmplFileName)); } } catch { }
-                for (int i = 0; i < HEd_Table.Rows.Count - 1; i++)
+                foreach (DataGridViewRow Row in HEd_Table.Rows)
                 {
-                    if ((HEd_Table.Rows[i].Cells[0].Value != null) && (HEd_Table.Rows[i].Cells[1].Value != null))
+                    if ((Row.Cells[0].Value != null) && (Row.Cells[1].Value != null))
                     {
                         IPAddress IPAddr;
-                        if (IPAddress.TryParse(HEd_Table.Rows[i].Cells[0].Value.ToString(), out IPAddr))
+                        if (IPAddress.TryParse(Row.Cells[0].Value.ToString(), out IPAddr))
                         {
-                            CFile.WriteLine("{0} {1}", IPAddr, HEd_Table.Rows[i].Cells[1].Value);
+                            CFile.WriteLine("{0} {1}", IPAddr, Row.Cells[1].Value);
                         }
                     }
                 }
