@@ -44,7 +44,7 @@ namespace mhed
         }
 
         #region IV
-        private string HostsFilePath = "";
+        private string HostsFilePath { get; set; }
         #endregion
 
         #region IM
