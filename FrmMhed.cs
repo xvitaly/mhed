@@ -45,7 +45,6 @@ namespace mhed
 
         #region IV
         private string HostsFilePath = "";
-        ResourceManager RM = new ResourceManager("mhed.AppStrings", typeof(frmHEd).Assembly);
         #endregion
 
         #region IM
@@ -148,17 +147,17 @@ namespace mhed
             if (!(IsCurrentUserAdmin())) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
             Text = String.Format(Text, Assembly.GetEntryAssembly().GetName().Version.ToString());
             HostsFilePath = GetHostsFileFullPath(DetectRunningOS());
-            if (File.Exists(HostsFilePath)) { HEd_St_Wrn.Text = HostsFilePath; try { ReadHostsToTable(HostsFilePath); } catch { MessageBox.Show(String.Format(RM.GetString("AHE_ExceptionDetected"), HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning)); } } else { MessageBox.Show(String.Format(RM.GetString("AHE_NoFileDetected"), HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); Close(); }
+            if (File.Exists(HostsFilePath)) { HEd_St_Wrn.Text = HostsFilePath; try { ReadHostsToTable(HostsFilePath); } catch { MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning)); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); Close(); }
         }
 
         private void HEd_T_Refresh_Click(object sender, EventArgs e)
         {
-            try { ReadHostsToTable(HostsFilePath); } catch { MessageBox.Show(String.Format(RM.GetString("AHE_ExceptionDetected"), HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            try { ReadHostsToTable(HostsFilePath); } catch { MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void HEd_T_Save_Click(object sender, EventArgs e)
         {
-            if (IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(RM.GetString("AHE_Saved"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch { MessageBox.Show(String.Format(RM.GetString("AHE_SaveException"), HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(RM.GetString("AHE_NoAdminRights"), HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            if (IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch { MessageBox.Show(String.Format(AppStrings.AHE_SaveException, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void HEd_M_Quit_Click(object sender, EventArgs e)
@@ -168,7 +167,7 @@ namespace mhed
 
         private void HEd_M_RestDef_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(RM.GetString("AHE_RestDef"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(AppStrings.AHE_RestDef, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 HEd_Table.Rows.Clear();
                 HEd_Table.Rows.Add("127.0.0.1", "localhost");
@@ -203,7 +202,7 @@ namespace mhed
 
         private void HEd_St_Wrn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(String.Format(RM.GetString("AHE_HMessg"), HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, HostsFilePath)); } catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
