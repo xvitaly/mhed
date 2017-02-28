@@ -4,7 +4,7 @@ Micro Hosts Editor is a small, simple, crossplatform and completely free and ope
 
 System requirements
 ===
-Supported Windows OS: Windows 7 SP1+, GNU/Linux (mono), MacOS X (mono).
+Supported OS: Windows 7 SP1+ (.NET CLR), GNU/Linux (mono), MacOS X (mono).
 
 Dependencies on Windows: [Microsoft .NET Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981).
 
