@@ -60,7 +60,7 @@ namespace mhed
 
         private string GetHostsFileFullPath(int PlatformID = 0)
         {
-            string Result = ""; if (PlatformID == 0) { try { RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false); if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); } if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } } catch { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } Result = Path.Combine(Result, "hosts"); } else { Result = Path.Combine("/etc", "hosts"); } return Result;
+            string Result = String.Empty; if (PlatformID == 0) { try { RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false); if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); } if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } } catch { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } Result = Path.Combine(Result, "hosts"); } else { Result = Path.Combine("/etc", "hosts"); } return Result;
         }
 
         private string CleanStrWx(string RecvStr, bool CleanQuotes = false, bool CleanSlashes = false)
