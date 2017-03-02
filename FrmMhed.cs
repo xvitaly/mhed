@@ -27,7 +27,6 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using System.IO;
-using System.Resources;
 using System.Diagnostics;
 using System.Reflection;
 using System.Security.Principal;
