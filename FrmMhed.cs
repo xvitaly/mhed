@@ -17,8 +17,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
- * EasyCoding Team's official site: http://www.easycoding.org/
- * Official project homepage: http://www.easycoding.org/projects/mhed
+ * EasyCoding Team's official site: https://www.easycoding.org/
+ * Official project homepage: https://www.easycoding.org/projects/mhed
  * 
 */
 using System;
