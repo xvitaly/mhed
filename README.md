@@ -1,5 +1,6 @@
-Intro [![Build Status](https://travis-ci.org/xvitaly/mhed.svg?branch=master)](https://travis-ci.org/xvitaly/mhed)
+Intro
 ===
+[![GitHub version](https://badge.fury.io/gh/xvitaly%2Fmhed.svg)](https://github.com/xvitaly/mhed/releases) [![Build Status](https://travis-ci.org/xvitaly/mhed.svg?branch=master)](https://travis-ci.org/xvitaly/mhed) [![Build status](https://ci.appveyor.com/api/projects/status/62popypw8fmmpxsq?svg=true)](https://ci.appveyor.com/project/xvitaly/mhed)
 Micro Hosts Editor is a small, simple, crossplatform and completely free and open-source tool. You can edit your Hosts file using simple GUI.
 
 System requirements
