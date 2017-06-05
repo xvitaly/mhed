@@ -135,7 +135,7 @@ namespace mhed
             return Assembly.GetEntryAssembly().GetName().Version;
         }
         
-        private void frmHEd_Load(object sender, EventArgs e)
+        private void FrmHEd_Load(object sender, EventArgs e)
         {
             if (!(IsCurrentUserAdmin())) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
             Text = String.Format(Text, GetAppVersion());

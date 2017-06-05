@@ -288,7 +288,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmHEd";
-            this.Load += new System.EventHandler(this.frmHEd_Load);
+            this.Load += new System.EventHandler(this.FrmHEd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HEd_Table)).EndInit();
             this.HEd_MTool.ResumeLayout(false);
             this.HEd_MTool.PerformLayout();
