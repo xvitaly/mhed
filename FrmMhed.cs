@@ -35,9 +35,9 @@ using System.Net;
 
 namespace mhed
 {
-    public partial class frmHEd : Form
+    public partial class FrmHEd : Form
     {
-        public frmHEd()
+        public FrmHEd()
         {
             InitializeComponent();
         }

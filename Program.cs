@@ -57,7 +57,7 @@ namespace mhed
                             }
                         }
                     }
-                    Application.Run(new frmHEd());
+                    Application.Run(new FrmHEd());
                 }
                 else
                 {

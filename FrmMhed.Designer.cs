@@ -1,6 +1,6 @@
 ﻿namespace mhed
 {
-    partial class frmHEd
+    partial class FrmHEd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHEd));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHEd));
             this.HEd_Table = new System.Windows.Forms.DataGridView();
             this.HDV_IPAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HDV_Domain = new System.Windows.Forms.DataGridViewTextBoxColumn();
