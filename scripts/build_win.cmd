@@ -8,5 +8,5 @@ cd "..\src\bin\Release"
 
 echo Signing binaries...
 "%ProgramFiles(x86)%\GNU\GnuPG\gpg2.exe" --sign --detach-sign --default-key D45AB90A mhed.exe
-"%ProgramFiles(x86)%\GNU\GnuPG\gpg2.exe" --sign --detach-sign --default-key D45AB90A ru/srcrepair.resources.dll
+"%ProgramFiles(x86)%\GNU\GnuPG\gpg2.exe" --sign --detach-sign --default-key D45AB90A ru/mhed.resources.dll
 
