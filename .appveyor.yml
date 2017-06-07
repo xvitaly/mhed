@@ -10,7 +10,7 @@ build:
   parallel: true
   verbosity: normal
 after_build:
-- cmd: 7z a mhed_%APPVEYOR_REPO_COMMIT:~0,7%.7z %APPVEYOR_BUILD_FOLDER%\bin\%CONFIGURATION%
+- cmd: 7z a mhed_%APPVEYOR_REPO_COMMIT:~0,7%.7z %APPVEYOR_BUILD_FOLDER%\src\bin\%CONFIGURATION%
 artifacts:
 - path: mhed_*.7z
   name: snapshot
