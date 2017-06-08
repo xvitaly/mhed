@@ -72,7 +72,6 @@
             this.HDV_IPAddr,
             this.HDV_Domain});
             resources.ApplyResources(this.HEd_Table, "HEd_Table");
-            this.HEd_Table.MultiSelect = false;
             this.HEd_Table.Name = "HEd_Table";
             // 
             // HDV_IPAddr
@@ -274,7 +273,7 @@
             this.HEd_St_Wrn.MouseEnter += new System.EventHandler(this.HEd_St_Wrn_MouseEnter);
             this.HEd_St_Wrn.MouseLeave += new System.EventHandler(this.HEd_St_Wrn_MouseLeave);
             // 
-            // frmHEd
+            // FrmHEd
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -287,7 +286,7 @@
             this.MainMenuStrip = this.HEd_MMenu;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmHEd";
+            this.Name = "FrmHEd";
             this.Load += new System.EventHandler(this.FrmHEd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HEd_Table)).EndInit();
             this.HEd_MTool.ResumeLayout(false);

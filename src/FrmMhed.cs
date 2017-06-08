@@ -180,7 +180,14 @@ namespace mhed
 
         private void HEd_T_RemRw_Click(object sender, EventArgs e)
         {
-            try { if (HEd_Table.Rows.Count > 0) { HEd_Table.Rows.Remove(HEd_Table.CurrentRow); } } catch { }
+            try
+            {
+                foreach (DataGridViewCell Cell in HEd_Table.SelectedCells)
+                {
+                    if (Cell.Selected) { HEd_Table.Rows.RemoveAt(Cell.RowIndex); }
+                }
+            }
+            catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void HEd_St_Wrn_MouseEnter(object sender, EventArgs e)
