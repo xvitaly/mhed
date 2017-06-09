@@ -1,3 +1,5 @@
+%global debug_package %{nil}
+
 Name: pidgin-toobars
 Version: 0.7
 Release: 1%{?dist}
