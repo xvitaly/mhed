@@ -28,11 +28,14 @@ and open-source tool. You can edit your Hosts file using simple GUI.
 xbuild /p:Configuration=Release %{name}.sln
 
 %install
-
+install -d %{buildroot}/%{_prefix}/lib/%{name} %{buildroot}/%{_prefix}/lib/%{name}/ru
+install -m 0644 -p bin/Release/mhed.exe bin/Release/mhed.exe.config %{buildroot}/%{_prefix}/lib/%{name}
+install -m 0644 -p bin/Release/ru/mhed.resources.dll %{buildroot}/%{_prefix}/lib/%{name}/ru
 
 %files
 %doc README.md
 %license COPYING.txt
+%{_prefix}/lib/%{name}
 
 %changelog
 * Fri Jun 09 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 0.7-1
