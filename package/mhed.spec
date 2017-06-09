@@ -8,8 +8,12 @@ URL: https://github.com/xvitaly/mhed
 Source0: %{url}/archive/RELEASE-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
+BuildRequires: mono-winforms
 BuildRequires: mono-devel
+BuildRequires: desktop-file-utils
+
 Requires: mono-winforms
+Requires: hicolor-icon-theme
 
 %description
 Micro Hosts Editor is a small, simple, crossplatform and completely free
