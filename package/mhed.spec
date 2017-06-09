@@ -30,9 +30,6 @@ xbuild /p:Configuration=Release %{name}.sln
 %install
 
 
-%find_lang toobars
-rm -f %{buildroot}%{_libdir}/pidgin/toobars.la
-
 %files
 %doc README.md
 %license COPYING.txt
