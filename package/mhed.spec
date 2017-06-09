@@ -1,12 +1,12 @@
 %global debug_package %{nil}
 
-Name: pidgin-toobars
+Name: mhed
 Version: 0.7
 Release: 1%{?dist}
 Summary: Micro Hosts Editor
 
 License: GPLv3+
-URL: https://github.com/xvitaly/mhed
+URL: https://github.com/xvitaly/%{name}
 Source0: %{url}/archive/RELEASE-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
