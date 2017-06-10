@@ -110,7 +110,8 @@ namespace mhed
                 {
                     if ((Row.Cells[0].Value != null) && (Row.Cells[1].Value != null))
                     {
-                        if (IPAddress.TryParse(Row.Cells[0].Value.ToString(), out IPAddress IPAddr))
+                        IPAddress IPAddr;
+                        if (IPAddress.TryParse(Row.Cells[0].Value.ToString(), out IPAddr))
                         {
                             CFile.WriteLine("{0} {1}", IPAddr, Row.Cells[1].Value);
                         }
