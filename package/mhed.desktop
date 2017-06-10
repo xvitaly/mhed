@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Micro Hosts Editor
+GenericName=Hosts Editor
+Exec=mhed %u
+Icon=mhed
+Terminal=false
+Type=Application
+StartupWMClass=mhed
+Categories=Utility;
+Keywords=hosts;editor;
