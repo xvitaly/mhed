@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name: mhed
-Version: 0.7
+Version: 0.8
 Release: 1%{?dist}
 Summary: Micro Hosts Editor
 
@@ -22,7 +22,7 @@ Micro Hosts Editor is a small, simple, crossplatform and completely free
 and open-source tool. You can edit your Hosts file using simple GUI.
 
 %prep
-%autosetup -n %{name}-RELEASE-%{version} -p1
+%autosetup -p1
 
 %build
 xbuild /p:Configuration=Release %{name}.sln
@@ -55,5 +55,8 @@ fi
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.png
 
 %changelog
+* Sat Jun 10 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 0.8-1
+- Updated to version 0.8.
+
 * Fri Jun 09 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 0.7-1
 - First SPEC release.
