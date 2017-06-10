@@ -28,10 +28,11 @@ and open-source tool. You can edit your Hosts file using simple GUI.
 xbuild /p:Configuration=Release %{name}.sln
 
 %install
-install -d %{buildroot}/%{_prefix}/lib/%{name} %{buildroot}/%{_prefix}/lib/%{name}/ru %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
-install -m 0644 -p bin/Release/%{name}.exe bin/Release/%{name}.exe.config %{buildroot}/%{_prefix}/lib/%{name}
-install -m 0644 -p bin/Release/ru/%{name}.resources.dll %{buildroot}/%{_prefix}/lib/%{name}/ru
+install -d %{buildroot}%{_bindir} %{buildroot}%{_prefix}/lib/%{name} %{buildroot}%{_prefix}/lib/%{name}/ru %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
+install -m 0755 -p package/%{name}.sh %{buildroot}%{_bindir}/%{name}
 install -m 0644 -p package/%{name}.svg %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
+install -m 0644 -p bin/Release/%{name}.exe bin/Release/%{name}.exe.config %{buildroot}%{_prefix}/lib/%{name}
+install -m 0644 -p bin/Release/ru/%{name}.resources.dll %{buildroot}%{_prefix}/lib/%{name}/ru
 desktop-file-install --dir=%{buildroot}%{_datadir}/applications package/%{name}.desktop
 
 %post
@@ -50,6 +51,8 @@ fi
 %doc README.md
 %license COPYING.txt
 %{_prefix}/lib/%{name}
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/icons/hicolor/scalable/apps/%{name}.png
 
 %changelog
 * Fri Jun 09 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 0.7-1
