@@ -31,8 +31,8 @@ xbuild /p:Configuration=Release %{name}.sln
 install -d %{buildroot}%{_bindir} %{buildroot}%{_prefix}/lib/%{name} %{buildroot}%{_prefix}/lib/%{name}/ru %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
 install -m 0755 -p package/%{name}.sh %{buildroot}%{_bindir}/%{name}
 install -m 0644 -p package/%{name}.svg %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
-install -m 0644 -p bin/Release/%{name}.exe bin/Release/%{name}.exe.config %{buildroot}%{_prefix}/lib/%{name}
-install -m 0644 -p bin/Release/ru/%{name}.resources.dll %{buildroot}%{_prefix}/lib/%{name}/ru
+install -m 0644 -p src/bin/Release/%{name}.exe src/bin/Release/%{name}.exe.config %{buildroot}%{_prefix}/lib/%{name}
+install -m 0644 -p src/bin/Release/ru/%{name}.resources.dll %{buildroot}%{_prefix}/lib/%{name}/ru
 desktop-file-install --dir=%{buildroot}%{_datadir}/applications package/%{name}.desktop
 
 %post
@@ -50,9 +50,10 @@ fi
 %files
 %doc README.md
 %license COPYING.txt
+%{_bindir}/%{name}
 %{_prefix}/lib/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/icons/hicolor/scalable/apps/%{name}.png
+%{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 
 %changelog
 * Sat Jun 10 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 0.8.0-1
