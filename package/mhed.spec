@@ -8,8 +8,6 @@ Summary: Micro Hosts Editor
 License: GPLv3+
 URL: https://github.com/xvitaly/%{name}
 Source0: %{url}/archive/RELEASE-%{version}.tar.gz#/%{name}-%{version}.tar.gz
-Source1: %{name}.desktop
-Source2: %{name}.sh
 BuildArch: noarch
 
 BuildRequires: mono-winforms
@@ -30,9 +28,11 @@ and open-source tool. You can edit your Hosts file using simple GUI.
 xbuild /p:Configuration=Release %{name}.sln
 
 %install
-install -d %{buildroot}/%{_prefix}/lib/%{name} %{buildroot}/%{_prefix}/lib/%{name}/ru
+install -d %{buildroot}/%{_prefix}/lib/%{name} %{buildroot}/%{_prefix}/lib/%{name}/ru %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
 install -m 0644 -p bin/Release/%{name}.exe bin/Release/%{name}.exe.config %{buildroot}/%{_prefix}/lib/%{name}
 install -m 0644 -p bin/Release/ru/%{name}.resources.dll %{buildroot}/%{_prefix}/lib/%{name}/ru
+install -m 0644 -p package/%{name}.svg %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
+desktop-file-install --dir=%{buildroot}%{_datadir}/applications package/%{name}.desktop
 
 %files
 %doc README.md
