@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name: mhed
-Version: 0.8
+Version: 0.8.0
 Release: 1%{?dist}
 Summary: Micro Hosts Editor
 
@@ -55,8 +55,8 @@ fi
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.png
 
 %changelog
-* Sat Jun 10 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 0.8-1
+* Sat Jun 10 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 0.8.0-1
 - Updated to version 0.8.
 
-* Fri Jun 09 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 0.7-1
+* Fri Jun 09 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 0.7.0-1
 - First SPEC release.
