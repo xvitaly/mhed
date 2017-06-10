@@ -8,6 +8,8 @@ Summary: Micro Hosts Editor
 License: GPLv3+
 URL: https://github.com/xvitaly/%{name}
 Source0: %{url}/archive/RELEASE-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source1: %{name}.desktop
+Source2: %{name}.sh
 BuildArch: noarch
 
 BuildRequires: mono-winforms
