@@ -31,8 +31,8 @@ xbuild /p:Configuration=Release %{name}.sln
 
 %install
 install -d %{buildroot}/%{_prefix}/lib/%{name} %{buildroot}/%{_prefix}/lib/%{name}/ru
-install -m 0644 -p bin/Release/mhed.exe bin/Release/mhed.exe.config %{buildroot}/%{_prefix}/lib/%{name}
-install -m 0644 -p bin/Release/ru/mhed.resources.dll %{buildroot}/%{_prefix}/lib/%{name}/ru
+install -m 0644 -p bin/Release/%{name}.exe bin/Release/%{name}.exe.config %{buildroot}/%{_prefix}/lib/%{name}
+install -m 0644 -p bin/Release/ru/%{name}.resources.dll %{buildroot}/%{_prefix}/lib/%{name}/ru
 
 %files
 %doc README.md
