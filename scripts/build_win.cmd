@@ -10,6 +10,9 @@ echo Signing binaries...
 "%ProgramFiles(x86)%\GNU\GnuPG\gpg2.exe" --sign --detach-sign --default-key D45AB90A mhed.exe
 "%ProgramFiles(x86)%\GNU\GnuPG\gpg2.exe" --sign --detach-sign --default-key D45AB90A ru/mhed.resources.dll
 
+echo Converting README from Markdown to RTF...
+"%ProgramFiles(x86)%\Pandoc\pandoc.exe" -s README.md -o readme.rtf
+
 echo Compiling Installer...
 "%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" mhed.iss
 
