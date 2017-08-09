@@ -97,6 +97,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="..\README.md">
+      <Link>README.md</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="app.config" />
     <None Include="mhed.manifest" />
     <None Include="Properties\Settings.settings">
