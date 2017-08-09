@@ -138,6 +138,10 @@
       <Link>COPYING.txt</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\scripts\mhed.iss">
+      <Link>mhed.iss</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="mhed.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
