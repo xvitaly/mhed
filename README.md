@@ -14,10 +14,8 @@ Dependencies on other OS: mono, mono-winforms.
 
 Getting started
 =========================
-
 Download latest version from [releases page](https://github.com/xvitaly/mhed/releases/latest), unpack archive to any directory and then run `mhed.exe`.
 
 License
 =========================
-
 This program is licensed under the terms of General Public License version 3 (GNU GPLv3). Copy can be found in `COPYING.txt` file.
