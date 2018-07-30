@@ -1,4 +1,4 @@
-;
+п»ї;
 ;  Micro Hosts Editor (standalone application).
 ;  
 ;  Copyright 2011 - 2017 EasyCoding Team (ECTeam).
@@ -20,6 +20,13 @@
 ;  EasyCoding Team's official site: https://www.easycoding.org/
 ;  Official project homepage: https://www.easycoding.org/projects/mhed
 ;
+
+#define VERSION GetFileVersion("mhed.exe")
+#define CI_COMMIT GetEnv('CI_HASH')
+#if CI_COMMIT == ''
+#define _RELEASE 1
+#endif
+
 [Setup]
 AppId={{1A3295AB-919E-4E58-B2A3-1B8B9BF8E29D}
 AppName=Micro Hosts Editor
@@ -33,7 +40,11 @@ DefaultDirName={code:GetDefRoot}\Micro Hosts Editor
 DefaultGroupName=Micro Hosts Editor
 AllowNoIcons=yes
 LicenseFile=COPYING.txt
+#ifdef _RELEASE
 OutputBaseFilename=mhed_v08
+#else
+OutputBaseFilename=mhed_{#CI_COMMIT}
+#endif
 SetupIconFile=mhed.ico
 UninstallDisplayIcon={app}\mhed.exe
 InfoBeforeFile=readme.rtf
@@ -51,8 +62,8 @@ VersionInfoCompany=EasyCoding Team
 [CustomMessages]
 OptNetStatus=Optimizing MSIL binary...
 OptNetUninstallStatus=Removing optimized MSIL binaries...
-russian.OptNetStatus=Идёт оптимизация MSIL приложения...
-russian.OptNetUninstallStatus=Идёт удаление машинных сборок MSIL...
+russian.OptNetStatus=РРґС‘С‚ РѕРїС‚РёРјРёР·Р°С†РёСЏ MSIL РїСЂРёР»РѕР¶РµРЅРёСЏ...
+russian.OptNetUninstallStatus=РРґС‘С‚ СѓРґР°Р»РµРЅРёРµ РјР°С€РёРЅРЅС‹С… СЃР±РѕСЂРѕРє MSIL...
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
