@@ -47,7 +47,7 @@ OutputBaseFilename=mhed_{#CI_COMMIT}
 #endif
 SetupIconFile=mhed.ico
 UninstallDisplayIcon={app}\mhed.exe
-InfoBeforeFile=readme.rtf
+InfoBeforeFile=README.md
 Compression=lzma2
 SolidCompression=yes
 PrivilegesRequired=lowest
