@@ -76,9 +76,11 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 [Files]
 Source: "mhed.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "mhed.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "mhed.exe.sig"; DestDir: "{app}"; Flags: ignoreversion
 Source: "mhed.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 Source: "ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
+#ifdef _RELEASE
+Source: "mhed.exe.sig"; DestDir: "{app}"; Flags: ignoreversion
+#endif
 
 [Icons]
 Name: "{group}\Micro Hosts Editor"; Filename: "{app}\mhed.exe"
