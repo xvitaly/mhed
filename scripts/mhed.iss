@@ -1,8 +1,8 @@
 ﻿;
 ;  Micro Hosts Editor (standalone application).
 ;  
-;  Copyright 2011 - 2017 EasyCoding Team (ECTeam).
-;  Copyright 2005 - 2017 EasyCoding Team.
+;  Copyright 2011 - 2018 EasyCoding Team (ECTeam).
+;  Copyright 2005 - 2018 EasyCoding Team.
 ;  
 ;  This program is free software: you can redistribute it and/or modify
 ;  it under the terms of the GNU General Public License as published by
@@ -56,7 +56,7 @@ MinVersion=6.1.7601
 
 VersionInfoVersion={#VERSION}
 VersionInfoDescription=Micro Hosts Editor Setup
-VersionInfoCopyright=(c) 2005-2017 EasyCoding Team. All rights reserved.
+VersionInfoCopyright=(c) 2005-2018 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [CustomMessages]
