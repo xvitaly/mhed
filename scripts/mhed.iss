@@ -54,7 +54,7 @@ PrivilegesRequired=lowest
 ArchitecturesInstallIn64BitMode=x64
 MinVersion=6.1.7601
 
-VersionInfoVersion=0.8.0.315
+VersionInfoVersion={#VERSION}
 VersionInfoDescription=Micro Hosts Editor Setup
 VersionInfoCopyright=(c) 2005-2017 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
