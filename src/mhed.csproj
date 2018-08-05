@@ -101,6 +101,10 @@
       <Link>README.md</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\scripts\readme.rtf">
+      <Link>readme.rtf</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="app.config" />
     <None Include="mhed.manifest" />
     <None Include="Properties\Settings.settings">
