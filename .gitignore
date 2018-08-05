@@ -24,6 +24,7 @@
 *.sdf
 *.opensdf
 *.unsuccessfulbuild
+.vs
 ipch/
 obj/
 [Bb]in
@@ -61,7 +62,4 @@ packages/
 *.dbmdl
 
 # Test files
-*.testsettings 
-
-# Other
-/srcrepair/cfgs
+*.testsettings
