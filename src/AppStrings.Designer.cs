@@ -131,14 +131,5 @@ namespace mhed {
                 return ResourceManager.GetString("AppAlrLaunched", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to en.
-        /// </summary>
-        internal static string AppLangPrefix {
-            get {
-                return ResourceManager.GetString("AppLangPrefix", resourceCulture);
-            }
-        }
     }
 }

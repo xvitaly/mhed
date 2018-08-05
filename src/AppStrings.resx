@@ -135,9 +135,6 @@
   <data name="AHE_SaveException" xml:space="preserve">
     <value>Attention! An error occurred while writing to file {0}. Maybe you have not enough rights for this or someone is blocking write attempts.</value>
   </data>
-  <data name="AppLangPrefix" xml:space="preserve">
-    <value>en</value>
-  </data>
   <data name="AHE_NoAdminRights" xml:space="preserve">
     <value>Local admin rights is required to perform requested action!</value>
   </data>
