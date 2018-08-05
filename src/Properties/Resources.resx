@@ -139,9 +139,6 @@
   <data name="AppAlrLaunched" xml:space="preserve">
     <value>The program is already running. Starting the second copy is not allowed.</value>
   </data>
-  <data name="AppUnsupportedLanguage" xml:space="preserve">
-    <value>The specified locale is not supported at this time, so will use the default language.</value>
-  </data>
   <data name="Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
