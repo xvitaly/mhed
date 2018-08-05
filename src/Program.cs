@@ -45,7 +45,7 @@ namespace mhed
                 }
                 else
                 {
-                    MessageBox.Show(Properties.Resources.AppAlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.AppAlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Environment.Exit(16);
                 }
             }

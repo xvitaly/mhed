@@ -61,24 +61,6 @@ namespace mhed.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Local admin rights is required to perform requested action!.
-        /// </summary>
-        internal static string AHE_NoAdminRights {
-            get {
-                return ResourceManager.GetString("AHE_NoAdminRights", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The program is already running. Starting the second copy is not allowed..
-        /// </summary>
-        internal static string AppAlrLaunched {
-            get {
-                return ResourceManager.GetString("AppAlrLaunched", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to https://github.com/xvitaly/mhed/issues/new.
         /// </summary>
         internal static string AppBtURL {
