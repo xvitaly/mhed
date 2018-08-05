@@ -41,13 +41,13 @@ DefaultGroupName=Micro Hosts Editor
 AllowNoIcons=yes
 LicenseFile=COPYING.txt
 #ifdef _RELEASE
-OutputBaseFilename=mhed_v08
+OutputBaseFilename=mhed_v081
 #else
 OutputBaseFilename=mhed_{#CI_COMMIT}
 #endif
 SetupIconFile=mhed.ico
 UninstallDisplayIcon={app}\mhed.exe
-InfoBeforeFile=README.md
+InfoBeforeFile=readme.rtf
 Compression=lzma2
 SolidCompression=yes
 PrivilegesRequired=lowest
