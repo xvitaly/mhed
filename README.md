@@ -18,4 +18,4 @@ Download latest version from [releases page](https://github.com/xvitaly/mhed/rel
 
 License
 =========================
-This program is licensed under the terms of General Public License version 3 (GNU GPLv3). Copy can be found in `COPYING.txt` file.
+This program is licensed under the terms of General Public License version 3 (GNU GPLv3). Copy can be found in [COPYING.txt](COPYING.txt) file.
