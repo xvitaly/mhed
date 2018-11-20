@@ -21,7 +21,7 @@ rem along with this program. If not, see <http://www.gnu.org/licenses/>.
 set GPGKEY=A989AAAA
 
 echo Starting build process using MSBUILD...
-"%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\msbuild.exe" ..\mhed.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.6.1
+"%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\msbuild.exe" ..\mhed.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.7.1
 
 echo Changing directory to built version...
 cd "..\src\bin\Release"
