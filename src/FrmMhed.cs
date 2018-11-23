@@ -46,6 +46,22 @@ namespace mhed
         private string HostsFilePath { get; set; }
         #endregion
 
+        #region IH
+        private void ScaleTable(SizeF ScaleFactor)
+        {
+            foreach (DataGridViewColumn DgvColumn in HEd_Table.Columns)
+            {
+                DgvColumn.Width = (int)Math.Round(DgvColumn.Width * ScaleFactor.Width);
+            }
+        }
+
+        protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
+        {
+            base.ScaleControl(ScalingFactor, Bounds);
+            ScaleTable(ScalingFactor);
+        }
+        #endregion
+
         #region IM
         [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
         private void OpenWebPage(string URI)
