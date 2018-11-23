@@ -276,7 +276,7 @@
             // FrmHEd
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.HEd_MStatus);
             this.Controls.Add(this.HEd_MTool);
             this.Controls.Add(this.HEd_MMenu);
