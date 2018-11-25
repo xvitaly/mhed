@@ -101,8 +101,8 @@
       <Link>README.md</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\scripts\readme.rtf">
-      <Link>readme.rtf</Link>
+    <Content Include="..\scripts\readme_iss.rtf">
+      <Link>readme_iss.rtf</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="app.config" />
