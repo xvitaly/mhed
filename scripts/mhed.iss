@@ -41,7 +41,7 @@ DefaultGroupName=Micro Hosts Editor
 AllowNoIcons=yes
 LicenseFile=COPYING.txt
 #ifdef _RELEASE
-OutputBaseFilename=mhed_v081
+OutputBaseFilename=mhed_v090
 #else
 OutputBaseFilename=mhed_{#CI_COMMIT}
 #endif
