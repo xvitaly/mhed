@@ -29,7 +29,7 @@ after_build:
 
     "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" packaging\inno\mhed.iss
 artifacts:
-- path: packaging\results\mhed_*.7z
+- path: packaging\results\snapshot_*.7z
   name: snapshot
-- path: packaging\results\mhed_*.exe
+- path: packaging\results\snapshot_*.exe
   name: innosetup

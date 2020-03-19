@@ -41,7 +41,7 @@ OutputDir=..\results
 #ifdef _RELEASE
 OutputBaseFilename=mhed_v100
 #else
-OutputBaseFilename=mhed_{#CI_COMMIT}
+OutputBaseFilename=snapshot_{#CI_COMMIT}
 #endif
 SetupIconFile={#BASEDIR}\mhed.ico
 UninstallDisplayIcon={app}\mhed.exe
