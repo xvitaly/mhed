@@ -101,10 +101,6 @@
       <Link>README.md</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\scripts\readme_iss.rtf">
-      <Link>readme_iss.rtf</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="app.config" />
     <None Include="mhed.manifest" />
     <None Include="Properties\Settings.settings">
@@ -144,10 +140,6 @@
   <ItemGroup>
     <Content Include="..\COPYING.txt">
       <Link>COPYING.txt</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\scripts\mhed.iss">
-      <Link>mhed.iss</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="mhed.ico">
