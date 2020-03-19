@@ -13,8 +13,6 @@ assembly_info:
   assembly_version: '{version}'
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
-before_build:
-- cmd: pip3 install sphinx
 build:
   project: mhed.sln
   parallel: true
