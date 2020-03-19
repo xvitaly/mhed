@@ -138,8 +138,8 @@
     <None Include="Resources\Refresh.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\COPYING.txt">
-      <Link>COPYING.txt</Link>
+    <Content Include="..\COPYING">
+      <Link>COPYING</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="mhed.ico">
