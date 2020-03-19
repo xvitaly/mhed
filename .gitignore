@@ -63,3 +63,7 @@ packages/
 
 # Test files
 *.testsettings
+
+# Other
+/packaging/results
+/doxyout
