@@ -8,7 +8,7 @@ System requirements
 =========================
 Supported OS: Windows 7 SP1+ (.NET CLR), GNU/Linux (mono), MacOS X (mono).
 
-Dependencies on Windows: [Microsoft .NET Framework 4.7.1](https://www.microsoft.com/net/download/dotnet-framework-runtime).
+Dependencies on Windows: [Microsoft .NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
 
 Dependencies on other OS: mono, mono-winforms.
 
