@@ -19,19 +19,23 @@ rem You should have received a copy of the GNU General Public License
 rem along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 set GPGKEY=A989AAAA
+set RELVER=100
+
+echo Removing previous build results...
+if exist results rd /S /Q results
 
 echo Starting build process using MSBUILD...
-"%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\msbuild.exe" ..\mhed.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.7.1
-
-echo Changing directory to built version...
-cd "..\src\bin\Release"
+"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ..\mhed.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.7.2
 
 echo Signing binaries...
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% mhed.exe
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ru/mhed.resources.dll
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\bin\Release\mhed.exe
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\bin\Release\ru\mhed.resources.dll
 
 echo Compiling Installer...
-"%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" mhed.iss
+"%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" inno\mhed.iss
+
+echo Generating archive for non-Windows platforms...
+"%PROGRAMFILES%\7-Zip\7z.exe" a -m0=LZMA2 -mx9 -t7z -x!*.ico "results\mhed_v%RELVER%.7z" ".\..\src\bin\Release\*"
 
 echo Signing installer...
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% Output\mhed_*.exe
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\mhed_v%RELVER%.exe
