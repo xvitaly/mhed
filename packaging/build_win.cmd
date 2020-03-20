@@ -28,6 +28,12 @@ if exist results rd /S /Q results
 echo Starting build process using MSBUILD...
 "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ..\mhed.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.7.2
 
+echo Generating documentation in HTML format...
+mkdir "..\src\bin\Release\help"
+pushd helpers
+call "build_chm_win.cmd"
+popd
+
 echo Signing binaries...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\bin\Release\mhed.exe
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\bin\Release\ru\mhed.resources.dll
@@ -42,6 +48,8 @@ echo Signing installer...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\mhed_v%RELVER%.exe
 
 echo Removing temporary files and directories...
+rd /S /Q "..\docs\build\doctrees"
+rd /S /Q "..\docs\build\htmlhelp"
 rd /S /Q "..\src\bin"
 rd /S /Q "..\src\obj"
 rd /S /Q "..\doxyout"
