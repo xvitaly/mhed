@@ -19,7 +19,7 @@ rem
 rem You should have received a copy of the GNU General Public License
 rem along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-title CHM builder for SRC Repair
+title CHM builder for Micro Hosts Editor
 
 echo Building offline help for default (EN) locale...
 call "..\..\docs\make.cmd" htmlhelp
