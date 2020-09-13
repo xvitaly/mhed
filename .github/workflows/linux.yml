@@ -1,0 +1,19 @@
+name: Linux CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install nuget
+      run: |
+        sudo apt-get update
+        sudo apt-get -y install nuget
+    - name: Restore nuget dependencies
+      run: nuget restore mhed.sln
+    - name: Build project
+      run: msbuild /p:Configuration=Release mhed.sln
