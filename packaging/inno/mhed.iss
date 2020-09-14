@@ -66,7 +66,7 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,locale\ru\cm.isl"
 
 [Components]
 Name: "core"; Description: "{cm:CompCoreDesc}"; Types: full compact custom; Flags: fixed
-Name: "debug"; Description: "{cm:CompDebugDesc}"; Types: full compact custom
+Name: "debug"; Description: "{cm:CompDebugDesc}"; Types: full
 Name: "locales"; Description: "{cm:CompLocalesMetaDesc}"; Types: full
 Name: "locales\en"; Description: "{cm:CompLocaleEnDesc}"; Types: full
 Name: "locales\ru"; Description: "{cm:CompLocaleRuDesc}"; Types: full
