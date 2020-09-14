@@ -13,19 +13,24 @@ assembly_info:
   assembly_version: '{version}'
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
+before_build:
+- cmd: >-
+    set PATH=C:\Python38-x64;C:\Python38-x64\Scripts;%PATH%
+
+    pip3 install sphinx
+
+    nuget restore
 build:
   project: mhed.sln
   parallel: true
   verbosity: normal
 after_build:
 - cmd: >-
-    set PATH=C:\Python37-x64;C:\Python37-x64\Scripts;%PATH%
+    set PATH=C:\Python38-x64;C:\Python38-x64\Scripts;%PATH%
 
     set CI_DIR=%APPVEYOR_BUILD_FOLDER%\src\bin\%CONFIGURATION%
 
     set CI_HASH=%APPVEYOR_REPO_COMMIT:~0,7%
-
-    pip3 install sphinx
 
     mkdir %CI_DIR%\help
 
