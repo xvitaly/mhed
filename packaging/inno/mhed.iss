@@ -39,7 +39,7 @@ AllowNoIcons=yes
 LicenseFile=..\..\COPYING
 OutputDir=..\results
 #ifdef _RELEASE
-OutputBaseFilename=mhed_v100
+OutputBaseFilename=mhed_v{#GetEnv('RELVER')}
 #else
 OutputBaseFilename=snapshot_{#CI_COMMIT}
 #endif
@@ -60,41 +60,45 @@ VersionInfoCompany=EasyCoding Team
 [Messages]
 BeveledLabel=EasyCoding Team
 
-[CustomMessages]
-OptNetStatus=Optimizing MSIL binary...
-OptNetUninstallStatus=Removing optimized MSIL binaries...
-russian.OptNetStatus=Идёт оптимизация MSIL приложения...
-russian.OptNetUninstallStatus=Идёт удаление машинных сборок MSIL...
-
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl"; InfoBeforeFile: "readme_en.rtf"
-Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"; InfoBeforeFile: "readme_ru.rtf"
+Name: "english"; MessagesFile: "compiler:Default.isl,locale\en\cm.isl"; InfoBeforeFile: "locale\en\readme.rtf"
+Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,locale\ru\cm.isl"; InfoBeforeFile: "locale\ru\readme.rtf"
+
+[Components]
+Name: "core"; Description: "{cm:CompCoreDesc}"; Types: full compact custom; Flags: fixed
+Name: "debug"; Description: "{cm:CompDebugDesc}"; Types: full compact custom
+Name: "locales"; Description: "{cm:CompLocalesMetaDesc}"; Types: full
+Name: "locales\en"; Description: "{cm:CompLocaleEnDesc}"; Types: full
+Name: "locales\ru"; Description: "{cm:CompLocaleRuDesc}"; Types: full
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "{#BASEDIR}\bin\Release\mhed.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\mhed.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\mhed.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#BASEDIR}\bin\Release\mhed.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\mhed.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: debug
+Source: "{#BASEDIR}\bin\Release\mhed.exe.config"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\ru\mhed.resources.dll"; DestDir: "{app}\ru"; Flags: ignoreversion; Components: locales\ru
+Source: "{#BASEDIR}\bin\Release\help\mhed_en.chm"; DestDir: "{app}\help"; Flags: ignoreversion; Components: locales\en
+Source: "{#BASEDIR}\bin\Release\help\mhed_ru.chm"; DestDir: "{app}\help"; Flags: ignoreversion; Components: locales\ru
+
 #ifdef _RELEASE
-Source: "{#BASEDIR}\bin\Release\mhed.exe.sig"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\mhed.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 #endif
 
 [Icons]
-Name: "{group}\Micro Hosts Editor"; Filename: "{app}\mhed.exe"
-Name: "{group}\{cm:ProgramOnTheWeb,Micro Hosts Editor}"; Filename: "https://github.com/xvitaly/mhed"
-Name: "{userdesktop}\Micro Hosts Editor"; Filename: "{app}\mhed.exe"; Tasks: desktopicon
-Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Micro Hosts Editor"; Filename: "{app}\mhed.exe"; Tasks: quicklaunchicon
+Name: "{group}\Micro Hosts Editor"; Filename: "{app}\mhed.exe"; Components: core
+Name: "{group}\{cm:ProgramOnTheWeb,Micro Hosts Editor}"; Filename: "https://github.com/xvitaly/mhed"; Components: core
+Name: "{userdesktop}\Micro Hosts Editor"; Filename: "{app}\mhed.exe"; Tasks: desktopicon; Components: core
+Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Micro Hosts Editor"; Filename: "{app}\mhed.exe"; Tasks: quicklaunchicon; Components: core
 
 [Run]
-Filename: "{app}\mhed.exe"; Description: "{cm:LaunchProgram,Micro Hosts Editor}"; Flags: nowait postinstall skipifsilent
-Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\mhed.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin()
+Filename: "{app}\mhed.exe"; Description: "{cm:LaunchProgram,Micro Hosts Editor}"; Flags: nowait postinstall skipifsilent; Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\mhed.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 
 [UninstallRun]
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\mhed.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin()
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\mhed.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 
 [Code]
 function GetDefRoot(Param: String): String;
