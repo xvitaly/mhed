@@ -45,7 +45,7 @@ after_build:
 
     move docs\build\htmlhelp\mhed_ru.chm %CI_DIR%\help\mhed_ru.chm
 
-    7z a -m0=LZMA2 -mx9 -t7z -x!*.ico packaging\results\snapshot_%CI_HASH%.7z %CI_DIR%\*
+    7z a -m0=LZMA2 -mx9 -t7z -x!*.ico -x!NLog.xml packaging\results\snapshot_%CI_HASH%.7z %CI_DIR%\*
 
     "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" packaging\inno\mhed.iss
 artifacts:

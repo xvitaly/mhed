@@ -36,13 +36,14 @@ popd
 
 echo Signing binaries...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\bin\Release\mhed.exe
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\srcrepair\bin\Release\NLog.dll
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\bin\Release\ru\mhed.resources.dll
 
 echo Compiling Installer...
 "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" inno\mhed.iss
 
 echo Generating archive for non-Windows platforms...
-"%PROGRAMFILES%\7-Zip\7z.exe" a -m0=LZMA2 -mx9 -t7z -x!*.ico "results\mhed_v%RELVER%.7z" ".\..\src\bin\Release\*"
+"%PROGRAMFILES%\7-Zip\7z.exe" a -m0=LZMA2 -mx9 -t7z -x!*.ico -x!NLog.xml "results\mhed_v%RELVER%.7z" ".\..\src\bin\Release\*"
 
 echo Signing installer...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\mhed_v%RELVER%.exe
