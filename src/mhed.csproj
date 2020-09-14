@@ -111,6 +111,7 @@
     </Content>
     <None Include="app.config" />
     <None Include="mhed.manifest" />
+    <None Include="NLog.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
