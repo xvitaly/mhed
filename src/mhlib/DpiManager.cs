@@ -24,7 +24,10 @@ using System.Windows.Forms;
 
 namespace mhed.lib
 {
-    class DpiManager
+    /// <summary>
+    /// Class with hacks for high pixel density displays.
+    /// </summary>
+    public static class DpiManager
     {
         /// <summary>
         /// Correctly scale columns width in DataGridView container on high

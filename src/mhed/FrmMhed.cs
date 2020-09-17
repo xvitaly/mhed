@@ -29,6 +29,7 @@ using System.Security.Permissions;
 using System.Security.Principal;
 using System.Text;
 using System.Windows.Forms;
+using mhed.lib;
 
 namespace mhed.gui
 {
@@ -44,18 +45,10 @@ namespace mhed.gui
         #endregion
 
         #region IH
-        private void ScaleTable(SizeF ScaleFactor)
-        {
-            foreach (DataGridViewColumn DgvColumn in HEd_Table.Columns)
-            {
-                DgvColumn.Width = (int)Math.Round(DgvColumn.Width * ScaleFactor.Width);
-            }
-        }
-
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
-            ScaleTable(ScalingFactor);
+            DpiManager.ScaleColumnsInControl(HEd_Table, ScalingFactor);
         }
         #endregion
 
