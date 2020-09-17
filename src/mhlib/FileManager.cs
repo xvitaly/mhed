@@ -37,7 +37,7 @@ namespace mhed.lib
         public static string GetHostsFileFullPath(CurrentPlatform.OSType OS)
         {
             // Creating an empty string...
-            string Result = String.Empty;
+            string HostsDirectory;
 
             // Checking of running platform...
             if (OS == CurrentPlatform.OSType.Windows)
@@ -47,32 +47,23 @@ namespace mhed.lib
                     // Getting full Hosts path from Windows Registry (can be overrided by some applications)...
                     using (RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false))
                     {
-                        if (ResKey != null)
-                        {
-                            Result = (string)ResKey.GetValue("DataBasePath");
-                        }
+                        HostsDirectory = (string)ResKey.GetValue("DataBasePath");
                     }
-
-                    // Checking result. If empty, using generic...
-                    if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); }
                 }
                 catch
                 {
                     // Exception occured. Generating Hosts file path using generic patterns...
-                    Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
+                    HostsDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
                 }
             }
             else
             {
                 // Unix detected, returning standard POSIX path...
-                Result = "/etc";
+                HostsDirectory = "/etc";
             }
 
-            // Generating full file name...
-            Result = Path.Combine(Result, "hosts");
-
-            // Returning result...
-            return Result;
+            // Returning full file name...
+            return Path.Combine(HostsDirectory, "hosts");
         }
     }
 }
