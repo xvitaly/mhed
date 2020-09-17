@@ -17,8 +17,8 @@
 ; You should have received a copy of the GNU General Public License
 ; along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-#define VERSION GetFileVersion("..\..\src\bin\Release\mhed.exe")
-#define BASEDIR "..\..\src"
+#define VERSION GetFileVersion("..\..\src\mhed\bin\Release\mhed.exe")
+#define BASEDIR "..\..\src\mhed"
 #define CI_COMMIT GetEnv('CI_HASH')
 #if CI_COMMIT == ''
 #define _RELEASE 1

@@ -28,7 +28,7 @@ after_build:
 - cmd: >-
     set PATH=C:\Python38-x64;C:\Python38-x64\Scripts;%PATH%
 
-    set CI_DIR=%APPVEYOR_BUILD_FOLDER%\src\bin\%CONFIGURATION%
+    set CI_DIR=%APPVEYOR_BUILD_FOLDER%\src\mhed\bin\%CONFIGURATION%
 
     set CI_HASH=%APPVEYOR_REPO_COMMIT:~0,7%
 
