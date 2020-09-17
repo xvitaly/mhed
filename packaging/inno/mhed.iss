@@ -79,6 +79,8 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 Source: "{#BASEDIR}\bin\Release\mhed.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\mhed.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: debug
 Source: "{#BASEDIR}\bin\Release\mhed.exe.config"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\mhlib.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\mhlib.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: debug
 Source: "{#BASEDIR}\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\NLog.config"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\ru\mhed.resources.dll"; DestDir: "{app}\ru"; Flags: ignoreversion; Components: locales\ru
@@ -87,6 +89,7 @@ Source: "{#BASEDIR}\bin\Release\help\mhed_ru.chm"; DestDir: "{app}\help"; Flags:
 
 #ifdef _RELEASE
 Source: "{#BASEDIR}\bin\Release\mhed.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\mhlib.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\NLog.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\ru\mhed.resources.dll.sig"; DestDir: "{app}\ru"; Flags: ignoreversion; Components: locales\ru
 #endif
