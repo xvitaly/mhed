@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-using Microsoft.Win32;
+using mhed.lib;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -27,7 +27,6 @@ using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
-using mhed.lib;
 
 namespace mhed.gui
 {
@@ -39,7 +38,10 @@ namespace mhed.gui
         }
 
         #region IV
-        private string HostsFilePath { get; set; }
+        /// <summary>
+        /// Gets or sets instance of CurrentApp class.
+        /// </summary>
+        private CurrentApp App { get; set; }
         #endregion
 
         #region IH
@@ -51,10 +53,6 @@ namespace mhed.gui
         #endregion
 
         #region IM
-        private string GetHostsFileFullPath(int PlatformID = 0)
-        {
-            string Result = String.Empty; if (PlatformID == 0) { try { RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false); if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); } if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } } catch { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } Result = Path.Combine(Result, "hosts"); } else { Result = Path.Combine("/etc", "hosts"); } return Result;
-        }
 
         private string CleanStrWx(string RecvStr, bool CleanQuotes = false, bool CleanSlashes = false)
         {
@@ -77,18 +75,6 @@ namespace mhed.gui
             }
         }
 
-        private int DetectRunningOS()
-        {
-            switch (Environment.OSVersion.Platform)
-            {
-                case PlatformID.Unix:
-                    return (Directory.Exists("/Applications") & Directory.Exists("/System") & Directory.Exists("/Users") & Directory.Exists("/Volumes")) ? 1 : 2;
-                case PlatformID.MacOSX:
-                    return 1;
-                default: return 0;
-            }
-        }
-
         private string GetTemplateFromResource(string FileName)
         {
             string Result = String.Empty; using (StreamReader Reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName))) { Result = Reader.ReadToEnd(); } return Result;
@@ -98,7 +84,7 @@ namespace mhed.gui
         {
             using (StreamWriter CFile = new StreamWriter(Path, false, Encoding.Default))
             {
-                try { if (DetectRunningOS() == 0) { CFile.WriteLine(GetTemplateFromResource(Properties.Resources.TmplFileName)); } } catch { }
+                try { if (App.Platform.OS == CurrentPlatform.OSType.Windows) { CFile.WriteLine(GetTemplateFromResource(Properties.Resources.TmplFileName)); } } catch { }
                 foreach (DataGridViewRow Row in HEd_Table.Rows)
                 {
                     if ((Row.Cells[0].Value != null) && (Row.Cells[1].Value != null))
@@ -114,31 +100,22 @@ namespace mhed.gui
 
         private void SaveToFile()
         {
-            if (ProcessManager.IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch { MessageBox.Show(String.Format(AppStrings.AHE_SaveException, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
-        }
-
-        private string GetAppCompany()
-        {
-            object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-            return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty;
-        }
-
-        private Version GetAppVersion()
-        {
-            return Assembly.GetEntryAssembly().GetName().Version;
+            if (ProcessManager.IsCurrentUserAdmin()) { try { WriteTableToHosts(App.HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch { MessageBox.Show(String.Format(AppStrings.AHE_SaveException, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         
         private void FrmHEd_Load(object sender, EventArgs e)
         {
+            // Create a new instance of CurrentApp class...
+            App = new CurrentApp(false, Properties.Resources.AppName);
+
             if (!ProcessManager.IsCurrentUserAdmin()) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
-            Text = String.Format(Text, GetAppVersion());
-            HostsFilePath = GetHostsFileFullPath(DetectRunningOS());
-            if (File.Exists(HostsFilePath)) { HEd_St_Wrn.Text = HostsFilePath; try { ReadHostsToTable(HostsFilePath); } catch { MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning)); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); Close(); }
+            Text = String.Format(Text, CurrentApp.AppVersion);
+            if (File.Exists(App.HostsFilePath)) { HEd_St_Wrn.Text = App.HostsFilePath; try { ReadHostsToTable(App.HostsFilePath); } catch { MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning)); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); Close(); }
         }
 
         private void HEd_T_Refresh_Click(object sender, EventArgs e)
         {
-            try { ReadHostsToTable(HostsFilePath); } catch { MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            try { ReadHostsToTable(App.HostsFilePath); } catch { MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void HEd_T_Save_Click(object sender, EventArgs e)
@@ -168,7 +145,7 @@ namespace mhed.gui
 
         private void HEd_M_About_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(String.Format("{0} by {1}. Version: {2}.", Properties.Resources.AppName, GetAppCompany(), GetAppVersion()), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(String.Format("{0} by {1}. Version: {2}.", Properties.Resources.AppName, CurrentApp.AppCompany, CurrentApp.AppVersion), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void HEd_T_RemRw_Click(object sender, EventArgs e)
@@ -195,9 +172,9 @@ namespace mhed.gui
 
         private void HEd_St_Wrn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, HostsFilePath)); } catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, App.HostsFilePath)); } catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
         }
 
@@ -233,7 +210,7 @@ namespace mhed.gui
 
         private void HEd_M_Notepad_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Settings.Default.EditorBin, String.Format("\"{0}\"", HostsFilePath)); } catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            try { Process.Start(Properties.Settings.Default.EditorBin, String.Format("\"{0}\"", App.HostsFilePath)); } catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void HEd_M_RepBug_Click(object sender, EventArgs e)
