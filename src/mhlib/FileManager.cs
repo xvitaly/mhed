@@ -45,8 +45,13 @@ namespace mhed.lib
                 try
                 {
                     // Getting full Hosts path from Windows Registry (can be overrided by some applications)...
-                    RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false);
-                    if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); }
+                    using (RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false))
+                    {
+                        if (ResKey != null)
+                        {
+                            Result = (string)ResKey.GetValue("DataBasePath");
+                        }
+                    }
 
                     // Checking result. If empty, using generic...
                     if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); }
