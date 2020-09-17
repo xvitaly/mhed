@@ -1,4 +1,4 @@
-﻿namespace mhed
+﻿namespace mhed.gui
 {
     partial class FrmHEd
     {
@@ -103,7 +103,7 @@
             // HEd_T_Refresh
             // 
             this.HEd_T_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.HEd_T_Refresh.Image = global::mhed.Properties.Resources.Refresh;
+            this.HEd_T_Refresh.Image = global::mhed.gui.Properties.Resources.Refresh;
             resources.ApplyResources(this.HEd_T_Refresh, "HEd_T_Refresh");
             this.HEd_T_Refresh.Name = "HEd_T_Refresh";
             this.HEd_T_Refresh.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
@@ -111,7 +111,7 @@
             // HEd_T_Save
             // 
             this.HEd_T_Save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.HEd_T_Save.Image = global::mhed.Properties.Resources.Save;
+            this.HEd_T_Save.Image = global::mhed.gui.Properties.Resources.Save;
             resources.ApplyResources(this.HEd_T_Save, "HEd_T_Save");
             this.HEd_T_Save.Name = "HEd_T_Save";
             this.HEd_T_Save.Click += new System.EventHandler(this.HEd_T_Save_Click);
@@ -150,7 +150,7 @@
             // HEd_T_RemRw
             // 
             this.HEd_T_RemRw.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.HEd_T_RemRw.Image = global::mhed.Properties.Resources.Delete;
+            this.HEd_T_RemRw.Image = global::mhed.gui.Properties.Resources.Delete;
             resources.ApplyResources(this.HEd_T_RemRw, "HEd_T_RemRw");
             this.HEd_T_RemRw.Name = "HEd_T_RemRw";
             this.HEd_T_RemRw.Click += new System.EventHandler(this.HEd_T_RemRw_Click);
@@ -187,21 +187,21 @@
             // 
             // HEd_M_Refresh
             // 
-            this.HEd_M_Refresh.Image = global::mhed.Properties.Resources.Refresh;
+            this.HEd_M_Refresh.Image = global::mhed.gui.Properties.Resources.Refresh;
             this.HEd_M_Refresh.Name = "HEd_M_Refresh";
             resources.ApplyResources(this.HEd_M_Refresh, "HEd_M_Refresh");
             this.HEd_M_Refresh.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
             // 
             // HEd_M_Save
             // 
-            this.HEd_M_Save.Image = global::mhed.Properties.Resources.Save;
+            this.HEd_M_Save.Image = global::mhed.gui.Properties.Resources.Save;
             this.HEd_M_Save.Name = "HEd_M_Save";
             resources.ApplyResources(this.HEd_M_Save, "HEd_M_Save");
             this.HEd_M_Save.Click += new System.EventHandler(this.HEd_T_Save_Click);
             // 
             // HEd_M_Quit
             // 
-            this.HEd_M_Quit.Image = global::mhed.Properties.Resources.Exit;
+            this.HEd_M_Quit.Image = global::mhed.gui.Properties.Resources.Exit;
             this.HEd_M_Quit.Name = "HEd_M_Quit";
             resources.ApplyResources(this.HEd_M_Quit, "HEd_M_Quit");
             this.HEd_M_Quit.Click += new System.EventHandler(this.HEd_M_Quit_Click);
@@ -216,14 +216,14 @@
             // 
             // HEd_M_RestDef
             // 
-            this.HEd_M_RestDef.Image = global::mhed.Properties.Resources.Restore;
+            this.HEd_M_RestDef.Image = global::mhed.gui.Properties.Resources.Restore;
             this.HEd_M_RestDef.Name = "HEd_M_RestDef";
             resources.ApplyResources(this.HEd_M_RestDef, "HEd_M_RestDef");
             this.HEd_M_RestDef.Click += new System.EventHandler(this.HEd_M_RestDef_Click);
             // 
             // HEd_M_Notepad
             // 
-            this.HEd_M_Notepad.Image = global::mhed.Properties.Resources.TextEditor;
+            this.HEd_M_Notepad.Image = global::mhed.gui.Properties.Resources.TextEditor;
             this.HEd_M_Notepad.Name = "HEd_M_Notepad";
             resources.ApplyResources(this.HEd_M_Notepad, "HEd_M_Notepad");
             this.HEd_M_Notepad.Click += new System.EventHandler(this.HEd_M_Notepad_Click);
@@ -239,21 +239,21 @@
             // 
             // HEd_M_OnlHelp
             // 
-            this.HEd_M_OnlHelp.Image = global::mhed.Properties.Resources.Help;
+            this.HEd_M_OnlHelp.Image = global::mhed.gui.Properties.Resources.Help;
             this.HEd_M_OnlHelp.Name = "HEd_M_OnlHelp";
             resources.ApplyResources(this.HEd_M_OnlHelp, "HEd_M_OnlHelp");
             this.HEd_M_OnlHelp.Click += new System.EventHandler(this.HEd_M_OnlHelp_Click);
             // 
             // HEd_M_RepBug
             // 
-            this.HEd_M_RepBug.Image = global::mhed.Properties.Resources.bug;
+            this.HEd_M_RepBug.Image = global::mhed.gui.Properties.Resources.bug;
             this.HEd_M_RepBug.Name = "HEd_M_RepBug";
             resources.ApplyResources(this.HEd_M_RepBug, "HEd_M_RepBug");
             this.HEd_M_RepBug.Click += new System.EventHandler(this.HEd_M_RepBug_Click);
             // 
             // HEd_M_About
             // 
-            this.HEd_M_About.Image = global::mhed.Properties.Resources.Info;
+            this.HEd_M_About.Image = global::mhed.gui.Properties.Resources.Info;
             this.HEd_M_About.Name = "HEd_M_About";
             resources.ApplyResources(this.HEd_M_About, "HEd_M_About");
             this.HEd_M_About.Click += new System.EventHandler(this.HEd_M_About_Click);

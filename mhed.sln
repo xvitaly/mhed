@@ -3,12 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mhed", "src\mhed.csproj", "{B6A7AED6-D61A-46A0-8921-69EDD20D5CA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mhed", "src\mhed\mhed.csproj", "{B6A7AED6-D61A-46A0-8921-69EDD20D5CA3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9B3CF304-8D8D-4CFE-9935-CEEE67D1DCFD} = {9B3CF304-8D8D-4CFE-9935-CEEE67D1DCFD}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C5521772-73CB-4C8E-8648-23BDAADA9E5D}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mhlib", "src\mhlib\mhlib.csproj", "{9B3CF304-8D8D-4CFE-9935-CEEE67D1DCFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +25,10 @@ Global
 		{B6A7AED6-D61A-46A0-8921-69EDD20D5CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6A7AED6-D61A-46A0-8921-69EDD20D5CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6A7AED6-D61A-46A0-8921-69EDD20D5CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B3CF304-8D8D-4CFE-9935-CEEE67D1DCFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3CF304-8D8D-4CFE-9935-CEEE67D1DCFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3CF304-8D8D-4CFE-9935-CEEE67D1DCFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3CF304-8D8D-4CFE-9935-CEEE67D1DCFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

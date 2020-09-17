@@ -8,7 +8,7 @@
     <ProjectGuid>{B6A7AED6-D61A-46A0-8921-69EDD20D5CA3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>mhed</RootNamespace>
+    <RootNamespace>mhed.gui</RootNamespace>
     <AssemblyName>mhed</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
@@ -40,7 +40,7 @@
     <ApplicationIcon>mhed.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>mhed.Program</StartupObject>
+    <StartupObject>mhed.gui.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -73,7 +73,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.7.4\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\..\packages\NLog.4.7.4\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -105,10 +105,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="..\README.md">
-      <Link>README.md</Link>
+    <None Include="..\..\COPYING">
+      <Link>COPYING</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
@@ -153,14 +153,16 @@
     <None Include="Resources\Refresh.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\COPYING">
-      <Link>COPYING</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="mhed.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="Resources\HtTemplate.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mhlib\mhlib.csproj">
+      <Project>{9b3cf304-8d8d-4cfe-9935-ceee67d1dcfd}</Project>
+      <Name>mhlib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
