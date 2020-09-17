@@ -25,8 +25,6 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Reflection;
-using System.Security.Permissions;
-using System.Security.Principal;
 using System.Text;
 using System.Windows.Forms;
 using mhed.lib;
@@ -53,17 +51,6 @@ namespace mhed.gui
         #endregion
 
         #region IM
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
-        private void OpenWebPage(string URI)
-        {
-            try { Process.Start(URI); } catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
-        }
-
-        private bool IsCurrentUserAdmin()
-        {
-            bool Result; try { WindowsPrincipal UP = new WindowsPrincipal(WindowsIdentity.GetCurrent()); Result = UP.IsInRole(WindowsBuiltInRole.Administrator); } catch { Result = false; } return Result;
-        }
-
         private string GetHostsFileFullPath(int PlatformID = 0)
         {
             string Result = String.Empty; if (PlatformID == 0) { try { RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false); if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); } if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } } catch { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); } Result = Path.Combine(Result, "hosts"); } else { Result = Path.Combine("/etc", "hosts"); } return Result;
@@ -127,7 +114,7 @@ namespace mhed.gui
 
         private void SaveToFile()
         {
-            if (IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch { MessageBox.Show(String.Format(AppStrings.AHE_SaveException, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            if (ProcessManager.IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch { MessageBox.Show(String.Format(AppStrings.AHE_SaveException, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private string GetAppCompany()
@@ -143,7 +130,7 @@ namespace mhed.gui
         
         private void FrmHEd_Load(object sender, EventArgs e)
         {
-            if (!(IsCurrentUserAdmin())) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
+            if (!ProcessManager.IsCurrentUserAdmin()) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
             Text = String.Format(Text, GetAppVersion());
             HostsFilePath = GetHostsFileFullPath(DetectRunningOS());
             if (File.Exists(HostsFilePath)) { HEd_St_Wrn.Text = HostsFilePath; try { ReadHostsToTable(HostsFilePath); } catch { MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning)); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); Close(); }
@@ -176,7 +163,7 @@ namespace mhed.gui
 
         private void HEd_M_OnlHelp_Click(object sender, EventArgs e)
         {
-            OpenWebPage(Properties.Resources.AppHelpURL);
+            ProcessManager.OpenWebPage(Properties.Resources.AppHelpURL);
         }
 
         private void HEd_M_About_Click(object sender, EventArgs e)
@@ -251,7 +238,7 @@ namespace mhed.gui
 
         private void HEd_M_RepBug_Click(object sender, EventArgs e)
         {
-            OpenWebPage(Properties.Resources.AppBtURL);
+            ProcessManager.OpenWebPage(Properties.Resources.AppBtURL);
         }
         #endregion
     }
