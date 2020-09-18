@@ -65,16 +65,11 @@ namespace mhed.gui
             }
         }
 
-        private string GetTemplateFromResource(string FileName)
-        {
-            string Result = String.Empty; using (StreamReader Reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName))) { Result = Reader.ReadToEnd(); } return Result;
-        }
-
         private void WriteTableToHosts(string Path)
         {
             using (StreamWriter CFile = new StreamWriter(Path, false, Encoding.Default))
             {
-                try { if (App.Platform.OS == CurrentPlatform.OSType.Windows) { CFile.WriteLine(GetTemplateFromResource(Properties.Resources.TmplFileName)); } } catch { }
+                try { if (App.Platform.OS == CurrentPlatform.OSType.Windows) { CFile.WriteLine(StringsManager.GetTemplateFromResource(Properties.Resources.TmplFileName)); } } catch { }
                 foreach (DataGridViewRow Row in HEd_Table.Rows)
                 {
                     if ((Row.Cells[0].Value != null) && (Row.Cells[1].Value != null))
