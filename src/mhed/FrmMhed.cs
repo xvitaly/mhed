@@ -87,15 +87,75 @@ namespace mhed.gui
         {
             if (ProcessManager.IsCurrentUserAdmin()) { try { WriteTableToHosts(App.HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch { MessageBox.Show(String.Format(AppStrings.AHE_SaveException, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
-        
-        private void FrmHEd_Load(object sender, EventArgs e)
+
+        /// <summary>
+        /// Create an instance of the CurrentApp class.
+        /// </summary>
+        private void InitializeApp()
         {
             // Create a new instance of CurrentApp class...
             App = new CurrentApp(false, Properties.Resources.AppName);
+        }
 
-            if (!ProcessManager.IsCurrentUserAdmin()) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
+        /// <summary>
+        /// Change state of some controls, depending on current running
+        /// platform or access level.
+        /// </summary>
+        private void ChangePrvControlState()
+        {
+            if (!ProcessManager.IsCurrentUserAdmin())
+            {
+                HEd_M_Save.Enabled = false;
+                HEd_T_Save.Enabled = false;
+                HEd_M_RestDef.Enabled = false;
+                HEd_Table.ReadOnly = true;
+                HEd_T_Cut.Enabled = false;
+                HEd_T_Paste.Enabled = false;
+                HEd_T_RemRw.Enabled = false;
+            }
+        }
+
+        /// <summary>
+        /// Set strings data on the main form.
+        /// </summary>
+        private void SetAppStrings()
+        {
+            // Add application version and platform name to form's title...
             Text = String.Format(Text, CurrentApp.AppVersion);
-            if (File.Exists(App.HostsFilePath)) { HEd_St_Wrn.Text = App.HostsFilePath; try { ReadHostsToTable(App.HostsFilePath); } catch { MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning)); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); Close(); }
+
+            // Add Hosts file path to the status bar...
+            HEd_St_Wrn.Text = App.HostsFilePath;
+        }
+
+        /// <summary>
+        /// Try to read Hosts file.
+        /// </summary>
+        private void LoadHostsFile()
+        {
+            if (File.Exists(App.HostsFilePath))
+            {
+                try
+                {
+                    ReadHostsToTable(App.HostsFilePath);
+                }
+                catch
+                {
+                    MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning));
+                }
+            }
+            else
+            {
+                MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Close();
+            }
+        }
+
+        private void FrmHEd_Load(object sender, EventArgs e)
+        {
+            InitializeApp();
+            ChangePrvControlState();
+            SetAppStrings();
+            LoadHostsFile();
         }
 
         private void HEd_T_Refresh_Click(object sender, EventArgs e)
