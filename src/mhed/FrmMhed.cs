@@ -53,16 +53,6 @@ namespace mhed.gui
         #endregion
 
         #region IM
-
-        private string CleanStrWx(string RecvStr, bool CleanQuotes = false, bool CleanSlashes = false)
-        {
-            while (RecvStr.IndexOf("\t") != -1) { RecvStr = RecvStr.Replace("\t", " "); }
-            while (RecvStr.IndexOf("  ") != -1) { RecvStr = RecvStr.Replace("  ", " "); }
-            if (CleanQuotes) { while (RecvStr.IndexOf('"') != -1) { RecvStr = RecvStr.Replace(@"""", ""); } }
-            if (CleanSlashes) { while (RecvStr.IndexOf(@"\\") != -1) { RecvStr = RecvStr.Replace(@"\\", @"\"); } }
-            return RecvStr.Trim();
-        }
-
         private void ReadHostsToTable(string FilePath)
         {
             HEd_Table.Rows.Clear();
@@ -70,7 +60,7 @@ namespace mhed.gui
             {
                 using (StreamReader OpenedHosts = new StreamReader(FilePath, Encoding.Default))
                 {
-                    while (OpenedHosts.Peek() >= 0) { string ImpStr = CleanStrWx(OpenedHosts.ReadLine()); if (!(String.IsNullOrEmpty(ImpStr))) { if (ImpStr[0] != '#') { int SpPos = ImpStr.IndexOf(" "); if (SpPos != -1) { HEd_Table.Rows.Add(ImpStr.Substring(0, SpPos), ImpStr.Remove(0, SpPos + 1)); } } } }
+                    while (OpenedHosts.Peek() >= 0) { string ImpStr = StringsManager.CleanString(OpenedHosts.ReadLine()); if (!(String.IsNullOrEmpty(ImpStr))) { if (ImpStr[0] != '#') { int SpPos = ImpStr.IndexOf(" "); if (SpPos != -1) { HEd_Table.Rows.Add(ImpStr.Substring(0, SpPos), ImpStr.Remove(0, SpPos + 1)); } } } }
                 }
             }
         }
