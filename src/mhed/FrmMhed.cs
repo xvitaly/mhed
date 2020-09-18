@@ -219,7 +219,14 @@ namespace mhed.gui
         {
             if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, App.HostsFilePath)); } catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                try
+                {
+                    ProcessManager.OpenExplorer(App.HostsFilePath, App.Platform.OS);
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -255,7 +262,14 @@ namespace mhed.gui
 
         private void HEd_M_Notepad_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Settings.Default.EditorBin, String.Format("\"{0}\"", App.HostsFilePath)); } catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            try
+            {
+                ProcessManager.OpenTextEditor(App.HostsFilePath, Properties.Settings.Default.EditorBin, App.Platform.OS);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void HEd_M_RepBug_Click(object sender, EventArgs e)
