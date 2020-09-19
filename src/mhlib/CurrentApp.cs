@@ -51,6 +51,11 @@ namespace mhed.lib
         public CurrentPlatform Platform { get; private set; }
 
         /// <summary>
+        /// Works with Hosts file contents.
+        /// </summary>
+        public HostsFileManager HostsFile { get; set; }
+
+        /// <summary>
         /// Get full path to Nlog active log file.
         /// </summary>
         public static string LogFileName
