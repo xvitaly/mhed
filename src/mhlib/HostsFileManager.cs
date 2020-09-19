@@ -28,7 +28,6 @@ namespace mhed.lib
 {
     public sealed class HostsFileManager
     {
-        private readonly List<HostsFileEntry> HostsFileContents;
         private readonly string HostsFilePath;
         private readonly CurrentPlatform.OSType Platform;
 
@@ -42,7 +41,7 @@ namespace mhed.lib
 
         private void ClearHostsContents()
         {
-            HostsFileContents.Clear();
+            Contents.Clear();
         }
 
         private void ReadHostsFile()
@@ -59,7 +58,7 @@ namespace mhed.lib
                             int SpPos = ImpStr.IndexOf(" ");
                             if (SpPos != -1)
                             {
-                                HostsFileContents.Add(new HostsFileEntry(ImpStr.Substring(0, SpPos), ImpStr.Remove(0, SpPos + 1)));
+                                Contents.Add(new HostsFileEntry(ImpStr.Substring(0, SpPos), ImpStr.Remove(0, SpPos + 1)));
                             }
                         }
                     }
@@ -73,10 +72,10 @@ namespace mhed.lib
             {
                 if (Platform == CurrentPlatform.OSType.Windows)
                 {
-                    CFile.WriteLine(StringsManager.GetTemplateFromResource(Properties.Resources.TmplFileName));
+                    CFile.WriteLine(Properties.Resources.HtTemplate);
                 }
 
-                foreach (HostsFileEntry Entry in HostsFileContents)
+                foreach (HostsFileEntry Entry in Contents)
                 {
                     if (!String.IsNullOrEmpty(Entry.IPAddress) && !String.IsNullOrEmpty(Entry.Hostname))
                     {
@@ -88,6 +87,8 @@ namespace mhed.lib
                 }
             }
         }
+
+        public List<HostsFileEntry> Contents { get; set; }
 
         public void Refresh()
         {
@@ -104,7 +105,7 @@ namespace mhed.lib
         {
             HostsFilePath = FileName;
             Platform = OS;
-            HostsFileContents = new List<HostsFileEntry>();
+            Contents = new List<HostsFileEntry>();
             CheckHostsFileExists();
             ReadHostsFile();
         }

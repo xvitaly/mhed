@@ -26,12 +26,12 @@ namespace mhed.lib
         /// <summary>
         /// Get or set IP address.
         /// </summary>
-        public string IPAddress { get; private set; }
+        public string IPAddress { get; set; }
 
         /// <summary>
         /// Get or set associated hostname.
         /// </summary>
-        public string Hostname { get; private set; }
+        public string Hostname { get; set; }
 
         /// <summary>
         /// HostsFileEntry class constructor.
