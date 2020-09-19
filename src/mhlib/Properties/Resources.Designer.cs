@@ -88,6 +88,26 @@ namespace mhed.lib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to # Copyright (c) 1993-2009 Microsoft Corp.
+        ///#
+        ///# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+        ///#
+        ///# This file contains the mappings of IP addresses to host names. Each
+        ///# entry should be kept on an individual line. The IP address should
+        ///# be placed in the first column followed by the corresponding host name.
+        ///# The IP address and the host name should be separated by at least one
+        ///# space.
+        ///#
+        ///# Additionally, comments (such as these) may be inserted on individual
+        ///# lines or following th [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HtTemplate {
+            get {
+                return ResourceManager.GetString("HtTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to explorer.exe.
         /// </summary>
         internal static string ShBinWin {
@@ -102,6 +122,15 @@ namespace mhed.lib.Properties {
         internal static string ShParamWin {
             get {
                 return ResourceManager.GetString("ShParamWin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to mhed.lib.Resources.HtTemplate.txt.
+        /// </summary>
+        internal static string TmplFileName {
+            get {
+                return ResourceManager.GetString("TmplFileName", resourceCulture);
             }
         }
     }

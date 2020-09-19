@@ -156,7 +156,6 @@
     <Content Include="mhed.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Resources\HtTemplate.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\mhlib\mhlib.csproj">
