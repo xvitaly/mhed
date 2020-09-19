@@ -124,14 +124,5 @@ namespace mhed.lib.Properties {
                 return ResourceManager.GetString("ShParamWin", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to mhed.lib.Resources.HtTemplate.txt.
-        /// </summary>
-        internal static string TmplFileName {
-            get {
-                return ResourceManager.GetString("TmplFileName", resourceCulture);
-            }
-        }
     }
 }
