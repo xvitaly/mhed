@@ -76,11 +76,13 @@
             // 
             // HDV_IPAddr
             // 
+            this.HDV_IPAddr.DataPropertyName = "IPAddress";
             resources.ApplyResources(this.HDV_IPAddr, "HDV_IPAddr");
             this.HDV_IPAddr.Name = "HDV_IPAddr";
             // 
             // HDV_Domain
             // 
+            this.HDV_Domain.DataPropertyName = "Hostname";
             resources.ApplyResources(this.HDV_Domain, "HDV_Domain");
             this.HDV_Domain.Name = "HDV_Domain";
             // 

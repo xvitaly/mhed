@@ -19,11 +19,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 using mhed.lib;
+using NLog;
 using System;
 using System.Drawing;
 using System.IO;
-using System.Net;
-using System.Text;
 using System.Windows.Forms;
 
 namespace mhed.gui
@@ -33,9 +32,15 @@ namespace mhed.gui
         public FrmHEd()
         {
             InitializeComponent();
+            InitializeFormControls();
         }
 
         #region IV
+        /// <summary>
+        /// Logger instance for HUDManager class.
+        /// </summary>
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Gets or sets instance of CurrentApp class.
         /// </summary>
@@ -51,39 +56,25 @@ namespace mhed.gui
         #endregion
 
         #region IM
-        private void ReadHostsToTable(string FilePath)
-        {
-            HEd_Table.Rows.Clear();
-            if (File.Exists(FilePath))
-            {
-                using (StreamReader OpenedHosts = new StreamReader(FilePath, Encoding.Default))
-                {
-                    while (OpenedHosts.Peek() >= 0) { string ImpStr = StringsManager.CleanString(OpenedHosts.ReadLine()); if (!(String.IsNullOrEmpty(ImpStr))) { if (ImpStr[0] != '#') { int SpPos = ImpStr.IndexOf(" "); if (SpPos != -1) { HEd_Table.Rows.Add(ImpStr.Substring(0, SpPos), ImpStr.Remove(0, SpPos + 1)); } } } }
-                }
-            }
-        }
-
-        private void WriteTableToHosts(string Path)
-        {
-            using (StreamWriter CFile = new StreamWriter(Path, false, Encoding.Default))
-            {
-                try { if (App.Platform.OS == CurrentPlatform.OSType.Windows) { CFile.WriteLine(StringsManager.GetTemplateFromResource(Properties.Resources.TmplFileName)); } } catch { }
-                foreach (DataGridViewRow Row in HEd_Table.Rows)
-                {
-                    if ((Row.Cells[0].Value != null) && (Row.Cells[1].Value != null))
-                    {
-                        if (IPAddress.TryParse(Row.Cells[0].Value.ToString(), out IPAddress IPAddr))
-                        {
-                            CFile.WriteLine("{0} {1}", IPAddr, Row.Cells[1].Value);
-                        }
-                    }
-                }
-            }
-        }
-
         private void SaveToFile()
         {
-            if (ProcessManager.IsCurrentUserAdmin()) { try { WriteTableToHosts(App.HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch { MessageBox.Show(String.Format(AppStrings.AHE_SaveException, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            if (ProcessManager.IsCurrentUserAdmin())
+            {
+                try
+                {
+                    App.HostsFile.Save();
+                    MessageBox.Show(AppStrings.AHE_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Error(Ex);
+                    MessageBox.Show(String.Format(AppStrings.AHE_SaveException, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
@@ -93,6 +84,15 @@ namespace mhed.gui
         {
             // Create a new instance of CurrentApp class...
             App = new CurrentApp(false, Properties.Resources.AppName);
+        }
+
+        /// <summary>
+        /// Initializes some controls on form.
+        /// </summary>
+        private void InitializeFormControls()
+        {
+            // Disabling auto columns generating...
+            HEd_Table.AutoGenerateColumns = false;
         }
 
         /// <summary>
@@ -130,21 +130,21 @@ namespace mhed.gui
         /// </summary>
         private void LoadHostsFile()
         {
-            if (File.Exists(App.HostsFilePath))
+            try
             {
-                try
-                {
-                    ReadHostsToTable(App.HostsFilePath);
-                }
-                catch
-                {
-                    MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning));
-                }
+                App.HostsFile = new HostsFileManager(App.HostsFilePath, App.Platform.OS);
+                HEd_Table.DataSource = App.HostsFile.Contents;
             }
-            else
+            catch (FileNotFoundException Ex)
             {
+                Logger.Error(Ex);
                 MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Close();
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+                MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning));
             }
         }
 
@@ -158,7 +158,16 @@ namespace mhed.gui
 
         private void HEd_T_Refresh_Click(object sender, EventArgs e)
         {
-            try { ReadHostsToTable(App.HostsFilePath); } catch { MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            try
+            {
+                App.HostsFile.Refresh();
+                HEd_Table.Refresh();
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+                MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void HEd_T_Save_Click(object sender, EventArgs e)
