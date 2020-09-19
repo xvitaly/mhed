@@ -55,6 +55,7 @@
     <Compile Include="CurrentPlatform.cs" />
     <Compile Include="DpiManager.cs" />
     <Compile Include="FileManager.cs" />
+    <Compile Include="HostsFileEntry.cs" />
     <Compile Include="ProcessManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
