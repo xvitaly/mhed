@@ -19,8 +19,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 using System;
-using System.IO;
-using System.Reflection;
 
 namespace mhed.lib
 {
@@ -77,22 +75,6 @@ namespace mhed.lib
 
             // Return result with removal of leading and trailing white-spaces...
             return RecvStr.Trim();
-        }
-
-        /// <summary>
-        /// Return contents of text file from internal resource section
-        /// of the calling assembly.
-        /// </summary>
-        /// <param name="FileName">Internal resource file name.</param>
-        /// <returns>Contents of bundled in resource text file.</returns>
-        public static string GetTemplateFromResource(string FileName)
-        {
-            string Result = String.Empty;
-            using (StreamReader Reader = new StreamReader(Assembly.GetCallingAssembly().GetManifestResourceStream(FileName)))
-            {
-                Result = Reader.ReadToEnd();
-            }
-            return Result;
         }
     }
 }
