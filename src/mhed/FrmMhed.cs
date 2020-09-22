@@ -69,12 +69,12 @@ namespace mhed.gui
                 catch (Exception Ex)
                 {
                     Logger.Error(Ex);
-                    MessageBox.Show(String.Format(AppStrings.AHE_SaveException, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(String.Format(AppStrings.AHE_SaveException, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -142,7 +142,7 @@ namespace mhed.gui
             Text = String.Format(Text, CurrentApp.AppVersion);
 
             // Add Hosts file path to the status bar...
-            HEd_St_Wrn.Text = App.HostsFilePath;
+            HEd_St_Wrn.Text = App.HostsFile.FilePath;
         }
 
         /// <summary>
@@ -152,19 +152,19 @@ namespace mhed.gui
         {
             try
             {
-                App.HostsFile = new HostsFileManager(App.HostsFilePath, App.Platform.OS);
+                App.HostsFile.Load();
                 HEd_Table.DataSource = App.HostsFile.Contents;
             }
             catch (FileNotFoundException Ex)
             {
                 Logger.Error(Ex);
-                MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Close();
             }
             catch (Exception Ex)
             {
                 Logger.Warn(Ex);
-                MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning));
+                MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning));
             }
         }
 
@@ -186,7 +186,7 @@ namespace mhed.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex);
-                MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -244,11 +244,11 @@ namespace mhed.gui
 
         private void HEd_St_Wrn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, App.HostsFilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 try
                 {
-                    ProcessManager.OpenExplorer(App.HostsFilePath, App.Platform.OS);
+                    ProcessManager.OpenExplorer(App.HostsFile.FilePath, App.Platform.OS);
                 }
                 catch (Exception Ex)
                 {
@@ -291,7 +291,7 @@ namespace mhed.gui
         {
             try
             {
-                ProcessManager.OpenTextEditor(App.HostsFilePath, Properties.Settings.Default.EditorBin, App.Platform.OS);
+                ProcessManager.OpenTextEditor(App.HostsFile.FilePath, Properties.Settings.Default.EditorBin, App.Platform.OS);
             }
             catch (Exception Ex)
             {
