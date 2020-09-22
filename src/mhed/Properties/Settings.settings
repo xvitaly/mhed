@@ -2,6 +2,9 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="mhed.gui.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
+    <Setting Name="CallUpgrade" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
     <Setting Name="EditorBin" Type="System.String" Scope="User">
       <Value Profile="(Default)">notepad.exe</Value>
     </Setting>
