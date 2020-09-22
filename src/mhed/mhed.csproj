@@ -97,6 +97,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppStrings.resx</DependentUpon>
     </Compile>
+    <Compile Include="DebugStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DebugStrings.resx</DependentUpon>
+    </Compile>
     <Compile Include="FrmMhed.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +137,10 @@
       <LastGenOutput>AppStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="AppStrings.ru.resx" />
+    <EmbeddedResource Include="DebugStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DebugStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMhed.resx">
       <DependentUpon>FrmMhed.cs</DependentUpon>
     </EmbeddedResource>
