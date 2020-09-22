@@ -26,34 +26,55 @@ using System.Text;
 
 namespace mhed.lib
 {
+    /// <summary>
+    /// Class for working with Hosts file.
+    /// </summary>
     public sealed class HostsFileManager
     {
-        private readonly string HostsFilePath;
+        /// <summary>
+        /// Get or set full Hosts file path.
+        /// </summary>
+        public string FilePath { get; private set; }
+
+        /// <summary>
+        /// Store information about current running platform.
+        /// </summary>
         private readonly CurrentPlatform.OSType Platform;
 
+        /// <summary>
+        /// Get or set Hosts file contents.
+        /// </summary>
+        public List<HostsFileEntry> Contents { get; set; }
+
+        /// <summary>
+        /// Get or set current modification state of Hosts file
+        /// data object.
+        /// </summary>
         public bool IsModified { get; private set; }
 
-        private void CheckHostsFileExists()
-        {
-            if (!File.Exists(HostsFilePath))
-            {
-                throw new FileNotFoundException("Hosts file not found.", HostsFilePath);
-            }
-        }
-
+        /// <summary>
+        /// Reset current modification state of Hosts file
+        /// data object.
+        /// </summary>
         private void ResetState()
         {
             IsModified = false;
         }
 
+        /// <summary>
+        /// Clear Hosts file data object.
+        /// </summary>
         private void ClearHostsContents()
         {
             Contents.Clear();
         }
 
+        /// <summary>
+        /// Read contents of Hosts file to the data object.
+        /// </summary>
         private void ReadHostsFile()
         {
-            using (StreamReader OpenedHosts = new StreamReader(HostsFilePath, Encoding.Default))
+            using (StreamReader OpenedHosts = new StreamReader(FilePath, Encoding.Default))
             {
                 while (OpenedHosts.Peek() >= 0)
                 {
@@ -73,9 +94,12 @@ namespace mhed.lib
             }
         }
 
+        /// <summary>
+        /// Write contents of the data object to the Hosts file.
+        /// </summary>
         private void WriteHostsFile()
         {
-            using (StreamWriter CFile = new StreamWriter(HostsFilePath, false, Encoding.Default))
+            using (StreamWriter CFile = new StreamWriter(FilePath, false, Encoding.Default))
             {
                 if (Platform == CurrentPlatform.OSType.Windows)
                 {
@@ -95,29 +119,47 @@ namespace mhed.lib
             }
         }
 
-        public List<HostsFileEntry> Contents { get; set; }
+        /// <summary>
+        /// Read Hosts file from disk.
+        /// </summary>
+        public void Load()
+        {
+            ReadHostsFile();
+            ResetState();
+        }
 
+        /// <summary>
+        /// Re-read (refresh) Hosts file from disk.
+        /// </summary>
         public void Refresh()
         {
             ClearHostsContents();
-            ReadHostsFile();
-            ResetState();
+            Load();
         }
 
+        /// <summary>
+        /// Write Hosts file changes to disk.
+        /// </summary>
         public void Save()
         {
-            WriteHostsFile();
-            ResetState();
+            if (IsModified)
+            {
+                WriteHostsFile();
+                ResetState();
+            }
         }
 
-        public HostsFileManager(string FileName, CurrentPlatform.OSType OS)
+        /// <summary>
+        /// HostsFileManager class constructor.
+        /// </summary>
+        /// <param name="OS">Current running platform.</param>
+        /// <param name="AutoLoad">Read Hosts file automatically.</param>
+        public HostsFileManager(CurrentPlatform.OSType OS, bool AutoLoad = false)
         {
-            HostsFilePath = FileName;
+            FilePath = FileManager.GetHostsFileFullPath(OS);
             Platform = OS;
             Contents = new List<HostsFileEntry>();
-            CheckHostsFileExists();
-            ReadHostsFile();
-            ResetState();
+            if (AutoLoad) Load();
         }
     }
 }
