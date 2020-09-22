@@ -41,11 +41,6 @@ namespace mhed.lib
         public string AppUserDir { get; private set; }
 
         /// <summary>
-        /// Get path to Hosts file.
-        /// </summary>
-        public string HostsFilePath { get; private set; }
-
-        /// <summary>
         /// Get information about running operating system.
         /// </summary>
         public CurrentPlatform Platform { get; private set; }
@@ -53,7 +48,7 @@ namespace mhed.lib
         /// <summary>
         /// Works with Hosts file contents.
         /// </summary>
-        public HostsFileManager HostsFile { get; set; }
+        public HostsFileManager HostsFile { get; private set; }
 
         /// <summary>
         /// Get full path to Nlog active log file.
@@ -147,8 +142,8 @@ namespace mhed.lib
                 Directory.CreateDirectory(AppUserDir);
             }
 
-            // Getting full path to the Hosts file...
-            HostsFilePath = FileManager.GetHostsFileFullPath(Platform.OS);
+            // Initializing class for working with Hosts file...
+            HostsFile = new HostsFileManager(Platform.OS);
         }
     }
 }
