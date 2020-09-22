@@ -32,6 +32,7 @@ namespace mhed.gui
         public FrmHEd()
         {
             InitializeComponent();
+            ImportSettings();
             InitializeFormControls();
         }
 
@@ -93,6 +94,25 @@ namespace mhed.gui
         {
             // Disabling auto columns generating...
             HEd_Table.AutoGenerateColumns = false;
+        }
+
+        /// <summary>
+        /// Imports settings from previous versions of application.
+        /// </summary>
+        private void ImportSettings()
+        {
+            try
+            {
+                if (Properties.Settings.Default.CallUpgrade)
+                {
+                    Properties.Settings.Default.Upgrade();
+                    Properties.Settings.Default.CallUpgrade = false;
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExSettingsLoad);
+            }
         }
 
         /// <summary>
