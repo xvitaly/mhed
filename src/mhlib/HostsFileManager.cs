@@ -44,7 +44,7 @@ namespace mhed.lib
         /// <summary>
         /// Get or set Hosts file contents.
         /// </summary>
-        public List<HostsFileEntry> Contents { get; set; }
+        public List<HostsFileEntry> Contents { get; private set; }
 
         /// <summary>
         /// Get or set current modification state of Hosts file
