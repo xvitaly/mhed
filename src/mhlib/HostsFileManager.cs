@@ -47,21 +47,6 @@ namespace mhed.lib
         public List<HostsFileEntry> Contents { get; private set; }
 
         /// <summary>
-        /// Get or set current modification state of Hosts file
-        /// data object.
-        /// </summary>
-        public bool IsModified { get; private set; }
-
-        /// <summary>
-        /// Reset current modification state of Hosts file
-        /// data object.
-        /// </summary>
-        private void ResetState()
-        {
-            IsModified = false;
-        }
-
-        /// <summary>
         /// Clear Hosts file data object.
         /// </summary>
         private void ClearHostsContents()
@@ -125,7 +110,6 @@ namespace mhed.lib
         public void Load()
         {
             ReadHostsFile();
-            ResetState();
         }
 
         /// <summary>
@@ -142,11 +126,7 @@ namespace mhed.lib
         /// </summary>
         public void Save()
         {
-            if (IsModified)
-            {
-                WriteHostsFile();
-                ResetState();
-            }
+            WriteHostsFile();
         }
 
         /// <summary>
