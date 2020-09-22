@@ -31,12 +31,19 @@ namespace mhed.lib
         private readonly string HostsFilePath;
         private readonly CurrentPlatform.OSType Platform;
 
+        public bool IsModified { get; private set; }
+
         private void CheckHostsFileExists()
         {
             if (!File.Exists(HostsFilePath))
             {
                 throw new FileNotFoundException("Hosts file not found.", HostsFilePath);
             }
+        }
+
+        private void ResetState()
+        {
+            IsModified = false;
         }
 
         private void ClearHostsContents()
@@ -94,11 +101,13 @@ namespace mhed.lib
         {
             ClearHostsContents();
             ReadHostsFile();
+            ResetState();
         }
 
         public void Save()
         {
             WriteHostsFile();
+            ResetState();
         }
 
         public HostsFileManager(string FileName, CurrentPlatform.OSType OS)
@@ -108,6 +117,7 @@ namespace mhed.lib
             Contents = new List<HostsFileEntry>();
             CheckHostsFileExists();
             ReadHostsFile();
+            ResetState();
         }
     }
 }
