@@ -32,14 +32,14 @@ namespace mhed.lib
     public sealed class HostsFileManager
     {
         /// <summary>
-        /// Get or set full Hosts file path.
-        /// </summary>
-        public string FilePath { get; private set; }
-
-        /// <summary>
         /// Store information about current running platform.
         /// </summary>
         private readonly CurrentPlatform.OSType Platform;
+
+        /// <summary>
+        /// Get or set full Hosts file path.
+        /// </summary>
+        public string FilePath { get; private set; }
 
         /// <summary>
         /// Get or set Hosts file contents.
