@@ -19,7 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -44,7 +44,7 @@ namespace mhed.lib
         /// <summary>
         /// Get or set Hosts file contents.
         /// </summary>
-        public List<HostsFileEntry> Contents { get; private set; }
+        public BindingList<HostsFileEntry> Contents;
 
         /// <summary>
         /// Clear Hosts file data object.
@@ -138,7 +138,7 @@ namespace mhed.lib
         {
             FilePath = FileManager.GetHostsFileFullPath(OS);
             Platform = OS;
-            Contents = new List<HostsFileEntry>();
+            Contents = new BindingList<HostsFileEntry>();
             if (AutoLoad) Load();
         }
     }
