@@ -44,7 +44,7 @@ namespace mhed.lib
         /// <summary>
         /// Get or set Hosts file contents.
         /// </summary>
-        public BindingList<HostsFileEntry> Contents;
+        public BindingList<HostsFileEntry> Contents { get; private set; }
 
         /// <summary>
         /// Clear Hosts file data object.
