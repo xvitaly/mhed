@@ -65,13 +65,13 @@
             // 
             // HEd_Table
             // 
+            resources.ApplyResources(this.HEd_Table, "HEd_Table");
             this.HEd_Table.BackgroundColor = System.Drawing.SystemColors.Window;
             this.HEd_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.HEd_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HEd_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HDV_IPAddr,
             this.HDV_Domain});
-            resources.ApplyResources(this.HEd_Table, "HEd_Table");
             this.HEd_Table.Name = "HEd_Table";
             // 
             // HDV_IPAddr
@@ -284,7 +284,6 @@
             this.Controls.Add(this.HEd_MMenu);
             this.Controls.Add(this.HEd_Table);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.HEd_MMenu;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
