@@ -181,7 +181,6 @@ namespace mhed.gui
             try
             {
                 App.HostsFile.Refresh();
-                HEd_Table.Refresh();
             }
             catch (Exception Ex)
             {
@@ -204,8 +203,7 @@ namespace mhed.gui
         {
             if (MessageBox.Show(AppStrings.AHE_RestDef, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                HEd_Table.Rows.Clear();
-                HEd_Table.Rows.Add("127.0.0.1", "localhost");
+                App.HostsFile.Restore();
                 SaveToFile();
             }
         }
