@@ -122,6 +122,15 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Restore default contents of the Hosts file.
+        /// </summary>
+        public void Restore()
+        {
+            ClearHostsContents();
+            Contents.Add(new HostsFileEntry("127.0.0.1", "localhost"));
+        }
+
+        /// <summary>
         /// Write Hosts file changes to disk.
         /// </summary>
         public void Save()
