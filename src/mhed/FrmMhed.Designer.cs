@@ -1,6 +1,6 @@
 ﻿namespace mhed.gui
 {
-    partial class FrmHEd
+    partial class FrmMhed
     {
         /// <summary>
         /// Required designer variable.
@@ -28,274 +28,274 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHEd));
-            this.HEd_Table = new System.Windows.Forms.DataGridView();
-            this.HDV_IPAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HDV_Domain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HEd_MTool = new System.Windows.Forms.ToolStrip();
-            this.HEd_T_Refresh = new System.Windows.Forms.ToolStripButton();
-            this.HEd_T_Save = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.HEd_T_Cut = new System.Windows.Forms.ToolStripButton();
-            this.HEd_T_Copy = new System.Windows.Forms.ToolStripButton();
-            this.HEd_T_Paste = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.HEd_T_RemRw = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.HEd_T_About = new System.Windows.Forms.ToolStripButton();
-            this.HEd_MMenu = new System.Windows.Forms.MenuStrip();
-            this.HEd_M_File = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_Refresh = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_Save = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_Quit = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_Adv = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_RestDef = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_Notepad = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_Hlp = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_OnlHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_RepBug = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_About = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_MStatus = new System.Windows.Forms.StatusStrip();
-            this.HEd_St_Wrn = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.HEd_Table)).BeginInit();
-            this.HEd_MTool.SuspendLayout();
-            this.HEd_MMenu.SuspendLayout();
-            this.HEd_MStatus.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMhed));
+            this.HE_ModelView = new System.Windows.Forms.DataGridView();
+            this.HE_ModelViewColumnIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HE_ModelViewColumnDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HE_MainToolbar = new System.Windows.Forms.ToolStrip();
+            this.HE_ToolbarRefreshButton = new System.Windows.Forms.ToolStripButton();
+            this.HE_ToolbarSaveButton = new System.Windows.Forms.ToolStripButton();
+            this.HE_ToolbarSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.HE_ToolbarCutButton = new System.Windows.Forms.ToolStripButton();
+            this.HE_ToolbarCopyButton = new System.Windows.Forms.ToolStripButton();
+            this.HE_ToolbarPasteButton = new System.Windows.Forms.ToolStripButton();
+            this.HE_ToolbarSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.HE_ToolbarDeleteButton = new System.Windows.Forms.ToolStripButton();
+            this.HE_ToolbarSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.HE_ToolbarAboutButton = new System.Windows.Forms.ToolStripButton();
+            this.HE_MainMenu = new System.Windows.Forms.MenuStrip();
+            this.HE_MenuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuRefreshItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuSaveItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuQuitItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuAdvanced = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuRestoreDefaultsItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuOpenNotepadItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuShowHelpItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuReportItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuAboutItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_StatusBar = new System.Windows.Forms.StatusStrip();
+            this.HE_StatusBarText = new System.Windows.Forms.ToolStripStatusLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.HE_ModelView)).BeginInit();
+            this.HE_MainToolbar.SuspendLayout();
+            this.HE_MainMenu.SuspendLayout();
+            this.HE_StatusBar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // HEd_Table
+            // HE_ModelView
             // 
-            resources.ApplyResources(this.HEd_Table, "HEd_Table");
-            this.HEd_Table.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.HEd_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.HEd_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.HEd_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.HDV_IPAddr,
-            this.HDV_Domain});
-            this.HEd_Table.Name = "HEd_Table";
+            resources.ApplyResources(this.HE_ModelView, "HE_ModelView");
+            this.HE_ModelView.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.HE_ModelView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.HE_ModelView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HE_ModelView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.HE_ModelViewColumnIP,
+            this.HE_ModelViewColumnDomain});
+            this.HE_ModelView.Name = "HE_ModelView";
             // 
-            // HDV_IPAddr
+            // HE_ModelViewColumnIP
             // 
-            this.HDV_IPAddr.DataPropertyName = "IPAddress";
-            resources.ApplyResources(this.HDV_IPAddr, "HDV_IPAddr");
-            this.HDV_IPAddr.Name = "HDV_IPAddr";
+            this.HE_ModelViewColumnIP.DataPropertyName = "IPAddress";
+            resources.ApplyResources(this.HE_ModelViewColumnIP, "HE_ModelViewColumnIP");
+            this.HE_ModelViewColumnIP.Name = "HE_ModelViewColumnIP";
             // 
-            // HDV_Domain
+            // HE_ModelViewColumnDomain
             // 
-            this.HDV_Domain.DataPropertyName = "Hostname";
-            resources.ApplyResources(this.HDV_Domain, "HDV_Domain");
-            this.HDV_Domain.Name = "HDV_Domain";
+            this.HE_ModelViewColumnDomain.DataPropertyName = "Hostname";
+            resources.ApplyResources(this.HE_ModelViewColumnDomain, "HE_ModelViewColumnDomain");
+            this.HE_ModelViewColumnDomain.Name = "HE_ModelViewColumnDomain";
             // 
-            // HEd_MTool
+            // HE_MainToolbar
             // 
-            this.HEd_MTool.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HEd_T_Refresh,
-            this.HEd_T_Save,
-            this.toolStripSeparator1,
-            this.HEd_T_Cut,
-            this.HEd_T_Copy,
-            this.HEd_T_Paste,
-            this.toolStripSeparator,
-            this.HEd_T_RemRw,
-            this.toolStripSeparator2,
-            this.HEd_T_About});
-            resources.ApplyResources(this.HEd_MTool, "HEd_MTool");
-            this.HEd_MTool.Name = "HEd_MTool";
+            this.HE_MainToolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HE_ToolbarRefreshButton,
+            this.HE_ToolbarSaveButton,
+            this.HE_ToolbarSeparator1,
+            this.HE_ToolbarCutButton,
+            this.HE_ToolbarCopyButton,
+            this.HE_ToolbarPasteButton,
+            this.HE_ToolbarSeparator2,
+            this.HE_ToolbarDeleteButton,
+            this.HE_ToolbarSeparator3,
+            this.HE_ToolbarAboutButton});
+            resources.ApplyResources(this.HE_MainToolbar, "HE_MainToolbar");
+            this.HE_MainToolbar.Name = "HE_MainToolbar";
             // 
-            // HEd_T_Refresh
+            // HE_ToolbarRefreshButton
             // 
-            this.HEd_T_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.HEd_T_Refresh.Image = global::mhed.gui.Properties.Resources.Refresh;
-            resources.ApplyResources(this.HEd_T_Refresh, "HEd_T_Refresh");
-            this.HEd_T_Refresh.Name = "HEd_T_Refresh";
-            this.HEd_T_Refresh.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
+            this.HE_ToolbarRefreshButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HE_ToolbarRefreshButton.Image = global::mhed.gui.Properties.Resources.Refresh;
+            resources.ApplyResources(this.HE_ToolbarRefreshButton, "HE_ToolbarRefreshButton");
+            this.HE_ToolbarRefreshButton.Name = "HE_ToolbarRefreshButton";
+            this.HE_ToolbarRefreshButton.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
             // 
-            // HEd_T_Save
+            // HE_ToolbarSaveButton
             // 
-            this.HEd_T_Save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.HEd_T_Save.Image = global::mhed.gui.Properties.Resources.Save;
-            resources.ApplyResources(this.HEd_T_Save, "HEd_T_Save");
-            this.HEd_T_Save.Name = "HEd_T_Save";
-            this.HEd_T_Save.Click += new System.EventHandler(this.HEd_T_Save_Click);
+            this.HE_ToolbarSaveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HE_ToolbarSaveButton.Image = global::mhed.gui.Properties.Resources.Save;
+            resources.ApplyResources(this.HE_ToolbarSaveButton, "HE_ToolbarSaveButton");
+            this.HE_ToolbarSaveButton.Name = "HE_ToolbarSaveButton";
+            this.HE_ToolbarSaveButton.Click += new System.EventHandler(this.HEd_T_Save_Click);
             // 
-            // toolStripSeparator1
+            // HE_ToolbarSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.HE_ToolbarSeparator1.Name = "HE_ToolbarSeparator1";
+            resources.ApplyResources(this.HE_ToolbarSeparator1, "HE_ToolbarSeparator1");
             // 
-            // HEd_T_Cut
+            // HE_ToolbarCutButton
             // 
-            this.HEd_T_Cut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.HEd_T_Cut, "HEd_T_Cut");
-            this.HEd_T_Cut.Name = "HEd_T_Cut";
-            this.HEd_T_Cut.Click += new System.EventHandler(this.HEd_T_Cut_Click);
+            this.HE_ToolbarCutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.HE_ToolbarCutButton, "HE_ToolbarCutButton");
+            this.HE_ToolbarCutButton.Name = "HE_ToolbarCutButton";
+            this.HE_ToolbarCutButton.Click += new System.EventHandler(this.HEd_T_Cut_Click);
             // 
-            // HEd_T_Copy
+            // HE_ToolbarCopyButton
             // 
-            this.HEd_T_Copy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.HEd_T_Copy, "HEd_T_Copy");
-            this.HEd_T_Copy.Name = "HEd_T_Copy";
-            this.HEd_T_Copy.Click += new System.EventHandler(this.HEd_T_Copy_Click);
+            this.HE_ToolbarCopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.HE_ToolbarCopyButton, "HE_ToolbarCopyButton");
+            this.HE_ToolbarCopyButton.Name = "HE_ToolbarCopyButton";
+            this.HE_ToolbarCopyButton.Click += new System.EventHandler(this.HEd_T_Copy_Click);
             // 
-            // HEd_T_Paste
+            // HE_ToolbarPasteButton
             // 
-            this.HEd_T_Paste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.HEd_T_Paste, "HEd_T_Paste");
-            this.HEd_T_Paste.Name = "HEd_T_Paste";
-            this.HEd_T_Paste.Click += new System.EventHandler(this.HEd_T_Paste_Click);
+            this.HE_ToolbarPasteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.HE_ToolbarPasteButton, "HE_ToolbarPasteButton");
+            this.HE_ToolbarPasteButton.Name = "HE_ToolbarPasteButton";
+            this.HE_ToolbarPasteButton.Click += new System.EventHandler(this.HEd_T_Paste_Click);
             // 
-            // toolStripSeparator
+            // HE_ToolbarSeparator2
             // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            resources.ApplyResources(this.toolStripSeparator, "toolStripSeparator");
+            this.HE_ToolbarSeparator2.Name = "HE_ToolbarSeparator2";
+            resources.ApplyResources(this.HE_ToolbarSeparator2, "HE_ToolbarSeparator2");
             // 
-            // HEd_T_RemRw
+            // HE_ToolbarDeleteButton
             // 
-            this.HEd_T_RemRw.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.HEd_T_RemRw.Image = global::mhed.gui.Properties.Resources.Delete;
-            resources.ApplyResources(this.HEd_T_RemRw, "HEd_T_RemRw");
-            this.HEd_T_RemRw.Name = "HEd_T_RemRw";
-            this.HEd_T_RemRw.Click += new System.EventHandler(this.HEd_T_RemRw_Click);
+            this.HE_ToolbarDeleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HE_ToolbarDeleteButton.Image = global::mhed.gui.Properties.Resources.Delete;
+            resources.ApplyResources(this.HE_ToolbarDeleteButton, "HE_ToolbarDeleteButton");
+            this.HE_ToolbarDeleteButton.Name = "HE_ToolbarDeleteButton";
+            this.HE_ToolbarDeleteButton.Click += new System.EventHandler(this.HEd_T_RemRw_Click);
             // 
-            // toolStripSeparator2
+            // HE_ToolbarSeparator3
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            this.HE_ToolbarSeparator3.Name = "HE_ToolbarSeparator3";
+            resources.ApplyResources(this.HE_ToolbarSeparator3, "HE_ToolbarSeparator3");
             // 
-            // HEd_T_About
+            // HE_ToolbarAboutButton
             // 
-            this.HEd_T_About.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.HEd_T_About, "HEd_T_About");
-            this.HEd_T_About.Name = "HEd_T_About";
-            this.HEd_T_About.Click += new System.EventHandler(this.HEd_M_About_Click);
+            this.HE_ToolbarAboutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.HE_ToolbarAboutButton, "HE_ToolbarAboutButton");
+            this.HE_ToolbarAboutButton.Name = "HE_ToolbarAboutButton";
+            this.HE_ToolbarAboutButton.Click += new System.EventHandler(this.HEd_M_About_Click);
             // 
-            // HEd_MMenu
+            // HE_MainMenu
             // 
-            this.HEd_MMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HEd_M_File,
-            this.HEd_M_Adv,
-            this.HEd_M_Hlp});
-            resources.ApplyResources(this.HEd_MMenu, "HEd_MMenu");
-            this.HEd_MMenu.Name = "HEd_MMenu";
+            this.HE_MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HE_MenuFile,
+            this.HE_MenuAdvanced,
+            this.HE_MenuHelp});
+            resources.ApplyResources(this.HE_MainMenu, "HE_MainMenu");
+            this.HE_MainMenu.Name = "HE_MainMenu";
             // 
-            // HEd_M_File
+            // HE_MenuFile
             // 
-            this.HEd_M_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HEd_M_Refresh,
-            this.HEd_M_Save,
-            this.HEd_M_Quit});
-            this.HEd_M_File.Name = "HEd_M_File";
-            resources.ApplyResources(this.HEd_M_File, "HEd_M_File");
+            this.HE_MenuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HE_MenuRefreshItem,
+            this.HE_MenuSaveItem,
+            this.HE_MenuQuitItem});
+            this.HE_MenuFile.Name = "HE_MenuFile";
+            resources.ApplyResources(this.HE_MenuFile, "HE_MenuFile");
             // 
-            // HEd_M_Refresh
+            // HE_MenuRefreshItem
             // 
-            this.HEd_M_Refresh.Image = global::mhed.gui.Properties.Resources.Refresh;
-            this.HEd_M_Refresh.Name = "HEd_M_Refresh";
-            resources.ApplyResources(this.HEd_M_Refresh, "HEd_M_Refresh");
-            this.HEd_M_Refresh.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
+            this.HE_MenuRefreshItem.Image = global::mhed.gui.Properties.Resources.Refresh;
+            this.HE_MenuRefreshItem.Name = "HE_MenuRefreshItem";
+            resources.ApplyResources(this.HE_MenuRefreshItem, "HE_MenuRefreshItem");
+            this.HE_MenuRefreshItem.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
             // 
-            // HEd_M_Save
+            // HE_MenuSaveItem
             // 
-            this.HEd_M_Save.Image = global::mhed.gui.Properties.Resources.Save;
-            this.HEd_M_Save.Name = "HEd_M_Save";
-            resources.ApplyResources(this.HEd_M_Save, "HEd_M_Save");
-            this.HEd_M_Save.Click += new System.EventHandler(this.HEd_T_Save_Click);
+            this.HE_MenuSaveItem.Image = global::mhed.gui.Properties.Resources.Save;
+            this.HE_MenuSaveItem.Name = "HE_MenuSaveItem";
+            resources.ApplyResources(this.HE_MenuSaveItem, "HE_MenuSaveItem");
+            this.HE_MenuSaveItem.Click += new System.EventHandler(this.HEd_T_Save_Click);
             // 
-            // HEd_M_Quit
+            // HE_MenuQuitItem
             // 
-            this.HEd_M_Quit.Image = global::mhed.gui.Properties.Resources.Exit;
-            this.HEd_M_Quit.Name = "HEd_M_Quit";
-            resources.ApplyResources(this.HEd_M_Quit, "HEd_M_Quit");
-            this.HEd_M_Quit.Click += new System.EventHandler(this.HEd_M_Quit_Click);
+            this.HE_MenuQuitItem.Image = global::mhed.gui.Properties.Resources.Exit;
+            this.HE_MenuQuitItem.Name = "HE_MenuQuitItem";
+            resources.ApplyResources(this.HE_MenuQuitItem, "HE_MenuQuitItem");
+            this.HE_MenuQuitItem.Click += new System.EventHandler(this.HEd_M_Quit_Click);
             // 
-            // HEd_M_Adv
+            // HE_MenuAdvanced
             // 
-            this.HEd_M_Adv.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HEd_M_RestDef,
-            this.HEd_M_Notepad});
-            this.HEd_M_Adv.Name = "HEd_M_Adv";
-            resources.ApplyResources(this.HEd_M_Adv, "HEd_M_Adv");
+            this.HE_MenuAdvanced.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HE_MenuRestoreDefaultsItem,
+            this.HE_MenuOpenNotepadItem});
+            this.HE_MenuAdvanced.Name = "HE_MenuAdvanced";
+            resources.ApplyResources(this.HE_MenuAdvanced, "HE_MenuAdvanced");
             // 
-            // HEd_M_RestDef
+            // HE_MenuRestoreDefaultsItem
             // 
-            this.HEd_M_RestDef.Image = global::mhed.gui.Properties.Resources.Restore;
-            this.HEd_M_RestDef.Name = "HEd_M_RestDef";
-            resources.ApplyResources(this.HEd_M_RestDef, "HEd_M_RestDef");
-            this.HEd_M_RestDef.Click += new System.EventHandler(this.HEd_M_RestDef_Click);
+            this.HE_MenuRestoreDefaultsItem.Image = global::mhed.gui.Properties.Resources.Restore;
+            this.HE_MenuRestoreDefaultsItem.Name = "HE_MenuRestoreDefaultsItem";
+            resources.ApplyResources(this.HE_MenuRestoreDefaultsItem, "HE_MenuRestoreDefaultsItem");
+            this.HE_MenuRestoreDefaultsItem.Click += new System.EventHandler(this.HEd_M_RestDef_Click);
             // 
-            // HEd_M_Notepad
+            // HE_MenuOpenNotepadItem
             // 
-            this.HEd_M_Notepad.Image = global::mhed.gui.Properties.Resources.TextEditor;
-            this.HEd_M_Notepad.Name = "HEd_M_Notepad";
-            resources.ApplyResources(this.HEd_M_Notepad, "HEd_M_Notepad");
-            this.HEd_M_Notepad.Click += new System.EventHandler(this.HEd_M_Notepad_Click);
+            this.HE_MenuOpenNotepadItem.Image = global::mhed.gui.Properties.Resources.TextEditor;
+            this.HE_MenuOpenNotepadItem.Name = "HE_MenuOpenNotepadItem";
+            resources.ApplyResources(this.HE_MenuOpenNotepadItem, "HE_MenuOpenNotepadItem");
+            this.HE_MenuOpenNotepadItem.Click += new System.EventHandler(this.HEd_M_Notepad_Click);
             // 
-            // HEd_M_Hlp
+            // HE_MenuHelp
             // 
-            this.HEd_M_Hlp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HEd_M_OnlHelp,
-            this.HEd_M_RepBug,
-            this.HEd_M_About});
-            this.HEd_M_Hlp.Name = "HEd_M_Hlp";
-            resources.ApplyResources(this.HEd_M_Hlp, "HEd_M_Hlp");
+            this.HE_MenuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HE_MenuShowHelpItem,
+            this.HE_MenuReportItem,
+            this.HE_MenuAboutItem});
+            this.HE_MenuHelp.Name = "HE_MenuHelp";
+            resources.ApplyResources(this.HE_MenuHelp, "HE_MenuHelp");
             // 
-            // HEd_M_OnlHelp
+            // HE_MenuShowHelpItem
             // 
-            this.HEd_M_OnlHelp.Image = global::mhed.gui.Properties.Resources.Help;
-            this.HEd_M_OnlHelp.Name = "HEd_M_OnlHelp";
-            resources.ApplyResources(this.HEd_M_OnlHelp, "HEd_M_OnlHelp");
-            this.HEd_M_OnlHelp.Click += new System.EventHandler(this.HEd_M_OnlHelp_Click);
+            this.HE_MenuShowHelpItem.Image = global::mhed.gui.Properties.Resources.Help;
+            this.HE_MenuShowHelpItem.Name = "HE_MenuShowHelpItem";
+            resources.ApplyResources(this.HE_MenuShowHelpItem, "HE_MenuShowHelpItem");
+            this.HE_MenuShowHelpItem.Click += new System.EventHandler(this.HEd_M_OnlHelp_Click);
             // 
-            // HEd_M_RepBug
+            // HE_MenuReportItem
             // 
-            this.HEd_M_RepBug.Image = global::mhed.gui.Properties.Resources.bug;
-            this.HEd_M_RepBug.Name = "HEd_M_RepBug";
-            resources.ApplyResources(this.HEd_M_RepBug, "HEd_M_RepBug");
-            this.HEd_M_RepBug.Click += new System.EventHandler(this.HEd_M_RepBug_Click);
+            this.HE_MenuReportItem.Image = global::mhed.gui.Properties.Resources.bug;
+            this.HE_MenuReportItem.Name = "HE_MenuReportItem";
+            resources.ApplyResources(this.HE_MenuReportItem, "HE_MenuReportItem");
+            this.HE_MenuReportItem.Click += new System.EventHandler(this.HEd_M_RepBug_Click);
             // 
-            // HEd_M_About
+            // HE_MenuAboutItem
             // 
-            this.HEd_M_About.Image = global::mhed.gui.Properties.Resources.Info;
-            this.HEd_M_About.Name = "HEd_M_About";
-            resources.ApplyResources(this.HEd_M_About, "HEd_M_About");
-            this.HEd_M_About.Click += new System.EventHandler(this.HEd_M_About_Click);
+            this.HE_MenuAboutItem.Image = global::mhed.gui.Properties.Resources.Info;
+            this.HE_MenuAboutItem.Name = "HE_MenuAboutItem";
+            resources.ApplyResources(this.HE_MenuAboutItem, "HE_MenuAboutItem");
+            this.HE_MenuAboutItem.Click += new System.EventHandler(this.HEd_M_About_Click);
             // 
-            // HEd_MStatus
+            // HE_StatusBar
             // 
-            this.HEd_MStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HEd_St_Wrn});
-            resources.ApplyResources(this.HEd_MStatus, "HEd_MStatus");
-            this.HEd_MStatus.Name = "HEd_MStatus";
+            this.HE_StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HE_StatusBarText});
+            resources.ApplyResources(this.HE_StatusBar, "HE_StatusBar");
+            this.HE_StatusBar.Name = "HE_StatusBar";
             // 
-            // HEd_St_Wrn
+            // HE_StatusBarText
             // 
-            this.HEd_St_Wrn.Name = "HEd_St_Wrn";
-            resources.ApplyResources(this.HEd_St_Wrn, "HEd_St_Wrn");
-            this.HEd_St_Wrn.Click += new System.EventHandler(this.HEd_St_Wrn_Click);
-            this.HEd_St_Wrn.MouseEnter += new System.EventHandler(this.HEd_St_Wrn_MouseEnter);
-            this.HEd_St_Wrn.MouseLeave += new System.EventHandler(this.HEd_St_Wrn_MouseLeave);
+            this.HE_StatusBarText.Name = "HE_StatusBarText";
+            resources.ApplyResources(this.HE_StatusBarText, "HE_StatusBarText");
+            this.HE_StatusBarText.Click += new System.EventHandler(this.HEd_St_Wrn_Click);
+            this.HE_StatusBarText.MouseEnter += new System.EventHandler(this.HEd_St_Wrn_MouseEnter);
+            this.HE_StatusBarText.MouseLeave += new System.EventHandler(this.HEd_St_Wrn_MouseLeave);
             // 
-            // FrmHEd
+            // FrmMhed
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.HEd_MStatus);
-            this.Controls.Add(this.HEd_MTool);
-            this.Controls.Add(this.HEd_MMenu);
-            this.Controls.Add(this.HEd_Table);
+            this.Controls.Add(this.HE_StatusBar);
+            this.Controls.Add(this.HE_MainToolbar);
+            this.Controls.Add(this.HE_MainMenu);
+            this.Controls.Add(this.HE_ModelView);
             this.DoubleBuffered = true;
-            this.MainMenuStrip = this.HEd_MMenu;
+            this.MainMenuStrip = this.HE_MainMenu;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmHEd";
+            this.Name = "FrmMhed";
             this.Load += new System.EventHandler(this.FrmHEd_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.HEd_Table)).EndInit();
-            this.HEd_MTool.ResumeLayout(false);
-            this.HEd_MTool.PerformLayout();
-            this.HEd_MMenu.ResumeLayout(false);
-            this.HEd_MMenu.PerformLayout();
-            this.HEd_MStatus.ResumeLayout(false);
-            this.HEd_MStatus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HE_ModelView)).EndInit();
+            this.HE_MainToolbar.ResumeLayout(false);
+            this.HE_MainToolbar.PerformLayout();
+            this.HE_MainMenu.ResumeLayout(false);
+            this.HE_MainMenu.PerformLayout();
+            this.HE_StatusBar.ResumeLayout(false);
+            this.HE_StatusBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,33 +303,33 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView HEd_Table;
-        private System.Windows.Forms.ToolStrip HEd_MTool;
-        private System.Windows.Forms.ToolStripButton HEd_T_Refresh;
-        private System.Windows.Forms.ToolStripButton HEd_T_Save;
-        private System.Windows.Forms.MenuStrip HEd_MMenu;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_File;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_Refresh;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_Save;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_Adv;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_RestDef;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_Hlp;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_OnlHelp;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_About;
-        private System.Windows.Forms.StatusStrip HEd_MStatus;
-        private System.Windows.Forms.ToolStripStatusLabel HEd_St_Wrn;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_Quit;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton HEd_T_RemRw;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_Notepad;
-        private System.Windows.Forms.ToolStripButton HEd_T_Cut;
-        private System.Windows.Forms.ToolStripButton HEd_T_Copy;
-        private System.Windows.Forms.ToolStripButton HEd_T_Paste;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton HEd_T_About;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_RepBug;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HDV_IPAddr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HDV_Domain;
+        private System.Windows.Forms.DataGridView HE_ModelView;
+        private System.Windows.Forms.ToolStrip HE_MainToolbar;
+        private System.Windows.Forms.ToolStripButton HE_ToolbarRefreshButton;
+        private System.Windows.Forms.ToolStripButton HE_ToolbarSaveButton;
+        private System.Windows.Forms.MenuStrip HE_MainMenu;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuFile;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuRefreshItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuSaveItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuAdvanced;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuRestoreDefaultsItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuHelp;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuShowHelpItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuAboutItem;
+        private System.Windows.Forms.StatusStrip HE_StatusBar;
+        private System.Windows.Forms.ToolStripStatusLabel HE_StatusBarText;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuQuitItem;
+        private System.Windows.Forms.ToolStripSeparator HE_ToolbarSeparator1;
+        private System.Windows.Forms.ToolStripButton HE_ToolbarDeleteButton;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuOpenNotepadItem;
+        private System.Windows.Forms.ToolStripButton HE_ToolbarCutButton;
+        private System.Windows.Forms.ToolStripButton HE_ToolbarCopyButton;
+        private System.Windows.Forms.ToolStripButton HE_ToolbarPasteButton;
+        private System.Windows.Forms.ToolStripSeparator HE_ToolbarSeparator2;
+        private System.Windows.Forms.ToolStripSeparator HE_ToolbarSeparator3;
+        private System.Windows.Forms.ToolStripButton HE_ToolbarAboutButton;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuReportItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnIP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnDomain;
     }
 }

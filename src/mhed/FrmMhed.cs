@@ -27,9 +27,9 @@ using System.Windows.Forms;
 
 namespace mhed.gui
 {
-    public partial class FrmHEd : Form
+    public partial class FrmMhed : Form
     {
-        public FrmHEd()
+        public FrmMhed()
         {
             InitializeComponent();
             ImportSettings();
@@ -52,7 +52,7 @@ namespace mhed.gui
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
-            DpiManager.ScaleColumnsInControl(HEd_Table, ScalingFactor);
+            DpiManager.ScaleColumnsInControl(HE_ModelView, ScalingFactor);
         }
         #endregion
 
@@ -93,7 +93,7 @@ namespace mhed.gui
         private void InitializeFormControls()
         {
             // Disabling auto columns generating...
-            HEd_Table.AutoGenerateColumns = false;
+            HE_ModelView.AutoGenerateColumns = false;
         }
 
         /// <summary>
@@ -123,13 +123,13 @@ namespace mhed.gui
         {
             if (!ProcessManager.IsCurrentUserAdmin())
             {
-                HEd_M_Save.Enabled = false;
-                HEd_T_Save.Enabled = false;
-                HEd_M_RestDef.Enabled = false;
-                HEd_Table.ReadOnly = true;
-                HEd_T_Cut.Enabled = false;
-                HEd_T_Paste.Enabled = false;
-                HEd_T_RemRw.Enabled = false;
+                HE_MenuSaveItem.Enabled = false;
+                HE_ToolbarSaveButton.Enabled = false;
+                HE_MenuRestoreDefaultsItem.Enabled = false;
+                HE_ModelView.ReadOnly = true;
+                HE_ToolbarCutButton.Enabled = false;
+                HE_ToolbarPasteButton.Enabled = false;
+                HE_ToolbarDeleteButton.Enabled = false;
             }
         }
 
@@ -142,7 +142,7 @@ namespace mhed.gui
             Text = String.Format(Text, CurrentApp.AppVersion);
 
             // Add Hosts file path to the status bar...
-            HEd_St_Wrn.Text = App.HostsFile.FilePath;
+            HE_StatusBarText.Text = App.HostsFile.FilePath;
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace mhed.gui
             try
             {
                 App.HostsFile.Load();
-                HEd_Table.DataSource = App.HostsFile.Contents;
+                HE_ModelView.DataSource = App.HostsFile.Contents;
             }
             catch (FileNotFoundException Ex)
             {
@@ -222,9 +222,9 @@ namespace mhed.gui
         {
             try
             {
-                foreach (DataGridViewCell Cell in HEd_Table.SelectedCells)
+                foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
                 {
-                    if (Cell.Selected) { HEd_Table.Rows.RemoveAt(Cell.RowIndex); }
+                    if (Cell.Selected) { HE_ModelView.Rows.RemoveAt(Cell.RowIndex); }
                 }
             }
             catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
@@ -232,12 +232,12 @@ namespace mhed.gui
 
         private void HEd_St_Wrn_MouseEnter(object sender, EventArgs e)
         {
-            HEd_St_Wrn.ForeColor = Color.Red;
+            HE_StatusBarText.ForeColor = Color.Red;
         }
 
         private void HEd_St_Wrn_MouseLeave(object sender, EventArgs e)
         {
-            HEd_St_Wrn.ForeColor = Color.Black;
+            HE_StatusBarText.ForeColor = Color.Black;
         }
 
         private void HEd_St_Wrn_Click(object sender, EventArgs e)
@@ -259,10 +259,10 @@ namespace mhed.gui
         {
             try
             {
-                if (HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value != null)
+                if (HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
                 {
-                    Clipboard.SetText(HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value.ToString());
-                    HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value = null;
+                    Clipboard.SetText(HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value.ToString());
+                    HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = null;
                 }
             }
             catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
@@ -272,9 +272,9 @@ namespace mhed.gui
         {
             try
             {
-                if (HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value != null)
+                if (HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
                 {
-                    Clipboard.SetText(HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value.ToString());
+                    Clipboard.SetText(HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value.ToString());
                 }
             }
             catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
@@ -282,7 +282,7 @@ namespace mhed.gui
 
         private void HEd_T_Paste_Click(object sender, EventArgs e)
         {
-            try { if (Clipboard.ContainsText()) { HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value = Clipboard.GetText(); } } catch { }
+            try { if (Clipboard.ContainsText()) { HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Clipboard.GetText(); } } catch { }
         }
 
         private void HEd_M_Notepad_Click(object sender, EventArgs e)

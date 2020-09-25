@@ -38,7 +38,7 @@ namespace mhed.gui
                 {
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
-                    Application.Run(new FrmHEd());
+                    Application.Run(new FrmMhed());
                 }
                 else
                 {

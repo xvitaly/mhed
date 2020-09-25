@@ -117,20 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="HDV_IPAddr.HeaderText" xml:space="preserve">
+  <data name="HE_ModelViewColumnIP.HeaderText" xml:space="preserve">
     <value>IP-адрес</value>
   </data>
-  <data name="HDV_Domain.HeaderText" xml:space="preserve">
+  <data name="HE_ModelViewColumnDomain.HeaderText" xml:space="preserve">
     <value>Доменное имя</value>
   </data>
-  <data name="HEd_T_Refresh.Text" xml:space="preserve">
-    <value>Обновить</value>
+  <data name="HE_ToolbarRefreshButton.Text" xml:space="preserve">
+    <value>&amp;Обновить</value>
   </data>
-  <data name="HEd_T_Save.Text" xml:space="preserve">
-    <value>Сохранить изменения</value>
+  <data name="HE_ToolbarSaveButton.Text" xml:space="preserve">
+    <value>&amp;Сохранить изменения</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="HEd_T_Cut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="HE_ToolbarCutButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVDhPrZFNSwJRGIX9NYGbFoUlFElY1EJQKEYhCJsi
@@ -143,10 +143,10 @@
         TNAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="HEd_T_Cut.Text" xml:space="preserve">
-    <value>Вырезать</value>
+  <data name="HE_ToolbarCutButton.Text" xml:space="preserve">
+    <value>&amp;Вырезать</value>
   </data>
-  <data name="HEd_T_Copy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="HE_ToolbarCopyButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHkSURBVDhPvZHfS1NhHIf3p5QypLr2D4goMwoMCi/qIugH
@@ -160,10 +160,10 @@
         FF7bIVJVZ0N/soPK421UHGstlFvYd/hWecF/Qqf7CR0A5wwgSQA2AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="HEd_T_Copy.Text" xml:space="preserve">
-    <value>Копировать</value>
+  <data name="HE_ToolbarCopyButton.Text" xml:space="preserve">
+    <value>&amp;Копировать</value>
   </data>
-  <data name="HEd_T_Paste.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="HE_ToolbarPasteButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJSSURBVDhPtZJrSJNRGMdf6IN9KbpQn/pUEH2JIoLqQ0Zh
@@ -179,13 +179,13 @@
         PdXm80/AfDokTVu+8DfPXv9XCcIPTvjvLQ8YoakAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="HEd_T_Paste.Text" xml:space="preserve">
-    <value>Вставить</value>
+  <data name="HE_ToolbarPasteButton.Text" xml:space="preserve">
+    <value>Вст&amp;авить</value>
   </data>
-  <data name="HEd_T_RemRw.Text" xml:space="preserve">
-    <value>Удалить строку</value>
+  <data name="HE_ToolbarDeleteButton.Text" xml:space="preserve">
+    <value>&amp;Удалить строку</value>
   </data>
-  <data name="HEd_T_About.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="HE_ToolbarAboutButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVDhPtVJNaxNRFM1PyE+Yn1AUXLjK0uWgDWQZwUUX
@@ -200,80 +200,65 @@
         E9ew//AVxE8OItv/9O/Cf0ck8gud2vKswuxNZgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="HEd_T_About.Text" xml:space="preserve">
-    <value>О плагине...</value>
+  <data name="HE_ToolbarAboutButton.Text" xml:space="preserve">
+    <value>О програ&amp;мме...</value>
   </data>
-  <data name="HEd_M_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
-  </data>
-  <data name="HEd_M_Refresh.Text" xml:space="preserve">
-    <value>&amp;Обновить</value>
-  </data>
-  <data name="HEd_M_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
-  </data>
-  <data name="HEd_M_Save.Text" xml:space="preserve">
-    <value>&amp;Сохранить</value>
-  </data>
-  <data name="HEd_M_Quit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
-  </data>
-  <data name="HEd_M_Quit.Text" xml:space="preserve">
-    <value>&amp;Закрыть</value>
-  </data>
-  <data name="HEd_M_File.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HE_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
   </data>
-  <data name="HEd_M_File.Text" xml:space="preserve">
+  <data name="HE_MenuFile.Text" xml:space="preserve">
     <value>&amp;Файл</value>
   </data>
-  <data name="HEd_M_RestDef.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 22</value>
+  <data name="HE_MenuRefreshItem.Text" xml:space="preserve">
+    <value>&amp;Обновить</value>
   </data>
-  <data name="HEd_M_RestDef.Text" xml:space="preserve">
-    <value>Восс&amp;тановить стандартные значения</value>
+  <data name="HE_MenuSaveItem.Text" xml:space="preserve">
+    <value>&amp;Сохранить</value>
   </data>
-  <data name="HEd_M_Notepad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 22</value>
+  <data name="HE_MenuQuitItem.Text" xml:space="preserve">
+    <value>&amp;Выход</value>
   </data>
-  <data name="HEd_M_Notepad.Text" xml:space="preserve">
-    <value>От&amp;крыть файл Hosts в Блокноте</value>
-  </data>
-  <data name="HEd_M_Adv.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HE_MenuAdvanced.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 20</value>
   </data>
-  <data name="HEd_M_Adv.Text" xml:space="preserve">
+  <data name="HE_MenuAdvanced.Text" xml:space="preserve">
     <value>&amp;Дополнительно</value>
   </data>
-  <data name="HEd_M_OnlHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 22</value>
+  <data name="HE_MenuRestoreDefaultsItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>276, 22</value>
   </data>
-  <data name="HEd_M_OnlHelp.Text" xml:space="preserve">
-    <value>О&amp;нлайн-справка</value>
+  <data name="HE_MenuRestoreDefaultsItem.Text" xml:space="preserve">
+    <value>Восс&amp;тановить стандартные значения</value>
   </data>
-  <data name="HEd_M_RepBug.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 22</value>
+  <data name="HE_MenuOpenNotepadItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>276, 22</value>
   </data>
-  <data name="HEd_M_RepBug.Text" xml:space="preserve">
-    <value>Сооб&amp;щить об ошибке...</value>
+  <data name="HE_MenuOpenNotepadItem.Text" xml:space="preserve">
+    <value>От&amp;крыть в текстовом редакторе</value>
   </data>
-  <data name="HEd_M_About.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 22</value>
-  </data>
-  <data name="HEd_M_About.Text" xml:space="preserve">
-    <value>О &amp;плагине...</value>
-  </data>
-  <data name="HEd_M_Hlp.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HE_MenuHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
   </data>
-  <data name="HEd_M_Hlp.Text" xml:space="preserve">
+  <data name="HE_MenuHelp.Text" xml:space="preserve">
     <value>&amp;Справка</value>
   </data>
-  <data name="HEd_St_Wrn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 17</value>
+  <data name="HE_MenuShowHelpItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 22</value>
   </data>
-  <data name="HEd_St_Wrn.Text" xml:space="preserve">
-    <value>Путь</value>
+  <data name="HE_MenuShowHelpItem.Text" xml:space="preserve">
+    <value>Справочн&amp;ая система</value>
+  </data>
+  <data name="HE_MenuReportItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 22</value>
+  </data>
+  <data name="HE_MenuReportItem.Text" xml:space="preserve">
+    <value>Сообщить об о&amp;шибке</value>
+  </data>
+  <data name="HE_MenuAboutItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 22</value>
+  </data>
+  <data name="HE_MenuAboutItem.Text" xml:space="preserve">
+    <value>&amp;О программе...</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
