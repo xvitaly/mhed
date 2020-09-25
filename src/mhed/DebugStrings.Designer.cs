@@ -61,6 +61,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An exception occured while trying to render data from the attached object..
+        /// </summary>
+        internal static string AppDbgExModelView {
+            get {
+                return ResourceManager.GetString("AppDbgExModelView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to import settings from the previous version..
         /// </summary>
         internal static string AppDbgExSettingsLoad {
