@@ -73,6 +73,7 @@
             this.HE_ModelViewColumnIP,
             this.HE_ModelViewColumnDomain});
             this.HE_ModelView.Name = "HE_ModelView";
+            this.HE_ModelView.VirtualMode = true;
             this.HE_ModelView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.HE_ModelView_DataError);
             // 
             // HE_ModelViewColumnIP
