@@ -84,7 +84,7 @@ namespace mhed.gui
         private void InitializeApp()
         {
             // Create a new instance of CurrentApp class...
-            App = new CurrentApp(false, Properties.Resources.AppName);
+            App = new CurrentApp(Properties.Settings.Default.IsPortable, Properties.Resources.AppName);
         }
 
         /// <summary>
