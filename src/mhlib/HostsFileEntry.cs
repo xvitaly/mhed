@@ -43,5 +43,14 @@ namespace mhed.lib
             IPAddress = IP;
             Hostname = Host;
         }
+
+        /// <summary>
+        /// HostsFileEntry class alternative constructor.
+        /// </summary>
+        public HostsFileEntry()
+        {
+            IPAddress = string.Empty;
+            Hostname = string.Empty;
+        }
     }
 }
