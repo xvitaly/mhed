@@ -301,6 +301,11 @@ namespace mhed.gui
         {
             ProcessManager.OpenWebPage(Properties.Resources.AppBtURL);
         }
+
+        private void HE_ModelView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            Logger.Warn(DebugStrings.AppDbgExModelView, e);
+        }
         #endregion
     }
 }
