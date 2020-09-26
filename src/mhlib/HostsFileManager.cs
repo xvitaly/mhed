@@ -47,6 +47,16 @@ namespace mhed.lib
         public BindingList<HostsFileEntry> Contents { get; private set; }
 
         /// <summary>
+        /// Validate IP-address.
+        /// </summary>
+        /// <param name="SrcIPAddress">Source IP-address for validation.</param>
+        /// <returns>Return True if the source IP-address is correct.</returns>
+        public static bool ValidateIPAddress(string SrcIPAddress)
+        {
+            return IPAddress.TryParse(SrcIPAddress, out _);
+        }
+
+        /// <summary>
         /// Clear Hosts file data object.
         /// </summary>
         private void ClearHostsContents()
@@ -95,9 +105,9 @@ namespace mhed.lib
                 {
                     if (!String.IsNullOrEmpty(Entry.IPAddress) && !String.IsNullOrEmpty(Entry.Hostname))
                     {
-                        if (IPAddress.TryParse(Entry.IPAddress, out IPAddress IPAddr))
+                        if (ValidateIPAddress(Entry.IPAddress))
                         {
-                            CFile.WriteLine("{0} {1}", IPAddr, Entry.Hostname);
+                            CFile.WriteLine("{0} {1}", Entry.IPAddress, Entry.Hostname);
                         }
                     }
                 }
