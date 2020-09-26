@@ -232,7 +232,7 @@ namespace mhed.gui
         private void HE_ModelView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             // Validating only IP-address field...
-            if (e.ColumnIndex == 0)
+            if ((e.ColumnIndex == 0) && !HE_ModelView.Rows[e.RowIndex].IsNewRow)
             {
                 HE_ModelView.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
             }
