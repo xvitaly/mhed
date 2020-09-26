@@ -117,8 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppDbgExClipboardCopy" xml:space="preserve">
+    <value>Exception while trying to copy cell's contents to the clipboard.</value>
+  </data>
+  <data name="AppDbgExClipboardCut" xml:space="preserve">
+    <value>Exception while trying to cut cell's contents to the clipboard.</value>
+  </data>
+  <data name="AppDbgExClipboardPaste" xml:space="preserve">
+    <value>Exception while trying to paste the clipboard's contents to the selected cell.</value>
+  </data>
+  <data name="AppDbgExDeleteRow" xml:space="preserve">
+    <value>Exception while trying to delete selected row.</value>
+  </data>
   <data name="AppDbgExModelView" xml:space="preserve">
     <value>An exception occured while trying to render data from the attached object.</value>
+  </data>
+  <data name="AppDbgExOpenNotepad" xml:space="preserve">
+    <value>Exception while trying to load Hosts file in text editor.</value>
+  </data>
+  <data name="AppDbgExOpenShell" xml:space="preserve">
+    <value>Exception while trying to show Hosts file in the default shell.</value>
   </data>
   <data name="AppDbgExSettingsLoad" xml:space="preserve">
     <value>Failed to import settings from the previous version.</value>

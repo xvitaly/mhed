@@ -61,11 +61,65 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to copy cell&apos;s contents to the clipboard..
+        /// </summary>
+        internal static string AppDbgExClipboardCopy {
+            get {
+                return ResourceManager.GetString("AppDbgExClipboardCopy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to cut cell&apos;s contents to the clipboard..
+        /// </summary>
+        internal static string AppDbgExClipboardCut {
+            get {
+                return ResourceManager.GetString("AppDbgExClipboardCut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to paste the clipboard&apos;s contents to the selected cell..
+        /// </summary>
+        internal static string AppDbgExClipboardPaste {
+            get {
+                return ResourceManager.GetString("AppDbgExClipboardPaste", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to delete selected row..
+        /// </summary>
+        internal static string AppDbgExDeleteRow {
+            get {
+                return ResourceManager.GetString("AppDbgExDeleteRow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An exception occured while trying to render data from the attached object..
         /// </summary>
         internal static string AppDbgExModelView {
             get {
                 return ResourceManager.GetString("AppDbgExModelView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to load Hosts file in text editor..
+        /// </summary>
+        internal static string AppDbgExOpenNotepad {
+            get {
+                return ResourceManager.GetString("AppDbgExOpenNotepad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to show Hosts file in the default shell..
+        /// </summary>
+        internal static string AppDbgExOpenShell {
+            get {
+                return ResourceManager.GetString("AppDbgExOpenShell", resourceCulture);
             }
         }
         
