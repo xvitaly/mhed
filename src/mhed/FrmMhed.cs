@@ -304,7 +304,7 @@ namespace mhed.gui
 
         private void HE_ModelView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            Logger.Warn(DebugStrings.AppDbgExModelView, e);
+            Logger.Warn(e.Exception, DebugStrings.AppDbgExModelView);
         }
 
         private void HE_ModelView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
