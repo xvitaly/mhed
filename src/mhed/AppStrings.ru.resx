@@ -141,4 +141,7 @@
   <data name="AppAlrLaunched" xml:space="preserve">
     <value>Программа уже запущена! Запуск дополнительных копий не допускается.</value>
   </data>
+  <data name="AHE_IncorrectIPAddress" xml:space="preserve">
+    <value>Введён недействительный IP-адрес!</value>
+  </data>
 </root>

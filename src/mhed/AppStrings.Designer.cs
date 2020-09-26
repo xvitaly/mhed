@@ -79,6 +79,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect IP-address entered!.
+        /// </summary>
+        internal static string AHE_IncorrectIPAddress {
+            get {
+                return ResourceManager.GetString("AHE_IncorrectIPAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Local admin rights is required to perform requested action!.
         /// </summary>
         internal static string AHE_NoAdminRights {

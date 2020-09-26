@@ -141,4 +141,7 @@
   <data name="AppAlrLaunched" xml:space="preserve">
     <value>The program is already running. Starting the second copy is not allowed.</value>
   </data>
+  <data name="AHE_IncorrectIPAddress" xml:space="preserve">
+    <value>Incorrect IP-address entered!</value>
+  </data>
 </root>
