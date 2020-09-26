@@ -144,4 +144,22 @@
   <data name="AHE_IncorrectIPAddress" xml:space="preserve">
     <value>Введён недействительный IP-адрес!</value>
   </data>
+  <data name="AHE_ClipboardCopyError" xml:space="preserve">
+    <value>Произошла ошибка при попытке скопироать содержимое выбранной ячейки в буфер обмена!</value>
+  </data>
+  <data name="AHE_ClipboardCutError" xml:space="preserve">
+    <value>Произошла ошибка при попытке вырезать содержимое выбранной ячейки в буфер обмена!</value>
+  </data>
+  <data name="AHE_ClipboardPasteError" xml:space="preserve">
+    <value>Произошла ошибка при попытке вставить содержимое буфера обмена в выбранную ячейку!</value>
+  </data>
+  <data name="AHE_DeleteRowError" xml:space="preserve">
+    <value>Произошла ошибка при попытке удаления выбранных строк!</value>
+  </data>
+  <data name="AHE_OpenInNotepadError" xml:space="preserve">
+    <value>Произошла ошибка при попытке загрузки файла Hosts в выбранном текстовом редакторе!</value>
+  </data>
+  <data name="AHE_OpenShellError" xml:space="preserve">
+    <value>Произошла ошибка при попытке показать файл Hosts в оболочке по умолчанию!</value>
+  </data>
 </root>

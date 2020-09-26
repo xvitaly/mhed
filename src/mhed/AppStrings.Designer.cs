@@ -61,6 +61,42 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to copy selected data to the clipboard!.
+        /// </summary>
+        internal static string AHE_ClipboardCopyError {
+            get {
+                return ResourceManager.GetString("AHE_ClipboardCopyError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to cut selected data to the clipboard!.
+        /// </summary>
+        internal static string AHE_ClipboardCutError {
+            get {
+                return ResourceManager.GetString("AHE_ClipboardCutError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to paste clipboard&apos;s data to the selected cell!.
+        /// </summary>
+        internal static string AHE_ClipboardPasteError {
+            get {
+                return ResourceManager.GetString("AHE_ClipboardPasteError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to delete selected rows!.
+        /// </summary>
+        internal static string AHE_DeleteRowError {
+            get {
+                return ResourceManager.GetString("AHE_DeleteRowError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Warning! Parse error detected. Probably file {0} is opened not completely or with errors..
         /// </summary>
         internal static string AHE_ExceptionDetected {
@@ -106,6 +142,24 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to load Hosts file in the selected text editor!.
+        /// </summary>
+        internal static string AHE_OpenInNotepadError {
+            get {
+                return ResourceManager.GetString("AHE_OpenInNotepadError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to show Hosts file in the default shell!.
+        /// </summary>
+        internal static string AHE_OpenShellError {
+            get {
+                return ResourceManager.GetString("AHE_OpenShellError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Restore default Hosts file?.
         /// </summary>
         internal static string AHE_RestDef {
@@ -129,6 +183,15 @@ namespace mhed.gui {
         internal static string AHE_SaveException {
             get {
                 return ResourceManager.GetString("AHE_SaveException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to load URL in the default web browser!.
+        /// </summary>
+        internal static string AHE_UrlOpenError {
+            get {
+                return ResourceManager.GetString("AHE_UrlOpenError", resourceCulture);
             }
         }
         
