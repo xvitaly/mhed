@@ -306,6 +306,15 @@ namespace mhed.gui
         {
             Logger.Warn(DebugStrings.AppDbgExModelView, e);
         }
+
+        private void HE_ModelView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            // Validating only IP-address field...
+            if (e.ColumnIndex == 0)
+            {
+                HE_ModelView.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
+            }
+        }
         #endregion
     }
 }
