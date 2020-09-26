@@ -110,7 +110,7 @@
             this.HE_ToolbarRefreshButton.Image = global::mhed.gui.Properties.Resources.Refresh;
             resources.ApplyResources(this.HE_ToolbarRefreshButton, "HE_ToolbarRefreshButton");
             this.HE_ToolbarRefreshButton.Name = "HE_ToolbarRefreshButton";
-            this.HE_ToolbarRefreshButton.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
+            this.HE_ToolbarRefreshButton.Click += new System.EventHandler(this.HE_ToolbarRefreshButton_Click);
             // 
             // HE_ToolbarSaveButton
             // 
@@ -118,7 +118,7 @@
             this.HE_ToolbarSaveButton.Image = global::mhed.gui.Properties.Resources.Save;
             resources.ApplyResources(this.HE_ToolbarSaveButton, "HE_ToolbarSaveButton");
             this.HE_ToolbarSaveButton.Name = "HE_ToolbarSaveButton";
-            this.HE_ToolbarSaveButton.Click += new System.EventHandler(this.HEd_T_Save_Click);
+            this.HE_ToolbarSaveButton.Click += new System.EventHandler(this.HE_ToolbarSaveButton_Click);
             // 
             // HE_ToolbarSeparator1
             // 
@@ -130,21 +130,21 @@
             this.HE_ToolbarCutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.HE_ToolbarCutButton, "HE_ToolbarCutButton");
             this.HE_ToolbarCutButton.Name = "HE_ToolbarCutButton";
-            this.HE_ToolbarCutButton.Click += new System.EventHandler(this.HEd_T_Cut_Click);
+            this.HE_ToolbarCutButton.Click += new System.EventHandler(this.HE_ToolbarCutButton_Click);
             // 
             // HE_ToolbarCopyButton
             // 
             this.HE_ToolbarCopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.HE_ToolbarCopyButton, "HE_ToolbarCopyButton");
             this.HE_ToolbarCopyButton.Name = "HE_ToolbarCopyButton";
-            this.HE_ToolbarCopyButton.Click += new System.EventHandler(this.HEd_T_Copy_Click);
+            this.HE_ToolbarCopyButton.Click += new System.EventHandler(this.HE_ToolbarCopyButton_Click);
             // 
             // HE_ToolbarPasteButton
             // 
             this.HE_ToolbarPasteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.HE_ToolbarPasteButton, "HE_ToolbarPasteButton");
             this.HE_ToolbarPasteButton.Name = "HE_ToolbarPasteButton";
-            this.HE_ToolbarPasteButton.Click += new System.EventHandler(this.HEd_T_Paste_Click);
+            this.HE_ToolbarPasteButton.Click += new System.EventHandler(this.HE_ToolbarPasteButton_Click);
             // 
             // HE_ToolbarSeparator2
             // 
@@ -157,7 +157,7 @@
             this.HE_ToolbarDeleteButton.Image = global::mhed.gui.Properties.Resources.Delete;
             resources.ApplyResources(this.HE_ToolbarDeleteButton, "HE_ToolbarDeleteButton");
             this.HE_ToolbarDeleteButton.Name = "HE_ToolbarDeleteButton";
-            this.HE_ToolbarDeleteButton.Click += new System.EventHandler(this.HEd_T_RemRw_Click);
+            this.HE_ToolbarDeleteButton.Click += new System.EventHandler(this.HE_ToolbarDeleteButton_Click);
             // 
             // HE_ToolbarSeparator3
             // 
@@ -169,7 +169,7 @@
             this.HE_ToolbarAboutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.HE_ToolbarAboutButton, "HE_ToolbarAboutButton");
             this.HE_ToolbarAboutButton.Name = "HE_ToolbarAboutButton";
-            this.HE_ToolbarAboutButton.Click += new System.EventHandler(this.HEd_M_About_Click);
+            this.HE_ToolbarAboutButton.Click += new System.EventHandler(this.HE_ToolbarAboutButton_Click);
             // 
             // HE_MainMenu
             // 
@@ -194,21 +194,21 @@
             this.HE_MenuRefreshItem.Image = global::mhed.gui.Properties.Resources.Refresh;
             this.HE_MenuRefreshItem.Name = "HE_MenuRefreshItem";
             resources.ApplyResources(this.HE_MenuRefreshItem, "HE_MenuRefreshItem");
-            this.HE_MenuRefreshItem.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
+            this.HE_MenuRefreshItem.Click += new System.EventHandler(this.HE_MenuRefreshItem_Click);
             // 
             // HE_MenuSaveItem
             // 
             this.HE_MenuSaveItem.Image = global::mhed.gui.Properties.Resources.Save;
             this.HE_MenuSaveItem.Name = "HE_MenuSaveItem";
             resources.ApplyResources(this.HE_MenuSaveItem, "HE_MenuSaveItem");
-            this.HE_MenuSaveItem.Click += new System.EventHandler(this.HEd_T_Save_Click);
+            this.HE_MenuSaveItem.Click += new System.EventHandler(this.HE_MenuSaveItem_Click);
             // 
             // HE_MenuQuitItem
             // 
             this.HE_MenuQuitItem.Image = global::mhed.gui.Properties.Resources.Exit;
             this.HE_MenuQuitItem.Name = "HE_MenuQuitItem";
             resources.ApplyResources(this.HE_MenuQuitItem, "HE_MenuQuitItem");
-            this.HE_MenuQuitItem.Click += new System.EventHandler(this.HEd_M_Quit_Click);
+            this.HE_MenuQuitItem.Click += new System.EventHandler(this.HE_MenuQuitItem_Click);
             // 
             // HE_MenuAdvanced
             // 
@@ -223,14 +223,14 @@
             this.HE_MenuRestoreDefaultsItem.Image = global::mhed.gui.Properties.Resources.Restore;
             this.HE_MenuRestoreDefaultsItem.Name = "HE_MenuRestoreDefaultsItem";
             resources.ApplyResources(this.HE_MenuRestoreDefaultsItem, "HE_MenuRestoreDefaultsItem");
-            this.HE_MenuRestoreDefaultsItem.Click += new System.EventHandler(this.HEd_M_RestDef_Click);
+            this.HE_MenuRestoreDefaultsItem.Click += new System.EventHandler(this.HE_MenuRestoreDefaultsItem_Click);
             // 
             // HE_MenuOpenNotepadItem
             // 
             this.HE_MenuOpenNotepadItem.Image = global::mhed.gui.Properties.Resources.TextEditor;
             this.HE_MenuOpenNotepadItem.Name = "HE_MenuOpenNotepadItem";
             resources.ApplyResources(this.HE_MenuOpenNotepadItem, "HE_MenuOpenNotepadItem");
-            this.HE_MenuOpenNotepadItem.Click += new System.EventHandler(this.HEd_M_Notepad_Click);
+            this.HE_MenuOpenNotepadItem.Click += new System.EventHandler(this.HE_MenuOpenNotepadItem_Click);
             // 
             // HE_MenuHelp
             // 
@@ -246,21 +246,21 @@
             this.HE_MenuShowHelpItem.Image = global::mhed.gui.Properties.Resources.Help;
             this.HE_MenuShowHelpItem.Name = "HE_MenuShowHelpItem";
             resources.ApplyResources(this.HE_MenuShowHelpItem, "HE_MenuShowHelpItem");
-            this.HE_MenuShowHelpItem.Click += new System.EventHandler(this.HEd_M_OnlHelp_Click);
+            this.HE_MenuShowHelpItem.Click += new System.EventHandler(this.HE_MenuShowHelpItem_Click);
             // 
             // HE_MenuReportItem
             // 
             this.HE_MenuReportItem.Image = global::mhed.gui.Properties.Resources.bug;
             this.HE_MenuReportItem.Name = "HE_MenuReportItem";
             resources.ApplyResources(this.HE_MenuReportItem, "HE_MenuReportItem");
-            this.HE_MenuReportItem.Click += new System.EventHandler(this.HEd_M_RepBug_Click);
+            this.HE_MenuReportItem.Click += new System.EventHandler(this.HE_MenuReportItem_Click);
             // 
             // HE_MenuAboutItem
             // 
             this.HE_MenuAboutItem.Image = global::mhed.gui.Properties.Resources.Info;
             this.HE_MenuAboutItem.Name = "HE_MenuAboutItem";
             resources.ApplyResources(this.HE_MenuAboutItem, "HE_MenuAboutItem");
-            this.HE_MenuAboutItem.Click += new System.EventHandler(this.HEd_M_About_Click);
+            this.HE_MenuAboutItem.Click += new System.EventHandler(this.HE_MenuAboutItem_Click);
             // 
             // HE_StatusBar
             // 
@@ -273,9 +273,9 @@
             // 
             this.HE_StatusBarText.Name = "HE_StatusBarText";
             resources.ApplyResources(this.HE_StatusBarText, "HE_StatusBarText");
-            this.HE_StatusBarText.Click += new System.EventHandler(this.HEd_St_Wrn_Click);
-            this.HE_StatusBarText.MouseEnter += new System.EventHandler(this.HEd_St_Wrn_MouseEnter);
-            this.HE_StatusBarText.MouseLeave += new System.EventHandler(this.HEd_St_Wrn_MouseLeave);
+            this.HE_StatusBarText.Click += new System.EventHandler(this.HE_StatusBarText_Click);
+            this.HE_StatusBarText.MouseEnter += new System.EventHandler(this.HE_StatusBarText_MouseEnter);
+            this.HE_StatusBarText.MouseLeave += new System.EventHandler(this.HE_StatusBarText_MouseLeave);
             // 
             // FrmMhed
             // 
@@ -290,7 +290,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMhed";
-            this.Load += new System.EventHandler(this.FrmHEd_Load);
+            this.Load += new System.EventHandler(this.FrmMhed_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HE_ModelView)).EndInit();
             this.HE_MainToolbar.ResumeLayout(false);
             this.HE_MainToolbar.PerformLayout();

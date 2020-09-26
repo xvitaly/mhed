@@ -27,16 +27,12 @@ using System.Windows.Forms;
 
 namespace mhed.gui
 {
+    /// <summary>
+    /// Main form's class.
+    /// </summary>
     public partial class FrmMhed : Form
     {
-        public FrmMhed()
-        {
-            InitializeComponent();
-            ImportSettings();
-            InitializeFormControls();
-        }
-
-        #region IV
+        #region Properties and fields
         /// <summary>
         /// Logger instance for HUDManager class.
         /// </summary>
@@ -48,7 +44,7 @@ namespace mhed.gui
         private CurrentApp App { get; set; }
         #endregion
 
-        #region IH
+        #region Form overrides for HiDPI compatibility
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
@@ -56,28 +52,7 @@ namespace mhed.gui
         }
         #endregion
 
-        #region IM
-        private void SaveToFile()
-        {
-            if (ProcessManager.IsCurrentUserAdmin())
-            {
-                try
-                {
-                    App.HostsFile.Save();
-                    MessageBox.Show(AppStrings.AHE_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Error(Ex);
-                    MessageBox.Show(String.Format(AppStrings.AHE_SaveException, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
+        #region Initialization methods
         /// <summary>
         /// Create an instance of the CurrentApp class.
         /// </summary>
@@ -88,12 +63,15 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Initializes some controls on form.
+        /// Initializes model view on form.
         /// </summary>
-        private void InitializeFormControls()
+        private void InitializeModelView()
         {
             // Disabling auto columns generating...
             HE_ModelView.AutoGenerateColumns = false;
+
+            // Binding to an object...
+            HE_ModelView.DataSource = App.HostsFile.Contents;
         }
 
         /// <summary>
@@ -144,6 +122,57 @@ namespace mhed.gui
             // Add Hosts file path to the status bar...
             HE_StatusBarText.Text = App.HostsFile.FilePath;
         }
+        #endregion
+
+        #region Form contructors and loaders
+        /// <summary>
+        /// FrmMhed class constructor.
+        /// </summary>
+        public FrmMhed()
+        {
+            InitializeComponent();
+            ImportSettings();
+        }
+
+        /// <summary>
+        /// "Form create" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void FrmMhed_Load(object sender, EventArgs e)
+        {
+            InitializeApp();
+            InitializeModelView();
+            ChangePrvControlState();
+            SetAppStrings();
+            LoadHostsFile();
+        }
+        #endregion
+
+        #region Save and load methods
+        /// <summary>
+        /// Save Hosts file changes to disk.
+        /// </summary>
+        private void SaveToFile()
+        {
+            if (ProcessManager.IsCurrentUserAdmin())
+            {
+                try
+                {
+                    App.HostsFile.Save();
+                    MessageBox.Show(AppStrings.AHE_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Error(Ex);
+                    MessageBox.Show(String.Format(AppStrings.AHE_SaveException, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         /// <summary>
         /// Try to read Hosts file.
@@ -153,7 +182,6 @@ namespace mhed.gui
             try
             {
                 App.HostsFile.Load();
-                HE_ModelView.DataSource = App.HostsFile.Contents;
             }
             catch (FileNotFoundException Ex)
             {
@@ -168,15 +196,10 @@ namespace mhed.gui
             }
         }
 
-        private void FrmHEd_Load(object sender, EventArgs e)
-        {
-            InitializeApp();
-            ChangePrvControlState();
-            SetAppStrings();
-            LoadHostsFile();
-        }
-
-        private void HEd_T_Refresh_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Reload Hosts file contents from disk.
+        /// </summary>
+        private void ReloadHostsFile()
         {
             try
             {
@@ -188,18 +211,71 @@ namespace mhed.gui
                 MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        #endregion
 
-        private void HEd_T_Save_Click(object sender, EventArgs e)
+        #region DataGridView handlers
+        /// <summary>
+        /// "Data error" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ModelView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            Logger.Warn(e.Exception, DebugStrings.AppDbgExModelView);
+        }
+
+        /// <summary>
+        /// "Validate cell" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ModelView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            // Validating only IP-address field...
+            if (e.ColumnIndex == 0)
+            {
+                HE_ModelView.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
+            }
+        }
+        #endregion
+
+        #region Menu items handlers
+        /// <summary>
+        /// "Refresh" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuRefreshItem_Click(object sender, EventArgs e)
+        {
+            ReloadHostsFile();
+        }
+
+        /// <summary>
+        /// "Save" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuSaveItem_Click(object sender, EventArgs e)
         {
             SaveToFile();
         }
 
-        private void HEd_M_Quit_Click(object sender, EventArgs e)
+        /// <summary>
+        /// "Quit" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuQuitItem_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void HEd_M_RestDef_Click(object sender, EventArgs e)
+        /// <summary>
+        /// "Restore defaults" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuRestoreDefaultsItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(AppStrings.AHE_RestDef, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
@@ -208,39 +284,215 @@ namespace mhed.gui
             }
         }
 
-        private void HEd_M_OnlHelp_Click(object sender, EventArgs e)
+        /// <summary>
+        /// "Open in Notepad" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuOpenNotepadItem_Click(object sender, EventArgs e)
         {
-            ProcessManager.OpenWebPage(Properties.Resources.AppHelpURL);
+            try
+            {
+                ProcessManager.OpenTextEditor(App.HostsFile.FilePath, Properties.Settings.Default.EditorBin, App.Platform.OS);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExOpenNotepad);
+                MessageBox.Show(AppStrings.AHE_OpenInNotepadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void HEd_M_About_Click(object sender, EventArgs e)
+        /// <summary>
+        /// "Show help" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuShowHelpItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProcessManager.OpenWebPage(Properties.Resources.AppHelpURL);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+                MessageBox.Show(AppStrings.AHE_UrlOpenError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// "Report bug" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuReportItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProcessManager.OpenWebPage(Properties.Resources.AppBtURL);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+                MessageBox.Show(AppStrings.AHE_UrlOpenError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// "About" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuAboutItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(String.Format("{0} by {1}. Version: {2}.", Properties.Resources.AppName, CurrentApp.AppCompany, CurrentApp.AppVersion), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        #endregion
 
-        private void HEd_T_RemRw_Click(object sender, EventArgs e)
+        #region Toolbar buttons handlers
+        /// <summary>
+        /// "Refresh" toolbar button event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ToolbarRefreshButton_Click(object sender, EventArgs e)
+        {
+            ReloadHostsFile();
+        }
+
+        /// <summary>
+        /// "Save" toolbar button event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ToolbarSaveButton_Click(object sender, EventArgs e)
+        {
+            SaveToFile();
+        }
+
+        /// <summary>
+        /// "Cut" toolbar button event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ToolbarCutButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
+                {
+                    Clipboard.SetText((string)HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value);
+                    HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = null;
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExClipboardCut);
+                MessageBox.Show(AppStrings.AHE_ClipboardCutError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// "Copy" toolbar button event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ToolbarCopyButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
+                {
+                    Clipboard.SetText((string)HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value);
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExClipboardCopy);
+                MessageBox.Show(AppStrings.AHE_ClipboardCopyError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// "Paste" toolbar button event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ToolbarPasteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Clipboard.ContainsText())
+                {
+                    HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExClipboardPaste);
+                MessageBox.Show(AppStrings.AHE_ClipboardPasteError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// "Delete row" toolbar button event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ToolbarDeleteButton_Click(object sender, EventArgs e)
         {
             try
             {
                 foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
                 {
-                    if (Cell.Selected) { HE_ModelView.Rows.RemoveAt(Cell.RowIndex); }
+                    HE_ModelView.Rows.RemoveAt(Cell.RowIndex);
                 }
             }
-            catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExDeleteRow);
+                MessageBox.Show(AppStrings.AHE_DeleteRowError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void HEd_St_Wrn_MouseEnter(object sender, EventArgs e)
+        /// <summary>
+        /// "About" toolbar button event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ToolbarAboutButton_Click(object sender, EventArgs e)
+        {
+            //
+        }
+        #endregion
+
+        #region Status bar handlers
+        /// <summary>
+        /// "Mouse enter" status bar event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_StatusBarText_MouseEnter(object sender, EventArgs e)
         {
             HE_StatusBarText.ForeColor = Color.Red;
         }
 
-        private void HEd_St_Wrn_MouseLeave(object sender, EventArgs e)
+        /// <summary>
+        /// "Mouse leave" status bar event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_StatusBarText_MouseLeave(object sender, EventArgs e)
         {
             HE_StatusBarText.ForeColor = Color.Black;
         }
 
-        private void HEd_St_Wrn_Click(object sender, EventArgs e)
+        /// <summary>
+        /// "Status bar click" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_StatusBarText_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
@@ -250,69 +502,9 @@ namespace mhed.gui
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExOpenShell);
+                    MessageBox.Show(AppStrings.AHE_OpenShellError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
-        }
-
-        private void HEd_T_Cut_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
-                {
-                    Clipboard.SetText(HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value.ToString());
-                    HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = null;
-                }
-            }
-            catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
-        }
-
-        private void HEd_T_Copy_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
-                {
-                    Clipboard.SetText(HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value.ToString());
-                }
-            }
-            catch (Exception Ex) { MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
-        }
-
-        private void HEd_T_Paste_Click(object sender, EventArgs e)
-        {
-            try { if (Clipboard.ContainsText()) { HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Clipboard.GetText(); } } catch { }
-        }
-
-        private void HEd_M_Notepad_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ProcessManager.OpenTextEditor(App.HostsFile.FilePath, Properties.Settings.Default.EditorBin, App.Platform.OS);
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(Ex.Message, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void HEd_M_RepBug_Click(object sender, EventArgs e)
-        {
-            ProcessManager.OpenWebPage(Properties.Resources.AppBtURL);
-        }
-
-        private void HE_ModelView_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            Logger.Warn(e.Exception, DebugStrings.AppDbgExModelView);
-        }
-
-        private void HE_ModelView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-        {
-            // Validating only IP-address field...
-            if (e.ColumnIndex == 0)
-            {
-                HE_ModelView.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
             }
         }
         #endregion
