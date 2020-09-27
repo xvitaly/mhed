@@ -231,10 +231,13 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_ModelView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
+            // Skip validation of the new rows...
+            if (((DataGridView)sender).Rows[e.RowIndex].IsNewRow) return;
+
             // Validating only IP-address field...
-            if ((e.ColumnIndex == 0) && !HE_ModelView.Rows[e.RowIndex].IsNewRow)
+            if (e.ColumnIndex == 0)
             {
-                HE_ModelView.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
+                ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
             }
         }
         #endregion
