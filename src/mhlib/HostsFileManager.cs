@@ -65,6 +65,18 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Adds localhost entry for other than Windows operating systems.
+        /// Windows since NT 6.0 (Vista) don't need it.
+        /// </summary>
+        private void AddLocalhostEntry()
+        {
+            if (Platform != CurrentPlatform.OSType.Windows)
+            {
+                Contents.Add(new HostsFileEntry("127.0.0.1", "localhost"));
+            }
+        }
+
+        /// <summary>
         /// Read contents of Hosts file to the data object.
         /// </summary>
         private void ReadHostsFile()
@@ -137,7 +149,7 @@ namespace mhed.lib
         public void Restore()
         {
             ClearHostsContents();
-            Contents.Add(new HostsFileEntry("127.0.0.1", "localhost"));
+            AddLocalhostEntry();
         }
 
         /// <summary>
