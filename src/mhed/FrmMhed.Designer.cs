@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMhed));
-            this.HE_ModelView = new System.Windows.Forms.DataGridView();
-            this.HE_ModelViewColumnIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HE_ModelViewColumnDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HE_MainToolbar = new System.Windows.Forms.ToolStrip();
             this.HE_ToolbarRefreshButton = new System.Windows.Forms.ToolStripButton();
             this.HE_ToolbarSaveButton = new System.Windows.Forms.ToolStripButton();
@@ -57,36 +54,16 @@
             this.HE_MenuAboutItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_StatusBar = new System.Windows.Forms.StatusStrip();
             this.HE_StatusBarText = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.HE_ModelView)).BeginInit();
+            this.HE_ModelViewPanel = new System.Windows.Forms.Panel();
+            this.HE_ModelView = new System.Windows.Forms.DataGridView();
+            this.HE_ModelViewColumnIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HE_ModelViewColumnDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HE_MainToolbar.SuspendLayout();
             this.HE_MainMenu.SuspendLayout();
             this.HE_StatusBar.SuspendLayout();
+            this.HE_ModelViewPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HE_ModelView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // HE_ModelView
-            // 
-            resources.ApplyResources(this.HE_ModelView, "HE_ModelView");
-            this.HE_ModelView.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.HE_ModelView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.HE_ModelView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.HE_ModelView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.HE_ModelViewColumnIP,
-            this.HE_ModelViewColumnDomain});
-            this.HE_ModelView.Name = "HE_ModelView";
-            this.HE_ModelView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.HE_ModelView_CellValidating);
-            this.HE_ModelView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.HE_ModelView_DataError);
-            // 
-            // HE_ModelViewColumnIP
-            // 
-            this.HE_ModelViewColumnIP.DataPropertyName = "IPAddress";
-            resources.ApplyResources(this.HE_ModelViewColumnIP, "HE_ModelViewColumnIP");
-            this.HE_ModelViewColumnIP.Name = "HE_ModelViewColumnIP";
-            // 
-            // HE_ModelViewColumnDomain
-            // 
-            this.HE_ModelViewColumnDomain.DataPropertyName = "Hostname";
-            resources.ApplyResources(this.HE_ModelViewColumnDomain, "HE_ModelViewColumnDomain");
-            this.HE_ModelViewColumnDomain.Name = "HE_ModelViewColumnDomain";
             // 
             // HE_MainToolbar
             // 
@@ -277,35 +254,68 @@
             this.HE_StatusBarText.MouseEnter += new System.EventHandler(this.HE_StatusBarText_MouseEnter);
             this.HE_StatusBarText.MouseLeave += new System.EventHandler(this.HE_StatusBarText_MouseLeave);
             // 
+            // HE_ModelViewPanel
+            // 
+            resources.ApplyResources(this.HE_ModelViewPanel, "HE_ModelViewPanel");
+            this.HE_ModelViewPanel.Controls.Add(this.HE_ModelView);
+            this.HE_ModelViewPanel.Name = "HE_ModelViewPanel";
+            // 
+            // HE_ModelView
+            // 
+            this.HE_ModelView.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.HE_ModelView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.HE_ModelView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HE_ModelView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.HE_ModelViewColumnIP,
+            this.HE_ModelViewColumnDomain});
+            resources.ApplyResources(this.HE_ModelView, "HE_ModelView");
+            this.HE_ModelView.Name = "HE_ModelView";
+            this.HE_ModelView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.HE_ModelView_CellValidating);
+            this.HE_ModelView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.HE_ModelView_DataError);
+            // 
+            // HE_ModelViewColumnIP
+            // 
+            this.HE_ModelViewColumnIP.DataPropertyName = "IPAddress";
+            this.HE_ModelViewColumnIP.FillWeight = 74.92796F;
+            resources.ApplyResources(this.HE_ModelViewColumnIP, "HE_ModelViewColumnIP");
+            this.HE_ModelViewColumnIP.Name = "HE_ModelViewColumnIP";
+            // 
+            // HE_ModelViewColumnDomain
+            // 
+            this.HE_ModelViewColumnDomain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HE_ModelViewColumnDomain.DataPropertyName = "Hostname";
+            this.HE_ModelViewColumnDomain.FillWeight = 125.072F;
+            resources.ApplyResources(this.HE_ModelViewColumnDomain, "HE_ModelViewColumnDomain");
+            this.HE_ModelViewColumnDomain.Name = "HE_ModelViewColumnDomain";
+            // 
             // FrmMhed
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.HE_ModelViewPanel);
             this.Controls.Add(this.HE_StatusBar);
             this.Controls.Add(this.HE_MainToolbar);
             this.Controls.Add(this.HE_MainMenu);
-            this.Controls.Add(this.HE_ModelView);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.HE_MainMenu;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMhed";
             this.Load += new System.EventHandler(this.FrmMhed_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.HE_ModelView)).EndInit();
             this.HE_MainToolbar.ResumeLayout(false);
             this.HE_MainToolbar.PerformLayout();
             this.HE_MainMenu.ResumeLayout(false);
             this.HE_MainMenu.PerformLayout();
             this.HE_StatusBar.ResumeLayout(false);
             this.HE_StatusBar.PerformLayout();
+            this.HE_ModelViewPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HE_ModelView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView HE_ModelView;
         private System.Windows.Forms.ToolStrip HE_MainToolbar;
         private System.Windows.Forms.ToolStripButton HE_ToolbarRefreshButton;
         private System.Windows.Forms.ToolStripButton HE_ToolbarSaveButton;
@@ -331,6 +341,8 @@
         private System.Windows.Forms.ToolStripSeparator HE_ToolbarSeparator3;
         private System.Windows.Forms.ToolStripButton HE_ToolbarAboutButton;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuReportItem;
+        private System.Windows.Forms.Panel HE_ModelViewPanel;
+        private System.Windows.Forms.DataGridView HE_ModelView;
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnIP;
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnDomain;
     }

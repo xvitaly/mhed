@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="HE_ModelViewColumnIP.HeaderText" xml:space="preserve">
-    <value>IP-адрес</value>
-  </data>
-  <data name="HE_ModelViewColumnDomain.HeaderText" xml:space="preserve">
-    <value>Доменное имя</value>
-  </data>
   <data name="HE_ToolbarRefreshButton.Text" xml:space="preserve">
     <value>&amp;Обновить</value>
   </data>
@@ -209,11 +203,20 @@
   <data name="HE_MenuFile.Text" xml:space="preserve">
     <value>&amp;Файл</value>
   </data>
+  <data name="HE_MenuRefreshItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
   <data name="HE_MenuRefreshItem.Text" xml:space="preserve">
     <value>&amp;Обновить</value>
   </data>
+  <data name="HE_MenuSaveItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
   <data name="HE_MenuSaveItem.Text" xml:space="preserve">
     <value>&amp;Сохранить</value>
+  </data>
+  <data name="HE_MenuQuitItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
   </data>
   <data name="HE_MenuQuitItem.Text" xml:space="preserve">
     <value>&amp;Выход</value>
@@ -259,6 +262,12 @@
   </data>
   <data name="HE_MenuAboutItem.Text" xml:space="preserve">
     <value>&amp;О программе...</value>
+  </data>
+  <data name="HE_ModelViewColumnIP.HeaderText" xml:space="preserve">
+    <value>IP-адрес</value>
+  </data>
+  <data name="HE_ModelViewColumnDomain.HeaderText" xml:space="preserve">
+    <value>Доменное имя</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
