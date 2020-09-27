@@ -65,15 +65,15 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Adds localhost entry for other than Windows operating systems.
+        /// Add localhost entry for other than Windows operating systems.
         /// Windows since NT 6.0 (Vista) don't need it.
         /// </summary>
         private void AddLocalhostEntry()
         {
             if (Platform != CurrentPlatform.OSType.Windows)
             {
-                Contents.Add(new HostsFileEntry("127.0.0.1", "localhost"));
-                Contents.Add(new HostsFileEntry("::1", "localhost"));
+                Contents.Add(new HostsFileEntry("127.0.0.1", "localhost")); // IPv4
+                Contents.Add(new HostsFileEntry("::1", "localhost")); // IPv6
             }
         }
 
