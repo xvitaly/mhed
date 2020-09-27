@@ -73,6 +73,7 @@ namespace mhed.lib
             if (Platform != CurrentPlatform.OSType.Windows)
             {
                 Contents.Add(new HostsFileEntry("127.0.0.1", "localhost"));
+                Contents.Add(new HostsFileEntry("::1", "localhost"));
             }
         }
 
