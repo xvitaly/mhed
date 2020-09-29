@@ -105,6 +105,7 @@
             // HE_ToolbarCutButton
             // 
             this.HE_ToolbarCutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HE_ToolbarCutButton.Image = global::mhed.gui.Properties.Resources.Cut;
             resources.ApplyResources(this.HE_ToolbarCutButton, "HE_ToolbarCutButton");
             this.HE_ToolbarCutButton.Name = "HE_ToolbarCutButton";
             this.HE_ToolbarCutButton.Click += new System.EventHandler(this.HE_ToolbarCutButton_Click);
@@ -112,6 +113,7 @@
             // HE_ToolbarCopyButton
             // 
             this.HE_ToolbarCopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HE_ToolbarCopyButton.Image = global::mhed.gui.Properties.Resources.Copy;
             resources.ApplyResources(this.HE_ToolbarCopyButton, "HE_ToolbarCopyButton");
             this.HE_ToolbarCopyButton.Name = "HE_ToolbarCopyButton";
             this.HE_ToolbarCopyButton.Click += new System.EventHandler(this.HE_ToolbarCopyButton_Click);
@@ -119,6 +121,7 @@
             // HE_ToolbarPasteButton
             // 
             this.HE_ToolbarPasteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HE_ToolbarPasteButton.Image = global::mhed.gui.Properties.Resources.Paste;
             resources.ApplyResources(this.HE_ToolbarPasteButton, "HE_ToolbarPasteButton");
             this.HE_ToolbarPasteButton.Name = "HE_ToolbarPasteButton";
             this.HE_ToolbarPasteButton.Click += new System.EventHandler(this.HE_ToolbarPasteButton_Click);
@@ -144,6 +147,7 @@
             // HE_ToolbarAboutButton
             // 
             this.HE_ToolbarAboutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HE_ToolbarAboutButton.Image = global::mhed.gui.Properties.Resources.Info;
             resources.ApplyResources(this.HE_ToolbarAboutButton, "HE_ToolbarAboutButton");
             this.HE_ToolbarAboutButton.Name = "HE_ToolbarAboutButton";
             this.HE_ToolbarAboutButton.Click += new System.EventHandler(this.HE_ToolbarAboutButton_Click);
@@ -227,7 +231,7 @@
             // 
             // HE_MenuReportItem
             // 
-            this.HE_MenuReportItem.Image = global::mhed.gui.Properties.Resources.bug;
+            this.HE_MenuReportItem.Image = global::mhed.gui.Properties.Resources.Bug;
             this.HE_MenuReportItem.Name = "HE_MenuReportItem";
             resources.ApplyResources(this.HE_MenuReportItem, "HE_MenuReportItem");
             this.HE_MenuReportItem.Click += new System.EventHandler(this.HE_MenuReportItem_Click);

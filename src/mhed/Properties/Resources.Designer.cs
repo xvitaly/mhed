@@ -109,9 +109,29 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bug {
+        internal static System.Drawing.Bitmap Bug {
             get {
-                object obj = ResourceManager.GetObject("bug", resourceCulture);
+                object obj = ResourceManager.GetObject("Bug", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Copy {
+            get {
+                object obj = ResourceManager.GetObject("Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cut {
+            get {
+                object obj = ResourceManager.GetObject("Cut", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -149,9 +169,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hosts {
+        internal static System.Drawing.Bitmap Info {
             get {
-                object obj = ResourceManager.GetObject("hosts", resourceCulture);
+                object obj = ResourceManager.GetObject("Info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -159,9 +179,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Info {
+        internal static System.Drawing.Bitmap Paste {
             get {
-                object obj = ResourceManager.GetObject("Info", resourceCulture);
+                object obj = ResourceManager.GetObject("Paste", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
