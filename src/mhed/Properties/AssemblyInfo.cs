@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EasyCoding Team")]
 [assembly: AssemblyProduct("Micro Hosts Editor")]
-[assembly: AssemblyCopyright("(c) 2005-2018 EasyCoding Team. All rights reserved.")]
+[assembly: AssemblyCopyright("(c) 2005-2020 EasyCoding Team. All rights reserved.")]
 [assembly: AssemblyTrademark("EasyCoding, EasyCoding Software Group and EasyCoding Team are trademarks of EasyCoding Team.")]
 [assembly: AssemblyCulture("")]
 
