@@ -348,7 +348,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuAboutItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(String.Format("{0} by {1}. Version: {2}.", Properties.Resources.AppName, CurrentApp.AppCompany, CurrentApp.AppVersion), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            GuiHelpers.FormShowAboutApp();
         }
         #endregion
 
@@ -465,7 +465,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_ToolbarAboutButton_Click(object sender, EventArgs e)
         {
-            //
+            GuiHelpers.FormShowAboutApp();
         }
         #endregion
 
