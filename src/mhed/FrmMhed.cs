@@ -122,6 +122,55 @@ namespace mhed.gui
             // Add Hosts file path to the status bar...
             HE_StatusBarText.Text = App.HostsFile.FilePath;
         }
+
+        /// <summary>
+        /// Set form size based on saved settings.
+        /// </summary>
+        private void SetFormSize()
+        {
+            try
+            {
+                if ((Properties.Settings.Default.FormSize.Width > 0) && (Properties.Settings.Default.FormSize.Height > 0))
+                {
+                    Size = Properties.Settings.Default.FormSize;
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExSetFormSize);
+            }
+        }
+
+        /// <summary>
+        /// Set form location based on saved settings.
+        /// </summary>
+        private void SetFormLocation()
+        {
+            try
+            {
+                if ((Properties.Settings.Default.FormLocation.X > 0) && (Properties.Settings.Default.FormLocation.Y > 0))
+                {
+                    Location = Properties.Settings.Default.FormLocation;
+                }
+                else
+                {
+                    StartPosition = FormStartPosition.CenterScreen;
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExSetFormLocation);
+            }
+        }
+
+        /// <summary>
+        /// Restore form state based on saved settings.
+        /// </summary>
+        private void RestoreFormState()
+        {
+            SetFormSize();
+            SetFormLocation();
+        }
         #endregion
 
         #region Form contructors and loaders
@@ -141,11 +190,36 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void FrmMhed_Load(object sender, EventArgs e)
         {
+            RestoreFormState();
             InitializeApp();
             InitializeModelView();
             ChangePrvControlState();
             SetAppStrings();
             LoadHostsFile();
+        }
+        #endregion
+
+        #region Other form handlers
+        /// <summary>
+        /// "Form close" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void FrmMhed_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //
+        }
+
+        /// <summary>
+        /// "Form closed" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void FrmMhed_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.Settings.Default.FormLocation = WindowState == FormWindowState.Normal ? Location : RestoreBounds.Location;
+            Properties.Settings.Default.FormSize = WindowState == FormWindowState.Normal ? Size : RestoreBounds.Size;
+            Properties.Settings.Default.Save();
         }
         #endregion
 

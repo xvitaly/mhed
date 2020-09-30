@@ -305,6 +305,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMhed";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMhed_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMhed_FormClosed);
             this.Load += new System.EventHandler(this.FrmMhed_Load);
             this.HE_MainToolbar.ResumeLayout(false);
             this.HE_MainToolbar.PerformLayout();
