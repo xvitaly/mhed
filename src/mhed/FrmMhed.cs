@@ -94,6 +94,16 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Save program settings.
+        /// </summary>
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.FormLocation = WindowState == FormWindowState.Normal ? Location : RestoreBounds.Location;
+            Properties.Settings.Default.FormSize = WindowState == FormWindowState.Normal ? Size : RestoreBounds.Size;
+            Properties.Settings.Default.Save();
+        }
+
+        /// <summary>
         /// Change state of some controls, depending on current running
         /// platform or access level.
         /// </summary>
@@ -217,9 +227,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void FrmMhed_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Properties.Settings.Default.FormLocation = WindowState == FormWindowState.Normal ? Location : RestoreBounds.Location;
-            Properties.Settings.Default.FormSize = WindowState == FormWindowState.Normal ? Size : RestoreBounds.Size;
-            Properties.Settings.Default.Save();
+            SaveSettings();
         }
         #endregion
 
