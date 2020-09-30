@@ -138,6 +138,12 @@
   <data name="AppDbgExOpenShell" xml:space="preserve">
     <value>Exception while trying to show Hosts file in the default shell.</value>
   </data>
+  <data name="AppDbgExSetFormLocation" xml:space="preserve">
+    <value>Exception while trying to change location of the required form.</value>
+  </data>
+  <data name="AppDbgExSetFormSize" xml:space="preserve">
+    <value>Exception while trying to resize the required form.</value>
+  </data>
   <data name="AppDbgExSettingsLoad" xml:space="preserve">
     <value>Failed to import settings from the previous version.</value>
   </data>

@@ -124,6 +124,24 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to change location of the required form..
+        /// </summary>
+        internal static string AppDbgExSetFormLocation {
+            get {
+                return ResourceManager.GetString("AppDbgExSetFormLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to resize the required form..
+        /// </summary>
+        internal static string AppDbgExSetFormSize {
+            get {
+                return ResourceManager.GetString("AppDbgExSetFormSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to import settings from the previous version..
         /// </summary>
         internal static string AppDbgExSettingsLoad {
