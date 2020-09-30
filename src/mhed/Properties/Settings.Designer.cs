@@ -79,5 +79,17 @@ namespace mhed.gui.Properties {
                 this["FormSize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ConfirmExit {
+            get {
+                return ((bool)(this["ConfirmExit"]));
+            }
+            set {
+                this["ConfirmExit"] = value;
+            }
+        }
     }
 }
