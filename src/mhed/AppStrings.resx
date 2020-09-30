@@ -166,6 +166,6 @@
     <value>Failed to show Hosts file in the default shell!</value>
   </data>
   <data name="AHE_ExitConfirmation" xml:space="preserve">
-    <value>Exit {0}?</value>
+    <value>Exit {0} without saving changes?</value>
   </data>
 </root>

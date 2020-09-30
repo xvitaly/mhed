@@ -106,7 +106,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exit {0}?.
+        ///   Looks up a localized string similar to Exit {0} without saving changes?.
         /// </summary>
         internal static string AHE_ExitConfirmation {
             get {

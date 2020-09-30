@@ -163,6 +163,6 @@
     <value>Произошла ошибка при попытке показать файл Hosts в оболочке по умолчанию!</value>
   </data>
   <data name="AHE_ExitConfirmation" xml:space="preserve">
-    <value>Завершить работу {0}?</value>
+    <value>Выйти из {0} без сохранения изменений?</value>
   </data>
 </root>
