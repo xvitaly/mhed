@@ -165,4 +165,7 @@
   <data name="AHE_OpenShellError" xml:space="preserve">
     <value>Failed to show Hosts file in the default shell!</value>
   </data>
+  <data name="AHE_ExitConfirmation" xml:space="preserve">
+    <value>Exit {0}?</value>
+  </data>
 </root>

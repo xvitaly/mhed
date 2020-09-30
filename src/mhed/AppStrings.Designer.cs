@@ -106,6 +106,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exit {0}?.
+        /// </summary>
+        internal static string AHE_ExitConfirmation {
+            get {
+                return ResourceManager.GetString("AHE_ExitConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hosts file: {0}. Show it in Windows Explorer?.
         /// </summary>
         internal static string AHE_HMessg {
