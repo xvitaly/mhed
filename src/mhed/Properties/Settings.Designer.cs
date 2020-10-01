@@ -91,5 +91,17 @@ namespace mhed.gui.Properties {
                 this["ConfirmExit"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool PreserveFormState {
+            get {
+                return ((bool)(this["PreserveFormState"]));
+            }
+            set {
+                this["PreserveFormState"] = value;
+            }
+        }
     }
 }
