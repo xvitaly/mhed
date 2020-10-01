@@ -134,14 +134,6 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Show the form in the center of the screen.
-        /// </summary>
-        private void CenterForm()
-        {
-            StartPosition = FormStartPosition.CenterScreen;
-        }
-
-        /// <summary>
         /// Set form size based on saved settings.
         /// </summary>
         private void SetFormSize()
@@ -154,7 +146,7 @@ namespace mhed.gui
                 }
                 else
                 {
-                    Logger.Warn(DebugStrings.AppDbgIncorrectFormSize);
+                    Logger.Warn(DebugStrings.AppDbgIncorrectFormSize, Properties.Settings.Default.FormSize.Width, Properties.Settings.Default.FormSize.Height);
                 }
             }
             catch (Exception Ex)
@@ -172,12 +164,12 @@ namespace mhed.gui
             {
                 if ((Properties.Settings.Default.FormLocation.X > 0) && (Properties.Settings.Default.FormLocation.Y > 0))
                 {
+                    StartPosition = FormStartPosition.Manual;
                     Location = Properties.Settings.Default.FormLocation;
                 }
                 else
                 {
-                    Logger.Warn(DebugStrings.AppDbgIncorrectFormLocation);
-                    CenterForm();
+                    Logger.Warn(DebugStrings.AppDbgIncorrectFormLocation, Properties.Settings.Default.FormLocation.X, Properties.Settings.Default.FormLocation.Y);
                 }
             }
             catch (Exception Ex)
@@ -195,10 +187,6 @@ namespace mhed.gui
             {
                 SetFormSize();
                 SetFormLocation();
-            }
-            else
-            {
-                CenterForm();
             }
         }
         #endregion
