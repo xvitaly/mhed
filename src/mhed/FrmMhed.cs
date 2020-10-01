@@ -178,8 +178,11 @@ namespace mhed.gui
         /// </summary>
         private void RestoreFormState()
         {
-            SetFormSize();
-            SetFormLocation();
+            if (Properties.Settings.Default.PreserveFormState)
+            {
+                SetFormSize();
+                SetFormLocation();
+            }
         }
         #endregion
 
