@@ -147,4 +147,10 @@
   <data name="AppDbgExSettingsLoad" xml:space="preserve">
     <value>Failed to import settings from the previous version.</value>
   </data>
+  <data name="AppDbgIncorrectFormLocation" xml:space="preserve">
+    <value>Invalid form location coordinates were received: [{0}, {1}]. The form will be moved to the center of the screen.</value>
+  </data>
+  <data name="AppDbgIncorrectFormSize" xml:space="preserve">
+    <value>Invalid form size was received: [{0}, {1}]. The form will size will not be changed.</value>
+  </data>
 </root>

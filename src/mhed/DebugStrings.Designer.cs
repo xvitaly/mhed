@@ -149,5 +149,23 @@ namespace mhed.gui {
                 return ResourceManager.GetString("AppDbgExSettingsLoad", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid form location coordinates were received: [{0}, {1}]. The form will be moved to the center of the screen..
+        /// </summary>
+        internal static string AppDbgIncorrectFormLocation {
+            get {
+                return ResourceManager.GetString("AppDbgIncorrectFormLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid form size was received: [{0}, {1}]. The form will size will not be changed..
+        /// </summary>
+        internal static string AppDbgIncorrectFormSize {
+            get {
+                return ResourceManager.GetString("AppDbgIncorrectFormSize", resourceCulture);
+            }
+        }
     }
 }
