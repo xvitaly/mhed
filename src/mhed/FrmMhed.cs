@@ -152,6 +152,10 @@ namespace mhed.gui
                 {
                     Size = Properties.Settings.Default.FormSize;
                 }
+                else
+                {
+                    Logger.Warn(DebugStrings.AppDbgIncorrectFormSize);
+                }
             }
             catch (Exception Ex)
             {
@@ -172,6 +176,7 @@ namespace mhed.gui
                 }
                 else
                 {
+                    Logger.Warn(DebugStrings.AppDbgIncorrectFormLocation);
                     CenterForm();
                 }
             }
