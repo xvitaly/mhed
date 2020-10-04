@@ -109,18 +109,6 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Checks if current date belongs to the New Year eve.
-        /// </summary>
-        public static bool IsNewYear
-        {
-            get
-            {
-                DateTime XDate = DateTime.Now;
-                return (XDate.Month == 12 && XDate.Day >= 20 && XDate.Day <= 31) || (XDate.Month == 1 && XDate.Day >= 1 && XDate.Day <= 10);
-            }
-        }
-
-        /// <summary>
         /// CurrentApp class constructor.
         /// </summary>
         /// <param name="IsPortable">Enable portable mode (with settings in the same directory as executable).</param>
