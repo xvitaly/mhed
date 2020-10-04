@@ -164,7 +164,7 @@ namespace mhed.gui
                 }
                 else
                 {
-                    Logger.Warn(DebugStrings.AppDbgIncorrectFormSize, Properties.Settings.Default.FormSize.Width, Properties.Settings.Default.FormSize.Height);
+                    Logger.Info(DebugStrings.AppDbgIncorrectFormSize, Properties.Settings.Default.FormSize.Width, Properties.Settings.Default.FormSize.Height);
                 }
             }
             catch (Exception Ex)
@@ -187,7 +187,7 @@ namespace mhed.gui
                 }
                 else
                 {
-                    Logger.Warn(DebugStrings.AppDbgIncorrectFormLocation, Properties.Settings.Default.FormLocation.X, Properties.Settings.Default.FormLocation.Y);
+                    Logger.Info(DebugStrings.AppDbgIncorrectFormLocation, Properties.Settings.Default.FormLocation.X, Properties.Settings.Default.FormLocation.Y);
                 }
             }
             catch (Exception Ex)
