@@ -122,6 +122,24 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Check saved form position.
+        /// </summary>
+        /// <returns>Return True if saved position is above zero.</returns>
+        private bool CheckFormPosition()
+        {
+            return (Properties.Settings.Default.FormLocation.X > 0) && (Properties.Settings.Default.FormLocation.Y > 0);
+        }
+
+        /// <summary>
+        /// Check if the saved form position matches the current screen's resolution.
+        /// </summary>
+        /// <returns>Return True if the saved position can be placed on screen.</returns>
+        private bool CheckScreenBounds()
+        {
+            return Screen.FromControl(this).Bounds.Contains(Properties.Settings.Default.FormLocation);
+        }
+
+        /// <summary>
         /// Set strings data on the main form.
         /// </summary>
         private void SetAppStrings()
@@ -162,7 +180,7 @@ namespace mhed.gui
         {
             try
             {
-                if ((Properties.Settings.Default.FormLocation.X > 0) && (Properties.Settings.Default.FormLocation.Y > 0))
+                if (CheckFormPosition() && CheckScreenBounds())
                 {
                     StartPosition = FormStartPosition.Manual;
                     Location = Properties.Settings.Default.FormLocation;
