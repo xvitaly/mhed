@@ -19,7 +19,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 using System;
-using System.ComponentModel;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -44,7 +43,7 @@ namespace mhed.lib
         /// <summary>
         /// Get or set Hosts file contents.
         /// </summary>
-        public BindingList<HostsFileEntry> Contents { get; private set; }
+        public SortableBindingList<HostsFileEntry> Contents { get; private set; }
 
         /// <summary>
         /// Validate IP-address.
@@ -170,7 +169,7 @@ namespace mhed.lib
         {
             FilePath = FileManager.GetHostsFileFullPath(OS);
             Platform = OS;
-            Contents = new BindingList<HostsFileEntry>();
+            Contents = new SortableBindingList<HostsFileEntry>();
             if (AutoLoad) Load();
         }
     }
