@@ -65,6 +65,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ReturnCodes.cs" />
     <Compile Include="SortableBindingList.cs" />
     <Compile Include="StringsManager.cs" />
   </ItemGroup>
