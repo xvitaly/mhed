@@ -168,4 +168,7 @@
   <data name="AHE_ExitConfirmation" xml:space="preserve">
     <value>Exit {0} without saving changes?</value>
   </data>
+  <data name="AppLibVersionMissmatch" xml:space="preserve">
+    <value>The core library version does not match the application's version. Please reinstall or report this issue to developers.</value>
+  </data>
 </root>

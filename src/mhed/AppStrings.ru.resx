@@ -165,4 +165,7 @@
   <data name="AHE_ExitConfirmation" xml:space="preserve">
     <value>Выйти из {0} без сохранения изменений?</value>
   </data>
+  <data name="AppLibVersionMissmatch" xml:space="preserve">
+    <value>Обнаружено несоответствие между версиями приложения и основной библиотеки функций! Сообщите об этом разработчикам, либо переустановите программу.</value>
+  </data>
 </root>
