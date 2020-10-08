@@ -18,12 +18,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+using mhed.lib;
 using System;
 using System.Threading;
 using System.Windows.Forms;
 
 namespace mhed.gui
 {
+    /// <summary>
+    /// The main class of the application.
+    /// </summary>
     static class Program
     {
         /// <summary>
@@ -32,18 +36,35 @@ namespace mhed.gui
         [STAThread]
         static void Main()
         {
+            // Creating global mutex...
             using (Mutex Mtx = new Mutex(false, Properties.Resources.AppNameTkX))
             {
+                // Locking mutex...
                 if (Mtx.WaitOne(0, false))
                 {
-                    Application.EnableVisualStyles();
-                    Application.SetCompatibleTextRenderingDefault(false);
-                    Application.Run(new FrmMhed());
+                    // Checking of core library version...
+                    if (LibraryManager.CheckLibraryVersion())
+                    {
+                        // Enabling application visual styles...
+                        Application.EnableVisualStyles();
+                        Application.SetCompatibleTextRenderingDefault(false);
+
+                        // Starting main form...
+                        Application.Run(new FrmMhed());
+                    }
+                    else
+                    {
+                        // Version missmatch. Terminating...
+                        MessageBox.Show(AppStrings.AppLibVersionMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Environment.Exit(ReturnCodes.CoreLibVersionMissmatch);
+                    }
+                    
                 }
                 else
                 {
+                    // Application is already running. Terminating...
                     MessageBox.Show(AppStrings.AppAlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Environment.Exit(16);
+                    Environment.Exit(ReturnCodes.AppAlreadyRunning);
                 }
             }
         }
