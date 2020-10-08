@@ -169,6 +169,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Settings were saved successfully!.
+        /// </summary>
+        internal static string AHE_OptionsSaved {
+            get {
+                return ResourceManager.GetString("AHE_OptionsSaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Restore default Hosts file?.
         /// </summary>
         internal static string AHE_RestDef {

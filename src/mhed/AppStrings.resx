@@ -171,4 +171,7 @@
   <data name="AppLibVersionMissmatch" xml:space="preserve">
     <value>The core library version does not match the application's version. Please reinstall or report this issue to developers.</value>
   </data>
+  <data name="AHE_OptionsSaved" xml:space="preserve">
+    <value>Settings were saved successfully!</value>
+  </data>
 </root>
