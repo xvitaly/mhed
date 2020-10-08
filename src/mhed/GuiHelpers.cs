@@ -36,5 +36,16 @@ namespace mhed.gui
                 AboutFrm.ShowDialog();
             }
         }
+
+        /// <summary>
+        /// Open "Program options" form window.
+        /// </summary>
+        public static void FormShowOptions()
+        {
+            using (FrmOptions OptsFrm = new FrmOptions())
+            {
+                OptsFrm.ShowDialog();
+            }
+        }
     }
 }
