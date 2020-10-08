@@ -98,15 +98,6 @@ namespace mhed.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to mhed.
-        /// </summary>
-        internal static string AppNameTkX {
-            get {
-                return ResourceManager.GetString("AppNameTkX", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Bug {

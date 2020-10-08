@@ -37,7 +37,7 @@ namespace mhed.gui
         static void Main()
         {
             // Creating global mutex...
-            using (Mutex Mtx = new Mutex(false, Properties.Resources.AppNameTkX))
+            using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
             {
                 // Locking mutex...
                 if (Mtx.WaitOne(0, false))
