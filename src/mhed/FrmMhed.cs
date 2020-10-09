@@ -378,7 +378,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuOptionsItem_Click(object sender, EventArgs e)
         {
-            //
+            GuiHelpers.FormShowOptions();
         }
 
         /// <summary>
