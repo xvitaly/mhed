@@ -102,7 +102,9 @@ namespace mhed.gui
             Properties.Settings.Default.FormSize = WindowState == FormWindowState.Normal ? Size : RestoreBounds.Size;
             Properties.Settings.Default.Save();
         }
+        #endregion
 
+        #region Different helper methods
         /// <summary>
         /// Change state of some controls, depending on current running
         /// platform or access level.
