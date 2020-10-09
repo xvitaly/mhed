@@ -207,6 +207,57 @@ namespace mhed.gui
                 SetFormLocation();
             }
         }
+
+        /// <summary>
+        /// Show specified file in default file manager.
+        /// </summary>
+        /// <param name="FileName">Fully qualified file name.</param>
+        private void HelperShowFile(string FileName)
+        {
+            try
+            {
+                ProcessManager.OpenExplorer(FileName, App.Platform.OS);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, String.Format(DebugStrings.AppDbgExOpenShell, FileName));
+                MessageBox.Show(AppStrings.AHE_OpenShellError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Load specified file into the selected text editor.
+        /// </summary>
+        /// <param name="FileName">Fully qualified file name.</param>
+        private void HelperTextEditor(string FileName)
+        {
+            try
+            {
+                ProcessManager.OpenTextEditor(FileName, Properties.Settings.Default.EditorBin, App.Platform.OS);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, String.Format(DebugStrings.AppDbgExOpenNotepad, FileName));
+                MessageBox.Show(AppStrings.AHE_OpenInNotepadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Load specified URL in default Web browser.
+        /// </summary>
+        /// <param name="SourceUrl">Source URL.</param>
+        private void HelperOpenUrl(string SourceUrl)
+        {
+            try
+            {
+                ProcessManager.OpenWebPage(SourceUrl);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExOpenUrl);
+                MessageBox.Show(AppStrings.AHE_UrlOpenError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         #endregion
 
         #region Form contructors and loaders
@@ -412,15 +463,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuOpenNotepadItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ProcessManager.OpenTextEditor(App.HostsFile.FilePath, Properties.Settings.Default.EditorBin, App.Platform.OS);
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExOpenNotepad);
-                MessageBox.Show(AppStrings.AHE_OpenInNotepadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            HelperTextEditor(App.HostsFile.FilePath);
         }
 
         /// <summary>
@@ -430,15 +473,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuShowHelpItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ProcessManager.OpenWebPage(Properties.Resources.AppHelpURL);
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex);
-                MessageBox.Show(AppStrings.AHE_UrlOpenError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            HelperOpenUrl(Properties.Resources.AppHelpURL);
         }
 
         /// <summary>
@@ -448,15 +483,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuReportItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ProcessManager.OpenWebPage(Properties.Resources.AppBtURL);
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex);
-                MessageBox.Show(AppStrings.AHE_UrlOpenError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            HelperOpenUrl(Properties.Resources.AppBtURL);
         }
 
         /// <summary>
@@ -466,7 +493,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuDebugLogItem_Click(object sender, EventArgs e)
         {
-            //
+            if (ModifierKeys == Keys.Shift) HelperShowFile(CurrentApp.LogFileName); else HelperTextEditor(CurrentApp.LogFileName);
         }
 
         /// <summary>
@@ -627,15 +654,7 @@ namespace mhed.gui
         {
             if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                try
-                {
-                    ProcessManager.OpenExplorer(App.HostsFile.FilePath, App.Platform.OS);
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Warn(Ex, DebugStrings.AppDbgExOpenShell);
-                    MessageBox.Show(AppStrings.AHE_OpenShellError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                HelperShowFile(App.HostsFile.FilePath);
             }
         }
         #endregion
