@@ -106,7 +106,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to load Hosts file in text editor..
+        ///   Looks up a localized string similar to Exception while trying to load &quot;{0}&quot; file into the selected text editor..
         /// </summary>
         internal static string AppDbgExOpenNotepad {
             get {
@@ -115,11 +115,20 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to show Hosts file in the default shell..
+        ///   Looks up a localized string similar to Exception while trying to show &quot;{0}&quot; file in default file manager..
         /// </summary>
         internal static string AppDbgExOpenShell {
             get {
                 return ResourceManager.GetString("AppDbgExOpenShell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to load URL into default web browser..
+        /// </summary>
+        internal static string AppDbgExOpenUrl {
+            get {
+                return ResourceManager.GetString("AppDbgExOpenUrl", resourceCulture);
             }
         }
         

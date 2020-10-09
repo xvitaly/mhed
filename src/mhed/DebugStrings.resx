@@ -133,10 +133,13 @@
     <value>An exception occured while trying to render data from the attached object.</value>
   </data>
   <data name="AppDbgExOpenNotepad" xml:space="preserve">
-    <value>Exception while trying to load Hosts file in text editor.</value>
+    <value>Exception while trying to load "{0}" file into the selected text editor.</value>
   </data>
   <data name="AppDbgExOpenShell" xml:space="preserve">
-    <value>Exception while trying to show Hosts file in the default shell.</value>
+    <value>Exception while trying to show "{0}" file in default file manager.</value>
+  </data>
+  <data name="AppDbgExOpenUrl" xml:space="preserve">
+    <value>Exception while trying to load URL into default web browser.</value>
   </data>
   <data name="AppDbgExSetFormLocation" xml:space="preserve">
     <value>Exception while trying to change location of the required form.</value>
