@@ -372,6 +372,16 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// "Options" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuOptionsItem_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        /// <summary>
         /// "Quit" menu item event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -447,6 +457,16 @@ namespace mhed.gui
                 Logger.Warn(Ex);
                 MessageBox.Show(AppStrings.AHE_UrlOpenError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        /// <summary>
+        /// "Show debug logs" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuDebugLogItem_Click(object sender, EventArgs e)
+        {
+            //
         }
 
         /// <summary>

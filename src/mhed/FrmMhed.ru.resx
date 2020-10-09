@@ -138,36 +138,24 @@
   <data name="HE_ToolbarAboutButton.Text" xml:space="preserve">
     <value>О програ&amp;мме...</value>
   </data>
+  <data name="HE_MenuRefreshItem.Text" xml:space="preserve">
+    <value>&amp;Обновить</value>
+  </data>
+  <data name="HE_MenuSaveItem.Text" xml:space="preserve">
+    <value>&amp;Сохранить</value>
+  </data>
+  <data name="HE_MenuOptionsItem.Text" xml:space="preserve">
+    <value>&amp;Настройки</value>
+  </data>
+  <data name="HE_MenuQuitItem.Text" xml:space="preserve">
+    <value>&amp;Выход</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="HE_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
   </data>
   <data name="HE_MenuFile.Text" xml:space="preserve">
     <value>&amp;Файл</value>
-  </data>
-  <data name="HE_MenuRefreshItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="HE_MenuRefreshItem.Text" xml:space="preserve">
-    <value>&amp;Обновить</value>
-  </data>
-  <data name="HE_MenuSaveItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="HE_MenuSaveItem.Text" xml:space="preserve">
-    <value>&amp;Сохранить</value>
-  </data>
-  <data name="HE_MenuQuitItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="HE_MenuQuitItem.Text" xml:space="preserve">
-    <value>&amp;Выход</value>
-  </data>
-  <data name="HE_MenuAdvanced.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 20</value>
-  </data>
-  <data name="HE_MenuAdvanced.Text" xml:space="preserve">
-    <value>&amp;Дополнительно</value>
   </data>
   <data name="HE_MenuRestoreDefaultsItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>276, 22</value>
@@ -181,29 +169,47 @@
   <data name="HE_MenuOpenNotepadItem.Text" xml:space="preserve">
     <value>От&amp;крыть в текстовом редакторе</value>
   </data>
+  <data name="HE_MenuAdvanced.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 20</value>
+  </data>
+  <data name="HE_MenuAdvanced.Text" xml:space="preserve">
+    <value>&amp;Дополнительно</value>
+  </data>
+  <data name="HE_MenuShowHelpItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 22</value>
+  </data>
+  <data name="HE_MenuShowHelpItem.Text" xml:space="preserve">
+    <value>Справочн&amp;ая система</value>
+  </data>
+  <data name="HE_MenuSeparator2Item.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 6</value>
+  </data>
+  <data name="HE_MenuReportItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 22</value>
+  </data>
+  <data name="HE_MenuReportItem.Text" xml:space="preserve">
+    <value>Сообщить об о&amp;шибке</value>
+  </data>
+  <data name="HE_MenuDebugLogItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 22</value>
+  </data>
+  <data name="HE_MenuDebugLogItem.Text" xml:space="preserve">
+    <value>Показа&amp;ть журнал отладки</value>
+  </data>
+  <data name="HE_MenuSeparator3Item.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 6</value>
+  </data>
+  <data name="HE_MenuAboutItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 22</value>
+  </data>
+  <data name="HE_MenuAboutItem.Text" xml:space="preserve">
+    <value>&amp;О программе...</value>
+  </data>
   <data name="HE_MenuHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
   </data>
   <data name="HE_MenuHelp.Text" xml:space="preserve">
     <value>&amp;Справка</value>
-  </data>
-  <data name="HE_MenuShowHelpItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 22</value>
-  </data>
-  <data name="HE_MenuShowHelpItem.Text" xml:space="preserve">
-    <value>Справочн&amp;ая система</value>
-  </data>
-  <data name="HE_MenuReportItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 22</value>
-  </data>
-  <data name="HE_MenuReportItem.Text" xml:space="preserve">
-    <value>Сообщить об о&amp;шибке</value>
-  </data>
-  <data name="HE_MenuAboutItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 22</value>
-  </data>
-  <data name="HE_MenuAboutItem.Text" xml:space="preserve">
-    <value>&amp;О программе...</value>
   </data>
   <data name="HE_ModelViewColumnIP.HeaderText" xml:space="preserve">
     <value>IP-адрес</value>

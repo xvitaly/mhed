@@ -44,13 +44,18 @@
             this.HE_MenuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuRefreshItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuSaveItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuSeparator1Item = new System.Windows.Forms.ToolStripSeparator();
+            this.HE_MenuOptionsItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuQuitItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuAdvanced = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuRestoreDefaultsItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuOpenNotepadItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuShowHelpItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuSeparator2Item = new System.Windows.Forms.ToolStripSeparator();
             this.HE_MenuReportItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuDebugLogItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuSeparator3Item = new System.Windows.Forms.ToolStripSeparator();
             this.HE_MenuAboutItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_StatusBar = new System.Windows.Forms.StatusStrip();
             this.HE_StatusBarText = new System.Windows.Forms.ToolStripStatusLabel();
@@ -166,6 +171,8 @@
             this.HE_MenuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HE_MenuRefreshItem,
             this.HE_MenuSaveItem,
+            this.HE_MenuSeparator1Item,
+            this.HE_MenuOptionsItem,
             this.HE_MenuQuitItem});
             this.HE_MenuFile.Name = "HE_MenuFile";
             resources.ApplyResources(this.HE_MenuFile, "HE_MenuFile");
@@ -183,6 +190,18 @@
             this.HE_MenuSaveItem.Name = "HE_MenuSaveItem";
             resources.ApplyResources(this.HE_MenuSaveItem, "HE_MenuSaveItem");
             this.HE_MenuSaveItem.Click += new System.EventHandler(this.HE_MenuSaveItem_Click);
+            // 
+            // HE_MenuSeparator1Item
+            // 
+            this.HE_MenuSeparator1Item.Name = "HE_MenuSeparator1Item";
+            resources.ApplyResources(this.HE_MenuSeparator1Item, "HE_MenuSeparator1Item");
+            // 
+            // HE_MenuOptionsItem
+            // 
+            this.HE_MenuOptionsItem.Image = global::mhed.gui.Properties.Resources.Options;
+            this.HE_MenuOptionsItem.Name = "HE_MenuOptionsItem";
+            resources.ApplyResources(this.HE_MenuOptionsItem, "HE_MenuOptionsItem");
+            this.HE_MenuOptionsItem.Click += new System.EventHandler(this.HE_MenuOptionsItem_Click);
             // 
             // HE_MenuQuitItem
             // 
@@ -217,7 +236,10 @@
             // 
             this.HE_MenuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HE_MenuShowHelpItem,
+            this.HE_MenuSeparator2Item,
             this.HE_MenuReportItem,
+            this.HE_MenuDebugLogItem,
+            this.HE_MenuSeparator3Item,
             this.HE_MenuAboutItem});
             this.HE_MenuHelp.Name = "HE_MenuHelp";
             resources.ApplyResources(this.HE_MenuHelp, "HE_MenuHelp");
@@ -229,12 +251,29 @@
             resources.ApplyResources(this.HE_MenuShowHelpItem, "HE_MenuShowHelpItem");
             this.HE_MenuShowHelpItem.Click += new System.EventHandler(this.HE_MenuShowHelpItem_Click);
             // 
+            // HE_MenuSeparator2Item
+            // 
+            this.HE_MenuSeparator2Item.Name = "HE_MenuSeparator2Item";
+            resources.ApplyResources(this.HE_MenuSeparator2Item, "HE_MenuSeparator2Item");
+            // 
             // HE_MenuReportItem
             // 
             this.HE_MenuReportItem.Image = global::mhed.gui.Properties.Resources.Bug;
             this.HE_MenuReportItem.Name = "HE_MenuReportItem";
             resources.ApplyResources(this.HE_MenuReportItem, "HE_MenuReportItem");
             this.HE_MenuReportItem.Click += new System.EventHandler(this.HE_MenuReportItem_Click);
+            // 
+            // HE_MenuDebugLogItem
+            // 
+            this.HE_MenuDebugLogItem.Image = global::mhed.gui.Properties.Resources.Logs;
+            this.HE_MenuDebugLogItem.Name = "HE_MenuDebugLogItem";
+            resources.ApplyResources(this.HE_MenuDebugLogItem, "HE_MenuDebugLogItem");
+            this.HE_MenuDebugLogItem.Click += new System.EventHandler(this.HE_MenuDebugLogItem_Click);
+            // 
+            // HE_MenuSeparator3Item
+            // 
+            this.HE_MenuSeparator3Item.Name = "HE_MenuSeparator3Item";
+            resources.ApplyResources(this.HE_MenuSeparator3Item, "HE_MenuSeparator3Item");
             // 
             // HE_MenuAboutItem
             // 
@@ -351,5 +390,10 @@
         private System.Windows.Forms.DataGridView HE_ModelView;
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnIP;
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnDomain;
+        private System.Windows.Forms.ToolStripSeparator HE_MenuSeparator2Item;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuDebugLogItem;
+        private System.Windows.Forms.ToolStripSeparator HE_MenuSeparator3Item;
+        private System.Windows.Forms.ToolStripSeparator HE_MenuSeparator1Item;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuOptionsItem;
     }
 }

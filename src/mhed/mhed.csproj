@@ -201,6 +201,8 @@
     <None Include="Resources\Cut.png" />
     <None Include="Resources\Copy.png" />
     <None Include="Resources\Search.png" />
+    <None Include="Resources\Logs.png" />
+    <None Include="Resources\Options.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="mhed.ico">
