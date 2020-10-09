@@ -151,7 +151,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to load Hosts file in the selected text editor!.
+        ///   Looks up a localized string similar to Failed to load file into the selected text editor!.
         /// </summary>
         internal static string AHE_OpenInNotepadError {
             get {
@@ -160,7 +160,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to show Hosts file in the default shell!.
+        ///   Looks up a localized string similar to Failed to show file in default file manager!.
         /// </summary>
         internal static string AHE_OpenShellError {
             get {
@@ -205,7 +205,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to load URL in the default web browser!.
+        ///   Looks up a localized string similar to Failed to load URL into default web browser!.
         /// </summary>
         internal static string AHE_UrlOpenError {
             get {

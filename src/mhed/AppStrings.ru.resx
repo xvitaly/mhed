@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AHE_ExceptionDetected" xml:space="preserve">
-    <value>Во время открытия файла {0} произошла ошибка. Файл может быть открыт некорректно!</value>
+    <value>Во время открытия файла {0} произошла ошибка. Он мог быть загружен некорректно!</value>
   </data>
   <data name="AHE_HMessg" xml:space="preserve">
     <value>Активный файл hosts расположен в: {0}. Показать в Проводнике?</value>
@@ -157,10 +157,10 @@
     <value>Произошла ошибка при попытке удаления выбранных строк!</value>
   </data>
   <data name="AHE_OpenInNotepadError" xml:space="preserve">
-    <value>Произошла ошибка при попытке загрузки файла Hosts в выбранном текстовом редакторе!</value>
+    <value>Произошла ошибка при попытке загрузки файла в выбранном текстовом редакторе!</value>
   </data>
   <data name="AHE_OpenShellError" xml:space="preserve">
-    <value>Произошла ошибка при попытке показать файл Hosts в оболочке по умолчанию!</value>
+    <value>Произошла ошибка при попытке показать файл в оболочке по умолчанию!</value>
   </data>
   <data name="AHE_ExitConfirmation" xml:space="preserve">
     <value>Выйти из {0} без сохранения изменений?</value>
@@ -170,5 +170,8 @@
   </data>
   <data name="AHE_OptionsSaved" xml:space="preserve">
     <value>Настройки были успешно сохранены!</value>
+  </data>
+  <data name="AHE_UrlOpenError" xml:space="preserve">
+    <value>Произошла ошибка при попытке открыть адрес в браузере по умолчанию!</value>
   </data>
 </root>

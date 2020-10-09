@@ -157,13 +157,13 @@
     <value>Failed to delete selected rows!</value>
   </data>
   <data name="AHE_OpenInNotepadError" xml:space="preserve">
-    <value>Failed to load Hosts file in the selected text editor!</value>
+    <value>Failed to load file into the selected text editor!</value>
   </data>
   <data name="AHE_UrlOpenError" xml:space="preserve">
-    <value>Failed to load URL in the default web browser!</value>
+    <value>Failed to load URL into default web browser!</value>
   </data>
   <data name="AHE_OpenShellError" xml:space="preserve">
-    <value>Failed to show Hosts file in the default shell!</value>
+    <value>Failed to show file in default file manager!</value>
   </data>
   <data name="AHE_ExitConfirmation" xml:space="preserve">
     <value>Exit {0} without saving changes?</value>
