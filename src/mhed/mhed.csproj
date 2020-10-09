@@ -192,7 +192,6 @@
     <None Include="Resources\Delete.png" />
     <None Include="Resources\Exit.png" />
     <None Include="Resources\Help.png" />
-    <None Include="Resources\hosts.png" />
     <None Include="Resources\Info.png" />
     <None Include="Resources\Restore.png" />
     <None Include="Resources\Save.png" />
