@@ -196,7 +196,7 @@
     <value>1</value>
   </data>
   <data name="MO_PreserveFormState.Text" xml:space="preserve">
-    <value>Preserve form location and position</value>
+    <value>Preserve form size and location</value>
   </data>
   <data name="&gt;&gt;MO_PreserveFormState.Name" xml:space="preserve">
     <value>MO_PreserveFormState</value>
