@@ -53,7 +53,7 @@ Any unsaved changes will be lost.
 .. index:: hosts editor, loading config file
 .. _usage-saving:
 
-Saving file
+Saving Hosts file
 ================================================
 
 Click the **Save** button on the main toolbar, or press **Ctrl + S** key combination on your keyboard to save the Hosts file to disk.
