@@ -24,6 +24,7 @@ Micro Hosts Editor offline help
 .. toctree::
    :maxdepth: 2
 
+   getting-started.rst
    legal.rst
 
 
