@@ -22,13 +22,13 @@
 Using application
 ************************************
 
-.. index:: hosts editor, working with hosts editor
-.. _usage-working:
+.. index:: hosts editor, working with hosts editor, editing hosts file
+.. _usage-edit:
 
-Working with Editor
+Editing Hosts file
 ==========================================
 
-In the first column **IP-address** you must enter a valid IP address (eg. ``127.0.0.1``), and in the second **Hostname**, the hostname (eg. ``localhost``).
+In the first column **IP-address** you must enter a valid IP address (eg. ``127.0.0.1``), and in the second **Hostname**, the hostname (eg. ``localhost``). IPv4 and IPv6 are supported.
 
 Multiple hostnames are allowed in one entry. Use a space as a separator. Quotation marks or wildcards are strictly prohibited. Commentaries are also forbidden and will be automatically removed.
 
@@ -36,12 +36,12 @@ To add a new row, just start typing text in the last cell.
 
 To edit the contents of a cell, simply double click on it or press the **F4** on your keyboard.
 
-To remove currently selected row, press **Delete selected row** button on the main toolbar, or press **Delete** button on the keyboard. You can select and remove multiple rows at once.
+To remove currently selected row, click the **Delete selected row** button on the main toolbar, or press **Delete** button on the keyboard. You can select and remove multiple rows at once.
 
-If you want to edit Hosts file as a plain text file, click **Open config in Notepad** in the **Advanced** menu. The file will be loaded with a :ref:`selected <settings-advanced>` (or system default) text editor.
+If you want to edit Hosts file as a plain text file, click **Open in text editor** in the **Advanced** menu. The file will be loaded with a :ref:`selected <settings-advanced>` (or system default) text editor.
 
 .. index:: hosts editor, reloading hosts file, refreshing hosts file
-.. _usage-reloading:
+.. _usage-reload:
 
 Reloading Hosts file
 ==========================================
@@ -50,8 +50,8 @@ Click the **Refresh** button on the main toolbar, or press **F5** button on your
 
 Any unsaved changes will be lost.
 
-.. index:: hosts editor, loading config file
-.. _usage-saving:
+.. index:: hosts editor, saving hosts file
+.. _usage-save:
 
 Saving Hosts file
 ================================================
