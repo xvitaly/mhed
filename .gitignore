@@ -1,6 +1,7 @@
 # OS junk files
 [Tt]humbs.db
 *.DS_Store
+.directory
 
 # Visual Studio files
 *.[Oo]bj
@@ -63,6 +64,12 @@ packages/
 
 # Test files
 *.testsettings
+
+# Idea configs
+.idea
+
+# Doxygen compiled translations
+*.mo
 
 # Other
 /packaging/results
