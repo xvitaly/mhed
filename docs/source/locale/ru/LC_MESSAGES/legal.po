@@ -1,0 +1,295 @@
+# This file is a part of Micro Hosts Editor project. For more information
+# visit official site: https://www.easycoding.org/projects/mhed
+#
+# Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
+# Copyright (c) 2005 - 2020 EasyCoding Team.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+msgid ""
+msgstr ""
+"Project-Id-Version: Micro Hosts Editor 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-10 14:43+0200\n"
+"PO-Revision-Date: 2020-10-10 15:08+0200\n"
+"Language-Team: EasyCoding Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ../../source/legal.rst:23
+msgid "Legal"
+msgstr "Правовая информация"
+
+#: ../../source/legal.rst:29
+msgid "Icons licensing"
+msgstr "Лицензирование значков"
+
+#: ../../source/legal.rst:1
+msgid "**File name**"
+msgstr "**Имя файла**"
+
+#: ../../source/legal.rst:1
+msgid "**Author**"
+msgstr "**Автор**"
+
+#: ../../source/legal.rst:1
+msgid "**License name**"
+msgstr "**Лицензия**"
+
+#: ../../source/legal.rst:1
+msgid "**Source URL**"
+msgstr "**Дом. страница**"
+
+#: ../../source/legal.rst:1
+msgid "AppIcon.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "GNOME icon artists"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`GNU General Public License, version 2 <https://www.gnu.org/licenses/old-"
+"licenses/gpl-2.0.html>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-edit-clear-10--7.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Bug.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Asher"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/"
+"legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/bug-8000.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Delete.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "VisualPharm"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`CC Attribution No Derivatives <https://creativecommons.org/licenses/by-"
+"nd/4.0/legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/delete--832.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Exit.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-application-exit-10-41."
+"html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Help.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/help-8051.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Info.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "IconsPedia"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Free for non commercial use"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/info--206.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Logs.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "LazyCrazy"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/elegant--notebook-160--.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Options.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Ahmad Hania"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`CC Attribution Non-Commercial Share Alike <https://creativecommons.org/"
+"licenses/by-nc-sa/4.0/legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/options-1321-.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Refresh.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-view-refresh-111-4."
+"html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Restore.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-edit-undo-11006.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Save.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Everaldo Coelho"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`GNU Lesser General Public License <https://opensource.org/licenses/"
+"LGPL-2.1>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/save-file-4082.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Search.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Flahorn"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`CC Attribution Non-Commercial No Derivatives <https://creativecommons.org/"
+"licenses/by-nc-nd/4.0/legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/search-26-2.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "TextEditor.png"
+msgstr ""
+
+#: ../../source/legal.rst:52
+msgid "Libraries licensing"
+msgstr "Лицензирование библиотек"
+
+#: ../../source/legal.rst:1
+msgid "**Library name**"
+msgstr "**Название библиотеки**"
+
+#: ../../source/legal.rst:1
+msgid "**Linkage type**"
+msgstr "**Способ линковки**"
+
+#: ../../source/legal.rst:1
+msgid "**URL**"
+msgstr "**Дом. страница**"
+
+#: ../../source/legal.rst:1
+msgid "NLog"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Dynamic (shared)"
+msgstr "Динамическая (DLL)"
+
+#: ../../source/legal.rst:1
+msgid "`BSD <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`GitHub page <https://github.com/NLog/NLog>`__"
+msgstr ""
+
+#: ../../source/legal.rst:63
+msgid "Trademarks"
+msgstr "Торговые марки"
+
+#: ../../source/legal.rst:66
+msgid "Microsoft"
+msgstr ""
+
+#: ../../source/legal.rst:68
+msgid ""
+"Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
+"Corporation."
+msgstr ""
+"Microsoft, Windows являются торговыми марками и/или зарегистрированными "
+"торговыми марками Корпорации Microsoft."
+
+#: ../../source/legal.rst:71
+msgid "Other"
+msgstr "Прочие"
+
+#: ../../source/legal.rst:73
+msgid "All other trademarks are property of their respective owners."
+msgstr "Все прочие торговые марки являются собственностью их владельцев."

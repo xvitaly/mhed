@@ -1,0 +1,73 @@
+# This file is a part of Micro Hosts Editor project. For more information
+# visit official site: https://www.easycoding.org/projects/mhed
+#
+# Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
+# Copyright (c) 2005 - 2020 EasyCoding Team.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+msgid ""
+msgstr ""
+"Project-Id-Version: Micro Hosts Editor 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-10 14:43+0200\n"
+"PO-Revision-Date: 2020-10-10 15:10+0200\n"
+"Language-Team: EasyCoding Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ../../source/settings.rst:23
+msgid "Program settings"
+msgstr "Настройки программы"
+
+#: ../../source/settings.rst:29
+msgid "Common settings"
+msgstr "Общие настройки программы"
+
+#: ../../source/settings.rst:31
+msgid "**Confirm exit** -- enable or disable exit confirmation dialog."
+msgstr ""
+"**Подтверждать выход из программы** -- включает или отключает запрос на "
+"подтверждение выхода из программы."
+
+#: ../../source/settings.rst:32
+msgid ""
+"**Preserve form size and location** -- if enabled, will automatically save "
+"and restore the main windows size and screen location."
+msgstr ""
+"**Сохранять размер и позицию главного окна** -- если включена, то "
+"позволяет сохранять и автоматически восстанавливать при запуске размер и "
+"позицию на экране главного окна программы."
+
+#: ../../source/settings.rst:38
+msgid "Advances settings"
+msgstr "Дополнительные настройки программы"
+
+#: ../../source/settings.rst:40
+msgid ""
+"**Text editor binary** -- choose a text editor to load and edit text files "
+"instead of using the default one. Click the **Browse** button and find its "
+"executable on disk."
+msgstr ""
+"**Текстовый редактор** -- позволяет задать внешний текстовый редактор, "
+"который будет использоваться для отображения и редактирования текстовых "
+"файлов. Для выбора достаточно нажать кнопку **Обзор** и найти его на диске."

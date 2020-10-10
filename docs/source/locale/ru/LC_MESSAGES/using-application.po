@@ -1,0 +1,131 @@
+# This file is a part of Micro Hosts Editor project. For more information
+# visit official site: https://www.easycoding.org/projects/mhed
+#
+# Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
+# Copyright (c) 2005 - 2020 EasyCoding Team.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+msgid ""
+msgstr ""
+"Project-Id-Version: Micro Hosts Editor 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-10 15:33+0200\n"
+"PO-Revision-Date: 2020-10-10 15:35+0200\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Language-Team: EasyCoding Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ../../source/using-application.rst:23
+msgid "Using application"
+msgstr "Работа с программой"
+
+#: ../../source/using-application.rst:29
+msgid "Editing Hosts file"
+msgstr "Редактирование файла Hosts"
+
+#: ../../source/using-application.rst:31
+msgid ""
+"In the first column **IP-address** you must enter a valid IP address (eg. "
+"``127.0.0.1``), and in the second **Hostname**, the hostname (eg. "
+"``localhost``). IPv4 and IPv6 are supported."
+msgstr ""
+"Работать с редактором очень просто. В первом столбце **IP-адрес** вы должны "
+"указать действительный IP-адрес (например, ``127.0.0.1``), а во втором -- "
+"**Доменное имя** -- соответствующее доменное имя (например, ``localhost``). "
+"Поддерживаются как IPv4, так и IPv6."
+
+#: ../../source/using-application.rst:33
+msgid ""
+"Multiple hostnames are allowed in one entry. Use a space as a separator. "
+"Quotation marks or wildcards are strictly prohibited. Commentaries are also "
+"forbidden and will be automatically removed."
+msgstr ""
+"В одной строке разрешено указывать несколько доменных имён, разделяя их при "
+"помощи пробела. Кавычки и символы подстановки запрещены. Также запрещено "
+"использование любых видов комментариев. Они будут автоматически удалены."
+
+#: ../../source/using-application.rst:35
+msgid "To add a new row, just start typing text in the last cell."
+msgstr ""
+"Чтобы добавить новую строку просто начинайте набирать текст в последней "
+"пустой строке программы."
+
+#: ../../source/using-application.rst:37
+msgid ""
+"To edit the contents of a cell, simply double click on it or press the "
+"**F4** on your keyboard."
+msgstr ""
+"Чтобы отредактировать содержимое ячейки, дважды кликните по ней мышью, либо "
+"выберите её и нажмите клавишу **F4** на клавиатуре."
+
+#: ../../source/using-application.rst:39
+msgid ""
+"To remove currently selected row, click the **Delete selected row** button "
+"on the main toolbar, or press **Delete** button on the keyboard. You can "
+"select and remove multiple rows at once."
+msgstr ""
+"Для удаления выбранной строки, просто нажмите кнопку **Удалить строку** на "
+"главной панели инструментов программы, либо нажиме клавишу **Delete** на "
+"клавиатуре. Вы можете выделять и удалять одновременно несколько строк."
+
+#: ../../source/using-application.rst:41
+msgid ""
+"If you want to edit Hosts file as a plain text file, click **Open in text "
+"editor** in the **Advanced** menu. The file will be loaded with a :ref:"
+"`selected <settings-advanced>` (or system default) text editor."
+msgstr ""
+"Если вы хотите редактировать файл Hosts в текстовом редакторе, выберите "
+"**Открыть в текстовом редакторе** из меню **Дополнительно**. Файл будет "
+"загружен в :ref:`выбранном текстовом редакторе <settings-advanced>` (или по "
+"умолчанию для текущей платформы)."
+
+#: ../../source/using-application.rst:47
+msgid "Reloading Hosts file"
+msgstr "Обновление файла Hosts"
+
+#: ../../source/using-application.rst:49
+msgid ""
+"Click the **Refresh** button on the main toolbar, or press **F5** button on "
+"your keyboard to reload the Hosts file from disk."
+msgstr ""
+"Нажмите кнопку **Обновить** на главной панели инструментов, либо клавишу "
+"**F5** на клавиатуре, чтобы перечитать файл Hosts с диска."
+
+#: ../../source/using-application.rst:51
+msgid "Any unsaved changes will be lost."
+msgstr "Все не сохранённые изменения будут потеряны."
+
+#: ../../source/using-application.rst:57
+msgid "Saving Hosts file"
+msgstr "Сохранение файла Hosts"
+
+#: ../../source/using-application.rst:59
+msgid ""
+"Click the **Save** button on the main toolbar, or press **Ctrl + S** key "
+"combination on your keyboard to save the Hosts file to disk."
+msgstr ""
+"Нажмите кнопку **Сохранить** на главной панели инструментов, либо комбинацию "
+"**Ctrl + S** на клавиатуре, чтобы сохранить файл Hosts на диск."
+
+#~ msgid "Working with Editor"
+#~ msgstr "Редактирование"
