@@ -25,6 +25,7 @@ Micro Hosts Editor offline help
    :maxdepth: 2
 
    getting-started.rst
+   using-application.rst
    legal.rst
 
 
