@@ -16,17 +16,25 @@
 ..
 .. You should have received a copy of the GNU General Public License
 .. along with this program. If not, see <http://www.gnu.org/licenses/>.
-.. _index:
+.. _settings:
 
-Micro Hosts Editor offline help
-======================================
+*******************************
+Program settings
+*******************************
 
-.. toctree::
-   :maxdepth: 2
+.. index:: settings, main settings, generic settings, common settings
+.. _settings-main:
 
-   getting-started.rst
-   using-application.rst
-   settings.rst
-   legal.rst
+Common settings
+==========================================
 
+  * **Confirm exit** -- enable or disable exit confirmation dialog.
+  * **Preserve form size and location** -- if enabled, will automatically save and restore the main windows size and screen location.
 
+.. index:: settings, advanced settings, additional settings
+.. _settings-advanced:
+
+Advances settings
+==========================================
+
+  * **Text editor binary** -- choose a text editor to load and edit text files instead of using the default one. Click the **Browse** button and find its executable on disk.
