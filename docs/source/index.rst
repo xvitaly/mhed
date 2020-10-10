@@ -1,4 +1,4 @@
-.. This file is a part of Micro Hosts Editor project. For more information
+.. This file is a part of Micro Hosts Editor. For more information
 .. visit official site: https://www.easycoding.org/projects/mhed
 ..
 .. Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
@@ -24,6 +24,6 @@ Micro Hosts Editor offline help
 .. toctree::
    :maxdepth: 2
 
-
+   legal.rst
 
 
