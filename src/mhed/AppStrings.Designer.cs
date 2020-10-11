@@ -70,6 +70,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The offline help system file is not installed, or is not supported by selected program language!.
+        /// </summary>
+        internal static string AHE_ChmFileNotFound {
+            get {
+                return ResourceManager.GetString("AHE_ChmFileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to copy selected data to the clipboard!.
         /// </summary>
         internal static string AHE_ClipboardCopyError {
@@ -228,6 +237,15 @@ namespace mhed.gui {
         internal static string AHE_SaveException {
             get {
                 return ResourceManager.GetString("AHE_SaveException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to start the offline help viewer with the required documentation page!.
+        /// </summary>
+        internal static string AHE_ShowHelpError {
+            get {
+                return ResourceManager.GetString("AHE_ShowHelpError", resourceCulture);
             }
         }
         

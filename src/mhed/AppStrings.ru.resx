@@ -177,4 +177,10 @@
   <data name="AHE_LangPrefix" xml:space="preserve">
     <value>ru</value>
   </data>
+  <data name="AHE_ShowHelpError" xml:space="preserve">
+    <value>Произошла ошибка при запуске средства просмотра оффлайновой справочной системы с запрошенной страницей!</value>
+  </data>
+  <data name="AHE_ChmFileNotFound" xml:space="preserve">
+    <value>Файл оффлайновой справочной системы не установлен, либо не поддерживается для данной языковой версии!</value>
+  </data>
 </root>

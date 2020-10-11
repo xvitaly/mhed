@@ -177,4 +177,10 @@
   <data name="AHE_LangPrefix" xml:space="preserve">
     <value>en</value>
   </data>
+  <data name="AHE_ChmFileNotFound" xml:space="preserve">
+    <value>The offline help system file is not installed, or is not supported by selected program language!</value>
+  </data>
+  <data name="AHE_ShowHelpError" xml:space="preserve">
+    <value>Failed to start the offline help viewer with the required documentation page!</value>
+  </data>
 </root>
