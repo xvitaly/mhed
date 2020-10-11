@@ -70,11 +70,11 @@ namespace mhed.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://www.easycoding.org/projects/mhed.
+        ///   Looks up a localized string similar to mhed_{0}.chm.
         /// </summary>
-        internal static string AppHelpURL {
+        internal static string AppHelpFileName {
             get {
-                return ResourceManager.GetString("AppHelpURL", resourceCulture);
+                return ResourceManager.GetString("AppHelpFileName", resourceCulture);
             }
         }
         
