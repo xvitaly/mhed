@@ -97,6 +97,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to start the offline help viewer with the required CHM file..
+        /// </summary>
+        internal static string AppDbgExHelpShow {
+            get {
+                return ResourceManager.GetString("AppDbgExHelpShow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An exception occured while trying to render data from the attached object..
         /// </summary>
         internal static string AppDbgExModelView {
