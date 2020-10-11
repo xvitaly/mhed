@@ -142,6 +142,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to en.
+        /// </summary>
+        internal static string AHE_LangPrefix {
+            get {
+                return ResourceManager.GetString("AHE_LangPrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The core library version does not match the application&apos;s version. Please reinstall or report this issue to developers..
         /// </summary>
         internal static string AHE_LibraryVersionMissmatch {

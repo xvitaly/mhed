@@ -174,4 +174,7 @@
   <data name="AHE_OptionsSaved" xml:space="preserve">
     <value>Settings were saved successfully!</value>
   </data>
+  <data name="AHE_LangPrefix" xml:space="preserve">
+    <value>en</value>
+  </data>
 </root>

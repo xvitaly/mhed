@@ -174,4 +174,7 @@
   <data name="AHE_UrlOpenError" xml:space="preserve">
     <value>Произошла ошибка при попытке открыть адрес в браузере по умолчанию!</value>
   </data>
+  <data name="AHE_LangPrefix" xml:space="preserve">
+    <value>ru</value>
+  </data>
 </root>
