@@ -475,7 +475,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuShowHelpItem_Click(object sender, EventArgs e)
         {
-            string CHMFile = Path.Combine(App.FullAppPath, "help", String.Format(Properties.Resources.AppHelpFileName, AppStrings.AHE_LangPrefix));
+            string CHMFile = Path.Combine(App.FullAppPath, Properties.Resources.AppHelpDirectory, String.Format(Properties.Resources.AppHelpFileName, AppStrings.AHE_LangPrefix));
 
             if (File.Exists(CHMFile))
             {
