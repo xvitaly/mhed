@@ -61,6 +61,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The program is already running. Starting the second copy is not allowed..
+        /// </summary>
+        internal static string AHE_AlreadyRunning {
+            get {
+                return ResourceManager.GetString("AHE_AlreadyRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to copy selected data to the clipboard!.
         /// </summary>
         internal static string AHE_ClipboardCopyError {
@@ -129,6 +138,15 @@ namespace mhed.gui {
         internal static string AHE_IncorrectIPAddress {
             get {
                 return ResourceManager.GetString("AHE_IncorrectIPAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The core library version does not match the application&apos;s version. Please reinstall or report this issue to developers..
+        /// </summary>
+        internal static string AHE_LibraryVersionMissmatch {
+            get {
+                return ResourceManager.GetString("AHE_LibraryVersionMissmatch", resourceCulture);
             }
         }
         
@@ -210,24 +228,6 @@ namespace mhed.gui {
         internal static string AHE_UrlOpenError {
             get {
                 return ResourceManager.GetString("AHE_UrlOpenError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The program is already running. Starting the second copy is not allowed..
-        /// </summary>
-        internal static string AppAlrLaunched {
-            get {
-                return ResourceManager.GetString("AppAlrLaunched", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The core library version does not match the application&apos;s version. Please reinstall or report this issue to developers..
-        /// </summary>
-        internal static string AppLibVersionMissmatch {
-            get {
-                return ResourceManager.GetString("AppLibVersionMissmatch", resourceCulture);
             }
         }
     }

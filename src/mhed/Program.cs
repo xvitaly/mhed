@@ -55,7 +55,7 @@ namespace mhed.gui
                     else
                     {
                         // Version missmatch. Terminating...
-                        MessageBox.Show(AppStrings.AppLibVersionMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(AppStrings.AHE_LibraryVersionMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Environment.Exit(ReturnCodes.CoreLibVersionMissmatch);
                     }
                     
@@ -63,7 +63,7 @@ namespace mhed.gui
                 else
                 {
                     // Application is already running. Terminating...
-                    MessageBox.Show(AppStrings.AppAlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.AHE_AlreadyRunning, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Environment.Exit(ReturnCodes.AppAlreadyRunning);
                 }
             }

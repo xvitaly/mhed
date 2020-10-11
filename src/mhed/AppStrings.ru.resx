@@ -138,7 +138,7 @@
   <data name="AHE_NoAdminRights" xml:space="preserve">
     <value>Для выполнения этого действия необходимы права локального администратора!</value>
   </data>
-  <data name="AppAlrLaunched" xml:space="preserve">
+  <data name="AHE_AlreadyRunning" xml:space="preserve">
     <value>Программа уже запущена! Запуск дополнительных копий не допускается.</value>
   </data>
   <data name="AHE_IncorrectIPAddress" xml:space="preserve">
@@ -165,7 +165,7 @@
   <data name="AHE_ExitConfirmation" xml:space="preserve">
     <value>Выйти из {0} без сохранения изменений?</value>
   </data>
-  <data name="AppLibVersionMissmatch" xml:space="preserve">
+  <data name="AHE_LibraryVersionMissmatch" xml:space="preserve">
     <value>Обнаружено несоответствие между версиями приложения и основной библиотеки функций! Сообщите об этом разработчикам, либо переустановите программу.</value>
   </data>
   <data name="AHE_OptionsSaved" xml:space="preserve">

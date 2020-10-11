@@ -138,7 +138,7 @@
   <data name="AHE_NoAdminRights" xml:space="preserve">
     <value>Local admin rights is required to perform requested action!</value>
   </data>
-  <data name="AppAlrLaunched" xml:space="preserve">
+  <data name="AHE_AlreadyRunning" xml:space="preserve">
     <value>The program is already running. Starting the second copy is not allowed.</value>
   </data>
   <data name="AHE_IncorrectIPAddress" xml:space="preserve">
@@ -168,7 +168,7 @@
   <data name="AHE_ExitConfirmation" xml:space="preserve">
     <value>Exit {0} without saving changes?</value>
   </data>
-  <data name="AppLibVersionMissmatch" xml:space="preserve">
+  <data name="AHE_LibraryVersionMissmatch" xml:space="preserve">
     <value>The core library version does not match the application's version. Please reinstall or report this issue to developers.</value>
   </data>
   <data name="AHE_OptionsSaved" xml:space="preserve">
