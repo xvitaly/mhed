@@ -475,7 +475,24 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuShowHelpItem_Click(object sender, EventArgs e)
         {
-            HelperOpenUrl(Properties.Resources.AppHelpURL);
+            string CHMFile = Path.Combine(App.FullAppPath, "help", String.Format(Properties.Resources.AppHelpFileName, AppStrings.AHE_LangPrefix));
+
+            if (File.Exists(CHMFile))
+            {
+                try
+                {
+                    Help.ShowHelp(this, CHMFile);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, DebugStrings.AppDbgExHelpShow);
+                    MessageBox.Show(AppStrings.AHE_ShowHelpError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.AHE_ChmFileNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         /// <summary>
