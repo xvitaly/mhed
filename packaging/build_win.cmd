@@ -19,6 +19,8 @@ rem
 rem You should have received a copy of the GNU General Public License
 rem along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+title Building Micro Hosts Editor release binaries...
+
 set GPGKEY=A989AAAA
 set RELVER=100
 
