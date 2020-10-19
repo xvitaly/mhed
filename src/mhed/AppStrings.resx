@@ -184,6 +184,6 @@
     <value>Failed to start the offline help viewer with the required documentation page!</value>
   </data>
   <data name="AHE_IncorrectHostname" xml:space="preserve">
-    <value>Incorrect hostname entered. Do not use wildcards or any special characters!</value>
+    <value>Incorrect hostname entered!</value>
   </data>
 </root>

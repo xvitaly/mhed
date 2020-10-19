@@ -142,7 +142,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Incorrect hostname entered. Do not use wildcards or any special characters!.
+        ///   Looks up a localized string similar to Incorrect hostname entered!.
         /// </summary>
         internal static string AHE_IncorrectHostname {
             get {
