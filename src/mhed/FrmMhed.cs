@@ -121,7 +121,6 @@ namespace mhed.gui
                 HE_ToolbarPasteButton.Enabled = false;
                 HE_ToolbarDeleteButton.Enabled = false;
                 HE_StatusBarAppMode.Image = Properties.Resources.GreenCircle;
-                HE_StatusBarAppMode.Text = "R/O";
             }
         }
 
@@ -651,36 +650,46 @@ namespace mhed.gui
 
         #region Status bar handlers
         /// <summary>
-        /// "Mouse enter" status bar event handler.
+        /// "Mouse enter location" status bar event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HE_StatusBarText_MouseEnter(object sender, EventArgs e)
+        private void HE_StatusBarHostsLocation_MouseEnter(object sender, EventArgs e)
         {
             HE_StatusBarHostsLocation.ForeColor = Color.Red;
         }
 
         /// <summary>
-        /// "Mouse leave" status bar event handler.
+        /// "Mouse leave location" status bar event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HE_StatusBarText_MouseLeave(object sender, EventArgs e)
+        private void HE_StatusBarHostsLocation_MouseLeave(object sender, EventArgs e)
         {
             HE_StatusBarHostsLocation.ForeColor = Color.Black;
         }
 
         /// <summary>
-        /// "Status bar click" event handler.
+        /// "Status bar location click" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HE_StatusBarText_Click(object sender, EventArgs e)
+        private void HE_StatusBarHostsLocation_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 HelperShowFile(App.HostsFile.FilePath);
             }
+        }
+
+        /// <summary>
+        /// "Status bar application mode click" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_StatusBarAppMode_Click(object sender, EventArgs e)
+        {
+            //
         }
         #endregion
     }

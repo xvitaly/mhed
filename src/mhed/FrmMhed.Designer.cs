@@ -295,9 +295,9 @@
             // 
             this.HE_StatusBarHostsLocation.Name = "HE_StatusBarHostsLocation";
             resources.ApplyResources(this.HE_StatusBarHostsLocation, "HE_StatusBarHostsLocation");
-            this.HE_StatusBarHostsLocation.Click += new System.EventHandler(this.HE_StatusBarText_Click);
-            this.HE_StatusBarHostsLocation.MouseEnter += new System.EventHandler(this.HE_StatusBarText_MouseEnter);
-            this.HE_StatusBarHostsLocation.MouseLeave += new System.EventHandler(this.HE_StatusBarText_MouseLeave);
+            this.HE_StatusBarHostsLocation.Click += new System.EventHandler(this.HE_StatusBarHostsLocation_Click);
+            this.HE_StatusBarHostsLocation.MouseEnter += new System.EventHandler(this.HE_StatusBarHostsLocation_MouseEnter);
+            this.HE_StatusBarHostsLocation.MouseLeave += new System.EventHandler(this.HE_StatusBarHostsLocation_MouseLeave);
             // 
             // HE_StatusBarAppMode
             // 
@@ -305,6 +305,7 @@
             resources.ApplyResources(this.HE_StatusBarAppMode, "HE_StatusBarAppMode");
             this.HE_StatusBarAppMode.Name = "HE_StatusBarAppMode";
             this.HE_StatusBarAppMode.Spring = true;
+            this.HE_StatusBarAppMode.Click += new System.EventHandler(this.HE_StatusBarAppMode_Click);
             // 
             // HE_ModelViewPanel
             // 
