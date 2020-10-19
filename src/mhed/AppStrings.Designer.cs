@@ -142,6 +142,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect hostname entered. Do not use wildcards or any special characters!.
+        /// </summary>
+        internal static string AHE_IncorrectHostname {
+            get {
+                return ResourceManager.GetString("AHE_IncorrectHostname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Incorrect IP-address entered!.
         /// </summary>
         internal static string AHE_IncorrectIPAddress {
