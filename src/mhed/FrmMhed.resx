@@ -354,11 +354,26 @@
   <metadata name="HE_StatusBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="HE_StatusBarText.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HE_StatusBarHostsLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 17</value>
   </data>
-  <data name="HE_StatusBarText.Text" xml:space="preserve">
+  <data name="HE_StatusBarHostsLocation.Text" xml:space="preserve">
     <value>Path</value>
+  </data>
+  <data name="HE_StatusBarHostsLocation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="HE_StatusBarAppMode.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="HE_StatusBarAppMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 17</value>
+  </data>
+  <data name="HE_StatusBarAppMode.Text" xml:space="preserve">
+    <value>R/W</value>
+  </data>
+  <data name="HE_StatusBarAppMode.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="HE_StatusBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 285</value>
@@ -1203,10 +1218,16 @@
   <data name="&gt;&gt;HE_MenuAboutItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;HE_StatusBarText.Name" xml:space="preserve">
-    <value>HE_StatusBarText</value>
+  <data name="&gt;&gt;HE_StatusBarHostsLocation.Name" xml:space="preserve">
+    <value>HE_StatusBarHostsLocation</value>
   </data>
-  <data name="&gt;&gt;HE_StatusBarText.Type" xml:space="preserve">
+  <data name="&gt;&gt;HE_StatusBarHostsLocation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_StatusBarAppMode.Name" xml:space="preserve">
+    <value>HE_StatusBarAppMode</value>
+  </data>
+  <data name="&gt;&gt;HE_StatusBarAppMode.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HE_ModelViewColumnIP.Name" xml:space="preserve">

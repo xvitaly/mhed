@@ -58,7 +58,8 @@
             this.HE_MenuSeparator3Item = new System.Windows.Forms.ToolStripSeparator();
             this.HE_MenuAboutItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_StatusBar = new System.Windows.Forms.StatusStrip();
-            this.HE_StatusBarText = new System.Windows.Forms.ToolStripStatusLabel();
+            this.HE_StatusBarHostsLocation = new System.Windows.Forms.ToolStripStatusLabel();
+            this.HE_StatusBarAppMode = new System.Windows.Forms.ToolStripStatusLabel();
             this.HE_ModelViewPanel = new System.Windows.Forms.Panel();
             this.HE_ModelView = new System.Windows.Forms.DataGridView();
             this.HE_ModelViewColumnIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -285,17 +286,25 @@
             // HE_StatusBar
             // 
             this.HE_StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HE_StatusBarText});
+            this.HE_StatusBarHostsLocation,
+            this.HE_StatusBarAppMode});
             resources.ApplyResources(this.HE_StatusBar, "HE_StatusBar");
             this.HE_StatusBar.Name = "HE_StatusBar";
             // 
-            // HE_StatusBarText
+            // HE_StatusBarHostsLocation
             // 
-            this.HE_StatusBarText.Name = "HE_StatusBarText";
-            resources.ApplyResources(this.HE_StatusBarText, "HE_StatusBarText");
-            this.HE_StatusBarText.Click += new System.EventHandler(this.HE_StatusBarText_Click);
-            this.HE_StatusBarText.MouseEnter += new System.EventHandler(this.HE_StatusBarText_MouseEnter);
-            this.HE_StatusBarText.MouseLeave += new System.EventHandler(this.HE_StatusBarText_MouseLeave);
+            this.HE_StatusBarHostsLocation.Name = "HE_StatusBarHostsLocation";
+            resources.ApplyResources(this.HE_StatusBarHostsLocation, "HE_StatusBarHostsLocation");
+            this.HE_StatusBarHostsLocation.Click += new System.EventHandler(this.HE_StatusBarText_Click);
+            this.HE_StatusBarHostsLocation.MouseEnter += new System.EventHandler(this.HE_StatusBarText_MouseEnter);
+            this.HE_StatusBarHostsLocation.MouseLeave += new System.EventHandler(this.HE_StatusBarText_MouseLeave);
+            // 
+            // HE_StatusBarAppMode
+            // 
+            this.HE_StatusBarAppMode.Image = global::mhed.gui.Properties.Resources.RedCircle;
+            resources.ApplyResources(this.HE_StatusBarAppMode, "HE_StatusBarAppMode");
+            this.HE_StatusBarAppMode.Name = "HE_StatusBarAppMode";
+            this.HE_StatusBarAppMode.Spring = true;
             // 
             // HE_ModelViewPanel
             // 
@@ -374,7 +383,7 @@
         private System.Windows.Forms.ToolStripMenuItem HE_MenuShowHelpItem;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuAboutItem;
         private System.Windows.Forms.StatusStrip HE_StatusBar;
-        private System.Windows.Forms.ToolStripStatusLabel HE_StatusBarText;
+        private System.Windows.Forms.ToolStripStatusLabel HE_StatusBarHostsLocation;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuQuitItem;
         private System.Windows.Forms.ToolStripSeparator HE_ToolbarSeparator1;
         private System.Windows.Forms.ToolStripButton HE_ToolbarDeleteButton;
@@ -395,5 +404,6 @@
         private System.Windows.Forms.ToolStripSeparator HE_MenuSeparator3Item;
         private System.Windows.Forms.ToolStripSeparator HE_MenuSeparator1Item;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuOptionsItem;
+        private System.Windows.Forms.ToolStripStatusLabel HE_StatusBarAppMode;
     }
 }

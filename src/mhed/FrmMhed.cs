@@ -120,6 +120,8 @@ namespace mhed.gui
                 HE_ToolbarCutButton.Enabled = false;
                 HE_ToolbarPasteButton.Enabled = false;
                 HE_ToolbarDeleteButton.Enabled = false;
+                HE_StatusBarAppMode.Image = Properties.Resources.GreenCircle;
+                HE_StatusBarAppMode.Text = "R/O";
             }
         }
 
@@ -150,7 +152,7 @@ namespace mhed.gui
             Text = String.Format(Text, CurrentApp.AppVersion);
 
             // Add Hosts file path to the status bar...
-            HE_StatusBarText.Text = App.HostsFile.FilePath;
+            HE_StatusBarHostsLocation.Text = App.HostsFile.FilePath;
         }
 
         /// <summary>
@@ -655,7 +657,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_StatusBarText_MouseEnter(object sender, EventArgs e)
         {
-            HE_StatusBarText.ForeColor = Color.Red;
+            HE_StatusBarHostsLocation.ForeColor = Color.Red;
         }
 
         /// <summary>
@@ -665,7 +667,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_StatusBarText_MouseLeave(object sender, EventArgs e)
         {
-            HE_StatusBarText.ForeColor = Color.Black;
+            HE_StatusBarHostsLocation.ForeColor = Color.Black;
         }
 
         /// <summary>

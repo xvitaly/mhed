@@ -159,6 +159,16 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GreenCircle {
+            get {
+                object obj = ResourceManager.GetObject("GreenCircle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Help {
             get {
                 object obj = ResourceManager.GetObject("Help", resourceCulture);
@@ -202,6 +212,16 @@ namespace mhed.gui.Properties {
         internal static System.Drawing.Bitmap Paste {
             get {
                 object obj = ResourceManager.GetObject("Paste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RedCircle {
+            get {
+                object obj = ResourceManager.GetObject("RedCircle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
