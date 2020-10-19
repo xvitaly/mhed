@@ -56,6 +56,16 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Validate hostname.
+        /// </summary>
+        /// <param name="SrcHostname">Source hostname for validation.</param>
+        /// <returns>Return True if the source hostname is correct.</returns>
+        public static bool ValidateHostname(string SrcHostname)
+        {
+            return Uri.CheckHostName(SrcHostname) == UriHostNameType.Dns;
+        }
+
+        /// <summary>
         /// Clear Hosts file data object.
         /// </summary>
         private void ClearHostsContents()
