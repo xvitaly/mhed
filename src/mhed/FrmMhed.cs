@@ -395,10 +395,14 @@ namespace mhed.gui
             // Skip validation of the new rows...
             if (((DataGridView)sender).Rows[e.RowIndex].IsNewRow) return;
 
-            // Validating only IP-address field...
-            if (e.ColumnIndex == 0)
+            switch (e.ColumnIndex)
             {
-                ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
+                case 0: // Validating IP-address...
+                    ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
+                    break;
+                case 1: // Validating Hostname...
+                    ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateHostname((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectHostname;
+                    break;
             }
         }
         #endregion
