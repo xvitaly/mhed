@@ -404,6 +404,9 @@ namespace mhed.gui
                 case 1: // Validating Hostname...
                     ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateHostname((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectHostname;
                     break;
+                default: // Reporting an error...
+                    Logger.Warn(DebugStrings.AppDbgModelViewColumnIndexOutOfRange);
+                    break;
             }
         }
         #endregion
