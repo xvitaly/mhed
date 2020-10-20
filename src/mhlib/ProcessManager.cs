@@ -32,10 +32,10 @@ namespace mhed.lib
     public static class ProcessManager
     {
         /// <summary>
-        /// Checks if current user has local adminstrators access rights
+        /// Check if the current user has local adminstrators access rights
         /// (permissions).
         /// </summary>
-        /// <returns>Returns True if current user has admin rights.</returns>
+        /// <returns>Returns True if the current user has admin rights.</returns>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static bool IsCurrentUserAdmin()
         {
@@ -56,7 +56,32 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Opens specified URL in default Web browser.
+        /// Run an external executable with UAC-elevated access rights
+        /// (run as admininstrator).
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <returns>Return PID of newly created process.</returns>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public static int StartWithUAC(string FileName)
+        {
+            // Setting advanced properties...
+            ProcessStartInfo ST = new ProcessStartInfo()
+            {
+                FileName = FileName,
+                Verb = "runas",
+                WindowStyle = ProcessWindowStyle.Normal,
+                UseShellExecute = true
+            };
+
+            // Starting process...
+            Process NewProcess = Process.Start(ST);
+
+            // Returning PID of created process...
+            return NewProcess.Id;
+        }
+
+        /// <summary>
+        /// Open the specified URL in default Web browser.
         /// </summary>
         /// <param name="URI">Full URL.</param>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
@@ -66,7 +91,7 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Adds quotes to path.
+        /// Add quotes to the path.
         /// </summary>
         /// <param name="Source">Source string with path.</param>
         /// <returns>Quoted string with path.</returns>
@@ -76,7 +101,7 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Opens specified text file in a default (or overrided in application's
+        /// Open the specified text file in default (or overrided in application's
         /// settings (only on Windows platform)) text editor.
         /// </summary>
         /// <param name="FileName">Full path to text file.</param>
@@ -100,7 +125,7 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Shows specified file in a default file manager.
+        /// Show the specified file in default file manager.
         /// </summary>
         /// <param name="FileName">Full path to file.</param>
         /// <param name="OS">Operating system type.</param>
