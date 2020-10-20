@@ -160,7 +160,7 @@ namespace mhed.lib
                     Environment.Exit(ReturnCodes.Success);
                     break;
                 default:
-                    throw new NotImplementedException(Properties.Resources.AppRestartNotImplemented);
+                    throw new NotImplementedException();
             }
         }
     }
