@@ -145,5 +145,23 @@ namespace mhed.lib
                     break;
             }
         }
+
+        /// <summary>
+        /// Restart current application with admin user rights.
+        /// </summary>
+        /// <param name="OS">Operating system type.</param>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public static void RestartApplicationAsAdmin(CurrentPlatform.OSType OS)
+        {
+            switch (OS)
+            {
+                case CurrentPlatform.OSType.Windows:
+                    StartWithUAC(CurrentApp.AppExecutable);
+                    Environment.Exit(ReturnCodes.Success);
+                    break;
+                default:
+                    throw new NotImplementedException(Properties.Resources.AppRestartNotImplemented);
+            }
+        }
     }
 }
