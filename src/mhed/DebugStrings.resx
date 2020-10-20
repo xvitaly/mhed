@@ -168,4 +168,7 @@
   <data name="AppDbgRestartAsAdminNotImplemented" xml:space="preserve">
     <value>Trying to restart an application on unsupported platform.</value>
   </data>
+  <data name="AppDbgRestartAsAdminW32Ex" xml:space="preserve">
+    <value>Failed to perform elevation.</value>
+  </data>
 </root>
