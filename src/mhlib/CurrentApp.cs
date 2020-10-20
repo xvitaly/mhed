@@ -111,7 +111,7 @@ namespace mhed.lib
         /// <summary>
         /// Get the full path to the application executable.
         /// </summary>
-        public static string AppExecutable { get => Assembly.GetCallingAssembly().Location; }
+        public static string AppExecutable { get => Assembly.GetEntryAssembly().Location; }
 
         /// <summary>
         /// CurrentApp class constructor.
