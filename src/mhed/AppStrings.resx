@@ -192,4 +192,10 @@
   <data name="AHE_RestartAsAdminNotImplemented" xml:space="preserve">
     <value>Restarting the application has not yet been implemented on the current platform!</value>
   </data>
+  <data name="AHE_RestartAsAdminQuestion" xml:space="preserve">
+    <value>Restart this application with admin user rights?</value>
+  </data>
+  <data name="AHE_RestartAsAdminRunning" xml:space="preserve">
+    <value>This application is already running with admin user rights!</value>
+  </data>
 </root>

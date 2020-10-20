@@ -51,6 +51,11 @@ namespace mhed.lib
         public HostsFileManager HostsFile { get; private set; }
 
         /// <summary>
+        /// Returns if the application is launched with administrator rights.
+        /// </summary>
+        public bool IsAdmin { get; private set; }
+
+        /// <summary>
         /// Get full path to Nlog active log file.
         /// </summary>
         public static string LogFileName
@@ -128,6 +133,9 @@ namespace mhed.lib
 
             // Getting full to application user directory...
             AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName);
+
+            // Checking admininstrator rights...
+            IsAdmin = ProcessManager.IsCurrentUserAdmin();
 
             // Checking if user directory exists. If not - creating it...
             if (!Directory.Exists(AppUserDir))

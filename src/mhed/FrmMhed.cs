@@ -111,7 +111,7 @@ namespace mhed.gui
         /// </summary>
         private void ChangePrvControlState()
         {
-            if (!ProcessManager.IsCurrentUserAdmin())
+            if (!App.IsAdmin)
             {
                 HE_MenuSaveItem.Enabled = false;
                 HE_ToolbarSaveButton.Enabled = false;
@@ -261,6 +261,27 @@ namespace mhed.gui
                 MessageBox.Show(AppStrings.AHE_UrlOpenError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        /// <summary>
+        /// Restart the application with admin user rights.
+        /// </summary>
+        private void HelperRunAs()
+        {
+            try
+            {
+                ProcessManager.RestartApplicationAsAdmin(App.Platform.OS);
+            }
+            catch (NotImplementedException Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgRestartAsAdminNotImplemented);
+                MessageBox.Show(AppStrings.AHE_RestartAsAdminNotImplemented, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgRestartAsAdminError);
+                MessageBox.Show(AppStrings.AHE_RestartAsAdminError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Form contructors and loaders
@@ -317,7 +338,7 @@ namespace mhed.gui
         /// </summary>
         private void SaveToFile()
         {
-            if (ProcessManager.IsCurrentUserAdmin())
+            if (App.IsAdmin)
             {
                 try
                 {
@@ -692,7 +713,17 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_StatusBarAppMode_Click(object sender, EventArgs e)
         {
-            //
+            if (!App.IsAdmin)
+            {
+                if (MessageBox.Show(AppStrings.AHE_RestartAsAdminQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    HelperRunAs();
+                }
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.AHE_RestartAsAdminRunning, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         #endregion
     }

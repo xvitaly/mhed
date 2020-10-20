@@ -212,14 +212,5 @@ namespace mhed.gui {
                 return ResourceManager.GetString("AppDbgRestartAsAdminNotImplemented", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to perform elevation..
-        /// </summary>
-        internal static string AppDbgRestartAsAdminW32Ex {
-            get {
-                return ResourceManager.GetString("AppDbgRestartAsAdminW32Ex", resourceCulture);
-            }
-        }
     }
 }

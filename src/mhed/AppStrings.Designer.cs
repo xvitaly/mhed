@@ -241,6 +241,24 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Restart this application with admin user rights?.
+        /// </summary>
+        internal static string AHE_RestartAsAdminQuestion {
+            get {
+                return ResourceManager.GetString("AHE_RestartAsAdminQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This application is already running with admin user rights!.
+        /// </summary>
+        internal static string AHE_RestartAsAdminRunning {
+            get {
+                return ResourceManager.GetString("AHE_RestartAsAdminRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Restore default Hosts file?.
         /// </summary>
         internal static string AHE_RestDef {
