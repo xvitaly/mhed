@@ -109,6 +109,11 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Get the full path to the application executable.
+        /// </summary>
+        public static string AppExecutable { get => Assembly.GetCallingAssembly().Location; }
+
+        /// <summary>
         /// CurrentApp class constructor.
         /// </summary>
         /// <param name="IsPortable">Enable portable mode (with settings in the same directory as executable).</param>
