@@ -159,4 +159,7 @@
   <data name="AppDbgIncorrectFormSize" xml:space="preserve">
     <value>Invalid form size was received: [{0}, {1}]. The form will size will not be changed.</value>
   </data>
+  <data name="AppDbgModelViewColumnIndexOutOfRange" xml:space="preserve">
+    <value>Invalid column index detected. Unable to validate.</value>
+  </data>
 </root>

@@ -185,5 +185,14 @@ namespace mhed.gui {
                 return ResourceManager.GetString("AppDbgIncorrectFormSize", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid column index detected. Unable to validate..
+        /// </summary>
+        internal static string AppDbgModelViewColumnIndexOutOfRange {
+            get {
+                return ResourceManager.GetString("AppDbgModelViewColumnIndexOutOfRange", resourceCulture);
+            }
+        }
     }
 }
