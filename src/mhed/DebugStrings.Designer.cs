@@ -194,5 +194,23 @@ namespace mhed.gui {
                 return ResourceManager.GetString("AppDbgModelViewColumnIndexOutOfRange", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to restart application with admin user rights..
+        /// </summary>
+        internal static string AppDbgRestartAsAdminError {
+            get {
+                return ResourceManager.GetString("AppDbgRestartAsAdminError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trying to restart an application on unsupported platform..
+        /// </summary>
+        internal static string AppDbgRestartAsAdminNotImplemented {
+            get {
+                return ResourceManager.GetString("AppDbgRestartAsAdminNotImplemented", resourceCulture);
+            }
+        }
     }
 }

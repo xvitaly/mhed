@@ -162,4 +162,10 @@
   <data name="AppDbgModelViewColumnIndexOutOfRange" xml:space="preserve">
     <value>Invalid column index detected. Unable to validate.</value>
   </data>
+  <data name="AppDbgRestartAsAdminError" xml:space="preserve">
+    <value>Exception while trying to restart application with admin user rights.</value>
+  </data>
+  <data name="AppDbgRestartAsAdminNotImplemented" xml:space="preserve">
+    <value>Trying to restart an application on unsupported platform.</value>
+  </data>
 </root>
