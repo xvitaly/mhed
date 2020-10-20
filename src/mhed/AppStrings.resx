@@ -186,4 +186,10 @@
   <data name="AHE_IncorrectHostname" xml:space="preserve">
     <value>Incorrect hostname entered!</value>
   </data>
+  <data name="AHE_RestartAsAdminError" xml:space="preserve">
+    <value>Failed to restart the application with admin user rights!</value>
+  </data>
+  <data name="AHE_RestartAsAdminNotImplemented" xml:space="preserve">
+    <value>Restarting the application has not yet been implemented on the current platform!</value>
+  </data>
 </root>

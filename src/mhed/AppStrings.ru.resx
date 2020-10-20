@@ -186,4 +186,10 @@
   <data name="AHE_IncorrectHostname" xml:space="preserve">
     <value>Введено недействительное имя хоста!</value>
   </data>
+  <data name="AHE_RestartAsAdminError" xml:space="preserve">
+    <value>Произошла ошибка при попытке перезапуска приложения с правами администратора!</value>
+  </data>
+  <data name="AHE_RestartAsAdminNotImplemented" xml:space="preserve">
+    <value>Автоматический перезапуск приложения с правами администратора в настоящее время не поддерживается на данной платформе!</value>
+  </data>
 </root>
