@@ -76,5 +76,15 @@ namespace mhed.lib
             // Return result with removal of leading and trailing white-spaces...
             return RecvStr.Trim();
         }
+
+        /// <summary>
+        /// Get mutex name for the internal purposes.
+        /// </summary>
+        /// <param name="AppNameInternal">Internal application name.</param>
+        /// <returns>Mutex name.</returns>
+        public static string GetMutexName(string AppNameInternal)
+        {
+            return String.Format(ProcessManager.IsCurrentUserAdmin() ? Properties.Resources.MutexAdmin : Properties.Resources.MutexRegular, AppNameInternal);
+        }
     }
 }

@@ -108,6 +108,24 @@ namespace mhed.lib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0}_admin.
+        /// </summary>
+        internal static string MutexAdmin {
+            get {
+                return ResourceManager.GetString("MutexAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}_regular.
+        /// </summary>
+        internal static string MutexRegular {
+            get {
+                return ResourceManager.GetString("MutexRegular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to explorer.exe.
         /// </summary>
         internal static string ShBinWin {

@@ -130,6 +130,12 @@
   <data name="HtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HtTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="MutexAdmin" xml:space="preserve">
+    <value>{0}_admin</value>
+  </data>
+  <data name="MutexRegular" xml:space="preserve">
+    <value>{0}_regular</value>
+  </data>
   <data name="ShBinWin" xml:space="preserve">
     <value>explorer.exe</value>
   </data>
