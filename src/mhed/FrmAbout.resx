@@ -256,9 +256,18 @@
     <value>Author: Vitaly Zaitsev (vitaly@easycoding.org)
 
 Graphics by:
- - TBD.
+ - Ahmad Hania;
+ - Asher;
+ - Everaldo Coelho;
+ - Flahorn;
+ - GNOME icon artists;
+ - IconsPedia;
+ - LazyCrazy;
+ - VisualPharm.
 
-3rd party libraries (dynamic linked):
+Micro Hosts Editor's icon by GNOME icon artists. Licensed under the terms of GNU General Public License, version 2 license.
+
+3rd party libraries (dynamically linked):
  - NLog (BSD license).</value>
   </data>
   <data name="&gt;&gt;AHE_Description.Name" xml:space="preserve">
