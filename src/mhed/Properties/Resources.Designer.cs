@@ -98,6 +98,15 @@ namespace mhed.gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to mhed.
+        /// </summary>
+        internal static string AppInternalName {
+            get {
+                return ResourceManager.GetString("AppInternalName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Micro Hosts Editor.
         /// </summary>
         internal static string AppName {
