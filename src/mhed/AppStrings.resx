@@ -198,4 +198,7 @@
   <data name="AHE_RestartAsAdminRunning" xml:space="preserve">
     <value>This application is already running with admin user rights!</value>
   </data>
+  <data name="AHE_AppStatusRO" xml:space="preserve">
+    <value>R/O</value>
+  </data>
 </root>

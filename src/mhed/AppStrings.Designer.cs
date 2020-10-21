@@ -70,6 +70,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to R/O.
+        /// </summary>
+        internal static string AHE_AppStatusRO {
+            get {
+                return ResourceManager.GetString("AHE_AppStatusRO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The offline help system file is not installed, or is not supported by selected program language!.
         /// </summary>
         internal static string AHE_ChmFileNotFound {
