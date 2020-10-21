@@ -369,6 +369,9 @@
   <data name="HE_StatusBarAppMode.Size" type="System.Drawing.Size, System.Drawing">
     <value>342, 17</value>
   </data>
+  <data name="HE_StatusBarAppMode.Text" xml:space="preserve">
+    <value>R/W</value>
+  </data>
   <data name="HE_StatusBarAppMode.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>

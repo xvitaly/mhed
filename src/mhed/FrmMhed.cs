@@ -120,7 +120,9 @@ namespace mhed.gui
                 HE_ToolbarCutButton.Enabled = false;
                 HE_ToolbarPasteButton.Enabled = false;
                 HE_ToolbarDeleteButton.Enabled = false;
+
                 HE_StatusBarAppMode.Image = Properties.Resources.GreenCircle;
+                HE_StatusBarAppMode.Text = AppStrings.AHE_AppStatusRO;
             }
         }
 
