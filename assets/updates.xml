@@ -23,6 +23,7 @@
     <Application>
         <Version>0.9.0.338</Version>
         <URL>https://github.com/xvitaly/mhed/releases/download/v0.9.0/mhed_v090.exe</URL>
+        <Info>https://github.com/xvitaly/mhed/releases/tag/v0.9.0</Info>
         <Hash>fe74200ee02bbf4aae4ea6dcf5993aa6</Hash>
         <Hash2>4fbde50a8d6397a719f93dafaca2551734a05ff7ea9885429ce55bb663732b90dfe4ad776cafe2f48fa8bec7d4bdaa31c1ea4fdb78f16bf52f452069674738cc</Hash2>
     </Application>

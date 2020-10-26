@@ -533,7 +533,27 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuCheckForUpdatesItem_Click(object sender, EventArgs e)
         {
-            //
+            try
+            {
+                UpdateManager Updater = new UpdateManager(App.UserAgent);
+
+                if (Updater.CheckAppUpdate())
+                {
+                    if (MessageBox.Show(String.Format(AppStrings.AHE_UpdateAvailable, Updater.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    {
+                        HelperOpenUrl(Updater.AppUpdateInfo);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(AppStrings.AHE_NoUpdatesFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExCheckForUpdates);
+                MessageBox.Show(AppStrings.AHE_UpdateCheckError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>

@@ -19,7 +19,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 using System;
-using System.IO;
 using System.Net;
 using System.Reflection;
 using System.Xml;
@@ -32,6 +31,11 @@ namespace mhed.lib
         /// Get or set the latest version of the application.
         /// </summary>
         public Version AppUpdateVersion { get; private set; }
+
+        /// <summary>
+        /// Get or set the application download URL.
+        /// </summary>
+        public string AppUpdateInfo { get; private set; }
 
         /// <summary>
         /// Get or set the application download URL.
@@ -80,6 +84,7 @@ namespace mhed.lib
             // Extracting information about application update...
             XmlNode AppNode = XMLD.SelectSingleNode("Updates/Application");
             AppUpdateVersion = new Version(AppNode.SelectSingleNode("Version").InnerText);
+            AppUpdateInfo = AppNode.SelectSingleNode("Info").InnerText;
             AppUpdateURL = AppNode.SelectSingleNode("URL").InnerText;
             AppUpdateHash = AppNode.SelectSingleNode("Hash2").InnerText;
         }
@@ -101,16 +106,6 @@ namespace mhed.lib
         public bool CheckAppHash(string Hash)
         {
             return AppUpdateHash == Hash;
-        }
-
-        /// <summary>
-        /// Get local application update file name.
-        /// </summary>
-        /// <param name="Url">Download URL.</param>
-        /// <returns>Local file name.</returns>
-        public static string GenerateUpdateFileName(string Url)
-        {
-            return Path.HasExtension(Url) ? Url : Path.ChangeExtension(Url, "exe");
         }
 
         /// <summary>

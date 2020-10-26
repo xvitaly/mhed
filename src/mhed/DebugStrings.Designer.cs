@@ -61,6 +61,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to check for application updates..
+        /// </summary>
+        internal static string AppDbgExCheckForUpdates {
+            get {
+                return ResourceManager.GetString("AppDbgExCheckForUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to copy cell&apos;s contents to the clipboard..
         /// </summary>
         internal static string AppDbgExClipboardCopy {
