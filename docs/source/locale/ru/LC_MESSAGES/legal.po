@@ -20,17 +20,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-10 14:43+0200\n"
-"PO-Revision-Date: 2020-10-10 15:08+0200\n"
+"POT-Creation-Date: 2020-10-26 18:06+0100\n"
+"PO-Revision-Date: 2020-10-26 18:07+0100\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.1\n"
-"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"Language: ru\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -122,6 +122,18 @@ msgstr ""
 msgid ""
 "`IconsPedia <https://www.iconspedia.com/icon/gnome-application-exit-10-41."
 "html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Globe.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "PixelMixer"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/globe-11618.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -238,7 +250,7 @@ msgstr ""
 msgid "TextEditor.png"
 msgstr ""
 
-#: ../../source/legal.rst:52
+#: ../../source/legal.rst:53
 msgid "Libraries licensing"
 msgstr "Лицензирование библиотек"
 
@@ -270,15 +282,15 @@ msgstr ""
 msgid "`GitHub page <https://github.com/NLog/NLog>`__"
 msgstr ""
 
-#: ../../source/legal.rst:63
+#: ../../source/legal.rst:64
 msgid "Trademarks"
 msgstr "Торговые марки"
 
-#: ../../source/legal.rst:66
+#: ../../source/legal.rst:67
 msgid "Microsoft"
 msgstr ""
 
-#: ../../source/legal.rst:68
+#: ../../source/legal.rst:69
 msgid ""
 "Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
 "Corporation."
@@ -286,10 +298,10 @@ msgstr ""
 "Microsoft, Windows являются торговыми марками и/или зарегистрированными "
 "торговыми марками Корпорации Microsoft."
 
-#: ../../source/legal.rst:71
+#: ../../source/legal.rst:72
 msgid "Other"
 msgstr "Прочие"
 
-#: ../../source/legal.rst:73
+#: ../../source/legal.rst:74
 msgid "All other trademarks are property of their respective owners."
 msgstr "Все прочие торговые марки являются собственностью их владельцев."

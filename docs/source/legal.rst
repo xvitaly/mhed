@@ -35,6 +35,7 @@ Icons licensing
     "Bug.png", "Asher", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/bug-8000.html>`__"
     "Delete.png", "VisualPharm", "`CC Attribution No Derivatives <https://creativecommons.org/licenses/by-nd/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/delete--832.html>`__"
     "Exit.png", "GNOME icon artists", "`GNU General Public License, version 2 <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>`_", "`IconsPedia <https://www.iconspedia.com/icon/gnome-application-exit-10-41.html>`__"
+    "Globe.png", "PixelMixer", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/globe-11618.html>`__"
     "Help.png", "Asher", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/help-8051.html>`__"
     "Info.png", "IconsPedia", "Free for non commercial use", "`IconsPedia <https://www.iconspedia.com/icon/info--206.html>`__"
     "Logs.png", "LazyCrazy", "Free for non commercial use", "`IconsPedia <https://www.iconspedia.com/icon/elegant--notebook-160--.html>`__"
