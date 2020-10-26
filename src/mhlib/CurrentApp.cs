@@ -20,6 +20,7 @@
 */
 using NLog;
 using System;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
 
@@ -30,6 +31,11 @@ namespace mhed.lib
     /// </summary>
     public sealed class CurrentApp
     {
+        /// <summary>
+        /// Get User-Agent header for outgoing HTTP queries.
+        /// </summary>
+        public string UserAgent { get; private set; }
+
         /// <summary>
         /// Get application's installation directory.
         /// </summary>
@@ -54,6 +60,11 @@ namespace mhed.lib
         /// Returns if the application is launched with administrator rights.
         /// </summary>
         public bool IsAdmin { get; private set; }
+
+        /// <summary>
+        /// Get information about hardware architecture.
+        /// </summary>
+        private string SystemArch => Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
 
         /// <summary>
         /// Get full path to Nlog active log file.
@@ -145,6 +156,9 @@ namespace mhed.lib
 
             // Initializing class for working with Hosts file...
             HostsFile = new HostsFileManager(Platform.OS);
+
+            // Generating User-Agent header for outgoing HTTP queries...
+            UserAgent = String.Format(Properties.Resources.AppDefUA, Platform.OSFriendlyName, Platform.UASuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, SystemArch);
         }
     }
 }
