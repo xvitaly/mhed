@@ -65,6 +65,27 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Get platform-dependent suffix for HTTP_USER_AGENT header.
+        /// </summary>
+        public string UASuffix
+        {
+            get
+            {
+                switch (OS)
+                {
+                    case OSType.Windows:
+                        return Properties.Resources.AppUASuffixWin;
+                    case OSType.Linux:
+                        return Properties.Resources.AppUASuffixOther;
+                    case OSType.MacOSX:
+                        return Properties.Resources.AppUASuffixOther;
+                    default:
+                        throw new PlatformNotSupportedException();
+                }
+            }
+        }
+
+        /// <summary>
         /// CurrentPlatform class constructor.
         /// </summary>
         public CurrentPlatform()
