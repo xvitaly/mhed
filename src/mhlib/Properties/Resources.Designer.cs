@@ -142,5 +142,14 @@ namespace mhed.lib.Properties {
                 return ResourceManager.GetString("ShParamWin", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://www.easycoding.org/files/mhed/updates/updates.xml.
+        /// </summary>
+        internal static string UpdateDatabaseURL {
+            get {
+                return ResourceManager.GetString("UpdateDatabaseURL", resourceCulture);
+            }
+        }
     }
 }

@@ -142,4 +142,7 @@
   <data name="ShParamWin" xml:space="preserve">
     <value>/select,</value>
   </data>
+  <data name="UpdateDatabaseURL" xml:space="preserve">
+    <value>https://www.easycoding.org/files/mhed/updates/updates.xml</value>
+  </data>
 </root>
