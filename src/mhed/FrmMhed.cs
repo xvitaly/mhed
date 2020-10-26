@@ -527,6 +527,16 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// "Check for updates" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuCheckForUpdatesItem_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        /// <summary>
         /// "Report bug" menu item event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>

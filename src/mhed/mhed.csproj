@@ -204,6 +204,7 @@
     <None Include="Resources\Options.png" />
     <None Include="Resources\RedCircle.png" />
     <None Include="Resources\GreenCircle.png" />
+    <None Include="Resources\Globe.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="mhed.ico">

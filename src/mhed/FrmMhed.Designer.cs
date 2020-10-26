@@ -53,6 +53,7 @@
             this.HE_MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuShowHelpItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuSeparator2Item = new System.Windows.Forms.ToolStripSeparator();
+            this.HE_MenuCheckForUpdatesItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuReportItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuDebugLogItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuSeparator3Item = new System.Windows.Forms.ToolStripSeparator();
@@ -238,6 +239,7 @@
             this.HE_MenuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HE_MenuShowHelpItem,
             this.HE_MenuSeparator2Item,
+            this.HE_MenuCheckForUpdatesItem,
             this.HE_MenuReportItem,
             this.HE_MenuDebugLogItem,
             this.HE_MenuSeparator3Item,
@@ -256,6 +258,13 @@
             // 
             this.HE_MenuSeparator2Item.Name = "HE_MenuSeparator2Item";
             resources.ApplyResources(this.HE_MenuSeparator2Item, "HE_MenuSeparator2Item");
+            // 
+            // HE_MenuCheckForUpdatesItem
+            // 
+            this.HE_MenuCheckForUpdatesItem.Image = global::mhed.gui.Properties.Resources.Globe;
+            this.HE_MenuCheckForUpdatesItem.Name = "HE_MenuCheckForUpdatesItem";
+            resources.ApplyResources(this.HE_MenuCheckForUpdatesItem, "HE_MenuCheckForUpdatesItem");
+            this.HE_MenuCheckForUpdatesItem.Click += new System.EventHandler(this.HE_MenuCheckForUpdatesItem_Click);
             // 
             // HE_MenuReportItem
             // 
@@ -406,5 +415,6 @@
         private System.Windows.Forms.ToolStripSeparator HE_MenuSeparator1Item;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuOptionsItem;
         private System.Windows.Forms.ToolStripStatusLabel HE_StatusBarAppMode;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuCheckForUpdatesItem;
     }
 }
