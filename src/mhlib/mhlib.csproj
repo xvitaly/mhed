@@ -68,6 +68,7 @@
     <Compile Include="ReturnCodes.cs" />
     <Compile Include="SortableBindingList.cs" />
     <Compile Include="StringsManager.cs" />
+    <Compile Include="UpdateManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
