@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  This file is a part of Micro Hosts Editor. For more information
+  visit official site: https://www.easycoding.org/projects/mhed
+
+  Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
+  Copyright (c) 2005 - 2020 EasyCoding Team.
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<Updates>
+    <Application>
+        <Version>0.9.0.338</Version>
+        <URL>https://github.com/xvitaly/mhed/releases/download/v0.9.0/mhed_v090.exe</URL>
+        <Hash>fe74200ee02bbf4aae4ea6dcf5993aa6</Hash>
+        <Hash2>4fbde50a8d6397a719f93dafaca2551734a05ff7ea9885429ce55bb663732b90dfe4ad776cafe2f48fa8bec7d4bdaa31c1ea4fdb78f16bf52f452069674738cc</Hash2>
+    </Application>
+</Updates>
