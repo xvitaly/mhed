@@ -22,6 +22,7 @@ using System;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace mhed.lib
 {
@@ -112,15 +113,15 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Write contents of the data object to the Hosts file.
+        /// Asynchronically write contents of the data object to the Hosts file.
         /// </summary>
-        private void WriteHostsFile()
+        private async Task WriteHostsFile()
         {
             using (StreamWriter CFile = new StreamWriter(FilePath, false, Encoding.Default))
             {
                 if (Platform == CurrentPlatform.OSType.Windows)
                 {
-                    CFile.WriteLine(Properties.Resources.HtTemplate);
+                    await CFile.WriteLineAsync(Properties.Resources.HtTemplate);
                 }
 
                 foreach (HostsFileEntry Entry in Contents)
@@ -129,7 +130,7 @@ namespace mhed.lib
                     {
                         if (ValidateIPAddress(Entry.IPAddress))
                         {
-                            CFile.WriteLine("{0} {1}", Entry.IPAddress, Entry.Hostname);
+                            await CFile.WriteLineAsync(String.Format("{0} {1}", Entry.IPAddress, Entry.Hostname));
                         }
                     }
                 }
@@ -165,9 +166,9 @@ namespace mhed.lib
         /// <summary>
         /// Write Hosts file changes to disk.
         /// </summary>
-        public void Save()
+        public async void Save()
         {
-            WriteHostsFile();
+            await WriteHostsFile();
         }
 
         /// <summary>
