@@ -88,15 +88,15 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Read contents of Hosts file to the data object.
+        /// Asynchronically read contents of Hosts file to the data object.
         /// </summary>
-        private void ReadHostsFile()
+        private async Task ReadHostsFile()
         {
             using (StreamReader OpenedHosts = new StreamReader(FilePath, Encoding.Default))
             {
                 while (OpenedHosts.Peek() >= 0)
                 {
-                    string ImpStr = StringsManager.CleanString(OpenedHosts.ReadLine());
+                    string ImpStr = StringsManager.CleanString(await OpenedHosts.ReadLineAsync());
                     if (!String.IsNullOrEmpty(ImpStr))
                     {
                         if (ImpStr[0] != '#')
@@ -140,9 +140,9 @@ namespace mhed.lib
         /// <summary>
         /// Read Hosts file from disk.
         /// </summary>
-        public void Load()
+        public async void Load()
         {
-            ReadHostsFile();
+            await ReadHostsFile();
         }
 
         /// <summary>
