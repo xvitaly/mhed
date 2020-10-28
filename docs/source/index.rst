@@ -27,6 +27,7 @@ Micro Hosts Editor offline help
    getting-started.rst
    using-application.rst
    settings.rst
+   development.rst
    legal.rst
 
 
