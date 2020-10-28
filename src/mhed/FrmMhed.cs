@@ -531,11 +531,11 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HE_MenuCheckForUpdatesItem_Click(object sender, EventArgs e)
+        private async void HE_MenuCheckForUpdatesItem_Click(object sender, EventArgs e)
         {
             try
             {
-                UpdateManager Updater = new UpdateManager(App.UserAgent);
+                UpdateManager Updater = await UpdateManager.Create(App.UserAgent);
 
                 if (Updater.CheckAppUpdate())
                 {
