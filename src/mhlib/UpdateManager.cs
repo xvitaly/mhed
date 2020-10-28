@@ -21,6 +21,7 @@
 using System;
 using System.Net;
 using System.Reflection;
+using System.Threading.Tasks;
 using System.Xml;
 
 namespace mhed.lib
@@ -59,15 +60,15 @@ namespace mhed.lib
         private string UpdateXML;
 
         /// <summary>
-        /// Download XML file with imformation about latest updates
+        /// Asyncronically download XML file with imformation about latest updates
         /// from the server and store it in the field.
         /// </summary>
-        private void DownloadXML()
+        private async Task DownloadXML()
         {
             using (WebClient Downloader = new WebClient())
             {
                 Downloader.Headers.Add("User-Agent", UserAgent);
-                UpdateXML = Downloader.DownloadString(Properties.Resources.UpdateDatabaseURL);
+                UpdateXML = await Downloader.DownloadStringTaskAsync(Properties.Resources.UpdateDatabaseURL);
             }
         }
 
@@ -109,17 +110,33 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// UpdateManager class constructor.
+        /// Asyncronically fetch and parse XML file with updates information.
+        /// </summary>
+        private async Task CheckForUpdates()
+        {
+            await DownloadXML();
+            ParseXML();
+        }
+
+        /// <summary>
+        /// Create an instance of the UpdateManager class. Factory method.
         /// </summary>
         /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
-        public UpdateManager(string UA)
+        /// <returns>Return an instance of the UpdateManager class.</returns>
+        public static async Task<UpdateManager> Create(string UA)
         {
-            // Saving paths...
-            UserAgent = UA;
+            UpdateManager UpdaterInstance = new UpdateManager(UA);
+            await UpdaterInstance.CheckForUpdates();
+            return UpdaterInstance;
+        }
 
-            // Downloading and parsing XML...
-            DownloadXML();
-            ParseXML();
+        /// <summary>
+        /// UpdateManager class constructor. Cannot be called directly.
+        /// </summary>
+        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
+        private UpdateManager(string UA)
+        {
+            UserAgent = UA;
         }
     }
 }
