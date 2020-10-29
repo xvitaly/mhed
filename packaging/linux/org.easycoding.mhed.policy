@@ -3,7 +3,9 @@
 "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
 "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
 <policyconfig>
-    <action id="org-easycoding-mhed"> 
+    <vendor>Micro Hosts Editor</vendor>
+    <vendor_url>https://www.easycoding.org/projects/mhed</vendor_url>
+    <action id="org.easycoding.mhed.run"> 
         <message>Authentication is required to run the Micro Hosts Editor</message>
         <icon_name>mhed</icon_name>
         <defaults> 
