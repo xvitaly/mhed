@@ -81,6 +81,31 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Run an external executable with Polkit-elevated access rights
+        /// (run as admininstrator).
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <returns>Return PID of newly created process.</returns>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public static int StartWithPolkit(string FileName)
+        {
+            // Setting advanced properties...
+            ProcessStartInfo ST = new ProcessStartInfo()
+            {
+                FileName = Path.GetFileNameWithoutExtension(FileName),
+                Verb = "polkit",
+                WindowStyle = ProcessWindowStyle.Normal,
+                UseShellExecute = true
+            };
+
+            // Starting process...
+            Process NewProcess = Process.Start(ST);
+
+            // Returning PID of created process...
+            return NewProcess.Id;
+        }
+
+        /// <summary>
         /// Open the specified URL in default Web browser.
         /// </summary>
         /// <param name="URI">Full URL.</param>
@@ -156,7 +181,11 @@ namespace mhed.lib
             switch (OS)
             {
                 case CurrentPlatform.OSType.Windows:
-                    StartWithUAC(CurrentApp.AppExecutable);
+                    StartWithUAC(CurrentApp.AssemblyLocation);
+                    Environment.Exit(ReturnCodes.Success);
+                    break;
+                case CurrentPlatform.OSType.Linux:
+                    StartWithPolkit(CurrentApp.AssemblyLocation);
                     Environment.Exit(ReturnCodes.Success);
                     break;
                 default:
