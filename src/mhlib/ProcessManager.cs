@@ -92,7 +92,7 @@ namespace mhed.lib
             // Setting advanced properties...
             ProcessStartInfo ST = new ProcessStartInfo()
             {
-                FileName = Path.GetFileNameWithoutExtension(FileName),
+                FileName = FileName,
                 Verb = "polkit",
                 WindowStyle = ProcessWindowStyle.Normal,
                 UseShellExecute = true
@@ -185,7 +185,7 @@ namespace mhed.lib
                     Environment.Exit(ReturnCodes.Success);
                     break;
                 case CurrentPlatform.OSType.Linux:
-                    StartWithPolkit(CurrentApp.AssemblyLocation);
+                    StartWithPolkit(Path.GetFileNameWithoutExtension(CurrentApp.AssemblyLocation));
                     Environment.Exit(ReturnCodes.Success);
                     break;
                 default:
