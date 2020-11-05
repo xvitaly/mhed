@@ -93,7 +93,7 @@ namespace mhed.lib
             ProcessStartInfo ST = new ProcessStartInfo()
             {
                 FileName = FileName,
-                Verb = "polkit",
+                Verb = "pkexec",
                 WindowStyle = ProcessWindowStyle.Normal,
                 UseShellExecute = true
             };
