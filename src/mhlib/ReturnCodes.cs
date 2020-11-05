@@ -40,5 +40,10 @@ namespace mhed.lib
         /// Core library version missmatch.
         /// </summary>
         public const int CoreLibVersionMissmatch = 8;
+
+        /// <summary>
+        /// Hosts file does not exists.
+        /// </summary>
+        public const int HostsFileDoesNotExists = 9;
     }
 }
