@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ApoDbgExHostsLoadParse" xml:space="preserve">
+    <value>Exception while loading and parsing the Hosts file.</value>
+  </data>
   <data name="AppDbgExCheckForUpdates" xml:space="preserve">
     <value>Exception while trying to check for application updates.</value>
   </data>
@@ -155,6 +158,9 @@
   </data>
   <data name="AppDbgExSettingsLoad" xml:space="preserve">
     <value>Failed to import settings from the previous version.</value>
+  </data>
+  <data name="AppDbgHostsFileDoesNotExists" xml:space="preserve">
+    <value>Hosts file does not exists.</value>
   </data>
   <data name="AppDbgIncorrectFormLocation" xml:space="preserve">
     <value>Invalid form location coordinates were received: [{0}, {1}]. The form will be moved to the center of the screen.</value>

@@ -61,6 +61,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while loading and parsing the Hosts file..
+        /// </summary>
+        internal static string ApoDbgExHostsLoadParse {
+            get {
+                return ResourceManager.GetString("ApoDbgExHostsLoadParse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to check for application updates..
         /// </summary>
         internal static string AppDbgExCheckForUpdates {
@@ -174,6 +183,15 @@ namespace mhed.gui {
         internal static string AppDbgExSettingsLoad {
             get {
                 return ResourceManager.GetString("AppDbgExSettingsLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hosts file does not exists..
+        /// </summary>
+        internal static string AppDbgHostsFileDoesNotExists {
+            get {
+                return ResourceManager.GetString("AppDbgHostsFileDoesNotExists", resourceCulture);
             }
         }
         
