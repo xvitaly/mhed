@@ -79,7 +79,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The offline help system file is not installed, or is not supported by selected program language!.
+        ///   Looks up a localized string similar to The offline help system file is not installed, or is not supported by the selected program language!.
         /// </summary>
         internal static string AHE_ChmFileNotFound {
             get {
@@ -88,7 +88,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to copy selected data to the clipboard!.
+        ///   Looks up a localized string similar to Failed to copy the selected data to the clipboard!.
         /// </summary>
         internal static string AHE_ClipboardCopyError {
             get {
@@ -97,7 +97,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to cut selected data to the clipboard!.
+        ///   Looks up a localized string similar to Failed to cut the selected data to the clipboard!.
         /// </summary>
         internal static string AHE_ClipboardCutError {
             get {
@@ -106,7 +106,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to paste clipboard&apos;s data to the selected cell!.
+        ///   Looks up a localized string similar to Failed to paste data from the clipboard!.
         /// </summary>
         internal static string AHE_ClipboardPasteError {
             get {
@@ -115,7 +115,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to delete selected rows!.
+        ///   Looks up a localized string similar to Failed to delete the selected rows!.
         /// </summary>
         internal static string AHE_DeleteRowError {
             get {
@@ -124,7 +124,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! Parse error detected. Probably file {0} is opened not completely or with errors..
+        ///   Looks up a localized string similar to Warning! Parse error detected. Probably the file {0} is loaded with errors..
         /// </summary>
         internal static string AHE_ExceptionDetected {
             get {
@@ -142,7 +142,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hosts file: {0}. Show it in Windows Explorer?.
+        ///   Looks up a localized string similar to Hosts file: {0}. Show it in file manager?.
         /// </summary>
         internal static string AHE_HMessg {
             get {
@@ -187,7 +187,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Local admin rights is required to perform requested action!.
+        ///   Looks up a localized string similar to Local admin rights are required to perform the requested action!.
         /// </summary>
         internal static string AHE_NoAdminRights {
             get {
@@ -196,7 +196,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Hosts file on the resulting path {0} could not be found..
+        ///   Looks up a localized string similar to The Hosts file {0} could not be found!.
         /// </summary>
         internal static string AHE_NoFileDetected {
             get {
@@ -214,7 +214,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to load file into the selected text editor!.
+        ///   Looks up a localized string similar to Failed to load the Hosts file into the selected text editor!.
         /// </summary>
         internal static string AHE_OpenInNotepadError {
             get {
@@ -223,7 +223,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to show file in default file manager!.
+        ///   Looks up a localized string similar to Failed to show the Hosts file in the file manager!.
         /// </summary>
         internal static string AHE_OpenShellError {
             get {
@@ -286,7 +286,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File hosts was successfully saved!.
+        ///   Looks up a localized string similar to The Hosts file was successfully saved!.
         /// </summary>
         internal static string AHE_Saved {
             get {
@@ -295,7 +295,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! An error occurred while writing to file {0}. Maybe you have not enough rights for this or someone is blocking write attempts..
+        ///   Looks up a localized string similar to Warning! An error occurred while writing to file {0}. Maybe you have not enough rights for this or someone is blocking write attempts..
         /// </summary>
         internal static string AHE_SaveException {
             get {

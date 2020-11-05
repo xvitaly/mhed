@@ -121,10 +121,10 @@
     <value>Во время открытия файла {0} произошла ошибка. Он мог быть загружен некорректно!</value>
   </data>
   <data name="AHE_HMessg" xml:space="preserve">
-    <value>Активный файл hosts расположен в: {0}. Показать в Проводнике?</value>
+    <value>Активный файл Hosts расположен в: {0}. Показать его в файловом менеджере?</value>
   </data>
   <data name="AHE_NoFileDetected" xml:space="preserve">
-    <value>Файл Hosts по полученному пути {0} не может быть найден.</value>
+    <value>Файл Hosts по пути {0} не найден!</value>
   </data>
   <data name="AHE_RestDef" xml:space="preserve">
     <value>Восстановить стандартные значения файла Hosts?</value>
