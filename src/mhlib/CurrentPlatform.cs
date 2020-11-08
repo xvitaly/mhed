@@ -142,14 +142,5 @@ namespace mhed.lib
         /// <param name="FileName">Full path to the executable.</param>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public abstract int StartElevatedProcess(string FileName);
-
-        /// <summary>
-        /// Constructor of the CommonPlatform class. Cannot be called directly.
-        /// </summary>
-        private CurrentPlatform()
-        {
-            // Nothing to do here.
-            throw new NotImplementedException();
-        }
     }
 }
