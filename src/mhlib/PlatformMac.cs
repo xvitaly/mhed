@@ -56,7 +56,7 @@ namespace mhed.lib
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public override int StartElevatedProcess(string FileName)
         {
-            throw new NotImplementedException();
+            throw new PlatformNotSupportedException();
         }
 
         /// <summary>

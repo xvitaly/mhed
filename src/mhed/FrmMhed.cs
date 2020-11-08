@@ -273,7 +273,7 @@ namespace mhed.gui
             {
                 App.Platform.RestartApplicationAsAdmin();
             }
-            catch (NotImplementedException Ex)
+            catch (PlatformNotSupportedException Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgRestartAsAdminNotImplemented);
                 MessageBox.Show(AppStrings.AHE_RestartAsAdminNotImplemented, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
