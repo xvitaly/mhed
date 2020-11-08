@@ -137,7 +137,7 @@ namespace mhed.lib
         public CurrentApp(bool IsPortable, string AppName)
         {
             // Getting information about operating system and platform...
-            Platform = new CurrentPlatform();
+            Platform = CurrentPlatform.Create();
 
             // Getting full path to application installation directory...
             FullAppPath = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);

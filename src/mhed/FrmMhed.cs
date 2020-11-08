@@ -221,7 +221,7 @@ namespace mhed.gui
         {
             try
             {
-                ProcessManager.OpenExplorer(FileName, App.Platform.OS);
+                App.Platform.OpenExplorer(FileName);
             }
             catch (Exception Ex)
             {
@@ -238,7 +238,7 @@ namespace mhed.gui
         {
             try
             {
-                ProcessManager.OpenTextEditor(FileName, Properties.Settings.Default.EditorBin, App.Platform.OS);
+                App.Platform.OpenTextEditor(FileName, Properties.Settings.Default.EditorBin);
             }
             catch (Exception Ex)
             {
@@ -255,7 +255,7 @@ namespace mhed.gui
         {
             try
             {
-                ProcessManager.OpenWebPage(SourceUrl);
+                App.Platform.OpenWebPage(SourceUrl);
             }
             catch (Exception Ex)
             {
@@ -271,7 +271,7 @@ namespace mhed.gui
         {
             try
             {
-                ProcessManager.RestartApplicationAsAdmin(App.Platform.OS);
+                App.Platform.RestartApplicationAsAdmin();
             }
             catch (NotImplementedException Ex)
             {
