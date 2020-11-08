@@ -18,8 +18,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+using Microsoft.Win32;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Security.Permissions;
 
 namespace mhed.lib
@@ -84,5 +86,30 @@ namespace mhed.lib
         /// Get current operating system ID.
         /// </summary>
         public override OSType OS => OSType.Windows;
+
+        /// <summary>
+        /// Return platform-dependent location of the Hosts file.
+        /// </summary>
+        public override string HostsFileLocation
+        {
+            get
+            {
+                string HostsDirectory;
+
+                try
+                {
+                    using (RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false))
+                    {
+                        HostsDirectory = (string)ResKey.GetValue("DataBasePath");
+                    }
+                }
+                catch
+                {
+                    HostsDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
+                }
+
+                return HostsDirectory;
+            }
+        }
     }
 }

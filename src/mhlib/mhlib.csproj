@@ -54,7 +54,6 @@
     <Compile Include="CurrentPlatform.cs" />
     <Compile Include="CurrentApp.cs" />
     <Compile Include="DpiManager.cs" />
-    <Compile Include="FileManager.cs" />
     <Compile Include="HostsFileEntry.cs" />
     <Compile Include="HostsFileManager.cs" />
     <Compile Include="IPlatform.cs" />

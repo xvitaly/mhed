@@ -155,7 +155,7 @@ namespace mhed.lib
             }
 
             // Initializing class for working with Hosts file...
-            HostsFile = new HostsFileManager(Platform.OS);
+            HostsFile = new HostsFileManager(Platform);
 
             // Generating User-Agent header for outgoing HTTP queries...
             UserAgent = String.Format(Properties.Resources.AppDefUA, Platform.OSFriendlyName, Platform.UASuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, SystemArch);

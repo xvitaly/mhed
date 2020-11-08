@@ -41,6 +41,16 @@ namespace mhed.lib
         string UASuffix { get; }
 
         /// <summary>
+        /// Return platform-dependent location of the Hosts file.
+        /// </summary>
+        string HostsFileLocation { get; }
+
+        /// <summary>
+        /// Return platform-dependent path to Hosts file.
+        /// </summary>
+        string HostsFileFullPath { get; }
+
+        /// <summary>
         /// Show the specified file in default file manager.
         /// </summary>
         /// <param name="FileName">Full path to file.</param>

@@ -121,6 +121,16 @@ namespace mhed.lib
         public abstract OSType OS { get; }
 
         /// <summary>
+        /// Return platform-dependent location of the Hosts file.
+        /// </summary>
+        public virtual string HostsFileLocation => "/etc";
+
+        /// <summary>
+        /// Return platform-dependent path to Hosts file.
+        /// </summary>
+        public virtual string HostsFileFullPath => Path.Combine(HostsFileLocation, "hosts");
+
+        /// <summary>
         /// Open the specified text file in default (or overrided in application's
         /// settings (only on Windows platform)) text editor.
         /// </summary>

@@ -34,7 +34,7 @@ namespace mhed.lib
         /// <summary>
         /// Store information about current running platform.
         /// </summary>
-        private readonly CurrentPlatform.OSType Platform;
+        private readonly CurrentPlatform Platform;
 
         /// <summary>
         /// Get or set full Hosts file path.
@@ -80,7 +80,7 @@ namespace mhed.lib
         /// </summary>
         private void AddLocalhostEntry()
         {
-            if (Platform != CurrentPlatform.OSType.Windows)
+            if (Platform.OS != CurrentPlatform.OSType.Windows)
             {
                 Contents.Add(new HostsFileEntry("127.0.0.1", "localhost")); // IPv4
                 Contents.Add(new HostsFileEntry("::1", "localhost")); // IPv6
@@ -119,7 +119,7 @@ namespace mhed.lib
         {
             using (StreamWriter CFile = new StreamWriter(FilePath, false, Encoding.Default))
             {
-                if (Platform == CurrentPlatform.OSType.Windows)
+                if (Platform.OS == CurrentPlatform.OSType.Windows)
                 {
                     await CFile.WriteLineAsync(Properties.Resources.HtTemplate);
                 }
@@ -174,12 +174,12 @@ namespace mhed.lib
         /// <summary>
         /// HostsFileManager class constructor.
         /// </summary>
-        /// <param name="OS">Current running platform.</param>
+        /// <param name="RunningPlatform">Current running platform.</param>
         /// <param name="AutoLoad">Read Hosts file automatically.</param>
-        public HostsFileManager(CurrentPlatform.OSType OS, bool AutoLoad = false)
+        public HostsFileManager(CurrentPlatform RunningPlatform, bool AutoLoad = false)
         {
-            FilePath = FileManager.GetHostsFileFullPath(OS);
-            Platform = OS;
+            Platform = RunningPlatform;
+            FilePath = Platform.HostsFileFullPath;
             Contents = new SortableBindingList<HostsFileEntry>();
             if (AutoLoad) Load();
         }
