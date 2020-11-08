@@ -19,15 +19,35 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 using System;
+using System.Diagnostics;
 using System.IO;
+using System.Security.Permissions;
 
 namespace mhed.lib
 {
     /// <summary>
     /// Class for working with platform-dependent functions.
     /// </summary>
-    public sealed class CurrentPlatform
+    public abstract class CurrentPlatform
     {
+        /// <summary>
+        /// Create a platform-dependent instance. Factory method.
+        /// </summary>
+        public static CurrentPlatform Create()
+        {
+            switch (GetRunningOS())
+            {
+                case OSType.Windows:
+                    return new PlatformWindows();
+                case OSType.Linux:
+                    return new PlatformLinux();
+                case OSType.MacOSX:
+                    return new PlatformMac();
+                default:
+                    throw new PlatformNotSupportedException();
+            }
+        }
+
         /// <summary>
         /// Codes and IDs of available platforms.
         /// </summary>
@@ -39,11 +59,6 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Get current operating system ID.
-        /// </summary>
-        public OSType OS { get; private set; }
-
-        /// <summary>
         /// Get current operating system friendly name.
         /// </summary>
         public string OSFriendlyName => OS.ToString();
@@ -52,7 +67,7 @@ namespace mhed.lib
         /// Get name and ID of running operating system.
         /// </summary>
         /// <returns>Platform ID.</returns>
-        private OSType GetRunningOS()
+        private static OSType GetRunningOS()
         {
             switch (Environment.OSVersion.Platform)
             {
@@ -65,33 +80,76 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Get platform-dependent suffix for HTTP_USER_AGENT header.
+        /// Add quotes to the path.
         /// </summary>
-        public string UASuffix
+        /// <param name="Source">Source string with path.</param>
+        /// <returns>Quoted string with path.</returns>
+        protected static string AddQuotesToPath(string Source)
         {
-            get
-            {
-                switch (OS)
-                {
-                    case OSType.Windows:
-                        return Properties.Resources.AppUASuffixWin;
-                    case OSType.Linux:
-                        return Properties.Resources.AppUASuffixOther;
-                    case OSType.MacOSX:
-                        return Properties.Resources.AppUASuffixOther;
-                    default:
-                        throw new PlatformNotSupportedException();
-                }
-            }
+            return String.Format(Properties.Resources.AppOpenHandlerEscapeTemplate, Source);
         }
 
         /// <summary>
-        /// CurrentPlatform class constructor.
+        /// Open the specified URL in default Web browser.
         /// </summary>
-        public CurrentPlatform()
+        /// <param name="URI">Full URL.</param>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public virtual void OpenWebPage(string URI)
         {
-            // Getting information about running operating system...
-            OS = GetRunningOS();
+            Process.Start(URI);
+        }
+
+        /// <summary>
+        /// Restart current application with admin user rights.
+        /// </summary>
+        /// <param name="OS">Operating system type.</param>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public virtual void RestartApplicationAsAdmin()
+        {
+            StartElevatedProcess(CurrentApp.AssemblyLocation);
+            Environment.Exit(ReturnCodes.Success);
+        }
+
+        /// <summary>
+        /// Get platform-dependent suffix for HTTP_USER_AGENT header.
+        /// </summary>
+        public virtual string UASuffix => Properties.Resources.AppUASuffixOther;
+
+        /// <summary>
+        /// Get current operating system ID.
+        /// </summary>
+        public abstract OSType OS { get; }
+
+        /// <summary>
+        /// Open the specified text file in default (or overrided in application's
+        /// settings (only on Windows platform)) text editor.
+        /// </summary>
+        /// <param name="FileName">Full path to text file.</param>
+        /// <param name="EditorBin">External text editor (Windows only).</param>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public abstract void OpenTextEditor(string FileName, string EditorBin);
+
+        /// <summary>
+        /// Show the specified file in default file manager.
+        /// </summary>
+        /// <param name="FileName">Full path to file.</param>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public abstract void OpenExplorer(string FileName);
+
+        /// <summary>
+        /// Start the required application from administrator.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public abstract int StartElevatedProcess(string FileName);
+
+        /// <summary>
+        /// Constructor of the CommonPlatform class. Cannot be called directly.
+        /// </summary>
+        private CurrentPlatform()
+        {
+            // Nothing to do here.
+            throw new NotImplementedException();
         }
     }
 }
