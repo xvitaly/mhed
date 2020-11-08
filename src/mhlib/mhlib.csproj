@@ -57,6 +57,7 @@
     <Compile Include="FileManager.cs" />
     <Compile Include="HostsFileEntry.cs" />
     <Compile Include="HostsFileManager.cs" />
+    <Compile Include="IPlatform.cs" />
     <Compile Include="LibraryManager.cs" />
     <Compile Include="PlatformLinux.cs" />
     <Compile Include="PlatformMac.cs" />
