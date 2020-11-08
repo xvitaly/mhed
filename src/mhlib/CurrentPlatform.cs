@@ -28,7 +28,7 @@ namespace mhed.lib
     /// <summary>
     /// Class for working with platform-dependent functions.
     /// </summary>
-    public abstract class CurrentPlatform
+    public abstract class CurrentPlatform : IPlatform
     {
         /// <summary>
         /// Create a platform-dependent instance. Factory method.
@@ -140,6 +140,7 @@ namespace mhed.lib
         /// Start the required application from administrator.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
+        /// <returns>PID of the newly created process.</returns>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public abstract int StartElevatedProcess(string FileName);
     }

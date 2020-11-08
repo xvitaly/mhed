@@ -25,6 +25,9 @@ using System.Security.Permissions;
 
 namespace mhed.lib
 {
+    /// <summary>
+    /// Class for working with MacOS specific functions.
+    /// </summary>
     public class PlatformMac : CurrentPlatform
     {
         /// <summary>
@@ -53,6 +56,7 @@ namespace mhed.lib
         /// Start the required application from administrator.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
+        /// <returns>PID of the newly created process.</returns>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public override int StartElevatedProcess(string FileName)
         {
