@@ -106,6 +106,57 @@ namespace mhed.gui
 
         #region Different helper methods
         /// <summary>
+        /// Change the state of the table editor.
+        /// </summary>
+        /// <param name="NewState">New state boolean.</param>
+        private void ChangeTableEditorState(bool NewState)
+        {
+            HE_ModelView.ReadOnly = NewState;
+        }
+
+        /// <summary>
+        /// Change the state of the main menu items.
+        /// </summary>
+        /// <param name="NewState">New state boolean.</param>
+        private void ChangeMenuItemsState(bool NewState)
+        {
+            HE_MenuSaveItem.Enabled = NewState;
+            HE_MenuRestoreDefaultsItem.Enabled = NewState;
+        }
+
+        /// <summary>
+        /// Change the state of the main toolbar items.
+        /// </summary>
+        /// <param name="NewState">New state boolean.</param>
+        private void ChangeToolbarItemsState(bool NewState)
+        {
+            HE_ToolbarSaveButton.Enabled = NewState;
+            HE_ToolbarCutButton.Enabled = NewState;
+            HE_ToolbarPasteButton.Enabled = NewState;
+            HE_ToolbarDeleteButton.Enabled = NewState;
+        }
+
+        /// <summary>
+        /// Change the state of the context menu menu items.
+        /// </summary>
+        /// <param name="NewState">New state boolean.</param>
+        private void ChangeContextMenuItemsState(bool NewState)
+        {
+            HE_ConextMenuCutItem.Enabled = NewState;
+            HE_ConextMenuPasteItem.Enabled = NewState;
+            HE_ConextMenuDeleteItem.Enabled = NewState;
+        }
+
+        /// <summary>
+        /// Change status bar application mode indicator.
+        /// </summary>
+        /// <param name="NewState">New state boolean.</param>
+        private void ChangeStatusBarAppMode()
+        {
+            HE_StatusBarAppMode.Image = Properties.Resources.GreenCircle;
+            HE_StatusBarAppMode.Text = AppStrings.AHE_AppStatusRO;
+        }
+        /// <summary>
         /// Change state of some controls, depending on current running
         /// platform or access level.
         /// </summary>
@@ -113,19 +164,11 @@ namespace mhed.gui
         {
             if (!App.IsAdmin)
             {
-                HE_MenuSaveItem.Enabled = false;
-                HE_ToolbarSaveButton.Enabled = false;
-                HE_MenuRestoreDefaultsItem.Enabled = false;
-                HE_ModelView.ReadOnly = true;
-                HE_ToolbarCutButton.Enabled = false;
-                HE_ToolbarPasteButton.Enabled = false;
-                HE_ToolbarDeleteButton.Enabled = false;
-                HE_ConextMenuCutItem.Enabled = false;
-                HE_ConextMenuPasteItem.Enabled = false;
-                HE_ConextMenuDeleteItem.Enabled = false;
-
-                HE_StatusBarAppMode.Image = Properties.Resources.GreenCircle;
-                HE_StatusBarAppMode.Text = AppStrings.AHE_AppStatusRO;
+                ChangeTableEditorState(false);
+                ChangeMenuItemsState(false);
+                ChangeToolbarItemsState(false);
+                ChangeContextMenuItemsState(false);
+                ChangeStatusBarAppMode();
             }
         }
 
