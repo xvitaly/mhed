@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMhed));
             this.HE_MainToolbar = new System.Windows.Forms.ToolStrip();
             this.HE_ToolbarRefreshButton = new System.Windows.Forms.ToolStripButton();
@@ -65,11 +66,17 @@
             this.HE_ModelView = new System.Windows.Forms.DataGridView();
             this.HE_ModelViewColumnIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HE_ModelViewColumnDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HE_ContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.HE_ConextMenuCutItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_ConextMenuCopyItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_ConextMenuPasteItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_ConextMenuDeleteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MainToolbar.SuspendLayout();
             this.HE_MainMenu.SuspendLayout();
             this.HE_StatusBar.SuspendLayout();
             this.HE_ModelViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HE_ModelView)).BeginInit();
+            this.HE_ContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // HE_MainToolbar
@@ -330,6 +337,7 @@
             this.HE_ModelView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HE_ModelViewColumnIP,
             this.HE_ModelViewColumnDomain});
+            this.HE_ModelView.ContextMenuStrip = this.HE_ContextMenu;
             resources.ApplyResources(this.HE_ModelView, "HE_ModelView");
             this.HE_ModelView.Name = "HE_ModelView";
             this.HE_ModelView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.HE_ModelView_CellValidating);
@@ -349,6 +357,40 @@
             this.HE_ModelViewColumnDomain.FillWeight = 125.072F;
             resources.ApplyResources(this.HE_ModelViewColumnDomain, "HE_ModelViewColumnDomain");
             this.HE_ModelViewColumnDomain.Name = "HE_ModelViewColumnDomain";
+            // 
+            // HE_ContextMenu
+            // 
+            this.HE_ContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HE_ConextMenuCutItem,
+            this.HE_ConextMenuCopyItem,
+            this.HE_ConextMenuPasteItem,
+            this.HE_ConextMenuDeleteItem});
+            this.HE_ContextMenu.Name = "HE_ContextMenu";
+            resources.ApplyResources(this.HE_ContextMenu, "HE_ContextMenu");
+            // 
+            // HE_ConextMenuCutItem
+            // 
+            this.HE_ConextMenuCutItem.Image = global::mhed.gui.Properties.Resources.Cut;
+            this.HE_ConextMenuCutItem.Name = "HE_ConextMenuCutItem";
+            resources.ApplyResources(this.HE_ConextMenuCutItem, "HE_ConextMenuCutItem");
+            // 
+            // HE_ConextMenuCopyItem
+            // 
+            this.HE_ConextMenuCopyItem.Image = global::mhed.gui.Properties.Resources.Copy;
+            this.HE_ConextMenuCopyItem.Name = "HE_ConextMenuCopyItem";
+            resources.ApplyResources(this.HE_ConextMenuCopyItem, "HE_ConextMenuCopyItem");
+            // 
+            // HE_ConextMenuPasteItem
+            // 
+            this.HE_ConextMenuPasteItem.Image = global::mhed.gui.Properties.Resources.Paste;
+            this.HE_ConextMenuPasteItem.Name = "HE_ConextMenuPasteItem";
+            resources.ApplyResources(this.HE_ConextMenuPasteItem, "HE_ConextMenuPasteItem");
+            // 
+            // HE_ConextMenuDeleteItem
+            // 
+            this.HE_ConextMenuDeleteItem.Image = global::mhed.gui.Properties.Resources.Delete;
+            this.HE_ConextMenuDeleteItem.Name = "HE_ConextMenuDeleteItem";
+            resources.ApplyResources(this.HE_ConextMenuDeleteItem, "HE_ConextMenuDeleteItem");
             // 
             // FrmMhed
             // 
@@ -374,6 +416,7 @@
             this.HE_StatusBar.PerformLayout();
             this.HE_ModelViewPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HE_ModelView)).EndInit();
+            this.HE_ContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,5 +459,10 @@
         private System.Windows.Forms.ToolStripMenuItem HE_MenuOptionsItem;
         private System.Windows.Forms.ToolStripStatusLabel HE_StatusBarAppMode;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuCheckForUpdatesItem;
+        private System.Windows.Forms.ContextMenuStrip HE_ContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem HE_ConextMenuCutItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_ConextMenuCopyItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_ConextMenuPasteItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_ConextMenuDeleteItem;
     }
 }

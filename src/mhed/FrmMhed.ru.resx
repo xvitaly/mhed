@@ -133,7 +133,7 @@
     <value>Вст&amp;авить</value>
   </data>
   <data name="HE_ToolbarDeleteButton.Text" xml:space="preserve">
-    <value>&amp;Удалить строку</value>
+    <value>&amp;Удалить</value>
   </data>
   <data name="HE_ToolbarAboutButton.Text" xml:space="preserve">
     <value>О програ&amp;мме...</value>
@@ -237,6 +237,33 @@
   </data>
   <data name="HE_ModelViewColumnDomain.HeaderText" xml:space="preserve">
     <value>Доменное имя</value>
+  </data>
+  <data name="HE_ConextMenuCutItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 22</value>
+  </data>
+  <data name="HE_ConextMenuCutItem.Text" xml:space="preserve">
+    <value>&amp;Вырезать</value>
+  </data>
+  <data name="HE_ConextMenuCopyItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 22</value>
+  </data>
+  <data name="HE_ConextMenuCopyItem.Text" xml:space="preserve">
+    <value>&amp;Копировать</value>
+  </data>
+  <data name="HE_ConextMenuPasteItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 22</value>
+  </data>
+  <data name="HE_ConextMenuPasteItem.Text" xml:space="preserve">
+    <value>Вст&amp;авить</value>
+  </data>
+  <data name="HE_ConextMenuDeleteItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 22</value>
+  </data>
+  <data name="HE_ConextMenuDeleteItem.Text" xml:space="preserve">
+    <value>&amp;Удалить</value>
+  </data>
+  <data name="HE_ContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 92</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

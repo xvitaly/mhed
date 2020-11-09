@@ -131,7 +131,7 @@
     <value>23, 22</value>
   </data>
   <data name="HE_ToolbarRefreshButton.Text" xml:space="preserve">
-    <value>Refresh</value>
+    <value>&amp;Refresh</value>
   </data>
   <data name="HE_ToolbarSaveButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -140,7 +140,7 @@
     <value>23, 22</value>
   </data>
   <data name="HE_ToolbarSaveButton.Text" xml:space="preserve">
-    <value>Save changes</value>
+    <value>&amp;Save changes</value>
   </data>
   <data name="HE_ToolbarSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -182,7 +182,7 @@
     <value>23, 22</value>
   </data>
   <data name="HE_ToolbarDeleteButton.Text" xml:space="preserve">
-    <value>Delete entry</value>
+    <value>&amp;Delete</value>
   </data>
   <data name="HE_ToolbarSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -219,7 +219,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;HE_MainToolbar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="HE_MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>158, 17</value>
@@ -352,10 +352,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;HE_MainMenu.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="HE_StatusBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>289, 17</value>
+    <value>435, 17</value>
   </metadata>
   <metadata name="HE_StatusBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -400,7 +400,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;HE_StatusBar.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="HE_ModelViewPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -425,6 +425,42 @@
   </metadata>
   <data name="HE_ModelViewColumnDomain.HeaderText" xml:space="preserve">
     <value>Domain Name</value>
+  </data>
+  <metadata name="HE_ContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>289, 17</value>
+  </metadata>
+  <data name="HE_ConextMenuCutItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 22</value>
+  </data>
+  <data name="HE_ConextMenuCutItem.Text" xml:space="preserve">
+    <value>C&amp;ut</value>
+  </data>
+  <data name="HE_ConextMenuCopyItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 22</value>
+  </data>
+  <data name="HE_ConextMenuCopyItem.Text" xml:space="preserve">
+    <value>&amp;Copy</value>
+  </data>
+  <data name="HE_ConextMenuPasteItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 22</value>
+  </data>
+  <data name="HE_ConextMenuPasteItem.Text" xml:space="preserve">
+    <value>&amp;Paste</value>
+  </data>
+  <data name="HE_ConextMenuDeleteItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 22</value>
+  </data>
+  <data name="HE_ConextMenuDeleteItem.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="HE_ContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 92</value>
+  </data>
+  <data name="&gt;&gt;HE_ContextMenu.Name" xml:space="preserve">
+    <value>HE_ContextMenu</value>
+  </data>
+  <data name="&gt;&gt;HE_ContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="HE_ModelView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -469,7 +505,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;HE_ModelViewPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1253,6 +1289,30 @@
   </data>
   <data name="&gt;&gt;HE_ModelViewColumnDomain.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_ConextMenuCutItem.Name" xml:space="preserve">
+    <value>HE_ConextMenuCutItem</value>
+  </data>
+  <data name="&gt;&gt;HE_ConextMenuCutItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_ConextMenuCopyItem.Name" xml:space="preserve">
+    <value>HE_ConextMenuCopyItem</value>
+  </data>
+  <data name="&gt;&gt;HE_ConextMenuCopyItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_ConextMenuPasteItem.Name" xml:space="preserve">
+    <value>HE_ConextMenuPasteItem</value>
+  </data>
+  <data name="&gt;&gt;HE_ConextMenuPasteItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_ConextMenuDeleteItem.Name" xml:space="preserve">
+    <value>HE_ConextMenuDeleteItem</value>
+  </data>
+  <data name="&gt;&gt;HE_ConextMenuDeleteItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMhed</value>
