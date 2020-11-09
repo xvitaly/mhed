@@ -287,6 +287,83 @@ namespace mhed.gui
                 MessageBox.Show(AppStrings.AHE_RestartAsAdminError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        /// <summary>
+        /// Cut the contents of the selected cell to the clipboard.
+        /// </summary>
+        private void HelperCut()
+        {
+            try
+            {
+                if (HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
+                {
+                    Clipboard.SetText((string)HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value);
+                    HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = null;
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExClipboardCut);
+                MessageBox.Show(AppStrings.AHE_ClipboardCutError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Copy the contents of the selected cell to the clipboard.
+        /// </summary>
+        private void HelperCopy()
+        {
+            try
+            {
+                if (HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
+                {
+                    Clipboard.SetText((string)HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value);
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExClipboardCopy);
+                MessageBox.Show(AppStrings.AHE_ClipboardCopyError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Paste the contents of the clipboard to the selected cell.
+        /// </summary>
+        private void HelperPaste()
+        {
+            try
+            {
+                if (Clipboard.ContainsText())
+                {
+                    HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExClipboardPaste);
+                MessageBox.Show(AppStrings.AHE_ClipboardPasteError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Delete selected rows.
+        /// </summary>
+        private void HelperDelete()
+        {
+            try
+            {
+                foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
+                {
+                    HE_ModelView.Rows.RemoveAt(Cell.RowIndex);
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExDeleteRow);
+                MessageBox.Show(AppStrings.AHE_DeleteRowError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         #endregion
 
         #region Form contructors and loaders
@@ -618,19 +695,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_ToolbarCutButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
-                {
-                    Clipboard.SetText((string)HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value);
-                    HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = null;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExClipboardCut);
-                MessageBox.Show(AppStrings.AHE_ClipboardCutError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            HelperCut();
         }
 
         /// <summary>
@@ -640,18 +705,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_ToolbarCopyButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
-                {
-                    Clipboard.SetText((string)HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value);
-                }
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExClipboardCopy);
-                MessageBox.Show(AppStrings.AHE_ClipboardCopyError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            HelperCopy();
         }
 
         /// <summary>
@@ -661,18 +715,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_ToolbarPasteButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (Clipboard.ContainsText())
-                {
-                    HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
-                }
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExClipboardPaste);
-                MessageBox.Show(AppStrings.AHE_ClipboardPasteError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            HelperPaste();
         }
 
         /// <summary>
@@ -682,18 +725,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_ToolbarDeleteButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
-                {
-                    HE_ModelView.Rows.RemoveAt(Cell.RowIndex);
-                }
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExDeleteRow);
-                MessageBox.Show(AppStrings.AHE_DeleteRowError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            HelperDelete();
         }
 
         /// <summary>
@@ -704,6 +736,48 @@ namespace mhed.gui
         private void HE_ToolbarAboutButton_Click(object sender, EventArgs e)
         {
             GuiHelpers.FormShowAboutApp();
+        }
+        #endregion
+
+        #region Context menu handlers
+        /// <summary>
+        /// "Cut" context menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ConextMenuCutItem_Click(object sender, EventArgs e)
+        {
+            HelperCut();
+        }
+
+        /// <summary>
+        /// "Copy" context menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ConextMenuCopyItem_Click(object sender, EventArgs e)
+        {
+            HelperCopy();
+        }
+
+        /// <summary>
+        /// "Paste" context menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ConextMenuPasteItem_Click(object sender, EventArgs e)
+        {
+            HelperPaste();
+        }
+
+        /// <summary>
+        /// "Delete" context menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_ConextMenuDeleteItem_Click(object sender, EventArgs e)
+        {
+            HelperDelete();
         }
         #endregion
 

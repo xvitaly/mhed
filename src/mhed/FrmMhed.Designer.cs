@@ -373,24 +373,28 @@
             this.HE_ConextMenuCutItem.Image = global::mhed.gui.Properties.Resources.Cut;
             this.HE_ConextMenuCutItem.Name = "HE_ConextMenuCutItem";
             resources.ApplyResources(this.HE_ConextMenuCutItem, "HE_ConextMenuCutItem");
+            this.HE_ConextMenuCutItem.Click += new System.EventHandler(this.HE_ConextMenuCutItem_Click);
             // 
             // HE_ConextMenuCopyItem
             // 
             this.HE_ConextMenuCopyItem.Image = global::mhed.gui.Properties.Resources.Copy;
             this.HE_ConextMenuCopyItem.Name = "HE_ConextMenuCopyItem";
             resources.ApplyResources(this.HE_ConextMenuCopyItem, "HE_ConextMenuCopyItem");
+            this.HE_ConextMenuCopyItem.Click += new System.EventHandler(this.HE_ConextMenuCopyItem_Click);
             // 
             // HE_ConextMenuPasteItem
             // 
             this.HE_ConextMenuPasteItem.Image = global::mhed.gui.Properties.Resources.Paste;
             this.HE_ConextMenuPasteItem.Name = "HE_ConextMenuPasteItem";
             resources.ApplyResources(this.HE_ConextMenuPasteItem, "HE_ConextMenuPasteItem");
+            this.HE_ConextMenuPasteItem.Click += new System.EventHandler(this.HE_ConextMenuPasteItem_Click);
             // 
             // HE_ConextMenuDeleteItem
             // 
             this.HE_ConextMenuDeleteItem.Image = global::mhed.gui.Properties.Resources.Delete;
             this.HE_ConextMenuDeleteItem.Name = "HE_ConextMenuDeleteItem";
             resources.ApplyResources(this.HE_ConextMenuDeleteItem, "HE_ConextMenuDeleteItem");
+            this.HE_ConextMenuDeleteItem.Click += new System.EventHandler(this.HE_ConextMenuDeleteItem_Click);
             // 
             // FrmMhed
             // 
