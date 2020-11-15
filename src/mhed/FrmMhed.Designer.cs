@@ -48,6 +48,11 @@
             this.HE_MenuSeparator1Item = new System.Windows.Forms.ToolStripSeparator();
             this.HE_MenuOptionsItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuQuitItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuCutItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuCopyItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuPasteItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuDeleteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuAdvanced = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuRestoreDefaultsItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuOpenNotepadItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -170,6 +175,7 @@
             // 
             this.HE_MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HE_MenuFile,
+            this.HE_MenuEdit,
             this.HE_MenuAdvanced,
             this.HE_MenuHelp});
             resources.ApplyResources(this.HE_MainMenu, "HE_MainMenu");
@@ -218,6 +224,44 @@
             this.HE_MenuQuitItem.Name = "HE_MenuQuitItem";
             resources.ApplyResources(this.HE_MenuQuitItem, "HE_MenuQuitItem");
             this.HE_MenuQuitItem.Click += new System.EventHandler(this.HE_MenuQuitItem_Click);
+            // 
+            // HE_MenuEdit
+            // 
+            this.HE_MenuEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HE_MenuCutItem,
+            this.HE_MenuCopyItem,
+            this.HE_MenuPasteItem,
+            this.HE_MenuDeleteItem});
+            this.HE_MenuEdit.Name = "HE_MenuEdit";
+            resources.ApplyResources(this.HE_MenuEdit, "HE_MenuEdit");
+            // 
+            // HE_MenuCutItem
+            // 
+            this.HE_MenuCutItem.Image = global::mhed.gui.Properties.Resources.Cut;
+            this.HE_MenuCutItem.Name = "HE_MenuCutItem";
+            resources.ApplyResources(this.HE_MenuCutItem, "HE_MenuCutItem");
+            this.HE_MenuCutItem.Click += new System.EventHandler(this.HE_MenuCutItem_Click);
+            // 
+            // HE_MenuCopyItem
+            // 
+            this.HE_MenuCopyItem.Image = global::mhed.gui.Properties.Resources.Copy;
+            this.HE_MenuCopyItem.Name = "HE_MenuCopyItem";
+            resources.ApplyResources(this.HE_MenuCopyItem, "HE_MenuCopyItem");
+            this.HE_MenuCopyItem.Click += new System.EventHandler(this.HE_MenuCopyItem_Click);
+            // 
+            // HE_MenuPasteItem
+            // 
+            this.HE_MenuPasteItem.Image = global::mhed.gui.Properties.Resources.Paste;
+            this.HE_MenuPasteItem.Name = "HE_MenuPasteItem";
+            resources.ApplyResources(this.HE_MenuPasteItem, "HE_MenuPasteItem");
+            this.HE_MenuPasteItem.Click += new System.EventHandler(this.HE_MenuPasteItem_Click);
+            // 
+            // HE_MenuDeleteItem
+            // 
+            this.HE_MenuDeleteItem.Image = global::mhed.gui.Properties.Resources.Delete;
+            this.HE_MenuDeleteItem.Name = "HE_MenuDeleteItem";
+            resources.ApplyResources(this.HE_MenuDeleteItem, "HE_MenuDeleteItem");
+            this.HE_MenuDeleteItem.Click += new System.EventHandler(this.HE_MenuDeleteItem_Click);
             // 
             // HE_MenuAdvanced
             // 
@@ -468,5 +512,10 @@
         private System.Windows.Forms.ToolStripMenuItem HE_ConextMenuCopyItem;
         private System.Windows.Forms.ToolStripMenuItem HE_ConextMenuPasteItem;
         private System.Windows.Forms.ToolStripMenuItem HE_ConextMenuDeleteItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuEdit;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuCutItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuCopyItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuPasteItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuDeleteItem;
     }
 }

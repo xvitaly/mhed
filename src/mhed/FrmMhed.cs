@@ -121,6 +121,9 @@ namespace mhed.gui
         private void ChangeMenuItemsState(bool NewState)
         {
             HE_MenuSaveItem.Enabled = NewState;
+            HE_MenuCutItem.Enabled = NewState;
+            HE_MenuPasteItem.Enabled = NewState;
+            HE_MenuDeleteItem.Enabled = NewState;
             HE_MenuRestoreDefaultsItem.Enabled = NewState;
         }
 
@@ -596,6 +599,46 @@ namespace mhed.gui
         private void HE_MenuQuitItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        /// <summary>
+        /// "Cut" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuCutItem_Click(object sender, EventArgs e)
+        {
+            HelperCut();
+        }
+
+        /// <summary>
+        /// "Copy" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuCopyItem_Click(object sender, EventArgs e)
+        {
+            HelperCopy();
+        }
+
+        /// <summary>
+        /// "Paste" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuPasteItem_Click(object sender, EventArgs e)
+        {
+            HelperPaste();
+        }
+
+        /// <summary>
+        /// "Delete" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuDeleteItem_Click(object sender, EventArgs e)
+        {
+            HelperDelete();
         }
 
         /// <summary>

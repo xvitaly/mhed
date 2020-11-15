@@ -172,6 +172,36 @@
   <data name="HE_MenuFile.Text" xml:space="preserve">
     <value>&amp;Файл</value>
   </data>
+  <data name="HE_MenuCutItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="HE_MenuCutItem.Text" xml:space="preserve">
+    <value>&amp;Вырезать</value>
+  </data>
+  <data name="HE_MenuCopyItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="HE_MenuCopyItem.Text" xml:space="preserve">
+    <value>&amp;Копировать</value>
+  </data>
+  <data name="HE_MenuPasteItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="HE_MenuPasteItem.Text" xml:space="preserve">
+    <value>Вст&amp;авить</value>
+  </data>
+  <data name="HE_MenuDeleteItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="HE_MenuDeleteItem.Text" xml:space="preserve">
+    <value>&amp;Удалить</value>
+  </data>
+  <data name="HE_MenuEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 20</value>
+  </data>
+  <data name="HE_MenuEdit.Text" xml:space="preserve">
+    <value>&amp;Правка</value>
+  </data>
   <data name="HE_MenuRestoreDefaultsItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>276, 22</value>
   </data>

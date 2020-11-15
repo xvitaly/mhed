@@ -270,6 +270,48 @@
   <data name="HE_MenuFile.Text" xml:space="preserve">
     <value>&amp;File</value>
   </data>
+  <data name="HE_MenuCutItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+X</value>
+  </data>
+  <data name="HE_MenuCutItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="HE_MenuCutItem.Text" xml:space="preserve">
+    <value>C&amp;ut</value>
+  </data>
+  <data name="HE_MenuCopyItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+C</value>
+  </data>
+  <data name="HE_MenuCopyItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="HE_MenuCopyItem.Text" xml:space="preserve">
+    <value>&amp;Copy</value>
+  </data>
+  <data name="HE_MenuPasteItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+V</value>
+  </data>
+  <data name="HE_MenuPasteItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="HE_MenuPasteItem.Text" xml:space="preserve">
+    <value>&amp;Paste</value>
+  </data>
+  <data name="HE_MenuDeleteItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Shift+Del</value>
+  </data>
+  <data name="HE_MenuDeleteItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="HE_MenuDeleteItem.Text" xml:space="preserve">
+    <value>&amp;Delete</value>
+  </data>
+  <data name="HE_MenuEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
+  </data>
+  <data name="HE_MenuEdit.Text" xml:space="preserve">
+    <value>&amp;Edit</value>
+  </data>
   <data name="HE_MenuRestoreDefaultsItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 22</value>
   </data>
@@ -1198,6 +1240,36 @@
     <value>HE_MenuQuitItem</value>
   </data>
   <data name="&gt;&gt;HE_MenuQuitItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuEdit.Name" xml:space="preserve">
+    <value>HE_MenuEdit</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuEdit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuCutItem.Name" xml:space="preserve">
+    <value>HE_MenuCutItem</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuCutItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuCopyItem.Name" xml:space="preserve">
+    <value>HE_MenuCopyItem</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuCopyItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuPasteItem.Name" xml:space="preserve">
+    <value>HE_MenuPasteItem</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuPasteItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuDeleteItem.Name" xml:space="preserve">
+    <value>HE_MenuDeleteItem</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuDeleteItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HE_MenuAdvanced.Name" xml:space="preserve">
