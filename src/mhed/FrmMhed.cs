@@ -446,7 +446,10 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void FrmMhed_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.AHE_ExitConfirmation, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes);
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.AHE_ExitConfirmation, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes);
+            }
         }
 
         /// <summary>
