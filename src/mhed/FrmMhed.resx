@@ -200,7 +200,7 @@
     <value>0, 24</value>
   </data>
   <data name="HE_MainToolbar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 25</value>
+    <value>446, 25</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="HE_MainToolbar.TabIndex" type="System.Int32, mscorlib">
@@ -379,7 +379,7 @@
     <value>0, 0</value>
   </data>
   <data name="HE_MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 24</value>
+    <value>446, 24</value>
   </data>
   <data name="HE_MainMenu.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -415,7 +415,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="HE_StatusBarAppMode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 17</value>
+    <value>400, 17</value>
   </data>
   <data name="HE_StatusBarAppMode.Text" xml:space="preserve">
     <value>R/W</value>
@@ -424,10 +424,10 @@
     <value>MiddleRight</value>
   </data>
   <data name="HE_StatusBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 285</value>
+    <value>0, 308</value>
   </data>
   <data name="HE_StatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 22</value>
+    <value>446, 22</value>
   </data>
   <data name="HE_StatusBar.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -511,7 +511,7 @@
     <value>0, 0</value>
   </data>
   <data name="HE_ModelView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 238</value>
+    <value>446, 261</value>
   </data>
   <data name="HE_ModelView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -532,7 +532,7 @@
     <value>0, 48</value>
   </data>
   <data name="HE_ModelViewPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 238</value>
+    <value>446, 261</value>
   </data>
   <data name="HE_ModelViewPanel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -559,7 +559,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>388, 307</value>
+    <value>446, 330</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
