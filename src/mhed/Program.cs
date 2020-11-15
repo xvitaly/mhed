@@ -28,14 +28,17 @@ namespace mhed.gui
     /// <summary>
     /// The main class of the application.
     /// </summary>
-    static class Program
+    public static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
+            // Starting logger engine...
+            InternalLogger.Initialize(Properties.Resources.AppInternalName);
+
             // Creating global mutex...
             using (Mutex Mtx = new Mutex(false, StringsManager.GetMutexName(Properties.Resources.AppInternalName)))
             {

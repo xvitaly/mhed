@@ -139,6 +139,15 @@
   <data name="HtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HtTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="LogFileName" xml:space="preserve">
+    <value>debug.log</value>
+  </data>
+  <data name="LogFileTemplate" xml:space="preserve">
+    <value>debug_{#}.log</value>
+  </data>
+  <data name="LogLayout" xml:space="preserve">
+    <value>${longdate} :: ${level:uppercase=true} :: ${callsite} :: ${message} ${exception:format=tostring}</value>
+  </data>
   <data name="MutexAdmin" xml:space="preserve">
     <value>{0}_admin</value>
   </data>
