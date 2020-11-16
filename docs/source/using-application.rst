@@ -57,3 +57,19 @@ Saving Hosts file
 ================================================
 
 Click the **Save** button on the main toolbar, or press **Ctrl + S** key combination on your keyboard to save the Hosts file to disk.
+
+.. index:: keys, hotkeys, keyboard
+.. _usage-hotkeys:
+
+Hotkeys can be used to control the application.
+
+Currently supported keyboard combinations:
+
+  * **F1** -- show offline help;
+  * **F5** -- :ref:`reload <usage-reload>` the Hosts file from disk;
+  * **Ctrl+S** -- :ref:`save <usage-save>` the Hosts file to disk;
+  * **Ctrl+Q** -- quit application;
+  * **Ctrl+X** -- cut the selected cell data to the clipboard;
+  * **Ctrl+C** -- copy the selected cell data to the clipboard;
+  * **Ctrl+V** -- paste data from the clipboard to the selected cell;
+  * **Shift+Del** -- delete the selected row.
