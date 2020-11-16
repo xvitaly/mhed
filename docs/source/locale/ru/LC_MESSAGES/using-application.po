@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-16 15:21+0100\n"
-"PO-Revision-Date: 2020-11-16 15:23+0100\n"
+"POT-Creation-Date: 2020-11-16 15:27+0100\n"
+"PO-Revision-Date: 2020-11-16 15:28+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -127,43 +127,47 @@ msgstr ""
 "Нажмите кнопку **Сохранить** на главной панели инструментов, либо комбинацию "
 "**Ctrl + S** на клавиатуре, чтобы сохранить файл Hosts на диск."
 
-#: ../../source/using-application.rst:64
+#: ../../source/using-application.rst:65
+msgid "Hotkeys"
+msgstr "Клавиатурные комбинации"
+
+#: ../../source/using-application.rst:67
 msgid "Hotkeys can be used to control the application."
 msgstr "Для работы с программой могут быть использованы \"горячие клавиши\"."
 
-#: ../../source/using-application.rst:66
+#: ../../source/using-application.rst:69
 msgid "Currently supported keyboard combinations:"
 msgstr "В настоящее время поддерживаются следующие клавиатурные комбинации:"
 
-#: ../../source/using-application.rst:68
+#: ../../source/using-application.rst:71
 msgid "**F1** -- show offline help;"
 msgstr "**F1** -- показать справочную систему;"
 
-#: ../../source/using-application.rst:69
+#: ../../source/using-application.rst:72
 msgid "**F5** -- :ref:`reload <usage-reload>` the Hosts file from disk;"
 msgstr "**F5** -- :ref:`перечитать <usage-reload>` файл Hosts с диска;"
 
-#: ../../source/using-application.rst:70
+#: ../../source/using-application.rst:73
 msgid "**Ctrl+S** -- :ref:`save <usage-save>` the Hosts file to disk;"
 msgstr ""
 "**Ctrl+S** -- :ref:`сохранить <usage-save>` изменения в файле Hosts на диск;"
 
-#: ../../source/using-application.rst:71
+#: ../../source/using-application.rst:74
 msgid "**Ctrl+Q** -- quit application;"
 msgstr "**Ctrl+Q** -- выйти из программы;"
 
-#: ../../source/using-application.rst:72
+#: ../../source/using-application.rst:75
 msgid "**Ctrl+X** -- cut the selected cell data to the clipboard;"
 msgstr "**Ctrl+X** -- вырезать содержимое выделенной ячейки в буфер обмена;"
 
-#: ../../source/using-application.rst:73
+#: ../../source/using-application.rst:76
 msgid "**Ctrl+C** -- copy the selected cell data to the clipboard;"
 msgstr "**Ctrl+C** -- скопировать содержимое выделенной ячейки в буфер обмена;"
 
-#: ../../source/using-application.rst:74
+#: ../../source/using-application.rst:77
 msgid "**Ctrl+V** -- paste data from the clipboard to the selected cell;"
 msgstr "**Ctrl+V** -- вставить содержимое буфера обмена в выделенную ячейку;"
 
-#: ../../source/using-application.rst:75
+#: ../../source/using-application.rst:78
 msgid "**Shift+Del** -- delete the selected row."
 msgstr "**Shift+Del** -- удалить выделенную строку целиком."
