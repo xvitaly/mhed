@@ -61,6 +61,9 @@ Click the **Save** button on the main toolbar, or press **Ctrl + S** key combina
 .. index:: keys, hotkeys, keyboard
 .. _usage-hotkeys:
 
+Hotkeys
+===========================================
+
 Hotkeys can be used to control the application.
 
 Currently supported keyboard combinations:
