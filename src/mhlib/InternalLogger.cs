@@ -33,7 +33,8 @@ namespace mhed.lib
         /// Initialize the logger engine.
         /// </summary>
         /// <param name="LogSubdirectoryName">Log subdirectory name.</param>
-        public static void Initialize(string LogSubdirectoryName)
+        /// <param name="RequiredLogLevel">Required log level (as int: 0 - trace, 1 - debug, 2 - info).</param>
+        public static void Initialize(string LogSubdirectoryName, int RequiredLogLevel = 1)
         {
             NLog.Config.LoggingConfiguration NLogConfig = new NLog.Config.LoggingConfiguration();
             NLog.Targets.FileTarget NLogFileTarget = new NLog.Targets.FileTarget("logfile")
@@ -50,7 +51,7 @@ namespace mhed.lib
                 WriteBom = false
             };
 
-            NLogConfig.AddRule(LogLevel.Debug, LogLevel.Fatal, NLogFileTarget);
+            NLogConfig.AddRule(LogLevel.FromOrdinal(RequiredLogLevel), LogLevel.Fatal, NLogFileTarget);
             LogManager.Configuration = NLogConfig;
         }
     }
