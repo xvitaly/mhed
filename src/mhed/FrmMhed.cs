@@ -75,25 +75,6 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Imports settings from previous versions of application.
-        /// </summary>
-        private void ImportSettings()
-        {
-            try
-            {
-                if (Properties.Settings.Default.CallUpgrade)
-                {
-                    Properties.Settings.Default.Upgrade();
-                    Properties.Settings.Default.CallUpgrade = false;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExSettingsLoad);
-            }
-        }
-
-        /// <summary>
         /// Save program settings.
         /// </summary>
         private void SaveSettings()
@@ -419,7 +400,6 @@ namespace mhed.gui
         public FrmMhed()
         {
             InitializeComponent();
-            ImportSettings();
         }
 
         /// <summary>

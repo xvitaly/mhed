@@ -31,11 +31,33 @@ namespace mhed.gui
     public static class Program
     {
         /// <summary>
+        /// Import settings from the previous version of the application.
+        /// </summary>
+        private static void ImportSettings()
+        {
+            try
+            {
+                if (Properties.Settings.Default.CallUpgrade)
+                {
+                    Properties.Settings.Default.Upgrade();
+                    Properties.Settings.Default.CallUpgrade = false;
+                }
+            }
+            catch
+            {
+                MessageBox.Show(AppStrings.AHE_ImportSettingsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         public static void Main()
         {
+            // Importing settings...
+            ImportSettings();
+
             // Starting logger engine...
             InternalLogger.Initialize(Properties.Resources.AppInternalName);
 
