@@ -50,46 +50,56 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Check if required library version is equal with current library version.
+        /// </summary>
+        private static void CheckLibrary()
+        {
+            if (!LibraryManager.CheckLibraryVersion())
+            {
+                MessageBox.Show(AppStrings.AHE_LibraryVersionMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(ReturnCodes.CoreLibVersionMissmatch);
+            }
+        }
+
+        /// <summary>
+        /// Initialize and show the main form of the application.
+        /// </summary>
+        private static void ShowMainForm()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FrmMhed());
+        }
+
+        /// <summary>
+        /// Show message about already running application and exit.
+        /// </summary>
+        private static void HandleRunning()
+        {
+            MessageBox.Show(AppStrings.AHE_AlreadyRunning, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Environment.Exit(ReturnCodes.AppAlreadyRunning);
+        }
+
+        /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         public static void Main()
         {
-            // Importing settings...
-            ImportSettings();
-
-            // Starting logger engine...
-            InternalLogger.Initialize(Properties.Resources.AppInternalName);
-
             // Creating global mutex...
             using (Mutex Mtx = new Mutex(false, StringsManager.GetMutexName(Properties.Resources.AppInternalName)))
             {
                 // Locking mutex...
                 if (Mtx.WaitOne(0, false))
                 {
-                    // Checking of core library version...
-                    if (LibraryManager.CheckLibraryVersion())
-                    {
-                        // Enabling application visual styles...
-                        Application.EnableVisualStyles();
-                        Application.SetCompatibleTextRenderingDefault(false);
-
-                        // Starting main form...
-                        Application.Run(new FrmMhed());
-                    }
-                    else
-                    {
-                        // Version missmatch. Terminating...
-                        MessageBox.Show(AppStrings.AHE_LibraryVersionMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Environment.Exit(ReturnCodes.CoreLibVersionMissmatch);
-                    }
-                    
+                    ImportSettings();
+                    InternalLogger.Initialize(Properties.Resources.AppInternalName);
+                    CheckLibrary();
+                    ShowMainForm();
                 }
                 else
                 {
-                    // Application is already running. Terminating...
-                    MessageBox.Show(AppStrings.AHE_AlreadyRunning, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Environment.Exit(ReturnCodes.AppAlreadyRunning);
+                    HandleRunning();
                 }
             }
         }
