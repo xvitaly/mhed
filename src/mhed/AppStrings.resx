@@ -210,4 +210,7 @@
   <data name="AHE_UpdateCheckError" xml:space="preserve">
     <value>Failed to check for updates. Please try later!</value>
   </data>
+  <data name="AHE_ImportSettingsError" xml:space="preserve">
+    <value>Failed to import settings from the previous version of the application! All settings will be reset to default.</value>
+  </data>
 </root>

@@ -210,4 +210,7 @@
   <data name="AHE_UpdateCheckError" xml:space="preserve">
     <value>Произошла ошибка во время проверки наличия обновлений. Повторите попытку позднее!</value>
   </data>
+  <data name="AHE_ImportSettingsError" xml:space="preserve">
+    <value>Произошла ошибка во время импортирования настроек из предыдущей версии программы! Параметры будут сброшены на стандартные значения.</value>
+  </data>
 </root>

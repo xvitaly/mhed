@@ -151,6 +151,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to import settings from the previous version of the application! All settings will be reset to default..
+        /// </summary>
+        internal static string AHE_ImportSettingsError {
+            get {
+                return ResourceManager.GetString("AHE_ImportSettingsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Incorrect hostname entered!.
         /// </summary>
         internal static string AHE_IncorrectHostname {
