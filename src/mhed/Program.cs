@@ -45,6 +45,7 @@ namespace mhed.gui
             }
             catch
             {
+                Properties.Settings.Default.CallUpgrade = false;
                 MessageBox.Show(AppStrings.AHE_ImportSettingsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
