@@ -87,14 +87,11 @@ namespace mhed.gui
         [STAThread]
         public static void Main()
         {
-            // Creating global mutex...
             using (Mutex Mtx = new Mutex(false, StringsManager.GetMutexName(Properties.Resources.AppInternalName)))
             {
-                // Locking mutex...
                 if (Mtx.WaitOne(0, false))
                 {
                     ImportSettings();
-                    InternalLogger.Initialize(Properties.Resources.AppInternalName);
                     CheckLibrary();
                     ShowMainForm();
                 }

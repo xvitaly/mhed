@@ -53,7 +53,6 @@
   <ItemGroup>
     <Compile Include="CurrentPlatform.cs" />
     <Compile Include="CurrentApp.cs" />
-    <Compile Include="InternalLogger.cs" />
     <Compile Include="DpiManager.cs" />
     <Compile Include="HostsFileEntry.cs" />
     <Compile Include="HostsFileManager.cs" />
