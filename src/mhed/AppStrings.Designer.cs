@@ -331,6 +331,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to show debug log file!.
+        /// </summary>
+        internal static string AHE_ShowLogFileError {
+            get {
+                return ResourceManager.GetString("AHE_ShowLogFileError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A new version {0} is available. Do you want to get more information about it?.
         /// </summary>
         internal static string AHE_UpdateAvailable {

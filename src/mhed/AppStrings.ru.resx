@@ -216,4 +216,7 @@
   <data name="AHE_LogFileNotFound" xml:space="preserve">
     <value>Файл журнала работы программы не найден!</value>
   </data>
+  <data name="AHE_ShowLogFileError" xml:space="preserve">
+    <value>Не удалось отобразить отладочный журнал программы!</value>
+  </data>
 </root>
