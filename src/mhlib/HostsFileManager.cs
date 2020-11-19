@@ -175,13 +175,11 @@ namespace mhed.lib
         /// HostsFileManager class constructor.
         /// </summary>
         /// <param name="RunningPlatform">Current running platform.</param>
-        /// <param name="AutoLoad">Read Hosts file automatically.</param>
-        public HostsFileManager(CurrentPlatform RunningPlatform, bool AutoLoad = false)
+        public HostsFileManager(CurrentPlatform RunningPlatform)
         {
             Platform = RunningPlatform;
             FilePath = Platform.HostsFileFullPath;
             Contents = new SortableBindingList<HostsFileEntry>();
-            if (AutoLoad) Load();
         }
     }
 }
