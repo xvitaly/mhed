@@ -391,6 +391,30 @@ namespace mhed.gui
                 MessageBox.Show(AppStrings.AHE_DeleteRowError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        /// <summary>
+        /// Show debug log.
+        /// </summary>
+        private void HelperShowLog()
+        {
+            try
+            {
+                string LogFileName = CurrentApp.LogFileName;
+                if (File.Exists(LogFileName))
+                {
+                    if (ModifierKeys == Keys.Shift) HelperShowFile(LogFileName); else HelperTextEditor(LogFileName);
+                }
+                else
+                {
+                    MessageBox.Show(AppStrings.AHE_LogFileNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExShowLogFile);
+                MessageBox.Show(AppStrings.AHE_ShowLogFileError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         #endregion
 
         #region Form contructors and loaders
@@ -722,7 +746,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuDebugLogItem_Click(object sender, EventArgs e)
         {
-            if (ModifierKeys == Keys.Shift) HelperShowFile(CurrentApp.LogFileName); else HelperTextEditor(CurrentApp.LogFileName);
+            HelperShowLog();
         }
 
         /// <summary>
