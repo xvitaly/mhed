@@ -159,6 +159,9 @@
   <data name="AppDbgExSettingsLoad" xml:space="preserve">
     <value>Failed to import settings from the previous version.</value>
   </data>
+  <data name="AppDbgExShowLogFile" xml:space="preserve">
+    <value>Exception while trying to show debug log file.</value>
+  </data>
   <data name="AppDbgHostsFileDoesNotExists" xml:space="preserve">
     <value>Hosts file does not exists.</value>
   </data>

@@ -187,6 +187,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to show debug log file..
+        /// </summary>
+        internal static string AppDbgExShowLogFile {
+            get {
+                return ResourceManager.GetString("AppDbgExShowLogFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hosts file does not exists..
         /// </summary>
         internal static string AppDbgHostsFileDoesNotExists {
