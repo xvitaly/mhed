@@ -148,10 +148,10 @@ namespace mhed.lib
         /// <summary>
         /// Re-read (refresh) Hosts file from disk.
         /// </summary>
-        public void Refresh()
+        public async void Refresh()
         {
             ClearHostsContents();
-            Load();
+            await ReadHostsFile();
         }
 
         /// <summary>
