@@ -213,4 +213,7 @@
   <data name="AHE_ImportSettingsError" xml:space="preserve">
     <value>Failed to import settings from the previous version of the application! All settings will be reset to default.</value>
   </data>
+  <data name="AHE_LogFileNotFound" xml:space="preserve">
+    <value>The log file could not be found!</value>
+  </data>
 </root>

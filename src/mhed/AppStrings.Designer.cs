@@ -196,6 +196,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The log file could not be found!.
+        /// </summary>
+        internal static string AHE_LogFileNotFound {
+            get {
+                return ResourceManager.GetString("AHE_LogFileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Local admin rights are required to perform the requested action!.
         /// </summary>
         internal static string AHE_NoAdminRights {

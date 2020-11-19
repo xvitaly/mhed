@@ -213,4 +213,7 @@
   <data name="AHE_ImportSettingsError" xml:space="preserve">
     <value>Произошла ошибка во время импортирования настроек из предыдущей версии программы! Параметры будут сброшены на стандартные значения.</value>
   </data>
+  <data name="AHE_LogFileNotFound" xml:space="preserve">
+    <value>Файл журнала работы программы не найден!</value>
+  </data>
 </root>
