@@ -4,7 +4,6 @@
 [![Github downloads](https://img.shields.io/github/downloads/xvitaly/mhed/total.svg?label=GH%20downloads&logo=github&logoColor=white)](https://github.com/xvitaly/mhed/releases)
 [![AppVeyor status](https://ci.appveyor.com/api/projects/status/62popypw8fmmpxsq?svg=true)](https://ci.appveyor.com/project/xvitaly/mhed)
 [![GitHub CI status](https://github.com/xvitaly/mhed/workflows/Linux%20CI/badge.svg?branch=dev)](https://github.com/xvitaly/mhed/actions)
-[![Travis status](https://travis-ci.org/xvitaly/mhed.svg?branch=dev)](https://travis-ci.org/xvitaly/mhed)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/xvitaly/mhed.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/xvitaly/mhed/alerts/)
 [![CodeFactor](https://www.codefactor.io/repository/github/xvitaly/mhed/badge)](https://www.codefactor.io/repository/github/xvitaly/mhed)
 [![GitHub issues](https://img.shields.io/github/issues/xvitaly/mhed.svg?label=issues)](https://github.com/xvitaly/mhed/issues)
