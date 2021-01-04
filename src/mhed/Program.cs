@@ -28,7 +28,7 @@ namespace mhed.gui
     /// <summary>
     /// The main class of the application.
     /// </summary>
-    public static class Program
+    internal static class Program
     {
         /// <summary>
         /// Import settings from the previous version of the application.
@@ -85,7 +85,7 @@ namespace mhed.gui
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        public static void Main()
+        private static void Main()
         {
             using (Mutex Mtx = new Mutex(false, StringsManager.GetMutexName(Properties.Resources.AppInternalName)))
             {
