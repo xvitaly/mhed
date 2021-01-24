@@ -17,7 +17,7 @@
 ; You should have received a copy of the GNU General Public License
 ; along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-#define VERSION GetFileVersion("..\..\src\mhed\bin\Release\mhed.exe")
+#define VERSION GetVersionNumbersString("..\..\src\mhed\bin\Release\mhed.exe")
 #define BASEDIR "..\..\src\mhed"
 #define CI_COMMIT GetEnv('CI_HASH')
 #if CI_COMMIT == ''
@@ -51,7 +51,7 @@ PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=commandline
 ShowLanguageDialog=auto
 ArchitecturesInstallIn64BitMode=x64
-MinVersion=6.1.7601
+MinVersion=6.1sp1
 VersionInfoVersion={#VERSION}
 VersionInfoDescription=Micro Hosts Editor Setup
 VersionInfoCopyright=(c) 2005-2020 EasyCoding Team. All rights reserved.
@@ -106,8 +106,8 @@ Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\mhed.exe"""; Statu
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\NLog.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 
 [UninstallRun]
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\mhed.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\NLog.dll"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\mhed.exe"""; RunOnceId: "NgenMainApp"; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\NLog.dll"""; RunOnceId: "NgenNLog"; Flags: runhidden; Check: IsAdmin(); Components: core
 
 [Code]
 function GetDefRoot(Param: String): String;
