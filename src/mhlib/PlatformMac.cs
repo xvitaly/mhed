@@ -60,7 +60,20 @@ namespace mhed.lib
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public override int StartElevatedProcess(string FileName)
         {
-            throw new PlatformNotSupportedException();
+            // Setting advanced properties...
+            ProcessStartInfo ST = new ProcessStartInfo()
+            {
+                FileName = FileName,
+                Verb = "sudo",
+                WindowStyle = ProcessWindowStyle.Normal,
+                UseShellExecute = true
+            };
+
+            // Starting process...
+            Process NewProcess = Process.Start(ST);
+
+            // Returning PID of created process...
+            return NewProcess.Id;
         }
 
         /// <summary>
