@@ -3,8 +3,8 @@
 rem This file is a part of Micro Hosts Editor project. For more information
 rem visit official site: https://www.easycoding.org/projects/mhed
 rem
-rem Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
-rem Copyright (c) 2005 - 2020 EasyCoding Team.
+rem Copyright (c) 2011 - 2021 EasyCoding Team (ECTeam).
+rem Copyright (c) 2005 - 2021 EasyCoding Team.
 rem
 rem This program is free software: you can redistribute it and/or modify
 rem it under the terms of the GNU General Public License as published by
