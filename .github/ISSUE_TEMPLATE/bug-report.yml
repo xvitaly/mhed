@@ -1,0 +1,86 @@
+#
+# SPDX-FileCopyrightText: 2011-2021 EasyCoding Team
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+
+name: Bug report
+description: Create a new bug report ticket
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: Problem details
+      description: >-
+        Please describe the issue.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: >-
+        Please provide steps how to reproduce this bug.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: >-
+        Tell us what should happen.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Actual behavior
+      description: >-
+        Tell us what happens instead.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Project version
+      description: >-
+        Please specify project version.
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Platform
+      multiple: false
+      options:
+        - Microsoft Windows
+        - GNU/Linux
+        - MacOS
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: OS version
+      description: >
+        Please specify operating system version.
+      placeholder: Windows 10
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Installation type
+      multiple: false
+      options:
+        - EXE installer
+        - 7-Zip archive
+        - Portable version
+        - Self-built version
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Logs
+      placeholder: Please add here any useful logs you want to share with developers.
+      render: text
+    validations:
+      required: false

@@ -1,0 +1,16 @@
+#
+# SPDX-FileCopyrightText: 2011-2021 EasyCoding Team
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+
+name: Feature request
+description: Request a new feature
+labels: [request]
+body:
+  - type: textarea
+    attributes:
+      label: Feature request
+      placeholder: A clear and brief description of what you want to be implemented in future.
+    validations:
+      required: true
