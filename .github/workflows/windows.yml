@@ -1,0 +1,30 @@
+#
+# SPDX-FileCopyrightText: 2011-2021 EasyCoding Team
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+
+name: Windows CI
+
+on:
+  push:
+    branches:
+    - 'master'
+    - 'dev'
+  pull_request:
+    branches:
+    - '*'
+
+jobs:
+  build:
+    name: Build project using .NET Framework
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Configure MSBuild service
+      uses: microsoft/setup-msbuild@v1.0.2
+    - name: Restore nuget dependencies
+      run: nuget restore mhed.sln
+    - name: Build project
+      run: msbuild /p:Configuration=Release mhed.sln
