@@ -1,21 +1,25 @@
-version: 1.0.0.{build}
+#
+# SPDX-FileCopyrightText: 2011-2021 EasyCoding Team
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+
+version: '{build}'
 pull_requests:
   do_not_increment_build_number: true
+branches:
+  only:
+  - master
+  - dev
 image: Visual Studio 2019
 configuration: Release
 platform: Any CPU
 clone_depth: 1
 init:
 - cmd: git config --global core.autocrlf true
-assembly_info:
-  patch: true
-  file: '**\AssemblyInfo.*'
-  assembly_version: '{version}'
-  assembly_file_version: '{version}'
-  assembly_informational_version: '{version}'
 before_build:
 - cmd: >-
-    set PATH=C:\Python38-x64;C:\Python38-x64\Scripts;%PATH%
+    set PATH=C:\Python39-x64;C:\Python39-x64\Scripts;%PATH%
 
     pip3 install sphinx
 
@@ -26,7 +30,7 @@ build:
   verbosity: normal
 after_build:
 - cmd: >-
-    set PATH=C:\Python38-x64;C:\Python38-x64\Scripts;%PATH%
+    set PATH=C:\Python39-x64;C:\Python39-x64\Scripts;%PATH%
 
     set CI_DIR=%APPVEYOR_BUILD_FOLDER%\src\mhed\bin\%CONFIGURATION%
 
@@ -53,6 +57,7 @@ after_build:
     7z a -m0=LZMA2 -mx9 -t7z -x!*.ico -x!NLog.xml packaging\results\snapshot_%CI_HASH%.7z %CI_DIR%\*
 
     "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" packaging\inno\mhed.iss
+test: off
 artifacts:
 - path: packaging\results\snapshot_*.7z
   name: snapshot

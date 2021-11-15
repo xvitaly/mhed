@@ -1,4 +1,10 @@
-﻿[*.cs]
+﻿#
+# SPDX-FileCopyrightText: 2011-2021 EasyCoding Team
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+
+[*.cs]
 
 # CA1031: Do not catch general exception types
 dotnet_diagnostic.CA1031.severity = none
