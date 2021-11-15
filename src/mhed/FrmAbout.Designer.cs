@@ -41,7 +41,7 @@
             // 
             // AHE_AppIcon
             // 
-            this.AHE_AppIcon.Image = global::mhed.gui.Properties.Resources.AppIcon;
+            this.AHE_AppIcon.Image = global::mhed.gui.Properties.Resources.ImageAppLogo;
             resources.ApplyResources(this.AHE_AppIcon, "AHE_AppIcon");
             this.AHE_AppIcon.Name = "AHE_AppIcon";
             this.AHE_AppIcon.TabStop = false;

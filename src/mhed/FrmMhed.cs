@@ -123,7 +123,7 @@ namespace mhed.gui
         /// <param name="NewState">New state boolean.</param>
         private void ChangeStatusBarAppMode()
         {
-            HE_StatusBarAppMode.Image = Properties.Resources.GreenCircle;
+            HE_StatusBarAppMode.Image = Properties.Resources.IconGreenCircle;
             HE_StatusBarAppMode.Text = AppStrings.AHE_AppStatusRO;
         }
         /// <summary>

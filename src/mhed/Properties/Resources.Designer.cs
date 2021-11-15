@@ -88,16 +88,6 @@ namespace mhed.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap AppIcon {
-            get {
-                object obj = ResourceManager.GetObject("AppIcon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to mhed.
         /// </summary>
         internal static string AppInternalName {
@@ -118,9 +108,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Bug {
+        internal static System.Drawing.Bitmap IconBug {
             get {
-                object obj = ResourceManager.GetObject("Bug", resourceCulture);
+                object obj = ResourceManager.GetObject("IconBug", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -128,9 +118,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Copy {
+        internal static System.Drawing.Bitmap IconCopy {
             get {
-                object obj = ResourceManager.GetObject("Copy", resourceCulture);
+                object obj = ResourceManager.GetObject("IconCopy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -138,9 +128,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cut {
+        internal static System.Drawing.Bitmap IconCut {
             get {
-                object obj = ResourceManager.GetObject("Cut", resourceCulture);
+                object obj = ResourceManager.GetObject("IconCut", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -148,9 +138,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Delete {
+        internal static System.Drawing.Bitmap IconDelete {
             get {
-                object obj = ResourceManager.GetObject("Delete", resourceCulture);
+                object obj = ResourceManager.GetObject("IconDelete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -158,9 +148,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Exit {
+        internal static System.Drawing.Bitmap IconExit {
             get {
-                object obj = ResourceManager.GetObject("Exit", resourceCulture);
+                object obj = ResourceManager.GetObject("IconExit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -168,9 +158,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Globe {
+        internal static System.Drawing.Bitmap IconGlobe {
             get {
-                object obj = ResourceManager.GetObject("Globe", resourceCulture);
+                object obj = ResourceManager.GetObject("IconGlobe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -178,9 +168,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap GreenCircle {
+        internal static System.Drawing.Bitmap IconGreenCircle {
             get {
-                object obj = ResourceManager.GetObject("GreenCircle", resourceCulture);
+                object obj = ResourceManager.GetObject("IconGreenCircle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -188,9 +178,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Help {
+        internal static System.Drawing.Bitmap IconHelp {
             get {
-                object obj = ResourceManager.GetObject("Help", resourceCulture);
+                object obj = ResourceManager.GetObject("IconHelp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -198,9 +188,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Info {
+        internal static System.Drawing.Bitmap IconInfo {
             get {
-                object obj = ResourceManager.GetObject("Info", resourceCulture);
+                object obj = ResourceManager.GetObject("IconInfo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -208,9 +198,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Logs {
+        internal static System.Drawing.Bitmap IconLogs {
             get {
-                object obj = ResourceManager.GetObject("Logs", resourceCulture);
+                object obj = ResourceManager.GetObject("IconLogs", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -218,9 +208,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Options {
+        internal static System.Drawing.Bitmap IconOptions {
             get {
-                object obj = ResourceManager.GetObject("Options", resourceCulture);
+                object obj = ResourceManager.GetObject("IconOptions", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -228,9 +218,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Paste {
+        internal static System.Drawing.Bitmap IconPaste {
             get {
-                object obj = ResourceManager.GetObject("Paste", resourceCulture);
+                object obj = ResourceManager.GetObject("IconPaste", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -238,9 +228,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RedCircle {
+        internal static System.Drawing.Bitmap IconRedCircle {
             get {
-                object obj = ResourceManager.GetObject("RedCircle", resourceCulture);
+                object obj = ResourceManager.GetObject("IconRedCircle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -248,9 +238,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Refresh {
+        internal static System.Drawing.Bitmap IconRefresh {
             get {
-                object obj = ResourceManager.GetObject("Refresh", resourceCulture);
+                object obj = ResourceManager.GetObject("IconRefresh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -258,9 +248,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Restore {
+        internal static System.Drawing.Bitmap IconRestore {
             get {
-                object obj = ResourceManager.GetObject("Restore", resourceCulture);
+                object obj = ResourceManager.GetObject("IconRestore", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -268,9 +258,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Save {
+        internal static System.Drawing.Bitmap IconSave {
             get {
-                object obj = ResourceManager.GetObject("Save", resourceCulture);
+                object obj = ResourceManager.GetObject("IconSave", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -278,9 +268,9 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Search {
+        internal static System.Drawing.Bitmap IconSearch {
             get {
-                object obj = ResourceManager.GetObject("Search", resourceCulture);
+                object obj = ResourceManager.GetObject("IconSearch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -288,9 +278,19 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TextEditor {
+        internal static System.Drawing.Bitmap IconTextEditor {
             get {
-                object obj = ResourceManager.GetObject("TextEditor", resourceCulture);
+                object obj = ResourceManager.GetObject("IconTextEditor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImageAppLogo {
+            get {
+                object obj = ResourceManager.GetObject("ImageAppLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
