@@ -1,10 +1,23 @@
+#
+# SPDX-FileCopyrightText: 2011-2021 EasyCoding Team
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+
 name: Linux CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+    - 'master'
+    - 'dev'
+  pull_request:
+    branches:
+    - '*'
 
 jobs:
   build:
-
+    name: Build project using Mono
     runs-on: ubuntu-latest
 
     steps:
