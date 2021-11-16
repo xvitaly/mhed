@@ -41,7 +41,6 @@ namespace mhed.gui
         private void FrmAbout_Load(object sender, EventArgs e)
         {
             // Adding information about product version and copyrights...
-            Text = String.Format(Text, CurrentApp.AppProduct);
             AHE_AppName.Text = CurrentApp.AppProduct;
             #if DEBUG
             AHE_AppName.Text += " DEBUG";

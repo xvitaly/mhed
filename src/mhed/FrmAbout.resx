@@ -383,7 +383,7 @@ Micro Hosts Editor's icon by GNOME icon artists. Licensed under the terms of GNU
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>About {0}...</value>
+    <value>About</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmAbout</value>
