@@ -13,7 +13,7 @@ namespace mhed.gui
     /// <summary>
     /// "About" form class.
     /// </summary>
-    partial class FrmAbout : Form
+    public partial class FrmAbout : Form
     {
         /// <summary>
         /// FrmAbout class constructor.
