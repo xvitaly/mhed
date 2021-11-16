@@ -48,7 +48,7 @@ namespace mhed.lib
         public override int StartElevatedProcess(string FileName)
         {
             // Setting advanced properties...
-            ProcessStartInfo ST = new ProcessStartInfo()
+            ProcessStartInfo ST = new ProcessStartInfo
             {
                 FileName = FileName,
                 Verb = "runas",
