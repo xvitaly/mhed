@@ -14,21 +14,21 @@ namespace mhed.lib
         /// <summary>
         /// Successful exit without any errors.
         /// </summary>
-        public const int Success = 0;
+        public static int Success => 0;
 
         /// <summary>
         /// Application is already running.
         /// </summary>
-        public const int AppAlreadyRunning = 7;
+        public static int AppAlreadyRunning => 7;
 
         /// <summary>
         /// Core library version missmatch.
         /// </summary>
-        public const int CoreLibVersionMissmatch = 8;
+        public static int CoreLibVersionMissmatch => 8;
 
         /// <summary>
         /// Hosts file does not exists.
         /// </summary>
-        public const int HostsFileDoesNotExists = 9;
+        public static int HostsFileDoesNotExists => 9;
     }
 }
