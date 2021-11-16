@@ -42,9 +42,6 @@ namespace mhed.gui
         {
             // Adding information about product version and copyrights...
             AHE_AppName.Text = CurrentApp.AppProduct;
-            #if DEBUG
-            AHE_AppName.Text += " DEBUG";
-            #endif
             AHE_Version.Text = String.Format("Version: {0}", CurrentApp.AppVersion);
             AHE_Copyright.Text = CurrentApp.AppCopyright;
             AHE_CompanyName.Text = CurrentApp.AppCompany;
