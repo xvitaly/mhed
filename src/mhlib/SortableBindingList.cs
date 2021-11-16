@@ -24,12 +24,12 @@ namespace mhed.lib
         /// <summary>
         /// Stores the property descriptor that is used for sorting the list.
         /// </summary>
-        private PropertyDescriptor SortProperty = null;
+        private PropertyDescriptor SortProperty;
 
         /// <summary>
         /// Stores a value indicating whether the list is sorted.
         /// </summary>
-        private bool IsSorted = false;
+        private bool IsSorted;
 
         /// <summary>
         /// Compares two items from the list.
