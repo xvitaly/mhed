@@ -462,7 +462,7 @@ namespace mhed.gui
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.AHE_ExitConfirmation, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes);
+                e.Cancel = Properties.Settings.Default.ConfirmExit && MessageBox.Show(String.Format(AppStrings.AHE_ExitConfirmation, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes;
             }
         }
 
