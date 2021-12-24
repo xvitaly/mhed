@@ -5,28 +5,28 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Micro Hosts Editor 1.0\n"
+"Project-Id-Version: Micro Hosts Editor 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 18:06+0100\n"
-"PO-Revision-Date: 2020-10-26 18:07+0100\n"
+"POT-Creation-Date: 2021-12-24 13:36+0100\n"
+"PO-Revision-Date: 2021-12-24 13:43+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: ../../source/legal.rst:23
+#: ../../source/legal.rst:10
 msgid "Legal"
 msgstr "Правовая информация"
 
-#: ../../source/legal.rst:29
+#: ../../source/legal.rst:16
 msgid "Icons licensing"
 msgstr "Лицензирование значков"
 
@@ -237,7 +237,7 @@ msgstr ""
 msgid "TextEditor.png"
 msgstr ""
 
-#: ../../source/legal.rst:53
+#: ../../source/legal.rst:40
 msgid "Libraries licensing"
 msgstr "Лицензирование библиотек"
 
@@ -269,15 +269,15 @@ msgstr ""
 msgid "`GitHub page <https://github.com/NLog/NLog>`__"
 msgstr ""
 
-#: ../../source/legal.rst:64
+#: ../../source/legal.rst:51
 msgid "Trademarks"
 msgstr "Торговые марки"
 
-#: ../../source/legal.rst:67
+#: ../../source/legal.rst:54
 msgid "Microsoft"
 msgstr ""
 
-#: ../../source/legal.rst:69
+#: ../../source/legal.rst:56
 msgid ""
 "Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
 "Corporation."
@@ -285,10 +285,10 @@ msgstr ""
 "Microsoft, Windows являются торговыми марками и/или зарегистрированными "
 "торговыми марками Корпорации Microsoft."
 
-#: ../../source/legal.rst:72
+#: ../../source/legal.rst:59
 msgid "Other"
 msgstr "Прочие"
 
-#: ../../source/legal.rst:74
+#: ../../source/legal.rst:61
 msgid "All other trademarks are property of their respective owners."
 msgstr "Все прочие торговые марки являются собственностью их владельцев."

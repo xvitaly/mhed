@@ -5,51 +5,51 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Micro Hosts Editor 1.0\n"
+"Project-Id-Version: Micro Hosts Editor 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-10 14:43+0200\n"
-"PO-Revision-Date: 2020-10-10 15:10+0200\n"
+"POT-Creation-Date: 2021-12-24 13:36+0100\n"
+"PO-Revision-Date: 2021-12-24 13:43+0100\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
-"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"Language: ru\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: ../../source/settings.rst:23
+#: ../../source/settings.rst:10
 msgid "Program settings"
 msgstr "Настройки программы"
 
-#: ../../source/settings.rst:29
+#: ../../source/settings.rst:16
 msgid "Common settings"
 msgstr "Общие настройки программы"
 
-#: ../../source/settings.rst:31
+#: ../../source/settings.rst:18
 msgid "**Confirm exit** -- enable or disable exit confirmation dialog."
 msgstr ""
 "**Подтверждать выход из программы** -- включает или отключает запрос на "
 "подтверждение выхода из программы."
 
-#: ../../source/settings.rst:32
+#: ../../source/settings.rst:19
 msgid ""
 "**Preserve form size and location** -- if enabled, will automatically save "
 "and restore the main windows size and screen location."
 msgstr ""
-"**Сохранять размер и позицию главного окна** -- если включена, то "
-"позволяет сохранять и автоматически восстанавливать при запуске размер и "
-"позицию на экране главного окна программы."
+"**Сохранять размер и позицию главного окна** -- если включена, то позволяет "
+"сохранять и автоматически восстанавливать при запуске размер и позицию на "
+"экране главного окна программы."
 
-#: ../../source/settings.rst:38
+#: ../../source/settings.rst:25
 msgid "Advances settings"
 msgstr "Дополнительные настройки программы"
 
-#: ../../source/settings.rst:40
+#: ../../source/settings.rst:27
 msgid ""
 "**Text editor binary** -- choose a text editor to load and edit text files "
 "instead of using the default one. Click the **Browse** button and find its "

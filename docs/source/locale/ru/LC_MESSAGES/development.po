@@ -5,48 +5,48 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Micro Hosts Editor 1.0\n"
+"Project-Id-Version: Micro Hosts Editor 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-28 10:19+0100\n"
-"PO-Revision-Date: 2020-10-28 10:29+0100\n"
+"POT-Creation-Date: 2021-12-24 13:36+0100\n"
+"PO-Revision-Date: 2021-12-24 13:41+0100\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
-"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"Language: ru\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: ../../source/development.rst:23
+#: ../../source/development.rst:10
 msgid "Development"
 msgstr "Разработка"
 
-#: ../../source/development.rst:29
+#: ../../source/development.rst:16
 msgid "Building from sources"
 msgstr "Сборка из исходников"
 
-#: ../../source/development.rst:31
+#: ../../source/development.rst:18
 msgid "There are two supported ways to build application from sources:"
 msgstr "Существует два поддерживаемых способа сборки программы из исходников:"
 
-#: ../../source/development.rst:33
+#: ../../source/development.rst:20
 msgid "fully automatic build;"
 msgstr "полностью автоматический;"
 
-#: ../../source/development.rst:34
+#: ../../source/development.rst:21
 msgid "manual build."
 msgstr "ручной."
 
-#: ../../source/development.rst:37
+#: ../../source/development.rst:24
 msgid "Preparing to build"
 msgstr "Подготовка к сборке"
 
-#: ../../source/development.rst:39
+#: ../../source/development.rst:26
 msgid ""
 "Clone this repository or download the source tarball from the `releases page "
 "<https://github.com/xvitaly/mhed/releases>`_."
@@ -55,16 +55,16 @@ msgstr ""
 "либо скачайте архив из `архива релизов <https://github.com/xvitaly/mhed/"
 "releases>`_."
 
-#: ../../source/development.rst:40
+#: ../../source/development.rst:27
 msgid "Install pre-requirements."
 msgstr ""
 "Установите дополнительные компоненты, необходимые для сборки (зависимости)."
 
-#: ../../source/development.rst:43
+#: ../../source/development.rst:30
 msgid "Installing pre-requirements"
 msgstr "Установка зависимостей"
 
-#: ../../source/development.rst:45
+#: ../../source/development.rst:32
 msgid ""
 "First you will need to install C# complier, Microsoft .NET Framework SDK and "
 "other required tools (all steps are mandatory):"
@@ -73,7 +73,7 @@ msgstr ""
 "комплект разработчика Microsoft .NET Framework и другие важные программные "
 "компоненты (все шаги являются обязательными):"
 
-#: ../../source/development.rst:47
+#: ../../source/development.rst:34
 msgid ""
 "download the `Microsoft Visual Studio 2019 Community <https://visualstudio."
 "microsoft.com/vs/community/>`_ installer and run it;"
@@ -81,7 +81,7 @@ msgstr ""
 "скачайте программу установки `Microsoft Visual Studio 2019 Community "
 "<https://visualstudio.microsoft.com/vs/community/>`_ и запустите её;"
 
-#: ../../source/development.rst:48
+#: ../../source/development.rst:35
 msgid ""
 "select the **Microsoft Visual Studio 2019 Community**, enable the **Classic ."
 "NET application development** component, then switch to the **Additional "
@@ -92,11 +92,11 @@ msgstr ""
 "страницу **Дополнительные компоненты** и отметьте флажком **Пакетный "
 "менеджер NuGet**;"
 
-#: ../../source/development.rst:49
+#: ../../source/development.rst:36
 msgid "install the Microsoft Visual Studio 2019 Community;"
 msgstr "установите Microsoft Visual Studio 2019 Community;"
 
-#: ../../source/development.rst:50
+#: ../../source/development.rst:37
 msgid ""
 "download the latest version of `NuGet CLI <https://www.nuget.org/"
 "downloads>`_ and copy its executable to any directory, located in the ``%PATH"
@@ -106,15 +106,15 @@ msgstr ""
 "downloads>`_ и скопируйте EXE-файл в любой каталог, указанный внутри "
 "переменной окружения ``%PATH%``;"
 
-#: ../../source/development.rst:51
+#: ../../source/development.rst:38
 msgid ""
-"install `Doxygen for Windows <http://www.doxygen.nl/download.html>`_ to the "
+"install `Doxygen for Windows <http://www.doxygen.nl/download.html>`_ to "
 "default directory;"
 msgstr ""
 "установите `Doxygen для Windows <http://www.doxygen.nl/download.html>`_ в "
 "каталог по умолчанию;"
 
-#: ../../source/development.rst:52
+#: ../../source/development.rst:39
 msgid ""
 "download and install `HTML Help Workshop <https://www.microsoft.com/en-us/"
 "download/details.aspx?id=21138>`_;"
@@ -122,73 +122,73 @@ msgstr ""
 "скачайте и установите `HTML Help Workshop <https://www.microsoft.com/en-us/"
 "download/details.aspx?id=21138>`_;"
 
-#: ../../source/development.rst:53
+#: ../../source/development.rst:40
 msgid ""
-"download and install `Gpg4Win <https://www.gpg4win.org/>`_ to the default "
+"download and install `Gpg4Win <https://www.gpg4win.org/>`_ to default "
 "directory;"
 msgstr ""
 "скачайте и установите `Gpg4Win <https://www.gpg4win.org/>`_ в каталог по "
 "умолчанию;"
 
-#: ../../source/development.rst:54
+#: ../../source/development.rst:41
 msgid ""
-"download and install `Python 3.7 for Windows <https://www.python.org/"
-"downloads/windows/>`_;"
+"download and install `Python 3 for Windows <https://www.python.org/downloads/"
+"windows/>`_;"
 msgstr ""
-"скачайте и установите `Python 3.7 для Windows <https://www.python.org/"
+"скачайте и установите `Python 3 для Windows <https://www.python.org/"
 "downloads/windows/>`_;"
 
-#: ../../source/development.rst:55
+#: ../../source/development.rst:42
 msgid ""
 "open terminal and install Sphinx-doc using PIP: ``pip3 install sphinx``;"
 msgstr ""
 "откройте окно командной строки и установите Sphinx-doc при помощи пакетного "
 "менеджера Python -- PIP: ``pip3 install sphinx``;"
 
-#: ../../source/development.rst:56
+#: ../../source/development.rst:43
 msgid ""
 "download and install `7-Zip for Windows <https://www.7-zip.org/download."
-"html>`_ to the default directory;"
+"html>`_ to default directory;"
 msgstr ""
 "скачайте и установите `7-Zip для Windows <https://www.7-zip.org/download."
 "html>`_ в каталог по умолчанию;"
 
-#: ../../source/development.rst:57
+#: ../../source/development.rst:44
 msgid ""
 "download and install `InnoSetup 6 <http://www.jrsoftware.org/isdl.php>`_ to "
-"the default directory."
+"default directory."
 msgstr ""
 "скачайте и установите `InnoSetup 6 <http://www.jrsoftware.org/isdl.php>`_ в "
 "каталог по умолчанию."
 
-#: ../../source/development.rst:60
+#: ../../source/development.rst:47
 msgid "Automatic build"
 msgstr "Автоматическая сборка"
 
-#: ../../source/development.rst:62
+#: ../../source/development.rst:49
 msgid "If you want to use automatic build, follow these steps:"
 msgstr ""
 "Если вы хотите использовать автоматическую сборку, просто выполните "
 "следующие действия:"
 
-#: ../../source/development.rst:64
+#: ../../source/development.rst:51
 msgid "install pre-requirements;"
 msgstr "установите все указанные выше зависимости;"
 
-#: ../../source/development.rst:65
+#: ../../source/development.rst:52
 msgid "double click on the ``packaging/build_win.cmd`` script."
 msgstr ""
 "дважды кликните в Проводнике Windows по файлу ``packaging/build_win.cmd``."
 
-#: ../../source/development.rst:67 ../../source/development.rst:94
+#: ../../source/development.rst:54 ../../source/development.rst:81
 msgid "You will find results in the ``packaging/results`` directory."
 msgstr "Результат сборки можно найти в каталоге ``packaging/results``."
 
-#: ../../source/development.rst:70
+#: ../../source/development.rst:57
 msgid "Manual build"
 msgstr "Ручная сборка"
 
-#: ../../source/development.rst:72
+#: ../../source/development.rst:59
 msgid ""
 "If you don't want to use automatic method, you can build this project "
 "manually."
@@ -196,17 +196,17 @@ msgstr ""
 "Если вы не желаете использовать автоматическую сборку, можно выполнить всё "
 "вручную."
 
-#: ../../source/development.rst:75
+#: ../../source/development.rst:62
 msgid "Building main project"
 msgstr "Сборка основного проекта"
 
-#: ../../source/development.rst:77
+#: ../../source/development.rst:64
 msgid "Start the Microsoft Visual Studio 2019 Community."
 msgstr ""
 "Запустите интегрированную среду разработки Microsoft Visual Studio 2019 "
 "Community."
 
-#: ../../source/development.rst:78
+#: ../../source/development.rst:65
 msgid ""
 "**File** -- **Open** -- **Project or solution**, select ``mhed.sln``, then "
 "press **Open** button."
@@ -214,7 +214,7 @@ msgstr ""
 "**Файл** -- **Открыть** -- **Проект или решение**, выберите ``mhed.sln``, "
 "затем нажмите кнопку **Открыть**."
 
-#: ../../source/development.rst:79
+#: ../../source/development.rst:66
 msgid ""
 "**Tools** -- **NuGet Package Manager** -- **Manage NuGet packages for "
 "Solution**, press **Restore** button."
@@ -222,7 +222,7 @@ msgstr ""
 "**Инструменты** -- **Пакетный менеджер NuGet** -- **Управление пакетами "
 "NuGet для решения**, нажмите кнопку **Восстановить**."
 
-#: ../../source/development.rst:80
+#: ../../source/development.rst:67
 msgid ""
 "**Build** -- **Configuration manager** -- **Active solution configuration** "
 "-- **Release**, then press **Close** button."
@@ -230,31 +230,31 @@ msgstr ""
 "**Построение** -- **Менеджер конфигураций** -- **Активная конфигурация** -- "
 "**Release**, затем нажмите кнопку **Закрыть**."
 
-#: ../../source/development.rst:81
+#: ../../source/development.rst:68
 msgid "**Build** -- **Build solution**."
 msgstr "**Построение** -- **Построить решение**."
 
-#: ../../source/development.rst:83
+#: ../../source/development.rst:70
 msgid "You will find results in the ``src/mhed/bin/Release`` directory."
 msgstr "Результат сборки можно найти в каталоге ``src/mhed/bin/Release``."
 
-#: ../../source/development.rst:86
+#: ../../source/development.rst:73
 msgid "Building installer"
 msgstr "Сборка программы установки"
 
-#: ../../source/development.rst:88
+#: ../../source/development.rst:75
 msgid "Run InnoSetup Compiler."
 msgstr "Запустите InnoSetup Compiler."
 
-#: ../../source/development.rst:89
+#: ../../source/development.rst:76
 msgid "Open the ``packaging/inno/mhed.iss`` file."
 msgstr "Откройте файл ``packaging/inno/mhed.iss``."
 
-#: ../../source/development.rst:90
+#: ../../source/development.rst:77
 msgid "**Build** -- **Compile**."
 msgstr "Выберите **Build** -- **Compile**."
 
-#: ../../source/development.rst:92
+#: ../../source/development.rst:79
 msgid ""
 "If the InnoSetup will complain about missing ``*.sig`` files, you will need "
 "to manually sign (use detached signatures) compiled binaries with GnuPG by "
@@ -265,56 +265,56 @@ msgstr ""
 "Gpg4Win) собранные исполняемые файлы (используйте только отсоединённые "
 "подписи), либо просто удалить данные строки из сборочного скрипта."
 
-#: ../../source/development.rst:100
+#: ../../source/development.rst:87
 msgid "Updates database documentation"
 msgstr "Документация базы обновлений"
 
-#: ../../source/development.rst:102
+#: ../../source/development.rst:89
 msgid "The original source file is located in ``assets/updates.xml``."
 msgstr "Исходный файл ``assets/updates.xml``."
 
-#: ../../source/development.rst:105
+#: ../../source/development.rst:92
 msgid "Properties"
 msgstr "Доступные свойства"
 
-#: ../../source/development.rst:107
+#: ../../source/development.rst:94
 msgid "Level 0:"
 msgstr "Уровень 0:"
 
-#: ../../source/development.rst:109
+#: ../../source/development.rst:96
 msgid "``Updates`` -- XML root element."
 msgstr "``Updates`` -- корневой элемент XML."
 
-#: ../../source/development.rst:111
+#: ../../source/development.rst:98
 msgid "Level 1:"
 msgstr "Уровень 1:"
 
-#: ../../source/development.rst:113
+#: ../../source/development.rst:100
 msgid "``Application`` -- sub-element with application update metadata."
 msgstr "``Application`` -- содержит метаданные обновления приложения."
 
-#: ../../source/development.rst:115
+#: ../../source/development.rst:102
 msgid "Level 2:"
 msgstr "Уровень 2:"
 
-#: ../../source/development.rst:117
+#: ../../source/development.rst:104
 msgid "``Version`` -- application version;"
 msgstr "``Version`` -- версия приложения;"
 
-#: ../../source/development.rst:118
+#: ../../source/development.rst:105
 msgid "``Info`` -- changelog or release notes URL;"
 msgstr ""
 "``Info`` -- гиперссылка, указывающая на страницу с информацией о релизе;"
 
-#: ../../source/development.rst:119
+#: ../../source/development.rst:106
 msgid "``URL`` -- direct download URL (no redirects are allowed);"
 msgstr "``URL`` -- URL для загрузки (любые редиректы запрещены);"
 
-#: ../../source/development.rst:120
+#: ../../source/development.rst:107
 msgid "``Hash`` -- download file MD5 hash (**deprecated**);"
 msgstr ""
 "``Hash`` -- MD5 хеш файла обновления (**устаревшее, не используется**);"
 
-#: ../../source/development.rst:121
+#: ../../source/development.rst:108
 msgid "``Hash2`` -- download file SHA2 (SHA-512) hash."
 msgstr "``Hash2`` -- SHA2 (SHA-512) хеш файла файла обновления."

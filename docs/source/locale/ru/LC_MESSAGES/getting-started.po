@@ -5,32 +5,32 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Micro Hosts Editor 1.0\n"
+"Project-Id-Version: Micro Hosts Editor 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-16 15:14+0100\n"
-"PO-Revision-Date: 2020-11-16 15:20+0100\n"
+"POT-Creation-Date: 2021-12-24 13:36+0100\n"
+"PO-Revision-Date: 2021-12-24 13:42+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: ../../source/getting-started.rst:23
+#: ../../source/getting-started.rst:10
 msgid "Getting started"
 msgstr "Приступая к работе"
 
-#: ../../source/getting-started.rst:29
+#: ../../source/getting-started.rst:16
 msgid "Starting program"
 msgstr "Запуск программы"
 
-#: ../../source/getting-started.rst:31
+#: ../../source/getting-started.rst:18
 msgid ""
 "You can launch Micro Hosts Editor from the Start menu directly after the "
 "installation: **Start** -- **Programs** -- **Micro Hosts Editor** -- **Micro "
@@ -39,25 +39,25 @@ msgstr ""
 "Запустить программу можно сразу после установки через меню **Пуск** -- "
 "**Программы** -- **Micro Hosts Editor** -- **Micro Hosts Editor**."
 
-#: ../../source/getting-started.rst:33
+#: ../../source/getting-started.rst:20
 msgid ""
 "Micro Hosts Editor will automatically detect and use system default language."
 msgstr ""
 "Micro Hosts Editor автоматически выбирает язык в зависимости от региональных "
 "настроек операционной системы."
 
-#: ../../source/getting-started.rst:39
+#: ../../source/getting-started.rst:26
 msgid "Admin permissions"
 msgstr "Работа с повышенными правами"
 
-#: ../../source/getting-started.rst:41
+#: ../../source/getting-started.rst:28
 msgid ""
 "Micro Hosts Editor can be started with or without administrator user rights."
 msgstr ""
 "Micro Hosts Editor может быть запущена как с правами локального "
 "администратора, так и без них."
 
-#: ../../source/getting-started.rst:43
+#: ../../source/getting-started.rst:30
 msgid ""
 "When started as a regular user, it will work in read-only mode because only "
 "members of the Administrators user group can edit the Hosts file."
@@ -66,7 +66,7 @@ msgstr ""
 "работать в режиме \"только чтение\", т.к. только участники группы "
 "Администраторы могут редактировать файл Hosts."
 
-#: ../../source/getting-started.rst:45
+#: ../../source/getting-started.rst:32
 msgid ""
 "If you want to edit the Hosts file, you will need to run this program with "
 "administrator user rights. Right-click on the Micro Hosts Editor shortcut in "
@@ -79,33 +79,33 @@ msgstr ""
 "и из контекстного меню выберите пункт **Запуск от имени администратора**, "
 "затем подтвердите своё намерение в появившемся окне Windows UAC."
 
-#: ../../source/getting-started.rst:51
+#: ../../source/getting-started.rst:38
 msgid "Startup actions"
 msgstr "Действия, выполняемые при запуске"
 
-#: ../../source/getting-started.rst:53
+#: ../../source/getting-started.rst:40
 msgid ""
 "The following actions will be performed on Micro Hosts Editor's startup:"
 msgstr ""
 "Следующие действия выполняются автоматически при запуске Micro Hosts Editor:"
 
-#: ../../source/getting-started.rst:55
+#: ../../source/getting-started.rst:42
 msgid "getting Hosts file path;"
 msgstr "получение пути к используемому файлу Hosts;"
 
-#: ../../source/getting-started.rst:56
+#: ../../source/getting-started.rst:43
 msgid "checking if the Hosts file exists;"
 msgstr "проверка на существование файла Hosts;"
 
-#: ../../source/getting-started.rst:57
+#: ../../source/getting-started.rst:44
 msgid "performing internal startup actions;"
 msgstr "выполнение внутренних процедур инициализации;"
 
-#: ../../source/getting-started.rst:58
+#: ../../source/getting-started.rst:45
 msgid "creating user-friendly GUI."
 msgstr "создание графического интерфейса пользователя."
 
-#: ../../source/getting-started.rst:60
+#: ../../source/getting-started.rst:47
 msgid ""
 "If the program cannot find path to the Hosts file in the Windows Registry "
 "(only on Microsoft Windows platform), it will use the default well-known "
@@ -115,11 +115,11 @@ msgstr ""
 "(только для платформы Microsoft Windows), она продолжит поиск в стандартных "
 "известных каталогах."
 
-#: ../../source/getting-started.rst:66
+#: ../../source/getting-started.rst:53
 msgid "Data files storage"
 msgstr "Хранение файлов программы"
 
-#: ../../source/getting-started.rst:68
+#: ../../source/getting-started.rst:55
 msgid ""
 "All program settings are stored in the ``%LOCALAPPDATA%\\EasyCoding_Team`` "
 "directory (each subdirectory for every version)."
@@ -127,15 +127,15 @@ msgstr ""
 "Настройки программы хранятся в каталоге ``%LOCALAPPDATA%\\EasyCoding_Team``, "
 "для каждой версии отдельно."
 
-#: ../../source/getting-started.rst:70
-msgid "Logs -- ``%TEMP%\\mhed``."
-msgstr "Журналы работы -- ``%TEMP%\\mhed``."
+#: ../../source/getting-started.rst:57
+msgid "Logs -- ``%LOCALAPPDATA%\\mhed\\logs``."
+msgstr "Журналы работы -- ``%LOCALAPPDATA%\\mhed``."
 
-#: ../../source/getting-started.rst:76
+#: ../../source/getting-started.rst:63
 msgid "Uninstalling program"
 msgstr "Удаление программы"
 
-#: ../../source/getting-started.rst:78
+#: ../../source/getting-started.rst:65
 msgid ""
 "If you want to uninstall Micro Hosts Editor from your compuler, use "
 "**Control panel** -- **Programs and components** -- **Micro Hosts Editor** "
@@ -145,7 +145,7 @@ msgstr ""
 "через **Панель управления** -- **Программы и компоненты** -- **Micro Hosts "
 "Editor** -- **Удалить**."
 
-#: ../../source/getting-started.rst:80
+#: ../../source/getting-started.rst:67
 msgid ""
 "Uninstaller will automatically remove all program files, shortcuts, registry "
 "entries, but will save created by user :ref:`data files <gs-datafiles>`. You "
