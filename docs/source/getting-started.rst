@@ -54,7 +54,7 @@ Data files storage
 
 All program settings are stored in the ``%LOCALAPPDATA%\EasyCoding_Team`` directory (each subdirectory for every version).
 
-Logs -- ``%TEMP%\mhed``.
+Logs -- ``%LOCALAPPDATA%\mhed\logs``.
 
 .. index:: removing program, uninstalling program
 .. _gs-uninstall:
