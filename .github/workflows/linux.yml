@@ -13,20 +13,25 @@ on:
     - 'dev'
   pull_request:
     branches:
-    - '*'
+    - 'master'
+    - 'dev'
 
 jobs:
   build:
     name: Build project using Mono
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Install nuget
+    - name: Fetching sources
+      uses: actions/checkout@v2
+    - name: Updating apt package metadata
       run: |
         sudo apt-get update
+    - name: Installing NuGet package manager
+      run: |
         sudo apt-get -y install nuget
-    - name: Restore nuget dependencies
-      run: nuget restore mhed.sln
-    - name: Build project
-      run: msbuild /p:Configuration=Release mhed.sln
+    - name: Restoring dependencies with NuGet
+      run: |
+        nuget restore mhed.sln
+    - name: Building project with MSBuild
+      run: |
+        msbuild /p:Configuration=Release mhed.sln

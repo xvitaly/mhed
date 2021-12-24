@@ -13,18 +13,21 @@ on:
     - 'dev'
   pull_request:
     branches:
-    - '*'
+    - 'master'
+    - 'dev'
 
 jobs:
   build:
     name: Build project using .NET Framework
     runs-on: windows-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Configure MSBuild service
-      uses: microsoft/setup-msbuild@v1.0.2
-    - name: Restore nuget dependencies
-      run: nuget restore mhed.sln
-    - name: Build project
-      run: msbuild /p:Configuration=Release mhed.sln
+    - name: Fetching sources
+      uses: actions/checkout@v2
+    - name: Configuring MSBuild service
+      uses: microsoft/setup-msbuild@v1.1
+    - name: Restoring dependencies with NuGet
+      run: |
+        nuget restore mhed.sln
+    - name: Building project with MSBuild
+      run: |
+        msbuild /p:Configuration=Release mhed.sln
