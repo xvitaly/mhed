@@ -196,7 +196,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The log file could not be found!.
+        ///   Looks up a localized string similar to The log file is empty or doesn&apos;t exist!.
         /// </summary>
         internal static string AHE_LogFileNotFound {
             get {

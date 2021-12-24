@@ -214,7 +214,7 @@
     <value>Произошла ошибка во время импортирования настроек из предыдущей версии программы! Параметры будут сброшены на стандартные значения.</value>
   </data>
   <data name="AHE_LogFileNotFound" xml:space="preserve">
-    <value>Файл журнала работы программы не найден!</value>
+    <value>Файл журнала работы программы пуст, либо не существует!</value>
   </data>
   <data name="AHE_ShowLogFileError" xml:space="preserve">
     <value>Не удалось отобразить отладочный журнал программы!</value>
