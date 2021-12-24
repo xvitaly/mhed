@@ -1144,7 +1144,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Micro Hosts Editor (version {0})</value>
+    <value>Micro Hosts Editor</value>
   </data>
   <data name="&gt;&gt;HE_ToolbarRefreshButton.Name" xml:space="preserve">
     <value>HE_ToolbarRefreshButton</value>

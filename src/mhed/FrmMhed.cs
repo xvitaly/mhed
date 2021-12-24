@@ -165,9 +165,6 @@ namespace mhed.gui
         /// </summary>
         private void SetAppStrings()
         {
-            // Add application version and platform name to form's title...
-            Text = String.Format(Text, CurrentApp.AppVersion);
-
             // Add Hosts file path to the status bar...
             HE_StatusBarHostsLocation.Text = App.HostsFile.FilePath;
         }
