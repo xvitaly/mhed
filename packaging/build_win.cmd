@@ -9,7 +9,7 @@ rem
 title Building Micro Hosts Editor release binaries...
 
 set GPGKEY=A989AAAA
-set RELVER=100
+set RELVER=110
 
 echo Removing previous build results...
 if exist results rd /S /Q results
