@@ -416,7 +416,7 @@ namespace mhed.gui
                 }
                 else
                 {
-                    MessageBox.Show(AppStrings.AHE_LogFileNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.AHE_LogFileNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception Ex)
