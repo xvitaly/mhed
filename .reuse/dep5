@@ -1,0 +1,152 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: mhed
+Upstream-Contact: EasyCoding Team
+Source: https://github.com/xvitaly/mhed
+
+Files: .github/*.md
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: assets/icons/bug.png
+Copyright: 2011 Asher
+License: CC-BY-SA-4.0
+
+Files: assets/icons/copy.png
+Copyright: 2007 Microsoft Corporation
+License: CC0-1.0
+
+Files: assets/icons/cut.png
+Copyright: 2007 Microsoft Corporation
+License: CC0-1.0
+
+Files: assets/icons/delete.png
+Copyright: 2011 VisualPharm
+License: CC-BY-NC-ND-4.0
+
+Files: assets/icons/exit.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: assets/icons/globe.png
+Copyright: 2011 PixelMixer
+License: CC-BY-SA-4.0
+
+Files: assets/icons/greencircle.png
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: assets/icons/help.png
+Copyright: 2011 Asher
+License: CC-BY-SA-4.0
+
+Files: assets/icons/info.png
+Copyright: 2011 IconsPedia
+License: CC0-1.0
+
+Files: assets/icons/logs.png
+Copyright: 2011 LazyCrazy
+License: CC0-1.0
+
+Files: assets/icons/options.png
+Copyright: 2011 Ahmad Hania
+License: CC-BY-NC-SA-4.0
+
+Files: assets/icons/paste.png
+Copyright: 2007 Microsoft Corporation
+License: CC0-1.0
+
+Files: assets/icons/redcircle.png
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: assets/icons/refresh.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: assets/icons/restore.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: assets/icons/save.png
+Copyright: 2011 Everaldo Coelho
+License: LGPL-2.1-only
+
+Files: assets/icons/search.png
+Copyright: 2011 Flahorn
+License: CC-BY-NC-ND-4.0
+
+Files: assets/icons/texteditor.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: assets/images/applogo.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: assets/templates/*.txt
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: packaging/linux/*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhed/Properties/*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhed/*.config
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhed/AppStrings.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhed/DebugStrings.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhed/FrmAbout.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhed/FrmMhed.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhed/FrmOptions.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhed/mhed.csproj
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhed/mhed.ico
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: src/mhed/mhed.manifest
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhlib/Properties/*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhlib/*.config
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhlib/mhlib.csproj
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: README.md
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: mhed.sln
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
