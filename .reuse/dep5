@@ -87,6 +87,10 @@ Files: assets/templates/*.txt
 Copyright: 2011-2021 EasyCoding Team
 License: GPL-3.0-or-later
 
+Files: packaging/inno/locale/*/*.rtf
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
 Files: packaging/linux/*
 Copyright: 2011-2021 EasyCoding Team
 License: GPL-3.0-or-later
