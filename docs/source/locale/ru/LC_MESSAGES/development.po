@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-24 13:36+0100\n"
-"PO-Revision-Date: 2021-12-24 13:41+0100\n"
+"POT-Creation-Date: 2021-12-25 15:32+0100\n"
+"PO-Revision-Date: 2021-12-25 15:33+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -155,10 +155,10 @@ msgstr ""
 
 #: ../../source/development.rst:44
 msgid ""
-"download and install `InnoSetup 6 <http://www.jrsoftware.org/isdl.php>`_ to "
+"download and install `InnoSetup <http://www.jrsoftware.org/isdl.php>`_ to "
 "default directory."
 msgstr ""
-"скачайте и установите `InnoSetup 6 <http://www.jrsoftware.org/isdl.php>`_ в "
+"скачайте и установите `InnoSetup <http://www.jrsoftware.org/isdl.php>`_ в "
 "каталог по умолчанию."
 
 #: ../../source/development.rst:47
@@ -311,10 +311,9 @@ msgid "``URL`` -- direct download URL (no redirects are allowed);"
 msgstr "``URL`` -- URL для загрузки (любые редиректы запрещены);"
 
 #: ../../source/development.rst:107
-msgid "``Hash`` -- download file MD5 hash (**deprecated**);"
-msgstr ""
-"``Hash`` -- MD5 хеш файла обновления (**устаревшее, не используется**);"
-
-#: ../../source/development.rst:108
 msgid "``Hash2`` -- download file SHA2 (SHA-512) hash."
 msgstr "``Hash2`` -- SHA2 (SHA-512) хеш файла файла обновления."
+
+#~ msgid "``Hash`` -- download file MD5 hash (**deprecated**);"
+#~ msgstr ""
+#~ "``Hash`` -- MD5 хеш файла обновления (**устаревшее, не используется**);"

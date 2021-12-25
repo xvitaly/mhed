@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-24 13:36+0100\n"
-"PO-Revision-Date: 2021-12-24 13:43+0100\n"
+"POT-Creation-Date: 2021-12-25 15:32+0100\n"
+"PO-Revision-Date: 2021-12-25 15:34+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -47,7 +47,7 @@ msgid "**Source URL**"
 msgstr "**Дом. страница**"
 
 #: ../../source/legal.rst:1
-msgid "AppIcon.png"
+msgid "applogo.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Bug.png"
+msgid "bug.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -84,7 +84,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/bug-8000.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Delete.png"
+msgid "delete.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -102,7 +102,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/delete--832.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Exit.png"
+msgid "exit.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -112,7 +112,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Globe.png"
+msgid "globe.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -124,7 +124,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/globe-11618.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Help.png"
+msgid "help.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -132,7 +132,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/help-8051.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Info.png"
+msgid "info.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -148,7 +148,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/info--206.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Logs.png"
+msgid "logs.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -161,7 +161,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Options.png"
+msgid "options.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -179,7 +179,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/options-1321-.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Refresh.png"
+msgid "refresh.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -189,7 +189,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Restore.png"
+msgid "restore.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -198,7 +198,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Save.png"
+msgid "save.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -216,7 +216,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/save-file-4082.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Search.png"
+msgid "search.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -234,7 +234,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/search-26-2.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "TextEditor.png"
+msgid "texteditor.png"
 msgstr ""
 
 #: ../../source/legal.rst:40
