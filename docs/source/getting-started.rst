@@ -15,9 +15,9 @@ Getting started
 Starting program
 ==========================================
 
-You can launch Micro Hosts Editor from the Start menu directly after the installation: **Start** -- **Programs** -- **Micro Hosts Editor** -- **Micro Hosts Editor**.
+You can launch Micro Hosts Editor from the Start menu right after installation: **Start** -- **Programs** -- **Micro Hosts Editor** -- **Micro Hosts Editor**.
 
-Micro Hosts Editor will automatically detect and use system default language.
+Micro Hosts Editor will automatically detect and use the default OS language.
 
 .. index:: administrator rights, permissions, restricted modules, UAC
 .. _gs-admin:
@@ -25,11 +25,11 @@ Micro Hosts Editor will automatically detect and use system default language.
 Admin permissions
 ==========================================
 
-Micro Hosts Editor can be started with or without administrator user rights.
+Micro Hosts Editor can be started with or without administrator rights.
 
-When started as a regular user, it will work in read-only mode because only members of the Administrators user group can edit the Hosts file.
+When started as a regular user, it will work in read-only mode because only members of the Administrators group can edit Hosts file.
 
-If you want to edit the Hosts file, you will need to run this program with administrator user rights. Right-click on the Micro Hosts Editor shortcut in the Start menu or on the desktop, select **Run with administrator** and confirm this action in the Windows UAC dialog box.
+If you want to edit Hosts file, you will need to run this program as an administrator. Right-click on the Micro Hosts Editor shortcut in the Start menu or on desktop, select **Run with administrator** and confirm this action in the Windows UAC dialog box.
 
 .. index:: startup actions
 .. _gs-startup:
@@ -44,7 +44,7 @@ The following actions will be performed on Micro Hosts Editor's startup:
   3. performing internal startup actions;
   4. creating user-friendly GUI.
 
-If the program cannot find path to the Hosts file in the Windows Registry (only on Microsoft Windows platform), it will use the default well-known location.
+If the program cannot find path to Hosts file in the Windows Registry (only on Microsoft Windows platform), it will use the default well-known location.
 
 .. index:: data files storage
 .. _gs-datafiles:

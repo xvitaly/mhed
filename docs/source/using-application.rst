@@ -15,7 +15,7 @@ Using application
 Editing Hosts file
 ==========================================
 
-In the first column **IP-address** you must enter a valid IP address (eg. ``127.0.0.1``), and in the second **Hostname**, the hostname (eg. ``localhost``). IPv4 and IPv6 are supported.
+In the first column **IP-address** you must enter a valid IP address (eg. ``127.0.0.1``), and in the second **Hostname**, the hostname (eg. ``localhost``). Both IPv4 and IPv6 are supported.
 
 Multiple hostnames are allowed in one entry. Use a space as a separator. Quotation marks or wildcards are strictly prohibited. Commentaries are also forbidden and will be automatically removed.
 
