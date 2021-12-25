@@ -118,25 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AHE_ExceptionDetected" xml:space="preserve">
-    <value>Warning! Parse error detected. Probably the file {0} is loaded with errors.</value>
+    <value>Warning! A parsing error was encountered. The file {0} was probably loaded with errors.</value>
   </data>
   <data name="AHE_HMessg" xml:space="preserve">
     <value>Hosts file: {0}. Show it in file manager?</value>
   </data>
   <data name="AHE_NoFileDetected" xml:space="preserve">
-    <value>The Hosts file {0} could not be found!</value>
+    <value>The Hosts file {0} couldn't be found!</value>
   </data>
   <data name="AHE_RestDef" xml:space="preserve">
     <value>Restore default Hosts file?</value>
   </data>
   <data name="AHE_Saved" xml:space="preserve">
-    <value>The Hosts file was successfully saved!</value>
+    <value>Hosts file saved successfully!</value>
   </data>
   <data name="AHE_SaveException" xml:space="preserve">
-    <value>Warning! An error occurred while writing to file {0}. Maybe you have not enough rights for this or someone is blocking write attempts.</value>
+    <value>Warning! An error occurred while writing to file {0}. Maybe you don't have enough rights to do this, or someone is blocking write attempts.</value>
   </data>
   <data name="AHE_NoAdminRights" xml:space="preserve">
-    <value>Local admin rights are required to perform the requested action!</value>
+    <value>Administrator rights are required to perform the requested action!</value>
   </data>
   <data name="AHE_AlreadyRunning" xml:space="preserve">
     <value>The program is already running. Starting the second copy is not allowed.</value>
@@ -145,10 +145,10 @@
     <value>Incorrect IP-address entered!</value>
   </data>
   <data name="AHE_ClipboardCopyError" xml:space="preserve">
-    <value>Failed to copy the selected data to the clipboard!</value>
+    <value>Failed to copy selected data to the clipboard!</value>
   </data>
   <data name="AHE_ClipboardCutError" xml:space="preserve">
-    <value>Failed to cut the selected data to the clipboard!</value>
+    <value>Failed to cut selected data to the clipboard!</value>
   </data>
   <data name="AHE_ClipboardPasteError" xml:space="preserve">
     <value>Failed to paste data from the clipboard!</value>
@@ -157,13 +157,13 @@
     <value>Failed to delete the selected rows!</value>
   </data>
   <data name="AHE_OpenInNotepadError" xml:space="preserve">
-    <value>Failed to load the Hosts file into the selected text editor!</value>
+    <value>Failed to load Hosts file into the selected text editor!</value>
   </data>
   <data name="AHE_UrlOpenError" xml:space="preserve">
-    <value>Failed to load URL into default web browser!</value>
+    <value>Failed to load URL in default web browser!</value>
   </data>
   <data name="AHE_OpenShellError" xml:space="preserve">
-    <value>Failed to show the Hosts file in the file manager!</value>
+    <value>Failed to show Hosts file in default file manager!</value>
   </data>
   <data name="AHE_ExitConfirmation" xml:space="preserve">
     <value>Exit {0} without saving changes?</value>
@@ -187,16 +187,16 @@
     <value>Incorrect hostname entered!</value>
   </data>
   <data name="AHE_RestartAsAdminError" xml:space="preserve">
-    <value>Failed to restart the application with admin user rights!</value>
+    <value>Failed to restart the application with administrator rights!</value>
   </data>
   <data name="AHE_RestartAsAdminNotImplemented" xml:space="preserve">
-    <value>Restarting the application has not yet been implemented on the current platform!</value>
+    <value>Restarting the application hasn't yet been implemented on current platform!</value>
   </data>
   <data name="AHE_RestartAsAdminQuestion" xml:space="preserve">
-    <value>Restart this application with admin user rights?</value>
+    <value>Restart this application as an administrator?</value>
   </data>
   <data name="AHE_RestartAsAdminRunning" xml:space="preserve">
-    <value>This application is already running with admin user rights!</value>
+    <value>This application is already running with administrator rights!</value>
   </data>
   <data name="AHE_AppStatusRO" xml:space="preserve">
     <value>R/O</value>
@@ -205,13 +205,13 @@
     <value>No new updates available. You are using the latest version!</value>
   </data>
   <data name="AHE_UpdateAvailable" xml:space="preserve">
-    <value>A new version {0} is available. Do you want to get more information about it?</value>
+    <value>New version {0} is available. Do you want to get more information about it?</value>
   </data>
   <data name="AHE_UpdateCheckError" xml:space="preserve">
-    <value>Failed to check for updates. Please try later!</value>
+    <value>Failed to check for updates. Please try again later!</value>
   </data>
   <data name="AHE_ImportSettingsError" xml:space="preserve">
-    <value>Failed to import settings from the previous version of the application! All settings will be reset to default.</value>
+    <value>Failed to import settings from a previous version of the application! All settings will be reset to their default values.</value>
   </data>
   <data name="AHE_LogFileNotFound" xml:space="preserve">
     <value>The log file is empty or doesn't exist!</value>

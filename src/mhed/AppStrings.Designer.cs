@@ -88,7 +88,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to copy the selected data to the clipboard!.
+        ///   Looks up a localized string similar to Failed to copy selected data to the clipboard!.
         /// </summary>
         internal static string AHE_ClipboardCopyError {
             get {
@@ -97,7 +97,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to cut the selected data to the clipboard!.
+        ///   Looks up a localized string similar to Failed to cut selected data to the clipboard!.
         /// </summary>
         internal static string AHE_ClipboardCutError {
             get {
@@ -124,7 +124,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! Parse error detected. Probably the file {0} is loaded with errors..
+        ///   Looks up a localized string similar to Warning! A parsing error was encountered. The file {0} was probably loaded with errors..
         /// </summary>
         internal static string AHE_ExceptionDetected {
             get {
@@ -151,7 +151,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to import settings from the previous version of the application! All settings will be reset to default..
+        ///   Looks up a localized string similar to Failed to import settings from a previous version of the application! All settings will be reset to their default values..
         /// </summary>
         internal static string AHE_ImportSettingsError {
             get {
@@ -205,7 +205,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Local admin rights are required to perform the requested action!.
+        ///   Looks up a localized string similar to Administrator rights are required to perform the requested action!.
         /// </summary>
         internal static string AHE_NoAdminRights {
             get {
@@ -214,7 +214,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Hosts file {0} could not be found!.
+        ///   Looks up a localized string similar to The Hosts file {0} couldn&apos;t be found!.
         /// </summary>
         internal static string AHE_NoFileDetected {
             get {
@@ -232,7 +232,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to load the Hosts file into the selected text editor!.
+        ///   Looks up a localized string similar to Failed to load Hosts file into the selected text editor!.
         /// </summary>
         internal static string AHE_OpenInNotepadError {
             get {
@@ -241,7 +241,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to show the Hosts file in the file manager!.
+        ///   Looks up a localized string similar to Failed to show Hosts file in default file manager!.
         /// </summary>
         internal static string AHE_OpenShellError {
             get {
@@ -259,7 +259,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to restart the application with admin user rights!.
+        ///   Looks up a localized string similar to Failed to restart the application with administrator rights!.
         /// </summary>
         internal static string AHE_RestartAsAdminError {
             get {
@@ -268,7 +268,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restarting the application has not yet been implemented on the current platform!.
+        ///   Looks up a localized string similar to Restarting the application hasn&apos;t yet been implemented on current platform!.
         /// </summary>
         internal static string AHE_RestartAsAdminNotImplemented {
             get {
@@ -277,7 +277,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restart this application with admin user rights?.
+        ///   Looks up a localized string similar to Restart this application as an administrator?.
         /// </summary>
         internal static string AHE_RestartAsAdminQuestion {
             get {
@@ -286,7 +286,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This application is already running with admin user rights!.
+        ///   Looks up a localized string similar to This application is already running with administrator rights!.
         /// </summary>
         internal static string AHE_RestartAsAdminRunning {
             get {
@@ -304,7 +304,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Hosts file was successfully saved!.
+        ///   Looks up a localized string similar to Hosts file saved successfully!.
         /// </summary>
         internal static string AHE_Saved {
             get {
@@ -313,7 +313,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! An error occurred while writing to file {0}. Maybe you have not enough rights for this or someone is blocking write attempts..
+        ///   Looks up a localized string similar to Warning! An error occurred while writing to file {0}. Maybe you don&apos;t have enough rights to do this, or someone is blocking write attempts..
         /// </summary>
         internal static string AHE_SaveException {
             get {
@@ -340,7 +340,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A new version {0} is available. Do you want to get more information about it?.
+        ///   Looks up a localized string similar to New version {0} is available. Do you want to get more information about it?.
         /// </summary>
         internal static string AHE_UpdateAvailable {
             get {
@@ -349,7 +349,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to check for updates. Please try later!.
+        ///   Looks up a localized string similar to Failed to check for updates. Please try again later!.
         /// </summary>
         internal static string AHE_UpdateCheckError {
             get {
@@ -358,7 +358,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to load URL into default web browser!.
+        ///   Looks up a localized string similar to Failed to load URL in default web browser!.
         /// </summary>
         internal static string AHE_UrlOpenError {
             get {
