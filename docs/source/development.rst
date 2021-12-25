@@ -104,5 +104,4 @@ Level 2:
   * ``Version`` -- application version;
   * ``Info`` -- changelog or release notes URL;
   * ``URL`` -- direct download URL (no redirects are allowed);
-  * ``Hash`` -- download file MD5 hash (**deprecated**);
   * ``Hash2`` -- download file SHA2 (SHA-512) hash.
