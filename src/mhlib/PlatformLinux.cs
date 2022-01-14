@@ -1,5 +1,5 @@
 ﻿/**
- * SPDX-FileCopyrightText: 2011-2021 EasyCoding Team
+ * SPDX-FileCopyrightText: 2011-2022 EasyCoding Team
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
 */

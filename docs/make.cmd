@@ -1,7 +1,7 @@
 @ECHO OFF
 
 rem
-rem SPDX-FileCopyrightText: 2011-2021 EasyCoding Team
+rem SPDX-FileCopyrightText: 2011-2022 EasyCoding Team
 rem
 rem SPDX-License-Identifier: GPL-3.0-or-later
 rem

@@ -4,7 +4,7 @@ Upstream-Contact: EasyCoding Team
 Source: https://github.com/xvitaly/mhed
 
 Files: .github/*.md
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: assets/icons/bug.png
@@ -32,7 +32,7 @@ Copyright: 2011 PixelMixer
 License: CC-BY-SA-4.0
 
 Files: assets/icons/greencircle.png
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: assets/icons/help.png
@@ -56,7 +56,7 @@ Copyright: 2007 Microsoft Corporation
 License: CC0-1.0
 
 Files: assets/icons/redcircle.png
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: assets/icons/refresh.png
@@ -84,47 +84,47 @@ Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
 Files: assets/templates/*.txt
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: packaging/inno/locale/*/*.rtf
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: packaging/linux/*
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhed/Properties/*
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhed/*.config
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhed/AppStrings.*
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhed/DebugStrings.*
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhed/FrmAbout.*
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhed/FrmMhed.*
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhed/FrmOptions.*
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhed/mhed.csproj
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhed/mhed.ico
@@ -132,25 +132,25 @@ Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
 Files: src/mhed/mhed.manifest
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhlib/Properties/*
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhlib/*.config
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhlib/mhlib.csproj
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: README.md
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: mhed.sln
-Copyright: 2011-2021 EasyCoding Team
+Copyright: 2011-2022 EasyCoding Team
 License: GPL-3.0-or-later
