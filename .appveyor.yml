@@ -12,54 +12,26 @@ branches:
   - master
   - dev
 image: Visual Studio 2019
-configuration: Release
-platform: Any CPU
 clone_depth: 1
 init:
 - cmd: git config --global core.autocrlf true
-before_build:
+install:
 - cmd: >-
-    set PATH=C:\Python39-x64;C:\Python39-x64\Scripts;%PATH%
+    set PATH=C:\Python310-x64;C:\Python310-x64\Scripts;%PATH%
 
     pip3 install sphinx
-
-    nuget restore
-build:
-  project: mhed.sln
-  parallel: true
-  verbosity: normal
-after_build:
+build_script:
 - cmd: >-
-    set PATH=C:\Python39-x64;C:\Python39-x64\Scripts;%PATH%
-
-    set CI_DIR=%APPVEYOR_BUILD_FOLDER%\src\mhed\bin\%CONFIGURATION%
+    set PATH=C:\Python310-x64;C:\Python310-x64\Scripts;%PATH%
 
     set CI_HASH=%APPVEYOR_REPO_COMMIT:~0,7%
 
-    mkdir %CI_DIR%\help
+    cd packaging
 
-    call docs\make.cmd htmlhelp
-
-    "%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" docs\build\htmlhelp\mhed_en.hhp && exit /b 1 || exit /b 0
-
-    move docs\build\htmlhelp\mhed_en.chm %CI_DIR%\help\mhed_en.chm
-
-    set SPHINXOPTS=-D language=ru
-
-    set BUILDLANG=ru
-
-    call docs\make.cmd htmlhelp
-
-    "%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" docs\build\htmlhelp\mhed_ru.hhp && exit /b 1 || exit /b 0
-
-    move docs\build\htmlhelp\mhed_ru.chm %CI_DIR%\help\mhed_ru.chm
-
-    7z a -m0=LZMA2 -mx9 -t7z -x!*.ico -x!NLog.xml packaging\results\snapshot_%CI_HASH%.7z %CI_DIR%\*
-
-    "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" packaging\inno\mhed.iss
+    call build_win.cmd
 test: off
 artifacts:
-- path: packaging\results\snapshot_*.7z
-  name: snapshot
+- path: packaging\results\snapshot_*.zip
+  name: archive
 - path: packaging\results\snapshot_*.exe
-  name: innosetup
+  name: installer

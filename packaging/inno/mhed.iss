@@ -6,8 +6,8 @@
 
 #define VERSION GetVersionNumbersString("..\..\src\mhed\bin\Release\mhed.exe")
 #define BASEDIR "..\..\src\mhed"
-#define CI_COMMIT GetEnv('CI_HASH')
-#if CI_COMMIT == ''
+
+#if GetEnv('CI_HASH') == ''
 #define _RELEASE 1
 #endif
 
@@ -25,11 +25,7 @@ DefaultGroupName=Micro Hosts Editor
 AllowNoIcons=yes
 LicenseFile=..\..\COPYING
 OutputDir=..\results
-#ifdef _RELEASE
-OutputBaseFilename=mhed_v{#GetEnv('RELVER')}
-#else
-OutputBaseFilename=snapshot_{#CI_COMMIT}
-#endif
+OutputBaseFilename={#GetEnv('PREFIX')}_setup
 SetupIconFile={#BASEDIR}\mhed.ico
 UninstallDisplayIcon={app}\mhed.exe
 Compression=lzma2
@@ -41,7 +37,7 @@ ArchitecturesInstallIn64BitMode=x64
 MinVersion=6.1sp1
 VersionInfoVersion={#VERSION}
 VersionInfoDescription=Micro Hosts Editor Setup
-VersionInfoCopyright=(c) 2005-2021 EasyCoding Team. All rights reserved.
+VersionInfoCopyright=(c) 2011-2022 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Messages]
