@@ -35,13 +35,12 @@ First you will need to install C# complier, Microsoft .NET Framework SDK and oth
   2. select the **Microsoft Visual Studio 2019 Community**, enable the **Classic .NET application development** component, then switch to the **Additional components** tab and enable the **NuGet package manager**;
   3. install the Microsoft Visual Studio 2019 Community;
   4. download the latest version of `NuGet CLI <https://www.nuget.org/downloads>`_ and copy its executable to any directory, located in the ``%PATH%`` environment variable;
-  5. install `Doxygen for Windows <http://www.doxygen.nl/download.html>`_ to default directory;
-  6. download and install `HTML Help Workshop <https://www.microsoft.com/en-us/download/details.aspx?id=21138>`_;
-  7. download and install `Gpg4Win <https://www.gpg4win.org/>`_ to default directory;
-  8. download and install `Python 3 for Windows <https://www.python.org/downloads/windows/>`_;
-  9. open terminal and install Sphinx-doc using PIP: ``pip3 install sphinx``;
-  10. download and install `7-Zip for Windows <https://www.7-zip.org/download.html>`_ to default directory;
-  11. download and install `InnoSetup <http://www.jrsoftware.org/isdl.php>`_ to default directory.
+  5. download and install `HTML Help Workshop <https://www.microsoft.com/en-us/download/details.aspx?id=21138>`_;
+  6. download and install `Gpg4Win <https://www.gpg4win.org/>`_ to default directory;
+  7. download and install `Python 3 for Windows <https://www.python.org/downloads/windows/>`_;
+  8. open terminal and install Sphinx-doc using PIP: ``pip3 install sphinx``;
+  9. download and install `7-Zip for Windows <https://www.7-zip.org/download.html>`_ to default directory;
+  10. download and install `InnoSetup <http://www.jrsoftware.org/isdl.php>`_ to default directory.
 
 Automatic build
 ^^^^^^^^^^^^^^^^^^^^^^^^^
