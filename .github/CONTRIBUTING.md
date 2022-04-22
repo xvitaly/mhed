@@ -30,17 +30,17 @@ Feel free to open issues and [report bugs](https://github.com/xvitaly/mhed/issue
  git remote add upstream https://github.com/xvitaly/mhed.git
  ```
  
- 6. Fetch upstream changes and [sync](https://help.github.com/articles/syncing-a-fork/) your fork's `dev` branch with it:
+ 6. Fetch upstream changes and [sync](https://help.github.com/articles/syncing-a-fork/) your fork's `master` branch with it:
  ```bash
  git fetch upstream
- git checkout dev
- git merge upstream/dev
+ git checkout master
+ git merge upstream/master
  ```
  
- 7. Rebase your feature branch to updated `dev`:
+ 7. Rebase your feature branch to updated `master`:
  ```bash
  git checkout new_feature
- git rebase dev
+ git rebase master
  ```
  
  8. Squash all your commits into a single one and open a new pull request.
