@@ -71,7 +71,7 @@ body:
       multiple: false
       options:
         - EXE installer
-        - 7-Zip archive
+        - Zip archive
         - Portable version
         - Self-built version
         - Other
