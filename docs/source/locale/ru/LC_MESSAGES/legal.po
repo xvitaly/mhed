@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Micro Hosts Editor 1.1\n"
+"Project-Id-Version: Micro Hosts Editor 1.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-25 15:32+0100\n"
-"PO-Revision-Date: 2021-12-25 15:34+0100\n"
+"PO-Revision-Date: 2022-05-06 14:30+0200\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"

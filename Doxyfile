@@ -10,7 +10,7 @@
 
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = mhed
-PROJECT_NUMBER         = 1.1.0
+PROJECT_NUMBER         = 1.2.0
 PROJECT_BRIEF          = "Micro Hosts Editor is a small, simple, cross-platform and completely free open-source Hosts editor"
 PROJECT_LOGO           = assets/images/applogo.png
 OUTPUT_DIRECTORY       = doxyout
