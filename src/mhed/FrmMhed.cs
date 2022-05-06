@@ -365,7 +365,10 @@ namespace mhed.gui
             {
                 foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
                 {
-                    HE_ModelView.Rows.RemoveAt(Cell.RowIndex);
+                    if (!HE_ModelView.Rows[Cell.RowIndex].IsNewRow)
+                    {
+                        HE_ModelView.Rows.RemoveAt(Cell.RowIndex);
+                    }
                 }
             }
             catch (Exception Ex)
