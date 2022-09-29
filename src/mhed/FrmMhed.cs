@@ -344,7 +344,7 @@ namespace mhed.gui
         {
             try
             {
-                if (Clipboard.ContainsText())
+                if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && Clipboard.ContainsText())
                 {
                     HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
                 }
