@@ -6,9 +6,9 @@
 -->
 <Updates>
     <Application>
-        <Version>1.2.0.0</Version>
-        <URL>https://github.com/xvitaly/mhed/releases/download/v1.2.0/mhed_120_setup.exe</URL>
-        <Info>https://github.com/xvitaly/mhed/releases/tag/v1.2.0</Info>
-        <Hash2>fd024273be1aa4f2626ee021a65518256a6466abf0c5580bc3742cee7ef62c3ad360090e4cbb94c7e1ccc3d70a3014d5e3ae22ddde62d78c7648ad84e0a19966</Hash2>
+        <Version>1.2.1.0</Version>
+        <URL>https://github.com/xvitaly/mhed/releases/download/v1.2.1/mhed_121_setup.exe</URL>
+        <Info>https://github.com/xvitaly/mhed/releases/tag/v1.2.1</Info>
+        <Hash2>1cfa56a744da33fc2e2eab2ebac311bcfd482626160e2c64f836297546d22269d81727ee702318baa6cb88924d2bbbc1879d04d31eba1962a8d66c1c40902779</Hash2>
     </Application>
 </Updates>
