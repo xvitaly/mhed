@@ -51,10 +51,10 @@ namespace mhed.lib
         /// <returns>New relative order.</returns>
         private int CompareValues(object LeftValue, object RightValue)
         {
-            if (LeftValue == null) return RightValue == null ? 0 : -1;
-            if (RightValue == null) return 1;
-            if (LeftValue.Equals(RightValue)) return 0;
-            if (LeftValue is IComparable LeftValueComparable) return LeftValueComparable.CompareTo(RightValue);
+            if (LeftValue == null) { return RightValue == null ? 0 : -1; }
+            if (RightValue == null) { return 1; }
+            if (LeftValue.Equals(RightValue)) { return 0; }
+            if (LeftValue is IComparable LeftValueComparable) { return LeftValueComparable.CompareTo(RightValue); }
             return LeftValue.ToString().CompareTo(RightValue.ToString());
         }
 
@@ -94,7 +94,7 @@ namespace mhed.lib
         /// <param name="direction">One of the ListSortDirection values.</param>
         protected override void ApplySortCore(PropertyDescriptor prop, ListSortDirection direction)
         {
-            if (!(Items is List<T> Source)) return;
+            if (!(Items is List<T> Source)) { return; }
             SortDirection = direction;
             SortProperty = prop;
             Source.Sort(Compare);
