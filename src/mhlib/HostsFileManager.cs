@@ -87,7 +87,7 @@ namespace mhed.lib
                     {
                         if (ImpStr[0] != '#')
                         {
-                            int SpPos = ImpStr.IndexOf(" ");
+                            int SpPos = ImpStr.IndexOf(" ", StringComparison.InvariantCulture);
                             if (SpPos != -1)
                             {
                                 Contents.Add(new HostsFileEntry(ImpStr.Substring(0, SpPos), ImpStr.Remove(0, SpPos + 1)));
