@@ -55,7 +55,7 @@ namespace mhed.lib
             if (RightValue == null) { return 1; }
             if (LeftValue.Equals(RightValue)) { return 0; }
             if (LeftValue is IComparable LeftValueComparable) { return LeftValueComparable.CompareTo(RightValue); }
-            return LeftValue.ToString().CompareTo(RightValue.ToString());
+            return string.Compare(LeftValue.ToString(), RightValue.ToString(), StringComparison.InvariantCulture);
         }
 
         /// <summary>
