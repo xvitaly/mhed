@@ -412,7 +412,7 @@ namespace mhed.gui
                 string LogFileName = CurrentApp.LogFileName;
                 if (File.Exists(LogFileName))
                 {
-                    if (ModifierKeys == Keys.Shift) HelperShowFile(LogFileName); else HelperTextEditor(LogFileName);
+                    if (ModifierKeys == Keys.Shift) { HelperShowFile(LogFileName); } else { HelperTextEditor(LogFileName); }
                 }
                 else
                 {
@@ -560,7 +560,7 @@ namespace mhed.gui
         private void HE_ModelView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             // Skip validation of the new rows...
-            if (((DataGridView)sender).Rows[e.RowIndex].IsNewRow) return;
+            if (((DataGridView)sender).Rows[e.RowIndex].IsNewRow) { return; }
 
             switch (e.ColumnIndex)
             {
