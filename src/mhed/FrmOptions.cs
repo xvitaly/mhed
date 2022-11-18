@@ -35,7 +35,7 @@ namespace mhed.gui
             MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
 
             // Settig application name in window title...
-            Text = String.Format(Text, Properties.Resources.AppName);
+            Text = string.Format(Text, Properties.Resources.AppName);
         }
 
         /// <summary>

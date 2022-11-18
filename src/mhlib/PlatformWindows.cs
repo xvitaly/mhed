@@ -36,7 +36,7 @@ namespace mhed.lib
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public override void OpenExplorer(string FileName)
         {
-            Process.Start(Properties.Resources.ShBinWin, String.Format("{0} \"{1}\"", Properties.Resources.ShParamWin, FileName));
+            Process.Start(Properties.Resources.ShBinWin, string.Format("{0} \"{1}\"", Properties.Resources.ShParamWin, FileName));
         }
 
         /// <summary>

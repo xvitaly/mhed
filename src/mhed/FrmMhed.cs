@@ -238,7 +238,7 @@ namespace mhed.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, String.Format(DebugStrings.AppDbgExOpenShell, FileName));
+                Logger.Warn(Ex, string.Format(DebugStrings.AppDbgExOpenShell, FileName));
                 MessageBox.Show(AppStrings.AHE_OpenShellError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -255,7 +255,7 @@ namespace mhed.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, String.Format(DebugStrings.AppDbgExOpenNotepad, FileName));
+                Logger.Warn(Ex, string.Format(DebugStrings.AppDbgExOpenNotepad, FileName));
                 MessageBox.Show(AppStrings.AHE_OpenInNotepadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -385,7 +385,7 @@ namespace mhed.gui
         {
             try
             {
-                string CHMFile = Path.Combine(App.FullAppPath, Properties.Resources.AppHelpDirectory, String.Format(Properties.Resources.AppHelpFileName, AppStrings.AHE_LangPrefix));
+                string CHMFile = Path.Combine(App.FullAppPath, Properties.Resources.AppHelpDirectory, string.Format(Properties.Resources.AppHelpFileName, AppStrings.AHE_LangPrefix));
                 if (File.Exists(CHMFile))
                 {
                     Help.ShowHelp(this, CHMFile);
@@ -462,7 +462,7 @@ namespace mhed.gui
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = Properties.Settings.Default.ConfirmExit && MessageBox.Show(String.Format(AppStrings.AHE_ExitConfirmation, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes;
+                e.Cancel = Properties.Settings.Default.ConfirmExit && MessageBox.Show(string.Format(AppStrings.AHE_ExitConfirmation, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes;
             }
         }
 
@@ -493,12 +493,12 @@ namespace mhed.gui
                 catch (Exception Ex)
                 {
                     Logger.Error(Ex);
-                    MessageBox.Show(String.Format(AppStrings.AHE_SaveException, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(string.Format(AppStrings.AHE_SaveException, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(AppStrings.AHE_NoAdminRights, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -514,13 +514,13 @@ namespace mhed.gui
             catch (FileNotFoundException Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgHostsFileDoesNotExists);
-                MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(string.Format(AppStrings.AHE_NoFileDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Environment.Exit(ReturnCodes.HostsFileDoesNotExists);
             }
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExHostsLoadParse);
-                MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning));
+                MessageBox.Show(string.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning));
             }
         }
 
@@ -536,7 +536,7 @@ namespace mhed.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExHostsLoadParse);
-                MessageBox.Show(String.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(string.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         #endregion
@@ -705,7 +705,7 @@ namespace mhed.gui
 
                 if (Updater.CheckAppUpdate())
                 {
-                    if (MessageBox.Show(String.Format(AppStrings.AHE_UpdateAvailable, Updater.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    if (MessageBox.Show(string.Format(AppStrings.AHE_UpdateAvailable, Updater.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         HelperOpenUrl(Updater.AppUpdateInfo);
                     }
@@ -895,7 +895,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_StatusBarHostsLocation_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(string.Format(AppStrings.AHE_HMessg, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 HelperShowFile(App.HostsFile.FilePath);
             }

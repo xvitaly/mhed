@@ -25,7 +25,7 @@ namespace mhed.lib
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public override void OpenTextEditor(string FileName, string EditorBin)
         {
-            Process.Start(Properties.Resources.AppOpenHandlerMac, String.Format("{0} \"{1}\"", "-t", FileName));
+            Process.Start(Properties.Resources.AppOpenHandlerMac, string.Format("{0} \"{1}\"", "-t", FileName));
         }
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace mhed.lib
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public override void OpenExplorer(string FileName)
         {
-            Process.Start(Properties.Resources.AppOpenHandlerMac, String.Format("\"{0}\"", Path.GetDirectoryName(FileName)));
+            Process.Start(Properties.Resources.AppOpenHandlerMac, string.Format("\"{0}\"", Path.GetDirectoryName(FileName)));
         }
 
         /// <summary>

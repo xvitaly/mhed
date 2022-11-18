@@ -80,7 +80,7 @@ namespace mhed.lib
         /// <returns>Mutex name.</returns>
         public static string GetMutexName(string AppNameInternal)
         {
-            return String.Format(ProcessManager.IsCurrentUserAdmin() ? Properties.Resources.MutexAdmin : Properties.Resources.MutexRegular, AppNameInternal);
+            return string.Format(ProcessManager.IsCurrentUserAdmin() ? Properties.Resources.MutexAdmin : Properties.Resources.MutexRegular, AppNameInternal);
         }
     }
 }

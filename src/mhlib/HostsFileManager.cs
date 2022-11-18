@@ -83,7 +83,7 @@ namespace mhed.lib
                 while (OpenedHosts.Peek() >= 0)
                 {
                     string ImpStr = StringsManager.CleanString(await OpenedHosts.ReadLineAsync());
-                    if (!String.IsNullOrEmpty(ImpStr))
+                    if (!string.IsNullOrEmpty(ImpStr))
                     {
                         if (ImpStr[0] != '#')
                         {
@@ -112,11 +112,11 @@ namespace mhed.lib
 
                 foreach (HostsFileEntry Entry in Contents)
                 {
-                    if (!String.IsNullOrEmpty(Entry.IPAddress) && !String.IsNullOrEmpty(Entry.Hostname))
+                    if (!string.IsNullOrEmpty(Entry.IPAddress) && !string.IsNullOrEmpty(Entry.Hostname))
                     {
                         if (ValidateIPAddress(Entry.IPAddress))
                         {
-                            await CFile.WriteLineAsync(String.Format("{0} {1}", Entry.IPAddress, Entry.Hostname));
+                            await CFile.WriteLineAsync(string.Format("{0} {1}", Entry.IPAddress, Entry.Hostname));
                         }
                     }
                 }
