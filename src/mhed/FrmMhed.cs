@@ -19,7 +19,6 @@ namespace mhed.gui
     /// </summary>
     public partial class FrmMhed : Form
     {
-        #region Properties and fields
         /// <summary>
         /// Logger instance for HUDManager class.
         /// </summary>
@@ -29,17 +28,13 @@ namespace mhed.gui
         /// Gets or sets instance of CurrentApp class.
         /// </summary>
         private CurrentApp App;
-        #endregion
 
-        #region Form overrides for HiDPI compatibility
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
             DpiManager.ScaleColumnsInControl(HE_ModelView, ScalingFactor);
         }
-        #endregion
 
-        #region Initialization methods
         /// <summary>
         /// Create an instance of the CurrentApp class.
         /// </summary>
@@ -70,9 +65,7 @@ namespace mhed.gui
             Properties.Settings.Default.FormSize = WindowState == FormWindowState.Normal ? Size : RestoreBounds.Size;
             Properties.Settings.Default.Save();
         }
-        #endregion
 
-        #region Different helper methods
         /// <summary>
         /// Change the state of the table editor.
         /// </summary>
@@ -426,9 +419,7 @@ namespace mhed.gui
                 MessageBox.Show(AppStrings.AHE_ShowLogFileError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        #endregion
 
-        #region Form contructors and loaders
         /// <summary>
         /// FrmMhed class constructor.
         /// </summary>
@@ -451,9 +442,7 @@ namespace mhed.gui
             SetAppStrings();
             await LoadHostsFile();
         }
-        #endregion
 
-        #region Other form handlers
         /// <summary>
         /// "Form close" event handler.
         /// </summary>
@@ -476,9 +465,7 @@ namespace mhed.gui
         {
             SaveSettings();
         }
-        #endregion
 
-        #region Save and load methods
         /// <summary>
         /// Save Hosts file changes to disk.
         /// </summary>
@@ -540,9 +527,7 @@ namespace mhed.gui
                 MessageBox.Show(string.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        #endregion
 
-        #region DataGridView handlers
         /// <summary>
         /// "Data error" event handler.
         /// </summary>
@@ -576,9 +561,7 @@ namespace mhed.gui
                     break;
             }
         }
-        #endregion
 
-        #region Menu items handlers
         /// <summary>
         /// "Refresh" menu item event handler.
         /// </summary>
@@ -752,9 +735,7 @@ namespace mhed.gui
         {
             GuiHelpers.FormShowAboutApp();
         }
-        #endregion
 
-        #region Toolbar buttons handlers
         /// <summary>
         /// "Refresh" toolbar button event handler.
         /// </summary>
@@ -824,9 +805,7 @@ namespace mhed.gui
         {
             GuiHelpers.FormShowAboutApp();
         }
-        #endregion
 
-        #region Context menu handlers
         /// <summary>
         /// "Cut" context menu item event handler.
         /// </summary>
@@ -866,9 +845,7 @@ namespace mhed.gui
         {
             HelperDelete();
         }
-        #endregion
 
-        #region Status bar handlers
         /// <summary>
         /// "Mouse enter location" status bar event handler.
         /// </summary>
@@ -921,6 +898,5 @@ namespace mhed.gui
                 MessageBox.Show(AppStrings.AHE_RestartAsAdminRunning, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        #endregion
     }
 }
