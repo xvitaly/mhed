@@ -9,6 +9,7 @@ using NLog;
 using System;
 using System.Drawing;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace mhed.gui
@@ -441,14 +442,14 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void FrmMhed_Load(object sender, EventArgs e)
+        private async void FrmMhed_Load(object sender, EventArgs e)
         {
             RestoreFormState();
             InitializeApp();
             InitializeModelView();
             ChangePrvControlState();
             SetAppStrings();
-            LoadHostsFile();
+            await LoadHostsFile();
         }
         #endregion
 
@@ -505,11 +506,11 @@ namespace mhed.gui
         /// <summary>
         /// Try to read Hosts file.
         /// </summary>
-        private void LoadHostsFile()
+        private async Task LoadHostsFile()
         {
             try
             {
-                App.HostsFile.Load();
+                await App.HostsFile.Load();
             }
             catch (FileNotFoundException Ex)
             {

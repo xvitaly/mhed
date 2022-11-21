@@ -126,7 +126,7 @@ namespace mhed.lib
         /// <summary>
         /// Read Hosts file from disk.
         /// </summary>
-        public async void Load()
+        public async Task Load()
         {
             await ReadHostsFile();
         }
