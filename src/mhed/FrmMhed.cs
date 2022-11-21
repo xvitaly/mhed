@@ -528,11 +528,11 @@ namespace mhed.gui
         /// <summary>
         /// Reload Hosts file contents from disk.
         /// </summary>
-        private void ReloadHostsFile()
+        private async Task ReloadHostsFile()
         {
             try
             {
-                App.HostsFile.Refresh();
+                await App.HostsFile.Refresh();
             }
             catch (Exception Ex)
             {
@@ -584,9 +584,9 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HE_MenuRefreshItem_Click(object sender, EventArgs e)
+        private async void HE_MenuRefreshItem_Click(object sender, EventArgs e)
         {
-            ReloadHostsFile();
+            await ReloadHostsFile();
         }
 
         /// <summary>
@@ -760,9 +760,9 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HE_ToolbarRefreshButton_Click(object sender, EventArgs e)
+        private async void HE_ToolbarRefreshButton_Click(object sender, EventArgs e)
         {
-            ReloadHostsFile();
+            await ReloadHostsFile();
         }
 
         /// <summary>

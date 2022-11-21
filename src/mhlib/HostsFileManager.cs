@@ -134,7 +134,7 @@ namespace mhed.lib
         /// <summary>
         /// Re-read (refresh) Hosts file from disk.
         /// </summary>
-        public async void Refresh()
+        public async Task Refresh()
         {
             ClearHostsContents();
             await ReadHostsFile();
