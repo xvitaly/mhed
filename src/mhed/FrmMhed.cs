@@ -482,13 +482,13 @@ namespace mhed.gui
         /// <summary>
         /// Save Hosts file changes to disk.
         /// </summary>
-        private void SaveToFile()
+        private async Task SaveToFile()
         {
             if (App.IsAdmin)
             {
                 try
                 {
-                    App.HostsFile.Save();
+                    await App.HostsFile.Save();
                     MessageBox.Show(AppStrings.AHE_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception Ex)
@@ -594,9 +594,9 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HE_MenuSaveItem_Click(object sender, EventArgs e)
+        private async void HE_MenuSaveItem_Click(object sender, EventArgs e)
         {
-            SaveToFile();
+            await SaveToFile();
         }
 
         /// <summary>
@@ -664,12 +664,12 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HE_MenuRestoreDefaultsItem_Click(object sender, EventArgs e)
+        private async void HE_MenuRestoreDefaultsItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(AppStrings.AHE_RestDef, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 App.HostsFile.Restore();
-                SaveToFile();
+                await SaveToFile();
             }
         }
 
@@ -770,9 +770,9 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HE_ToolbarSaveButton_Click(object sender, EventArgs e)
+        private async void HE_ToolbarSaveButton_Click(object sender, EventArgs e)
         {
-            SaveToFile();
+            await SaveToFile();
         }
 
         /// <summary>

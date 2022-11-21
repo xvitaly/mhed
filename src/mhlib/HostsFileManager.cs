@@ -152,7 +152,7 @@ namespace mhed.lib
         /// <summary>
         /// Write Hosts file changes to disk.
         /// </summary>
-        public async void Save()
+        public async Task Save()
         {
             await WriteHostsFile();
         }
