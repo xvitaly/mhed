@@ -232,7 +232,7 @@ namespace mhed.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, string.Format(DebugStrings.AppDbgExOpenShell, FileName));
+                Logger.Warn(Ex, DebugStrings.AppDbgExOpenShell, FileName);
                 MessageBox.Show(AppStrings.AHE_OpenShellError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -249,7 +249,7 @@ namespace mhed.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, string.Format(DebugStrings.AppDbgExOpenNotepad, FileName));
+                Logger.Warn(Ex, DebugStrings.AppDbgExOpenNotepad, FileName);
                 MessageBox.Show(AppStrings.AHE_OpenInNotepadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
