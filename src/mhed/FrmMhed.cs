@@ -28,7 +28,7 @@ namespace mhed.gui
         /// <summary>
         /// Gets or sets instance of CurrentApp class.
         /// </summary>
-        private CurrentApp App { get; set; }
+        private CurrentApp App;
         #endregion
 
         #region Form overrides for HiDPI compatibility
