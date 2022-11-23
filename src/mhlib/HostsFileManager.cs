@@ -53,6 +53,21 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Get an integer representation of the specified IPv4 address.
+        /// </summary>
+        /// <param name="SrcIPAddress">Source IPv4 address.</param>
+        /// <returns>Integer representation of the specified IPv4 address.</returns>
+        public static uint GetIntegerFromIPv4Address(string SrcIPAddress)
+        {
+            byte[] IPAddressBytes = IPAddress.Parse(SrcIPAddress).GetAddressBytes();
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(IPAddressBytes);
+            }
+            return BitConverter.ToUInt32(IPAddressBytes, 0);
+        }
+
+        /// <summary>
         /// Clear Hosts file data object.
         /// </summary>
         private void ClearHostsContents()
