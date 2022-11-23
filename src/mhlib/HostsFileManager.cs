@@ -68,6 +68,21 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Get an IPv4 address from the integer representation.
+        /// </summary>
+        /// <param name="SrcIPAddress">Integer representation of the source IPv4 address.</param>
+        /// <returns>IPv4 address.</returns>
+        public static string GetIPv4AddressFromInteger(uint SrcIPAddress)
+        {
+            byte[] IPAddressBytes = BitConverter.GetBytes(SrcIPAddress);
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(IPAddressBytes);
+            }
+            return new IPAddress(IPAddressBytes).ToString();
+        }
+
+        /// <summary>
         /// Clear Hosts file data object.
         /// </summary>
         private void ClearHostsContents()
