@@ -551,10 +551,10 @@ namespace mhed.gui
             switch (e.ColumnIndex)
             {
                 case 0: // Validating IP-address...
-                    ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
+                    ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = AddressHelpers.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
                     break;
                 case 1: // Validating Hostname...
-                    ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = HostsFileManager.ValidateHostname((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectHostname;
+                    ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = AddressHelpers.ValidateHostname((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectHostname;
                     break;
                 default: // Reporting an error...
                     Logger.Warn(DebugStrings.AppDbgModelViewColumnIndexOutOfRange);

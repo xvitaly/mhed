@@ -6,7 +6,6 @@
 
 using System;
 using System.IO;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,56 +30,6 @@ namespace mhed.lib
         /// Get or set Hosts file contents.
         /// </summary>
         public SortableBindingList<HostsFileEntry> Contents { get; private set; }
-
-        /// <summary>
-        /// Validate IP-address.
-        /// </summary>
-        /// <param name="SrcIPAddress">Source IP-address for validation.</param>
-        /// <returns>Return True if the source IP-address is correct.</returns>
-        public static bool ValidateIPAddress(string SrcIPAddress)
-        {
-            return IPAddress.TryParse(SrcIPAddress, out _);
-        }
-
-        /// <summary>
-        /// Validate hostname.
-        /// </summary>
-        /// <param name="SrcHostname">Source hostname for validation.</param>
-        /// <returns>Return True if the source hostname is correct.</returns>
-        public static bool ValidateHostname(string SrcHostname)
-        {
-            return Uri.CheckHostName(SrcHostname) == UriHostNameType.Dns;
-        }
-
-        /// <summary>
-        /// Get an integer representation of the specified IPv4 address.
-        /// </summary>
-        /// <param name="SrcIPAddress">Source IPv4 address.</param>
-        /// <returns>Integer representation of the specified IPv4 address.</returns>
-        public static uint GetIntegerFromIPv4Address(string SrcIPAddress)
-        {
-            byte[] IPAddressBytes = IPAddress.Parse(SrcIPAddress).GetAddressBytes();
-            if (BitConverter.IsLittleEndian)
-            {
-                Array.Reverse(IPAddressBytes);
-            }
-            return BitConverter.ToUInt32(IPAddressBytes, 0);
-        }
-
-        /// <summary>
-        /// Get an IPv4 address from the integer representation.
-        /// </summary>
-        /// <param name="SrcIPAddress">Integer representation of the source IPv4 address.</param>
-        /// <returns>IPv4 address.</returns>
-        public static string GetIPv4AddressFromInteger(uint SrcIPAddress)
-        {
-            byte[] IPAddressBytes = BitConverter.GetBytes(SrcIPAddress);
-            if (BitConverter.IsLittleEndian)
-            {
-                Array.Reverse(IPAddressBytes);
-            }
-            return new IPAddress(IPAddressBytes).ToString();
-        }
 
         /// <summary>
         /// Clear Hosts file data object.
@@ -144,7 +93,7 @@ namespace mhed.lib
                 {
                     if (!string.IsNullOrEmpty(Entry.IPAddress) && !string.IsNullOrEmpty(Entry.Hostname))
                     {
-                        if (ValidateIPAddress(Entry.IPAddress))
+                        if (AddressHelpers.ValidateIPAddress(Entry.IPAddress))
                         {
                             await CFile.WriteLineAsync(string.Format("{0} {1}", Entry.IPAddress, Entry.Hostname));
                         }
