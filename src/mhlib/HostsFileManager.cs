@@ -24,7 +24,7 @@ namespace mhed.lib
         /// <summary>
         /// Get or set full Hosts file path.
         /// </summary>
-        public string FilePath { get; private set; }
+        public readonly string FilePath;
 
         /// <summary>
         /// Get or set Hosts file contents.
