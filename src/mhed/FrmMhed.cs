@@ -155,6 +155,14 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Check if the application update check is required.
+        /// </summary>
+        private bool IsAutoUpdateCheckNeeded()
+        {
+            return Properties.Settings.Default.AutoUpdateCheck && (DateTime.Now - Properties.Settings.Default.LastUpdateTime).Days >= 7;
+        }
+
+        /// <summary>
         /// Set strings data on the main form.
         /// </summary>
         private void SetAppStrings()
