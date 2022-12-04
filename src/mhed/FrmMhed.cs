@@ -449,6 +449,7 @@ namespace mhed.gui
             ChangePrvControlState();
             SetAppStrings();
             await LoadHostsFile();
+            await CheckForUpdates();
         }
 
         /// <summary>
@@ -533,6 +534,43 @@ namespace mhed.gui
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExHostsLoadParse);
                 MessageBox.Show(string.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Check for the application updates in a separate thread.
+        /// </summary>
+        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
+        /// <returns>Returns True if the updates were found.</returns>
+        private async Task<bool> IsUpdatesAvailable(string UA)
+        {
+            UpdateManager Updater = await UpdateManager.Create(UA);
+            return Updater.CheckAppUpdate();
+        }
+
+        /// <summary>
+        /// Launch an update checker in a separate thread, waits for the
+        /// result and returns a message if found.
+        /// </summary>
+        private async Task CheckForUpdates()
+        {
+            if (IsAutoUpdateCheckNeeded())
+            {
+                try
+                {
+                    if (await IsUpdatesAvailable(App.UserAgent))
+                    {
+                        MessageBox.Show(string.Format(AppStrings.AHE_UpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, DebugStrings.AppDbgExBgaChk);
+                }
             }
         }
 
