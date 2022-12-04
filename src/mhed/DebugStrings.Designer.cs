@@ -61,6 +61,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while checking for updates during the application startup..
+        /// </summary>
+        internal static string AppDbgExBgaChk {
+            get {
+                return ResourceManager.GetString("AppDbgExBgaChk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to check for application updates..
         /// </summary>
         internal static string AppDbgExCheckForUpdates {
