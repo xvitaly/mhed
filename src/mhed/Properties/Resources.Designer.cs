@@ -288,6 +288,46 @@ namespace mhed.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IconUpdateAvailable {
+            get {
+                object obj = ResourceManager.GetObject("IconUpdateAvailable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconUpdateChecking {
+            get {
+                object obj = ResourceManager.GetObject("IconUpdateChecking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconUpdateError {
+            get {
+                object obj = ResourceManager.GetObject("IconUpdateError", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconUpdateNotAvailable {
+            get {
+                object obj = ResourceManager.GetObject("IconUpdateNotAvailable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImageAppLogo {
             get {
                 object obj = ResourceManager.GetObject("ImageAppLogo", resourceCulture);
