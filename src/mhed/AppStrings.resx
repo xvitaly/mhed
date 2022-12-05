@@ -210,4 +210,31 @@
   <data name="AHE_ShowLogFileError" xml:space="preserve">
     <value>Failed to show debug log file!</value>
   </data>
+  <data name="AHE_UpdateAvailable" xml:space="preserve">
+    <value>Application update available. New version: {0}.</value>
+  </data>
+  <data name="AHE_UpdateCheckFailure" xml:space="preserve">
+    <value>Update check failed. Please try again later.</value>
+  </data>
+  <data name="AHE_UpdateFailure" xml:space="preserve">
+    <value>An error occurred while trying to run the installer. The program has not been updated. Run the update again later!</value>
+  </data>
+  <data name="AHE_UpdateHashFailure" xml:space="preserve">
+    <value>Downloaded file has incorrect hash. Maybe it was corrupted during transfer. Please try again later!</value>
+  </data>
+  <data name="AHE_UpdateLatestInstalled" xml:space="preserve">
+    <value>Update is not required because you have the latest version of the program.</value>
+  </data>
+  <data name="AHE_UpdateNotAvailable" xml:space="preserve">
+    <value>No new updates available. Your application is up to date.</value>
+  </data>
+  <data name="AHE_UpdateOtherPlatform" xml:space="preserve">
+    <value>Automatic updates on {0} platform is not supported yet. Please install update from official website manually.</value>
+  </data>
+  <data name="AHE_UpdateSuccessful" xml:space="preserve">
+    <value>The new version has been successfully received from server. We will install it now!</value>
+  </data>
+  <data name="AHE_WrkInProgress" xml:space="preserve">
+    <value>Checking for updates... Please wait!</value>
+  </data>
 </root>
