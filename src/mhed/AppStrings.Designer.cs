@@ -205,6 +205,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A new update for {0} is available. We recommend you to upgrade as soon as possible via Help - Check for updates, or manually..
+        /// </summary>
+        internal static string AHE_NewVersionAvailable {
+            get {
+                return ResourceManager.GetString("AHE_NewVersionAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Administrator rights are required to perform the requested action!.
         /// </summary>
         internal static string AHE_NoAdminRights {
@@ -219,15 +228,6 @@ namespace mhed.gui {
         internal static string AHE_NoFileDetected {
             get {
                 return ResourceManager.GetString("AHE_NoFileDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No new updates available. You are using the latest version!.
-        /// </summary>
-        internal static string AHE_NoUpdatesFound {
-            get {
-                return ResourceManager.GetString("AHE_NoUpdatesFound", resourceCulture);
             }
         }
         
@@ -340,7 +340,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New version {0} is available. Do you want to get more information about it?.
+        ///   Looks up a localized string similar to Application update available. New version: {0}..
         /// </summary>
         internal static string AHE_UpdateAvailable {
             get {
@@ -349,11 +349,65 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to check for updates. Please try again later!.
+        ///   Looks up a localized string similar to Update check failed. Please try again later..
         /// </summary>
-        internal static string AHE_UpdateCheckError {
+        internal static string AHE_UpdateCheckFailure {
             get {
-                return ResourceManager.GetString("AHE_UpdateCheckError", resourceCulture);
+                return ResourceManager.GetString("AHE_UpdateCheckFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to run the installer. The program has not been updated. Run the update again later!.
+        /// </summary>
+        internal static string AHE_UpdateFailure {
+            get {
+                return ResourceManager.GetString("AHE_UpdateFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloaded file has incorrect hash. Maybe it was corrupted during transfer. Please try again later!.
+        /// </summary>
+        internal static string AHE_UpdateHashFailure {
+            get {
+                return ResourceManager.GetString("AHE_UpdateHashFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update is not required because you have the latest version of the program..
+        /// </summary>
+        internal static string AHE_UpdateLatestInstalled {
+            get {
+                return ResourceManager.GetString("AHE_UpdateLatestInstalled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No new updates available. Your application is up to date..
+        /// </summary>
+        internal static string AHE_UpdateNotAvailable {
+            get {
+                return ResourceManager.GetString("AHE_UpdateNotAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Automatic updates on {0} platform is not supported yet. Please install update from official website manually..
+        /// </summary>
+        internal static string AHE_UpdateOtherPlatform {
+            get {
+                return ResourceManager.GetString("AHE_UpdateOtherPlatform", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The new version has been successfully received from server. We will install it now!.
+        /// </summary>
+        internal static string AHE_UpdateSuccessful {
+            get {
+                return ResourceManager.GetString("AHE_UpdateSuccessful", resourceCulture);
             }
         }
         
@@ -363,6 +417,15 @@ namespace mhed.gui {
         internal static string AHE_UrlOpenError {
             get {
                 return ResourceManager.GetString("AHE_UrlOpenError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checking for updates... Please wait!.
+        /// </summary>
+        internal static string AHE_WrkInProgress {
+            get {
+                return ResourceManager.GetString("AHE_WrkInProgress", resourceCulture);
             }
         }
     }

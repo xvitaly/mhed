@@ -155,6 +155,14 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Check if the application update check is required.
+        /// </summary>
+        private bool IsAutoUpdateCheckNeeded()
+        {
+            return Properties.Settings.Default.AutoUpdateCheck && (DateTime.Now - Properties.Settings.Default.LastUpdateTime).Days >= 7;
+        }
+
+        /// <summary>
         /// Set strings data on the main form.
         /// </summary>
         private void SetAppStrings()
@@ -441,6 +449,7 @@ namespace mhed.gui
             ChangePrvControlState();
             SetAppStrings();
             await LoadHostsFile();
+            await CheckForUpdates();
         }
 
         /// <summary>
@@ -525,6 +534,43 @@ namespace mhed.gui
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExHostsLoadParse);
                 MessageBox.Show(string.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Check for the application updates in a separate thread.
+        /// </summary>
+        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
+        /// <returns>Returns True if the updates were found.</returns>
+        private async Task<bool> IsUpdatesAvailable(string UA)
+        {
+            UpdateManager Updater = await UpdateManager.Create(UA);
+            return Updater.CheckAppUpdate();
+        }
+
+        /// <summary>
+        /// Launch an update checker in a separate thread, waits for the
+        /// result and returns a message if found.
+        /// </summary>
+        private async Task CheckForUpdates()
+        {
+            if (IsAutoUpdateCheckNeeded())
+            {
+                try
+                {
+                    if (await IsUpdatesAvailable(App.UserAgent))
+                    {
+                        MessageBox.Show(string.Format(AppStrings.AHE_NewVersionAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, DebugStrings.AppDbgExBgaChk);
+                }
             }
         }
 
@@ -681,29 +727,9 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private async void HE_MenuCheckForUpdatesItem_Click(object sender, EventArgs e)
+        private void HE_MenuCheckForUpdatesItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                UpdateManager Updater = await UpdateManager.Create(App.UserAgent);
-
-                if (Updater.CheckAppUpdate())
-                {
-                    if (MessageBox.Show(string.Format(AppStrings.AHE_UpdateAvailable, Updater.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                    {
-                        HelperOpenUrl(Updater.AppUpdateInfo);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.AHE_NoUpdatesFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExCheckForUpdates);
-                MessageBox.Show(AppStrings.AHE_UpdateCheckError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            GuiHelpers.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUpdateDir);
         }
 
         /// <summary>

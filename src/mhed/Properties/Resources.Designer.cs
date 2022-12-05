@@ -70,6 +70,15 @@ namespace mhed.gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to wget.
+        /// </summary>
+        internal static string AppDownloadUserAgent {
+            get {
+                return ResourceManager.GetString("AppDownloadUserAgent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to help.
         /// </summary>
         internal static string AppHelpDirectory {
@@ -281,6 +290,46 @@ namespace mhed.gui.Properties {
         internal static System.Drawing.Bitmap IconTextEditor {
             get {
                 object obj = ResourceManager.GetObject("IconTextEditor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconUpdateAvailable {
+            get {
+                object obj = ResourceManager.GetObject("IconUpdateAvailable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconUpdateChecking {
+            get {
+                object obj = ResourceManager.GetObject("IconUpdateChecking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconUpdateError {
+            get {
+                object obj = ResourceManager.GetObject("IconUpdateError", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconUpdateNotAvailable {
+            get {
+                object obj = ResourceManager.GetObject("IconUpdateNotAvailable", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

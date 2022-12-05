@@ -117,44 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AppDefUA" xml:space="preserve">
-    <value>Mozilla/5.0 ({0} {1} {2}.{3}; {4}; rv:{5}) {6} ({7})</value>
+  <data name="DN_WlcMsg.Text" xml:space="preserve">
+    <value>Скачиваю файл... Пожалуйста, подождите.</value>
   </data>
-  <data name="AppOpenHandlerEscapeTemplate" xml:space="preserve">
-    <value>"{0}"</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAAODQ0EDg4PDA8MDwsLBgMQUjgpaah0VL/VlGns2JZq/9aTaf/Hh2HylmVJxUgvImwKCQcfGRkcHRIQ
+        EBUNDg0M7evtAvX99wDPqIQStndTp+SgdP/qpHT/5KNy/+Wlc//nqHT/56d0/+qjcv/ak2r+vHpanKus
+        mQ3f6ucA8u/wAv/+/wDlvZkSzo9fy+addP/hmW/83pdt/N6Xbv/cl27/3Zht/96dbv/eoG/96p9v/b+m
+        hP9AimXKnsawDf///wDt0sYAwntYo+Kac//imnH54Jly/uGadP/hnHT/4Jp0/92Wcf/Ykmz/15Nr/+OW
+        a/7DqIP6MMfA/1Obepfv9fEAyX1aSdqWb/7nnnj+5J54/+mkfv/rqYL/7KyF/+ythf/srIT/6aaA/+Ke
+        eP/emnL/3Jpw/knIvf8pq5X7nb+oPs2KZqvkn3n/6aJ9/Oyog//vr4n/8baN//O5kf/zuZH/87iQ/++z
+        jP/xrYb/8qN8//Kedv9duaP8JMK0/0eTb6HYlXDs76J+//GphP7xs4z/9ruT//jCnP/5yKL/+sij//fE
+        nv/8vZX/zrOM/3S0lf+JqoX/PLue/ijDsP9EnXvf5pl0/8elgP+3soz//rqU//jGof/807D//dm5//3Z
+        uf/71LL//seg/3DMtf8a1MX/IMGk/y+4k/8rvqP/QKGA/eyadf+Dr4n/wrqT//+/mf/40a///uDE//7o
+        0f/+6NH//eHG///Sr/9s3M7/J9nO/y7Gq/8quJX/K7iV/0Kfe/zMnnfsXLmQ/6Cxiv7bvJb//9m5//3t
+        2//+8+f//vHl//zq1v//2br/xsut/zbWx/8mzLT/KrqX/ie0jP9Fl3Ded5ZuuTK+k/8f07P9StXE/+Dl
+        1v//9+///vn0///48v/77dz//9q7/7HFpv9ewaX/lrGP/26mgPwxrob/Q5JroLDBq19IpXj/Ltex/Czg
+        0v+X9/n//f79//r69///+PL//u/h//3Ssv+cxaf/Os+4/z6zj/8ztY/+Nplv+5nBrED5+PUAbpZvuTq7
+        j/8s2775ftPB/9Tv6v/+/fr//vv3//3s4P/6xaP/rbWQ/1u6mP4fxqP6L6d//0uTbpnx9/UA////ANre
+        0h9ej2TYNL2S/0XGofxqx6z868+1/v3RuP/zwqL//7CK/qe1kf0tvZj8LqZ9/zuLYr/H3tMN////AP7+
+        /QL///8A3+PZFXeeerCtp4H/3KeD/+ulf//upn//7aeB/+qlgP/loHv/t595/ZCee5fJ49oL////AP3+
+        /QHy0b4A8M+7AvjXxgHxybQA4ZZxQd6TbabdmHLi3pl1/t6Yc/3alm/h15Nso+GWcDv5yLIA+tjIAvv7
+        +QH///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
   </data>
-  <data name="AppOpenHandlerLin" xml:space="preserve">
-    <value>xdg-open</value>
-  </data>
-  <data name="AppOpenHandlerMac" xml:space="preserve">
-    <value>open</value>
-  </data>
-  <data name="AppUASuffixOther" xml:space="preserve">
-    <value>(mono)</value>
-  </data>
-  <data name="AppUASuffixWin" xml:space="preserve">
-    <value>NT</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="HtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\assets\templates\hosts_file_header.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="MutexAdmin" xml:space="preserve">
-    <value>{0}_admin</value>
-  </data>
-  <data name="MutexRegular" xml:space="preserve">
-    <value>{0}_regular</value>
-  </data>
-  <data name="ShBinWin" xml:space="preserve">
-    <value>explorer.exe</value>
-  </data>
-  <data name="ShParamWin" xml:space="preserve">
-    <value>/select,</value>
-  </data>
-  <data name="UpdateDatabaseURL" xml:space="preserve">
-    <value>https://www.easycoding.org/files/mhed/updates/updates.xml</value>
-  </data>
-  <data name="UpdateLocalDir" xml:space="preserve">
-    <value>updates</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Модуль загрузки</value>
   </data>
 </root>

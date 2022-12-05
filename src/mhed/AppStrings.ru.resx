@@ -201,15 +201,6 @@
   <data name="AHE_AppStatusRO" xml:space="preserve">
     <value>R/O</value>
   </data>
-  <data name="AHE_NoUpdatesFound" xml:space="preserve">
-    <value>Обновление не требуется. Вы используете новейшую версию программы!</value>
-  </data>
-  <data name="AHE_UpdateAvailable" xml:space="preserve">
-    <value>Доступна новая версия программы {0}. Хотите получить подробную информацию об изменениях?</value>
-  </data>
-  <data name="AHE_UpdateCheckError" xml:space="preserve">
-    <value>Произошла ошибка во время проверки наличия обновлений. Повторите попытку позднее!</value>
-  </data>
   <data name="AHE_ImportSettingsError" xml:space="preserve">
     <value>Произошла ошибка во время импортирования настроек из предыдущей версии программы! Параметры будут сброшены на стандартные значения.</value>
   </data>
@@ -218,5 +209,35 @@
   </data>
   <data name="AHE_ShowLogFileError" xml:space="preserve">
     <value>Не удалось отобразить отладочный журнал программы!</value>
+  </data>
+  <data name="AHE_UpdateAvailable" xml:space="preserve">
+    <value>Доступно обновление программы. Новая версия: {0}.</value>
+  </data>
+  <data name="AHE_UpdateCheckFailure" xml:space="preserve">
+    <value>Произошла ошибка во время проверки обновлений программы.</value>
+  </data>
+  <data name="AHE_UpdateFailure" xml:space="preserve">
+    <value>Произошла ошибка при попытке запуска программы установки новой версии. Программа не была обновлена. Запустите обновление повторно позднее!</value>
+  </data>
+  <data name="AHE_UpdateHashFailure" xml:space="preserve">
+    <value>Контрольная сумма загруженного файла отличается от эталона. Обновление не было установлено!</value>
+  </data>
+  <data name="AHE_UpdateLatestInstalled" xml:space="preserve">
+    <value>Обновление не требуется, т.к. у вас установлена последняя версия программы.</value>
+  </data>
+  <data name="AHE_UpdateNotAvailable" xml:space="preserve">
+    <value>Нет новых обновлений программы. Установлена новейшая версия.</value>
+  </data>
+  <data name="AHE_UpdateOtherPlatform" xml:space="preserve">
+    <value>Автоматическое обновление на платформе {0} временно не поддерживается. Пожалуйста установите его вручную с официального сайта.</value>
+  </data>
+  <data name="AHE_UpdateSuccessful" xml:space="preserve">
+    <value>Новая версия была успешно получена с сервера. Сейчас будет произведена её установка!</value>
+  </data>
+  <data name="AHE_WrkInProgress" xml:space="preserve">
+    <value>Пожалуйста, дождитесь завершения проверки обновлений!</value>
+  </data>
+  <data name="AHE_NewVersionAvailable" xml:space="preserve">
+    <value>Внимание! Доступно обновление программы {0}. Рекомендуем вам обновиться как можно скорее через меню Справка - Проверить наличие обновлений, либо вручную.</value>
   </data>
 </root>

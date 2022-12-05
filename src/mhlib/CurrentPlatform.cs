@@ -8,6 +8,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Security.Permissions;
+using System.Windows.Forms;
 
 namespace mhed.lib
 {
@@ -76,6 +77,24 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Immediately shut down application and return exit code.
+        /// </summary>
+        /// <param name="ReturnCode">Exit code.</param>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public virtual void Exit(int ReturnCode)
+        {
+            if (Application.MessageLoop)
+            {
+                Environment.ExitCode = ReturnCode;
+                Application.Exit();
+            }
+            else
+            {
+                Environment.Exit(ReturnCode);
+            }
+        }
+
+        /// <summary>
         /// Open the specified URL in default Web browser.
         /// </summary>
         /// <param name="URI">Full URL.</param>
@@ -94,6 +113,17 @@ namespace mhed.lib
         {
             StartElevatedProcess(CurrentApp.AssemblyLocation);
             Environment.Exit(ReturnCodes.Success);
+        }
+
+        /// <summary>
+        /// Start the required application as the current user.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <returns>PID of the newly created process.</returns>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public virtual int StartRegularProcess(string FileName)
+        {
+            return Process.Start(FileName).Id;
         }
 
         /// <summary>

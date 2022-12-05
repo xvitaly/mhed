@@ -178,5 +178,14 @@ namespace mhed.lib.Properties {
                 return ResourceManager.GetString("UpdateDatabaseURL", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to updates.
+        /// </summary>
+        internal static string UpdateLocalDir {
+            get {
+                return ResourceManager.GetString("UpdateLocalDir", resourceCulture);
+            }
+        }
     }
 }

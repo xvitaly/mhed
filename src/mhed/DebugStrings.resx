@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppDbgExBgaChk" xml:space="preserve">
+    <value>Exception while checking for updates during the application startup.</value>
+  </data>
   <data name="AppDbgExCheckForUpdates" xml:space="preserve">
     <value>Exception while trying to check for application updates.</value>
   </data>
@@ -131,6 +134,18 @@
   </data>
   <data name="AppDbgExDeleteRow" xml:space="preserve">
     <value>Exception while trying to delete selected row.</value>
+  </data>
+  <data name="AppDbgExDnProgressChanged" xml:space="preserve">
+    <value>Exception while trying to report download progress to form.</value>
+  </data>
+  <data name="AppDbgExDnResultVerify" xml:space="preserve">
+    <value>Exception while verifying the downloaded file "{0}".</value>
+  </data>
+  <data name="AppDbgExDnWrkDownloadFile" xml:space="preserve">
+    <value>Exception while downloading file "{0}" from the remote server to local file "{1}".</value>
+  </data>
+  <data name="AppDbgExDnWrkTask" xml:space="preserve">
+    <value>Exception while trying to start downloading file "{0}" to "{1}".</value>
   </data>
   <data name="AppDbgExHelpShow" xml:space="preserve">
     <value>Failed to start the offline help viewer with the required CHM file.</value>
@@ -161,6 +176,15 @@
   </data>
   <data name="AppDbgExShowLogFile" xml:space="preserve">
     <value>Exception while trying to show debug log file.</value>
+  </data>
+  <data name="AppDbgExUpdBinInst" xml:space="preserve">
+    <value>Exception while trying to install binary update.</value>
+  </data>
+  <data name="AppDbgExUpdBinRem" xml:space="preserve">
+    <value>Exception while trying to remove binary update file.</value>
+  </data>
+  <data name="AppDbgExUpdChk" xml:space="preserve">
+    <value>Exception while checking for updates during the Updates form initialization.</value>
   </data>
   <data name="AppDbgHostsFileDoesNotExists" xml:space="preserve">
     <value>Hosts file does not exists.</value>

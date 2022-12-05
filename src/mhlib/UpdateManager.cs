@@ -5,6 +5,7 @@
 */
 
 using System;
+using System.IO;
 using System.Net;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -102,6 +103,16 @@ namespace mhed.lib
         {
             await DownloadXML();
             ParseXML();
+        }
+
+        /// <summary>
+        /// Get local application update file name.
+        /// </summary>
+        /// <param name="Url">Download URL.</param>
+        /// <returns>Local file name.</returns>
+        public static string GenerateUpdateFileName(string Url)
+        {
+            return Path.HasExtension(Url) ? Url : Path.ChangeExtension(Url, "exe");
         }
 
         /// <summary>

@@ -33,6 +33,11 @@ namespace mhed.lib
         public string AppUserDir { get; private set; }
 
         /// <summary>
+        /// Get full path to the local updates directory.
+        /// </summary>
+        public string AppUpdateDir { get; private set; }
+
+        /// <summary>
         /// Get information about running operating system.
         /// </summary>
         public CurrentPlatform Platform { get; private set; }
@@ -133,6 +138,9 @@ namespace mhed.lib
 
             // Checking admininstrator rights...
             IsAdmin = ProcessManager.IsCurrentUserAdmin();
+
+            // Getting full path to application local updates directory...
+            AppUpdateDir = Path.Combine(AppUserDir, Properties.Resources.UpdateLocalDir);
 
             // Checking if user directory exists. If not - creating it...
             if (!Directory.Exists(AppUserDir))

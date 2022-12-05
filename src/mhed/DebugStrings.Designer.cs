@@ -61,6 +61,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while checking for updates during the application startup..
+        /// </summary>
+        internal static string AppDbgExBgaChk {
+            get {
+                return ResourceManager.GetString("AppDbgExBgaChk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to check for application updates..
         /// </summary>
         internal static string AppDbgExCheckForUpdates {
@@ -102,6 +111,42 @@ namespace mhed.gui {
         internal static string AppDbgExDeleteRow {
             get {
                 return ResourceManager.GetString("AppDbgExDeleteRow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to report download progress to form..
+        /// </summary>
+        internal static string AppDbgExDnProgressChanged {
+            get {
+                return ResourceManager.GetString("AppDbgExDnProgressChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while verifying the downloaded file &quot;{0}&quot;..
+        /// </summary>
+        internal static string AppDbgExDnResultVerify {
+            get {
+                return ResourceManager.GetString("AppDbgExDnResultVerify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while downloading file &quot;{0}&quot; from the remote server to local file &quot;{1}&quot;..
+        /// </summary>
+        internal static string AppDbgExDnWrkDownloadFile {
+            get {
+                return ResourceManager.GetString("AppDbgExDnWrkDownloadFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to start downloading file &quot;{0}&quot; to &quot;{1}&quot;..
+        /// </summary>
+        internal static string AppDbgExDnWrkTask {
+            get {
+                return ResourceManager.GetString("AppDbgExDnWrkTask", resourceCulture);
             }
         }
         
@@ -192,6 +237,33 @@ namespace mhed.gui {
         internal static string AppDbgExShowLogFile {
             get {
                 return ResourceManager.GetString("AppDbgExShowLogFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to install binary update..
+        /// </summary>
+        internal static string AppDbgExUpdBinInst {
+            get {
+                return ResourceManager.GetString("AppDbgExUpdBinInst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove binary update file..
+        /// </summary>
+        internal static string AppDbgExUpdBinRem {
+            get {
+                return ResourceManager.GetString("AppDbgExUpdBinRem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while checking for updates during the Updates form initialization..
+        /// </summary>
+        internal static string AppDbgExUpdChk {
+            get {
+                return ResourceManager.GetString("AppDbgExUpdChk", resourceCulture);
             }
         }
         
