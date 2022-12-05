@@ -201,15 +201,6 @@
   <data name="AHE_AppStatusRO" xml:space="preserve">
     <value>R/O</value>
   </data>
-  <data name="AHE_NoUpdatesFound" xml:space="preserve">
-    <value>Обновление не требуется. Вы используете новейшую версию программы!</value>
-  </data>
-  <data name="AHE_UpdateAvailable" xml:space="preserve">
-    <value>Доступна новая версия программы {0}. Хотите получить подробную информацию об изменениях?</value>
-  </data>
-  <data name="AHE_UpdateCheckError" xml:space="preserve">
-    <value>Произошла ошибка во время проверки наличия обновлений. Повторите попытку позднее!</value>
-  </data>
   <data name="AHE_ImportSettingsError" xml:space="preserve">
     <value>Произошла ошибка во время импортирования настроек из предыдущей версии программы! Параметры будут сброшены на стандартные значения.</value>
   </data>

@@ -223,15 +223,6 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No new updates available. You are using the latest version!.
-        /// </summary>
-        internal static string AHE_NoUpdatesFound {
-            get {
-                return ResourceManager.GetString("AHE_NoUpdatesFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Failed to load Hosts file into the selected text editor!.
         /// </summary>
         internal static string AHE_OpenInNotepadError {
@@ -336,24 +327,6 @@ namespace mhed.gui {
         internal static string AHE_ShowLogFileError {
             get {
                 return ResourceManager.GetString("AHE_ShowLogFileError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to New version {0} is available. Do you want to get more information about it?.
-        /// </summary>
-        internal static string AHE_UpdateAvailable {
-            get {
-                return ResourceManager.GetString("AHE_UpdateAvailable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to check for updates. Please try again later!.
-        /// </summary>
-        internal static string AHE_UpdateCheckError {
-            get {
-                return ResourceManager.GetString("AHE_UpdateCheckError", resourceCulture);
             }
         }
         
