@@ -154,4 +154,7 @@
   <data name="UpdateDatabaseURL" xml:space="preserve">
     <value>https://www.easycoding.org/files/mhed/updates/updates.xml</value>
   </data>
+  <data name="UpdateLocalDir" xml:space="preserve">
+    <value>updates</value>
+  </data>
 </root>
