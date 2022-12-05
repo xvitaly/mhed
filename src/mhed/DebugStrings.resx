@@ -177,6 +177,15 @@
   <data name="AppDbgExShowLogFile" xml:space="preserve">
     <value>Exception while trying to show debug log file.</value>
   </data>
+  <data name="AppDbgExUpdBinInst" xml:space="preserve">
+    <value>Exception while trying to install binary update.</value>
+  </data>
+  <data name="AppDbgExUpdBinRem" xml:space="preserve">
+    <value>Exception while trying to remove binary update file.</value>
+  </data>
+  <data name="AppDbgExUpdChk" xml:space="preserve">
+    <value>Exception while checking for updates during the Updates form initialization.</value>
+  </data>
   <data name="AppDbgHostsFileDoesNotExists" xml:space="preserve">
     <value>Hosts file does not exists.</value>
   </data>

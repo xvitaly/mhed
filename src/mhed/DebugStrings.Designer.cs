@@ -241,6 +241,33 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to install binary update..
+        /// </summary>
+        internal static string AppDbgExUpdBinInst {
+            get {
+                return ResourceManager.GetString("AppDbgExUpdBinInst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove binary update file..
+        /// </summary>
+        internal static string AppDbgExUpdBinRem {
+            get {
+                return ResourceManager.GetString("AppDbgExUpdBinRem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while checking for updates during the Updates form initialization..
+        /// </summary>
+        internal static string AppDbgExUpdChk {
+            get {
+                return ResourceManager.GetString("AppDbgExUpdChk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hosts file does not exists..
         /// </summary>
         internal static string AppDbgHostsFileDoesNotExists {
