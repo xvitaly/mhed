@@ -115,6 +115,42 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to report download progress to form..
+        /// </summary>
+        internal static string AppDbgExDnProgressChanged {
+            get {
+                return ResourceManager.GetString("AppDbgExDnProgressChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while verifying the downloaded file &quot;{0}&quot;..
+        /// </summary>
+        internal static string AppDbgExDnResultVerify {
+            get {
+                return ResourceManager.GetString("AppDbgExDnResultVerify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while downloading file &quot;{0}&quot; from the remote server to local file &quot;{1}&quot;..
+        /// </summary>
+        internal static string AppDbgExDnWrkDownloadFile {
+            get {
+                return ResourceManager.GetString("AppDbgExDnWrkDownloadFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to start downloading file &quot;{0}&quot; to &quot;{1}&quot;..
+        /// </summary>
+        internal static string AppDbgExDnWrkTask {
+            get {
+                return ResourceManager.GetString("AppDbgExDnWrkTask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to start the offline help viewer with the required CHM file..
         /// </summary>
         internal static string AppDbgExHelpShow {

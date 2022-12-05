@@ -135,6 +135,18 @@
   <data name="AppDbgExDeleteRow" xml:space="preserve">
     <value>Exception while trying to delete selected row.</value>
   </data>
+  <data name="AppDbgExDnProgressChanged" xml:space="preserve">
+    <value>Exception while trying to report download progress to form.</value>
+  </data>
+  <data name="AppDbgExDnResultVerify" xml:space="preserve">
+    <value>Exception while verifying the downloaded file "{0}".</value>
+  </data>
+  <data name="AppDbgExDnWrkDownloadFile" xml:space="preserve">
+    <value>Exception while downloading file "{0}" from the remote server to local file "{1}".</value>
+  </data>
+  <data name="AppDbgExDnWrkTask" xml:space="preserve">
+    <value>Exception while trying to start downloading file "{0}" to "{1}".</value>
+  </data>
   <data name="AppDbgExHelpShow" xml:space="preserve">
     <value>Failed to start the offline help viewer with the required CHM file.</value>
   </data>
