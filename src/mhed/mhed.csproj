@@ -102,6 +102,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DebugStrings.resx</DependentUpon>
     </Compile>
+    <Compile Include="FrmDnWrk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDnWrk.Designer.cs">
+      <DependentUpon>FrmDnWrk.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMhed.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     </Compile>
     <Compile Include="FrmAbout.Designer.cs">
       <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdate.Designer.cs">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmOptions.cs">
       <SubType>Form</SubType>
@@ -153,6 +165,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DebugStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDnWrk.resx">
+      <DependentUpon>FrmDnWrk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDnWrk.ru.resx">
+      <DependentUpon>FrmDnWrk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMhed.resx">
       <DependentUpon>FrmMhed.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +182,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAbout.ru.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdate.resx">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdate.ru.resx">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOptions.resx">
       <DependentUpon>FrmOptions.cs</DependentUpon>
