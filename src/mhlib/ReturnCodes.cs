@@ -30,5 +30,10 @@ namespace mhed.lib
         /// Hosts file does not exists.
         /// </summary>
         public static int HostsFileDoesNotExists => 9;
+
+        /// <summary>
+        /// Application update pending.
+        /// </summary>
+        public static int AppUpdatePending => 10;
     }
 }
