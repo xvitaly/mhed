@@ -70,6 +70,15 @@ namespace mhed.gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to wget.
+        /// </summary>
+        internal static string AppDownloadUserAgent {
+            get {
+                return ResourceManager.GetString("AppDownloadUserAgent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to help.
         /// </summary>
         internal static string AppHelpDirectory {
