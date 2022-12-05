@@ -237,4 +237,7 @@
   <data name="AHE_WrkInProgress" xml:space="preserve">
     <value>Checking for updates... Please wait!</value>
   </data>
+  <data name="AHE_NewVersionAvailable" xml:space="preserve">
+    <value>A new update for {0} is available. We recommend you to upgrade as soon as possible via Help - Check for updates, or manually.</value>
+  </data>
 </root>

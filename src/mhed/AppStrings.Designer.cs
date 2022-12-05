@@ -205,6 +205,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A new update for {0} is available. We recommend you to upgrade as soon as possible via Help - Check for updates, or manually..
+        /// </summary>
+        internal static string AHE_NewVersionAvailable {
+            get {
+                return ResourceManager.GetString("AHE_NewVersionAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Administrator rights are required to perform the requested action!.
         /// </summary>
         internal static string AHE_NoAdminRights {

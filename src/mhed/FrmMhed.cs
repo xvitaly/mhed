@@ -560,7 +560,7 @@ namespace mhed.gui
                 {
                     if (await IsUpdatesAvailable(App.UserAgent))
                     {
-                        MessageBox.Show(string.Format(AppStrings.AHE_UpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(string.Format(AppStrings.AHE_NewVersionAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {

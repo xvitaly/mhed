@@ -237,4 +237,7 @@
   <data name="AHE_WrkInProgress" xml:space="preserve">
     <value>Пожалуйста, дождитесь завершения проверки обновлений!</value>
   </data>
+  <data name="AHE_NewVersionAvailable" xml:space="preserve">
+    <value>Внимание! Доступно обновление программы {0}. Рекомендуем вам обновиться как можно скорее через меню Справка - Проверить наличие обновлений, либо вручную.</value>
+  </data>
 </root>
