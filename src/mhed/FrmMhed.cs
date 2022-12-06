@@ -512,7 +512,7 @@ namespace mhed.gui
             {
                 Logger.Error(Ex, DebugStrings.AppDbgHostsFileDoesNotExists);
                 MessageBox.Show(string.Format(AppStrings.AHE_NoFileDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Environment.Exit(ReturnCodes.HostsFileDoesNotExists);
+                App.Platform.Exit(ReturnCodes.HostsFileDoesNotExists);
             }
             catch (Exception Ex)
             {
