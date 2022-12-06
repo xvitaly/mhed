@@ -84,7 +84,7 @@ namespace mhed.gui
         {
             try
             {
-                if (await CheckForUpdatesTask(UserAgent))
+                if (await IsUpdatesAvailable(UserAgent))
                 {
                     UpdAppImg.Image = Properties.Resources.IconUpdateAvailable;
                     UpdAppStatus.Text = string.Format(AppStrings.AHE_UpdateAvailable, UpMan.AppUpdateVersion);
@@ -110,7 +110,7 @@ namespace mhed.gui
         /// </summary>
         /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
         /// <returns>Returns True if updates were found.</returns>
-        private async Task<bool> CheckForUpdatesTask(string UA)
+        private async Task<bool> IsUpdatesAvailable(string UA)
         {
             UpMan = await UpdateManager.Create(UA);
             return UpMan.CheckAppUpdate();
