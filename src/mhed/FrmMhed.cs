@@ -163,6 +163,15 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Check if the old updates cleanup is required.
+        /// </summary>
+        private bool IsCleanupNeeded()
+        {
+            if (App.Platform.OS != CurrentPlatform.OSType.Windows) { return false; }
+            return (DateTime.Now - Properties.Settings.Default.LastCleanupTime).Days >= 7;
+        }
+
+        /// <summary>
         /// Set strings data on the main form.
         /// </summary>
         private void SetAppStrings()
