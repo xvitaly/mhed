@@ -127,5 +127,17 @@ namespace mhed.gui.Properties {
                 this["AutoUpdateCheck"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2022-01-01")]
+        public global::System.DateTime LastCleanupTime {
+            get {
+                return ((global::System.DateTime)(this["LastCleanupTime"]));
+            }
+            set {
+                this["LastCleanupTime"] = value;
+            }
+        }
     }
 }

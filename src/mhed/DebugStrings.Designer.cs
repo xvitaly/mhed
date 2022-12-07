@@ -106,6 +106,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to find and remove old application updates..
+        /// </summary>
+        internal static string AppDbgExClnOldUpdates {
+            get {
+                return ResourceManager.GetString("AppDbgExClnOldUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to delete selected row..
         /// </summary>
         internal static string AppDbgExDeleteRow {

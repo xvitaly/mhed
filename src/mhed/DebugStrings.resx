@@ -132,6 +132,9 @@
   <data name="AppDbgExClipboardPaste" xml:space="preserve">
     <value>Exception while trying to paste the clipboard's contents to the selected cell.</value>
   </data>
+  <data name="AppDbgExClnOldUpdates" xml:space="preserve">
+    <value>Exception while trying to find and remove old application updates.</value>
+  </data>
   <data name="AppDbgExDeleteRow" xml:space="preserve">
     <value>Exception while trying to delete selected row.</value>
   </data>

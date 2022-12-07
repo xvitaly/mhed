@@ -163,6 +163,15 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Check if the old updates cleanup is required.
+        /// </summary>
+        private bool IsCleanupNeeded()
+        {
+            if (App.Platform.OS != CurrentPlatform.OSType.Windows) { return false; }
+            return (DateTime.Now - Properties.Settings.Default.LastCleanupTime).Days >= 7;
+        }
+
+        /// <summary>
         /// Set strings data on the main form.
         /// </summary>
         private void SetAppStrings()
@@ -450,6 +459,7 @@ namespace mhed.gui
             SetAppStrings();
             await LoadHostsFile();
             await CheckForUpdates();
+            await CleanOldUpdates();
         }
 
         /// <summary>
@@ -571,6 +581,26 @@ namespace mhed.gui
                 {
                     Logger.Warn(Ex, DebugStrings.AppDbgExBgaChk);
                 }
+            }
+        }
+
+        /// <summary>
+        /// Find and delete old application update files in a separate
+        /// thread.
+        /// </summary>
+        private async Task CleanOldUpdates()
+        {
+            try
+            {
+                if (IsCleanupNeeded())
+                {
+                    await Task.Run(() => { if (Directory.Exists(App.AppUpdateDir)) { Directory.Delete(App.AppUpdateDir, true); } });
+                    Properties.Settings.Default.LastCleanupTime = DateTime.Now;
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExClnOldUpdates);
             }
         }
 

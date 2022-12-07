@@ -29,5 +29,8 @@
     <Setting Name="AutoUpdateCheck" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="LastCleanupTime" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2022-01-01</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
