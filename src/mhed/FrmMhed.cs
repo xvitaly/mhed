@@ -459,6 +459,7 @@ namespace mhed.gui
             SetAppStrings();
             await LoadHostsFile();
             await CheckForUpdates();
+            await CleanOldUpdates();
         }
 
         /// <summary>
