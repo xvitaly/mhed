@@ -584,6 +584,26 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Find and delete old application update files in a separate
+        /// thread.
+        /// </summary>
+        private async Task CleanOldUpdates()
+        {
+            try
+            {
+                if (IsCleanupNeeded())
+                {
+                    await Task.Run(() => { if (Directory.Exists(App.AppUpdateDir)) { Directory.Delete(App.AppUpdateDir, true); } });
+                    Properties.Settings.Default.LastCleanupTime = DateTime.Now;
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExClnOldUpdates);
+            }
+        }
+
+        /// <summary>
         /// "Data error" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
