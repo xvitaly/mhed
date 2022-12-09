@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-25 15:32+0100\n"
-"PO-Revision-Date: 2022-05-06 14:30+0200\n"
+"POT-Creation-Date: 2022-12-09 14:01+0100\n"
+"PO-Revision-Date: 2022-12-09 14:02+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -237,7 +237,53 @@ msgstr ""
 msgid "texteditor.png"
 msgstr ""
 
-#: ../../source/legal.rst:40
+#: ../../source/legal.rst:1
+msgid "upd_av.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/update-recommended-4016.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "upd_chk.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "FatCow"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/update-icon-22163.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "upd_err.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Designkindle"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/cross-icon-40924.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "upd_nx.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/tick-11638.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:44
 msgid "Libraries licensing"
 msgstr "Лицензирование библиотек"
 
@@ -269,15 +315,15 @@ msgstr ""
 msgid "`GitHub page <https://github.com/NLog/NLog>`__"
 msgstr ""
 
-#: ../../source/legal.rst:51
+#: ../../source/legal.rst:55
 msgid "Trademarks"
 msgstr "Торговые марки"
 
-#: ../../source/legal.rst:54
+#: ../../source/legal.rst:58
 msgid "Microsoft"
 msgstr ""
 
-#: ../../source/legal.rst:56
+#: ../../source/legal.rst:60
 msgid ""
 "Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
 "Corporation."
@@ -285,10 +331,10 @@ msgstr ""
 "Microsoft, Windows являются торговыми марками и/или зарегистрированными "
 "торговыми марками Корпорации Microsoft."
 
-#: ../../source/legal.rst:59
+#: ../../source/legal.rst:63
 msgid "Other"
 msgstr "Прочие"
 
-#: ../../source/legal.rst:61
+#: ../../source/legal.rst:65
 msgid "All other trademarks are property of their respective owners."
 msgstr "Все прочие торговые марки являются собственностью их владельцев."
