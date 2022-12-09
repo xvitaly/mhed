@@ -79,6 +79,22 @@ Files: assets/icons/texteditor.png
 Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
+Files: assets/icons/upd_av.png
+Copyright: 2011 Everaldo Coelho
+License: LGPL-2.1-only
+
+Files: assets/icons/upd_chk.png
+Copyright: 2011 FatCow
+License: CC-BY-4.0
+
+Files: assets/icons/upd_err.png
+Copyright: 2011 Designkindle
+License: CC-BY-SA-4.0
+
+Files: assets/icons/upd_nx.png
+Copyright: 2011 PixelMixer
+License: CC-BY-SA-4.0
+
 Files: assets/images/applogo.png
 Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only

@@ -32,6 +32,10 @@ Icons licensing
     "save.png", "Everaldo Coelho", "`GNU Lesser General Public License <https://opensource.org/licenses/LGPL-2.1>`_", "`IconsPedia <https://www.iconspedia.com/icon/save-file-4082.html>`__"
     "search.png", "Flahorn", "`CC Attribution Non-Commercial No Derivatives <https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/search-26-2.html>`__"
     "texteditor.png", "GNOME icon artists", "`GNU General Public License, version 2 <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>`_", "`IconsPedia <https://www.iconspedia.com/icon/gnome-edit-undo-11006.html>`__"
+    "upd_av.png", "Everaldo Coelho", "`GNU Lesser General Public License <https://opensource.org/licenses/LGPL-2.1>`_", "`IconsPedia <https://www.iconspedia.com/icon/update-recommended-4016.html>`__"
+    "upd_chk.png", "FatCow", "`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/update-icon-22163.html>`__"
+    "upd_err.png", "Designkindle", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/cross-icon-40924.html>`__"
+    "upd_nx.png", "PixelMixer", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/tick-11638.html>`__"
 
 .. index:: libraries, licensing, legal
 .. _legal-libraries:
