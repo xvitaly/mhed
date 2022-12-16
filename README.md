@@ -6,7 +6,6 @@
 [![Linux CI status](https://github.com/xvitaly/mhed/actions/workflows/linux.yml/badge.svg)](https://github.com/xvitaly/mhed/actions/workflows/linux.yml)
 [![Windows CI status](https://github.com/xvitaly/mhed/actions/workflows/windows.yml/badge.svg)](https://github.com/xvitaly/mhed/actions/workflows/windows.yml)
 [![CodeQL CI status](https://github.com/xvitaly/mhed/actions/workflows/codeql.yml/badge.svg)](https://github.com/xvitaly/mhed/actions/workflows/codeql.yml)
-[![LGTM alerts](https://img.shields.io/lgtm/alerts/g/xvitaly/mhed.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/xvitaly/mhed/alerts/)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/f82f7f0323a540a49d987df3cea2ed53)](https://www.codacy.com/gh/xvitaly/mhed/dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/xvitaly/mhed/badge)](https://www.codefactor.io/repository/github/xvitaly/mhed)
 [![GitHub issues](https://img.shields.io/github/issues/xvitaly/mhed.svg?label=issues)](https://github.com/xvitaly/mhed/issues)
