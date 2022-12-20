@@ -229,7 +229,7 @@
     <value>No new updates available. Your application is up to date.</value>
   </data>
   <data name="AHE_UpdateOtherPlatform" xml:space="preserve">
-    <value>Automatic updates on {0} platform is not supported yet. Please install update from official website manually.</value>
+    <value>A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?</value>
   </data>
   <data name="AHE_UpdateSuccessful" xml:space="preserve">
     <value>The new version has been successfully received from server. We will install it now!</value>
