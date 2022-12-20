@@ -21,7 +21,7 @@ namespace mhed.lib
         public Version AppUpdateVersion { get; private set; }
 
         /// <summary>
-        /// Get or set the application download URL.
+        /// Get or set the application changelog page URL.
         /// </summary>
         public string AppUpdateInfo { get; private set; }
 
