@@ -37,6 +37,17 @@ namespace mhed.lib
         string HostsFileFullPath { get; }
 
         /// <summary>
+        /// Return whether automatic updates are supported on this platform.
+        /// </summary>
+        bool AutoUpdateSupported { get; }
+
+        /// <summary>
+        /// Immediately shut down application and return exit code.
+        /// </summary>
+        /// <param name="ReturnCode">Exit code.</param>
+        void Exit(int ReturnCode);
+
+        /// <summary>
         /// Show the specified file in default file manager.
         /// </summary>
         /// <param name="FileName">Full path to file.</param>
@@ -61,6 +72,13 @@ namespace mhed.lib
         /// </summary>
         /// <param name="OS">Operating system type.</param>
         void RestartApplicationAsAdmin();
+
+        /// <summary>
+        /// Start the required application as the current user.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <returns>PID of the newly created process.</returns>
+        int StartRegularProcess(string FileName);
 
         /// <summary>
         /// Start the required application from administrator.
