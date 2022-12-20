@@ -224,7 +224,7 @@ namespace mhed.gui
             {
                 if (UpMan.CheckAppUpdate())
                 {
-                    if (Platform.OS == CurrentPlatform.OSType.Windows)
+                    if (Platform.AutoUpdateSupported)
                     {
                         if (InstallBinaryUpdate(UpMan.AppUpdateURL))
                         {
