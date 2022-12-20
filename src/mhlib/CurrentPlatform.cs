@@ -77,6 +77,11 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Return whether automatic updates are supported on this platform.
+        /// </summary>
+        public virtual bool AutoUpdateSupported => false;
+
+        /// <summary>
         /// Immediately shut down application and return exit code.
         /// </summary>
         /// <param name="ReturnCode">Exit code.</param>

@@ -394,7 +394,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automatic updates on {0} platform is not supported yet. Please install update from official website manually..
+        ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
         /// </summary>
         internal static string AHE_UpdateOtherPlatform {
             get {

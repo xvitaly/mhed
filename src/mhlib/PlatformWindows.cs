@@ -74,6 +74,11 @@ namespace mhed.lib
         public override OSType OS => OSType.Windows;
 
         /// <summary>
+        /// Return whether automatic updates are supported on this platform.
+        /// </summary>
+        public override bool AutoUpdateSupported => true;
+
+        /// <summary>
         /// Return platform-dependent location of the Hosts file.
         /// </summary>
         public override string HostsFileLocation
