@@ -233,7 +233,10 @@ namespace mhed.gui
                     }
                     else
                     {
-                        MessageBox.Show(string.Format(AppStrings.AHE_UpdateOtherPlatform, Platform.OSFriendlyName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (MessageBox.Show(string.Format(AppStrings.AHE_UpdateOtherPlatform, UpMan.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            Platform.OpenWebPage(UpMan.AppUpdateInfo);
+                        }
                     }
                 }
                 else
