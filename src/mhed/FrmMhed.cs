@@ -29,9 +29,14 @@ namespace mhed.gui
         /// </summary>
         private CurrentApp App;
 
-        protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
+        /// <summary>
+        /// Scales controls on current form with some additional hacks applied.
+        /// </summary>
+        /// <param name="ScalingFactor">Scaling factor.</param>
+        /// <param name="ControlBounds">Bounds of the control.</param>
+        protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified ControlBounds)
         {
-            base.ScaleControl(ScalingFactor, Bounds);
+            base.ScaleControl(ScalingFactor, ControlBounds);
             DpiManager.ScaleColumnsInControl(HE_ModelView, ScalingFactor);
         }
 
