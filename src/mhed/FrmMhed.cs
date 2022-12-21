@@ -37,7 +37,10 @@ namespace mhed.gui
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified ControlBounds)
         {
             base.ScaleControl(ScalingFactor, ControlBounds);
-            DpiManager.ScaleColumnsInControl(HE_ModelView, ScalingFactor);
+            if (!DpiManager.CompareFloats(Math.Max(ScalingFactor.Width, ScalingFactor.Height), 1.0f))
+            {
+                DpiManager.ScaleColumnsInControl(HE_ModelView, ScalingFactor);
+            }
         }
 
         /// <summary>
