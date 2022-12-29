@@ -26,7 +26,7 @@ nuget restore
 popd
 
 echo Starting build process using MSBUILD...
-"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ..\mhed.sln /m:1 /t:Build /p:Configuration=Release /p:TargetFramework=v4.8
+"%ProgramFiles%\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\msbuild.exe" ..\mhed.sln /m:1 /t:Build /p:Configuration=Release /p:TargetFramework=v4.8
 
 echo Generating documentation in HTML format...
 mkdir "..\src\mhed\bin\Release\help"
