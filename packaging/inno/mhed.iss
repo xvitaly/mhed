@@ -1,5 +1,5 @@
 ﻿;
-; SPDX-FileCopyrightText: 2011-2022 EasyCoding Team
+; SPDX-FileCopyrightText: 2011-2023 EasyCoding Team
 ;
 ; SPDX-License-Identifier: GPL-3.0-or-later
 ;
@@ -37,7 +37,7 @@ ArchitecturesInstallIn64BitMode=x64
 MinVersion=6.1sp1
 VersionInfoVersion={#VERSION}
 VersionInfoDescription=Micro Hosts Editor Setup
-VersionInfoCopyright=(c) 2011-2022 EasyCoding Team. All rights reserved.
+VersionInfoCopyright=(c) 2011-2023 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Messages]
