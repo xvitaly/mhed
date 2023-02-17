@@ -44,7 +44,7 @@ namespace mhed.lib
         /// <summary>
         /// Return whether automatic updates are supported on this platform.
         /// </summary>
-        bool HostsHeaderRequired { get; }
+        bool HostsFileHeader { get; }
 
         /// <summary>
         /// Immediately shut down application and return exit code.

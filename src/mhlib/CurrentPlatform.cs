@@ -84,7 +84,7 @@ namespace mhed.lib
         /// <summary>
         /// Return whether Hosts file header is required on this platform.
         /// </summary>
-        public virtual bool HostsHeaderRequired => false;
+        public virtual bool HostsFileHeader => false;
 
         /// <summary>
         /// Immediately shut down application and return exit code.
