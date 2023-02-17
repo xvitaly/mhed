@@ -84,7 +84,7 @@ namespace mhed.lib
         {
             using (StreamWriter CFile = new StreamWriter(FilePath, false, Encoding.Default))
             {
-                if (Platform.OS == CurrentPlatform.OSType.Windows)
+                if (Platform.HostsHeaderRequired)
                 {
                     await CFile.WriteLineAsync(Properties.Resources.HtTemplate);
                 }
