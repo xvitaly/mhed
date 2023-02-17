@@ -42,6 +42,11 @@ namespace mhed.lib
         bool AutoUpdateSupported { get; }
 
         /// <summary>
+        /// Return whether automatic updates are supported on this platform.
+        /// </summary>
+        bool HostsHeaderRequired { get; }
+
+        /// <summary>
         /// Immediately shut down application and return exit code.
         /// </summary>
         /// <param name="ReturnCode">Exit code.</param>

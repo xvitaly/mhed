@@ -82,6 +82,11 @@ namespace mhed.lib
         public virtual bool AutoUpdateSupported => false;
 
         /// <summary>
+        /// Return whether Hosts file header is required on this platform.
+        /// </summary>
+        public virtual bool HostsHeaderRequired => false;
+
+        /// <summary>
         /// Immediately shut down application and return exit code.
         /// </summary>
         /// <param name="ReturnCode">Exit code.</param>
