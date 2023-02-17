@@ -79,6 +79,11 @@ namespace mhed.lib
         public override bool AutoUpdateSupported => true;
 
         /// <summary>
+        /// Return whether Hosts file header is required on this platform.
+        /// </summary>
+        public override bool HostsHeaderRequired => true;
+
+        /// <summary>
         /// Return platform-dependent location of the Hosts file.
         /// </summary>
         public override string HostsFileLocation
