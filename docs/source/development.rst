@@ -31,9 +31,9 @@ Installing pre-requirements
 
 First you will need to install C# complier, Microsoft .NET Framework SDK and other required tools (all steps are mandatory):
 
-  1. download the `Microsoft Visual Studio 2019 Community <https://visualstudio.microsoft.com/vs/community/>`_ installer and run it;
-  2. select the **Microsoft Visual Studio 2019 Community**, enable the **Classic .NET application development** component, then switch to the **Additional components** tab and enable the **NuGet package manager**;
-  3. install the Microsoft Visual Studio 2019 Community;
+  1. download the `Microsoft Visual Studio 2022 Community <https://visualstudio.microsoft.com/vs/community/>`_ installer and run it;
+  2. select the **Microsoft Visual Studio 2022 Community**, enable the **Classic .NET application development** component, then switch to the **Additional components** tab and enable the **NuGet package manager**;
+  3. install the Microsoft Visual Studio 2022 Community;
   4. download the latest version of `NuGet CLI <https://www.nuget.org/downloads>`_ and copy its executable to any directory, located in the ``%PATH%`` environment variable;
   5. download and install `HTML Help Workshop <https://www.microsoft.com/en-us/download/details.aspx?id=21138>`_;
   6. download and install `Gpg4Win <https://www.gpg4win.org/>`_ to default directory;
@@ -60,7 +60,7 @@ If you don't want to use automatic method, you can build this project manually.
 Building main project
 ++++++++++++++++++++++++++++++++
 
-  1. Start the Microsoft Visual Studio 2019 Community.
+  1. Start the Microsoft Visual Studio 2022 Community.
   2. **File** -- **Open** -- **Project or solution**, select ``mhed.sln``, then press **Open** button.
   3. **Tools** -- **NuGet Package Manager** -- **Manage NuGet packages for Solution**, press **Restore** button.
   4. **Build** -- **Configuration manager** -- **Active solution configuration** -- **Release**, then press **Close** button.
