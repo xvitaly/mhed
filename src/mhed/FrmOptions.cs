@@ -32,6 +32,7 @@ namespace mhed.gui
             // Reading current settings from configuration file...
             MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
             MO_PreserveFormState.Checked = Properties.Settings.Default.PreserveFormState;
+            MO_AutoCheckUpdates.Checked = Properties.Settings.Default.AutoUpdateCheck;
             MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
 
             // Settig application name in window title...
@@ -48,6 +49,7 @@ namespace mhed.gui
             // Storing settings...
             Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
             Properties.Settings.Default.PreserveFormState = MO_PreserveFormState.Checked;
+            Properties.Settings.Default.AutoUpdateCheck = MO_AutoCheckUpdates.Checked;
             Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
 
             // Saving settings to disk...

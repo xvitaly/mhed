@@ -36,6 +36,7 @@
             this.MO_PreserveFormState = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
+            this.MO_AutoCheckUpdates = new System.Windows.Forms.CheckBox();
             this.MO_FindTextEd = new System.Windows.Forms.Button();
             this.MO_TextEdBin = new System.Windows.Forms.TextBox();
             this.L_MO_TextEdBin = new System.Windows.Forms.Label();
@@ -90,12 +91,19 @@
             // 
             // MO_TP2
             // 
+            this.MO_TP2.Controls.Add(this.MO_AutoCheckUpdates);
             this.MO_TP2.Controls.Add(this.MO_FindTextEd);
             this.MO_TP2.Controls.Add(this.MO_TextEdBin);
             this.MO_TP2.Controls.Add(this.L_MO_TextEdBin);
             resources.ApplyResources(this.MO_TP2, "MO_TP2");
             this.MO_TP2.Name = "MO_TP2";
             this.MO_TP2.UseVisualStyleBackColor = true;
+            // 
+            // MO_AutoCheckUpdates
+            // 
+            resources.ApplyResources(this.MO_AutoCheckUpdates, "MO_AutoCheckUpdates");
+            this.MO_AutoCheckUpdates.Name = "MO_AutoCheckUpdates";
+            this.MO_AutoCheckUpdates.UseVisualStyleBackColor = true;
             // 
             // MO_FindTextEd
             // 
@@ -157,5 +165,6 @@
         private System.Windows.Forms.Label L_MO_TextEdBin;
         private System.Windows.Forms.Button MO_FindTextEd;
         private System.Windows.Forms.OpenFileDialog MO_SearchBin;
+        private System.Windows.Forms.CheckBox MO_AutoCheckUpdates;
     }
 }
