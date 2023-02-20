@@ -24,4 +24,5 @@ Common settings
 Advances settings
 ==========================================
 
+  * **Automatically check for updates** -- enable or disable checking for updates on program startup (once a week).
   * **Text editor binary** -- choose a text editor to load and edit text files instead of using the default one. Click the **Browse** button and find its executable on disk.
