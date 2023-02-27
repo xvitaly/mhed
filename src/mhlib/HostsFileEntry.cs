@@ -19,6 +19,11 @@ namespace mhed.lib
         public string Hostname { get; set; }
 
         /// <summary>
+        /// Check if the IP address or Hostname fields are empty.
+        /// </summary>
+        public bool IsEmpty => string.IsNullOrWhiteSpace(IPAddress) || string.IsNullOrWhiteSpace(Hostname);
+
+        /// <summary>
         /// HostsFileEntry class constructor.
         /// </summary>
         /// <param name="IP">IP address.</param>
