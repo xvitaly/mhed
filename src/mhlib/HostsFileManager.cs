@@ -90,9 +90,9 @@ namespace mhed.lib
                     await CFile.WriteLineAsync(Properties.Resources.HtTemplate);
                 }
 
-                foreach (HostsFileEntry Entry in Contents.Where(e => !(string.IsNullOrEmpty(e.IPAddress) || string.IsNullOrEmpty(e.Hostname))))
+                foreach (HostsFileEntry Entry in Contents.Where(e => !e.IsEmpty))
                 {
-                    if (AddressHelpers.ValidateIPAddress(Entry.IPAddress))
+                    if (Entry.IsValid)
                     {
                         await CFile.WriteLineAsync(string.Format("{0} {1}", Entry.IPAddress, Entry.Hostname));
                     }
