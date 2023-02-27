@@ -24,6 +24,11 @@ namespace mhed.lib
         public bool IsEmpty => string.IsNullOrWhiteSpace(IPAddress) || string.IsNullOrWhiteSpace(Hostname);
 
         /// <summary>
+        /// Check if the IP address is valid.
+        /// </summary>
+        public bool IsValid => AddressHelpers.ValidateIPAddress(IPAddress);
+
+        /// <summary>
         /// HostsFileEntry class constructor.
         /// </summary>
         /// <param name="IP">IP address.</param>
