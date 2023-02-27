@@ -6,6 +6,7 @@
 
 using System;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -89,14 +90,11 @@ namespace mhed.lib
                     await CFile.WriteLineAsync(Properties.Resources.HtTemplate);
                 }
 
-                foreach (HostsFileEntry Entry in Contents)
+                foreach (HostsFileEntry Entry in Contents.Where(e => !(string.IsNullOrEmpty(e.IPAddress) || string.IsNullOrEmpty(e.Hostname))))
                 {
-                    if (!string.IsNullOrEmpty(Entry.IPAddress) && !string.IsNullOrEmpty(Entry.Hostname))
+                    if (AddressHelpers.ValidateIPAddress(Entry.IPAddress))
                     {
-                        if (AddressHelpers.ValidateIPAddress(Entry.IPAddress))
-                        {
-                            await CFile.WriteLineAsync(string.Format("{0} {1}", Entry.IPAddress, Entry.Hostname));
-                        }
+                        await CFile.WriteLineAsync(string.Format("{0} {1}", Entry.IPAddress, Entry.Hostname));
                     }
                 }
             }
