@@ -26,7 +26,7 @@ namespace mhed.lib
         /// <summary>
         /// Check if the IP address is valid.
         /// </summary>
-        public bool IsValid => AddressHelpers.ValidateIPAddress(IPAddress);
+        public bool IsValid => AddressHelpers.ValidateIPAddress(IPAddress) && !string.IsNullOrWhiteSpace(Hostname);
 
         /// <summary>
         /// HostsFileEntry class constructor.
