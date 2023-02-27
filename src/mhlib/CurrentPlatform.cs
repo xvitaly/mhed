@@ -87,6 +87,11 @@ namespace mhed.lib
         public virtual bool HostsFileHeader => false;
 
         /// <summary>
+        /// Return whether localhost entry is required on this platform.
+        /// </summary>
+        public virtual bool LocalHostEntry => true;
+
+        /// <summary>
         /// Immediately shut down application and return exit code.
         /// </summary>
         /// <param name="ReturnCode">Exit code.</param>

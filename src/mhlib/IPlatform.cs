@@ -47,6 +47,11 @@ namespace mhed.lib
         bool HostsFileHeader { get; }
 
         /// <summary>
+        /// Return whether localhost entry is required on this platform.
+        /// </summary>
+        bool LocalHostEntry { get; }
+
+        /// <summary>
         /// Immediately shut down application and return exit code.
         /// </summary>
         /// <param name="ReturnCode">Exit code.</param>
