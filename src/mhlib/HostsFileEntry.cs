@@ -24,7 +24,7 @@ namespace mhed.lib
         public bool IsEmpty => string.IsNullOrWhiteSpace(IPAddress) || string.IsNullOrWhiteSpace(Hostname);
 
         /// <summary>
-        /// Check if the IP address is valid.
+        /// Check if the IP address is valid and Hostname is not empty.
         /// </summary>
         public bool IsValid => AddressHelpers.ValidateIPAddress(IPAddress) && !string.IsNullOrWhiteSpace(Hostname);
 
