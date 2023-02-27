@@ -84,6 +84,11 @@ namespace mhed.lib
         public override bool HostsFileHeader => true;
 
         /// <summary>
+        /// Return whether localhost entry is required on this platform.
+        /// </summary>
+        public override bool LocalHostEntry => false;
+
+        /// <summary>
         /// Return platform-dependent location of the Hosts file.
         /// </summary>
         public override string HostsFileLocation
