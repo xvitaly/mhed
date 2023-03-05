@@ -81,6 +81,8 @@ namespace mhed.gui
         private void ChangeTableEditorState(bool NewState)
         {
             HE_ModelView.ReadOnly = !NewState;
+            HE_ModelView.AllowUserToAddRows = NewState;
+            HE_ModelView.AllowUserToDeleteRows = NewState;
         }
 
         /// <summary>
