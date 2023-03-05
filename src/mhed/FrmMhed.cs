@@ -80,7 +80,7 @@ namespace mhed.gui
         /// <param name="NewState">New state boolean.</param>
         private void ChangeTableEditorState(bool NewState)
         {
-            HE_ModelView.ReadOnly = NewState;
+            HE_ModelView.ReadOnly = !NewState;
         }
 
         /// <summary>
