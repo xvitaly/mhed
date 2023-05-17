@@ -5,6 +5,7 @@
 */
 
 using System;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace mhed.lib
@@ -35,7 +36,7 @@ namespace mhed.lib
         /// </summary>
         /// <param name="Hostname">Hostname to be resolved.</param>
         /// <returns>Associated IP-address.</returns>
-        public abstract Task<string> Resolve(string Hostname);
+        public abstract Task<IPAddress[]> Resolve(string Hostname);
 
         /// <summary>
         /// Codes and IDs of available DNS resolvers.

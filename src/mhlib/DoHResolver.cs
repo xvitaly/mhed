@@ -5,6 +5,7 @@
 */
 
 using System;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace mhed.lib
@@ -20,7 +21,7 @@ namespace mhed.lib
         /// </summary>
         /// <param name="Hostname">Hostname to be resolved.</param>
         /// <returns>Associated IP-address.</returns>
-        public override Task<string> Resolve(string Hostname)
+        public override Task<IPAddress[]> Resolve(string Hostname)
         {
             throw new NotImplementedException();
         }
