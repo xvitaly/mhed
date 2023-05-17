@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace mhed.lib
 {
+    /// <summary>
+    /// Class for working with resolver-dependent functions.
+    /// </summary>
     public abstract class CurrentResolver
     {
         /// <summary>
@@ -16,11 +19,19 @@ namespace mhed.lib
         /// </summary>
         public static CurrentResolver Create(DNSType Type)
         {
-            throw new NotImplementedException();
+            switch (Type)
+            {
+                case DNSType.System:
+                    return new SystemResolver();
+                case DNSType.DoH:
+                    return new DoHResolver();
+                default:
+                    throw new PlatformNotSupportedException();
+            }
         }
 
         /// <summary>
-        /// Resolve hostname and return the associated IP-address.
+        /// Resolve the specified hostname and return the associated IP-address.
         /// </summary>
         /// <param name="Hostname">Hostname to be resolved.</param>
         /// <returns>Associated IP-address.</returns>
