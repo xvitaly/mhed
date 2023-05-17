@@ -55,6 +55,7 @@
     <Compile Include="CurrentPlatform.cs" />
     <Compile Include="CurrentApp.cs" />
     <Compile Include="CurrentResolver.cs" />
+    <Compile Include="DoHResolver.cs" />
     <Compile Include="DpiManager.cs" />
     <Compile Include="FileManager.cs" />
     <Compile Include="HostsFileEntry.cs" />
