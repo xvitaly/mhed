@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
-using System;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -21,9 +20,9 @@ namespace mhed.lib
         /// </summary>
         /// <param name="Hostname">Hostname to be resolved.</param>
         /// <returns>Associated IP-address.</returns>
-        public override Task<IPAddress[]> Resolve(string Hostname)
+        public override async Task<IPAddress[]> Resolve(string Hostname)
         {
-            throw new NotImplementedException();
+            return await Dns.GetHostAddressesAsync(Hostname);
         }
     }
 }
