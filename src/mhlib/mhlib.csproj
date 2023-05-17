@@ -75,6 +75,7 @@
     <Compile Include="ReturnCodes.cs" />
     <Compile Include="SortableBindingList.cs" />
     <Compile Include="StringsManager.cs" />
+    <Compile Include="SystemResolver.cs" />
     <Compile Include="UpdateManager.cs" />
   </ItemGroup>
   <ItemGroup>
