@@ -65,3 +65,27 @@ Uninstalling program
 If you want to uninstall Micro Hosts Editor from your compuler, use **Control panel** -- **Programs and components** -- **Micro Hosts Editor** -- **Uninstall**.
 
 Uninstaller will automatically remove all program files, shortcuts, registry entries, but will save created by user :ref:`data files <gs-datafiles>`. You can remove them manually.
+
+.. index:: mono issues, mono workaround
+.. _gs-mono-issues:
+
+Mono issues
+==========================================
+
+When running under Mono, the program may crash on start with the following error:
+
+.. code-block:: text
+
+    [ERROR] FATAL UNHANDLED EXCEPTION: System.Configuration.ConfigurationErrorsException: Unrecognized configuration section <System.Windows.Forms.ApplicationConfigurationSection>
+
+This is a known `upstream issue <https://github.com/mono/mono/issues/21630>`__.
+
+It can be trivially workarounded by editing the ``mhed.exe.config`` file and removing the following lines:
+
+.. code-block:: xml
+
+    <System.Windows.Forms.ApplicationConfigurationSection>
+        <add key="DpiAwareness" value="PerMonitorV2"/>
+    </System.Windows.Forms.ApplicationConfigurationSection>
+
+The next launch will be successful.
