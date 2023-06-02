@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-20 14:36+0100\n"
-"PO-Revision-Date: 2023-02-20 14:38+0100\n"
+"POT-Creation-Date: 2023-06-02 13:51+0200\n"
+"PO-Revision-Date: 2023-06-02 13:57+0200\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -153,3 +153,33 @@ msgstr ""
 "реестра, ярлыки, но сохранит настройки и резервные копии на случай если вы "
 "решите когда-нибудь переустановить её. Эти :ref:`файлы <gs-datafiles>` вы "
 "можете удалить вручную."
+
+#: ../../source/getting-started.rst:73
+msgid "Mono issues"
+msgstr "Проблемы с Mono"
+
+#: ../../source/getting-started.rst:75
+msgid ""
+"When running under Mono, the program may crash on start with the following "
+"error:"
+msgstr ""
+"При запуске программы с использованием Mono, может произойти падение со "
+"следующей ошибкой:"
+
+#: ../../source/getting-started.rst:81
+msgid ""
+"This is a known `upstream issue <https://github.com/mono/mono/"
+"issues/21630>`__."
+msgstr "Это `известная проблема<https://github.com/mono/mono/issues/21630>`__."
+
+#: ../../source/getting-started.rst:83
+msgid ""
+"It can be trivially workarounded by editing the ``mhed.exe.config`` file and "
+"removing the following lines:"
+msgstr ""
+"Её можно достаточно просто решить, открыв в текстовом редакторе файл ``mhed."
+"exe.config`` и удалив следующие строки:"
+
+#: ../../source/getting-started.rst:91
+msgid "The next launch will be successful."
+msgstr "Следующий запуск будет успешным."
