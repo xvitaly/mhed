@@ -76,7 +76,8 @@ When running under Mono, the program may crash on start with the following error
 
 .. code-block:: text
 
-    [ERROR] FATAL UNHANDLED EXCEPTION: System.Configuration.ConfigurationErrorsException: Unrecognized configuration section <System.Windows.Forms.ApplicationConfigurationSection>
+    [ERROR] FATAL UNHANDLED EXCEPTION: System.Configuration.ConfigurationErrorsException:
+    Unrecognized configuration section <System.Windows.Forms.ApplicationConfigurationSection>
 
 This is a known `upstream issue <https://github.com/mono/mono/issues/21630>`__.
 
