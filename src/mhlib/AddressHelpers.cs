@@ -41,6 +41,7 @@ namespace mhed.lib
             {
                 foreach (string SingleHost in SrcHostname.Split(' '))
                 {
+                    if (string.IsNullOrEmpty(SingleHost)) { continue; }
                     Result &= Uri.CheckHostName(SingleHost) == UriHostNameType.Dns;
                 }
             }
