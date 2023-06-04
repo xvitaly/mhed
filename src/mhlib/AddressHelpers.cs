@@ -32,7 +32,19 @@ namespace mhed.lib
         /// <returns>Return True if the source hostname is correct.</returns>
         public static bool ValidateHostname(string SrcHostname)
         {
-            return Uri.CheckHostName(SrcHostname) == UriHostNameType.Dns;
+            bool Result = true;
+            if (SrcHostname.IndexOf(' ') == -1)
+            {
+                Result = Uri.CheckHostName(SrcHostname) == UriHostNameType.Dns;
+            }
+            else
+            {
+                foreach (string SingleHost in SrcHostname.Split(' '))
+                {
+                    Result &= Uri.CheckHostName(SingleHost) == UriHostNameType.Dns;
+                }
+            }
+            return Result;
         }
 
         /// <summary>
