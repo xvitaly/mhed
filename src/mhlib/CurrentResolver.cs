@@ -24,8 +24,6 @@ namespace mhed.lib
             {
                 case DNSType.System:
                     return new SystemResolver();
-                case DNSType.DoH:
-                    return new DoHResolver();
                 default:
                     throw new PlatformNotSupportedException();
             }
