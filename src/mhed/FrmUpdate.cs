@@ -77,10 +77,10 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Launche a program update checker in a separate thread, waits for the
+        /// Launch a program update checker in a separate thread, waits for the
         /// result and returns a message if found.
         /// </summary>
-        private async void CheckForUpdates()
+        private async Task CheckForUpdates()
         {
             try
             {
@@ -197,10 +197,10 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void FrmUpdate_Load(object sender, EventArgs e)
+        private async void FrmUpdate_Load(object sender, EventArgs e)
         {
             // Starting checking for updates...
-            CheckForUpdates();
+            await CheckForUpdates();
         }
 
         /// <summary>
