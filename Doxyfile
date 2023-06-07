@@ -15,6 +15,7 @@ PROJECT_BRIEF          = "Micro Hosts Editor is a small, simple, cross-platform 
 PROJECT_LOGO           =
 OUTPUT_DIRECTORY       = docs/build/doxygen
 CREATE_SUBDIRS         = NO
+CREATE_SUBDIRS_LEVEL   = 8
 ALLOW_UNICODE_NAMES    = NO
 OUTPUT_LANGUAGE        = English
 BRIEF_MEMBER_DESC      = YES
@@ -43,6 +44,7 @@ OPTIMIZE_OUTPUT_SLICE  = NO
 EXTENSION_MAPPING      =
 MARKDOWN_SUPPORT       = YES
 TOC_INCLUDE_HEADINGS   = 0
+MARKDOWN_ID_STYLE      = DOXYGEN
 AUTOLINK_SUPPORT       = YES
 BUILTIN_STL_SUPPORT    = YES
 CPP_CLI_SUPPORT        = NO
@@ -56,6 +58,7 @@ INLINE_SIMPLE_STRUCTS  = NO
 TYPEDEF_HIDES_STRUCT   = NO
 LOOKUP_CACHE_SIZE      = 0
 NUM_PROC_THREADS       = 1
+TIMESTAMP              = NO
 
 #---------------------------------------------------------------------------
 # Build related configuration options
@@ -112,8 +115,10 @@ WARN_IF_UNDOCUMENTED   = YES
 WARN_IF_DOC_ERROR      = YES
 WARN_IF_INCOMPLETE_DOC = YES
 WARN_NO_PARAMDOC       = NO
+WARN_IF_UNDOC_ENUM_VAL = NO
 WARN_AS_ERROR          = NO
 WARN_FORMAT            = "$file:$line: $text"
+WARN_LINE_FORMAT       = "at line $line of file $file"
 WARN_LOGFILE           =
 
 #---------------------------------------------------------------------------
@@ -124,6 +129,7 @@ INPUT                  = src/mhed \
                          src/mhlib \
                          README.md
 INPUT_ENCODING         = UTF-8
+INPUT_FILE_ENCODING    =
 FILE_PATTERNS          = *.c \
                          *.cc \
                          *.cxx \
@@ -168,7 +174,6 @@ FILE_PATTERNS          = *.c \
                          *.vhdl \
                          *.ucf \
                          *.qsf
-
 RECURSIVE              = YES
 EXCLUDE                =
 EXCLUDE_SYMLINKS       = NO
@@ -183,6 +188,7 @@ FILTER_PATTERNS        =
 FILTER_SOURCE_FILES    = NO
 FILTER_SOURCE_PATTERNS =
 USE_MDFILE_AS_MAINPAGE = README.md
+FORTRAN_COMMENT_AFTER  = 72
 
 #---------------------------------------------------------------------------
 # Configuration options related to source browsing
@@ -221,15 +227,16 @@ HTML_FOOTER            =
 HTML_STYLESHEET        =
 HTML_EXTRA_STYLESHEET  =
 HTML_EXTRA_FILES       =
+HTML_COLORSTYLE        = AUTO_LIGHT
 HTML_COLORSTYLE_HUE    = 220
 HTML_COLORSTYLE_SAT    = 100
 HTML_COLORSTYLE_GAMMA  = 80
-HTML_TIMESTAMP         = NO
 HTML_DYNAMIC_MENUS     = YES
 HTML_DYNAMIC_SECTIONS  = NO
 HTML_INDEX_NUM_ENTRIES = 100
 GENERATE_DOCSET        = NO
 DOCSET_FEEDNAME        = "Micro Hosts Editor's developer documentation"
+DOCSET_FEEDURL         =
 DOCSET_BUNDLE_ID       = org.easycoding.mhed
 DOCSET_PUBLISHER_ID    = org.easycoding.team
 DOCSET_PUBLISHER_NAME  = "EasyCoding Team"
@@ -240,6 +247,7 @@ GENERATE_CHI           = NO
 CHM_INDEX_ENCODING     = UTF-8
 BINARY_TOC             = YES
 TOC_EXPAND             = YES
+SITEMAP_URL            =
 GENERATE_QHP           = NO
 QCH_FILE               =
 QHP_NAMESPACE          = org.easycoding.mhed
@@ -256,9 +264,9 @@ FULL_SIDEBAR           = NO
 ENUM_VALUES_PER_LINE   = 4
 TREEVIEW_WIDTH         = 200
 EXT_LINKS_IN_WINDOW    = NO
+OBFUSCATE_EMAILS       = YES
 HTML_FORMULA_FORMAT    = png
 FORMULA_FONTSIZE       = 10
-FORMULA_TRANSPARENT    = YES
 FORMULA_MACROFILE      =
 USE_MATHJAX            = NO
 MATHJAX_VERSION        = MathJax_2
@@ -295,7 +303,6 @@ USE_PDFLATEX           = YES
 LATEX_BATCHMODE        = NO
 LATEX_HIDE_INDICES     = NO
 LATEX_BIB_STYLE        = plain
-LATEX_TIMESTAMP        = NO
 LATEX_EMOJI_DIRECTORY  =
 
 #---------------------------------------------------------------------------
@@ -375,16 +382,15 @@ EXTERNAL_GROUPS        = YES
 EXTERNAL_PAGES         = YES
 
 #---------------------------------------------------------------------------
-# Configuration options related to the dot tool
+# Configuration options related to diagram generator tools
 #---------------------------------------------------------------------------
 
-CLASS_DIAGRAMS         = YES
-DIA_PATH               =
 HIDE_UNDOC_RELATIONS   = YES
 HAVE_DOT               = NO
 DOT_NUM_THREADS        = 0
-DOT_FONTNAME           = Helvetica
-DOT_FONTSIZE           = 10
+DOT_COMMON_ATTR        = "fontname=Helvetica,fontsize=10"
+DOT_EDGE_ATTR          = "labelfontname=Helvetica,labelfontsize=10"
+DOT_NODE_ATTR          = "shape=box,height=0.2,width=0.4"
 DOT_FONTPATH           =
 CLASS_GRAPH            = YES
 COLLABORATION_GRAPH    = YES
@@ -400,18 +406,20 @@ CALL_GRAPH             = NO
 CALLER_GRAPH           = NO
 GRAPHICAL_HIERARCHY    = YES
 DIRECTORY_GRAPH        = YES
+DIR_GRAPH_MAX_DEPTH    = 1
 DOT_IMAGE_FORMAT       = png
 INTERACTIVE_SVG        = NO
 DOT_PATH               =
 DOTFILE_DIRS           =
-MSCFILE_DIRS           =
+DIA_PATH               =
 DIAFILE_DIRS           =
 PLANTUML_JAR_PATH      =
 PLANTUML_CFG_FILE      =
 PLANTUML_INCLUDE_PATH  =
 DOT_GRAPH_MAX_NODES    = 50
 MAX_DOT_GRAPH_DEPTH    = 0
-DOT_TRANSPARENT        = NO
 DOT_MULTI_TARGETS      = NO
 GENERATE_LEGEND        = YES
 DOT_CLEANUP            = YES
+MSCGEN_TOOL            =
+MSCFILE_DIRS           =
