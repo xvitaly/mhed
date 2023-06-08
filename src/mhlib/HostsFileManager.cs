@@ -7,6 +7,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -70,7 +71,10 @@ namespace mhed.lib
                             int SpPos = ImpStr.IndexOf(" ", StringComparison.InvariantCulture);
                             if (SpPos != -1)
                             {
-                                Contents.Add(new HostsFileEntry(ImpStr.Substring(0, SpPos), ImpStr.Remove(0, SpPos + 1)));
+                                if (IPAddress.TryParse(ImpStr.Substring(0, SpPos), out IPAddress IP))
+                                {
+                                    Contents.Add(new HostsFileEntry(IP, ImpStr.Remove(0, SpPos + 1)));
+                                }
                             }
                         }
                     }
