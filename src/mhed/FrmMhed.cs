@@ -328,7 +328,7 @@ namespace mhed.gui
             {
                 if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
                 {
-                    Clipboard.SetText((string)HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value);
+                    Clipboard.SetText(HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value.ToString());
                     HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = null;
                 }
             }
@@ -348,7 +348,7 @@ namespace mhed.gui
             {
                 if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
                 {
-                    Clipboard.SetText((string)HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value);
+                    Clipboard.SetText(HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value.ToString());
                 }
             }
             catch (Exception Ex)
