@@ -49,8 +49,8 @@ namespace mhed.lib
         {
             if (Platform.LocalHostEntry)
             {
-                Contents.Add(new HostsFileEntry("127.0.0.1", "localhost")); // IPv4
-                Contents.Add(new HostsFileEntry("::1", "localhost")); // IPv6
+                Contents.Add(new HostsFileEntry(IPAddress.Loopback, "localhost")); // IPv4
+                Contents.Add(new HostsFileEntry(IPAddress.IPv6Loopback, "localhost")); // IPv6
             }
         }
 

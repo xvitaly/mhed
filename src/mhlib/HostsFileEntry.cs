@@ -52,7 +52,7 @@ namespace mhed.lib
         /// </summary>
         public HostsFileEntry()
         {
-            IPAddress = IPAddress.Parse("127.0.0.1");
+            IPAddress = IPAddress.Loopback;
             Hostname = string.Empty;
         }
     }
