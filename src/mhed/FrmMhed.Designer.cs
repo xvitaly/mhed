@@ -389,7 +389,7 @@
             // 
             // HE_ModelViewColumnIP
             // 
-            this.HE_ModelViewColumnIP.DataPropertyName = "IPAddress";
+            this.HE_ModelViewColumnIP.DataPropertyName = "IPAddr";
             this.HE_ModelViewColumnIP.FillWeight = 74.92796F;
             resources.ApplyResources(this.HE_ModelViewColumnIP, "HE_ModelViewColumnIP");
             this.HE_ModelViewColumnIP.Name = "HE_ModelViewColumnIP";

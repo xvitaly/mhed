@@ -96,7 +96,7 @@ namespace mhed.lib
 
                 foreach (HostsFileEntry Entry in Contents.Where(e => e.IsValid))
                 {
-                    await CFile.WriteLineAsync(string.Format("{0} {1}", Entry.IPAddress, Entry.Hostname));
+                    await CFile.WriteLineAsync(string.Format("{0} {1}", Entry.IPAddr, Entry.Hostname));
                 }
             }
         }

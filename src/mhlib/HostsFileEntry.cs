@@ -13,7 +13,7 @@ namespace mhed.lib
         /// <summary>
         /// Get or set IP address.
         /// </summary>
-        public IPAddress IPAddress { get; set; }
+        public IPAddress IPAddr { get; set; }
 
         /// <summary>
         /// Get or set associated hostname.
@@ -23,7 +23,7 @@ namespace mhed.lib
         /// <summary>
         /// Check if the IP address is valid and Hostname is not empty.
         /// </summary>
-        public bool IsValid => IPAddress != null && !string.IsNullOrWhiteSpace(Hostname);
+        public bool IsValid => IPAddr != null && !string.IsNullOrWhiteSpace(Hostname);
 
         /// <summary>
         /// HostsFileEntry class constructor.
@@ -32,7 +32,7 @@ namespace mhed.lib
         /// <param name="Host">Associated hostname.</param>
         public HostsFileEntry(IPAddress IP, string Host)
         {
-            IPAddress = IP;
+            IPAddr = IP;
             Hostname = Host;
         }
 
@@ -43,7 +43,7 @@ namespace mhed.lib
         /// <param name="Host">Associated hostname.</param>
         public HostsFileEntry(string IP, string Host)
         {
-            IPAddress = IPAddress.Parse(IP);
+            IPAddr = IPAddress.Parse(IP);
             Hostname = Host;
         }
 
@@ -52,7 +52,7 @@ namespace mhed.lib
         /// </summary>
         public HostsFileEntry()
         {
-            IPAddress = IPAddress.Loopback;
+            IPAddr = IPAddress.Loopback;
             Hostname = string.Empty;
         }
     }
