@@ -240,4 +240,7 @@
   <data name="AHE_NewVersionAvailable" xml:space="preserve">
     <value>A new update for {0} is available. We recommend you to upgrade as soon as possible via Help - Check for updates, or manually.</value>
   </data>
+  <data name="AHE_ClipboardNonIPAddress" xml:space="preserve">
+    <value>Clipboard doesn't contain a valid IP-address!</value>
+  </data>
 </root>

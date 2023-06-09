@@ -240,4 +240,7 @@
   <data name="AHE_NewVersionAvailable" xml:space="preserve">
     <value>Внимание! Доступно обновление программы {0}. Рекомендуем вам обновиться как можно скорее через меню Справка - Проверить наличие обновлений, либо вручную.</value>
   </data>
+  <data name="AHE_ClipboardNonIPAddress" xml:space="preserve">
+    <value>В буфере обмена не содержится действительный IP-адрес!</value>
+  </data>
 </root>

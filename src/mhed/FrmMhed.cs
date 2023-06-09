@@ -9,6 +9,7 @@ using NLog;
 using System;
 using System.Drawing;
 using System.IO;
+using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -367,7 +368,21 @@ namespace mhed.gui
             {
                 if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && Clipboard.ContainsText())
                 {
-                    HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
+                    if (HE_ModelView.CurrentCell.ColumnIndex == 0)
+                    {
+                        if (IPAddress.TryParse(Clipboard.GetText(), out IPAddress IP))
+                        {
+                            HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = IP;
+                        }
+                        else
+                        {
+                            MessageBox.Show(AppStrings.AHE_ClipboardNonIPAddress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
+                    }
                 }
             }
             catch (Exception Ex)
