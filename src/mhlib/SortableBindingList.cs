@@ -7,6 +7,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Net;
 
 namespace mhed.lib
 {
@@ -55,6 +56,7 @@ namespace mhed.lib
             if (RightValue == null) { return 1; }
             if (LeftValue.Equals(RightValue)) { return 0; }
             if (LeftValue is IComparable LeftValueComparable) { return LeftValueComparable.CompareTo(RightValue); }
+            if (LeftValue is IPAddress IPAddressComparable) { return IPAddressComparable.CompareTo((IPAddress)RightValue); }
             return string.Compare(LeftValue.ToString(), RightValue.ToString(), StringComparison.InvariantCulture);
         }
 
