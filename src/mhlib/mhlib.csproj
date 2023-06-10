@@ -60,6 +60,7 @@
     <Compile Include="HostsFileEntry.cs" />
     <Compile Include="HostsFileManager.cs" />
     <Compile Include="AddressHelpers.cs" />
+    <Compile Include="IPAddressExtensions.cs" />
     <Compile Include="IPlatform.cs" />
     <Compile Include="LibraryManager.cs" />
     <Compile Include="PlatformLinux.cs" />
