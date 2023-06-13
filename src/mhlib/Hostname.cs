@@ -51,7 +51,7 @@ namespace mhed.lib
         public Hostname(string Value)
         {
             if (Value == null) { throw new ArgumentNullException("Value", "Hostname value cannot be null."); }
-            if (!AddressHelpers.ValidateHostname(Value)) { throw new FormatException("Hostname has incorrect format."); }
+            if (!string.IsNullOrEmpty(Value) && !AddressHelpers.ValidateHostname(Value)) { throw new FormatException("Hostname has incorrect format."); }
             _Host = Value;
         }
     }
