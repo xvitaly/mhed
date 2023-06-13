@@ -57,6 +57,8 @@
     <Compile Include="CurrentResolver.cs" />
     <Compile Include="DpiManager.cs" />
     <Compile Include="FileManager.cs" />
+    <Compile Include="Hostname.cs" />
+    <Compile Include="HostnameConverter.cs" />
     <Compile Include="HostsFileEntry.cs" />
     <Compile Include="HostsFileManager.cs" />
     <Compile Include="AddressHelpers.cs" />
