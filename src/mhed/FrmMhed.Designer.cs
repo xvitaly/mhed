@@ -384,7 +384,6 @@
             this.HE_ModelView.ContextMenuStrip = this.HE_ContextMenu;
             resources.ApplyResources(this.HE_ModelView, "HE_ModelView");
             this.HE_ModelView.Name = "HE_ModelView";
-            this.HE_ModelView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.HE_ModelView_CellValidating);
             this.HE_ModelView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.HE_ModelView_DataError);
             // 
             // HE_ModelViewColumnIP

@@ -637,25 +637,13 @@ namespace mhed.gui
         private void HE_ModelView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             Logger.Warn(e.Exception, DebugStrings.AppDbgExModelView);
-        }
-
-        /// <summary>
-        /// "Validate cell" event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void HE_ModelView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-        {
-            // Skip validation of the new rows...
-            if (((DataGridView)sender).Rows[e.RowIndex].IsNewRow) { return; }
-
             switch (e.ColumnIndex)
             {
                 case 0: // Validating IP-address...
-                    ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = AddressHelpers.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
+                    MessageBox.Show(AppStrings.AHE_IncorrectIPAddress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 case 1: // Validating Hostname...
-                    ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = AddressHelpers.ValidateHostname((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectHostname;
+                    MessageBox.Show(AppStrings.AHE_IncorrectHostname, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 default: // Reporting an error...
                     Logger.Warn(DebugStrings.AppDbgModelViewColumnIndexOutOfRange);
