@@ -18,7 +18,7 @@ namespace mhed.lib
         /// <summary>
         /// Get or set associated hostname.
         /// </summary>
-        public string Hostname { get; set; }
+        public Hostname Hostname { get; set; }
 
         /// <summary>
         /// Check if the IP address is valid and Hostname is not empty.
@@ -30,7 +30,7 @@ namespace mhed.lib
         /// </summary>
         /// <param name="IP">IP address.</param>
         /// <param name="Host">Associated hostname.</param>
-        public HostsFileEntry(IPAddress IP, string Host)
+        public HostsFileEntry(IPAddress IP, Hostname Host)
         {
             IPAddr = IP;
             Hostname = Host;
