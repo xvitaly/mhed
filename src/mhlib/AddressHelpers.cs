@@ -16,16 +16,6 @@ namespace mhed.lib
     public static class AddressHelpers
     {
         /// <summary>
-        /// Validate IP-address.
-        /// </summary>
-        /// <param name="SrcIPAddress">Source IP-address for validation.</param>
-        /// <returns>Return True if the source IP-address is correct.</returns>
-        public static bool ValidateIPAddress(string SrcIPAddress)
-        {
-            return IPAddress.TryParse(SrcIPAddress, out _);
-        }
-
-        /// <summary>
         /// Get an integer representation of the specified IPv4 address.
         /// </summary>
         /// <param name="SrcIPAddress">Source IPv4 address.</param>
