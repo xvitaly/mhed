@@ -16,46 +16,13 @@ namespace mhed.lib
     public static class AddressHelpers
     {
         /// <summary>
-        /// Validate IP-address.
-        /// </summary>
-        /// <param name="SrcIPAddress">Source IP-address for validation.</param>
-        /// <returns>Return True if the source IP-address is correct.</returns>
-        public static bool ValidateIPAddress(string SrcIPAddress)
-        {
-            return IPAddress.TryParse(SrcIPAddress, out _);
-        }
-
-        /// <summary>
-        /// Validate hostname.
-        /// </summary>
-        /// <param name="SrcHostname">Source hostname for validation.</param>
-        /// <returns>Return True if the source hostname is correct.</returns>
-        public static bool ValidateHostname(string SrcHostname)
-        {
-            bool Result = true;
-            if (SrcHostname.IndexOf(' ') == -1)
-            {
-                Result = Uri.CheckHostName(SrcHostname) == UriHostNameType.Dns;
-            }
-            else
-            {
-                foreach (string SingleHost in SrcHostname.Split(' '))
-                {
-                    if (string.IsNullOrEmpty(SingleHost)) { continue; }
-                    Result &= Uri.CheckHostName(SingleHost) == UriHostNameType.Dns;
-                }
-            }
-            return Result;
-        }
-
-        /// <summary>
         /// Get an integer representation of the specified IPv4 address.
         /// </summary>
         /// <param name="SrcIPAddress">Source IPv4 address.</param>
         /// <returns>Integer representation of the specified IPv4 address.</returns>
-        public static uint GetIntegerFromIPv4Address(string SrcIPAddress)
+        public static uint GetIntegerFromIPv4Address(IPAddress SrcIPAddress)
         {
-            byte[] IPAddressBytes = IPAddress.Parse(SrcIPAddress).GetAddressBytes();
+            byte[] IPAddressBytes = SrcIPAddress.GetAddressBytes();
             if (BitConverter.IsLittleEndian)
             {
                 Array.Reverse(IPAddressBytes);
@@ -68,14 +35,14 @@ namespace mhed.lib
         /// </summary>
         /// <param name="SrcIPAddress">Integer representation of the source IPv4 address.</param>
         /// <returns>IPv4 address.</returns>
-        public static string GetIPv4AddressFromInteger(uint SrcIPAddress)
+        public static IPAddress GetIPv4AddressFromInteger(uint SrcIPAddress)
         {
             byte[] IPAddressBytes = BitConverter.GetBytes(SrcIPAddress);
             if (BitConverter.IsLittleEndian)
             {
                 Array.Reverse(IPAddressBytes);
             }
-            return new IPAddress(IPAddressBytes).ToString();
+            return new IPAddress(IPAddressBytes);
         }
     }
 }

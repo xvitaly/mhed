@@ -384,12 +384,11 @@
             this.HE_ModelView.ContextMenuStrip = this.HE_ContextMenu;
             resources.ApplyResources(this.HE_ModelView, "HE_ModelView");
             this.HE_ModelView.Name = "HE_ModelView";
-            this.HE_ModelView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.HE_ModelView_CellValidating);
             this.HE_ModelView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.HE_ModelView_DataError);
             // 
             // HE_ModelViewColumnIP
             // 
-            this.HE_ModelViewColumnIP.DataPropertyName = "IPAddress";
+            this.HE_ModelViewColumnIP.DataPropertyName = "IPAddr";
             this.HE_ModelViewColumnIP.FillWeight = 74.92796F;
             resources.ApplyResources(this.HE_ModelViewColumnIP, "HE_ModelViewColumnIP");
             this.HE_ModelViewColumnIP.Name = "HE_ModelViewColumnIP";

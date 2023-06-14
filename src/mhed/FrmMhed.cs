@@ -9,6 +9,7 @@ using NLog;
 using System;
 using System.Drawing;
 using System.IO;
+using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -328,7 +329,7 @@ namespace mhed.gui
             {
                 if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
                 {
-                    Clipboard.SetText((string)HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value);
+                    Clipboard.SetText(HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value.ToString());
                     HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = null;
                 }
             }
@@ -348,7 +349,7 @@ namespace mhed.gui
             {
                 if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
                 {
-                    Clipboard.SetText((string)HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value);
+                    Clipboard.SetText(HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value.ToString());
                 }
             }
             catch (Exception Ex)
@@ -367,7 +368,21 @@ namespace mhed.gui
             {
                 if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && Clipboard.ContainsText())
                 {
-                    HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
+                    if (HE_ModelView.CurrentCell.ColumnIndex == 0)
+                    {
+                        if (IPAddress.TryParse(Clipboard.GetText(), out IPAddress IP))
+                        {
+                            HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = IP;
+                        }
+                        else
+                        {
+                            MessageBox.Show(AppStrings.AHE_ClipboardNonIPAddress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
+                    }
                 }
             }
             catch (Exception Ex)
@@ -622,25 +637,13 @@ namespace mhed.gui
         private void HE_ModelView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             Logger.Warn(e.Exception, DebugStrings.AppDbgExModelView);
-        }
-
-        /// <summary>
-        /// "Validate cell" event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void HE_ModelView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-        {
-            // Skip validation of the new rows...
-            if (((DataGridView)sender).Rows[e.RowIndex].IsNewRow) { return; }
-
             switch (e.ColumnIndex)
             {
                 case 0: // Validating IP-address...
-                    ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = AddressHelpers.ValidateIPAddress((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectIPAddress;
+                    MessageBox.Show(AppStrings.AHE_IncorrectIPAddress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 case 1: // Validating Hostname...
-                    ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = AddressHelpers.ValidateHostname((string)e.FormattedValue) ? null : AppStrings.AHE_IncorrectHostname;
+                    MessageBox.Show(AppStrings.AHE_IncorrectHostname, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 default: // Reporting an error...
                     Logger.Warn(DebugStrings.AppDbgModelViewColumnIndexOutOfRange);

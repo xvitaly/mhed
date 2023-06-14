@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
+using System.Net;
+
 namespace mhed.lib
 {
     public sealed class HostsFileEntry
@@ -11,41 +13,47 @@ namespace mhed.lib
         /// <summary>
         /// Get or set IP address.
         /// </summary>
-        public string IPAddress { get; set; }
+        public IPAddress IPAddr { get; set; }
 
         /// <summary>
         /// Get or set associated hostname.
         /// </summary>
-        public string Hostname { get; set; }
-
-        /// <summary>
-        /// Check if the IP address or Hostname fields are empty.
-        /// </summary>
-        public bool IsEmpty => string.IsNullOrWhiteSpace(IPAddress) || string.IsNullOrWhiteSpace(Hostname);
+        public Hostname Hostname { get; set; }
 
         /// <summary>
         /// Check if the IP address is valid and Hostname is not empty.
         /// </summary>
-        public bool IsValid => AddressHelpers.ValidateIPAddress(IPAddress) && !string.IsNullOrWhiteSpace(Hostname);
+        public bool IsValid => IPAddr != null && !string.IsNullOrWhiteSpace(Hostname);
 
         /// <summary>
         /// HostsFileEntry class constructor.
         /// </summary>
         /// <param name="IP">IP address.</param>
         /// <param name="Host">Associated hostname.</param>
-        public HostsFileEntry(string IP, string Host)
+        public HostsFileEntry(IPAddress IP, Hostname Host)
         {
-            IPAddress = IP;
+            IPAddr = IP;
             Hostname = Host;
         }
 
         /// <summary>
-        /// HostsFileEntry class alternative constructor.
+        /// HostsFileEntry class secondary constructor.
+        /// </summary>
+        /// <param name="IP">IP address in string format.</param>
+        /// <param name="Host">Associated hostname.</param>
+        public HostsFileEntry(string IP, string Host)
+        {
+            IPAddr = IPAddress.Parse(IP);
+            Hostname = new Hostname(Host);
+        }
+
+        /// <summary>
+        /// HostsFileEntry class alternative constructor for new lines.
         /// </summary>
         public HostsFileEntry()
         {
-            IPAddress = string.Empty;
-            Hostname = string.Empty;
+            IPAddr = IPAddress.Loopback;
+            Hostname = new Hostname(string.Empty);
         }
     }
 }
