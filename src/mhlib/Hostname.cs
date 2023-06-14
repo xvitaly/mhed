@@ -45,13 +45,36 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Validate hostname.
+        /// </summary>
+        /// <param name="SrcHostname">Source hostname for validation.</param>
+        /// <returns>Return True if the source hostname is correct.</returns>
+        private bool Validate(string SrcHostname)
+        {
+            bool Result = true;
+            if (SrcHostname.IndexOf(' ') == -1)
+            {
+                Result = Uri.CheckHostName(SrcHostname) == UriHostNameType.Dns;
+            }
+            else
+            {
+                foreach (string SingleHost in SrcHostname.Split(' '))
+                {
+                    if (string.IsNullOrEmpty(SingleHost)) { continue; }
+                    Result &= Uri.CheckHostName(SingleHost) == UriHostNameType.Dns;
+                }
+            }
+            return Result;
+        }
+
+        /// <summary>
         /// Main constructor of the Hostname class.
         /// </summary>
         /// <param name="Value">Hostname entry in string format.</param>
         public Hostname(string Value)
         {
             if (Value == null) { throw new ArgumentNullException("Value", "Hostname value cannot be null."); }
-            if (!string.IsNullOrEmpty(Value) && !AddressHelpers.ValidateHostname(Value)) { throw new FormatException("Hostname has incorrect format."); }
+            if (!string.IsNullOrEmpty(Value) && !Validate(Value)) { throw new FormatException("Hostname has incorrect format."); }
             _Host = Value;
         }
     }

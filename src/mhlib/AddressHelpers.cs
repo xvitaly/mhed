@@ -26,29 +26,6 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Validate hostname.
-        /// </summary>
-        /// <param name="SrcHostname">Source hostname for validation.</param>
-        /// <returns>Return True if the source hostname is correct.</returns>
-        public static bool ValidateHostname(string SrcHostname)
-        {
-            bool Result = true;
-            if (SrcHostname.IndexOf(' ') == -1)
-            {
-                Result = Uri.CheckHostName(SrcHostname) == UriHostNameType.Dns;
-            }
-            else
-            {
-                foreach (string SingleHost in SrcHostname.Split(' '))
-                {
-                    if (string.IsNullOrEmpty(SingleHost)) { continue; }
-                    Result &= Uri.CheckHostName(SingleHost) == UriHostNameType.Dns;
-                }
-            }
-            return Result;
-        }
-
-        /// <summary>
         /// Get an integer representation of the specified IPv4 address.
         /// </summary>
         /// <param name="SrcIPAddress">Source IPv4 address.</param>
