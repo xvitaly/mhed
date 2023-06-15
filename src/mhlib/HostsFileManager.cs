@@ -69,12 +69,9 @@ namespace mhed.lib
                         if (ImpStr[0] != '#')
                         {
                             int SpPos = ImpStr.IndexOf(" ", StringComparison.InvariantCulture);
-                            if (SpPos != -1)
+                            if (SpPos != -1 && IPAddress.TryParse(ImpStr.Substring(0, SpPos), out IPAddress IP) && Hostname.TryParse(ImpStr.Remove(0, SpPos + 1), out Hostname Host))
                             {
-                                if (IPAddress.TryParse(ImpStr.Substring(0, SpPos), out IPAddress IP) && Hostname.TryParse(ImpStr.Remove(0, SpPos + 1), out Hostname Host))
-                                {
-                                    Contents.Add(new HostsFileEntry(IP, Host));
-                                }
+                                Contents.Add(new HostsFileEntry(IP, Host));
                             }
                         }
                     }
