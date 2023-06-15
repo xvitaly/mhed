@@ -44,7 +44,7 @@ namespace mhed.lib
         public HostsFileEntry(string IP, string Host)
         {
             IPAddr = IPAddress.Parse(IP);
-            Hostname = new Hostname(Host);
+            Hostname = Hostname.Parse(Host);
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace mhed.lib
         public HostsFileEntry()
         {
             IPAddr = IPAddress.Loopback;
-            Hostname = new Hostname(string.Empty);
+            Hostname = Hostname.Parse(string.Empty);
         }
     }
 }

@@ -33,7 +33,7 @@ namespace mhed.lib
         /// </summary>
         public static implicit operator Hostname(string Value)
         {
-            return Value == null ? null : new Hostname(Value);
+            return Value == null ? null : Parse(Value);
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace mhed.lib
         /// </summary>
         /// <param name="SrcHostname">Source hostname for validation.</param>
         /// <returns>Return True if the source hostname is correct.</returns>
-        private bool Validate(string SrcHostname)
+        private static bool Validate(string SrcHostname)
         {
             bool Result = true;
             if (SrcHostname.IndexOf(' ') == -1)
@@ -68,13 +68,71 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Main constructor of the Hostname class.
+        /// An internal implementation of the Hostname parser. Creates an object
+        /// from the string.
         /// </summary>
         /// <param name="Value">Hostname entry in string format.</param>
-        public Hostname(string Value)
+        /// <param name="TryParse">Disable exceptions. Return null instead.</param>
+        /// <returns>Returns the Hostname object, or null if exceptions are disabled.</returns>
+        private static Hostname InternalParse(string Value, bool TryParse)
         {
-            if (Value == null) { throw new ArgumentNullException("Value", "Hostname value cannot be null."); }
-            if (!string.IsNullOrEmpty(Value) && !Validate(Value)) { throw new FormatException("Hostname has incorrect format."); }
+            if (Value == null)
+            {
+                if (TryParse)
+                {
+                    return null;
+                }
+                else
+                {
+                    throw new ArgumentNullException("Value", "Hostname value cannot be null.");
+                }
+            }
+
+            if (!string.IsNullOrEmpty(Value) && !Validate(Value))
+            {
+                if (TryParse)
+                {
+                    return null;
+                }
+                else
+                {
+                    throw new FormatException("Hostname has incorrect format.");
+                }
+            }
+
+            return new Hostname(Value);
+        }
+
+        /// <summary>
+        /// Converts a hostname from the string implementation to an object without
+        /// throwing any exceptions.
+        /// </summary>
+        /// <param name="HostStr">Hostname entry in string format.</param>
+        /// <param name="Host">An instance of the Hostname object with result.</param>
+        /// <returns>Returns the Hostname object was successfully created.</returns>
+        public static bool TryParse(string HostStr, out Hostname Host)
+        {
+            Host = InternalParse(HostStr, true);
+            return Host != null;
+        }
+
+        /// <summary>
+        /// Converts a hostname from the string implementation to an object.
+        /// </summary>
+        /// <param name="HostStr">Hostname entry in string format.</param>
+        /// <returns>Returns an instance of the Hostname object.</returns>
+        public static Hostname Parse(string HostStr)
+        {
+            return InternalParse(HostStr, false);
+        }
+
+        /// <summary>
+        /// Main constructor of the Hostname class. Should not be used directly.
+        /// Use the Parse() or TryParse() methods to create instances.
+        /// </summary>
+        /// <param name="Value">Hostname entry in string format.</param>
+        private Hostname(string Value)
+        {
             _Host = Value;
         }
     }

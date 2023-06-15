@@ -48,7 +48,7 @@ namespace mhed.lib
         /// <returns>Converted object.</returns>
         public override object ConvertFrom(ITypeDescriptorContext Context, CultureInfo Culture, object Value)
         {
-            if (Value is string StrValue) { return new Hostname(StrValue); }
+            if (Value is string StrValue) { return Hostname.Parse(StrValue); }
             return base.ConvertFrom(Context, Culture, Value);
         }
 
