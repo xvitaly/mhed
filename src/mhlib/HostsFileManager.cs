@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
+using NLog;
 using System;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,11 @@ namespace mhed.lib
         /// Store information about current running platform.
         /// </summary>
         private readonly CurrentPlatform Platform;
+
+        /// <summary>
+        /// Logger instance for HostsFileManager class.
+        /// </summary>
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Get or set full Hosts file path.
@@ -59,11 +65,12 @@ namespace mhed.lib
         /// </summary>
         private async Task ReadHostsFile()
         {
+            string ImpStr, IPAddrStr, HostStr;
             using (StreamReader OpenedHosts = new StreamReader(FilePath, Encoding.Default))
             {
                 while (OpenedHosts.Peek() >= 0)
                 {
-                    string ImpStr = StringsManager.CleanString(await OpenedHosts.ReadLineAsync());
+                    ImpStr = StringsManager.CleanString(await OpenedHosts.ReadLineAsync());
                     if (!string.IsNullOrEmpty(ImpStr))
                     {
                         if (ImpStr[0] != '#')
@@ -71,9 +78,11 @@ namespace mhed.lib
                             int SpPos = ImpStr.IndexOf(" ", StringComparison.InvariantCulture);
                             if (SpPos != -1)
                             {
-                                if (IPAddress.TryParse(ImpStr.Substring(0, SpPos), out IPAddress IP))
+                                IPAddrStr = ImpStr.Substring(0, SpPos);
+                                HostStr = ImpStr.Remove(0, SpPos + 1);
+                                if (IPAddress.TryParse(IPAddrStr, out IPAddress IP))
                                 {
-                                    Contents.Add(new HostsFileEntry(IP, ImpStr.Remove(0, SpPos + 1)));
+                                    try { Contents.Add(new HostsFileEntry(IP, HostStr)); } catch (Exception Ex) { Logger.Warn("Malformed row skipped. IP: {0}. Hostname: {1}. The inner exception was: {2}.", IPAddrStr, HostStr, Ex); }
                                 }
                             }
                         }
