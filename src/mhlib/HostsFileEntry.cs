@@ -21,9 +21,9 @@ namespace mhed.lib
         public Hostname Hostname { get; set; }
 
         /// <summary>
-        /// Check if the IP address is valid and Hostname is not empty.
+        /// Check if the IP address and the Hostname are not empty.
         /// </summary>
-        public bool IsValid => IPAddr != null && !string.IsNullOrWhiteSpace(Hostname);
+        public bool IsValid => IPAddr != null && Hostname != null;
 
         /// <summary>
         /// HostsFileEntry class constructor.
