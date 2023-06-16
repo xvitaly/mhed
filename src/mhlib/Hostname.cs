@@ -129,11 +129,11 @@ namespace mhed.lib
         /// <summary>
         /// Tests if two instances of Hostname are equal.
         /// </summary>
-        /// <param name="SecondValue">Second hostname for comparansion.</param>
+        /// <param name="obj">Second hostname for comparansion.</param>
         /// <returns>New relative order.</returns>
-        public override bool Equals(object SecondValue)
+        public override bool Equals(object obj)
         {
-            return _Host.Equals(SecondValue.ToString());
+            return _Host.Equals(obj.ToString());
         }
 
         /// <summary>
@@ -148,11 +148,11 @@ namespace mhed.lib
         /// <summary>
         /// Compares two Hostname instances as strings.
         /// </summary>
-        /// <param name="SecondValue">Second hostname for comparansion.</param>
+        /// <param name="obj">Second hostname for comparansion.</param>
         /// <returns>New relative order.</returns>
-        public int CompareTo(object SecondValue)
+        public int CompareTo(object obj)
         {
-            return _Host.CompareTo(SecondValue.ToString());
+            return _Host.CompareTo(obj.ToString());
         }
 
         /// <summary>
