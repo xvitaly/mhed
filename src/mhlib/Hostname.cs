@@ -142,7 +142,7 @@ namespace mhed.lib
         /// <returns>Hash code.</returns>
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return _Host.GetHashCode();
         }
 
         /// <summary>
