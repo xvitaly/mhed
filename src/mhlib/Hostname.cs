@@ -13,7 +13,7 @@ namespace mhed.lib
     /// Class for working with hostnames.
     /// </summary>
     [TypeConverter(typeof(HostnameConverter))]
-    public sealed class Hostname
+    public sealed class Hostname : IComparable
     {
         /// <summary>
         /// Stores current hostname entry.
@@ -124,6 +124,15 @@ namespace mhed.lib
         public static Hostname Parse(string HostStr)
         {
             return InternalParse(HostStr, false);
+        }
+
+        /// <summary>
+        /// Compares two Hostname instances as strings.
+        /// </summary>
+        /// <param name="SecondValue">Second hostname for comparansion.</param>
+        public int CompareTo(object SecondValue)
+        {
+            return _Host.CompareTo(SecondValue.ToString());
         }
 
         /// <summary>
