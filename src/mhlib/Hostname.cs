@@ -21,14 +21,6 @@ namespace mhed.lib
         private readonly string _Host;
 
         /// <summary>
-        /// Returns hostname as string.
-        /// </summary>
-        public override string ToString()
-        {
-            return _Host;
-        }
-
-        /// <summary>
         /// Implicitly converts cast without new to the correct object.
         /// </summary>
         public static implicit operator Hostname(string Value)
@@ -124,6 +116,14 @@ namespace mhed.lib
         public static Hostname Parse(string HostStr)
         {
             return InternalParse(HostStr, false);
+        }
+
+        /// <summary>
+        /// Returns hostname as string.
+        /// </summary>
+        public override string ToString()
+        {
+            return _Host;
         }
 
         /// <summary>
