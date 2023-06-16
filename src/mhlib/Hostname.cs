@@ -152,7 +152,7 @@ namespace mhed.lib
         /// <returns>New relative order.</returns>
         public int CompareTo(object obj)
         {
-            return _Host.CompareTo(obj.ToString());
+            return string.Compare(_Host, obj.ToString(), StringComparison.InvariantCulture);
         }
 
         /// <summary>
