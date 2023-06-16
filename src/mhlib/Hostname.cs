@@ -127,9 +127,29 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Tests if two instances of Hostname are equal.
+        /// </summary>
+        /// <param name="SecondValue">Second hostname for comparansion.</param>
+        /// <returns>New relative order.</returns>
+        public override bool Equals(object SecondValue)
+        {
+            return _Host.Equals(SecondValue.ToString());
+        }
+
+        /// <summary>
+        /// Gets hash code of the object.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        /// <summary>
         /// Compares two Hostname instances as strings.
         /// </summary>
         /// <param name="SecondValue">Second hostname for comparansion.</param>
+        /// <returns>New relative order.</returns>
         public int CompareTo(object SecondValue)
         {
             return _Host.CompareTo(SecondValue.ToString());
