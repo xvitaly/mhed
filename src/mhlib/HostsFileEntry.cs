@@ -23,7 +23,7 @@ namespace mhed.lib
         /// <summary>
         /// Check if the IP address and the Hostname are not empty.
         /// </summary>
-        public bool IsValid => IPAddr != null && Hostname != null;
+        public bool IsValid => !(IPAddr is null) && !(Hostname is null);
 
         /// <summary>
         /// HostsFileEntry class constructor.

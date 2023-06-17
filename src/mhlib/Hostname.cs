@@ -105,7 +105,7 @@ namespace mhed.lib
         public static bool TryParse(string HostStr, out Hostname Host)
         {
             Host = InternalParse(HostStr, true);
-            return Host != null;
+            return !(Host is null);
         }
 
         /// <summary>
