@@ -119,6 +119,51 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Equality operator handler.
+        /// </summary>
+        /// <param name="LeftValue">First hostname for comparansion.</param>
+        /// <param name="RightValue">Second hostname for comparansion.</param>
+        /// <returns>Returns True if both hostnames are equal.</returns>
+        public static bool operator ==(Hostname LeftValue, Hostname RightValue)
+        {
+            if (LeftValue is null) { return RightValue is null; }
+            return LeftValue.Equals(RightValue);
+        }
+
+        /// <summary>
+        /// Greater than operator handler.
+        /// </summary>
+        /// <param name="LeftValue">First hostname for comparansion.</param>
+        /// <param name="RightValue">Second hostname for comparansion.</param>
+        /// <returns>Returns True if the left hostname is greater than right.</returns>
+        public static bool operator >(Hostname LeftValue, Hostname RightValue)
+        {
+            return LeftValue.CompareTo(RightValue) > 0;
+        }
+
+        /// <summary>
+        /// Less than operator handler.
+        /// </summary>
+        /// <param name="LeftValue">First hostname for comparansion.</param>
+        /// <param name="RightValue">Second hostname for comparansion.</param>
+        /// <returns>Returns True if the left hostname is less than right.</returns>
+        public static bool operator <(Hostname LeftValue, Hostname RightValue)
+        {
+            return LeftValue.CompareTo(RightValue) < 0;
+        }
+
+        /// <summary>
+        /// Inequality operator handler.
+        /// </summary>
+        /// <param name="LeftValue">First hostname for comparansion.</param>
+        /// <param name="RightValue">Second hostname for comparansion.</param>
+        /// <returns>Returns True if both hostnames are not equal.</returns>
+        public static bool operator !=(Hostname LeftValue, Hostname RightValue)
+        {
+            return !(LeftValue == RightValue);
+        }
+
+        /// <summary>
         /// Returns hostname as string.
         /// </summary>
         public override string ToString()
