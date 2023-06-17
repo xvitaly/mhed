@@ -121,8 +121,8 @@ namespace mhed.lib
         /// <summary>
         /// Equality operator handler.
         /// </summary>
-        /// <param name="LeftValue">First hostname for comparansion.</param>
-        /// <param name="RightValue">Second hostname for comparansion.</param>
+        /// <param name="LeftValue">First hostname for comparison.</param>
+        /// <param name="RightValue">Second hostname for comparison.</param>
         /// <returns>Returns True if both hostnames are equal.</returns>
         public static bool operator ==(Hostname LeftValue, Hostname RightValue)
         {
@@ -133,8 +133,8 @@ namespace mhed.lib
         /// <summary>
         /// Greater than operator handler.
         /// </summary>
-        /// <param name="LeftValue">First hostname for comparansion.</param>
-        /// <param name="RightValue">Second hostname for comparansion.</param>
+        /// <param name="LeftValue">First hostname for comparison.</param>
+        /// <param name="RightValue">Second hostname for comparison.</param>
         /// <returns>Returns True if the left hostname is greater than right.</returns>
         public static bool operator >(Hostname LeftValue, Hostname RightValue)
         {
@@ -144,8 +144,8 @@ namespace mhed.lib
         /// <summary>
         /// Less than operator handler.
         /// </summary>
-        /// <param name="LeftValue">First hostname for comparansion.</param>
-        /// <param name="RightValue">Second hostname for comparansion.</param>
+        /// <param name="LeftValue">First hostname for comparison.</param>
+        /// <param name="RightValue">Second hostname for comparison.</param>
         /// <returns>Returns True if the left hostname is less than right.</returns>
         public static bool operator <(Hostname LeftValue, Hostname RightValue)
         {
@@ -155,8 +155,8 @@ namespace mhed.lib
         /// <summary>
         /// Inequality operator handler.
         /// </summary>
-        /// <param name="LeftValue">First hostname for comparansion.</param>
-        /// <param name="RightValue">Second hostname for comparansion.</param>
+        /// <param name="LeftValue">First hostname for comparison.</param>
+        /// <param name="RightValue">Second hostname for comparison.</param>
         /// <returns>Returns True if both hostnames are not equal.</returns>
         public static bool operator !=(Hostname LeftValue, Hostname RightValue)
         {
@@ -174,7 +174,7 @@ namespace mhed.lib
         /// <summary>
         /// Tests if two instances of Hostname are equal.
         /// </summary>
-        /// <param name="obj">Second hostname for comparansion.</param>
+        /// <param name="obj">Second hostname for comparison.</param>
         /// <returns>New relative order.</returns>
         public override bool Equals(object obj)
         {
@@ -193,7 +193,7 @@ namespace mhed.lib
         /// <summary>
         /// Compares two Hostname instances as strings.
         /// </summary>
-        /// <param name="obj">Second hostname for comparansion.</param>
+        /// <param name="obj">Second hostname for comparison.</param>
         /// <returns>New relative order.</returns>
         public int CompareTo(object obj)
         {
@@ -203,7 +203,7 @@ namespace mhed.lib
         /// <summary>
         /// Tests if two instances of Hostname are equal.
         /// </summary>
-        /// <param name="other">Second hostname for comparansion.</param>
+        /// <param name="other">Second hostname for comparison.</param>
         /// <returns>New relative order.</returns>
         public bool Equals(Hostname other)
         {
