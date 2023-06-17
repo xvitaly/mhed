@@ -142,6 +142,17 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Greater or equal than operator handler.
+        /// </summary>
+        /// <param name="LeftValue">First hostname for comparison.</param>
+        /// <param name="RightValue">Second hostname for comparison.</param>
+        /// <returns>Returns True if the left hostname is greater than right.</returns>
+        public static bool operator >=(Hostname LeftValue, Hostname RightValue)
+        {
+            return LeftValue.CompareTo(RightValue) >= 0;
+        }
+
+        /// <summary>
         /// Less than operator handler.
         /// </summary>
         /// <param name="LeftValue">First hostname for comparison.</param>
@@ -150,6 +161,17 @@ namespace mhed.lib
         public static bool operator <(Hostname LeftValue, Hostname RightValue)
         {
             return LeftValue.CompareTo(RightValue) < 0;
+        }
+
+        /// <summary>
+        /// Less or equal than operator handler.
+        /// </summary>
+        /// <param name="LeftValue">First hostname for comparison.</param>
+        /// <param name="RightValue">Second hostname for comparison.</param>
+        /// <returns>Returns True if the left hostname is less than right.</returns>
+        public static bool operator <=(Hostname LeftValue, Hostname RightValue)
+        {
+            return LeftValue.CompareTo(RightValue) <= 0;
         }
 
         /// <summary>
