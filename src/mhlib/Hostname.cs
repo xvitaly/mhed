@@ -194,7 +194,8 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Tests if two instances of Hostname are equal.
+        /// Tests if two instances of Hostname are equal using parameter of base
+        /// object type.
         /// </summary>
         /// <param name="obj">Second hostname for comparison.</param>
         /// <returns>New relative order.</returns>
@@ -234,7 +235,7 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Tests if two instances of Hostname are equal.
+        /// Tests if two instances of Hostname are equal using native types.
         /// </summary>
         /// <param name="other">Second hostname for comparison.</param>
         /// <returns>New relative order.</returns>
