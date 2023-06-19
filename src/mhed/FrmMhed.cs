@@ -249,34 +249,6 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Remove selected rows from the table.
-        /// </summary>
-        private void DeleteSelectedRows()
-        {
-            foreach (DataGridViewRow Row in HE_ModelView.SelectedRows)
-            {
-                if (!Row.IsNewRow)
-                {
-                    HE_ModelView.Rows.RemoveAt(Row.Index);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Remove selected cells from the table.
-        /// </summary>
-        private void DeleteSelectedCells()
-        {
-            foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
-            {
-                if (Cell.RowIndex != -1 && !HE_ModelView.Rows[Cell.RowIndex].IsNewRow)
-                {
-                    HE_ModelView.Rows.RemoveAt(Cell.RowIndex);
-                }
-            }
-        }
-
-        /// <summary>
         /// Show specified file in default file manager.
         /// </summary>
         /// <param name="FileName">Fully qualified file name.</param>
@@ -427,7 +399,13 @@ namespace mhed.gui
         {
             try
             {
-                if (HE_ModelView.SelectedRows.Count > 0) { DeleteSelectedRows(); } else { DeleteSelectedCells(); }
+                foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
+                {
+                    if (Cell.RowIndex != -1 && !HE_ModelView.Rows[Cell.RowIndex].IsNewRow)
+                    {
+                        HE_ModelView.Rows.RemoveAt(Cell.RowIndex);
+                    }
+                }
             }
             catch (Exception Ex)
             {
