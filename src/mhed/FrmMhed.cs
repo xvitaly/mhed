@@ -269,7 +269,7 @@ namespace mhed.gui
         {
             foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
             {
-                if (!HE_ModelView.Rows[Cell.RowIndex].IsNewRow)
+                if (Cell.RowIndex != -1 && !HE_ModelView.Rows[Cell.RowIndex].IsNewRow)
                 {
                     HE_ModelView.Rows.RemoveAt(Cell.RowIndex);
                 }
