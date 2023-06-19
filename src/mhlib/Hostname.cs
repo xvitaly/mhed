@@ -13,7 +13,7 @@ namespace mhed.lib
     /// Class for working with hostnames.
     /// </summary>
     [TypeConverter(typeof(HostnameConverter))]
-    public sealed class Hostname : IComparable, IEquatable<Hostname>
+    public sealed class Hostname : IComparable, IComparable<Hostname>, IEquatable<Hostname>
     {
         /// <summary>
         /// Stores current hostname entry.
@@ -213,13 +213,24 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Compares two Hostname instances as strings.
+        /// Compares two Hostname instances as strings using parameter of base
+        /// object type.
         /// </summary>
         /// <param name="obj">Second hostname for comparison.</param>
         /// <returns>New relative order.</returns>
         public int CompareTo(object obj)
         {
             return string.Compare(_Host, obj.ToString(), StringComparison.InvariantCulture);
+        }
+
+        /// <summary>
+        /// Compares two Hostname instances as strings in native types.
+        /// </summary>
+        /// <param name="other">Second hostname for comparison.</param>
+        /// <returns>New relative order.</returns>
+        public int CompareTo(Hostname other)
+        {
+            return string.Compare(_Host, other.ToString(), StringComparison.InvariantCulture);
         }
 
         /// <summary>
