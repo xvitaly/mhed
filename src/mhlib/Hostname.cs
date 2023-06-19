@@ -240,7 +240,7 @@ namespace mhed.lib
         /// <returns>New relative order.</returns>
         public bool Equals(Hostname other)
         {
-            return _Host.Equals(other);
+            return _Host.Equals(other.ToString());
         }
 
         /// <summary>
