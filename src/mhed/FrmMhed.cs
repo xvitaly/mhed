@@ -640,13 +640,13 @@ namespace mhed.gui
             {
                 switch (e.ColumnIndex)
                 {
-                    case 0: // Validating IP-address...
+                    case 0:
                         MessageBox.Show(AppStrings.AHE_IncorrectIPAddress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         break;
-                    case 1: // Validating Hostname...
+                    case 1:
                         MessageBox.Show(AppStrings.AHE_IncorrectHostname, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         break;
-                    default: // Reporting an error...
+                    default:
                         Logger.Warn(DebugStrings.AppDbgModelViewColumnIndexOutOfRange);
                         break;
                 }
