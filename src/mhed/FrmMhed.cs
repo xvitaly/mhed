@@ -636,18 +636,24 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_ModelView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            Logger.Warn(e.Exception, DebugStrings.AppDbgExModelView);
-            switch (e.ColumnIndex)
+            if ((e.Context & DataGridViewDataErrorContexts.Commit) != 0)
             {
-                case 0: // Validating IP-address...
-                    MessageBox.Show(AppStrings.AHE_IncorrectIPAddress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    break;
-                case 1: // Validating Hostname...
-                    MessageBox.Show(AppStrings.AHE_IncorrectHostname, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    break;
-                default: // Reporting an error...
-                    Logger.Warn(DebugStrings.AppDbgModelViewColumnIndexOutOfRange);
-                    break;
+                switch (e.ColumnIndex)
+                {
+                    case 0: // Validating IP-address...
+                        MessageBox.Show(AppStrings.AHE_IncorrectIPAddress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        break;
+                    case 1: // Validating Hostname...
+                        MessageBox.Show(AppStrings.AHE_IncorrectHostname, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        break;
+                    default: // Reporting an error...
+                        Logger.Warn(DebugStrings.AppDbgModelViewColumnIndexOutOfRange);
+                        break;
+                }
+            }
+            else
+            {
+                Logger.Warn(e.Exception, DebugStrings.AppDbgExModelView);
             }
         }
 
