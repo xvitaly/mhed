@@ -360,7 +360,37 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Paste the contents of the clipboard to the selected cell.
+        /// Paste the IP-address from the clipboard into the selected cell.
+        /// </summary>
+        private void HelperPasteIPAddress()
+        {
+            if (IPAddress.TryParse(Clipboard.GetText(), out IPAddress IP))
+            {
+                HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = IP;
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.AHE_ClipboardNonIPAddress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Paste the hostname from the clipboard into the selected cell.
+        /// </summary>
+        private void HelperPasteHostname()
+        {
+            if (Hostname.TryParse(Clipboard.GetText(), out Hostname Host))
+            {
+                HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Host;
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.AHE_ClipboardNonHostname, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Paste the contents of the clipboard into the selected cell.
         /// </summary>
         private void HelperPaste()
         {
@@ -368,20 +398,17 @@ namespace mhed.gui
             {
                 if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && Clipboard.ContainsText())
                 {
-                    if (HE_ModelView.CurrentCell.ColumnIndex == 0)
+                    switch (HE_ModelView.CurrentCell.ColumnIndex)
                     {
-                        if (IPAddress.TryParse(Clipboard.GetText(), out IPAddress IP))
-                        {
-                            HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = IP;
-                        }
-                        else
-                        {
-                            MessageBox.Show(AppStrings.AHE_ClipboardNonIPAddress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-                    else
-                    {
-                        HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
+                        case 0:
+                            HelperPasteIPAddress();
+                            break;
+                        case 1:
+                            HelperPasteHostname();
+                            break;
+                        default:
+                            Logger.Warn(DebugStrings.AppDbgModelViewColumnIndexOutOfRange);
+                            break;
                     }
                 }
             }
