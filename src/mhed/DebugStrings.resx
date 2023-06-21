@@ -199,7 +199,7 @@
     <value>Invalid form size was received: [{0}, {1}]. The form will size will not be changed.</value>
   </data>
   <data name="AppDbgModelViewColumnIndexOutOfRange" xml:space="preserve">
-    <value>Invalid column index detected. Unable to validate.</value>
+    <value>Invalid column index detected. Unable to perform the requested action!</value>
   </data>
   <data name="AppDbgRestartAsAdminError" xml:space="preserve">
     <value>Exception while trying to restart application with admin user rights.</value>
