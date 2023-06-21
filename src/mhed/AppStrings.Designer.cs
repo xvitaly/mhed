@@ -106,6 +106,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clipboard doesn&apos;t contain a valid hostname!.
+        /// </summary>
+        internal static string AHE_ClipboardNonHostname {
+            get {
+                return ResourceManager.GetString("AHE_ClipboardNonHostname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clipboard doesn&apos;t contain a valid IP-address!.
         /// </summary>
         internal static string AHE_ClipboardNonIPAddress {

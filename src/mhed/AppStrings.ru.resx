@@ -243,4 +243,7 @@
   <data name="AHE_ClipboardNonIPAddress" xml:space="preserve">
     <value>В буфере обмена не содержится действительный IP-адрес!</value>
   </data>
+  <data name="AHE_ClipboardNonHostname" xml:space="preserve">
+    <value>В буфере обмена не содержится действительное имя хоста!</value>
+  </data>
 </root>
