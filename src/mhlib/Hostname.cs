@@ -131,6 +131,12 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Gets an empty Hostname entry.
+        /// </summary>
+        /// <returns>Returns an empty Hostname entry.</returns>
+        public static Hostname Empty => new Hostname(string.Empty);
+
+        /// <summary>
         /// Equality operator handler.
         /// </summary>
         /// <param name="LeftValue">First hostname for comparison.</param>
