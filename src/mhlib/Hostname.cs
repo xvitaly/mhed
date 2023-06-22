@@ -33,7 +33,7 @@ namespace mhed.lib
         /// </summary>
         public static implicit operator string(Hostname Value)
         {
-            return Value._Host;
+            return Value?._Host;
         }
 
         /// <summary>
