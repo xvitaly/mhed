@@ -68,18 +68,6 @@ namespace mhed.lib
         /// <returns>Returns the Hostname object, or null if exceptions are disabled.</returns>
         private static Hostname InternalParse(string Value, bool TryParse)
         {
-            if (Value == null)
-            {
-                if (TryParse)
-                {
-                    return null;
-                }
-                else
-                {
-                    throw new ArgumentNullException("Value", "Hostname value cannot be null.");
-                }
-            }
-
             if (string.IsNullOrWhiteSpace(Value))
             {
                 if (TryParse)
@@ -88,7 +76,7 @@ namespace mhed.lib
                 }
                 else
                 {
-                    throw new ArgumentException("Hostname value cannot be empty or contain only spaces.", "Value");
+                    throw new ArgumentException("Hostname value cannot be null, empty or contain only spaces.", "Value");
                 }
             }
 
