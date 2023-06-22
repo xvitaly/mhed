@@ -80,7 +80,19 @@ namespace mhed.lib
                 }
             }
 
-            if (!string.IsNullOrEmpty(Value) && !Validate(Value))
+            if (string.IsNullOrWhiteSpace(Value))
+            {
+                if (TryParse)
+                {
+                    return null;
+                }
+                else
+                {
+                    throw new ArgumentException("Hostname value cannot be empty or contain only spaces.", "Value");
+                }
+            }
+
+            if (!Validate(Value))
             {
                 if (TryParse)
                 {
