@@ -8,6 +8,9 @@ using System.Net;
 
 namespace mhed.lib
 {
+    /// <summary>
+    /// Class for working with fully-qualified Hosts file entries.
+    /// </summary>
     public sealed class HostsFileEntry
     {
         /// <summary>
