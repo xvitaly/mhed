@@ -207,7 +207,7 @@ namespace mhed.lib
         /// <returns>New relative order.</returns>
         public override bool Equals(object obj)
         {
-            return _Host.Equals(obj.ToString());
+            return _Host.Equals(obj?.ToString());
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace mhed.lib
         /// <returns>New relative order.</returns>
         public int CompareTo(object obj)
         {
-            return string.Compare(_Host, obj.ToString(), StringComparison.InvariantCulture);
+            return string.Compare(_Host, obj?.ToString(), StringComparison.InvariantCulture);
         }
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace mhed.lib
         /// <returns>New relative order.</returns>
         public int CompareTo(Hostname other)
         {
-            return string.Compare(_Host, other.ToString(), StringComparison.InvariantCulture);
+            return string.Compare(_Host, other?.ToString(), StringComparison.InvariantCulture);
         }
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace mhed.lib
         /// <returns>New relative order.</returns>
         public bool Equals(Hostname other)
         {
-            return _Host.Equals(other.ToString());
+            return _Host.Equals(other?.ToString());
         }
 
         /// <summary>
