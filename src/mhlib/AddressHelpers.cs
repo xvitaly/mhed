@@ -6,6 +6,7 @@
 
 using System;
 using System.Net;
+using System.Net.Sockets;
 
 namespace mhed.lib
 {
@@ -22,6 +23,11 @@ namespace mhed.lib
         /// <returns>Integer representation of the specified IPv4 address.</returns>
         public static uint GetIntegerFromIPv4Address(IPAddress SrcIPAddress)
         {
+            if (SrcIPAddress.AddressFamily == AddressFamily.InterNetworkV6)
+            {
+                throw new ArgumentException("IPv6 is not supported because we can't handle 128-bit integers.", "SrcIPAddress");
+            }
+
             byte[] IPAddressBytes = SrcIPAddress.GetAddressBytes();
             if (BitConverter.IsLittleEndian)
             {
