@@ -125,6 +125,12 @@ namespace mhed.lib
         public static Hostname Empty => new Hostname(string.Empty);
 
         /// <summary>
+        /// Gets a localhost Hostname entry.
+        /// </summary>
+        /// <returns>Returns a localhost Hostname entry.</returns>
+        public static Hostname LocalHost => new Hostname("localhost");
+
+        /// <summary>
         /// Equality operator handler.
         /// </summary>
         /// <param name="LeftValue">First hostname for comparison.</param>
