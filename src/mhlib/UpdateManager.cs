@@ -13,6 +13,9 @@ using System.Xml;
 
 namespace mhed.lib
 {
+    /// <summary>
+    /// Class for working with application updates.
+    /// </summary>
     public sealed class UpdateManager
     {
         /// <summary>
