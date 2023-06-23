@@ -25,8 +25,8 @@ namespace mhed.lib
         /// <summary>
         /// Resolve the specified hostname and return the associated IP-address.
         /// </summary>
-        /// <param name="Hostname">Hostname to be resolved.</param>
+        /// <param name="Host">Hostname to be resolved.</param>
         /// <returns>Associated IP-address.</returns>
-        public abstract Task<IPAddress[]> Resolve(string Hostname);
+        public abstract Task<IPAddress[]> Resolve(Hostname Host);
     }
 }

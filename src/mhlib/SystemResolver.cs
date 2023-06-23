@@ -18,11 +18,11 @@ namespace mhed.lib
         /// Resolve the specified hostname using system resolver
         /// and return the associated IP-address.
         /// </summary>
-        /// <param name="Hostname">Hostname to be resolved.</param>
+        /// <param name="Host">Hostname to be resolved.</param>
         /// <returns>Associated IP-address.</returns>
-        public override async Task<IPAddress[]> Resolve(string Hostname)
+        public override async Task<IPAddress[]> Resolve(Hostname Host)
         {
-            return await Dns.GetHostAddressesAsync(Hostname);
+            return await Dns.GetHostAddressesAsync(Host.ToString());
         }
     }
 }
