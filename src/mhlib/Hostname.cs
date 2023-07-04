@@ -76,7 +76,7 @@ namespace mhed.lib
                 }
                 else
                 {
-                    throw new ArgumentException("Hostname value cannot be null, empty or contain only spaces.", "Value");
+                    throw new ArgumentException("Hostname value cannot be null, empty or contain only spaces.", nameof(Value));
                 }
             }
 
