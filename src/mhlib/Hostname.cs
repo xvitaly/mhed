@@ -216,6 +216,8 @@ namespace mhed.lib
         /// <returns>Returns concatenated hostnames.</returns>
         public static Hostname operator +(Hostname LeftValue, Hostname RightValue)
         {
+            if (LeftValue is null) { throw new ArgumentNullException(nameof(LeftValue)); }
+            if (RightValue is null) { throw new ArgumentNullException(nameof(RightValue)); }
             return Concat(LeftValue, RightValue);
         }
 
