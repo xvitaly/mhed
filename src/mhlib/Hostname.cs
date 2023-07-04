@@ -198,6 +198,17 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Concatenation operator handler.
+        /// </summary>
+        /// <param name="LeftValue">First hostname for concatenation.</param>
+        /// <param name="RightValue">Second hostname for concatenation.</param>
+        /// <returns>Returns concatenated hostnames.</returns>
+        public static Hostname operator +(Hostname LeftValue, Hostname RightValue)
+        {
+            return Parse(string.Format("{0} {1}", LeftValue.ToString(), RightValue.ToString()));
+        }
+
+        /// <summary>
         /// Returns hostname as string.
         /// </summary>
         public override string ToString()
