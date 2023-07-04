@@ -119,6 +119,17 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Concatenates specified hostnames to a single entry.
+        /// </summary>
+        /// <param name="Hostnames">Array with multiple hostnames.</param>
+        /// <returns>Returns concatenated hostnames object.</returns>
+        public static Hostname Concat(params Hostname[] Hostnames)
+        {
+            if (Hostnames is null) { throw new ArgumentNullException(nameof(Hostnames)); }
+            return Parse(string.Join<Hostname>(@" ", Hostnames));
+        }
+
+        /// <summary>
         /// Gets an empty Hostname entry.
         /// </summary>
         /// <returns>Returns an empty Hostname entry.</returns>
@@ -195,17 +206,6 @@ namespace mhed.lib
         public static bool operator !=(Hostname LeftValue, Hostname RightValue)
         {
             return !(LeftValue == RightValue);
-        }
-
-        /// <summary>
-        /// Concatenates specified hostnames.
-        /// </summary>
-        /// <param name="Hostnames">Array with multiple hostnames.</param>
-        /// <returns>Returns concatenated hostnames object.</returns>
-        public static Hostname Concat(params Hostname[] Hostnames)
-        {
-            if (Hostnames is null) { throw new ArgumentNullException(nameof(Hostnames)); }
-            return Parse(string.Join<Hostname>(@" ", Hostnames));
         }
 
         /// <summary>
