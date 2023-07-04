@@ -216,7 +216,7 @@ namespace mhed.lib
         /// <returns>Returns concatenated hostnames.</returns>
         public static Hostname operator +(Hostname LeftValue, Hostname RightValue)
         {
-            return Parse(string.Format("{0} {1}", LeftValue.ToString(), RightValue.ToString()));
+            return Concat(LeftValue, RightValue);
         }
 
         /// <summary>
