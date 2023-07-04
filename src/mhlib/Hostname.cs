@@ -198,6 +198,17 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Concatenates specified hostnames.
+        /// </summary>
+        /// <param name="Hostnames">Array with multiple hostnames.</param>
+        /// <returns>Returns concatenated hostnames object.</returns>
+        public static Hostname Concat(params Hostname[] Hostnames)
+        {
+            if (Hostnames is null) { throw new ArgumentNullException(nameof(Hostnames)); }
+            return Parse(string.Join<Hostname>(@" ", Hostnames));
+        }
+
+        /// <summary>
         /// Concatenation operator handler.
         /// </summary>
         /// <param name="LeftValue">First hostname for concatenation.</param>
