@@ -50,6 +50,15 @@ namespace mhed.lib
             }
             return SrcStr;
         }
+
+        private static string RemoveQuotes(string SrcStr)
+        {
+            while (SrcStr.IndexOf(@"""", StringComparison.InvariantCulture) != -1)
+            {
+                SrcStr = SrcStr.Replace(@"""", string.Empty);
+            }
+            return SrcStr;
+        }
         
         /// <summary>
         /// Remove different special characters from specified string.
@@ -79,10 +88,7 @@ namespace mhed.lib
             // Removing quotes if enabled...
             if (CleanQuotes)
             {
-                while (RecvStr.IndexOf(@"""", StringComparison.InvariantCulture) != -1)
-                {
-                    RecvStr = RecvStr.Replace(@"""", string.Empty);
-                }
+                RecvStr = RemoveQuotes(RecvStr);
             }
 
             // Removing double slashes if enabled...
