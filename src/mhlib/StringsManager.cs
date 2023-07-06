@@ -31,6 +31,15 @@ namespace mhed.lib
             }
             return SrcStr;
         }
+
+        private static string RemoveMultipleSpaces(string SrcStr)
+        {
+            while (SrcStr.IndexOf("  ", StringComparison.InvariantCulture) != -1)
+            {
+                SrcStr = SrcStr.Replace("  ", " ");
+            }
+            return SrcStr;
+        }
         
         /// <summary>
         /// Remove different special characters from specified string.
@@ -49,10 +58,7 @@ namespace mhed.lib
             RecvStr = RemoveNullBytes(RecvStr);
 
             // Removing multiple spaces...
-            while (RecvStr.IndexOf("  ", StringComparison.InvariantCulture) != -1)
-            {
-                RecvStr = RecvStr.Replace("  ", " ");
-            }
+            RecvStr = RemoveMultipleSpaces(RecvStr);
 
             // Removing inline comments if enabled...
             if (CleanComments)
