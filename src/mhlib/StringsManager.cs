@@ -59,6 +59,15 @@ namespace mhed.lib
             }
             return SrcStr;
         }
+
+        private static string RemoveDoubleSlashes(string SrcStr)
+        {
+            while (SrcStr.IndexOf(@"\\", StringComparison.InvariantCulture) != -1)
+            {
+                SrcStr = SrcStr.Replace(@"\\", @"\");
+            }
+            return SrcStr;
+        }
         
         /// <summary>
         /// Remove different special characters from specified string.
@@ -94,10 +103,7 @@ namespace mhed.lib
             // Removing double slashes if enabled...
             if (CleanSlashes)
             {
-                while (RecvStr.IndexOf(@"\\", StringComparison.InvariantCulture) != -1)
-                {
-                    RecvStr = RecvStr.Replace(@"\\", @"\");
-                }
+                RecvStr = RemoveDoubleSlashes(RecvStr);
             }
 
             // Return result with removal of leading and trailing white-spaces...
