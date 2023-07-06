@@ -14,6 +14,11 @@ namespace mhed.lib
     /// </summary>
     public static class StringsManager
     {
+        /// <summary>
+        /// Remove tabulations from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with tabulations replaced with spaces.</returns>
         private static string RemoveTabulations(string SrcStr)
         {
             while (SrcStr.IndexOf("\t", StringComparison.InvariantCulture) != -1)
@@ -23,6 +28,11 @@ namespace mhed.lib
             return SrcStr;
         }
 
+        /// <summary>
+        /// Remove NUL-bytes from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with NUL-bytes removed.</returns>
         private static string RemoveNullBytes(string SrcStr)
         {
             while (SrcStr.IndexOf("\0", StringComparison.InvariantCulture) != -1)
@@ -32,6 +42,11 @@ namespace mhed.lib
             return SrcStr;
         }
 
+        /// <summary>
+        /// Remove multiple spaces from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with multiple spaces removed.</returns>
         private static string RemoveMultipleSpaces(string SrcStr)
         {
             while (SrcStr.IndexOf("  ", StringComparison.InvariantCulture) != -1)
@@ -41,7 +56,12 @@ namespace mhed.lib
             return SrcStr;
         }
 
-        private static string RemoveComments(string SrcStr)
+        /// <summary>
+        /// Remove inline comments from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with inline comments removed.</returns>
+        private static string RemoveInlineComments(string SrcStr)
         {
             int CommentIndex = SrcStr.IndexOf("#", StringComparison.InvariantCulture);
             if (CommentIndex > 1)
@@ -51,6 +71,11 @@ namespace mhed.lib
             return SrcStr;
         }
 
+        /// <summary>
+        /// Remove quotes from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with quotes removed.</returns>
         private static string RemoveQuotes(string SrcStr)
         {
             while (SrcStr.IndexOf(@"""", StringComparison.InvariantCulture) != -1)
@@ -60,6 +85,11 @@ namespace mhed.lib
             return SrcStr;
         }
 
+        /// <summary>
+        /// Remove double slashes from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with double slashes removed.</returns>
         private static string RemoveDoubleSlashes(string SrcStr)
         {
             while (SrcStr.IndexOf(@"\\", StringComparison.InvariantCulture) != -1)
@@ -79,34 +109,12 @@ namespace mhed.lib
         /// <returns>Clean string with removed special characters.</returns>
         public static string CleanString(string RecvStr, bool CleanComments, bool CleanQuotes, bool CleanSlashes)
         {
-            // Removing tabulations...
             RecvStr = RemoveTabulations(RecvStr);
-
-            // Replacing all NUL symbols with spaces...
             RecvStr = RemoveNullBytes(RecvStr);
-
-            // Removing multiple spaces...
             RecvStr = RemoveMultipleSpaces(RecvStr);
-
-            // Removing inline comments if enabled...
-            if (CleanComments)
-            {
-                RecvStr = RemoveComments(RecvStr);
-            }
-
-            // Removing quotes if enabled...
-            if (CleanQuotes)
-            {
-                RecvStr = RemoveQuotes(RecvStr);
-            }
-
-            // Removing double slashes if enabled...
-            if (CleanSlashes)
-            {
-                RecvStr = RemoveDoubleSlashes(RecvStr);
-            }
-
-            // Return result with removal of leading and trailing white-spaces...
+            if (CleanComments) { RecvStr = RemoveInlineComments(RecvStr); }
+            if (CleanQuotes) { RecvStr = RemoveQuotes(RecvStr); }
+            if (CleanSlashes) { RecvStr = RemoveDoubleSlashes(RecvStr); }
             return RecvStr.Trim();
         }
 
