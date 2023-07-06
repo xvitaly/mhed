@@ -14,6 +14,15 @@ namespace mhed.lib
     /// </summary>
     public static class StringsManager
     {
+        private static string RemoveTabulations(string SrcStr)
+        {
+            while (SrcStr.IndexOf("\t", StringComparison.InvariantCulture) != -1)
+            {
+                SrcStr = SrcStr.Replace("\t", " ");
+            }
+            return SrcStr;
+        }
+        
         /// <summary>
         /// Remove different special characters from specified string.
         /// </summary>
@@ -25,10 +34,7 @@ namespace mhed.lib
         public static string CleanString(string RecvStr, bool CleanComments, bool CleanQuotes, bool CleanSlashes)
         {
             // Removing tabulations...
-            while (RecvStr.IndexOf("\t", StringComparison.InvariantCulture) != -1)
-            {
-                RecvStr = RecvStr.Replace("\t", " ");
-            }
+            RecvStr = RemoveTabulations(RecvStr);
 
             // Replacing all NUL symbols with spaces...
             while (RecvStr.IndexOf("\0", StringComparison.InvariantCulture) != -1)
