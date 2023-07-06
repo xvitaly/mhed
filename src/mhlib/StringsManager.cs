@@ -18,10 +18,11 @@ namespace mhed.lib
         /// Remove different special characters from specified string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>
+        /// <param name="CleanComments">Enable removal of inline comments.</param>
         /// <param name="CleanQuotes">Enable removal of quotes.</param>
         /// <param name="CleanSlashes">Enable removal of double slashes.</param>
         /// <returns>Clean string with removed special characters.</returns>
-        public static string CleanString(string RecvStr, bool CleanQuotes, bool CleanSlashes)
+        public static string CleanString(string RecvStr, bool CleanComments, bool CleanQuotes, bool CleanSlashes)
         {
             // Removing tabulations...
             while (RecvStr.IndexOf("\t", StringComparison.InvariantCulture) != -1)
@@ -39,6 +40,16 @@ namespace mhed.lib
             while (RecvStr.IndexOf("  ", StringComparison.InvariantCulture) != -1)
             {
                 RecvStr = RecvStr.Replace("  ", " ");
+            }
+
+            // Removing inline comments if enabled...
+            if (CleanComments)
+            {
+                int CommentIndex = RecvStr.IndexOf("#", StringComparison.InvariantCulture);
+                if (CommentIndex > 1)
+                {
+                    RecvStr = RecvStr.Substring(0, CommentIndex - 1);
+                }
             }
 
             // Removing quotes if enabled...
@@ -70,7 +81,7 @@ namespace mhed.lib
         /// <returns>Clean string with removed special characters.</returns>
         public static string CleanString(string RecvStr)
         {
-            return CleanString(RecvStr, false, false);
+            return CleanString(RecvStr, true, false, false);
         }
 
         /// <summary>
