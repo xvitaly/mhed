@@ -22,6 +22,15 @@ namespace mhed.lib
             }
             return SrcStr;
         }
+
+        private static string RemoveNullBytes(string SrcStr)
+        {
+            while (SrcStr.IndexOf("\0", StringComparison.InvariantCulture) != -1)
+            {
+                SrcStr = SrcStr.Replace("\0", " ");
+            }
+            return SrcStr;
+        }
         
         /// <summary>
         /// Remove different special characters from specified string.
@@ -37,10 +46,7 @@ namespace mhed.lib
             RecvStr = RemoveTabulations(RecvStr);
 
             // Replacing all NUL symbols with spaces...
-            while (RecvStr.IndexOf("\0", StringComparison.InvariantCulture) != -1)
-            {
-                RecvStr = RecvStr.Replace("\0", " ");
-            }
+            RecvStr = RemoveNullBytes(RecvStr);
 
             // Removing multiple spaces...
             while (RecvStr.IndexOf("  ", StringComparison.InvariantCulture) != -1)
