@@ -40,6 +40,16 @@ namespace mhed.lib
             }
             return SrcStr;
         }
+
+        private static string RemoveComments(string SrcStr)
+        {
+            int CommentIndex = SrcStr.IndexOf("#", StringComparison.InvariantCulture);
+            if (CommentIndex > 1)
+            {
+                SrcStr = SrcStr.Substring(0, CommentIndex - 1);
+            }
+            return SrcStr;
+        }
         
         /// <summary>
         /// Remove different special characters from specified string.
@@ -63,11 +73,7 @@ namespace mhed.lib
             // Removing inline comments if enabled...
             if (CleanComments)
             {
-                int CommentIndex = RecvStr.IndexOf("#", StringComparison.InvariantCulture);
-                if (CommentIndex > 1)
-                {
-                    RecvStr = RecvStr.Substring(0, CommentIndex - 1);
-                }
+                RecvStr = RemoveComments(RecvStr);
             }
 
             // Removing quotes if enabled...
