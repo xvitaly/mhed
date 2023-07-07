@@ -125,9 +125,9 @@ namespace mhed.lib
             RecvStr = RemoveTabs(RecvStr);
             RecvStr = RemoveNullBytes(RecvStr);
             RecvStr = RemoveMultipleSpaces(RecvStr);
-            RecvStr = RemoveComments(RecvStr);
             if (CleanQuotes) { RecvStr = RemoveQuotes(RecvStr); }
             if (CleanSlashes) { RecvStr = RemoveDoubleSlashes(RecvStr); }
+            RecvStr = RemoveComments(RecvStr);
             return RemoveStartEndSpaces(RecvStr);
         }
 
