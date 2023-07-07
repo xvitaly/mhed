@@ -19,7 +19,7 @@ namespace mhed.lib
         /// </summary>
         /// <param name="SrcStr">Source string for cleanup.</param>
         /// <returns>String with tabulations replaced with spaces.</returns>
-        private static string RemoveTabulations(string SrcStr)
+        private static string RemoveTabs(string SrcStr)
         {
             while (SrcStr.IndexOf("\t", StringComparison.InvariantCulture) != -1)
             {
@@ -108,7 +108,7 @@ namespace mhed.lib
         /// <returns>Clean string with removed special characters.</returns>
         public static string CleanString(string RecvStr, bool CleanQuotes, bool CleanSlashes)
         {
-            RecvStr = RemoveTabulations(RecvStr);
+            RecvStr = RemoveTabs(RecvStr);
             RecvStr = RemoveNullBytes(RecvStr);
             RecvStr = RemoveMultipleSpaces(RecvStr);
             RecvStr = RemoveInlineComments(RecvStr);
