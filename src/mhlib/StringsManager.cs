@@ -102,6 +102,16 @@ namespace mhed.lib
             }
             return SrcStr;
         }
+
+        /// <summary>
+        /// Remove leading and trailing spaces from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with leading and trailing spaces removed.</returns>
+        private static string RemoveStartEndSpaces(string SrcStr)
+        {
+            return string.IsNullOrEmpty(SrcStr) ? SrcStr : SrcStr.Trim();
+        }
         
         /// <summary>
         /// Remove different special characters from specified string.
@@ -118,7 +128,7 @@ namespace mhed.lib
             RecvStr = RemoveComments(RecvStr);
             if (CleanQuotes) { RecvStr = RemoveQuotes(RecvStr); }
             if (CleanSlashes) { RecvStr = RemoveDoubleSlashes(RecvStr); }
-            return RecvStr.Trim();
+            return RemoveStartEndSpaces(RecvStr);
         }
 
         /// <summary>
