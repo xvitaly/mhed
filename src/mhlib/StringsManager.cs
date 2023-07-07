@@ -112,22 +112,23 @@ namespace mhed.lib
         {
             return string.IsNullOrEmpty(SrcStr) ? SrcStr : SrcStr.Trim();
         }
-        
+
         /// <summary>
         /// Remove different special characters from specified string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>
         /// <param name="CleanQuotes">Enable removal of quotes.</param>
         /// <param name="CleanSlashes">Enable removal of double slashes.</param>
+        /// <param name="CleanComments">Enable removal of comments.</param>
         /// <returns>Clean string with removed special characters.</returns>
-        public static string CleanString(string RecvStr, bool CleanQuotes, bool CleanSlashes)
+        public static string CleanString(string RecvStr, bool CleanQuotes, bool CleanSlashes, bool CleanComments)
         {
             RecvStr = RemoveTabs(RecvStr);
             RecvStr = RemoveNullBytes(RecvStr);
             RecvStr = RemoveMultipleSpaces(RecvStr);
             if (CleanQuotes) { RecvStr = RemoveQuotes(RecvStr); }
             if (CleanSlashes) { RecvStr = RemoveDoubleSlashes(RecvStr); }
-            RecvStr = RemoveComments(RecvStr);
+            if (CleanComments) { RecvStr = RemoveComments(RecvStr); }
             return RemoveStartEndSpaces(RecvStr);
         }
 
@@ -138,7 +139,7 @@ namespace mhed.lib
         /// <returns>Clean string with removed special characters.</returns>
         public static string CleanString(string RecvStr)
         {
-            return CleanString(RecvStr, false, false);
+            return CleanString(RecvStr, false, false, true);
         }
 
         /// <summary>
