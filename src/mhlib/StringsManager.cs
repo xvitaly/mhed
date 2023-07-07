@@ -57,14 +57,18 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Remove inline comments from the source string.
+        /// Remove comments from the source string.
         /// </summary>
         /// <param name="SrcStr">Source string for cleanup.</param>
-        /// <returns>String with inline comments removed.</returns>
-        private static string RemoveInlineComments(string SrcStr)
+        /// <returns>String with comments removed.</returns>
+        private static string RemoveComments(string SrcStr)
         {
             int CommentIndex = SrcStr.IndexOf("#", StringComparison.InvariantCulture);
-            if (CommentIndex > 1)
+            if (CommentIndex == 0)
+            {
+                SrcStr = string.Empty;
+            }
+            else if (CommentIndex > 1)
             {
                 SrcStr = SrcStr.Substring(0, CommentIndex - 1);
             }
@@ -111,7 +115,7 @@ namespace mhed.lib
             RecvStr = RemoveTabs(RecvStr);
             RecvStr = RemoveNullBytes(RecvStr);
             RecvStr = RemoveMultipleSpaces(RecvStr);
-            RecvStr = RemoveInlineComments(RecvStr);
+            RecvStr = RemoveComments(RecvStr);
             if (CleanQuotes) { RecvStr = RemoveQuotes(RecvStr); }
             if (CleanSlashes) { RecvStr = RemoveDoubleSlashes(RecvStr); }
             return RecvStr.Trim();
