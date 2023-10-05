@@ -24,6 +24,11 @@ namespace mhed.lib
         public Hostname Hostname { get; set; }
 
         /// <summary>
+        /// Get or set entry commentary.
+        /// </summary>
+        public string Commentary { get; set; }
+
+        /// <summary>
         /// Check if the IP address and the Hostname are not empty.
         /// </summary>
         public bool IsValid => !(IPAddr is null) && !(Hostname is null);
