@@ -38,10 +38,12 @@ namespace mhed.lib
         /// </summary>
         /// <param name="IP">IP address.</param>
         /// <param name="Host">Associated hostname.</param>
-        public HostsFileEntry(IPAddress IP, Hostname Host)
+        /// <param name="Comment">Entry commentary.</param>
+        public HostsFileEntry(IPAddress IP, Hostname Host, string Comment)
         {
             IPAddr = IP;
             Hostname = Host;
+            Commentary = Comment;
         }
 
         /// <summary>
@@ -49,10 +51,12 @@ namespace mhed.lib
         /// </summary>
         /// <param name="IP">IP address in string format.</param>
         /// <param name="Host">Associated hostname.</param>
-        public HostsFileEntry(string IP, string Host)
+        /// <param name="Comment">Entry commentary.</param>
+        public HostsFileEntry(string IP, string Host, string Comment)
         {
             IPAddr = IPAddress.Parse(IP);
             Hostname = Hostname.Parse(Host);
+            Commentary = Comment;
         }
 
         /// <summary>
@@ -62,6 +66,7 @@ namespace mhed.lib
         {
             IPAddr = IPAddress.Loopback;
             Hostname = Hostname.Empty;
+            Commentary = string.Empty;
         }
     }
 }
