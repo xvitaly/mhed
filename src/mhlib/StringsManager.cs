@@ -68,10 +68,6 @@ namespace mhed.lib
             {
                 SrcStr = string.Empty;
             }
-            else if (CommentIndex > 1)
-            {
-                SrcStr = SrcStr.Substring(0, CommentIndex - 1);
-            }
             return SrcStr;
         }
 
