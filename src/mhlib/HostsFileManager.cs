@@ -67,9 +67,10 @@ namespace mhed.lib
                     if (!string.IsNullOrEmpty(ImpStr))
                     {
                         int SpPos = ImpStr.IndexOf(" ", StringComparison.InvariantCulture);
-                        if (SpPos != -1 && IPAddress.TryParse(ImpStr.Substring(0, SpPos), out IPAddress IP) && Hostname.TryParse(ImpStr.Remove(0, SpPos + 1), out Hostname Host))
+                        int CmPos = ImpStr.IndexOf("#", StringComparison.InvariantCulture);
+                        if (SpPos != -1 && IPAddress.TryParse(ImpStr.Substring(0, SpPos), out IPAddress IP) && Hostname.TryParse(CmPos > SpPos ? ImpStr.Substring(SpPos + 1, CmPos - SpPos - 2) : ImpStr.Remove(0, SpPos + 1), out Hostname Host))
                         {
-                            Contents.Add(new HostsFileEntry(IP, Host));
+                            Contents.Add(new HostsFileEntry(IP, Host, CmPos > 0 ? ImpStr.Substring(CmPos + 1).Trim() : string.Empty));
                         }
                     }
                 }
