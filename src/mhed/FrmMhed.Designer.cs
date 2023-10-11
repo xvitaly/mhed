@@ -71,6 +71,7 @@
             this.HE_ModelView = new System.Windows.Forms.DataGridView();
             this.HE_ModelViewColumnIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HE_ModelViewColumnDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HE_ModelViewColumnCommentary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HE_ContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.HE_ConextMenuCutItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_ConextMenuCopyItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -380,7 +381,8 @@
             this.HE_ModelView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HE_ModelView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HE_ModelViewColumnIP,
-            this.HE_ModelViewColumnDomain});
+            this.HE_ModelViewColumnDomain,
+            this.HE_ModelViewColumnCommentary});
             this.HE_ModelView.ContextMenuStrip = this.HE_ContextMenu;
             resources.ApplyResources(this.HE_ModelView, "HE_ModelView");
             this.HE_ModelView.Name = "HE_ModelView";
@@ -400,6 +402,12 @@
             this.HE_ModelViewColumnDomain.FillWeight = 125.072F;
             resources.ApplyResources(this.HE_ModelViewColumnDomain, "HE_ModelViewColumnDomain");
             this.HE_ModelViewColumnDomain.Name = "HE_ModelViewColumnDomain";
+            // 
+            // HE_ModelViewColumnCommentary
+            // 
+            this.HE_ModelViewColumnCommentary.DataPropertyName = "Commentary";
+            resources.ApplyResources(this.HE_ModelViewColumnCommentary, "HE_ModelViewColumnCommentary");
+            this.HE_ModelViewColumnCommentary.Name = "HE_ModelViewColumnCommentary";
             // 
             // HE_ContextMenu
             // 
@@ -497,8 +505,6 @@
         private System.Windows.Forms.ToolStripMenuItem HE_MenuReportItem;
         private System.Windows.Forms.Panel HE_ModelViewPanel;
         private System.Windows.Forms.DataGridView HE_ModelView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnIP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnDomain;
         private System.Windows.Forms.ToolStripSeparator HE_MenuSeparator2Item;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuDebugLogItem;
         private System.Windows.Forms.ToolStripSeparator HE_MenuSeparator3Item;
@@ -516,5 +522,8 @@
         private System.Windows.Forms.ToolStripMenuItem HE_MenuCopyItem;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuPasteItem;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuDeleteItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnIP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnDomain;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnCommentary;
     }
 }

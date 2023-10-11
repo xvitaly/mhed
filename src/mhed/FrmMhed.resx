@@ -468,6 +468,12 @@
   <data name="HE_ModelViewColumnDomain.HeaderText" xml:space="preserve">
     <value>Domain Name</value>
   </data>
+  <metadata name="HE_ModelViewColumnCommentary.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="HE_ModelViewColumnCommentary.HeaderText" xml:space="preserve">
+    <value>Commentary</value>
+  </data>
   <metadata name="HE_ContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>289, 17</value>
   </metadata>
@@ -1360,6 +1366,12 @@
     <value>HE_ModelViewColumnDomain</value>
   </data>
   <data name="&gt;&gt;HE_ModelViewColumnDomain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_ModelViewColumnCommentary.Name" xml:space="preserve">
+    <value>HE_ModelViewColumnCommentary</value>
+  </data>
+  <data name="&gt;&gt;HE_ModelViewColumnCommentary.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HE_ConextMenuCutItem.Name" xml:space="preserve">

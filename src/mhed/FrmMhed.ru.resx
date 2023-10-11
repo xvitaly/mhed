@@ -268,6 +268,9 @@
   <data name="HE_ModelViewColumnDomain.HeaderText" xml:space="preserve">
     <value>Доменное имя</value>
   </data>
+  <data name="HE_ModelViewColumnCommentary.HeaderText" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
   <data name="HE_ConextMenuCutItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 22</value>
   </data>
