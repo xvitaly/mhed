@@ -390,8 +390,9 @@
             // 
             // HE_ModelViewColumnIP
             // 
+            this.HE_ModelViewColumnIP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.HE_ModelViewColumnIP.DataPropertyName = "IPAddr";
-            this.HE_ModelViewColumnIP.FillWeight = 74.92796F;
+            this.HE_ModelViewColumnIP.FillWeight = 90F;
             resources.ApplyResources(this.HE_ModelViewColumnIP, "HE_ModelViewColumnIP");
             this.HE_ModelViewColumnIP.Name = "HE_ModelViewColumnIP";
             // 
@@ -399,12 +400,13 @@
             // 
             this.HE_ModelViewColumnDomain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.HE_ModelViewColumnDomain.DataPropertyName = "Hostname";
-            this.HE_ModelViewColumnDomain.FillWeight = 125.072F;
+            this.HE_ModelViewColumnDomain.FillWeight = 125F;
             resources.ApplyResources(this.HE_ModelViewColumnDomain, "HE_ModelViewColumnDomain");
             this.HE_ModelViewColumnDomain.Name = "HE_ModelViewColumnDomain";
             // 
             // HE_ModelViewColumnCommentary
             // 
+            this.HE_ModelViewColumnCommentary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.HE_ModelViewColumnCommentary.DataPropertyName = "Commentary";
             resources.ApplyResources(this.HE_ModelViewColumnCommentary, "HE_ModelViewColumnCommentary");
             this.HE_ModelViewColumnCommentary.Name = "HE_ModelViewColumnCommentary";

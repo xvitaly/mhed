@@ -459,9 +459,6 @@
   <data name="HE_ModelViewColumnIP.HeaderText" xml:space="preserve">
     <value>IP Address</value>
   </data>
-  <data name="HE_ModelViewColumnIP.Width" type="System.Int32, mscorlib">
-    <value>130</value>
-  </data>
   <metadata name="HE_ModelViewColumnDomain.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
