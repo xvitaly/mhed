@@ -14,5 +14,12 @@ namespace mhed.lib
 {
     public sealed class HostsFileEntryParser
     {
+        public string IPAddrStr { get; private set; }
+        public string HostnameStr { get; private set; }
+        public string CommentaryStr { get; private set; }
+
+        public HostsFileEntryParser(string SrcStr)
+        {
+        }
     }
 }
