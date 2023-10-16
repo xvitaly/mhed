@@ -18,8 +18,11 @@ namespace mhed.lib
         public string Host { get; private set; }
         public string Comment { get; private set; }
 
-        public HostsFileEntryParser(string SrcStr)
+        public HostsFileEntryParser(string IPStr, string HostStr, string CommentStr)
         {
+            IP = IPStr;
+            Host = HostStr;
+            Comment = CommentStr;
         }
     }
 }
