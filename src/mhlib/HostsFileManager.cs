@@ -64,13 +64,11 @@ namespace mhed.lib
                 while (OpenedHosts.Peek() >= 0)
                 {
                     string ImpStr = StringsManager.CleanString(await OpenedHosts.ReadLineAsync());
-                    if (!string.IsNullOrEmpty(ImpStr))
+                    if (HostsFileEntryParser.TryParse(ImpStr, out HostsFileEntryParser Parser))
                     {
-                        int SpPos = ImpStr.IndexOf(" ", StringComparison.InvariantCulture);
-                        int CmPos = ImpStr.IndexOf("#", StringComparison.InvariantCulture);
-                        if (SpPos != -1 && IPAddress.TryParse(ImpStr.Substring(0, SpPos), out IPAddress IP) && Hostname.TryParse(CmPos > SpPos ? ImpStr.Substring(SpPos + 1, CmPos - SpPos - 2) : ImpStr.Remove(0, SpPos + 1), out Hostname Host))
+                        if (IPAddress.TryParse(Parser.IP, out IPAddress IP) && Hostname.TryParse(Parser.Host, out Hostname Host))
                         {
-                            Contents.Add(new HostsFileEntry(IP, Host, CmPos > 0 ? ImpStr.Substring(CmPos + 1).Trim() : string.Empty));
+                            Contents.Add(new HostsFileEntry(IP, Host, Parser.Comment));
                         }
                     }
                 }
