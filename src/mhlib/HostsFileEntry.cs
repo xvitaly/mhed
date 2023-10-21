@@ -26,7 +26,7 @@ namespace mhed.lib
         /// <summary>
         /// Get or set entry commentary.
         /// </summary>
-        public string Commentary { get; set; }
+        public string Comment { get; set; }
 
         /// <summary>
         /// Check if the IP address and the Hostname are not empty.
@@ -38,12 +38,12 @@ namespace mhed.lib
         /// </summary>
         /// <param name="IP">IP address.</param>
         /// <param name="Host">Associated hostname.</param>
-        /// <param name="Comment">Entry commentary.</param>
-        public HostsFileEntry(IPAddress IP, Hostname Host, string Comment)
+        /// <param name="Comm">Entry commentary.</param>
+        public HostsFileEntry(IPAddress IP, Hostname Host, string Comm)
         {
             IPAddr = IP;
             Hostname = Host;
-            Commentary = Comment;
+            Comment = Comm;
         }
 
         /// <summary>
@@ -51,12 +51,12 @@ namespace mhed.lib
         /// </summary>
         /// <param name="IP">IP address in string format.</param>
         /// <param name="Host">Associated hostname.</param>
-        /// <param name="Comment">Entry commentary.</param>
-        public HostsFileEntry(string IP, string Host, string Comment)
+        /// <param name="Comm">Entry commentary.</param>
+        public HostsFileEntry(string IP, string Host, string Comm)
         {
             IPAddr = IPAddress.Parse(IP);
             Hostname = Hostname.Parse(Host);
-            Commentary = Comment;
+            Comment = Comm;
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace mhed.lib
         {
             IPAddr = IPAddress.Loopback;
             Hostname = Hostname.Empty;
-            Commentary = string.Empty;
+            Comment = string.Empty;
         }
     }
 }

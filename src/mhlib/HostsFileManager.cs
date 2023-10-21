@@ -89,13 +89,13 @@ namespace mhed.lib
 
                 foreach (HostsFileEntry Entry in Contents.Where(e => e.IsValid))
                 {
-                    if (string.IsNullOrWhiteSpace(Entry.Commentary))
+                    if (string.IsNullOrWhiteSpace(Entry.Comment))
                     {
                         await CFile.WriteLineAsync(string.Format("{0} {1}", Entry.IPAddr, Entry.Hostname));
                     }
                     else
                     {
-                        await CFile.WriteLineAsync(string.Format("{0} {1} # {2}", Entry.IPAddr, Entry.Hostname, Entry.Commentary));
+                        await CFile.WriteLineAsync(string.Format("{0} {1} # {2}", Entry.IPAddr, Entry.Hostname, Entry.Comment));
                     }
                 }
             }
