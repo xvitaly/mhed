@@ -71,7 +71,7 @@
             this.HE_ModelView = new System.Windows.Forms.DataGridView();
             this.HE_ModelViewColumnIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HE_ModelViewColumnDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HE_ModelViewColumnCommentary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HE_ModelViewColumnComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HE_ContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.HE_ConextMenuCutItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_ConextMenuCopyItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -382,7 +382,7 @@
             this.HE_ModelView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HE_ModelViewColumnIP,
             this.HE_ModelViewColumnDomain,
-            this.HE_ModelViewColumnCommentary});
+            this.HE_ModelViewColumnComment});
             this.HE_ModelView.ContextMenuStrip = this.HE_ContextMenu;
             resources.ApplyResources(this.HE_ModelView, "HE_ModelView");
             this.HE_ModelView.Name = "HE_ModelView";
@@ -404,12 +404,12 @@
             resources.ApplyResources(this.HE_ModelViewColumnDomain, "HE_ModelViewColumnDomain");
             this.HE_ModelViewColumnDomain.Name = "HE_ModelViewColumnDomain";
             // 
-            // HE_ModelViewColumnCommentary
+            // HE_ModelViewColumnComment
             // 
-            this.HE_ModelViewColumnCommentary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HE_ModelViewColumnCommentary.DataPropertyName = "Commentary";
-            resources.ApplyResources(this.HE_ModelViewColumnCommentary, "HE_ModelViewColumnCommentary");
-            this.HE_ModelViewColumnCommentary.Name = "HE_ModelViewColumnCommentary";
+            this.HE_ModelViewColumnComment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HE_ModelViewColumnComment.DataPropertyName = "Comment";
+            resources.ApplyResources(this.HE_ModelViewColumnComment, "HE_ModelViewColumnComment");
+            this.HE_ModelViewColumnComment.Name = "HE_ModelViewColumnComment";
             // 
             // HE_ContextMenu
             // 
@@ -526,6 +526,6 @@
         private System.Windows.Forms.ToolStripMenuItem HE_MenuDeleteItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnIP;
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnDomain;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnCommentary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnComment;
     }
 }
