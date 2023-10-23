@@ -459,8 +459,6 @@
             this.Controls.Add(this.HE_MainMenu);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.HE_MainMenu;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmMhed";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMhed_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMhed_FormClosed);
