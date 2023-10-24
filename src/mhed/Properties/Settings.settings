@@ -32,5 +32,8 @@
     <Setting Name="LastCleanupTime" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">2022-01-01</Value>
     </Setting>
+    <Setting Name="FormMaximized" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
