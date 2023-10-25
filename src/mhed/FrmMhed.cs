@@ -70,8 +70,24 @@ namespace mhed.gui
         /// </summary>
         private void SaveSettings()
         {
-            Properties.Settings.Default.FormLocation = WindowState == FormWindowState.Normal ? Location : RestoreBounds.Location;
-            Properties.Settings.Default.FormSize = WindowState == FormWindowState.Normal ? Size : RestoreBounds.Size;
+            switch (WindowState)
+            {
+                case FormWindowState.Normal:
+                    Properties.Settings.Default.FormLocation = Location;
+                    Properties.Settings.Default.FormSize = Size;
+                    Properties.Settings.Default.FormMaximized = false;
+                    break;
+                case FormWindowState.Maximized:
+                    Properties.Settings.Default.FormLocation = RestoreBounds.Location;
+                    Properties.Settings.Default.FormSize = RestoreBounds.Size;
+                    Properties.Settings.Default.FormMaximized = true;
+                    break;
+                default:
+                    Properties.Settings.Default.FormLocation = RestoreBounds.Location;
+                    Properties.Settings.Default.FormSize = RestoreBounds.Size;
+                    Properties.Settings.Default.FormMaximized = false;
+                    break;
+            }
             Properties.Settings.Default.Save();
         }
 
