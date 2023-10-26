@@ -208,6 +208,17 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Set form state based on saved settings.
+        /// </summary>
+        private void SetFormState()
+        {
+            if (Properties.Settings.Default.FormMaximized)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        /// <summary>
         /// Set form size based on saved settings.
         /// </summary>
         private void SetFormSize()
