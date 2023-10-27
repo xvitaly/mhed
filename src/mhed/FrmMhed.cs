@@ -270,6 +270,7 @@ namespace mhed.gui
         {
             if (Properties.Settings.Default.PreserveFormState)
             {
+                SetFormState();
                 SetFormSize();
                 SetFormLocation();
             }
