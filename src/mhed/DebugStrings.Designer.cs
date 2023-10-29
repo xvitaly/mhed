@@ -232,6 +232,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to restore the state of the required form..
+        /// </summary>
+        internal static string AppDbgExSetFormState {
+            get {
+                return ResourceManager.GetString("AppDbgExSetFormState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to import settings from the previous version..
         /// </summary>
         internal static string AppDbgExSettingsLoad {
