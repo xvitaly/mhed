@@ -212,9 +212,16 @@ namespace mhed.gui
         /// </summary>
         private void SetFormState()
         {
-            if (Properties.Settings.Default.FormMaximized)
+            try
             {
-                WindowState = FormWindowState.Maximized;
+                if (Properties.Settings.Default.FormMaximized)
+                {
+                    WindowState = FormWindowState.Maximized;
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExSetFormState);
             }
         }
 
