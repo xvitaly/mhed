@@ -33,6 +33,11 @@ namespace mhed.lib
         /// </summary>
         public SortableBindingList<HostsFileEntry> Contents { get; private set; }
 
+        public void AddEntry(IPAddress IP, Hostname Host, string Comm)
+        {
+            Contents.Add(new HostsFileEntry(IP, Host, Comm));
+        }
+
         /// <summary>
         /// Clear Hosts file data object.
         /// </summary>
