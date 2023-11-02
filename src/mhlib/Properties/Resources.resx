@@ -145,6 +145,9 @@
   <data name="MutexRegular" xml:space="preserve">
     <value>{0}_regular</value>
   </data>
+  <data name="NewEntrySingle" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
   <data name="ShBinWin" xml:space="preserve">
     <value>explorer.exe</value>
   </data>
