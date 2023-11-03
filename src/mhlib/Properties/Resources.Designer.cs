@@ -162,6 +162,15 @@ namespace mhed.lib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} {1} # {2}.
+        /// </summary>
+        internal static string NewEntryWithComment {
+            get {
+                return ResourceManager.GetString("NewEntryWithComment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to explorer.exe.
         /// </summary>
         internal static string ShBinWin {
