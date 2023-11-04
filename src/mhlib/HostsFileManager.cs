@@ -102,11 +102,11 @@ namespace mhed.lib
                 {
                     if (string.IsNullOrWhiteSpace(Entry.Comment))
                     {
-                        await CFile.WriteLineAsync(string.Format("{0} {1}", Entry.IPAddr, Entry.Hostname));
+                        await CFile.WriteLineAsync(string.Format(Properties.Resources.NewEntrySingle, Entry.IPAddr, Entry.Hostname));
                     }
                     else
                     {
-                        await CFile.WriteLineAsync(string.Format("{0} {1} # {2}", Entry.IPAddr, Entry.Hostname, Entry.Comment));
+                        await CFile.WriteLineAsync(string.Format(Properties.Resources.NewEntryWithComment, Entry.IPAddr, Entry.Hostname, Entry.Comment));
                     }
                 }
             }
