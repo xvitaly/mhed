@@ -67,9 +67,9 @@ namespace mhed.lib
         /// <summary>
         /// Asynchronically read contents of Hosts file to the data object.
         /// </summary>
-        private async Task ReadHostsFile()
+        private async Task ReadHostsFile(string SourceFile)
         {
-            using (StreamReader OpenedHosts = new StreamReader(FilePath, Encoding.Default))
+            using (StreamReader OpenedHosts = new StreamReader(SourceFile, Encoding.Default))
             {
                 while (OpenedHosts.Peek() >= 0)
                 {
@@ -116,7 +116,7 @@ namespace mhed.lib
         /// </summary>
         public async Task Load()
         {
-            await ReadHostsFile();
+            await ReadHostsFile(FilePath);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace mhed.lib
         public async Task Refresh()
         {
             ClearHostsContents();
-            await ReadHostsFile();
+            await ReadHostsFile(FilePath);
         }
 
         /// <summary>
