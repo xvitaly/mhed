@@ -65,8 +65,10 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Asynchronically read contents of Hosts file to the data object.
+        /// Asynchronically read contents of the specified Hosts file to
+        /// the data object.
         /// </summary>
+        /// <param name="SourceFile">Hosts source file path.</param>
         private async Task ReadHostsFile(string SourceFile)
         {
             using (StreamReader OpenedHosts = new StreamReader(SourceFile, Encoding.Default))
