@@ -122,6 +122,14 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Read Hosts entries from the specified file.
+        /// </summary>
+        public async Task Load(string SourceFile)
+        {
+            await ReadHostsFile(SourceFile);
+        }
+
+        /// <summary>
         /// Re-read (refresh) Hosts file from disk.
         /// </summary>
         public async Task Refresh()
