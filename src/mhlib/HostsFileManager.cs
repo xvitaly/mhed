@@ -122,8 +122,9 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Read Hosts entries from the specified file.
+        /// Read Hosts entries from the specified source file.
         /// </summary>
+        /// <param name="SourceFile">Hosts source file path.</param>
         public async Task Load(string SourceFile)
         {
             await ReadHostsFile(SourceFile);
