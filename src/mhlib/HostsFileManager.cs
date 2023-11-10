@@ -88,11 +88,12 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Asynchronically write contents of the data object to the Hosts file.
+        /// Asynchronically write contents of the data object to specified Hosts
+        /// file.
         /// </summary>
-        private async Task WriteHostsFile()
+        private async Task WriteHostsFile(string SourceFile)
         {
-            using (StreamWriter CFile = new StreamWriter(FilePath, false, Encoding.Default))
+            using (StreamWriter CFile = new StreamWriter(SourceFile, false, Encoding.Default))
             {
                 if (Platform.HostsFileHeader)
                 {
@@ -153,7 +154,7 @@ namespace mhed.lib
         /// </summary>
         public async Task Save()
         {
-            await WriteHostsFile();
+            await WriteHostsFile(FilePath);
         }
 
         /// <summary>
