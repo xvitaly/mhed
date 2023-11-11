@@ -91,6 +91,7 @@ namespace mhed.lib
         /// Asynchronically write contents of the data object to specified Hosts
         /// file.
         /// </summary>
+        /// <param name="SourceFile">Hosts source file path.</param>
         private async Task WriteHostsFile(string SourceFile)
         {
             using (StreamWriter CFile = new StreamWriter(SourceFile, false, Encoding.Default))
