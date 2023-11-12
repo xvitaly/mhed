@@ -159,6 +159,14 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Write Hosts entries to the specified source file.
+        /// </summary>
+        public async Task Save(string SourceFile)
+        {
+            await WriteHostsFile(SourceFile);
+        }
+
+        /// <summary>
         /// HostsFileManager class constructor.
         /// </summary>
         /// <param name="RunningPlatform">Current running platform.</param>
