@@ -161,6 +161,7 @@ namespace mhed.lib
         /// <summary>
         /// Write Hosts entries to the specified source file.
         /// </summary>
+        /// <param name="SourceFile">Hosts source file path.</param>
         public async Task Save(string SourceFile)
         {
             await WriteHostsFile(SourceFile);
