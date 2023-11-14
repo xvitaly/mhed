@@ -552,6 +552,15 @@
   <data name="&gt;&gt;HE_ModelViewPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="HE_ExportDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>558, 17</value>
+  </metadata>
+  <data name="HE_ExportDialog.Filter" xml:space="preserve">
+    <value>Text files|*.txt|All files|*.*</value>
+  </data>
+  <data name="HE_ExportDialog.Title" xml:space="preserve">
+    <value>Export to file</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1394,6 +1403,12 @@
   </data>
   <data name="&gt;&gt;HE_ConextMenuDeleteItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_ExportDialog.Name" xml:space="preserve">
+    <value>HE_ExportDialog</value>
+  </data>
+  <data name="&gt;&gt;HE_ExportDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMhed</value>

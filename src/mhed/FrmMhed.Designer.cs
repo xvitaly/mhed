@@ -77,6 +77,7 @@
             this.HE_ConextMenuCopyItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_ConextMenuPasteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_ConextMenuDeleteItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_ExportDialog = new System.Windows.Forms.SaveFileDialog();
             this.HE_MainToolbar.SuspendLayout();
             this.HE_MainMenu.SuspendLayout();
             this.HE_StatusBar.SuspendLayout();
@@ -449,6 +450,11 @@
             resources.ApplyResources(this.HE_ConextMenuDeleteItem, "HE_ConextMenuDeleteItem");
             this.HE_ConextMenuDeleteItem.Click += new System.EventHandler(this.HE_ConextMenuDeleteItem_Click);
             // 
+            // HE_ExportDialog
+            // 
+            this.HE_ExportDialog.DefaultExt = "txt";
+            resources.ApplyResources(this.HE_ExportDialog, "HE_ExportDialog");
+            // 
             // FrmMhed
             // 
             resources.ApplyResources(this, "$this");
@@ -525,5 +531,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnIP;
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnDomain;
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnComment;
+        private System.Windows.Forms.SaveFileDialog HE_ExportDialog;
     }
 }
