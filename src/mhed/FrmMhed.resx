@@ -561,6 +561,15 @@
   <data name="HE_ExportDialog.Title" xml:space="preserve">
     <value>Export to file</value>
   </data>
+  <metadata name="HE_ImportDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>700, 17</value>
+  </metadata>
+  <data name="HE_ImportDialog.Filter" xml:space="preserve">
+    <value>Text files|*.txt|All files|*.*</value>
+  </data>
+  <data name="HE_ImportDialog.Title" xml:space="preserve">
+    <value>Import from file</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1409,6 +1418,12 @@
   </data>
   <data name="&gt;&gt;HE_ExportDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_ImportDialog.Name" xml:space="preserve">
+    <value>HE_ImportDialog</value>
+  </data>
+  <data name="&gt;&gt;HE_ImportDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMhed</value>

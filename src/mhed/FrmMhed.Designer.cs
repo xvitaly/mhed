@@ -78,6 +78,7 @@
             this.HE_ConextMenuPasteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_ConextMenuDeleteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_ExportDialog = new System.Windows.Forms.SaveFileDialog();
+            this.HE_ImportDialog = new System.Windows.Forms.OpenFileDialog();
             this.HE_MainToolbar.SuspendLayout();
             this.HE_MainMenu.SuspendLayout();
             this.HE_StatusBar.SuspendLayout();
@@ -455,6 +456,10 @@
             this.HE_ExportDialog.DefaultExt = "txt";
             resources.ApplyResources(this.HE_ExportDialog, "HE_ExportDialog");
             // 
+            // HE_ImportDialog
+            // 
+            resources.ApplyResources(this.HE_ImportDialog, "HE_ImportDialog");
+            // 
             // FrmMhed
             // 
             resources.ApplyResources(this, "$this");
@@ -532,5 +537,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnDomain;
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnComment;
         private System.Windows.Forms.SaveFileDialog HE_ExportDialog;
+        private System.Windows.Forms.OpenFileDialog HE_ImportDialog;
     }
 }
