@@ -45,6 +45,7 @@
             this.HE_MenuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuRefreshItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuSaveItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuImportItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuSeparator1Item = new System.Windows.Forms.ToolStripSeparator();
             this.HE_MenuOptionsItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuQuitItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -189,6 +190,7 @@
             this.HE_MenuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HE_MenuRefreshItem,
             this.HE_MenuSaveItem,
+            this.HE_MenuImportItem,
             this.HE_MenuSeparator1Item,
             this.HE_MenuOptionsItem,
             this.HE_MenuQuitItem});
@@ -208,6 +210,12 @@
             this.HE_MenuSaveItem.Name = "HE_MenuSaveItem";
             resources.ApplyResources(this.HE_MenuSaveItem, "HE_MenuSaveItem");
             this.HE_MenuSaveItem.Click += new System.EventHandler(this.HE_MenuSaveItem_Click);
+            // 
+            // HE_MenuImportItem
+            // 
+            this.HE_MenuImportItem.Name = "HE_MenuImportItem";
+            resources.ApplyResources(this.HE_MenuImportItem, "HE_MenuImportItem");
+            this.HE_MenuImportItem.Click += new System.EventHandler(this.HE_MenuImportItem_Click);
             // 
             // HE_MenuSeparator1Item
             // 
@@ -538,5 +546,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HE_ModelViewColumnComment;
         private System.Windows.Forms.SaveFileDialog HE_ExportDialog;
         private System.Windows.Forms.OpenFileDialog HE_ImportDialog;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuImportItem;
     }
 }

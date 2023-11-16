@@ -246,6 +246,12 @@
   <data name="HE_MenuSaveItem.Text" xml:space="preserve">
     <value>&amp;Save</value>
   </data>
+  <data name="HE_MenuImportItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 22</value>
+  </data>
+  <data name="HE_MenuImportItem.Text" xml:space="preserve">
+    <value>&amp;Import</value>
+  </data>
   <data name="HE_MenuSeparator1Item.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 6</value>
   </data>
@@ -1243,6 +1249,12 @@
     <value>HE_MenuSaveItem</value>
   </data>
   <data name="&gt;&gt;HE_MenuSaveItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuImportItem.Name" xml:space="preserve">
+    <value>HE_MenuImportItem</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuImportItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HE_MenuSeparator1Item.Name" xml:space="preserve">

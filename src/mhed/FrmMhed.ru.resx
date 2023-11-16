@@ -140,28 +140,34 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="HE_MenuRefreshItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="HE_MenuRefreshItem.Text" xml:space="preserve">
     <value>&amp;Обновить</value>
   </data>
   <data name="HE_MenuSaveItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="HE_MenuSaveItem.Text" xml:space="preserve">
     <value>&amp;Сохранить</value>
   </data>
+  <data name="HE_MenuImportItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="HE_MenuImportItem.Text" xml:space="preserve">
+    <value>&amp;Импорт</value>
+  </data>
   <data name="HE_MenuSeparator1Item.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 6</value>
+    <value>177, 6</value>
   </data>
   <data name="HE_MenuOptionsItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="HE_MenuOptionsItem.Text" xml:space="preserve">
     <value>&amp;Настройки</value>
   </data>
   <data name="HE_MenuQuitItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="HE_MenuQuitItem.Text" xml:space="preserve">
     <value>&amp;Выход</value>
