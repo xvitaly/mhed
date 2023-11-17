@@ -750,6 +750,16 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// "Export" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuExportItem_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        /// <summary>
         /// "Options" menu item event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>

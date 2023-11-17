@@ -157,6 +157,12 @@
   <data name="HE_MenuImportItem.Text" xml:space="preserve">
     <value>&amp;Импорт</value>
   </data>
+  <data name="HE_MenuExportItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="HE_MenuExportItem.Text" xml:space="preserve">
+    <value>&amp;Экспорт</value>
+  </data>
   <data name="HE_MenuSeparator1Item.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 6</value>
   </data>

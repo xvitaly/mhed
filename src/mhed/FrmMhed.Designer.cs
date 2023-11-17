@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMhed));
             this.HE_MainToolbar = new System.Windows.Forms.ToolStrip();
             this.HE_ToolbarRefreshButton = new System.Windows.Forms.ToolStripButton();
@@ -46,6 +45,7 @@
             this.HE_MenuRefreshItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuSaveItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuImportItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuExportItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuSeparator1Item = new System.Windows.Forms.ToolStripSeparator();
             this.HE_MenuOptionsItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuQuitItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,7 +73,7 @@
             this.HE_ModelViewColumnIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HE_ModelViewColumnDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HE_ModelViewColumnComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HE_ContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.HE_ContextMenu = new System.Windows.Forms.ContextMenuStrip();
             this.HE_ConextMenuCutItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_ConextMenuCopyItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_ConextMenuPasteItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -191,6 +191,7 @@
             this.HE_MenuRefreshItem,
             this.HE_MenuSaveItem,
             this.HE_MenuImportItem,
+            this.HE_MenuExportItem,
             this.HE_MenuSeparator1Item,
             this.HE_MenuOptionsItem,
             this.HE_MenuQuitItem});
@@ -216,6 +217,12 @@
             this.HE_MenuImportItem.Name = "HE_MenuImportItem";
             resources.ApplyResources(this.HE_MenuImportItem, "HE_MenuImportItem");
             this.HE_MenuImportItem.Click += new System.EventHandler(this.HE_MenuImportItem_Click);
+            // 
+            // HE_MenuExportItem
+            // 
+            this.HE_MenuExportItem.Name = "HE_MenuExportItem";
+            resources.ApplyResources(this.HE_MenuExportItem, "HE_MenuExportItem");
+            this.HE_MenuExportItem.Click += new System.EventHandler(this.HE_MenuExportItem_Click);
             // 
             // HE_MenuSeparator1Item
             // 
@@ -547,5 +554,6 @@
         private System.Windows.Forms.SaveFileDialog HE_ExportDialog;
         private System.Windows.Forms.OpenFileDialog HE_ImportDialog;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuImportItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuExportItem;
     }
 }
