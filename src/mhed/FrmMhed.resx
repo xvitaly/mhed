@@ -246,6 +246,9 @@
   <data name="HE_MenuSaveItem.Text" xml:space="preserve">
     <value>&amp;Save</value>
   </data>
+  <data name="HE_MenuSeparator1Item.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 6</value>
+  </data>
   <data name="HE_MenuImportItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 22</value>
   </data>
@@ -258,7 +261,7 @@
   <data name="HE_MenuExportItem.Text" xml:space="preserve">
     <value>&amp;Export</value>
   </data>
-  <data name="HE_MenuSeparator1Item.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HE_MenuSeparator2Item.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 6</value>
   </data>
   <data name="HE_MenuOptionsItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -351,7 +354,7 @@
   <data name="HE_MenuShowHelpItem.Text" xml:space="preserve">
     <value>Sh&amp;ow help</value>
   </data>
-  <data name="HE_MenuSeparator2Item.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HE_MenuSeparator3Item.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 6</value>
   </data>
   <data name="HE_MenuCheckForUpdatesItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -372,7 +375,7 @@
   <data name="HE_MenuDebugLogItem.Text" xml:space="preserve">
     <value>Show &amp;debug log</value>
   </data>
-  <data name="HE_MenuSeparator3Item.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HE_MenuSeparator4Item.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 6</value>
   </data>
   <data name="HE_MenuAboutItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -1257,6 +1260,12 @@
   <data name="&gt;&gt;HE_MenuSaveItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;HE_MenuSeparator1Item.Name" xml:space="preserve">
+    <value>HE_MenuSeparator1Item</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuSeparator1Item.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;HE_MenuImportItem.Name" xml:space="preserve">
     <value>HE_MenuImportItem</value>
   </data>
@@ -1269,10 +1278,10 @@
   <data name="&gt;&gt;HE_MenuExportItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;HE_MenuSeparator1Item.Name" xml:space="preserve">
-    <value>HE_MenuSeparator1Item</value>
+  <data name="&gt;&gt;HE_MenuSeparator2Item.Name" xml:space="preserve">
+    <value>HE_MenuSeparator2Item</value>
   </data>
-  <data name="&gt;&gt;HE_MenuSeparator1Item.Type" xml:space="preserve">
+  <data name="&gt;&gt;HE_MenuSeparator2Item.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HE_MenuOptionsItem.Name" xml:space="preserve">
@@ -1347,10 +1356,10 @@
   <data name="&gt;&gt;HE_MenuShowHelpItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;HE_MenuSeparator2Item.Name" xml:space="preserve">
-    <value>HE_MenuSeparator2Item</value>
+  <data name="&gt;&gt;HE_MenuSeparator3Item.Name" xml:space="preserve">
+    <value>HE_MenuSeparator3Item</value>
   </data>
-  <data name="&gt;&gt;HE_MenuSeparator2Item.Type" xml:space="preserve">
+  <data name="&gt;&gt;HE_MenuSeparator3Item.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HE_MenuCheckForUpdatesItem.Name" xml:space="preserve">
@@ -1371,10 +1380,10 @@
   <data name="&gt;&gt;HE_MenuDebugLogItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;HE_MenuSeparator3Item.Name" xml:space="preserve">
-    <value>HE_MenuSeparator3Item</value>
+  <data name="&gt;&gt;HE_MenuSeparator4Item.Name" xml:space="preserve">
+    <value>HE_MenuSeparator4Item</value>
   </data>
-  <data name="&gt;&gt;HE_MenuSeparator3Item.Type" xml:space="preserve">
+  <data name="&gt;&gt;HE_MenuSeparator4Item.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HE_MenuAboutItem.Name" xml:space="preserve">
