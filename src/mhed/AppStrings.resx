@@ -246,4 +246,7 @@
   <data name="AHE_ClipboardNonHostname" xml:space="preserve">
     <value>Clipboard doesn't contain a valid hostname!</value>
   </data>
+  <data name="AHE_Exported" xml:space="preserve">
+    <value>Hosts file has been successfully exported!</value>
+  </data>
 </root>

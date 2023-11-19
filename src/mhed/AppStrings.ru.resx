@@ -246,4 +246,7 @@
   <data name="AHE_ClipboardNonHostname" xml:space="preserve">
     <value>В буфере обмена не содержится действительное имя хоста!</value>
   </data>
+  <data name="AHE_Exported" xml:space="preserve">
+    <value>Содержимое файла Hosts было успешно экспортировано!</value>
+  </data>
 </root>

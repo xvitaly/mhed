@@ -160,6 +160,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hosts file has been successfully exported!.
+        /// </summary>
+        internal static string AHE_Exported {
+            get {
+                return ResourceManager.GetString("AHE_Exported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hosts file: {0}. Show it in file manager?.
         /// </summary>
         internal static string AHE_HMessg {
