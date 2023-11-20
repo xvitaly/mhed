@@ -169,6 +169,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Warning! An error occurred while exporting to file {0}. Maybe you don&apos;t have enough rights to do this, or someone is blocking write attempts..
+        /// </summary>
+        internal static string AHE_ExportException {
+            get {
+                return ResourceManager.GetString("AHE_ExportException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hosts file: {0}. Show it in file manager?.
         /// </summary>
         internal static string AHE_HMessg {

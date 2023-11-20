@@ -249,4 +249,7 @@
   <data name="AHE_Exported" xml:space="preserve">
     <value>Содержимое файла Hosts было успешно экспортировано!</value>
   </data>
+  <data name="AHE_ExportException" xml:space="preserve">
+    <value>Внимание! Произошла ошибка при попытке экспорта в файл {0}. Возможно, у вас недостаточно для этого прав, либо кто-то блокирует попытку записи.</value>
+  </data>
 </root>
