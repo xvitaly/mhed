@@ -150,6 +150,9 @@
   <data name="AppDbgExDnWrkTask" xml:space="preserve">
     <value>Exception while trying to start downloading file "{0}" to "{1}".</value>
   </data>
+  <data name="AppDbgExExportTask" xml:space="preserve">
+    <value>Exception while trying to export to file.</value>
+  </data>
   <data name="AppDbgExHelpShow" xml:space="preserve">
     <value>Failed to start the offline help viewer with the required CHM file.</value>
   </data>

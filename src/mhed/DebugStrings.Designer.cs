@@ -160,6 +160,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to export to file..
+        /// </summary>
+        internal static string AppDbgExExportTask {
+            get {
+                return ResourceManager.GetString("AppDbgExExportTask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to start the offline help viewer with the required CHM file..
         /// </summary>
         internal static string AppDbgExHelpShow {
