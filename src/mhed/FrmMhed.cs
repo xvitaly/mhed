@@ -597,6 +597,26 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Export Hosts file entries to a separate file.
+        /// </summary>
+        private async Task ExportToFile()
+        {
+            if (HE_ExportDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    await App.HostsFile.Save(HE_ExportDialog.FileName);
+                    MessageBox.Show(AppStrings.AHE_Exported, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Error(Ex, DebugStrings.AppDbgExExportTask);
+                    MessageBox.Show(string.Format(AppStrings.AHE_ExportException, HE_ExportDialog.FileName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        /// <summary>
         /// Try to read Hosts file.
         /// </summary>
         private async Task LoadHostsFile()
@@ -754,9 +774,9 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HE_MenuExportItem_Click(object sender, EventArgs e)
+        private async void HE_MenuExportItem_Click(object sender, EventArgs e)
         {
-            //
+            await ExportToFile();
         }
 
         /// <summary>
