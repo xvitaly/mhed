@@ -223,6 +223,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to save Hosts file..
+        /// </summary>
+        internal static string AppDbgExSaveTask {
+            get {
+                return ResourceManager.GetString("AppDbgExSaveTask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to change location of the required form..
         /// </summary>
         internal static string AppDbgExSetFormLocation {

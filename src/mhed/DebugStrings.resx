@@ -171,6 +171,9 @@
   <data name="AppDbgExOpenUrl" xml:space="preserve">
     <value>Exception while trying to load URL into default web browser.</value>
   </data>
+  <data name="AppDbgExSaveTask" xml:space="preserve">
+    <value>Exception while trying to save Hosts file.</value>
+  </data>
   <data name="AppDbgExSetFormLocation" xml:space="preserve">
     <value>Exception while trying to change location of the required form.</value>
   </data>
