@@ -252,4 +252,7 @@
   <data name="AHE_ExportException" xml:space="preserve">
     <value>Warning! An error occurred while exporting to file {0}. Maybe you don't have enough rights to do this, or someone is blocking write attempts.</value>
   </data>
+  <data name="AHE_Imported" xml:space="preserve">
+    <value>The content has been successfully imported and added to the table!</value>
+  </data>
 </root>

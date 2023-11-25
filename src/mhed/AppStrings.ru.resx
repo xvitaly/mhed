@@ -252,4 +252,7 @@
   <data name="AHE_ExportException" xml:space="preserve">
     <value>Внимание! Произошла ошибка при попытке экспорта в файл {0}. Возможно, у вас недостаточно для этого прав, либо кто-то блокирует попытку записи.</value>
   </data>
+  <data name="AHE_Imported" xml:space="preserve">
+    <value>Содержимое было успешно импортировано и добавлено в таблицу!</value>
+  </data>
 </root>

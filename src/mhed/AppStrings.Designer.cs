@@ -187,6 +187,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The content has been successfully imported and added to the table!.
+        /// </summary>
+        internal static string AHE_Imported {
+            get {
+                return ResourceManager.GetString("AHE_Imported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to import settings from a previous version of the application! All settings will be reset to their default values..
         /// </summary>
         internal static string AHE_ImportSettingsError {
