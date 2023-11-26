@@ -255,4 +255,7 @@
   <data name="AHE_Imported" xml:space="preserve">
     <value>The content has been successfully imported and added to the table!</value>
   </data>
+  <data name="AHE_ImportFileNotFound" xml:space="preserve">
+    <value>The selected file {0} for importing content was not found!</value>
+  </data>
 </root>

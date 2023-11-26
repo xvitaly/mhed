@@ -255,4 +255,7 @@
   <data name="AHE_Imported" xml:space="preserve">
     <value>Содержимое было успешно импортировано и добавлено в таблицу!</value>
   </data>
+  <data name="AHE_ImportFileNotFound" xml:space="preserve">
+    <value>Выбранный файл {0} для импорта содержимого не был найден!</value>
+  </data>
 </root>
