@@ -205,6 +205,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An exception occurred while importing the selected file {0}!.
+        /// </summary>
+        internal static string AHE_ImportFileParseError {
+            get {
+                return ResourceManager.GetString("AHE_ImportFileParseError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to import settings from a previous version of the application! All settings will be reset to their default values..
         /// </summary>
         internal static string AHE_ImportSettingsError {

@@ -258,4 +258,7 @@
   <data name="AHE_ImportFileNotFound" xml:space="preserve">
     <value>Выбранный файл {0} для импорта содержимого не был найден!</value>
   </data>
+  <data name="AHE_ImportFileParseError" xml:space="preserve">
+    <value>Произошла ошибка во время импорта выбранного файла {0}!</value>
+  </data>
 </root>
