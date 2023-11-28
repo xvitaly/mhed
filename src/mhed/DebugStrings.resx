@@ -201,6 +201,9 @@
   <data name="AppDbgHostsFileDoesNotExists" xml:space="preserve">
     <value>Hosts file does not exists.</value>
   </data>
+  <data name="AppDbgImportFileDoesNotExists" xml:space="preserve">
+    <value>The import file does not exists.</value>
+  </data>
   <data name="AppDbgIncorrectFormLocation" xml:space="preserve">
     <value>Invalid form location coordinates were received: [{0}, {1}]. The form will be moved to the center of the screen.</value>
   </data>

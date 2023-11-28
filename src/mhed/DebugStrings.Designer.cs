@@ -313,6 +313,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The import file does not exists..
+        /// </summary>
+        internal static string AppDbgImportFileDoesNotExists {
+            get {
+                return ResourceManager.GetString("AppDbgImportFileDoesNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid form location coordinates were received: [{0}, {1}]. The form will be moved to the center of the screen..
         /// </summary>
         internal static string AppDbgIncorrectFormLocation {
