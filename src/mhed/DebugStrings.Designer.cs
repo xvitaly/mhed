@@ -187,6 +187,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to parse imported file..
+        /// </summary>
+        internal static string AppDbgExImportParse {
+            get {
+                return ResourceManager.GetString("AppDbgExImportParse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An exception occured while trying to render data from the attached object..
         /// </summary>
         internal static string AppDbgExModelView {
