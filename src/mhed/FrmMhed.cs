@@ -639,6 +639,38 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Try to import Hosts file entries from file.
+        /// </summary>
+        private async Task ImportFromFile()
+        {
+            if (App.IsAdmin)
+            {
+                if (HE_ImportDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        await App.HostsFile.Load(HE_ImportDialog.FileName);
+                        MessageBox.Show(AppStrings.AHE_Imported, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (FileNotFoundException Ex)
+                    {
+                        Logger.Error(Ex, DebugStrings.AppDbgImportFileDoesNotExists);
+                        MessageBox.Show(string.Format(AppStrings.AHE_ImportFileNotFound, HE_ImportDialog.FileName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex, DebugStrings.AppDbgExImportParse);
+                        MessageBox.Show(string.Format(AppStrings.AHE_ImportFileParseError, HE_ImportDialog.FileName, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning));
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(string.Format(AppStrings.AHE_NoAdminRights, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
         /// Reload Hosts file contents from disk.
         /// </summary>
         private async Task ReloadHostsFile()
@@ -764,9 +796,9 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HE_MenuImportItem_Click(object sender, EventArgs e)
+        private async void HE_MenuImportItem_Click(object sender, EventArgs e)
         {
-            //
+            await ImportFromFile();
         }
 
         /// <summary>
