@@ -169,7 +169,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! An error occurred while exporting to file {0}. Maybe you don&apos;t have enough rights to do this, or someone is blocking write attempts..
+        ///   Looks up a localized string similar to Warning! An error occurred while exporting to file. Maybe you don&apos;t have enough rights to do this, or someone is blocking write attempts..
         /// </summary>
         internal static string AHE_ExportException {
             get {

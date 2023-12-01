@@ -611,7 +611,7 @@ namespace mhed.gui
                 catch (Exception Ex)
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExExportTask);
-                    MessageBox.Show(string.Format(AppStrings.AHE_ExportException, HE_ExportDialog.FileName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.AHE_ExportException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
