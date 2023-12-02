@@ -655,7 +655,7 @@ namespace mhed.gui
                     catch (FileNotFoundException Ex)
                     {
                         Logger.Error(Ex, DebugStrings.AppDbgImportFileDoesNotExists);
-                        MessageBox.Show(string.Format(AppStrings.AHE_ImportFileNotFound, HE_ImportDialog.FileName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.AHE_ImportFileNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     catch (Exception Ex)
                     {

@@ -196,7 +196,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The selected file {0} for importing content was not found!.
+        ///   Looks up a localized string similar to The selected file to import was not found!.
         /// </summary>
         internal static string AHE_ImportFileNotFound {
             get {
