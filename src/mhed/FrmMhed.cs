@@ -660,7 +660,7 @@ namespace mhed.gui
                     catch (Exception Ex)
                     {
                         Logger.Warn(Ex, DebugStrings.AppDbgExImportParse);
-                        MessageBox.Show(string.Format(AppStrings.AHE_ImportFileParseError, HE_ImportDialog.FileName, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning));
+                        MessageBox.Show(AppStrings.AHE_ImportFileException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }

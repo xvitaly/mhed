@@ -196,20 +196,20 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while importing the selected file!.
+        /// </summary>
+        internal static string AHE_ImportFileException {
+            get {
+                return ResourceManager.GetString("AHE_ImportFileException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The selected file to import was not found!.
         /// </summary>
         internal static string AHE_ImportFileNotFound {
             get {
                 return ResourceManager.GetString("AHE_ImportFileNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An exception occurred while importing the selected file {0}!.
-        /// </summary>
-        internal static string AHE_ImportFileParseError {
-            get {
-                return ResourceManager.GetString("AHE_ImportFileParseError", resourceCulture);
             }
         }
         
