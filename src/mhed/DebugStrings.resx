@@ -159,7 +159,7 @@
   <data name="AppDbgExHostsLoadParse" xml:space="preserve">
     <value>Exception while loading and parsing the Hosts file.</value>
   </data>
-  <data name="AppDbgExImportParse" xml:space="preserve">
+  <data name="AppDbgExImportTask" xml:space="preserve">
     <value>Exception while trying to parse imported file.</value>
   </data>
   <data name="AppDbgExModelView" xml:space="preserve">

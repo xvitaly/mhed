@@ -189,9 +189,9 @@ namespace mhed.gui {
         /// <summary>
         ///   Looks up a localized string similar to Exception while trying to parse imported file..
         /// </summary>
-        internal static string AppDbgExImportParse {
+        internal static string AppDbgExImportTask {
             get {
-                return ResourceManager.GetString("AppDbgExImportParse", resourceCulture);
+                return ResourceManager.GetString("AppDbgExImportTask", resourceCulture);
             }
         }
         

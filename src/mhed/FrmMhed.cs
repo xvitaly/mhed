@@ -659,7 +659,7 @@ namespace mhed.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, DebugStrings.AppDbgExImportParse);
+                        Logger.Warn(Ex, DebugStrings.AppDbgExImportTask);
                         MessageBox.Show(AppStrings.AHE_ImportFileException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
