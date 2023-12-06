@@ -109,6 +109,7 @@ namespace mhed.gui
         private void ChangeMenuItemsState(bool NewState)
         {
             HE_MenuSaveItem.Enabled = NewState;
+            HE_MenuImportItem.Enabled = NewState;
             HE_MenuCutItem.Enabled = NewState;
             HE_MenuPasteItem.Enabled = NewState;
             HE_MenuDeleteItem.Enabled = NewState;
