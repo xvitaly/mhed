@@ -92,11 +92,11 @@ namespace mhed.lib
         /// file.
         /// </summary>
         /// <param name="SourceFile">Hosts source file path.</param>
-        private async Task WriteHostsFile(string SourceFile)
+        private async Task WriteHostsFile(string SourceFile, bool SkipHeader)
         {
             using (StreamWriter CFile = new StreamWriter(SourceFile, false, Encoding.Default))
             {
-                if (Platform.HostsFileHeader)
+                if (Platform.HostsFileHeader && !SkipHeader)
                 {
                     await CFile.WriteLineAsync(Properties.Resources.HtTemplate);
                 }
@@ -155,7 +155,7 @@ namespace mhed.lib
         /// </summary>
         public async Task Save()
         {
-            await WriteHostsFile(FilePath);
+            await WriteHostsFile(FilePath, false);
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace mhed.lib
         /// <param name="SourceFile">Hosts source file path.</param>
         public async Task Save(string SourceFile)
         {
-            await WriteHostsFile(SourceFile);
+            await WriteHostsFile(SourceFile, true);
         }
 
         /// <summary>
