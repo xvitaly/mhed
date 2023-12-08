@@ -92,6 +92,7 @@ namespace mhed.lib
         /// file.
         /// </summary>
         /// <param name="SourceFile">Hosts source file path.</param>
+        /// <param name="SkipHeader">Skip header if it is required on this platform.</param>
         private async Task WriteHostsFile(string SourceFile, bool SkipHeader)
         {
             using (StreamWriter CFile = new StreamWriter(SourceFile, false, Encoding.Default))
