@@ -28,6 +28,11 @@ namespace mhed.lib
         public string FilePath { get; private set; }
 
         /// <summary>
+        /// Get or set Hosts file encoding.
+        /// </summary>
+        public Encoding FileEncoding { get; private set; }
+
+        /// <summary>
         /// Get or set Hosts file contents.
         /// </summary>
         public SortableBindingList<HostsFileEntry> Contents { get; private set; }
@@ -71,7 +76,7 @@ namespace mhed.lib
         /// <param name="SourceFile">Hosts source file path.</param>
         private async Task ReadHostsFile(string SourceFile)
         {
-            using (StreamReader OpenedHosts = new StreamReader(SourceFile, Encoding.Default))
+            using (StreamReader OpenedHosts = new StreamReader(SourceFile, FileEncoding))
             {
                 while (OpenedHosts.Peek() >= 0)
                 {
@@ -95,7 +100,7 @@ namespace mhed.lib
         /// <param name="SkipHeader">Skip header if it is required on this platform.</param>
         private async Task WriteHostsFile(string SourceFile, bool SkipHeader)
         {
-            using (StreamWriter CFile = new StreamWriter(SourceFile, false, Encoding.Default))
+            using (StreamWriter CFile = new StreamWriter(SourceFile, false, FileEncoding))
             {
                 if (Platform.HostsFileHeader && !SkipHeader)
                 {
@@ -176,6 +181,7 @@ namespace mhed.lib
         {
             Platform = RunningPlatform;
             FilePath = Platform.HostsFileFullPath;
+            FileEncoding = Encoding.Default;
             Contents = new SortableBindingList<HostsFileEntry>();
         }
     }
