@@ -174,6 +174,16 @@ namespace mhed.lib
         }
 
         /// <summary>
+        /// Explicitly set Hosts file encoding between the current platform default
+        /// and Unicode.
+        /// </summary>
+        /// <param name="Unicode">Enable or disable Unicode.</param>
+        public void SetEncoding(bool Unicode)
+        {
+            FileEncoding = Unicode ? new UTF8Encoding(true) : Encoding.Default;
+        }
+
+        /// <summary>
         /// HostsFileManager class constructor.
         /// </summary>
         /// <param name="RunningPlatform">Current running platform.</param>
