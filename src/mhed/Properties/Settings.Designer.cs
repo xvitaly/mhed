@@ -151,5 +151,17 @@ namespace mhed.gui.Properties {
                 this["FormMaximized"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool MultiByteEncoding {
+            get {
+                return ((bool)(this["MultiByteEncoding"]));
+            }
+            set {
+                this["MultiByteEncoding"] = value;
+            }
+        }
     }
 }
