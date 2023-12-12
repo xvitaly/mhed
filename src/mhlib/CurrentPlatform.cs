@@ -92,6 +92,12 @@ namespace mhed.lib
         public virtual bool LocalHostEntry => true;
 
         /// <summary>
+        /// Return whether Hosts file in Unicode requires BOM on this
+        /// platform.
+        /// </summary>
+        public virtual bool HostsFileBOM => false;
+
+        /// <summary>
         /// Immediately shut down application and return exit code.
         /// </summary>
         /// <param name="ReturnCode">Exit code.</param>

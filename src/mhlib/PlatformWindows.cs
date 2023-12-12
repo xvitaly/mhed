@@ -89,6 +89,12 @@ namespace mhed.lib
         public override bool LocalHostEntry => false;
 
         /// <summary>
+        /// Return whether Hosts file in Unicode requires BOM on this
+        /// platform.
+        /// </summary>
+        public override bool HostsFileBOM => true;
+
+        /// <summary>
         /// Return platform-dependent location of the Hosts file.
         /// </summary>
         public override string HostsFileLocation
