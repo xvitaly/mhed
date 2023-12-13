@@ -180,7 +180,7 @@ namespace mhed.lib
         /// <param name="Unicode">Enable or disable Unicode.</param>
         public void SetEncoding(bool Unicode)
         {
-            FileEncoding = Unicode ? new UTF8Encoding(true) : Encoding.Default;
+            FileEncoding = Unicode ? new UTF8Encoding(Platform.HostsFileBOM) : Encoding.Default;
         }
 
         /// <summary>
