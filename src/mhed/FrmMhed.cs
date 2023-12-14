@@ -897,6 +897,32 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// "Default encoding" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuEncodingDefaultItem_Click(object sender, EventArgs e)
+        {
+            App.HostsFile.SetEncoding(false);
+            Properties.Settings.Default.MultiByteEncoding = false;
+            HE_MenuEncodingDefaultItem.Checked = true;
+            HE_MenuEncodingUnicodeItem.Checked = false;
+        }
+
+        /// <summary>
+        /// "Unicode encoding" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuEncodingUnicodeItem_Click(object sender, EventArgs e)
+        {
+            App.HostsFile.SetEncoding(true);
+            Properties.Settings.Default.MultiByteEncoding = true;
+            HE_MenuEncodingDefaultItem.Checked = false;
+            HE_MenuEncodingUnicodeItem.Checked = true;
+        }
+
+        /// <summary>
         /// "Show help" menu item event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>

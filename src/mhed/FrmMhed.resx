@@ -339,6 +339,24 @@
   <data name="HE_MenuOpenNotepadItem.Text" xml:space="preserve">
     <value>Open in &amp;text editor</value>
   </data>
+  <data name="HE_MenuEncodingDefaultItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="HE_MenuEncodingDefaultItem.Text" xml:space="preserve">
+    <value>System &amp;default</value>
+  </data>
+  <data name="HE_MenuEncodingUnicodeItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="HE_MenuEncodingUnicodeItem.Text" xml:space="preserve">
+    <value>&amp;Unicode</value>
+  </data>
+  <data name="HE_MenuEncodingItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
+  <data name="HE_MenuEncodingItem.Text" xml:space="preserve">
+    <value>&amp;File encoding</value>
+  </data>
   <data name="HE_MenuAdvanced.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 20</value>
   </data>
@@ -1342,6 +1360,24 @@
     <value>HE_MenuOpenNotepadItem</value>
   </data>
   <data name="&gt;&gt;HE_MenuOpenNotepadItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuEncodingItem.Name" xml:space="preserve">
+    <value>HE_MenuEncodingItem</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuEncodingItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuEncodingDefaultItem.Name" xml:space="preserve">
+    <value>HE_MenuEncodingDefaultItem</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuEncodingDefaultItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuEncodingUnicodeItem.Name" xml:space="preserve">
+    <value>HE_MenuEncodingUnicodeItem</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuEncodingUnicodeItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HE_MenuHelp.Name" xml:space="preserve">

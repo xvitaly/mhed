@@ -58,6 +58,9 @@
             this.HE_MenuAdvanced = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuRestoreDefaultsItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuOpenNotepadItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuEncodingItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuEncodingDefaultItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuEncodingUnicodeItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuShowHelpItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuSeparator3Item = new System.Windows.Forms.ToolStripSeparator();
@@ -292,7 +295,8 @@
             // 
             this.HE_MenuAdvanced.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HE_MenuRestoreDefaultsItem,
-            this.HE_MenuOpenNotepadItem});
+            this.HE_MenuOpenNotepadItem,
+            this.HE_MenuEncodingItem});
             this.HE_MenuAdvanced.Name = "HE_MenuAdvanced";
             resources.ApplyResources(this.HE_MenuAdvanced, "HE_MenuAdvanced");
             // 
@@ -309,6 +313,26 @@
             this.HE_MenuOpenNotepadItem.Name = "HE_MenuOpenNotepadItem";
             resources.ApplyResources(this.HE_MenuOpenNotepadItem, "HE_MenuOpenNotepadItem");
             this.HE_MenuOpenNotepadItem.Click += new System.EventHandler(this.HE_MenuOpenNotepadItem_Click);
+            // 
+            // HE_MenuEncodingItem
+            // 
+            this.HE_MenuEncodingItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HE_MenuEncodingDefaultItem,
+            this.HE_MenuEncodingUnicodeItem});
+            this.HE_MenuEncodingItem.Name = "HE_MenuEncodingItem";
+            resources.ApplyResources(this.HE_MenuEncodingItem, "HE_MenuEncodingItem");
+            // 
+            // HE_MenuEncodingDefaultItem
+            // 
+            this.HE_MenuEncodingDefaultItem.Name = "HE_MenuEncodingDefaultItem";
+            resources.ApplyResources(this.HE_MenuEncodingDefaultItem, "HE_MenuEncodingDefaultItem");
+            this.HE_MenuEncodingDefaultItem.Click += new System.EventHandler(this.HE_MenuEncodingDefaultItem_Click);
+            // 
+            // HE_MenuEncodingUnicodeItem
+            // 
+            this.HE_MenuEncodingUnicodeItem.Name = "HE_MenuEncodingUnicodeItem";
+            resources.ApplyResources(this.HE_MenuEncodingUnicodeItem, "HE_MenuEncodingUnicodeItem");
+            this.HE_MenuEncodingUnicodeItem.Click += new System.EventHandler(this.HE_MenuEncodingUnicodeItem_Click);
             // 
             // HE_MenuHelp
             // 
@@ -563,5 +587,8 @@
         private System.Windows.Forms.ToolStripMenuItem HE_MenuImportItem;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuExportItem;
         private System.Windows.Forms.ToolStripSeparator HE_MenuSeparator2Item;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuEncodingItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuEncodingDefaultItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuEncodingUnicodeItem;
     }
 }
