@@ -209,6 +209,25 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Set Hosts file encoding based on saved settings.
+        /// </summary>
+        private void SetFileEncoding()
+        {
+            if (Properties.Settings.Default.MultiByteEncoding)
+            {
+                App.HostsFile.SetEncoding(true);
+                HE_MenuEncodingDefaultItem.Checked = false;
+                HE_MenuEncodingUnicodeItem.Checked = true;
+            }
+            else
+            {
+                App.HostsFile.SetEncoding(false);
+                HE_MenuEncodingDefaultItem.Checked = true;
+                HE_MenuEncodingUnicodeItem.Checked = false;
+            }
+        }
+
+        /// <summary>
         /// Set form state based on saved settings.
         /// </summary>
         private void SetFormState()
@@ -545,6 +564,7 @@ namespace mhed.gui
             InitializeModelView();
             ChangePrvControlState();
             SetAppStrings();
+            SetFileEncoding();
             await LoadHostsFile();
             await CheckForUpdates();
             await CleanOldUpdates();
