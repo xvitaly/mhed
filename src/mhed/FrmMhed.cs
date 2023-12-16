@@ -209,6 +209,24 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Set "Current encoding" form controls to "Default" state.
+        /// </summary>
+        private void SetEncodingControlStateDefault()
+        {
+            HE_MenuEncodingDefaultItem.Checked = true;
+            HE_MenuEncodingUnicodeItem.Checked = false;
+        }
+
+        /// <summary>
+        /// Set "Current encoding" form controls to "Unicode" state.
+        /// </summary>
+        private void SetEncodingControlStateUnicode()
+        {
+            HE_MenuEncodingDefaultItem.Checked = false;
+            HE_MenuEncodingUnicodeItem.Checked = true;
+        }
+
+        /// <summary>
         /// Set Hosts file encoding based on saved settings.
         /// </summary>
         private void SetFileEncoding()
@@ -216,14 +234,12 @@ namespace mhed.gui
             if (Properties.Settings.Default.MultiByteEncoding)
             {
                 App.HostsFile.SetEncoding(true);
-                HE_MenuEncodingDefaultItem.Checked = false;
-                HE_MenuEncodingUnicodeItem.Checked = true;
+                SetEncodingControlStateUnicode();
             }
             else
             {
                 App.HostsFile.SetEncoding(false);
-                HE_MenuEncodingDefaultItem.Checked = true;
-                HE_MenuEncodingUnicodeItem.Checked = false;
+                SetEncodingControlStateDefault();
             }
         }
 
@@ -925,8 +941,7 @@ namespace mhed.gui
         {
             App.HostsFile.SetEncoding(false);
             Properties.Settings.Default.MultiByteEncoding = false;
-            HE_MenuEncodingDefaultItem.Checked = true;
-            HE_MenuEncodingUnicodeItem.Checked = false;
+            SetEncodingControlStateDefault();
         }
 
         /// <summary>
@@ -938,8 +953,7 @@ namespace mhed.gui
         {
             App.HostsFile.SetEncoding(true);
             Properties.Settings.Default.MultiByteEncoding = true;
-            HE_MenuEncodingDefaultItem.Checked = false;
-            HE_MenuEncodingUnicodeItem.Checked = true;
+            SetEncodingControlStateUnicode();
         }
 
         /// <summary>
