@@ -23,14 +23,14 @@ namespace mhed.lib
         private readonly CurrentPlatform Platform;
 
         /// <summary>
+        /// Store Hosts file encoding.
+        /// </summary>
+        private Encoding FileEncoding;
+
+        /// <summary>
         /// Get or set full Hosts file path.
         /// </summary>
         public string FilePath { get; private set; }
-
-        /// <summary>
-        /// Get or set Hosts file encoding.
-        /// </summary>
-        public Encoding FileEncoding { get; private set; }
 
         /// <summary>
         /// Get or set Hosts file contents.
