@@ -227,20 +227,22 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Set Hosts file encoding based on specified encoding ID.
+        /// </summary>
+        /// <param name="Unicode">File encoding ID.</param>
+        private void SetFileEncoding(bool Unicode)
+        {
+            App.HostsFile.SetEncoding(Unicode);
+            Properties.Settings.Default.MultiByteEncoding = Unicode;
+            if (Unicode) { SetEncodingControlStateUnicode(); } else { SetEncodingControlStateDefault(); }
+        }
+
+        /// <summary>
         /// Set Hosts file encoding based on saved settings.
         /// </summary>
         private void SetFileEncoding()
         {
-            if (Properties.Settings.Default.MultiByteEncoding)
-            {
-                App.HostsFile.SetEncoding(true);
-                SetEncodingControlStateUnicode();
-            }
-            else
-            {
-                App.HostsFile.SetEncoding(false);
-                SetEncodingControlStateDefault();
-            }
+            SetFileEncoding(Properties.Settings.Default.MultiByteEncoding);
         }
 
         /// <summary>
@@ -939,9 +941,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuEncodingDefaultItem_Click(object sender, EventArgs e)
         {
-            App.HostsFile.SetEncoding(false);
-            Properties.Settings.Default.MultiByteEncoding = false;
-            SetEncodingControlStateDefault();
+            SetFileEncoding(false);
         }
 
         /// <summary>
@@ -951,9 +951,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuEncodingUnicodeItem_Click(object sender, EventArgs e)
         {
-            App.HostsFile.SetEncoding(true);
-            Properties.Settings.Default.MultiByteEncoding = true;
-            SetEncodingControlStateUnicode();
+            SetFileEncoding(true);
         }
 
         /// <summary>
