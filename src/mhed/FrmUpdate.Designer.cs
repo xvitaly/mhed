@@ -68,7 +68,7 @@
             this.Controls.Add(this.UpdAppStatus);
             this.Controls.Add(this.UpdAppImg);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmUpdate";
