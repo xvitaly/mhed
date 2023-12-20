@@ -135,9 +135,6 @@
   <data name="HE_ToolbarDeleteButton.Text" xml:space="preserve">
     <value>&amp;Удалить</value>
   </data>
-  <data name="HE_ToolbarAboutButton.Text" xml:space="preserve">
-    <value>О програ&amp;мме...</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="HE_MenuRefreshItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 22</value>
@@ -229,8 +226,14 @@
   <data name="HE_MenuOpenNotepadItem.Text" xml:space="preserve">
     <value>От&amp;крыть в текстовом редакторе</value>
   </data>
+  <data name="HE_MenuEncodingDefaultItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 22</value>
+  </data>
   <data name="HE_MenuEncodingDefaultItem.Text" xml:space="preserve">
     <value>По ум&amp;олчанию</value>
+  </data>
+  <data name="HE_MenuEncodingUnicodeItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 22</value>
   </data>
   <data name="HE_MenuEncodingUnicodeItem.Text" xml:space="preserve">
     <value>&amp;Юникод</value>

@@ -1065,16 +1065,6 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// "About" toolbar button event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void HE_ToolbarAboutButton_Click(object sender, EventArgs e)
-        {
-            GuiHelpers.FormShowAboutApp();
-        }
-
-        /// <summary>
         /// "Cut" context menu item event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>

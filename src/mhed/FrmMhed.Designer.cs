@@ -38,8 +38,6 @@
             this.HE_ToolbarPasteButton = new System.Windows.Forms.ToolStripButton();
             this.HE_ToolbarSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.HE_ToolbarDeleteButton = new System.Windows.Forms.ToolStripButton();
-            this.HE_ToolbarSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.HE_ToolbarAboutButton = new System.Windows.Forms.ToolStripButton();
             this.HE_MainMenu = new System.Windows.Forms.MenuStrip();
             this.HE_MenuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuRefreshItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,9 +100,7 @@
             this.HE_ToolbarCopyButton,
             this.HE_ToolbarPasteButton,
             this.HE_ToolbarSeparator2,
-            this.HE_ToolbarDeleteButton,
-            this.HE_ToolbarSeparator3,
-            this.HE_ToolbarAboutButton});
+            this.HE_ToolbarDeleteButton});
             resources.ApplyResources(this.HE_MainToolbar, "HE_MainToolbar");
             this.HE_MainToolbar.Name = "HE_MainToolbar";
             // 
@@ -165,19 +161,6 @@
             resources.ApplyResources(this.HE_ToolbarDeleteButton, "HE_ToolbarDeleteButton");
             this.HE_ToolbarDeleteButton.Name = "HE_ToolbarDeleteButton";
             this.HE_ToolbarDeleteButton.Click += new System.EventHandler(this.HE_ToolbarDeleteButton_Click);
-            // 
-            // HE_ToolbarSeparator3
-            // 
-            this.HE_ToolbarSeparator3.Name = "HE_ToolbarSeparator3";
-            resources.ApplyResources(this.HE_ToolbarSeparator3, "HE_ToolbarSeparator3");
-            // 
-            // HE_ToolbarAboutButton
-            // 
-            this.HE_ToolbarAboutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.HE_ToolbarAboutButton.Image = global::mhed.gui.Properties.Resources.IconInfo;
-            resources.ApplyResources(this.HE_ToolbarAboutButton, "HE_ToolbarAboutButton");
-            this.HE_ToolbarAboutButton.Name = "HE_ToolbarAboutButton";
-            this.HE_ToolbarAboutButton.Click += new System.EventHandler(this.HE_ToolbarAboutButton_Click);
             // 
             // HE_MainMenu
             // 
@@ -557,8 +540,6 @@
         private System.Windows.Forms.ToolStripButton HE_ToolbarCopyButton;
         private System.Windows.Forms.ToolStripButton HE_ToolbarPasteButton;
         private System.Windows.Forms.ToolStripSeparator HE_ToolbarSeparator2;
-        private System.Windows.Forms.ToolStripSeparator HE_ToolbarSeparator3;
-        private System.Windows.Forms.ToolStripButton HE_ToolbarAboutButton;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuReportItem;
         private System.Windows.Forms.Panel HE_ModelViewPanel;
         private System.Windows.Forms.DataGridView HE_ModelView;

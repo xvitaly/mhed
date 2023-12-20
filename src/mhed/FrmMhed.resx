@@ -184,18 +184,6 @@
   <data name="HE_ToolbarDeleteButton.Text" xml:space="preserve">
     <value>&amp;Delete</value>
   </data>
-  <data name="HE_ToolbarSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="HE_ToolbarAboutButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="HE_ToolbarAboutButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="HE_ToolbarAboutButton.Text" xml:space="preserve">
-    <value>He&amp;lp</value>
-  </data>
   <data name="HE_MainToolbar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
   </data>
@@ -1246,18 +1234,6 @@
     <value>HE_ToolbarDeleteButton</value>
   </data>
   <data name="&gt;&gt;HE_ToolbarDeleteButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HE_ToolbarSeparator3.Name" xml:space="preserve">
-    <value>HE_ToolbarSeparator3</value>
-  </data>
-  <data name="&gt;&gt;HE_ToolbarSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HE_ToolbarAboutButton.Name" xml:space="preserve">
-    <value>HE_ToolbarAboutButton</value>
-  </data>
-  <data name="&gt;&gt;HE_ToolbarAboutButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HE_MenuFile.Name" xml:space="preserve">
