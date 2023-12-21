@@ -7,10 +7,6 @@ Files: .github/*.md
 Copyright: 2011-2023 EasyCoding Team
 License: GPL-3.0-or-later
 
-Files: assets/icons/bug.png
-Copyright: 2011 Asher
-License: CC-BY-SA-4.0
-
 Files: assets/icons/copy.png
 Copyright: 2007 Microsoft Corporation
 License: CC0-1.0
@@ -20,36 +16,12 @@ Copyright: 2007 Microsoft Corporation
 License: CC0-1.0
 
 Files: assets/icons/delete.png
-Copyright: 2011 VisualPharm
-License: CC-BY-NC-ND-4.0
-
-Files: assets/icons/exit.png
-Copyright: 2003 GNOME icon artists
-License: GPL-2.0-only
-
-Files: assets/icons/globe.png
-Copyright: 2011 PixelMixer
-License: CC-BY-SA-4.0
+Copyright: 2011-2023 EasyCoding Team
+License: GPL-3.0-or-later
 
 Files: assets/icons/greencircle.png
 Copyright: 2011-2023 EasyCoding Team
 License: GPL-3.0-or-later
-
-Files: assets/icons/help.png
-Copyright: 2011 Asher
-License: CC-BY-SA-4.0
-
-Files: assets/icons/info.png
-Copyright: 2011 IconsPedia
-License: CC0-1.0
-
-Files: assets/icons/logs.png
-Copyright: 2011 LazyCrazy
-License: CC0-1.0
-
-Files: assets/icons/options.png
-Copyright: 2011 Ahmad Hania
-License: CC-BY-NC-SA-4.0
 
 Files: assets/icons/paste.png
 Copyright: 2007 Microsoft Corporation
@@ -63,21 +35,9 @@ Files: assets/icons/refresh.png
 Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
-Files: assets/icons/restore.png
-Copyright: 2003 GNOME icon artists
-License: GPL-2.0-only
-
 Files: assets/icons/save.png
 Copyright: 2011 Everaldo Coelho
 License: LGPL-2.1-only
-
-Files: assets/icons/search.png
-Copyright: 2011 Flahorn
-License: CC-BY-NC-ND-4.0
-
-Files: assets/icons/texteditor.png
-Copyright: 2003 GNOME icon artists
-License: GPL-2.0-only
 
 Files: assets/icons/upd_av.png
 Copyright: 2011 Everaldo Coelho

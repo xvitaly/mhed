@@ -107,7 +107,6 @@
             // 
             // MO_FindTextEd
             // 
-            this.MO_FindTextEd.Image = global::mhed.gui.Properties.Resources.IconSearch;
             resources.ApplyResources(this.MO_FindTextEd, "MO_FindTextEd");
             this.MO_FindTextEd.Name = "MO_FindTextEd";
             this.MO_FindTextEd.UseVisualStyleBackColor = true;

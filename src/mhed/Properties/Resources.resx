@@ -121,23 +121,11 @@
   <data name="IconCut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\cut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconRestore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\assets\icons\restore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconExit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\assets\icons\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IconRedCircle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\redcircle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AppInternalName" xml:space="preserve">
     <value>mhed</value>
-  </data>
-  <data name="IconBug" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\assets\icons\bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\assets\icons\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconPaste" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\paste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,14 +136,8 @@
   <data name="IconDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconTextEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\assets\icons\texteditor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IconGreenCircle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\greencircle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\assets\icons\options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImageAppLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\images\applogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,26 +151,14 @@
   <data name="IconCopy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconLogs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\assets\icons\logs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AppName" xml:space="preserve">
     <value>Micro Hosts Editor</value>
-  </data>
-  <data name="IconSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\assets\icons\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AppBtURL" xml:space="preserve">
     <value>https://github.com/xvitaly/mhed/issues/new</value>
   </data>
-  <data name="IconHelp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\assets\icons\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AppHelpFileName" xml:space="preserve">
     <value>mhed_{0}.chm</value>
-  </data>
-  <data name="IconGlobe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\assets\icons\globe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconUpdateAvailable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\upd_av.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

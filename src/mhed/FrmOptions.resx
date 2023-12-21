@@ -309,6 +309,9 @@
   <data name="MO_FindTextEd.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="MO_FindTextEd.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
   <data name="&gt;&gt;MO_FindTextEd.Name" xml:space="preserve">
     <value>MO_FindTextEd</value>
   </data>

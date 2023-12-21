@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-21 14:30+0200\n"
-"PO-Revision-Date: 2023-06-21 14:32+0200\n"
+"POT-Creation-Date: 2023-12-21 11:56+0100\n"
+"PO-Revision-Date: 2023-12-21 12:37+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.4.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -66,119 +66,6 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "bug.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "Asher"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/"
-"legalcode>`_"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/bug-8000.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "delete.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "VisualPharm"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`CC Attribution No Derivatives <https://creativecommons.org/licenses/by-"
-"nd/4.0/legalcode>`_"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/delete--832.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "exit.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/gnome-application-exit-10-41."
-"html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "globe.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "PixelMixer"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/globe-11618.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "help.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/help-8051.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "info.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "IconsPedia"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "Free for non commercial use"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/info--206.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "logs.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "LazyCrazy"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/elegant--notebook-160--.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "options.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "Ahmad Hania"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`CC Attribution Non-Commercial Share Alike <https://creativecommons.org/"
-"licenses/by-nc-sa/4.0/legalcode>`_"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/options-1321-.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
 msgid "refresh.png"
 msgstr ""
 
@@ -186,15 +73,6 @@ msgstr ""
 msgid ""
 "`IconsPedia <https://www.iconspedia.com/icon/gnome-view-refresh-111-4."
 "html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "restore.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/gnome-edit-undo-11006.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -213,28 +91,6 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid "`IconsPedia <https://www.iconspedia.com/icon/save-file-4082.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "search.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "Flahorn"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`CC Attribution Non-Commercial No Derivatives <https://creativecommons.org/"
-"licenses/by-nc-nd/4.0/legalcode>`_"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/search-26-2.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "texteditor.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -272,6 +128,12 @@ msgid "Designkindle"
 msgstr ""
 
 #: ../../source/legal.rst:1
+msgid ""
+"`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/"
+"legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
 msgid "`IconsPedia <https://www.iconspedia.com/icon/cross-icon-40924.html>`__"
 msgstr ""
 
@@ -280,10 +142,14 @@ msgid "upd_nx.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
+msgid "PixelMixer"
+msgstr ""
+
+#: ../../source/legal.rst:1
 msgid "`IconsPedia <https://www.iconspedia.com/icon/tick-11638.html>`__"
 msgstr ""
 
-#: ../../source/legal.rst:44
+#: ../../source/legal.rst:33
 msgid "Libraries licensing"
 msgstr "Лицензирование библиотек"
 
@@ -315,15 +181,15 @@ msgstr ""
 msgid "`GitHub page <https://github.com/NLog/NLog>`__"
 msgstr ""
 
-#: ../../source/legal.rst:55
+#: ../../source/legal.rst:44
 msgid "Trademarks"
 msgstr "Торговые марки"
 
-#: ../../source/legal.rst:58
+#: ../../source/legal.rst:47
 msgid "Microsoft"
 msgstr ""
 
-#: ../../source/legal.rst:60
+#: ../../source/legal.rst:49
 msgid ""
 "Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
 "Corporation."
@@ -331,10 +197,10 @@ msgstr ""
 "Microsoft, Windows являются торговыми марками и/или зарегистрированными "
 "торговыми марками Корпорации Microsoft."
 
-#: ../../source/legal.rst:63
+#: ../../source/legal.rst:52
 msgid "Other"
 msgstr "Прочие"
 
-#: ../../source/legal.rst:65
+#: ../../source/legal.rst:54
 msgid "All other trademarks are property of their respective owners."
 msgstr "Все прочие торговые марки являются собственностью их владельцев."

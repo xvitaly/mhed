@@ -188,14 +188,12 @@
             // 
             // HE_MenuRefreshItem
             // 
-            this.HE_MenuRefreshItem.Image = global::mhed.gui.Properties.Resources.IconRefresh;
             this.HE_MenuRefreshItem.Name = "HE_MenuRefreshItem";
             resources.ApplyResources(this.HE_MenuRefreshItem, "HE_MenuRefreshItem");
             this.HE_MenuRefreshItem.Click += new System.EventHandler(this.HE_MenuRefreshItem_Click);
             // 
             // HE_MenuSaveItem
             // 
-            this.HE_MenuSaveItem.Image = global::mhed.gui.Properties.Resources.IconSave;
             this.HE_MenuSaveItem.Name = "HE_MenuSaveItem";
             resources.ApplyResources(this.HE_MenuSaveItem, "HE_MenuSaveItem");
             this.HE_MenuSaveItem.Click += new System.EventHandler(this.HE_MenuSaveItem_Click);
@@ -224,14 +222,12 @@
             // 
             // HE_MenuOptionsItem
             // 
-            this.HE_MenuOptionsItem.Image = global::mhed.gui.Properties.Resources.IconOptions;
             this.HE_MenuOptionsItem.Name = "HE_MenuOptionsItem";
             resources.ApplyResources(this.HE_MenuOptionsItem, "HE_MenuOptionsItem");
             this.HE_MenuOptionsItem.Click += new System.EventHandler(this.HE_MenuOptionsItem_Click);
             // 
             // HE_MenuQuitItem
             // 
-            this.HE_MenuQuitItem.Image = global::mhed.gui.Properties.Resources.IconExit;
             this.HE_MenuQuitItem.Name = "HE_MenuQuitItem";
             resources.ApplyResources(this.HE_MenuQuitItem, "HE_MenuQuitItem");
             this.HE_MenuQuitItem.Click += new System.EventHandler(this.HE_MenuQuitItem_Click);
@@ -248,28 +244,24 @@
             // 
             // HE_MenuCutItem
             // 
-            this.HE_MenuCutItem.Image = global::mhed.gui.Properties.Resources.IconCut;
             this.HE_MenuCutItem.Name = "HE_MenuCutItem";
             resources.ApplyResources(this.HE_MenuCutItem, "HE_MenuCutItem");
             this.HE_MenuCutItem.Click += new System.EventHandler(this.HE_MenuCutItem_Click);
             // 
             // HE_MenuCopyItem
             // 
-            this.HE_MenuCopyItem.Image = global::mhed.gui.Properties.Resources.IconCopy;
             this.HE_MenuCopyItem.Name = "HE_MenuCopyItem";
             resources.ApplyResources(this.HE_MenuCopyItem, "HE_MenuCopyItem");
             this.HE_MenuCopyItem.Click += new System.EventHandler(this.HE_MenuCopyItem_Click);
             // 
             // HE_MenuPasteItem
             // 
-            this.HE_MenuPasteItem.Image = global::mhed.gui.Properties.Resources.IconPaste;
             this.HE_MenuPasteItem.Name = "HE_MenuPasteItem";
             resources.ApplyResources(this.HE_MenuPasteItem, "HE_MenuPasteItem");
             this.HE_MenuPasteItem.Click += new System.EventHandler(this.HE_MenuPasteItem_Click);
             // 
             // HE_MenuDeleteItem
             // 
-            this.HE_MenuDeleteItem.Image = global::mhed.gui.Properties.Resources.IconDelete;
             this.HE_MenuDeleteItem.Name = "HE_MenuDeleteItem";
             resources.ApplyResources(this.HE_MenuDeleteItem, "HE_MenuDeleteItem");
             this.HE_MenuDeleteItem.Click += new System.EventHandler(this.HE_MenuDeleteItem_Click);
@@ -285,14 +277,12 @@
             // 
             // HE_MenuRestoreDefaultsItem
             // 
-            this.HE_MenuRestoreDefaultsItem.Image = global::mhed.gui.Properties.Resources.IconRestore;
             this.HE_MenuRestoreDefaultsItem.Name = "HE_MenuRestoreDefaultsItem";
             resources.ApplyResources(this.HE_MenuRestoreDefaultsItem, "HE_MenuRestoreDefaultsItem");
             this.HE_MenuRestoreDefaultsItem.Click += new System.EventHandler(this.HE_MenuRestoreDefaultsItem_Click);
             // 
             // HE_MenuOpenNotepadItem
             // 
-            this.HE_MenuOpenNotepadItem.Image = global::mhed.gui.Properties.Resources.IconTextEditor;
             this.HE_MenuOpenNotepadItem.Name = "HE_MenuOpenNotepadItem";
             resources.ApplyResources(this.HE_MenuOpenNotepadItem, "HE_MenuOpenNotepadItem");
             this.HE_MenuOpenNotepadItem.Click += new System.EventHandler(this.HE_MenuOpenNotepadItem_Click);
@@ -332,7 +322,6 @@
             // 
             // HE_MenuShowHelpItem
             // 
-            this.HE_MenuShowHelpItem.Image = global::mhed.gui.Properties.Resources.IconHelp;
             this.HE_MenuShowHelpItem.Name = "HE_MenuShowHelpItem";
             resources.ApplyResources(this.HE_MenuShowHelpItem, "HE_MenuShowHelpItem");
             this.HE_MenuShowHelpItem.Click += new System.EventHandler(this.HE_MenuShowHelpItem_Click);
@@ -344,21 +333,18 @@
             // 
             // HE_MenuCheckForUpdatesItem
             // 
-            this.HE_MenuCheckForUpdatesItem.Image = global::mhed.gui.Properties.Resources.IconGlobe;
             this.HE_MenuCheckForUpdatesItem.Name = "HE_MenuCheckForUpdatesItem";
             resources.ApplyResources(this.HE_MenuCheckForUpdatesItem, "HE_MenuCheckForUpdatesItem");
             this.HE_MenuCheckForUpdatesItem.Click += new System.EventHandler(this.HE_MenuCheckForUpdatesItem_Click);
             // 
             // HE_MenuReportItem
             // 
-            this.HE_MenuReportItem.Image = global::mhed.gui.Properties.Resources.IconBug;
             this.HE_MenuReportItem.Name = "HE_MenuReportItem";
             resources.ApplyResources(this.HE_MenuReportItem, "HE_MenuReportItem");
             this.HE_MenuReportItem.Click += new System.EventHandler(this.HE_MenuReportItem_Click);
             // 
             // HE_MenuDebugLogItem
             // 
-            this.HE_MenuDebugLogItem.Image = global::mhed.gui.Properties.Resources.IconLogs;
             this.HE_MenuDebugLogItem.Name = "HE_MenuDebugLogItem";
             resources.ApplyResources(this.HE_MenuDebugLogItem, "HE_MenuDebugLogItem");
             this.HE_MenuDebugLogItem.Click += new System.EventHandler(this.HE_MenuDebugLogItem_Click);
@@ -370,7 +356,6 @@
             // 
             // HE_MenuAboutItem
             // 
-            this.HE_MenuAboutItem.Image = global::mhed.gui.Properties.Resources.IconInfo;
             this.HE_MenuAboutItem.Name = "HE_MenuAboutItem";
             resources.ApplyResources(this.HE_MenuAboutItem, "HE_MenuAboutItem");
             this.HE_MenuAboutItem.Click += new System.EventHandler(this.HE_MenuAboutItem_Click);
@@ -454,28 +439,24 @@
             // 
             // HE_ConextMenuCutItem
             // 
-            this.HE_ConextMenuCutItem.Image = global::mhed.gui.Properties.Resources.IconCut;
             this.HE_ConextMenuCutItem.Name = "HE_ConextMenuCutItem";
             resources.ApplyResources(this.HE_ConextMenuCutItem, "HE_ConextMenuCutItem");
             this.HE_ConextMenuCutItem.Click += new System.EventHandler(this.HE_ConextMenuCutItem_Click);
             // 
             // HE_ConextMenuCopyItem
             // 
-            this.HE_ConextMenuCopyItem.Image = global::mhed.gui.Properties.Resources.IconCopy;
             this.HE_ConextMenuCopyItem.Name = "HE_ConextMenuCopyItem";
             resources.ApplyResources(this.HE_ConextMenuCopyItem, "HE_ConextMenuCopyItem");
             this.HE_ConextMenuCopyItem.Click += new System.EventHandler(this.HE_ConextMenuCopyItem_Click);
             // 
             // HE_ConextMenuPasteItem
             // 
-            this.HE_ConextMenuPasteItem.Image = global::mhed.gui.Properties.Resources.IconPaste;
             this.HE_ConextMenuPasteItem.Name = "HE_ConextMenuPasteItem";
             resources.ApplyResources(this.HE_ConextMenuPasteItem, "HE_ConextMenuPasteItem");
             this.HE_ConextMenuPasteItem.Click += new System.EventHandler(this.HE_ConextMenuPasteItem_Click);
             // 
             // HE_ConextMenuDeleteItem
             // 
-            this.HE_ConextMenuDeleteItem.Image = global::mhed.gui.Properties.Resources.IconDelete;
             this.HE_ConextMenuDeleteItem.Name = "HE_ConextMenuDeleteItem";
             resources.ApplyResources(this.HE_ConextMenuDeleteItem, "HE_ConextMenuDeleteItem");
             this.HE_ConextMenuDeleteItem.Click += new System.EventHandler(this.HE_ConextMenuDeleteItem_Click);
