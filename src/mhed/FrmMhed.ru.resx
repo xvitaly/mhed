@@ -334,6 +334,12 @@
   <data name="HE_ExportDialog.Title" xml:space="preserve">
     <value>Экспорт в файл</value>
   </data>
+  <data name="HE_ImportDialog.Filter" xml:space="preserve">
+    <value>Текстовые файлы|*.txt|Все файлы|*.*</value>
+  </data>
+  <data name="HE_ImportDialog.Title" xml:space="preserve">
+    <value>Импорт из файла</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
