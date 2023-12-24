@@ -37,6 +37,11 @@ namespace mhed.lib
         /// </summary>
         public SortableBindingList<HostsFileEntry> Contents { get; private set; }
 
+        public bool MultiByteEncoding
+        {
+            get => FileEncoding is UTF8Encoding;
+        }
+
         /// <summary>
         /// Add a new entry.
         /// </summary>
