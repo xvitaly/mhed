@@ -40,6 +40,7 @@ namespace mhed.lib
         public bool MultiByteEncoding
         {
             get => FileEncoding is UTF8Encoding;
+            set => FileEncoding = value ? new UTF8Encoding(Platform.HostsFileBOM) : Encoding.Default;
         }
 
         /// <summary>
