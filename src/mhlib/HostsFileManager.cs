@@ -47,6 +47,8 @@ namespace mhed.lib
             set => FileEncoding = value ? new UTF8Encoding(Platform.HostsFileBOM) : Encoding.Default;
         }
 
+        public string EncodingName => FileEncoding.EncodingName;
+
         /// <summary>
         /// Add a new entry.
         /// </summary>
