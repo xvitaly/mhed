@@ -232,7 +232,7 @@ namespace mhed.gui
         /// <param name="Unicode">File encoding ID.</param>
         private void SetFileEncoding(bool Unicode)
         {
-            App.HostsFile.SetEncoding(Unicode);
+            App.HostsFile.MultiByteEncoding = Unicode;
             Properties.Settings.Default.MultiByteEncoding = Unicode;
             if (Unicode) { SetEncodingControlStateUnicode(); } else { SetEncodingControlStateDefault(); }
         }
