@@ -394,6 +394,7 @@
             // 
             this.HE_ModelView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.HE_ModelView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.HE_ModelView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.HE_ModelView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HE_ModelView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HE_ModelViewColumnIP,
