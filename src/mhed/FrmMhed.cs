@@ -420,10 +420,7 @@ namespace mhed.gui
         {
             try
             {
-                if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
-                {
-                    Clipboard.SetText(HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value.ToString());
-                }
+                Clipboard.SetDataObject(HE_ModelView.GetClipboardContent());
             }
             catch (Exception Ex)
             {
