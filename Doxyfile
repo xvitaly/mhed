@@ -13,6 +13,7 @@ PROJECT_NAME           = mhed
 PROJECT_NUMBER         = 1.4.1
 PROJECT_BRIEF          = "Micro Hosts Editor is a small, simple, cross-platform and completely free open-source Hosts editor"
 PROJECT_LOGO           =
+PROJECT_ICON           =
 OUTPUT_DIRECTORY       = docs/build/doxygen
 CREATE_SUBDIRS         = NO
 CREATE_SUBDIRS_LEVEL   = 8
@@ -233,6 +234,9 @@ HTML_COLORSTYLE_SAT    = 100
 HTML_COLORSTYLE_GAMMA  = 80
 HTML_DYNAMIC_MENUS     = YES
 HTML_DYNAMIC_SECTIONS  = NO
+HTML_CODE_FOLDING      = YES
+HTML_COPY_CLIPBOARD    = YES
+HTML_PROJECT_COOKIE    =
 HTML_INDEX_NUM_ENTRIES = 100
 GENERATE_DOCSET        = NO
 DOCSET_FEEDNAME        = "Micro Hosts Editor's developer documentation"
@@ -347,6 +351,14 @@ DOCBOOK_OUTPUT         = docbook
 #---------------------------------------------------------------------------
 
 GENERATE_AUTOGEN_DEF   = NO
+
+#---------------------------------------------------------------------------
+# Configuration options related to Sqlite3 output
+#---------------------------------------------------------------------------
+
+GENERATE_SQLITE3       = NO
+SQLITE3_OUTPUT         = sqlite3
+SQLITE3_RECREATE_DB    = YES
 
 #---------------------------------------------------------------------------
 # Configuration options related to the Perl module output
