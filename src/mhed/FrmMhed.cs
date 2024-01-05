@@ -414,7 +414,7 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Copy the contents of the selected cell to the clipboard.
+        /// Copy the contents of the selected cells to the clipboard.
         /// </summary>
         private void HelperCopy()
         {
