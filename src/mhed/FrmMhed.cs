@@ -400,10 +400,13 @@ namespace mhed.gui
         {
             try
             {
-                if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value != null)
+                Clipboard.SetDataObject(HE_ModelView.GetClipboardContent());
+                foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
                 {
-                    Clipboard.SetText(HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value.ToString());
-                    HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = null;
+                    if (!HE_ModelView.Rows[Cell.RowIndex].IsNewRow)
+                    {
+                        Cell.Value = null;
+                    }
                 }
             }
             catch (Exception Ex)
