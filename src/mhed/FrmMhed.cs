@@ -394,7 +394,7 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Cut the contents of the selected cell to the clipboard.
+        /// Cut the contents of the selected cells to the clipboard.
         /// </summary>
         private void HelperCut()
         {
