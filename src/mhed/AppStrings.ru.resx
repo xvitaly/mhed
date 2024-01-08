@@ -261,4 +261,7 @@
   <data name="AHE_ImportFileException" xml:space="preserve">
     <value>Произошла ошибка во время импорта выбранного файла!</value>
   </data>
+  <data name="AHE_ClipboardNonComment" xml:space="preserve">
+    <value>В буфере обмена не содержится действительный комментарий!</value>
+  </data>
 </root>

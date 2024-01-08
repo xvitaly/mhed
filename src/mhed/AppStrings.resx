@@ -261,4 +261,7 @@
   <data name="AHE_ImportFileException" xml:space="preserve">
     <value>An error occurred while importing the selected file!</value>
   </data>
+  <data name="AHE_ClipboardNonComment" xml:space="preserve">
+    <value>Clipboard doesn't contain a valid comment!</value>
+  </data>
 </root>
