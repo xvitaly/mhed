@@ -462,6 +462,19 @@ namespace mhed.gui
             }
         }
 
+        private void HelperPasteComment()
+        {
+            string Comment = Clipboard.GetText();
+            if (!string.IsNullOrWhiteSpace(Comment))
+            {
+                HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].Cells[HE_ModelView.CurrentCell.ColumnIndex].Value = Comment;
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.AHE_ClipboardNonComment, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         /// <summary>
         /// Paste the contents of the clipboard into the selected cell.
         /// </summary>
