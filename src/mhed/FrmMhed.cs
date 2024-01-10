@@ -462,6 +462,9 @@ namespace mhed.gui
             }
         }
 
+        /// <summary>
+        /// Paste the comment from the clipboard into the selected cell.
+        /// </summary>
         private void HelperPasteComment()
         {
             string Comment = Clipboard.GetText();
