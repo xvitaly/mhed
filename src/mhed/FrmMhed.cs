@@ -478,6 +478,28 @@ namespace mhed.gui
             }
         }
 
+        private void HelperPasteSingle()
+        {
+            if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && Clipboard.ContainsText())
+            {
+                switch (HE_ModelView.CurrentCell.ColumnIndex)
+                {
+                    case 0:
+                        HelperPasteIPAddress();
+                        break;
+                    case 1:
+                        HelperPasteHostname();
+                        break;
+                    case 2:
+                        HelperPasteComment();
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgModelViewColumnIndexOutOfRange);
+                        break;
+                }
+            }
+        }
+
         /// <summary>
         /// Paste the contents of the clipboard into the selected cell.
         /// </summary>
