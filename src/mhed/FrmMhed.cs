@@ -478,6 +478,9 @@ namespace mhed.gui
             }
         }
 
+        /// <summary>
+        /// Paste the contents of the clipboard into the selected cell.
+        /// </summary>
         private void HelperPasteSingle()
         {
             if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && Clipboard.ContainsText())
