@@ -503,6 +503,28 @@ namespace mhed.gui
             }
         }
 
+        private void HelperPasteMultiple()
+        {
+            string[] ClipboardEntries = Clipboard.GetText().Split('\n');
+            for (int i = 0; i < ClipboardEntries.Length; i++)
+            {
+                string[] Entry = ClipboardEntries[i].Split('\t');
+                if (Entry.Length > 2 && IPAddress.TryParse(Entry[0], out IPAddress IP) && Hostname.TryParse(Entry[1], out Hostname Host))
+                {
+                    if (i < HE_ModelView.SelectedRows.Count)
+                    {
+                        HE_ModelView.SelectedRows[i].Cells[0].Value = IP;
+                        HE_ModelView.SelectedRows[i].Cells[1].Value = Host;
+                        HE_ModelView.SelectedRows[i].Cells[2].Value = Entry[2];
+                    }
+                    else
+                    {
+                        App.HostsFile.AddEntry(IP, Host, Entry[2]);
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// Paste the contents of the clipboard into the selected cell.
         /// </summary>
