@@ -503,6 +503,9 @@ namespace mhed.gui
             }
         }
 
+        /// <summary>
+        /// Paste the contents of the clipboard into the selected cells.
+        /// </summary>
         private void HelperPasteMultiple()
         {
             string[] ClipboardEntries = Clipboard.GetText().Split('\n');
