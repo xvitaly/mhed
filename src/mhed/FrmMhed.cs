@@ -535,20 +535,13 @@ namespace mhed.gui
         {
             try
             {
-                if (!HE_ModelView.Rows[HE_ModelView.CurrentRow.Index].IsNewRow && Clipboard.ContainsText())
+                if (HE_ModelView.SelectedCells.Count > 1)
                 {
-                    switch (HE_ModelView.CurrentCell.ColumnIndex)
-                    {
-                        case 0:
-                            HelperPasteIPAddress();
-                            break;
-                        case 1:
-                            HelperPasteHostname();
-                            break;
-                        default:
-                            Logger.Warn(DebugStrings.AppDbgModelViewColumnIndexOutOfRange);
-                            break;
-                    }
+                    HelperPasteMultiple();
+                }
+                else
+                {
+                    HelperPasteSingle();
                 }
             }
             catch (Exception Ex)
