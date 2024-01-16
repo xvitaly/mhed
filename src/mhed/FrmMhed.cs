@@ -529,7 +529,7 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Paste the contents of the clipboard into the selected cell.
+        /// Paste the contents from the clipboard.
         /// </summary>
         private void HelperPaste()
         {
