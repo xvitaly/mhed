@@ -535,13 +535,13 @@ namespace mhed.gui
         {
             try
             {
-                if (HE_ModelView.SelectedCells.Count > 1)
+                if (HE_ModelView.SelectedCells.Count == 1)
                 {
-                    HelperPasteMultiple();
+                    HelperPasteSingle();
                 }
                 else
                 {
-                    HelperPasteSingle();
+                    HelperPasteMultiple();
                 }
             }
             catch (Exception Ex)
