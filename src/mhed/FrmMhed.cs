@@ -508,6 +508,7 @@ namespace mhed.gui
         /// </summary>
         private void HelperPasteMultiple()
         {
+            bool Result = true;
             string[] ClipboardEntries = Clipboard.GetText().Split('\n');
             for (int i = 0; i < ClipboardEntries.Length; i++)
             {
@@ -524,6 +525,10 @@ namespace mhed.gui
                     {
                         App.HostsFile.AddEntry(IP, Host, Entry[2]);
                     }
+                }
+                else
+                {
+                    Result &= false;
                 }
             }
         }
