@@ -505,8 +505,10 @@ namespace mhed.gui
 
         /// <summary>
         /// Paste the contents of the clipboard into the selected cells.
+        /// Internal implementation.
         /// </summary>
-        private void HelperPasteMultiple()
+        /// <returns>Returns True if all content were successfully pasted.</returns>
+        private bool HelperPasteMultipleInternal()
         {
             bool Result = true;
             string[] ClipboardEntries = Clipboard.GetText().Split('\n');
@@ -531,6 +533,15 @@ namespace mhed.gui
                     Result &= false;
                 }
             }
+            return Result;
+        }
+
+        /// <summary>
+        /// Paste the contents of the clipboard into the selected cells.
+        /// </summary>
+        private void HelperPasteMultiple()
+        {
+            HelperPasteMultipleInternal();
         }
 
         /// <summary>
