@@ -106,6 +106,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to paste rows from the clipboard due to a format error!.
+        /// </summary>
+        internal static string AHE_ClipboardFormatError {
+            get {
+                return ResourceManager.GetString("AHE_ClipboardFormatError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clipboard doesn&apos;t contain a valid comment!.
         /// </summary>
         internal static string AHE_ClipboardNonComment {

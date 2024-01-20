@@ -264,4 +264,7 @@
   <data name="AHE_ClipboardNonComment" xml:space="preserve">
     <value>Clipboard doesn't contain a valid comment!</value>
   </data>
+  <data name="AHE_ClipboardFormatError" xml:space="preserve">
+    <value>Failed to paste rows from the clipboard due to a format error!</value>
+  </data>
 </root>
