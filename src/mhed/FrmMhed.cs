@@ -541,7 +541,10 @@ namespace mhed.gui
         /// </summary>
         private void HelperPasteMultiple()
         {
-            HelperPasteMultipleInternal();
+            if (!HelperPasteMultipleInternal())
+            {
+                MessageBox.Show(AppStrings.AHE_ClipboardFormatError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         /// <summary>
