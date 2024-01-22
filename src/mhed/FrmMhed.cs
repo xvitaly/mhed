@@ -517,7 +517,7 @@ namespace mhed.gui
                 string[] Entry = ClipboardEntries[i].Split('\t');
                 if (Entry.Length > 2 && IPAddress.TryParse(Entry[0], out IPAddress IP) && Hostname.TryParse(Entry[1], out Hostname Host))
                 {
-                    if (i < HE_ModelView.SelectedRows.Count)
+                    if ((i < HE_ModelView.SelectedRows.Count) && !HE_ModelView.SelectedRows[i].IsNewRow)
                     {
                         HE_ModelView.SelectedRows[i].Cells[0].Value = IP;
                         HE_ModelView.SelectedRows[i].Cells[1].Value = Host;
