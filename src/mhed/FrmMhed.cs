@@ -525,6 +525,7 @@ namespace mhed.gui
                     }
                     else
                     {
+                        HE_ModelView.CancelEdit();
                         App.HostsFile.AddEntry(IP, Host, Entry[2]);
                     }
                 }
