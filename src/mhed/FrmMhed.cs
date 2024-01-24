@@ -555,14 +555,7 @@ namespace mhed.gui
         {
             try
             {
-                if (HE_ModelView.SelectedCells.Count == 1)
-                {
-                    HelperPasteSingle();
-                }
-                else
-                {
-                    HelperPasteMultiple();
-                }
+                if (HE_ModelView.SelectedCells.Count == 1) { HelperPasteSingle(); } else { HelperPasteMultiple(); }
             }
             catch (Exception Ex)
             {
