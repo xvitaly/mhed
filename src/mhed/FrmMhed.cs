@@ -766,12 +766,12 @@ namespace mhed.gui
                     catch (FileNotFoundException Ex)
                     {
                         Logger.Error(Ex, DebugStrings.AppDbgImportFileDoesNotExists);
-                        MessageBox.Show(AppStrings.AHE_ImportFileNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.AHE_ImportFileNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, DebugStrings.AppDbgExImportTask);
-                        MessageBox.Show(AppStrings.AHE_ImportFileException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Logger.Error(Ex, DebugStrings.AppDbgExImportTask);
+                        MessageBox.Show(AppStrings.AHE_ImportFileException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
