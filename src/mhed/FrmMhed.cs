@@ -739,13 +739,13 @@ namespace mhed.gui
             catch (FileNotFoundException Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgHostsFileDoesNotExists);
-                MessageBox.Show(string.Format(AppStrings.AHE_NoFileDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(string.Format(AppStrings.AHE_NoFileDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 App.Platform.Exit(ReturnCodes.HostsFileDoesNotExists);
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExHostsLoadParse);
-                MessageBox.Show(string.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning));
+                Logger.Error(Ex, DebugStrings.AppDbgExHostsLoadParse);
+                MessageBox.Show(string.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error));
             }
         }
 
