@@ -722,7 +722,7 @@ namespace mhed.gui
                 catch (Exception Ex)
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExExportTask);
-                    MessageBox.Show(AppStrings.AHE_ExportException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.AHE_ExportException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
