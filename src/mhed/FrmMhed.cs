@@ -698,7 +698,7 @@ namespace mhed.gui
                 catch (Exception Ex)
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExSaveTask);
-                    MessageBox.Show(string.Format(AppStrings.AHE_SaveException, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(string.Format(AppStrings.AHE_SaveException, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
