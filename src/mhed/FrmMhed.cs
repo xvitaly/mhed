@@ -792,8 +792,8 @@ namespace mhed.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExHostsLoadParse);
-                MessageBox.Show(string.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, DebugStrings.AppDbgExHostsLoadParse);
+                MessageBox.Show(string.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
