@@ -388,7 +388,7 @@ namespace mhed.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgRestartAsAdminError);
+                Logger.Error(Ex, DebugStrings.AppDbgRestartAsAdminError);
                 MessageBox.Show(AppStrings.AHE_RestartAsAdminError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
