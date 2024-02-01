@@ -16,5 +16,6 @@ Micro Hosts Editor offline help
    settings.rst
    development.rst
    legal.rst
+   privacy.rst
 
 
