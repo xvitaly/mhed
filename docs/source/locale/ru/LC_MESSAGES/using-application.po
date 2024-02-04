@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-03 12:59+0100\n"
-"PO-Revision-Date: 2024-02-03 13:02+0100\n"
+"POT-Creation-Date: 2024-02-04 12:27+0100\n"
+"PO-Revision-Date: 2024-02-04 12:28+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -118,46 +118,73 @@ msgstr ""
 "**Ctrl + S** на клавиатуре, чтобы сохранить файл Hosts на диск."
 
 #: ../../source/using-application.rst:52
+msgid "Importing Hosts file entries"
+msgstr "Импортирование записей файла Hosts"
+
+#: ../../source/using-application.rst:54
+msgid ""
+"If you want to import entries from external file, you can use the **File** "
+"-- **Import** menu item."
+msgstr ""
+"Если вы хотите импортировать записи из внешнего файла, вы можете "
+"использовать пункт меню **Файл** -- **Импорт**."
+
+#: ../../source/using-application.rst:56
+msgid ""
+"Select a text file using the standard OS dialog and click the **Open** "
+"button."
+msgstr ""
+"Выберите текстовый файл при помощи стандартного для ОС диалога и нажмите "
+"кнопку **Открыть**."
+
+#: ../../source/using-application.rst:58
+msgid ""
+"Only one file can be imported at once with an unlimited number of entries."
+msgstr ""
+"Только один файл может быть импортирован за раз. Количество строк при этом "
+"не ограничено."
+
+#: ../../source/using-application.rst:64
 msgid "Hotkeys"
 msgstr "Клавиатурные комбинации"
 
-#: ../../source/using-application.rst:54
+#: ../../source/using-application.rst:66
 msgid "Hotkeys can be used to control the application."
 msgstr "Для работы с программой могут быть использованы \"горячие клавиши\"."
 
-#: ../../source/using-application.rst:56
+#: ../../source/using-application.rst:68
 msgid "Currently supported keyboard combinations:"
 msgstr "В настоящее время поддерживаются следующие клавиатурные комбинации:"
 
-#: ../../source/using-application.rst:58
+#: ../../source/using-application.rst:70
 msgid "**F1** -- show offline help;"
 msgstr "**F1** -- показать справочную систему;"
 
-#: ../../source/using-application.rst:59
+#: ../../source/using-application.rst:71
 msgid "**F5** -- :ref:`reload <usage-reload>` the Hosts file from disk;"
 msgstr "**F5** -- :ref:`перечитать <usage-reload>` файл Hosts с диска;"
 
-#: ../../source/using-application.rst:60
+#: ../../source/using-application.rst:72
 msgid "**Ctrl+S** -- :ref:`save <usage-save>` the Hosts file to disk;"
 msgstr ""
 "**Ctrl+S** -- :ref:`сохранить <usage-save>` изменения в файле Hosts на диск;"
 
-#: ../../source/using-application.rst:61
+#: ../../source/using-application.rst:73
 msgid "**Ctrl+Q** -- quit application;"
 msgstr "**Ctrl+Q** -- выйти из программы;"
 
-#: ../../source/using-application.rst:62
+#: ../../source/using-application.rst:74
 msgid "**Ctrl+X** -- cut the selected cell data to the clipboard;"
 msgstr "**Ctrl+X** -- вырезать содержимое выделенной ячейки в буфер обмена;"
 
-#: ../../source/using-application.rst:63
+#: ../../source/using-application.rst:75
 msgid "**Ctrl+C** -- copy the selected cell data to the clipboard;"
 msgstr "**Ctrl+C** -- скопировать содержимое выделенной ячейки в буфер обмена;"
 
-#: ../../source/using-application.rst:64
+#: ../../source/using-application.rst:76
 msgid "**Ctrl+V** -- paste data from the clipboard to the selected cell;"
 msgstr "**Ctrl+V** -- вставить содержимое буфера обмена в выделенную ячейку;"
 
-#: ../../source/using-application.rst:65
+#: ../../source/using-application.rst:77
 msgid "**Shift+Del** -- delete the selected row."
 msgstr "**Shift+Del** -- удалить выделенную строку целиком."

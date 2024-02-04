@@ -45,6 +45,18 @@ Saving Hosts file
 
 Click the **Save** button on the main toolbar, or press **Ctrl + S** key combination on your keyboard to save the Hosts file to disk.
 
+.. index:: hosts editor, importing hosts file
+.. _usage-import:
+
+Importing Hosts file entries
+===================================================
+
+If you want to import entries from external file, you can use the **File** -- **Import** menu item.
+
+Select a text file using the standard OS dialog and click the **Open** button.
+
+Only one file can be imported at once with an unlimited number of entries.
+
 .. index:: keys, hotkeys, keyboard
 .. _usage-hotkeys:
 
