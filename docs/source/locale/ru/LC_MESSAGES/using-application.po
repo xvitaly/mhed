@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-04 12:27+0100\n"
-"PO-Revision-Date: 2024-02-04 12:28+0100\n"
+"POT-Creation-Date: 2024-02-04 12:30+0100\n"
+"PO-Revision-Date: 2024-02-05 08:04+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -145,46 +145,66 @@ msgstr ""
 "не ограничено."
 
 #: ../../source/using-application.rst:64
+msgid "Exporting Hosts file entries"
+msgstr "Экспортирование записей файла Hosts"
+
+#: ../../source/using-application.rst:66
+msgid ""
+"If you want to export entries to external file, you can use the **File** -- "
+"**Export** menu item."
+msgstr ""
+"Если вы хотите экспортировать записи в внешний файл, вы можете использовать "
+"пункт меню **Файл** -- **Экспорт**."
+
+#: ../../source/using-application.rst:68
+msgid ""
+"Select a text file using the standard OS dialog and click the **Save** "
+"button."
+msgstr ""
+"Выберите текстовый файл при помощи стандартного для ОС диалога и нажмите "
+"кнопку **Сохранить**."
+
+#: ../../source/using-application.rst:74
 msgid "Hotkeys"
 msgstr "Клавиатурные комбинации"
 
-#: ../../source/using-application.rst:66
+#: ../../source/using-application.rst:76
 msgid "Hotkeys can be used to control the application."
 msgstr "Для работы с программой могут быть использованы \"горячие клавиши\"."
 
-#: ../../source/using-application.rst:68
+#: ../../source/using-application.rst:78
 msgid "Currently supported keyboard combinations:"
 msgstr "В настоящее время поддерживаются следующие клавиатурные комбинации:"
 
-#: ../../source/using-application.rst:70
+#: ../../source/using-application.rst:80
 msgid "**F1** -- show offline help;"
 msgstr "**F1** -- показать справочную систему;"
 
-#: ../../source/using-application.rst:71
+#: ../../source/using-application.rst:81
 msgid "**F5** -- :ref:`reload <usage-reload>` the Hosts file from disk;"
 msgstr "**F5** -- :ref:`перечитать <usage-reload>` файл Hosts с диска;"
 
-#: ../../source/using-application.rst:72
+#: ../../source/using-application.rst:82
 msgid "**Ctrl+S** -- :ref:`save <usage-save>` the Hosts file to disk;"
 msgstr ""
 "**Ctrl+S** -- :ref:`сохранить <usage-save>` изменения в файле Hosts на диск;"
 
-#: ../../source/using-application.rst:73
+#: ../../source/using-application.rst:83
 msgid "**Ctrl+Q** -- quit application;"
 msgstr "**Ctrl+Q** -- выйти из программы;"
 
-#: ../../source/using-application.rst:74
+#: ../../source/using-application.rst:84
 msgid "**Ctrl+X** -- cut the selected cell data to the clipboard;"
 msgstr "**Ctrl+X** -- вырезать содержимое выделенной ячейки в буфер обмена;"
 
-#: ../../source/using-application.rst:75
+#: ../../source/using-application.rst:85
 msgid "**Ctrl+C** -- copy the selected cell data to the clipboard;"
 msgstr "**Ctrl+C** -- скопировать содержимое выделенной ячейки в буфер обмена;"
 
-#: ../../source/using-application.rst:76
+#: ../../source/using-application.rst:86
 msgid "**Ctrl+V** -- paste data from the clipboard to the selected cell;"
 msgstr "**Ctrl+V** -- вставить содержимое буфера обмена в выделенную ячейку;"
 
-#: ../../source/using-application.rst:77
+#: ../../source/using-application.rst:87
 msgid "**Shift+Del** -- delete the selected row."
 msgstr "**Shift+Del** -- удалить выделенную строку целиком."

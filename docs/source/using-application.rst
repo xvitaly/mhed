@@ -57,6 +57,16 @@ Select a text file using the standard OS dialog and click the **Open** button.
 
 Only one file can be imported at once with an unlimited number of entries.
 
+.. index:: hosts editor, exporting hosts file
+.. _usage-export:
+
+Exporting Hosts file entries
+===================================================
+
+If you want to export entries to external file, you can use the **File** -- **Export** menu item.
+
+Select a text file using the standard OS dialog and click the **Save** button.
+
 .. index:: keys, hotkeys, keyboard
 .. _usage-hotkeys:
 
