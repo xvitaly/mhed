@@ -67,6 +67,21 @@ If you want to export entries to external file, you can use the **File** -- **Ex
 
 Select a text file using the standard OS dialog and click the **Save** button.
 
+.. index:: hosts editor, hosts file encoding
+.. _usage-encoding:
+
+Hosts file encoding
+=====================================
+
+The application supports the following Hosts encodings:
+
+  * System default;
+  * Unicode.
+
+You can select the preferred encoding from the **Advanced** -- **File encoding** menu.
+
+This setting will affect all actions and will persist between program runs.
+
 .. index:: keys, hotkeys, keyboard
 .. _usage-hotkeys:
 
