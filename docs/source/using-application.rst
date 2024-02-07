@@ -82,6 +82,16 @@ You can select the preferred encoding from the **Advanced** -- **File encoding**
 
 This setting will affect all actions and will persist between program runs.
 
+.. index:: clipboard, cut to clipboard
+.. _usage-clipboard-cut:
+
+Cut to clipboard
+===============================
+
+You can select and cut any entries to the clipboard by using the **Edit** -- **Cut** menu item, the **Cut** context menu item or the **Ctrl+X** :ref:`hotkey <usage-hotkeys>`.
+
+The data will be copied as tab-delimited plain text, removed from the table, and can be pasted into any application.
+
 .. index:: keys, hotkeys, keyboard
 .. _usage-hotkeys:
 
@@ -96,7 +106,7 @@ Currently supported keyboard combinations:
   * **F5** -- :ref:`reload <usage-reload>` the Hosts file from disk;
   * **Ctrl+S** -- :ref:`save <usage-save>` the Hosts file to disk;
   * **Ctrl+Q** -- quit application;
-  * **Ctrl+X** -- cut the selected cell data to the clipboard;
+  * **Ctrl+X** -- :ref:`cut <usage-clipboard-cut>` the selected cell data to the clipboard;
   * **Ctrl+C** -- copy the selected cell data to the clipboard;
   * **Ctrl+V** -- paste data from the clipboard to the selected cell;
   * **Shift+Del** -- delete the selected row.

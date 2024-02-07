@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-06 14:53+0100\n"
-"PO-Revision-Date: 2024-02-06 14:53+0100\n"
+"POT-Creation-Date: 2024-02-07 11:54+0100\n"
+"PO-Revision-Date: 2024-02-07 11:56+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -196,46 +196,73 @@ msgstr ""
 "запусками программы."
 
 #: ../../source/using-application.rst:89
+msgid "Cut to clipboard"
+msgstr "Вырезать в буфер обмена"
+
+#: ../../source/using-application.rst:91
+msgid ""
+"You can select and cut any entries to the clipboard by using the **Edit** -- "
+"**Cut** menu item, the **Cut** context menu item or the **Ctrl+X** :ref:"
+"`hotkey <usage-hotkeys>`."
+msgstr ""
+"Вы можете выделить и вырезать в буфер обмена любое количество элементов при "
+"помощи команды меню **Правка** -- **Вырезать**, пункта **Вырезать** "
+"контекстного меню, либо :ref:`клавиатурной комбинацией <usage-hotkeys>` "
+"**Ctrl+X**."
+
+#: ../../source/using-application.rst:93
+msgid ""
+"The data will be copied as tab-delimited plain text, removed from the table, "
+"and can be pasted into any application."
+msgstr ""
+"Данные будут скопированы в виде простого текста с разделителем в виде "
+"табуляции, удалены из редактора, и могут быть вставлены в любое приложение."
+
+#: ../../source/using-application.rst:99
 msgid "Hotkeys"
 msgstr "Клавиатурные комбинации"
 
-#: ../../source/using-application.rst:91
+#: ../../source/using-application.rst:101
 msgid "Hotkeys can be used to control the application."
 msgstr "Для работы с программой могут быть использованы \"горячие клавиши\"."
 
-#: ../../source/using-application.rst:93
+#: ../../source/using-application.rst:103
 msgid "Currently supported keyboard combinations:"
 msgstr "В настоящее время поддерживаются следующие клавиатурные комбинации:"
 
-#: ../../source/using-application.rst:95
+#: ../../source/using-application.rst:105
 msgid "**F1** -- show offline help;"
 msgstr "**F1** -- показать справочную систему;"
 
-#: ../../source/using-application.rst:96
+#: ../../source/using-application.rst:106
 msgid "**F5** -- :ref:`reload <usage-reload>` the Hosts file from disk;"
 msgstr "**F5** -- :ref:`перечитать <usage-reload>` файл Hosts с диска;"
 
-#: ../../source/using-application.rst:97
+#: ../../source/using-application.rst:107
 msgid "**Ctrl+S** -- :ref:`save <usage-save>` the Hosts file to disk;"
 msgstr ""
 "**Ctrl+S** -- :ref:`сохранить <usage-save>` изменения в файле Hosts на диск;"
 
-#: ../../source/using-application.rst:98
+#: ../../source/using-application.rst:108
 msgid "**Ctrl+Q** -- quit application;"
 msgstr "**Ctrl+Q** -- выйти из программы;"
 
-#: ../../source/using-application.rst:99
-msgid "**Ctrl+X** -- cut the selected cell data to the clipboard;"
-msgstr "**Ctrl+X** -- вырезать содержимое выделенной ячейки в буфер обмена;"
+#: ../../source/using-application.rst:109
+msgid ""
+"**Ctrl+X** -- :ref:`cut <usage-clipboard-cut>` the selected cell data to the "
+"clipboard;"
+msgstr ""
+"**Ctrl+X** -- :ref:`вырезать <usage-clipboard-cut>` содержимое выделенных "
+"ячеек в буфер обмена;"
 
-#: ../../source/using-application.rst:100
+#: ../../source/using-application.rst:110
 msgid "**Ctrl+C** -- copy the selected cell data to the clipboard;"
 msgstr "**Ctrl+C** -- скопировать содержимое выделенной ячейки в буфер обмена;"
 
-#: ../../source/using-application.rst:101
+#: ../../source/using-application.rst:111
 msgid "**Ctrl+V** -- paste data from the clipboard to the selected cell;"
 msgstr "**Ctrl+V** -- вставить содержимое буфера обмена в выделенную ячейку;"
 
-#: ../../source/using-application.rst:102
+#: ../../source/using-application.rst:112
 msgid "**Shift+Del** -- delete the selected row."
 msgstr "**Shift+Del** -- удалить выделенную строку целиком."
