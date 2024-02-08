@@ -92,6 +92,16 @@ You can select and cut any entries to the clipboard by using the **Edit** -- **C
 
 The data will be copied as tab-delimited plain text, removed from the table, and can be pasted into any application.
 
+.. index:: clipboard, copy to clipboard
+.. _usage-clipboard-copy:
+
+Copy to clipboard
+===============================
+
+You can select and copy any entries to the clipboard by using the **Edit** -- **Copy** menu item, the **Copy** context menu item or the **Ctrl+C** :ref:`hotkey <usage-hotkeys>`.
+
+The data will be copied as a tab-delimited plain text, and can be pasted into any application.
+
 .. index:: keys, hotkeys, keyboard
 .. _usage-hotkeys:
 
@@ -107,6 +117,6 @@ Currently supported keyboard combinations:
   * **Ctrl+S** -- :ref:`save <usage-save>` the Hosts file to disk;
   * **Ctrl+Q** -- quit application;
   * **Ctrl+X** -- :ref:`cut <usage-clipboard-cut>` the selected cell data to the clipboard;
-  * **Ctrl+C** -- copy the selected cell data to the clipboard;
+  * **Ctrl+C** -- :ref:`copy <usage-clipboard-copy>` the selected cell data to the clipboard;
   * **Ctrl+V** -- paste data from the clipboard to the selected cell;
   * **Shift+Del** -- delete the selected row.
