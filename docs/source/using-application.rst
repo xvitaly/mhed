@@ -102,6 +102,18 @@ You can select and copy any entries to the clipboard by using the **Edit** -- **
 
 The data will be copied as a tab-delimited plain text, and can be pasted into any application.
 
+.. index:: clipboard, paste from clipboard
+.. _usage-clipboard-paste:
+
+Paste from clipboard
+===============================
+
+You can paste one or more entries from the clipboard by using the **Edit** -- **Paste** menu item, the **Paste** context menu item or the **Ctrl+V** :ref:`hotkey <usage-hotkeys>`.
+
+If only one cell is selected, insertion at the selection point will be used, otherwise the alternative mode of inserting the entire row will be used.
+
+If you want to replace an existing row, you must first select it by clicking on the row selector (first column). Otherwise it will be inserted at the end of the table.
+
 .. index:: keys, hotkeys, keyboard
 .. _usage-hotkeys:
 
@@ -118,5 +130,5 @@ Currently supported keyboard combinations:
   * **Ctrl+Q** -- quit application;
   * **Ctrl+X** -- :ref:`cut <usage-clipboard-cut>` the selected cell data to the clipboard;
   * **Ctrl+C** -- :ref:`copy <usage-clipboard-copy>` the selected cell data to the clipboard;
-  * **Ctrl+V** -- paste data from the clipboard to the selected cell;
+  * **Ctrl+V** -- :ref:`paste <usage-clipboard-paste>` data from the clipboard to the selected cell or row;
   * **Shift+Del** -- delete the selected row.

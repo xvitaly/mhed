@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 06:36+0100\n"
-"PO-Revision-Date: 2024-02-08 06:37+0100\n"
+"POT-Creation-Date: 2024-02-09 11:51+0100\n"
+"PO-Revision-Date: 2024-02-09 11:52+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -242,35 +242,67 @@ msgstr ""
 "табуляции, и могут быть вставлены в любое приложение."
 
 #: ../../source/using-application.rst:109
+msgid "Paste from clipboard"
+msgstr "Вставка из буфера обмена"
+
+#: ../../source/using-application.rst:111
+msgid ""
+"You can paste one or more entries from the clipboard by using the **Edit** "
+"-- **Paste** menu item, the **Paste** context menu item or the **Ctrl+V** :"
+"ref:`hotkey <usage-hotkeys>`."
+msgstr ""
+"Вы можете вставить один или более элементов из буфера обмена при помощи "
+"команды меню **Правка** -- **Вставить**, пункта **Вставить** контекстного "
+"меню, либо :ref:`клавиатурной комбинацией <usage-hotkeys>` **Ctrl+V**."
+
+#: ../../source/using-application.rst:113
+msgid ""
+"If only one cell is selected, insertion at the selection point will be used, "
+"otherwise the alternative mode of inserting the entire row will be used."
+msgstr ""
+"Если выделена только одна ячейка, будет использоваться режим вставки в точке "
+"выделения, иначе задействуется альтернативный режим вставки целой строки."
+
+#: ../../source/using-application.rst:115
+msgid ""
+"If you want to replace an existing row, you must first select it by clicking "
+"on the row selector (first column). Otherwise it will be inserted at the end "
+"of the table."
+msgstr ""
+"Если вы хотите заменить существующую строку, то сначала необходимо выделить "
+"её, кликнув по селектору строки (первый столбец). В противном случае она "
+"будет вставлена в конец таблицы."
+
+#: ../../source/using-application.rst:121
 msgid "Hotkeys"
 msgstr "Клавиатурные комбинации"
 
-#: ../../source/using-application.rst:111
+#: ../../source/using-application.rst:123
 msgid "Hotkeys can be used to control the application."
 msgstr "Для работы с программой могут быть использованы \"горячие клавиши\"."
 
-#: ../../source/using-application.rst:113
+#: ../../source/using-application.rst:125
 msgid "Currently supported keyboard combinations:"
 msgstr "В настоящее время поддерживаются следующие клавиатурные комбинации:"
 
-#: ../../source/using-application.rst:115
+#: ../../source/using-application.rst:127
 msgid "**F1** -- show offline help;"
 msgstr "**F1** -- показать справочную систему;"
 
-#: ../../source/using-application.rst:116
+#: ../../source/using-application.rst:128
 msgid "**F5** -- :ref:`reload <usage-reload>` the Hosts file from disk;"
 msgstr "**F5** -- :ref:`перечитать <usage-reload>` файл Hosts с диска;"
 
-#: ../../source/using-application.rst:117
+#: ../../source/using-application.rst:129
 msgid "**Ctrl+S** -- :ref:`save <usage-save>` the Hosts file to disk;"
 msgstr ""
 "**Ctrl+S** -- :ref:`сохранить <usage-save>` изменения в файле Hosts на диск;"
 
-#: ../../source/using-application.rst:118
+#: ../../source/using-application.rst:130
 msgid "**Ctrl+Q** -- quit application;"
 msgstr "**Ctrl+Q** -- выйти из программы;"
 
-#: ../../source/using-application.rst:119
+#: ../../source/using-application.rst:131
 msgid ""
 "**Ctrl+X** -- :ref:`cut <usage-clipboard-cut>` the selected cell data to the "
 "clipboard;"
@@ -278,7 +310,7 @@ msgstr ""
 "**Ctrl+X** -- :ref:`вырезать <usage-clipboard-cut>` содержимое выделенных "
 "ячеек в буфер обмена;"
 
-#: ../../source/using-application.rst:120
+#: ../../source/using-application.rst:132
 msgid ""
 "**Ctrl+C** -- :ref:`copy <usage-clipboard-copy>` the selected cell data to "
 "the clipboard;"
@@ -286,10 +318,14 @@ msgstr ""
 "**Ctrl+C** -- :ref:`скопировать <usage-clipboard-copy>` содержимое "
 "выделенных ячеек в буфер обмена;"
 
-#: ../../source/using-application.rst:121
-msgid "**Ctrl+V** -- paste data from the clipboard to the selected cell;"
-msgstr "**Ctrl+V** -- вставить содержимое буфера обмена в выделенную ячейку;"
+#: ../../source/using-application.rst:133
+msgid ""
+"**Ctrl+V** -- :ref:`paste <usage-clipboard-paste>` data from the clipboard "
+"to the selected cell or row;"
+msgstr ""
+"**Ctrl+V** -- :ref:`вставить <usage-clipboard-paste>` содержимое буфера "
+"обмена в выделенную ячейку или строку;"
 
-#: ../../source/using-application.rst:122
+#: ../../source/using-application.rst:134
 msgid "**Shift+Del** -- delete the selected row."
 msgstr "**Shift+Del** -- удалить выделенную строку целиком."
