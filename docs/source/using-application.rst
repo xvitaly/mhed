@@ -114,6 +114,14 @@ If only one cell is selected, insertion at the selection point will be used, oth
 
 If you want to replace an existing row, you must first select it by clicking on the row selector (first column). Otherwise it will be inserted at the end of the table.
 
+.. index:: removing rows
+.. _usage-remove:
+
+Removing rows
+===============================
+
+You can select and remove one or more rows by using the **Edit** -- **Delete** menu item, the **Delete** context menu item or the **Shift+Del** :ref:`hotkey <usage-hotkeys>`.
+
 .. index:: keys, hotkeys, keyboard
 .. _usage-hotkeys:
 
@@ -131,4 +139,4 @@ Currently supported keyboard combinations:
   * **Ctrl+X** -- :ref:`cut <usage-clipboard-cut>` the selected cell data to the clipboard;
   * **Ctrl+C** -- :ref:`copy <usage-clipboard-copy>` the selected cell data to the clipboard;
   * **Ctrl+V** -- :ref:`paste <usage-clipboard-paste>` data from the clipboard to the selected cell or row;
-  * **Shift+Del** -- delete the selected row.
+  * **Shift+Del** -- :ref:`remove <usage-remove>` the selected rows.
