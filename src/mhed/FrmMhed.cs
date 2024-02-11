@@ -393,6 +393,17 @@ namespace mhed.gui
             }
         }
 
+        private void HelperClearSelectedCells()
+        {
+            foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
+            {
+                if (!HE_ModelView.Rows[Cell.RowIndex].IsNewRow)
+                {
+                    Cell.Value = null;
+                }
+            }
+        }
+
         /// <summary>
         /// Cut the contents of the selected cells to the clipboard.
         /// </summary>
@@ -401,13 +412,7 @@ namespace mhed.gui
             try
             {
                 Clipboard.SetDataObject(HE_ModelView.GetClipboardContent());
-                foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
-                {
-                    if (!HE_ModelView.Rows[Cell.RowIndex].IsNewRow)
-                    {
-                        Cell.Value = null;
-                    }
-                }
+                HelperClearSelectedCells();
             }
             catch (Exception Ex)
             {
