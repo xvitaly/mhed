@@ -393,6 +393,9 @@ namespace mhed.gui
             }
         }
 
+        /// <summary>
+        /// Clear the contents of the selected cells.
+        /// </summary>
         private void HelperClearSelectedCells()
         {
             foreach (DataGridViewCell Cell in HE_ModelView.SelectedCells)
