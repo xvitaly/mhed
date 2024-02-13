@@ -407,6 +407,17 @@ namespace mhed.gui
             }
         }
 
+        private void HelperRemoveSelectedRows()
+        {
+            foreach (DataGridViewRow Row in HE_ModelView.SelectedRows)
+            {
+                if (!Row.IsNewRow)
+                {
+                    HE_ModelView.Rows.RemoveAt(Row.Index);
+                }
+            }
+        }
+
         /// <summary>
         /// Cut the contents of the selected cells to the clipboard.
         /// </summary>
