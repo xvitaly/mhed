@@ -407,6 +407,9 @@ namespace mhed.gui
             }
         }
 
+        /// <summary>
+        /// Remove selected rows.
+        /// </summary>
         private void HelperRemoveSelectedRows()
         {
             foreach (DataGridViewRow Row in HE_ModelView.SelectedRows)
