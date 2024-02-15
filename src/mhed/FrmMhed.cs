@@ -429,7 +429,7 @@ namespace mhed.gui
             try
             {
                 Clipboard.SetDataObject(HE_ModelView.GetClipboardContent());
-                HelperClearSelectedCells();
+                if (HE_ModelView.SelectedRows.Count > 0) { HelperRemoveSelectedRows(); } else { HelperClearSelectedCells(); }
             }
             catch (Exception Ex)
             {
