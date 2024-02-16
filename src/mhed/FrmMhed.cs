@@ -421,6 +421,11 @@ namespace mhed.gui
             }
         }
 
+        private void HalperHandleSelection()
+        {
+            if (HE_ModelView.SelectedRows.Count > 0) { HelperRemoveSelectedRows(); } else { HelperClearSelectedCells(); }
+        }
+
         /// <summary>
         /// Cut the contents of the selected cells to the clipboard.
         /// </summary>
@@ -429,7 +434,7 @@ namespace mhed.gui
             try
             {
                 Clipboard.SetDataObject(HE_ModelView.GetClipboardContent());
-                if (HE_ModelView.SelectedRows.Count > 0) { HelperRemoveSelectedRows(); } else { HelperClearSelectedCells(); }
+                HalperHandleSelection();
             }
             catch (Exception Ex)
             {
