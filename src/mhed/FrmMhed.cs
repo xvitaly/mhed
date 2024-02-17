@@ -421,6 +421,9 @@ namespace mhed.gui
             }
         }
 
+        /// <summary>
+        /// Remove entire selected rows or clear individual cells.
+        /// </summary>
         private void HalperHandleSelection()
         {
             if (HE_ModelView.SelectedRows.Count > 0) { HelperRemoveSelectedRows(); } else { HelperClearSelectedCells(); }
