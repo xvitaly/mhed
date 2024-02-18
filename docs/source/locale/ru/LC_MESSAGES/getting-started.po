@@ -7,17 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-21 14:30+0200\n"
-"PO-Revision-Date: 2023-06-21 14:31+0200\n"
-"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"POT-Creation-Date: 2024-02-18 09:51+0100\n"
+"PO-Revision-Date: 2024-02-18 09:53+0100\n"
+"Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -39,24 +37,29 @@ msgstr ""
 "Запустить программу можно сразу после установки через меню **Пуск** -- "
 "**Программы** -- **Micro Hosts Editor** -- **Micro Hosts Editor**."
 
-#: ../../source/getting-started.rst:20
-msgid ""
-"Micro Hosts Editor will automatically detect and use the default OS language."
-msgstr ""
-"Micro Hosts Editor автоматически выбирает язык в зависимости от региональных "
-"настроек операционной системы."
+#: ../../source/getting-started.rst:24
+msgid "Localization selection"
+msgstr "Выбор локализации"
 
 #: ../../source/getting-started.rst:26
+msgid ""
+"Micro Hosts Editor will automatically detect and use the default OS language "
+"if supported by the application."
+msgstr ""
+"Micro Hosts Editor автоматически выбирает язык в зависимости от региональных "
+"настроек операционной системы, если он поддерживается приложением."
+
+#: ../../source/getting-started.rst:32
 msgid "Admin permissions"
 msgstr "Работа с повышенными правами"
 
-#: ../../source/getting-started.rst:28
+#: ../../source/getting-started.rst:34
 msgid "Micro Hosts Editor can be started with or without administrator rights."
 msgstr ""
 "Micro Hosts Editor может быть запущена как с правами локального "
 "администратора, так и без них."
 
-#: ../../source/getting-started.rst:30
+#: ../../source/getting-started.rst:36
 msgid ""
 "When started as a regular user, it will work in read-only mode because only "
 "members of the Administrators group can edit Hosts file."
@@ -65,7 +68,7 @@ msgstr ""
 "работать в режиме \"только чтение\", т.к. только участники группы "
 "Администраторы могут редактировать файл Hosts."
 
-#: ../../source/getting-started.rst:32
+#: ../../source/getting-started.rst:38
 msgid ""
 "If you want to edit Hosts file, you will need to run this program as an "
 "administrator. Right-click on the Micro Hosts Editor shortcut in the Start "
@@ -78,33 +81,33 @@ msgstr ""
 "и из контекстного меню выберите пункт **Запуск от имени администратора**, "
 "затем подтвердите своё намерение в появившемся окне Windows UAC."
 
-#: ../../source/getting-started.rst:38
+#: ../../source/getting-started.rst:44
 msgid "Startup actions"
 msgstr "Действия, выполняемые при запуске"
 
-#: ../../source/getting-started.rst:40
+#: ../../source/getting-started.rst:46
 msgid ""
 "The following actions will be performed on Micro Hosts Editor's startup:"
 msgstr ""
 "Следующие действия выполняются автоматически при запуске Micro Hosts Editor:"
 
-#: ../../source/getting-started.rst:42
+#: ../../source/getting-started.rst:48
 msgid "getting Hosts file path;"
 msgstr "получение пути к используемому файлу Hosts;"
 
-#: ../../source/getting-started.rst:43
+#: ../../source/getting-started.rst:49
 msgid "checking if the Hosts file exists;"
 msgstr "проверка на существование файла Hosts;"
 
-#: ../../source/getting-started.rst:44
+#: ../../source/getting-started.rst:50
 msgid "performing internal startup actions;"
 msgstr "выполнение внутренних процедур инициализации;"
 
-#: ../../source/getting-started.rst:45
+#: ../../source/getting-started.rst:51
 msgid "creating user-friendly GUI."
 msgstr "создание графического интерфейса пользователя."
 
-#: ../../source/getting-started.rst:47
+#: ../../source/getting-started.rst:53
 msgid ""
 "If the program cannot find path to Hosts file in the Windows Registry (only "
 "on Microsoft Windows platform), it will use the default well-known location."
@@ -113,11 +116,11 @@ msgstr ""
 "(только для платформы Microsoft Windows), она продолжит поиск в стандартных "
 "известных каталогах."
 
-#: ../../source/getting-started.rst:53
+#: ../../source/getting-started.rst:59
 msgid "Data files storage"
 msgstr "Хранение файлов программы"
 
-#: ../../source/getting-started.rst:55
+#: ../../source/getting-started.rst:61
 msgid ""
 "All program settings are stored in the ``%LOCALAPPDATA%\\EasyCoding_Team`` "
 "directory (each subdirectory for every version)."
@@ -125,15 +128,15 @@ msgstr ""
 "Настройки программы хранятся в каталоге ``%LOCALAPPDATA%\\EasyCoding_Team``, "
 "для каждой версии отдельно."
 
-#: ../../source/getting-started.rst:57
+#: ../../source/getting-started.rst:63
 msgid "Logs -- ``%LOCALAPPDATA%\\mhed\\logs``."
 msgstr "Журналы работы -- ``%LOCALAPPDATA%\\mhed``."
 
-#: ../../source/getting-started.rst:63
+#: ../../source/getting-started.rst:69
 msgid "Uninstalling program"
 msgstr "Удаление программы"
 
-#: ../../source/getting-started.rst:65
+#: ../../source/getting-started.rst:71
 msgid ""
 "If you want to uninstall Micro Hosts Editor from your compuler, use "
 "**Control panel** -- **Programs and components** -- **Micro Hosts Editor** "
@@ -143,7 +146,7 @@ msgstr ""
 "через **Панель управления** -- **Программы и компоненты** -- **Micro Hosts "
 "Editor** -- **Удалить**."
 
-#: ../../source/getting-started.rst:67
+#: ../../source/getting-started.rst:73
 msgid ""
 "Uninstaller will automatically remove all program files, shortcuts, registry "
 "entries, but will save created by user :ref:`data files <gs-datafiles>`. You "
@@ -154,11 +157,11 @@ msgstr ""
 "решите когда-нибудь переустановить её. Эти :ref:`файлы <gs-datafiles>` вы "
 "можете удалить вручную."
 
-#: ../../source/getting-started.rst:73
+#: ../../source/getting-started.rst:79
 msgid "Mono issues"
 msgstr "Проблемы с Mono"
 
-#: ../../source/getting-started.rst:75
+#: ../../source/getting-started.rst:81
 msgid ""
 "When running under Mono, the program may crash on start with the following "
 "error:"
@@ -166,14 +169,14 @@ msgstr ""
 "При запуске программы с использованием Mono, может произойти падение со "
 "следующей ошибкой:"
 
-#: ../../source/getting-started.rst:82
+#: ../../source/getting-started.rst:88
 msgid ""
 "This is a known `upstream issue <https://github.com/mono/mono/"
 "issues/21630>`__."
 msgstr ""
 "Это `известная проблема <https://github.com/mono/mono/issues/21630>`__."
 
-#: ../../source/getting-started.rst:84
+#: ../../source/getting-started.rst:90
 msgid ""
 "It can be trivially workarounded by editing the ``mhed.exe.config`` file and "
 "removing the following lines:"
@@ -181,6 +184,6 @@ msgstr ""
 "Её достаточно просто решить, открыв в текстовом редакторе файл ``mhed.exe."
 "config`` и удалив следующие строки:"
 
-#: ../../source/getting-started.rst:92
+#: ../../source/getting-started.rst:98
 msgid "The next launch will be successful."
 msgstr "Следующий запуск будет успешным."
