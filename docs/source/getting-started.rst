@@ -15,7 +15,7 @@ Getting started
 Starting program
 ==========================================
 
-You can launch Micro Hosts Editor from the Start menu right after installation: **Start** -- **Programs** -- **Micro Hosts Editor** -- **Micro Hosts Editor**.
+You can launch Micro Hosts Editor from the Start menu right after installation: **Start** -- **Micro Hosts Editor** -- **Micro Hosts Editor**.
 
 .. index:: localization selection
 .. _gs-localization:
