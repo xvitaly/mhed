@@ -17,7 +17,7 @@ Starting program
 
 You can launch Micro Hosts Editor from the Start menu right after installation: **Start** -- **Micro Hosts Editor** -- **Micro Hosts Editor**.
 
-.. index:: localization selection
+.. index:: localization selection, language detection, program language
 .. _gs-localization:
 
 Localization selection
