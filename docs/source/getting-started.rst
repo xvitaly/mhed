@@ -37,6 +37,8 @@ When started as a regular user, it will work in read-only mode because only memb
 
 If you want to edit Hosts file, you will need to run this program as an administrator. Right-click on the Micro Hosts Editor shortcut in the Start menu or on desktop, select **Run with administrator** and confirm this action in the Windows UAC dialog box.
 
+To always run this application with administrator rights, right-click the shortcut, select the **Properties** context menu item, go to the **Compatibility** tab, check the **Run this program as an administrator** checkbox and click **OK** button.
+
 .. index:: startup actions
 .. _gs-startup:
 
