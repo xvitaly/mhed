@@ -408,28 +408,6 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Remove selected rows.
-        /// </summary>
-        private void HelperRemoveSelectedRows()
-        {
-            foreach (DataGridViewRow Row in HE_ModelView.SelectedRows)
-            {
-                if (!Row.IsNewRow)
-                {
-                    HE_ModelView.Rows.RemoveAt(Row.Index);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Remove entire selected rows or clear individual cells.
-        /// </summary>
-        private void HalperHandleSelection()
-        {
-            if (HE_ModelView.SelectedRows.Count > 0) { HelperRemoveSelectedRows(); } else { HelperClearSelectedCells(); }
-        }
-
-        /// <summary>
         /// Cut the contents of the selected cells to the clipboard.
         /// </summary>
         private void HelperCut()
@@ -437,7 +415,7 @@ namespace mhed.gui
             try
             {
                 Clipboard.SetDataObject(HE_ModelView.GetClipboardContent());
-                HalperHandleSelection();
+                HelperClearSelectedCells();
             }
             catch (Exception Ex)
             {
