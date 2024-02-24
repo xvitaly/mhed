@@ -70,7 +70,7 @@ Logs -- ``%LOCALAPPDATA%\mhed\logs``.
 Uninstalling program
 ==========================================
 
-If you want to uninstall Micro Hosts Editor from your compuler, use **Control panel** -- **Programs and components** -- **Micro Hosts Editor** -- **Uninstall**.
+If you want to uninstall Micro Hosts Editor from your compuler, use **Start** -- **Settings** -- **Apps** -- **Apps & features** -- **Micro Hosts Editor** -- **Uninstall**.
 
 Uninstaller will automatically remove all program files, shortcuts, registry entries, but will save created by user :ref:`data files <gs-datafiles>`. You can remove them manually.
 
