@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-19 10:18+0100\n"
-"PO-Revision-Date: 2024-02-19 10:19+0100\n"
+"POT-Creation-Date: 2024-02-25 12:47+0100\n"
+"PO-Revision-Date: 2024-02-25 12:48+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -25,21 +25,29 @@ msgid "Privacy policy"
 msgstr "Политика конфиденциальности"
 
 #: ../../source/privacy.rst:16
+msgid "Version"
+msgstr "Версия"
+
+#: ../../source/privacy.rst:18
+msgid "Last update: **2024-01-31**."
+msgstr "Дата последнего обновления: **31.01.2024**."
+
+#: ../../source/privacy.rst:24
 msgid "Application"
 msgstr "Приложение"
 
-#: ../../source/privacy.rst:18
+#: ../../source/privacy.rst:26
 msgid ""
 "The application itself doesn't use any telemetry or data collection features."
 msgstr ""
 "Данное приложение не содержит функций по сбору телеметрии и любых "
 "персональных данных."
 
-#: ../../source/privacy.rst:24
+#: ../../source/privacy.rst:32
 msgid "Update checker"
 msgstr "Проверка обновлений"
 
-#: ../../source/privacy.rst:26
+#: ../../source/privacy.rst:34
 msgid ""
 "The update checker module sends the following data to the update web server "
 "to obtain information about the availability of new versions, as well as "
@@ -49,39 +57,39 @@ msgstr ""
 "данные для получения информации о наличии новых версий, а также ссылок для "
 "их скачивания:"
 
-#: ../../source/privacy.rst:28
+#: ../../source/privacy.rst:36
 msgid "IP-address;"
 msgstr "IP-адрес;"
 
-#: ../../source/privacy.rst:29
+#: ../../source/privacy.rst:37
 msgid "HTTP_USER_AGENT in a special format, including:"
 msgstr "HTTP_USER_AGENT в особом формате:"
 
-#: ../../source/privacy.rst:31
+#: ../../source/privacy.rst:39
 msgid "OS name;"
 msgstr "название операционной системы;"
 
-#: ../../source/privacy.rst:32
+#: ../../source/privacy.rst:40
 msgid "OS version;"
 msgstr "версия операционной системы;"
 
-#: ../../source/privacy.rst:33
+#: ../../source/privacy.rst:41
 msgid "OS architecture;"
 msgstr "архитектура операционной системы;"
 
-#: ../../source/privacy.rst:34
+#: ../../source/privacy.rst:42
 msgid "application name;"
 msgstr "название приложения;"
 
-#: ../../source/privacy.rst:35
+#: ../../source/privacy.rst:43
 msgid "application version;"
 msgstr "версия приложения;"
 
-#: ../../source/privacy.rst:36
+#: ../../source/privacy.rst:44
 msgid "application language."
 msgstr "язык приложения."
 
-#: ../../source/privacy.rst:38
+#: ../../source/privacy.rst:46
 msgid ""
 "This information may be stored in the web server's access.log file for up to "
 "4 weeks before it is permanently deleted. Apart from the above, we don't "
@@ -91,7 +99,7 @@ msgstr ""
 "недель до того как они будут безвозвратно удалены. Кроме этого мы не "
 "собираем и передаём никаких прочих данных."
 
-#: ../../source/privacy.rst:40
+#: ../../source/privacy.rst:48
 msgid ""
 "If you don't want to share it, you can turn off automatic checking for "
 "updates in :ref:`Advanced settings <settings-advanced>` and not use this "

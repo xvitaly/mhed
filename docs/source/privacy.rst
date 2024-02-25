@@ -9,6 +9,14 @@
 Privacy policy
 ****************************
 
+.. index:: privacy, version
+.. _privacy-version:
+
+Version
+====================
+
+Last update: **2024-01-31**.
+
 .. index:: privacy, application
 .. _privacy-application:
 
