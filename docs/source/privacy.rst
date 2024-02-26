@@ -9,7 +9,7 @@
 Privacy policy
 ****************************
 
-.. index:: privacy, version
+.. index:: privacy, privacy policy version
 .. _privacy-version:
 
 Version
@@ -17,7 +17,7 @@ Version
 
 Last update: **2024-01-31**.
 
-.. index:: privacy, application
+.. index:: privacy, application privacy policy
 .. _privacy-application:
 
 Application
@@ -25,7 +25,7 @@ Application
 
 The application itself doesn't use any telemetry or data collection features.
 
-.. index:: privacy, updater
+.. index:: privacy, updater privacy policy
 .. _privacy-updater:
 
 Update checker
