@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-19 10:18+0100\n"
-"PO-Revision-Date: 2024-02-19 10:18+0100\n"
+"PO-Revision-Date: 2024-02-27 14:14+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -191,11 +191,9 @@ msgid "Building main project"
 msgstr "Сборка основного проекта"
 
 #: ../../source/development.rst:63
-#, fuzzy
-#| msgid "Start the Microsoft Visual Studio 2019 Community."
 msgid "Start the Microsoft Visual Studio 2022 Community."
 msgstr ""
-"Запустите интегрированную среду разработки Microsoft Visual Studio 2019 "
+"Запустите интегрированную среду разработки Microsoft Visual Studio 2022 "
 "Community."
 
 #: ../../source/development.rst:64
