@@ -40,7 +40,7 @@ First you will need to install C# complier, Microsoft .NET Framework SDK and oth
   7. download and install `Python 3 for Windows <https://www.python.org/downloads/windows/>`_;
   8. open terminal and install Sphinx-doc using PIP: ``pip3 install sphinx``;
   9. download and install `7-Zip for Windows <https://www.7-zip.org/download.html>`_ to default directory;
-  10. download and install `InnoSetup <http://www.jrsoftware.org/isdl.php>`_ to default directory.
+  10. download and install `InnoSetup <https://jrsoftware.org/isdl.php>`_ to default directory.
 
 Automatic build
 ^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-19 10:18+0100\n"
-"PO-Revision-Date: 2024-02-27 14:14+0100\n"
+"POT-Creation-Date: 2024-02-28 08:01+0100\n"
+"PO-Revision-Date: 2024-02-28 08:01+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -145,10 +145,10 @@ msgstr ""
 
 #: ../../source/development.rst:43
 msgid ""
-"download and install `InnoSetup <http://www.jrsoftware.org/isdl.php>`_ to "
+"download and install `InnoSetup <https://jrsoftware.org/isdl.php>`_ to "
 "default directory."
 msgstr ""
-"скачайте и установите `InnoSetup <http://www.jrsoftware.org/isdl.php>`_ в "
+"скачайте и установите `InnoSetup <https://jrsoftware.org/isdl.php>`_ в "
 "каталог по умолчанию."
 
 #: ../../source/development.rst:46
