@@ -39,6 +39,8 @@ If you want to edit Hosts file, you will need to run this program as an administ
 
 To always run this application with administrator rights, right-click the shortcut, select the **Properties** context menu item, go to the **Compatibility** tab, check the **Run this program as an administrator** checkbox and click **OK** button.
 
+The program can automatically handle this situation and restart with the correct permissions if you click the green circle in the status bar.
+
 .. index:: startup actions
 .. _gs-startup:
 
