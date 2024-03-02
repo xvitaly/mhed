@@ -52,7 +52,8 @@ The following actions will be performed on Micro Hosts Editor's startup:
   1. getting Hosts file path;
   2. checking if the Hosts file exists;
   3. performing internal startup actions;
-  4. creating user-friendly GUI.
+  4. creating user-friendly GUI;
+  5. working with updates, if enabled in :ref:`Advanced settings <settings-advanced>`.
 
 If the program cannot find path to Hosts file in the Windows Registry (only on Microsoft Windows platform), it will use the default well-known location.
 
