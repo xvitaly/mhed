@@ -21,9 +21,7 @@ Multiple hostnames are allowed in one entry. Use a space as a separator. Quotati
 
 To add a new row, just start typing text in the last cell.
 
-To edit the contents of a cell, simply double click on it or press the **F4** on your keyboard.
-
-To remove currently selected row, click the **Delete selected row** button on the main toolbar, or press **Delete** button on the keyboard. You can select and remove multiple rows at once.
+To edit the contents of a cell, double-click on it or simply start typing a new value.
 
 If you want to edit Hosts file as a plain text file, click **Open in text editor** in the **Advanced** menu. The file will be loaded with a :ref:`selected <settings-advanced>` (or system default) text editor.
 

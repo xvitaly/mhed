@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-19 10:18+0100\n"
-"PO-Revision-Date: 2024-02-19 10:19+0100\n"
+"POT-Creation-Date: 2024-03-03 10:28+0100\n"
+"PO-Revision-Date: 2024-03-03 10:29+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -60,23 +60,13 @@ msgstr ""
 
 #: ../../source/using-application.rst:24
 msgid ""
-"To edit the contents of a cell, simply double click on it or press the "
-"**F4** on your keyboard."
+"To edit the contents of a cell, double-click on it or simply start typing a "
+"new value."
 msgstr ""
 "Чтобы отредактировать содержимое ячейки, дважды кликните по ней мышью, либо "
-"выберите её и нажмите клавишу **F4** на клавиатуре."
+"просто начните вводить новое значение."
 
 #: ../../source/using-application.rst:26
-msgid ""
-"To remove currently selected row, click the **Delete selected row** button "
-"on the main toolbar, or press **Delete** button on the keyboard. You can "
-"select and remove multiple rows at once."
-msgstr ""
-"Для удаления выбранной строки, просто нажмите кнопку **Удалить строку** на "
-"главной панели инструментов программы, либо нажиме клавишу **Delete** на "
-"клавиатуре. Вы можете выделять и удалять одновременно несколько строк."
-
-#: ../../source/using-application.rst:28
 msgid ""
 "If you want to edit Hosts file as a plain text file, click **Open in text "
 "editor** in the **Advanced** menu. The file will be loaded with a :ref:"
@@ -87,11 +77,11 @@ msgstr ""
 "загружен в :ref:`выбранном текстовом редакторе <settings-advanced>` (или по "
 "умолчанию для текущей платформы)."
 
-#: ../../source/using-application.rst:34
+#: ../../source/using-application.rst:32
 msgid "Reloading Hosts file"
 msgstr "Обновление файла Hosts"
 
-#: ../../source/using-application.rst:36
+#: ../../source/using-application.rst:34
 msgid ""
 "Click the **Refresh** button on the main toolbar, or press **F5** button on "
 "your keyboard to reload the Hosts file from disk."
@@ -99,15 +89,15 @@ msgstr ""
 "Нажмите кнопку **Обновить** на главной панели инструментов, либо клавишу "
 "**F5** на клавиатуре, чтобы перечитать файл Hosts с диска."
 
-#: ../../source/using-application.rst:38
+#: ../../source/using-application.rst:36
 msgid "Any unsaved changes will be lost."
 msgstr "Все не сохранённые изменения будут потеряны."
 
-#: ../../source/using-application.rst:44
+#: ../../source/using-application.rst:42
 msgid "Saving Hosts file"
 msgstr "Сохранение файла Hosts"
 
-#: ../../source/using-application.rst:46
+#: ../../source/using-application.rst:44
 msgid ""
 "Click the **Save** button on the main toolbar, or press **Ctrl + S** key "
 "combination on your keyboard to save the Hosts file to disk."
@@ -115,11 +105,11 @@ msgstr ""
 "Нажмите кнопку **Сохранить** на главной панели инструментов, либо комбинацию "
 "**Ctrl + S** на клавиатуре, чтобы сохранить файл Hosts на диск."
 
-#: ../../source/using-application.rst:52
+#: ../../source/using-application.rst:50
 msgid "Importing Hosts file entries"
 msgstr "Импортирование записей файла Hosts"
 
-#: ../../source/using-application.rst:54
+#: ../../source/using-application.rst:52
 msgid ""
 "If you want to import entries from external file, you can use the **File** "
 "-- **Import** menu item."
@@ -127,7 +117,7 @@ msgstr ""
 "Если вы хотите импортировать записи из внешнего файла, вы можете "
 "использовать пункт меню **Файл** -- **Импорт**."
 
-#: ../../source/using-application.rst:56
+#: ../../source/using-application.rst:54
 msgid ""
 "Select a text file using the standard OS dialog and click the **Open** "
 "button."
@@ -135,18 +125,18 @@ msgstr ""
 "Выберите текстовый файл при помощи стандартного для ОС диалога и нажмите "
 "кнопку **Открыть**."
 
-#: ../../source/using-application.rst:58
+#: ../../source/using-application.rst:56
 msgid ""
 "Only one file can be imported at once with an unlimited number of entries."
 msgstr ""
 "Только один файл может быть импортирован за раз. Количество строк при этом "
 "не ограничено."
 
-#: ../../source/using-application.rst:64
+#: ../../source/using-application.rst:62
 msgid "Exporting Hosts file entries"
 msgstr "Экспортирование записей файла Hosts"
 
-#: ../../source/using-application.rst:66
+#: ../../source/using-application.rst:64
 msgid ""
 "If you want to export entries to external file, you can use the **File** -- "
 "**Export** menu item."
@@ -154,7 +144,7 @@ msgstr ""
 "Если вы хотите экспортировать записи в внешний файл, вы можете использовать "
 "пункт меню **Файл** -- **Экспорт**."
 
-#: ../../source/using-application.rst:68
+#: ../../source/using-application.rst:66
 msgid ""
 "Select a text file using the standard OS dialog and click the **Save** "
 "button."
@@ -162,23 +152,23 @@ msgstr ""
 "Выберите текстовый файл при помощи стандартного для ОС диалога и нажмите "
 "кнопку **Сохранить**."
 
-#: ../../source/using-application.rst:74
+#: ../../source/using-application.rst:72
 msgid "Hosts file encoding"
 msgstr "Кодировка файла Hosts"
 
-#: ../../source/using-application.rst:76
+#: ../../source/using-application.rst:74
 msgid "The application supports the following Hosts encodings:"
 msgstr "Приложение поддерживает следующие кодировки файла Hosts:"
 
-#: ../../source/using-application.rst:78
+#: ../../source/using-application.rst:76
 msgid "System default;"
 msgstr "По умолчанию;"
 
-#: ../../source/using-application.rst:79
+#: ../../source/using-application.rst:77
 msgid "Unicode."
 msgstr "Юникод."
 
-#: ../../source/using-application.rst:81
+#: ../../source/using-application.rst:79
 msgid ""
 "You can select the preferred encoding from the **Advanced** -- **File "
 "encoding** menu."
@@ -186,18 +176,18 @@ msgstr ""
 "Вы можете выбрать предпочитаемую кодировку при помощи меню **Дополнительно** "
 "-- **Кодировка файла**."
 
-#: ../../source/using-application.rst:83
+#: ../../source/using-application.rst:81
 msgid ""
 "This setting will affect all actions and will persist between program runs."
 msgstr ""
 "Этот параметр повлияет на все выполняемые действия и сохранится между "
 "запусками программы."
 
-#: ../../source/using-application.rst:89
+#: ../../source/using-application.rst:87
 msgid "Cut to clipboard"
 msgstr "Вырезать в буфер обмена"
 
-#: ../../source/using-application.rst:91
+#: ../../source/using-application.rst:89
 msgid ""
 "You can select and cut any entries to the clipboard by using the **Edit** -- "
 "**Cut** menu item, the **Cut** context menu item or the **Ctrl+X** :ref:"
@@ -208,7 +198,7 @@ msgstr ""
 "контекстного меню, либо :ref:`клавиатурной комбинацией <usage-hotkeys>` "
 "**Ctrl+X**."
 
-#: ../../source/using-application.rst:93
+#: ../../source/using-application.rst:91
 msgid ""
 "The data will be copied as tab-delimited plain text, removed from the table, "
 "and can be pasted into any application."
@@ -216,11 +206,11 @@ msgstr ""
 "Данные будут скопированы в виде простого текста с разделителем в виде "
 "табуляции, удалены из редактора, и могут быть вставлены в любое приложение."
 
-#: ../../source/using-application.rst:99
+#: ../../source/using-application.rst:97
 msgid "Copy to clipboard"
 msgstr "Скопировать в буфер обмена"
 
-#: ../../source/using-application.rst:101
+#: ../../source/using-application.rst:99
 msgid ""
 "You can select and copy any entries to the clipboard by using the **Edit** "
 "-- **Copy** menu item, the **Copy** context menu item or the **Ctrl+C** :ref:"
@@ -231,7 +221,7 @@ msgstr ""
 "контекстного меню, либо :ref:`клавиатурной комбинацией <usage-hotkeys>` "
 "**Ctrl+C**."
 
-#: ../../source/using-application.rst:103
+#: ../../source/using-application.rst:101
 msgid ""
 "The data will be copied as a tab-delimited plain text, and can be pasted "
 "into any application."
@@ -239,11 +229,11 @@ msgstr ""
 "Данные будут скопированы в виде простого текста с разделителем в виде "
 "табуляции, и могут быть вставлены в любое приложение."
 
-#: ../../source/using-application.rst:109
+#: ../../source/using-application.rst:107
 msgid "Paste from clipboard"
 msgstr "Вставка из буфера обмена"
 
-#: ../../source/using-application.rst:111
+#: ../../source/using-application.rst:109
 msgid ""
 "You can paste one or more entries from the clipboard by using the **Edit** "
 "-- **Paste** menu item, the **Paste** context menu item or the **Ctrl+V** :"
@@ -253,7 +243,7 @@ msgstr ""
 "команды меню **Правка** -- **Вставить**, пункта **Вставить** контекстного "
 "меню, либо :ref:`клавиатурной комбинацией <usage-hotkeys>` **Ctrl+V**."
 
-#: ../../source/using-application.rst:113
+#: ../../source/using-application.rst:111
 msgid ""
 "If only one cell is selected, insertion at the selection point will be used, "
 "otherwise the alternative mode of inserting the entire row will be used."
@@ -261,7 +251,7 @@ msgstr ""
 "Если выделена только одна ячейка, будет использоваться режим вставки в точке "
 "выделения, иначе задействуется альтернативный режим вставки целой строки."
 
-#: ../../source/using-application.rst:115
+#: ../../source/using-application.rst:113
 msgid ""
 "If you want to replace an existing row, you must first select it by clicking "
 "on the row selector (first column). Otherwise it will be inserted at the end "
@@ -271,11 +261,11 @@ msgstr ""
 "её, кликнув по селектору строки (первый столбец). В противном случае она "
 "будет вставлена в конец таблицы."
 
-#: ../../source/using-application.rst:121
+#: ../../source/using-application.rst:119
 msgid "Removing rows"
 msgstr "Удаление строк"
 
-#: ../../source/using-application.rst:123
+#: ../../source/using-application.rst:121
 msgid ""
 "You can select and remove one or more rows by using the **Edit** -- "
 "**Delete** menu item, the **Delete** context menu item or the **Shift+Del** :"
@@ -285,36 +275,36 @@ msgstr ""
 "**Правка** -- **Удалить**, пункта **Удалить** контекстного меню, либо :ref:"
 "`клавиатурной комбинацией <usage-hotkeys>` **Shift+Del**."
 
-#: ../../source/using-application.rst:129
+#: ../../source/using-application.rst:127
 msgid "Hotkeys"
 msgstr "Клавиатурные комбинации"
 
-#: ../../source/using-application.rst:131
+#: ../../source/using-application.rst:129
 msgid "Hotkeys can be used to control the application."
 msgstr "Для работы с программой могут быть использованы \"горячие клавиши\"."
 
-#: ../../source/using-application.rst:133
+#: ../../source/using-application.rst:131
 msgid "Currently supported keyboard combinations:"
 msgstr "В настоящее время поддерживаются следующие клавиатурные комбинации:"
 
-#: ../../source/using-application.rst:135
+#: ../../source/using-application.rst:133
 msgid "**F1** -- show offline help;"
 msgstr "**F1** -- показать справочную систему;"
 
-#: ../../source/using-application.rst:136
+#: ../../source/using-application.rst:134
 msgid "**F5** -- :ref:`reload <usage-reload>` the Hosts file from disk;"
 msgstr "**F5** -- :ref:`перечитать <usage-reload>` файл Hosts с диска;"
 
-#: ../../source/using-application.rst:137
+#: ../../source/using-application.rst:135
 msgid "**Ctrl+S** -- :ref:`save <usage-save>` the Hosts file to disk;"
 msgstr ""
 "**Ctrl+S** -- :ref:`сохранить <usage-save>` изменения в файле Hosts на диск;"
 
-#: ../../source/using-application.rst:138
+#: ../../source/using-application.rst:136
 msgid "**Ctrl+Q** -- quit application;"
 msgstr "**Ctrl+Q** -- выйти из программы;"
 
-#: ../../source/using-application.rst:139
+#: ../../source/using-application.rst:137
 msgid ""
 "**Ctrl+X** -- :ref:`cut <usage-clipboard-cut>` the selected cell data to the "
 "clipboard;"
@@ -322,7 +312,7 @@ msgstr ""
 "**Ctrl+X** -- :ref:`вырезать <usage-clipboard-cut>` содержимое выделенных "
 "ячеек в буфер обмена;"
 
-#: ../../source/using-application.rst:140
+#: ../../source/using-application.rst:138
 msgid ""
 "**Ctrl+C** -- :ref:`copy <usage-clipboard-copy>` the selected cell data to "
 "the clipboard;"
@@ -330,7 +320,7 @@ msgstr ""
 "**Ctrl+C** -- :ref:`скопировать <usage-clipboard-copy>` содержимое "
 "выделенных ячеек в буфер обмена;"
 
-#: ../../source/using-application.rst:141
+#: ../../source/using-application.rst:139
 msgid ""
 "**Ctrl+V** -- :ref:`paste <usage-clipboard-paste>` data from the clipboard "
 "to the selected cell or row;"
@@ -338,7 +328,7 @@ msgstr ""
 "**Ctrl+V** -- :ref:`вставить <usage-clipboard-paste>` содержимое буфера "
 "обмена в выделенную ячейку или строку;"
 
-#: ../../source/using-application.rst:142
+#: ../../source/using-application.rst:140
 msgid "**Shift+Del** -- :ref:`remove <usage-remove>` the selected rows."
 msgstr ""
 "**Shift+Del** -- :ref:`удалить <usage-remove>` выделенные строки целиком."
