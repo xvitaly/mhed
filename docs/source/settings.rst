@@ -16,7 +16,7 @@ Common settings
 ==========================================
 
   * **Confirm exit** -- enable or disable exit confirmation dialog.
-  * **Preserve form size and location** -- if enabled, will automatically save and restore the window size and screen location.
+  * **Preserve form size and location** -- enable or disable preserving the state, size, and position of the main form.
 
 .. index:: settings, advanced settings, additional settings
 .. _settings-advanced:
