@@ -19,3 +19,4 @@ set BUILDLANG=ru
 call "..\..\docs\make.cmd" htmlhelp
 "%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\..\docs\build\htmlhelp\mhed_ru.hhp" & exit /b 1 | exit /b 0
 move "..\..\docs\build\htmlhelp\mhed_ru.chm" "..\..\src\mhed\bin\Release\help\mhed_ru.chm"
+del /S /Q "..\..\docs\source\locale\ru\LC_MESSAGES\*.mo" >nul
