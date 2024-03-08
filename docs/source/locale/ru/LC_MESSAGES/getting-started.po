@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 05:04+0100\n"
-"PO-Revision-Date: 2024-03-02 05:05+0100\n"
+"PO-Revision-Date: 2024-03-08 12:39+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -158,7 +158,7 @@ msgstr ""
 
 #: ../../source/getting-started.rst:68
 msgid "Logs -- ``%LOCALAPPDATA%\\mhed\\logs``."
-msgstr "Журналы работы -- ``%LOCALAPPDATA%\\mhed``."
+msgstr "Журналы работы -- ``%LOCALAPPDATA%\\mhed\\logs``."
 
 #: ../../source/getting-started.rst:74
 msgid "Uninstalling program"
