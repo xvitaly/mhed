@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 05:04+0100\n"
-"PO-Revision-Date: 2024-03-08 12:39+0100\n"
+"POT-Creation-Date: 2024-03-09 09:37+0100\n"
+"PO-Revision-Date: 2024-03-09 09:39+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -129,10 +129,10 @@ msgstr "создание графического интерфейса поль�
 
 #: ../../source/getting-started.rst:56
 msgid ""
-"working with updates, if enabled in :ref:`Advanced settings <settings-"
+"working with updates, if enabled in :ref:`advanced settings <settings-"
 "advanced>`."
 msgstr ""
-"работа с обновлениями, если это разрешено в :ref:`Расширенных настройках "
+"работа с обновлениями, если это разрешено в :ref:`расширенных настройках "
 "<settings-advanced>`."
 
 #: ../../source/getting-started.rst:58
