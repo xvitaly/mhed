@@ -120,6 +120,20 @@ Removing rows
 
 You can select and remove one or more rows by using the **Edit** -- **Delete** menu item, the **Delete** context menu item or the **Shift+Del** :ref:`hotkey <usage-hotkeys>`.
 
+.. index:: status bar
+.. _usage-status:
+
+Status bar
+=======================
+
+The status bar displays the following:
+
+  * full path to the active Hosts file. Click to show it in the default file manager;
+  * current operating mode:
+
+    * **R/O** -- read-only. Click to restart the program with administrator rights.
+    * **R/W** -- read and write.
+
 .. index:: keys, hotkeys, keyboard
 .. _usage-hotkeys:
 

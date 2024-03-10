@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-03 10:28+0100\n"
-"PO-Revision-Date: 2024-03-03 10:29+0100\n"
+"POT-Creation-Date: 2024-03-10 16:05+0100\n"
+"PO-Revision-Date: 2024-03-10 16:05+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -276,35 +276,66 @@ msgstr ""
 "`клавиатурной комбинацией <usage-hotkeys>` **Shift+Del**."
 
 #: ../../source/using-application.rst:127
+msgid "Status bar"
+msgstr "Строка состояния"
+
+#: ../../source/using-application.rst:129
+msgid "The status bar displays the following:"
+msgstr "В строке состояния отображается следующая информация:"
+
+#: ../../source/using-application.rst:131
+msgid ""
+"full path to the active Hosts file. Click to show it in the default file "
+"manager;"
+msgstr ""
+"полный путь к активному файлу Hosts. Нажмите, чтобы отобразить его в "
+"файловом менеджере по умолчанию;"
+
+#: ../../source/using-application.rst:132
+msgid "current operating mode:"
+msgstr "текущий режим работы:"
+
+#: ../../source/using-application.rst:134
+msgid ""
+"**R/O** -- read-only. Click to restart the program with administrator rights."
+msgstr ""
+"**R/O** -- только для чтения. Нажмите, чтобы перезапустить программу с "
+"правами администратора."
+
+#: ../../source/using-application.rst:135
+msgid "**R/W** -- read and write."
+msgstr "**R/W** -- чтение и запись."
+
+#: ../../source/using-application.rst:141
 msgid "Hotkeys"
 msgstr "Клавиатурные комбинации"
 
-#: ../../source/using-application.rst:129
+#: ../../source/using-application.rst:143
 msgid "Hotkeys can be used to control the application."
 msgstr "Для работы с программой могут быть использованы \"горячие клавиши\"."
 
-#: ../../source/using-application.rst:131
+#: ../../source/using-application.rst:145
 msgid "Currently supported keyboard combinations:"
 msgstr "В настоящее время поддерживаются следующие клавиатурные комбинации:"
 
-#: ../../source/using-application.rst:133
+#: ../../source/using-application.rst:147
 msgid "**F1** -- show offline help;"
 msgstr "**F1** -- показать справочную систему;"
 
-#: ../../source/using-application.rst:134
+#: ../../source/using-application.rst:148
 msgid "**F5** -- :ref:`reload <usage-reload>` the Hosts file from disk;"
 msgstr "**F5** -- :ref:`перечитать <usage-reload>` файл Hosts с диска;"
 
-#: ../../source/using-application.rst:135
+#: ../../source/using-application.rst:149
 msgid "**Ctrl+S** -- :ref:`save <usage-save>` the Hosts file to disk;"
 msgstr ""
 "**Ctrl+S** -- :ref:`сохранить <usage-save>` изменения в файле Hosts на диск;"
 
-#: ../../source/using-application.rst:136
+#: ../../source/using-application.rst:150
 msgid "**Ctrl+Q** -- quit application;"
 msgstr "**Ctrl+Q** -- выйти из программы;"
 
-#: ../../source/using-application.rst:137
+#: ../../source/using-application.rst:151
 msgid ""
 "**Ctrl+X** -- :ref:`cut <usage-clipboard-cut>` the selected cell data to the "
 "clipboard;"
@@ -312,7 +343,7 @@ msgstr ""
 "**Ctrl+X** -- :ref:`вырезать <usage-clipboard-cut>` содержимое выделенных "
 "ячеек в буфер обмена;"
 
-#: ../../source/using-application.rst:138
+#: ../../source/using-application.rst:152
 msgid ""
 "**Ctrl+C** -- :ref:`copy <usage-clipboard-copy>` the selected cell data to "
 "the clipboard;"
@@ -320,7 +351,7 @@ msgstr ""
 "**Ctrl+C** -- :ref:`скопировать <usage-clipboard-copy>` содержимое "
 "выделенных ячеек в буфер обмена;"
 
-#: ../../source/using-application.rst:139
+#: ../../source/using-application.rst:153
 msgid ""
 "**Ctrl+V** -- :ref:`paste <usage-clipboard-paste>` data from the clipboard "
 "to the selected cell or row;"
@@ -328,7 +359,7 @@ msgstr ""
 "**Ctrl+V** -- :ref:`вставить <usage-clipboard-paste>` содержимое буфера "
 "обмена в выделенную ячейку или строку;"
 
-#: ../../source/using-application.rst:140
+#: ../../source/using-application.rst:154
 msgid "**Shift+Del** -- :ref:`remove <usage-remove>` the selected rows."
 msgstr ""
 "**Shift+Del** -- :ref:`удалить <usage-remove>` выделенные строки целиком."
