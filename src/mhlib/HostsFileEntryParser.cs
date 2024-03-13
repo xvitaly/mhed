@@ -60,7 +60,7 @@ namespace mhed.lib
             }
             catch (Exception Ex)
             {
-                if (TryParse) { return null; } else { throw Ex; }
+                if (TryParse) { return null; } else { throw; }
             }
         }
 
