@@ -58,7 +58,7 @@ namespace mhed.lib
             {
                 return new HostsFileEntryParser(Value.Substring(0, SpaceIndex), CommentIndex > SpaceIndex ? Value.Substring(SpaceIndex + 1, CommentIndex - SpaceIndex - 2) : Value.Remove(0, SpaceIndex + 1), CommentIndex > 0 ? Value.Substring(CommentIndex + 1).Trim() : string.Empty);
             }
-            catch (Exception Ex)
+            catch
             {
                 if (TryParse) { return null; } else { throw; }
             }
