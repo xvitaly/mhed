@@ -96,12 +96,9 @@ namespace mhed.lib
                 while (OpenedHosts.Peek() >= 0)
                 {
                     string ImpStr = StringsManager.CleanString(await OpenedHosts.ReadLineAsync());
-                    if (HostsFileEntryParser.TryParse(ImpStr, out HostsFileEntryParser Parser))
+                    if (HostsFileEntryParser.TryParse(ImpStr, out HostsFileEntryParser Parser) && IPAddress.TryParse(Parser.IP, out IPAddress IP) && Hostname.TryParse(Parser.Host, out Hostname Host))
                     {
-                        if (IPAddress.TryParse(Parser.IP, out IPAddress IP) && Hostname.TryParse(Parser.Host, out Hostname Host))
-                        {
-                            Contents.Add(new HostsFileEntry(IP, Host, Parser.Comment));
-                        }
+                        Contents.Add(new HostsFileEntry(IP, Host, Parser.Comment));
                     }
                 }
             }
