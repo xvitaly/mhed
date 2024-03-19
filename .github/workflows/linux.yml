@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Fetching sources
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Updating apt package metadata
       run: |
         sudo apt-get update
