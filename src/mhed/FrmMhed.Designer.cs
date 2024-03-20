@@ -61,6 +61,7 @@
             this.HE_MenuEncodingUnicodeItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuShowHelpItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HE_MenuShowPrivacyPolicyItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuSeparator3Item = new System.Windows.Forms.ToolStripSeparator();
             this.HE_MenuCheckForUpdatesItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HE_MenuReportItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -311,6 +312,7 @@
             // 
             this.HE_MenuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HE_MenuShowHelpItem,
+            this.HE_MenuShowPrivacyPolicyItem,
             this.HE_MenuSeparator3Item,
             this.HE_MenuCheckForUpdatesItem,
             this.HE_MenuReportItem,
@@ -325,6 +327,12 @@
             this.HE_MenuShowHelpItem.Name = "HE_MenuShowHelpItem";
             resources.ApplyResources(this.HE_MenuShowHelpItem, "HE_MenuShowHelpItem");
             this.HE_MenuShowHelpItem.Click += new System.EventHandler(this.HE_MenuShowHelpItem_Click);
+            // 
+            // HE_MenuShowPrivacyPolicyItem
+            // 
+            this.HE_MenuShowPrivacyPolicyItem.Name = "HE_MenuShowPrivacyPolicyItem";
+            resources.ApplyResources(this.HE_MenuShowPrivacyPolicyItem, "HE_MenuShowPrivacyPolicyItem");
+            this.HE_MenuShowPrivacyPolicyItem.Click += new System.EventHandler(this.HE_MenuShowPrivacyPolicyItem_Click);
             // 
             // HE_MenuSeparator3Item
             // 
@@ -553,5 +561,6 @@
         private System.Windows.Forms.ToolStripMenuItem HE_MenuEncodingItem;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuEncodingDefaultItem;
         private System.Windows.Forms.ToolStripMenuItem HE_MenuEncodingUnicodeItem;
+        private System.Windows.Forms.ToolStripMenuItem HE_MenuShowPrivacyPolicyItem;
     }
 }

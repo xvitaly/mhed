@@ -175,4 +175,7 @@
   <data name="AppDownloadUserAgent" xml:space="preserve">
     <value>wget</value>
   </data>
+  <data name="AppPrivacyPolicyPageName" xml:space="preserve">
+    <value>privacy.html</value>
+  </data>
 </root>

@@ -256,6 +256,12 @@
   <data name="HE_MenuShowHelpItem.Text" xml:space="preserve">
     <value>Справочн&amp;ая система</value>
   </data>
+  <data name="HE_MenuShowPrivacyPolicyItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 22</value>
+  </data>
+  <data name="HE_MenuShowPrivacyPolicyItem.Text" xml:space="preserve">
+    <value>&amp;Конфиденциальность</value>
+  </data>
   <data name="HE_MenuSeparator3Item.Size" type="System.Drawing.Size, System.Drawing">
     <value>213, 6</value>
   </data>

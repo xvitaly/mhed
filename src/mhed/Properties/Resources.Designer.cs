@@ -115,6 +115,15 @@ namespace mhed.gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to privacy.html.
+        /// </summary>
+        internal static string AppPrivacyPolicyPageName {
+            get {
+                return ResourceManager.GetString("AppPrivacyPolicyPageName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap IconCopy {

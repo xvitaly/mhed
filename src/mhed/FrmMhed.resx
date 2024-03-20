@@ -360,6 +360,12 @@
   <data name="HE_MenuShowHelpItem.Text" xml:space="preserve">
     <value>Sh&amp;ow help</value>
   </data>
+  <data name="HE_MenuShowPrivacyPolicyItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 22</value>
+  </data>
+  <data name="HE_MenuShowPrivacyPolicyItem.Text" xml:space="preserve">
+    <value>&amp;Privacy policy</value>
+  </data>
   <data name="HE_MenuSeparator3Item.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 6</value>
   </data>
@@ -1366,6 +1372,12 @@
     <value>HE_MenuShowHelpItem</value>
   </data>
   <data name="&gt;&gt;HE_MenuShowHelpItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuShowPrivacyPolicyItem.Name" xml:space="preserve">
+    <value>HE_MenuShowPrivacyPolicyItem</value>
+  </data>
+  <data name="&gt;&gt;HE_MenuShowPrivacyPolicyItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HE_MenuSeparator3Item.Name" xml:space="preserve">

@@ -595,16 +595,17 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Show offline help.
+        /// Show offline help with specified page name to display.
         /// </summary>
-        private void HelperShowHelp()
+        /// <param name="PageName">Page name to display.</param>
+        private void HelperShowHelp(string PageName)
         {
             try
             {
                 string CHMFile = Path.Combine(App.FullAppPath, Properties.Resources.AppHelpDirectory, string.Format(Properties.Resources.AppHelpFileName, AppStrings.AHE_LangPrefix));
                 if (File.Exists(CHMFile))
                 {
-                    Help.ShowHelp(this, CHMFile);
+                    if (string.IsNullOrEmpty(PageName)) { Help.ShowHelp(this, CHMFile); } else { Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, PageName); }
                 }
                 else
                 {
@@ -616,6 +617,14 @@ namespace mhed.gui
                 Logger.Warn(Ex, DebugStrings.AppDbgExHelpShow);
                 MessageBox.Show(AppStrings.AHE_ShowHelpError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        /// <summary>
+        /// Show offline help.
+        /// </summary>
+        private void HelperShowHelp()
+        {
+            HelperShowHelp(string.Empty);
         }
 
         /// <summary>
@@ -1042,6 +1051,16 @@ namespace mhed.gui
         private void HE_MenuShowHelpItem_Click(object sender, EventArgs e)
         {
             HelperShowHelp();
+        }
+
+        /// <summary>
+        /// "Privacy policy" menu item event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void HE_MenuShowPrivacyPolicyItem_Click(object sender, EventArgs e)
+        {
+            HelperShowHelp(Properties.Resources.AppPrivacyPolicyPageName);
         }
 
         /// <summary>
