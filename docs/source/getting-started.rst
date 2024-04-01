@@ -9,7 +9,7 @@
 Getting started
 *******************************
 
-.. index:: getting started, starting program, launching application
+.. index:: starting program, launching application
 .. _gs-launch:
 
 Starting program

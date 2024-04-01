@@ -9,7 +9,7 @@
 Development
 **********************************
 
-.. index:: development, building from sources
+.. index:: building from sources
 .. _building-from-sources:
 
 Building from sources
@@ -79,7 +79,7 @@ If the InnoSetup will complain about missing ``*.sig`` files, you will need to m
 
 You will find results in the ``packaging/results`` directory.
 
-.. index:: development, update, database, updates database
+.. index:: updates database
 .. _updates-database:
 
 Updates database documentation

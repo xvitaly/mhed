@@ -9,7 +9,7 @@
 Using application
 ************************************
 
-.. index:: hosts editor, working with hosts editor, editing hosts file
+.. index:: working with hosts editor, editing hosts file
 .. _usage-edit:
 
 Editing Hosts file
@@ -25,7 +25,7 @@ To edit the contents of a cell, double-click on it or simply start typing a new 
 
 If you want to edit Hosts file as a plain text file, click **Open in text editor** in the **Advanced** menu. The file will be loaded with a :ref:`selected <settings-advanced>` (or system default) text editor.
 
-.. index:: hosts editor, reloading hosts file, refreshing hosts file
+.. index:: reloading hosts file, refreshing hosts file
 .. _usage-reload:
 
 Reloading Hosts file
@@ -35,7 +35,7 @@ Click the **Refresh** button on the main toolbar, or press **F5** button on your
 
 Any unsaved changes will be lost.
 
-.. index:: hosts editor, saving hosts file
+.. index:: saving hosts file
 .. _usage-save:
 
 Saving Hosts file
@@ -43,7 +43,7 @@ Saving Hosts file
 
 Click the **Save** button on the main toolbar, or press **Ctrl + S** key combination on your keyboard to save the Hosts file to disk.
 
-.. index:: hosts editor, importing hosts file
+.. index:: importing hosts file
 .. _usage-import:
 
 Importing Hosts file entries
@@ -55,7 +55,7 @@ Select a text file using the standard OS dialog and click the **Open** button.
 
 Only one file can be imported at once with an unlimited number of entries.
 
-.. index:: hosts editor, exporting hosts file
+.. index:: exporting hosts file
 .. _usage-export:
 
 Exporting Hosts file entries
@@ -65,7 +65,7 @@ If you want to export entries to external file, you can use the **File** -- **Ex
 
 Select a text file using the standard OS dialog and click the **Save** button.
 
-.. index:: hosts editor, hosts file encoding
+.. index:: hosts file encoding
 .. _usage-encoding:
 
 Hosts file encoding
@@ -80,7 +80,7 @@ You can select the preferred encoding from the **Advanced** -- **File encoding**
 
 This setting will affect all actions and will persist between program runs.
 
-.. index:: clipboard, cut to clipboard
+.. index:: cut to clipboard
 .. _usage-clipboard-cut:
 
 Cut to clipboard
@@ -90,7 +90,7 @@ You can select and cut any entries to the clipboard by using the **Edit** -- **C
 
 The data will be copied as tab-delimited plain text, removed from the table, and can be pasted into any application.
 
-.. index:: clipboard, copy to clipboard
+.. index:: copy to clipboard
 .. _usage-clipboard-copy:
 
 Copy to clipboard
@@ -100,7 +100,7 @@ You can select and copy any entries to the clipboard by using the **Edit** -- **
 
 The data will be copied as a tab-delimited plain text, and can be pasted into any application.
 
-.. index:: clipboard, paste from clipboard
+.. index:: paste from clipboard
 .. _usage-clipboard-paste:
 
 Paste from clipboard
@@ -134,7 +134,7 @@ The status bar displays the following:
     * **R/O** -- read-only. Click to restart the program with administrator rights.
     * **R/W** -- read and write.
 
-.. index:: keys, hotkeys, keyboard
+.. index:: hotkeys, keyboard keys
 .. _usage-hotkeys:
 
 Hotkeys

@@ -9,7 +9,7 @@
 Legal
 **********************************
 
-.. index:: icons, licensing, legal
+.. index:: icons licensing
 .. _legal-icons:
 
 Icons licensing
@@ -26,7 +26,7 @@ Icons licensing
     "upd_err.png", "Designkindle", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/cross-icon-40924.html>`__"
     "upd_nx.png", "PixelMixer", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/tick-11638.html>`__"
 
-.. index:: libraries, licensing, legal
+.. index:: libraries licensing
 .. _legal-libraries:
 
 Libraries licensing
@@ -37,7 +37,7 @@ Libraries licensing
 
     "NLog", "Dynamic (shared)", "`BSD <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__", "`GitHub page <https://github.com/NLog/NLog>`__"
 
-.. index:: trademarks, legal
+.. index:: trademarks
 .. _legal-trademarks:
 
 Trademarks

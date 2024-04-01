@@ -9,7 +9,7 @@
 Program settings
 *******************************
 
-.. index:: settings, main settings, generic settings, common settings
+.. index:: main settings, generic settings, common settings
 .. _settings-main:
 
 Common settings
@@ -18,7 +18,7 @@ Common settings
   * **Confirm exit** -- enable or disable exit confirmation dialog.
   * **Preserve form size and location** -- enable or disable preserving the state, size, and position of the main form.
 
-.. index:: settings, advanced settings, additional settings
+.. index:: advanced settings, additional settings
 .. _settings-advanced:
 
 Advances settings
