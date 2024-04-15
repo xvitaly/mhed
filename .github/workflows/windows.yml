@@ -22,7 +22,7 @@ jobs:
     - name: Fetching sources
       uses: actions/checkout@v4
     - name: Configuring MSBuild service
-      uses: microsoft/setup-msbuild@v1.3
+      uses: microsoft/setup-msbuild@v2
     - name: Restoring dependencies with NuGet
       run: |
         nuget restore mhed.sln
