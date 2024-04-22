@@ -90,17 +90,35 @@ namespace mhed.lib
         void RestartApplicationAsAdmin();
 
         /// <summary>
+        /// Start the required application as an administrator with the specified
+        /// command-line arguments.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <param name="Arguments">Command-line arguments.</param>
+        /// <returns>PID of the newly created process.</returns>
+        int StartElevatedProcess(string FileName, string Arguments);
+
+        /// <summary>
+        /// Start the required application as an administrator.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <returns>PID of the newly created process.</returns>
+        int StartElevatedProcess(string FileName);
+
+        /// <summary>
+        /// Start the required application as the current user with the specified
+        /// command-line arguments.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <param name="Arguments">Command-line arguments.</param>
+        /// <returns>PID of the newly created process.</returns>
+        int StartRegularProcess(string FileName, string Arguments);
+
+        /// <summary>
         /// Start the required application as the current user.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
         /// <returns>PID of the newly created process.</returns>
         int StartRegularProcess(string FileName);
-
-        /// <summary>
-        /// Start the required application from administrator.
-        /// </summary>
-        /// <param name="FileName">Full path to the executable.</param>
-        /// <returns>PID of the newly created process.</returns>
-        int StartElevatedProcess(string FileName);
     }
 }

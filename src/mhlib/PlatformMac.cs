@@ -39,27 +39,16 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Start the required application from administrator.
+        /// Start the required application as an administrator with the specified
+        /// command-line arguments.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
+        /// <param name="Arguments">Command-line arguments.</param>
         /// <returns>PID of the newly created process.</returns>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
-        public override int StartElevatedProcess(string FileName)
+        public override int StartElevatedProcess(string FileName, string Arguments)
         {
-            // Setting advanced properties...
-            ProcessStartInfo ST = new ProcessStartInfo
-            {
-                FileName = FileName,
-                Verb = "sudo",
-                WindowStyle = ProcessWindowStyle.Normal,
-                UseShellExecute = true
-            };
-
-            // Starting process...
-            Process NewProcess = Process.Start(ST);
-
-            // Returning PID of created process...
-            return NewProcess.Id;
+            return StartElevatedProcess(FileName, Arguments, "sudo");
         }
 
         /// <summary>
