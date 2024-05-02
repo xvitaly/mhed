@@ -4,13 +4,13 @@ This document describes how you can contribute to Micro Hosts Editor. Please rea
 
 ## Issues
 
-Feel free to open issues and [report bugs](https://github.com/xvitaly/mhed/issues/new?template=bug-report.md) or ask for [feature requests](https://github.com/xvitaly/mhed/issues/new?template=feature-request.md).
+Feel free to open issues, [report bugs](https://github.com/xvitaly/mhed/issues/new?template=bug-report.yml), [request new features](https://github.com/xvitaly/mhed/issues/new?template=feature-request.yml), or [ask questions](https://github.com/xvitaly/mhed/issues/new?template=question.yml) about our project.
 
 ## Pull requests
 
- 1. Create your own fork by pressing **Fork** button.
+ 1. Create your own fork by clicking the **Fork** button.
  
- 2. Clone your repository
+ 2. Clone your repository:
  ```bash
  git clone git@github.com:YOURNAME/mhed.git
  ```
@@ -25,29 +25,29 @@ Feel free to open issues and [report bugs](https://github.com/xvitaly/mhed/issue
  git add . && git commit -sm "Full description of your changes"
  ```
  
- 5. Add upstream as a [remote repository](https://help.github.com/articles/configuring-a-remote-for-a-fork/):
+ 5. Add the upstream as a [remote repository](https://help.github.com/articles/configuring-a-remote-for-a-fork/):
  ```bash
  git remote add upstream https://github.com/xvitaly/mhed.git
  ```
  
- 6. Fetch upstream changes and [sync](https://help.github.com/articles/syncing-a-fork/) your fork's `master` branch with it:
+ 6. Fetch changes from the upstream and [sync](https://help.github.com/articles/syncing-a-fork/) your fork's `master` branch with it:
  ```bash
  git fetch upstream
  git checkout master
  git merge upstream/master
  ```
  
- 7. Rebase your feature branch to updated `master`:
+ 7. Rebase your feature branch to the updated `master`:
  ```bash
  git checkout new_feature
  git rebase master
  ```
  
- 8. Squash all your commits into a single one and open a new pull request.
+ 8. Squash all your commits into one and open a new pull request.
 
 ### Signing off your work
 
-Don't forget to sign off your work by using `git commit -s`:
+Don't forget to sign off your work using `git commit -s`:
 ```
 Signed-off-by: Name Surname <username@example.org>
 ```
@@ -59,6 +59,6 @@ We cannot accept pull requests with commits without this signature.
   * Don't mix different line endings.
   * Don't upload any binary files to repository (*.dll, *.exe, etc.).
   * Don't add and upload any temporary files.
-  * Use only latest version of Visual Studio 2019 IDE.
-  * Don't use any libraries incompatible with [GNU GPL v3 license](../COPYING).
+  * Use only the latest version of Visual Studio IDE.
+  * Don't use any libraries incompatible with [current license](../COPYING).
   * Use only NuGet to add new libraries to project.
