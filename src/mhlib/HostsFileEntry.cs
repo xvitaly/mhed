@@ -24,7 +24,7 @@ namespace mhed.lib
         public Hostname Hostname { get; set; }
 
         /// <summary>
-        /// Get or set entry commentary.
+        /// Get or set entry comment.
         /// </summary>
         public string Comment { get; set; }
 
@@ -38,7 +38,7 @@ namespace mhed.lib
         /// </summary>
         /// <param name="IP">IP address.</param>
         /// <param name="Host">Associated hostname.</param>
-        /// <param name="Comm">Entry commentary.</param>
+        /// <param name="Comm">Entry comment.</param>
         public HostsFileEntry(IPAddress IP, Hostname Host, string Comm)
         {
             IPAddr = IP;
@@ -51,7 +51,7 @@ namespace mhed.lib
         /// </summary>
         /// <param name="IP">IP address in string format.</param>
         /// <param name="Host">Associated hostname.</param>
-        /// <param name="Comm">Entry commentary.</param>
+        /// <param name="Comm">Entry comment.</param>
         public HostsFileEntry(string IP, string Host, string Comm)
         {
             IPAddr = IPAddress.Parse(IP);

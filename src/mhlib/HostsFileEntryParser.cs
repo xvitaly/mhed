@@ -24,7 +24,7 @@ namespace mhed.lib
         public string Host { get; private set; }
 
         /// <summary>
-        /// Gets or sets commentary as a string.
+        /// Gets or sets comment as a string.
         /// </summary>
         public string Comment { get; private set; }
 
@@ -92,7 +92,7 @@ namespace mhed.lib
         /// </summary>
         /// <param name="IPStr">IP address field as a string.</param>
         /// <param name="HostStr">Hostname field as a string.</param>
-        /// <param name="CommentStr">Commentary field as a string.</param>
+        /// <param name="CommentStr">Comment field as a string.</param>
         private HostsFileEntryParser(string IPStr, string HostStr, string CommentStr)
         {
             IP = IPStr;

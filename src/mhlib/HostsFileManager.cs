@@ -57,7 +57,7 @@ namespace mhed.lib
         /// </summary>
         /// <param name="IP">IP address.</param>
         /// <param name="Host">Associated hostname.</param>
-        /// <param name="Comm">Entry commentary.</param>
+        /// <param name="Comm">Entry comment.</param>
         public void AddEntry(IPAddress IP, Hostname Host, string Comm)
         {
             Contents.Add(new HostsFileEntry(IP, Host, Comm));
