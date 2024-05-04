@@ -878,7 +878,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_ModelView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            if ((e.Context & DataGridViewDataErrorContexts.Commit) != 0)
+            if (e.Context.HasFlag(DataGridViewDataErrorContexts.Commit))
             {
                 switch (e.ColumnIndex)
                 {
