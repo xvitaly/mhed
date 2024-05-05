@@ -267,4 +267,7 @@
   <data name="AHE_ClipboardFormatError" xml:space="preserve">
     <value>Не удалось вставить строки из буфера обмена из-за неправильного формата!</value>
   </data>
+  <data name="AHE_IncorrectComment" xml:space="preserve">
+    <value>Введён недействительный комментарий!</value>
+  </data>
 </root>

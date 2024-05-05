@@ -267,4 +267,7 @@
   <data name="AHE_ClipboardFormatError" xml:space="preserve">
     <value>Failed to paste rows from the clipboard due to a format error!</value>
   </data>
+  <data name="AHE_IncorrectComment" xml:space="preserve">
+    <value>Incorrect comment entered!</value>
+  </data>
 </root>

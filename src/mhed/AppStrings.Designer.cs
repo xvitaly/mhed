@@ -241,6 +241,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect comment entered!.
+        /// </summary>
+        internal static string AHE_IncorrectComment {
+            get {
+                return ResourceManager.GetString("AHE_IncorrectComment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Incorrect hostname entered!.
         /// </summary>
         internal static string AHE_IncorrectHostname {
