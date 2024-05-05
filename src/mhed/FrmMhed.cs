@@ -888,6 +888,9 @@ namespace mhed.gui
                     case 1:
                         MessageBox.Show(AppStrings.AHE_IncorrectHostname, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         break;
+                    case 2:
+                        MessageBox.Show(AppStrings.AHE_IncorrectComment, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        break;
                     default:
                         Logger.Warn(DebugStrings.AppDbgModelViewColumnIndexOutOfRange);
                         break;
