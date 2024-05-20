@@ -70,11 +70,6 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Get full path to Nlog's directory for storing log files.
-        /// </summary>
-        public static string LogDirectoryPath => Path.GetDirectoryName(LogFileName);
-
-        /// <summary>
         /// Get application name from the resource section of calling assembly.
         /// </summary>
         public static string AppProduct
