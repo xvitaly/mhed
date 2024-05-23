@@ -634,10 +634,9 @@ namespace mhed.gui
         {
             try
             {
-                string LogFileName = CurrentApp.LogFileName;
-                if (File.Exists(LogFileName))
+                if (File.Exists(App.AppLogFile))
                 {
-                    if (ModifierKeys == Keys.Shift) { HelperShowFile(LogFileName); } else { HelperTextEditor(LogFileName); }
+                    if (ModifierKeys == Keys.Shift) { HelperShowFile(App.AppLogFile); } else { HelperTextEditor(App.AppLogFile); }
                 }
                 else
                 {

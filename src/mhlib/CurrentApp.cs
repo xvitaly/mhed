@@ -33,6 +33,11 @@ namespace mhed.lib
         public string AppUserDir { get; private set; }
 
         /// <summary>
+        /// Get full path to the active log file.
+        /// </summary>
+        public string AppLogFile { get; private set; }
+
+        /// <summary>
         /// Get full path to the local updates directory.
         /// </summary>
         public string AppUpdateDir { get; private set; }
@@ -51,23 +56,6 @@ namespace mhed.lib
         /// Returns if the application is launched with administrator rights.
         /// </summary>
         public bool IsAdmin { get; private set; }
-
-        /// <summary>
-        /// Get information about hardware architecture.
-        /// </summary>
-        private string SystemArch => Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
-
-        /// <summary>
-        /// Get full path to Nlog active log file.
-        /// </summary>
-        public static string LogFileName
-        {
-            get
-            {
-                NLog.Targets.FileTarget LogTarget = (NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("logfile");
-                return Path.GetFullPath(LogTarget.FileName.Render(new LogEventInfo()));
-            }
-        }
 
         /// <summary>
         /// Get application name from the resource section of calling assembly.
@@ -116,6 +104,28 @@ namespace mhed.lib
         public static string AssemblyLocation => Assembly.GetEntryAssembly().Location;
 
         /// <summary>
+        /// Get information about hardware architecture.
+        /// </summary>
+        private string SystemArch => Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
+
+        /// <summary>
+        /// Get the full path to the active application's log file.
+        /// </summary>
+        /// <returns>Full path to the active log file.</returns>
+        private string GetLogFileName()
+        {
+            try
+            {
+                NLog.Targets.FileTarget LogTarget = (NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("logfile");
+                return Path.GetFullPath(LogTarget.FileName.Render(new LogEventInfo()));
+            }
+            catch
+            {
+                return Path.Combine(AppUserDir, Properties.Resources.LogLocalDir, Properties.Resources.LogMainFile);
+            }
+        }
+
+        /// <summary>
         /// CurrentApp class constructor.
         /// </summary>
         /// <param name="IsPortable">Enable portable mode (with settings in the same directory as executable).</param>
@@ -125,16 +135,17 @@ namespace mhed.lib
             // Getting information about operating system and platform...
             Platform = CurrentPlatform.Create();
 
+            // Checking for local administrator rights...
+            IsAdmin = ProcessManager.IsCurrentUserAdmin();
+
             // Getting full path to application installation directory...
             FullAppPath = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
 
             // Getting full to application user directory...
             AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), Properties.Resources.PortableLocalDir) : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName);
 
-            // Checking admininstrator rights...
-            IsAdmin = ProcessManager.IsCurrentUserAdmin();
-
-            // Getting full path to application local updates directory...
+            // Getting full paths to local application directories...
+            AppLogFile = GetLogFileName();
             AppUpdateDir = Path.Combine(AppUserDir, Properties.Resources.UpdateLocalDir);
 
             // Checking if user directory exists. If not - creating it...

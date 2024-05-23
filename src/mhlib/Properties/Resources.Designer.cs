@@ -135,6 +135,24 @@ namespace mhed.lib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to logs.
+        /// </summary>
+        internal static string LogLocalDir {
+            get {
+                return ResourceManager.GetString("LogLocalDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to debug.log.
+        /// </summary>
+        internal static string LogMainFile {
+            get {
+                return ResourceManager.GetString("LogMainFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0}_admin.
         /// </summary>
         internal static string MutexAdmin {
