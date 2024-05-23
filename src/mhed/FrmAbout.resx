@@ -262,7 +262,7 @@ Graphics by:
  - GNOME icon artists;
  - PixelMixer.
 
-Micro Hosts Editor's icon by GNOME icon artists. Licensed under the terms of GNU General Public License, version 2 license.
+Micro Hosts Editor's icon by GNOME icon artists. Licensed under the terms of the GPLv2 license.
 
 3rd party libraries (dynamically linked):
  - NLog (BSD license).</value>
@@ -292,7 +292,7 @@ Micro Hosts Editor's icon by GNOME icon artists. Licensed under the terms of GNU
     <value>3</value>
   </data>
   <data name="AHE_License.Text" xml:space="preserve">
-    <value>Licensed under the terms of GNU General Public License version 3 (except for the graphic assets).</value>
+    <value>Provided under the terms of the GPLv3+ license. The included components may use a variety of other licenses.</value>
   </data>
   <data name="&gt;&gt;AHE_License.Name" xml:space="preserve">
     <value>AHE_License</value>
