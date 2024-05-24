@@ -38,7 +38,7 @@
             // UpdAppImg
             // 
             this.UpdAppImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdAppImg.Image = global::mhed.gui.Properties.Resources.IconUpdateAvailable;
+            this.UpdAppImg.Image = global::mhed.gui.Properties.Resources.IconUpdateChecking;
             resources.ApplyResources(this.UpdAppImg, "UpdAppImg");
             this.UpdAppImg.Name = "UpdAppImg";
             this.UpdAppImg.TabStop = false;
