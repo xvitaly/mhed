@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Micro Hosts Editor 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-19 10:18+0100\n"
-"PO-Revision-Date: 2024-02-19 10:19+0100\n"
+"POT-Creation-Date: 2024-05-25 11:35+0200\n"
+"PO-Revision-Date: 2024-05-25 11:35+0200\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -60,7 +60,45 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/gnome-edit-clear-10--7.html>`__"
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-text-html-11177.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "cut.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "FatCow"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`Creative Commons Attribution 3.0 Unported <https://creativecommons.org/"
+"licenses/by/3.0/legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/cut-red-icon-20784.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "copy.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/page-copy-icon-21541.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "paste.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/page-white-paste-icon-21594."
+"html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -69,7 +107,7 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/gnome-view-refresh-111-4."
+"`IconsPedia <https://www.iconspedia.com/icon/arrow-refresh-icon-20330."
 "html>`__"
 msgstr ""
 
@@ -83,8 +121,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`GNU Lesser General Public License <https://opensource.org/licenses/"
-"LGPL-2.1>`_"
+"`GNU Lesser General Public License, version 2.1 <https://www.gnu.org/"
+"licenses/old-licenses/lgpl-2.1.html>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -105,15 +143,6 @@ msgid "upd_chk.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "FatCow"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_"
-msgstr ""
-
-#: ../../source/legal.rst:1
 msgid "`IconsPedia <https://www.iconspedia.com/icon/update-icon-22163.html>`__"
 msgstr ""
 
@@ -127,8 +156,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/"
-"legalcode>`_"
+"`Creative Commons Attribution Share Alike 3.0 Unported <https://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -147,7 +176,7 @@ msgstr ""
 msgid "`IconsPedia <https://www.iconspedia.com/icon/tick-11638.html>`__"
 msgstr ""
 
-#: ../../source/legal.rst:33
+#: ../../source/legal.rst:36
 msgid "Libraries licensing"
 msgstr "Лицензирование библиотек"
 
@@ -172,22 +201,22 @@ msgid "Dynamic (shared)"
 msgstr "Динамическая (DLL)"
 
 #: ../../source/legal.rst:1
-msgid "`BSD <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__"
+msgid "`New BSD License <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
 msgid "`GitHub page <https://github.com/NLog/NLog>`__"
 msgstr ""
 
-#: ../../source/legal.rst:44
+#: ../../source/legal.rst:47
 msgid "Trademarks"
 msgstr "Торговые марки"
 
-#: ../../source/legal.rst:47
+#: ../../source/legal.rst:50
 msgid "Microsoft"
 msgstr ""
 
-#: ../../source/legal.rst:49
+#: ../../source/legal.rst:52
 msgid ""
 "Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
 "Corporation."
@@ -195,10 +224,10 @@ msgstr ""
 "Microsoft, Windows являются торговыми марками и/или зарегистрированными "
 "торговыми марками Корпорации Microsoft."
 
-#: ../../source/legal.rst:52
+#: ../../source/legal.rst:55
 msgid "Other"
 msgstr "Прочие"
 
-#: ../../source/legal.rst:54
+#: ../../source/legal.rst:57
 msgid "All other trademarks are property of their respective owners."
 msgstr "Все прочие торговые марки являются собственностью их владельцев."

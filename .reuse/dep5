@@ -8,12 +8,12 @@ Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: assets/icons/copy.png
-Copyright: 2007 Microsoft Corporation
-License: CC0-1.0
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/cut.png
-Copyright: 2007 Microsoft Corporation
-License: CC0-1.0
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/delete.png
 Copyright: 2011-2024 EasyCoding Team
@@ -24,16 +24,16 @@ Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: assets/icons/paste.png
-Copyright: 2007 Microsoft Corporation
-License: CC0-1.0
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/redcircle.png
 Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: assets/icons/refresh.png
-Copyright: 2003 GNOME icon artists
-License: GPL-2.0-only
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/save.png
 Copyright: 2011 Everaldo Coelho
@@ -45,15 +45,15 @@ License: LGPL-2.1-only
 
 Files: assets/icons/upd_chk.png
 Copyright: 2011 FatCow
-License: CC-BY-4.0
+License: CC-BY-3.0
 
 Files: assets/icons/upd_err.png
 Copyright: 2011 Designkindle
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/icons/upd_nx.png
 Copyright: 2011 PixelMixer
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/images/applogo.png
 Copyright: 2003 GNOME icon artists
