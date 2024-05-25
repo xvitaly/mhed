@@ -33,6 +33,6 @@ Download the latest version with installer from the Releases page, run the it an
 
 Download the latest version in archive from the Releases page, extract to any directory and then run `mhed.exe`.
 
-## 3rd party libraries
+## Third party libraries
 
   * [NLog](https://github.com/NLog/NLog) (BSD-3-Clause license).
