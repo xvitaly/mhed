@@ -265,7 +265,9 @@ Graphics by:
 Micro Hosts Editor's icon by GNOME icon artists. Licensed under the terms of the GPLv2 license.
 
 3rd party libraries (dynamically linked):
- - NLog (BSD license).</value>
+ - NLog (BSD license).
+
+Additional information about the components used in this project, including the name of the author of each component, full license names, and important links, can be found in the help system on the Legal page.</value>
   </data>
   <data name="&gt;&gt;AHE_Description.Name" xml:space="preserve">
     <value>AHE_Description</value>
