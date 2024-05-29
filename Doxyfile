@@ -319,6 +319,7 @@ COMPACT_RTF            = YES
 RTF_HYPERLINKS         = YES
 RTF_STYLESHEET_FILE    =
 RTF_EXTENSIONS_FILE    =
+RTF_EXTRA_FILES        =
 
 #---------------------------------------------------------------------------
 # Configuration options related to the man page output
