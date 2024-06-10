@@ -15,7 +15,7 @@ Privacy policy
 Version
 ====================
 
-Last update: **2024-01-31**.
+Last update: **2024-05-01**.
 
 .. index:: application privacy policy
 .. _privacy-application:
