@@ -474,9 +474,6 @@
   <metadata name="HE_ModelViewPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="HE_ModelViewPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <metadata name="HE_ModelView.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -541,7 +538,7 @@
     <value>0, 0</value>
   </data>
   <data name="HE_ModelView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 261</value>
+    <value>446, 259</value>
   </data>
   <data name="HE_ModelView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -558,11 +555,14 @@
   <data name="&gt;&gt;HE_ModelView.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="HE_ModelViewPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="HE_ModelViewPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 48</value>
+    <value>0, 49</value>
   </data>
   <data name="HE_ModelViewPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 261</value>
+    <value>446, 259</value>
   </data>
   <data name="HE_ModelViewPanel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>

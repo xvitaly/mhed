@@ -394,8 +394,8 @@
             // 
             // HE_ModelViewPanel
             // 
-            resources.ApplyResources(this.HE_ModelViewPanel, "HE_ModelViewPanel");
             this.HE_ModelViewPanel.Controls.Add(this.HE_ModelView);
+            resources.ApplyResources(this.HE_ModelViewPanel, "HE_ModelViewPanel");
             this.HE_ModelViewPanel.Name = "HE_ModelViewPanel";
             // 
             // HE_ModelView
