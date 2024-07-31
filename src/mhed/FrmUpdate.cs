@@ -224,7 +224,7 @@ namespace mhed.gui
             {
                 if (UpMan.CheckAppUpdate())
                 {
-                    if (Platform.AutoUpdateSupported)
+                    if (Platform.AutoUpdateSupported && !Properties.Settings.Default.IsPortable)
                     {
                         if (InstallBinaryUpdate(UpMan.AppUpdateURL))
                         {
