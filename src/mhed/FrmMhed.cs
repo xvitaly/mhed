@@ -31,20 +31,6 @@ namespace mhed.gui
         private CurrentApp App;
 
         /// <summary>
-        /// Scales controls on current form with some additional hacks applied.
-        /// </summary>
-        /// <param name="ScalingFactor">Scaling factor.</param>
-        /// <param name="ControlBounds">Bounds of the control.</param>
-        protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified ControlBounds)
-        {
-            base.ScaleControl(ScalingFactor, ControlBounds);
-            if (!DpiManager.CompareFloats(Math.Max(ScalingFactor.Width, ScalingFactor.Height), 1.0f))
-            {
-                DpiManager.ScaleColumnsInControl(HE_ModelView, ScalingFactor);
-            }
-        }
-
-        /// <summary>
         /// Create an instance of the CurrentApp class.
         /// </summary>
         private void InitializeApp()
