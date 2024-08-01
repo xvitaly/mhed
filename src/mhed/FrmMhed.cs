@@ -380,6 +380,18 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Copy the contents of the selected cells to the clipboard
+        /// using built-in method.
+        /// </summary>
+        private void HelperCopySelectedCells()
+        {
+            if (HE_ModelView.SelectedCells.Count > 0)
+            {
+                Clipboard.SetDataObject(HE_ModelView.GetClipboardContent());
+            }
+        }
+
+        /// <summary>
         /// Clear the contents of the selected cells.
         /// </summary>
         private void HelperClearSelectedCells()
@@ -400,7 +412,7 @@ namespace mhed.gui
         {
             try
             {
-                Clipboard.SetDataObject(HE_ModelView.GetClipboardContent());
+                HelperCopySelectedCells();
                 HelperClearSelectedCells();
             }
             catch (Exception Ex)
@@ -417,7 +429,7 @@ namespace mhed.gui
         {
             try
             {
-                Clipboard.SetDataObject(HE_ModelView.GetClipboardContent());
+                HelperCopySelectedCells();
             }
             catch (Exception Ex)
             {
