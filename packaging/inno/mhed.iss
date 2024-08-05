@@ -1,11 +1,12 @@
-﻿;
+;
 ; SPDX-FileCopyrightText: 2011-2024 EasyCoding Team
 ;
 ; SPDX-License-Identifier: GPL-3.0-or-later
 ;
 
-#define VERSION GetVersionNumbersString("..\..\src\mhed\bin\Release\mhed.exe")
-#define BASEDIR "..\..\src\mhed"
+#define VERSION      GetVersionNumbersString("..\..\src\mhed\bin\Release\mhed.exe")
+#define BASEDIR      "..\..\src\mhed"
+#define CURRENTYEAR  GetDateTimeString('yyyy','','')
 
 #if GetEnv('CI_HASH') == ''
 #define _RELEASE 1
@@ -14,12 +15,15 @@
 [Setup]
 AppId={{1A3295AB-919E-4E58-B2A3-1B8B9BF8E29D}
 AppName=Micro Hosts Editor
-AppVerName=Micro Hosts Editor
+AppVersion={#VERSION}
+AppVerName=Micro Hosts Editor {#VERSION}
 AppPublisher=EasyCoding Team
 AppPublisherURL=https://www.easycoding.org/
-AppVersion={#VERSION}
 AppSupportURL=https://github.com/xvitaly/mhed/issues
 AppUpdatesURL=https://github.com/xvitaly/mhed/releases
+ShowLanguageDialog=yes
+UsePreviousLanguage=no
+LanguageDetectionMethod=uilanguage
 DefaultDirName={code:GetDefRoot}\Micro Hosts Editor
 DefaultGroupName=Micro Hosts Editor
 AllowNoIcons=yes
@@ -36,8 +40,8 @@ ShowLanguageDialog=auto
 ArchitecturesInstallIn64BitMode=x64
 MinVersion=6.1sp1
 VersionInfoVersion={#VERSION}
-VersionInfoDescription=Micro Hosts Editor Setup
-VersionInfoCopyright=(c) 2011-2024 EasyCoding Team. All rights reserved.
+VersionInfoDescription=Micro Hosts Editor Installer
+VersionInfoCopyright=(c) 2011-{#CURRENTYEAR} EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Messages]
@@ -46,6 +50,7 @@ BeveledLabel=EasyCoding Team
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl,locale\en\cm.isl"; InfoBeforeFile: "locale\en\readme.rtf"
 Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,locale\ru\cm.isl"; InfoBeforeFile: "locale\ru\readme.rtf"
+Name: "italian"; MessagesFile: "compiler:Languages\Italian.isl,locale\it\cm.isl"; InfoBeforeFile: "locale\it\readme.rtf"
 
 [Components]
 Name: "core"; Description: "{cm:CompCoreDesc}"; Types: full compact custom; Flags: fixed
