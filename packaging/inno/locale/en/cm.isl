@@ -11,3 +11,4 @@ CompDebugDesc=Crash reporter data files
 CompLocalesMetaDesc=Localizations
 CompLocaleEnDesc=English (United States)
 CompLocaleRuDesc=Russian (Russian Federation)
+CompLocaleItDesc=Italian
