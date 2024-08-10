@@ -105,6 +105,7 @@ SHOW_NAMESPACES        = YES
 FILE_VERSION_FILTER    =
 LAYOUT_FILE            =
 CITE_BIB_FILES         =
+EXTERNAL_TOOL_PATH     =
 
 #---------------------------------------------------------------------------
 # Configuration options related to warning and progress messages
@@ -266,6 +267,7 @@ DISABLE_INDEX          = NO
 GENERATE_TREEVIEW      = NO
 FULL_SIDEBAR           = NO
 ENUM_VALUES_PER_LINE   = 4
+SHOW_ENUM_VALUES       = NO
 TREEVIEW_WIDTH         = 200
 EXT_LINKS_IN_WINDOW    = NO
 OBFUSCATE_EMAILS       = YES
