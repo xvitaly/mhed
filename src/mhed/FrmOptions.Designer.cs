@@ -137,10 +137,11 @@
             this.Controls.Add(this.MO_Cancel);
             this.Controls.Add(this.MO_Okay);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmOptions";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.FrmOptions_Load);
             this.MO_TC.ResumeLayout(false);
