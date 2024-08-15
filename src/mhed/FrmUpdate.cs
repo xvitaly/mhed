@@ -69,14 +69,6 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Set time of last application update check.
-        /// </summary>
-        private void UpdateTimeSetApp()
-        {
-            Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-        }
-
-        /// <summary>
         /// Launch a program update checker in a separate thread, waits for the
         /// result and returns a message if found.
         /// </summary>
@@ -93,8 +85,8 @@ namespace mhed.gui
                 {
                     UpdAppImg.Image = Properties.Resources.IconUpdateNotAvailable;
                     UpdAppStatus.Text = AppStrings.AHE_UpdateNotAvailable;
-                    UpdateTimeSetApp();
                 }
+                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
             }
             catch (Exception Ex)
             {
@@ -138,9 +130,6 @@ namespace mhed.gui
                 // Checking hashes...
                 if (UpMan.CheckAppHash(FileManager.CalculateFileSHA512(UpdateFileName)))
                 {
-                    // Setting last update check date...
-                    UpdateTimeSetApp();
-
                     // Showing message about successful download...
                     MessageBox.Show(AppStrings.AHE_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
