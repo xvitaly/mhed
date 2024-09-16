@@ -44,8 +44,8 @@ VersionInfoCompany=EasyCoding Team
 BeveledLabel=EasyCoding Team
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl,locale\en\cm.isl"; InfoBeforeFile: "locale\en\readme.rtf"
-Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,locale\ru\cm.isl"; InfoBeforeFile: "locale\ru\readme.rtf"
+Name: "english"; MessagesFile: "compiler:Default.isl,locale\en\cm.isl"; InfoBeforeFile: "locale\en\readme.txt"
+Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,locale\ru\cm.isl"; InfoBeforeFile: "locale\ru\readme.txt"
 
 [Components]
 Name: "core"; Description: "{cm:CompCoreDesc}"; Types: full compact custom; Flags: fixed
