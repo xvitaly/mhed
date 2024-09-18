@@ -1,4 +1,4 @@
-﻿Micro Hosts Editor is a small, simple, cross-platform and completely free open-source Hosts editor. You can easily edit your Hosts file using simple GUI.
+Micro Hosts Editor is a small, simple, cross-platform and completely free open-source Hosts editor. You can easily edit your Hosts file using simple GUI.
 
 In order to make changes to Hosts file, this program need local administrator rights. Without them it will work only in read-only mode. Just press the right mouse button on Micro Hosts Editor’s shortcut and select Run as administrator.
 
