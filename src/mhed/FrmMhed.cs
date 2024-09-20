@@ -173,7 +173,7 @@ namespace mhed.gui
         /// </summary>
         private bool IsAutoUpdateCheckNeeded()
         {
-            return Properties.Settings.Default.AutoUpdateCheck && (DateTime.Now - Properties.Settings.Default.LastUpdateTime).Days >= 7;
+            return Properties.Settings.Default.AutoUpdateCheck && (DateTime.Now - Properties.Settings.Default.LastUpdateTime).Days >= Properties.Settings.Default.UpdateCheckInterval;
         }
 
         /// <summary>
