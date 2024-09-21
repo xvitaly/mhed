@@ -63,7 +63,7 @@ Files: assets/templates/*.txt
 Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
-Files: packaging/inno/locale/*/*.rtf
+Files: packaging/inno/locale/*/*.txt
 Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
@@ -91,11 +91,19 @@ Files: src/mhed/FrmAbout.*
 Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
+Files: src/mhed/FrmDnWrk.*
+Copyright: 2011-2024 EasyCoding Team
+License: GPL-3.0-or-later
+
 Files: src/mhed/FrmMhed.*
 Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/mhed/FrmOptions.*
+Copyright: 2011-2024 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/mhed/FrmUpdate.*
 Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
