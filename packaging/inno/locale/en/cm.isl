@@ -5,9 +5,9 @@
 ;
 
 [CustomMessages]
-OptNetStatus=Optimizing MSIL binary...
-CompCoreDesc=Core files
+OptNetStatus=Optimizing MSIL binaries...
+CompCoreDesc=Main application files
 CompDebugDesc=Crash reporter data files
 CompLocalesMetaDesc=Localizations
-CompLocaleEnDesc=English (United States)
-CompLocaleRuDesc=Russian (Russian Federation)
+CompLocaleEnDesc=English
+CompLocaleRuDesc=Russian
