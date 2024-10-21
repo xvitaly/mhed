@@ -140,7 +140,7 @@
     <value>23, 22</value>
   </data>
   <data name="HE_ToolbarSaveButton.Text" xml:space="preserve">
-    <value>&amp;Save changes</value>
+    <value>&amp;Save</value>
   </data>
   <data name="HE_ToolbarSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>

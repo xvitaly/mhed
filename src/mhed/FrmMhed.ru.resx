@@ -121,7 +121,7 @@
     <value>&amp;Обновить</value>
   </data>
   <data name="HE_ToolbarSaveButton.Text" xml:space="preserve">
-    <value>&amp;Сохранить изменения</value>
+    <value>&amp;Сохранить</value>
   </data>
   <data name="HE_ToolbarCutButton.Text" xml:space="preserve">
     <value>&amp;Вырезать</value>
