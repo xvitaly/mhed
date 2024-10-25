@@ -17,16 +17,6 @@ namespace mhed.lib
         CurrentPlatform.OSType OS { get; }
 
         /// <summary>
-        /// Get current operating system friendly name.
-        /// </summary>
-        string OSFriendlyName { get; }
-
-        /// <summary>
-        /// Get platform-dependent suffix for HTTP_USER_AGENT header.
-        /// </summary>
-        string UserAgentSuffix { get; }
-
-        /// <summary>
         /// Return platform-dependent location of the Hosts file.
         /// </summary>
         string HostsFileLocation { get; }
@@ -67,6 +57,11 @@ namespace mhed.lib
         /// Get information about operating system architecture for the HTTP_USER_AGENT header.
         /// </summary>
         string OSArchitecture { get; }
+
+        /// <summary>
+        /// Get current operating system friendly name for the HTTP_USER_AGENT header.
+        /// </summary>
+        string OSFriendlyName { get; }
 
         /// <summary>
         /// Get operating system version number for the HTTP_USER_AGENT header.

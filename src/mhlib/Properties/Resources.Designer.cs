@@ -88,25 +88,7 @@ namespace mhed.lib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (mono).
-        /// </summary>
-        internal static string AppUserAgentSuffixOther {
-            get {
-                return ResourceManager.GetString("AppUserAgentSuffixOther", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to NT.
-        /// </summary>
-        internal static string AppUserAgentSuffixWin {
-            get {
-                return ResourceManager.GetString("AppUserAgentSuffixWin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mozilla/5.0 ({0} {1} {2}.{3}; {4}; rv:{5}) {6} ({7}).
+        ///   Looks up a localized string similar to Mozilla/5.0 ({0} {1}; {2}; {3}) {4}/{5}).
         /// </summary>
         internal static string AppUserAgentTemplate {
             get {
@@ -185,6 +167,15 @@ namespace mhed.lib.Properties {
         internal static string NewEntryWithComment {
             get {
                 return ResourceManager.GetString("NewEntryWithComment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NT.
+        /// </summary>
+        internal static string OSFriendlyNameWin {
+            get {
+                return ResourceManager.GetString("OSFriendlyNameWin", resourceCulture);
             }
         }
         

@@ -53,14 +53,14 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Get platform-dependent suffix for HTTP_USER_AGENT header.
-        /// </summary>
-        public override string UserAgentSuffix => Properties.Resources.AppUserAgentSuffixWin;
-
-        /// <summary>
         /// Get current operating system ID.
         /// </summary>
         public override OSType OS => OSType.Windows;
+
+        /// <summary>
+        /// Get current operating system friendly name for the HTTP_USER_AGENT header.
+        /// </summary>
+        public override string OSFriendlyName => string.Format(Properties.Resources.OSFriendlyNameWin, OS);
 
         /// <summary>
         /// Return whether automatic updates are supported on this platform.

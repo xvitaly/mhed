@@ -126,14 +126,8 @@
   <data name="AppOpenHandlerMac" xml:space="preserve">
     <value>open</value>
   </data>
-  <data name="AppUserAgentSuffixOther" xml:space="preserve">
-    <value>(mono)</value>
-  </data>
-  <data name="AppUserAgentSuffixWin" xml:space="preserve">
-    <value>NT</value>
-  </data>
   <data name="AppUserAgentTemplate" xml:space="preserve">
-    <value>Mozilla/5.0 ({0} {1} {2}.{3}; {4}; rv:{5}) {6} ({7})</value>
+    <value>Mozilla/5.0 ({0} {1}; {2}; {3}) {4}/{5})</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="HtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -156,6 +150,9 @@
   </data>
   <data name="NewEntryWithComment" xml:space="preserve">
     <value>{0} {1} # {2}</value>
+  </data>
+  <data name="OSFriendlyNameWin" xml:space="preserve">
+    <value>NT</value>
   </data>
   <data name="OSVersionTemplate" xml:space="preserve">
     <value>{0}.{1}.{2}</value>

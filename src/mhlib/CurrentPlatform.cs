@@ -48,11 +48,6 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Get current operating system friendly name.
-        /// </summary>
-        public string OSFriendlyName => OS.ToString();
-
-        /// <summary>
         /// Get name and ID of running operating system.
         /// </summary>
         /// <returns>Platform ID.</returns>
@@ -207,11 +202,6 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Get platform-dependent suffix for HTTP_USER_AGENT header.
-        /// </summary>
-        public virtual string UserAgentSuffix => Properties.Resources.AppUserAgentSuffixOther;
-
-        /// <summary>
         /// Get current operating system ID.
         /// </summary>
         public abstract OSType OS { get; }
@@ -220,6 +210,11 @@ namespace mhed.lib
         /// Get information about operating system architecture for the HTTP_USER_AGENT header.
         /// </summary>
         public virtual string OSArchitecture => RuntimeInformation.OSArchitecture.ToString().ToLower(CultureInfo.InvariantCulture);
+
+        /// <summary>
+        /// Get current operating system friendly name for the HTTP_USER_AGENT header.
+        /// </summary>
+        public virtual string OSFriendlyName => OS.ToString();
 
         /// <summary>
         /// Get operating system version number for the HTTP_USER_AGENT header.

@@ -153,7 +153,7 @@ namespace mhed.lib
             HostsFile = new HostsFileManager(Platform);
 
             // Generating User-Agent header for outgoing HTTP queries...
-            UserAgent = string.Format(Properties.Resources.AppUserAgentTemplate, Platform.OSFriendlyName, Platform.UserAgentSuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, Platform.OSArchitecture);
+            UserAgent = string.Format(Properties.Resources.AppUserAgentTemplate, Platform.OSFriendlyName, Platform.OSVersion, Platform.OSArchitecture, CultureInfo.CurrentCulture.Name, AppName, AppVersion);
         }
     }
 }
