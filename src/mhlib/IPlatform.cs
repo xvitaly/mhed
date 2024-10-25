@@ -64,6 +64,11 @@ namespace mhed.lib
         void Exit(int ReturnCode);
 
         /// <summary>
+        /// Get information about operating system architecture for the HTTP_USER_AGENT header.
+        /// </summary>
+        string OSArchitecture { get; }
+
+        /// <summary>
         /// Show the specified file in default file manager.
         /// </summary>
         /// <param name="FileName">Full path to file.</param>

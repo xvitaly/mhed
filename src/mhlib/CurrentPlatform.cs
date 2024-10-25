@@ -6,7 +6,9 @@
 
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using System.Windows.Forms;
 
@@ -213,6 +215,11 @@ namespace mhed.lib
         /// Get current operating system ID.
         /// </summary>
         public abstract OSType OS { get; }
+
+        /// <summary>
+        /// Get information about operating system architecture for the HTTP_USER_AGENT header.
+        /// </summary>
+        public virtual string OSArchitecture => RuntimeInformation.OSArchitecture.ToString().ToLower(CultureInfo.InvariantCulture);
 
         /// <summary>
         /// Return platform-dependent location of the Hosts file.

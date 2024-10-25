@@ -9,7 +9,6 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
-using System.Runtime.InteropServices;
 
 namespace mhed.lib
 {
@@ -105,11 +104,6 @@ namespace mhed.lib
         public static string AssemblyLocation => Assembly.GetEntryAssembly().Location;
 
         /// <summary>
-        /// Get information about hardware architecture.
-        /// </summary>
-        private string SystemArch => RuntimeInformation.OSArchitecture.ToString().ToLower(CultureInfo.InvariantCulture);
-
-        /// <summary>
         /// Get the full path to the active application's log file.
         /// </summary>
         /// <returns>Full path to the active log file.</returns>
@@ -159,7 +153,7 @@ namespace mhed.lib
             HostsFile = new HostsFileManager(Platform);
 
             // Generating User-Agent header for outgoing HTTP queries...
-            UserAgent = string.Format(Properties.Resources.AppUserAgentTemplate, Platform.OSFriendlyName, Platform.UserAgentSuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, SystemArch);
+            UserAgent = string.Format(Properties.Resources.AppUserAgentTemplate, Platform.OSFriendlyName, Platform.UserAgentSuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, Platform.OSArchitecture);
         }
     }
 }
