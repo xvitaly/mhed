@@ -55,7 +55,7 @@ namespace mhed.lib
         /// <summary>
         /// Get platform-dependent suffix for HTTP_USER_AGENT header.
         /// </summary>
-        public override string UASuffix => Properties.Resources.AppUASuffixWin;
+        public override string UserAgentSuffix => Properties.Resources.AppUserAgentSuffixWin;
 
         /// <summary>
         /// Get current operating system ID.

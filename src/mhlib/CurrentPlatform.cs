@@ -207,7 +207,7 @@ namespace mhed.lib
         /// <summary>
         /// Get platform-dependent suffix for HTTP_USER_AGENT header.
         /// </summary>
-        public virtual string UASuffix => Properties.Resources.AppUASuffixOther;
+        public virtual string UserAgentSuffix => Properties.Resources.AppUserAgentSuffixOther;
 
         /// <summary>
         /// Get current operating system ID.

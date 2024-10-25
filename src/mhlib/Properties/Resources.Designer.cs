@@ -61,15 +61,6 @@ namespace mhed.lib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mozilla/5.0 ({0} {1} {2}.{3}; {4}; rv:{5}) {6} ({7}).
-        /// </summary>
-        internal static string AppDefUA {
-            get {
-                return ResourceManager.GetString("AppDefUA", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &quot;{0}&quot;.
         /// </summary>
         internal static string AppOpenHandlerEscapeTemplate {
@@ -99,18 +90,27 @@ namespace mhed.lib.Properties {
         /// <summary>
         ///   Looks up a localized string similar to (mono).
         /// </summary>
-        internal static string AppUASuffixOther {
+        internal static string AppUserAgentSuffixOther {
             get {
-                return ResourceManager.GetString("AppUASuffixOther", resourceCulture);
+                return ResourceManager.GetString("AppUserAgentSuffixOther", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to NT.
         /// </summary>
-        internal static string AppUASuffixWin {
+        internal static string AppUserAgentSuffixWin {
             get {
-                return ResourceManager.GetString("AppUASuffixWin", resourceCulture);
+                return ResourceManager.GetString("AppUserAgentSuffixWin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mozilla/5.0 ({0} {1} {2}.{3}; {4}; rv:{5}) {6} ({7}).
+        /// </summary>
+        internal static string AppUserAgentTemplate {
+            get {
+                return ResourceManager.GetString("AppUserAgentTemplate", resourceCulture);
             }
         }
         

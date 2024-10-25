@@ -24,7 +24,7 @@ namespace mhed.lib
         /// <summary>
         /// Get platform-dependent suffix for HTTP_USER_AGENT header.
         /// </summary>
-        string UASuffix { get; }
+        string UserAgentSuffix { get; }
 
         /// <summary>
         /// Return platform-dependent location of the Hosts file.
