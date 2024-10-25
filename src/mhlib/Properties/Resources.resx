@@ -155,7 +155,7 @@
     <value>NT</value>
   </data>
   <data name="OSVersionTemplate" xml:space="preserve">
-    <value>{0}.{1}.{2}</value>
+    <value>{0}.{1}</value>
   </data>
   <data name="PortableLocalDir" xml:space="preserve">
     <value>portable</value>

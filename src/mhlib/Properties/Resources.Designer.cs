@@ -180,7 +180,7 @@ namespace mhed.lib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0}.{1}.{2}.
+        ///   Looks up a localized string similar to {0}.{1}.
         /// </summary>
         internal static string OSVersionTemplate {
             get {

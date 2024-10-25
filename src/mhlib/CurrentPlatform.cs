@@ -224,7 +224,7 @@ namespace mhed.lib
             get
             {
                 Version OSVer = Environment.OSVersion.Version;
-                return string.Format(Properties.Resources.OSVersionTemplate, OSVer.Major, OSVer.Minor, OSVer.Build);
+                return string.Format(Properties.Resources.OSVersionTemplate, OSVer.Major, OSVer.Minor);
             }
         }
 
