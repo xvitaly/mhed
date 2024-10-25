@@ -222,6 +222,18 @@ namespace mhed.lib
         public virtual string OSArchitecture => RuntimeInformation.OSArchitecture.ToString().ToLower(CultureInfo.InvariantCulture);
 
         /// <summary>
+        /// Get operating system version number for the HTTP_USER_AGENT header.
+        /// </summary>
+        public virtual string OSVersion
+        {
+            get
+            {
+                Version OSVer = Environment.OSVersion.Version;
+                return string.Format(Properties.Resources.OSVersionTemplate, OSVer.Major, OSVer.Minor, OSVer.Build);
+            }
+        }
+
+        /// <summary>
         /// Return platform-dependent location of the Hosts file.
         /// </summary>
         public virtual string HostsFileLocation => "/etc";

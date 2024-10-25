@@ -189,6 +189,15 @@ namespace mhed.lib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0}.{1}.{2}.
+        /// </summary>
+        internal static string OSVersionTemplate {
+            get {
+                return ResourceManager.GetString("OSVersionTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to portable.
         /// </summary>
         internal static string PortableLocalDir {

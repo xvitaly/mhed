@@ -69,6 +69,11 @@ namespace mhed.lib
         string OSArchitecture { get; }
 
         /// <summary>
+        /// Get operating system version number for the HTTP_USER_AGENT header.
+        /// </summary>
+        string OSVersion { get; }
+
+        /// <summary>
         /// Show the specified file in default file manager.
         /// </summary>
         /// <param name="FileName">Full path to file.</param>

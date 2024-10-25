@@ -157,6 +157,9 @@
   <data name="NewEntryWithComment" xml:space="preserve">
     <value>{0} {1} # {2}</value>
   </data>
+  <data name="OSVersionTemplate" xml:space="preserve">
+    <value>{0}.{1}.{2}</value>
+  </data>
   <data name="PortableLocalDir" xml:space="preserve">
     <value>portable</value>
   </data>
