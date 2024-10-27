@@ -131,6 +131,10 @@ Files: src/mhlib/mhlib.csproj
 Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
+Files: src/mhlib/DebugStrings.*
+Copyright: 2011-2024 EasyCoding Team
+License: GPL-3.0-or-later
+
 Files: README.md
 Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
