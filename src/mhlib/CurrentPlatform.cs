@@ -27,7 +27,7 @@ namespace mhed.lib
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) { return new PlatformWindows(); }
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) { return new PlatformLinux(); }
             if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) { return new PlatformMac(); }
-            throw new PlatformNotSupportedException();
+            throw new PlatformNotSupportedException(DebugStrings.AppDbgCorePlatformNotSupported);
         }
 
         /// <summary>
