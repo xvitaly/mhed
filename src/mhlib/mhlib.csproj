@@ -55,6 +55,11 @@
     <Compile Include="CurrentPlatform.cs" />
     <Compile Include="CurrentApp.cs" />
     <Compile Include="CurrentResolver.cs" />
+    <Compile Include="DebugStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DebugStrings.resx</DependentUpon>
+    </Compile>
     <Compile Include="FileManager.cs" />
     <Compile Include="Hostname.cs" />
     <Compile Include="HostnameConverter.cs" />
@@ -82,6 +87,10 @@
     <Compile Include="UpdateManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DebugStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DebugStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
