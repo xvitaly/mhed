@@ -6,7 +6,6 @@
 
 using System;
 using System.Diagnostics;
-using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
@@ -186,7 +185,7 @@ namespace mhed.lib
         /// <summary>
         /// Get information about operating system architecture for the HTTP_USER_AGENT header.
         /// </summary>
-        public virtual string OSArchitecture => RuntimeInformation.OSArchitecture.ToString().ToLower(CultureInfo.InvariantCulture);
+        public virtual string OSArchitecture => RuntimeInformation.OSArchitecture.ToString().ToLowerInvariant();
 
         /// <summary>
         /// Get current operating system friendly name for the HTTP_USER_AGENT header.
