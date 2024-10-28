@@ -61,6 +61,24 @@ namespace mhed.lib {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hosts file entry string cannot be null, empty or contain only spaces..
+        /// </summary>
+        internal static string AppDbgCoreEntryParserEmptyError {
+            get {
+                return ResourceManager.GetString("AppDbgCoreEntryParserEmptyError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hosts file entry string has incorrect format..
+        /// </summary>
+        internal static string AppDbgCoreEntryParserFormatError {
+            get {
+                return ResourceManager.GetString("AppDbgCoreEntryParserFormatError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Current operating system is not supported..
         /// </summary>
         internal static string AppDbgCorePlatformNotSupported {

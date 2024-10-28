@@ -40,7 +40,7 @@ namespace mhed.lib
             // Checking the source string for null...
             if (string.IsNullOrWhiteSpace(Value))
             {
-                if (TryParse) { return null; } else { throw new ArgumentException("Hosts file entry string cannot be null, empty or contain only spaces.", nameof(Value)); }
+                if (TryParse) { return null; } else { throw new ArgumentException(DebugStrings.AppDbgCoreEntryParserEmptyError, nameof(Value)); }
             }
 
             // Calculating the indices of the first space and the hash character...
@@ -50,7 +50,7 @@ namespace mhed.lib
             // If the source string contains no spaces, it can't be parsed correctly...
             if (SpaceIndex == -1)
             {
-                if (TryParse) { return null; } else { throw new FormatException("Hosts file entry string has incorrect format."); }
+                if (TryParse) { return null; } else { throw new FormatException(DebugStrings.AppDbgCoreEntryParserFormatError); }
             }
 
             // Parsing the source string...
