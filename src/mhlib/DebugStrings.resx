@@ -126,4 +126,7 @@
   <data name="AppDbgCoreEntryParserFormatError" xml:space="preserve">
     <value>Hosts file entry string has incorrect format.</value>
   </data>
+  <data name="AppDbgCoreIntFromIPv6Error" xml:space="preserve">
+    <value>IPv6 is not supported because we can't handle 128-bit integers.</value>
+  </data>
 </root>

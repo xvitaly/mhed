@@ -25,7 +25,7 @@ namespace mhed.lib
         {
             if (SrcIPAddress.AddressFamily == AddressFamily.InterNetworkV6)
             {
-                throw new ArgumentException("IPv6 is not supported because we can't handle 128-bit integers.", nameof(SrcIPAddress));
+                throw new ArgumentException(DebugStrings.AppDbgCoreIntFromIPv6Error, nameof(SrcIPAddress));
             }
 
             byte[] IPAddressBytes = SrcIPAddress.GetAddressBytes();

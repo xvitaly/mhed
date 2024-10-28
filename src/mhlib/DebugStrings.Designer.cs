@@ -79,6 +79,15 @@ namespace mhed.lib {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IPv6 is not supported because we can&apos;t handle 128-bit integers..
+        /// </summary>
+        internal static string AppDbgCoreIntFromIPv6Error {
+            get {
+                return ResourceManager.GetString("AppDbgCoreIntFromIPv6Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Current operating system is not supported..
         /// </summary>
         internal static string AppDbgCorePlatformNotSupported {
