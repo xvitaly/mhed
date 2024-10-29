@@ -5,7 +5,7 @@
 ;
 
 [CustomMessages]
-OptNetStatus=Optimizing MSIL binaries...
+OptNetStatus=Pre-compiling binaries into native code...
 CompCoreDesc=Main application files
 CompDebugDesc=Crash reporter data files
 CompLocalesMetaDesc=Localizations

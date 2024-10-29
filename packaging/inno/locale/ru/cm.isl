@@ -5,7 +5,7 @@
 ;
 
 [CustomMessages]
-OptNetStatus=Идёт создание машинных сборок MSIL...
+OptNetStatus=Компиляция исполняемых файлов в машинный код...
 CompCoreDesc=Основные файлы программы
 CompDebugDesc=Файлы для системы обнаружения ошибок
 CompLocalesMetaDesc=Локализации (многоязыковая поддержка)
