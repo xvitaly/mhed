@@ -88,7 +88,7 @@ namespace mhed.lib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mozilla/5.0 ({0} {1}; {2}; {3}) {4}/{5}).
+        ///   Looks up a localized string similar to Mozilla/5.0 ({0} {1}; {2}; {3}) {4}/{5}.
         /// </summary>
         internal static string AppUserAgentTemplate {
             get {

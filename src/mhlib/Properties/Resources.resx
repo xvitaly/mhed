@@ -127,7 +127,7 @@
     <value>open</value>
   </data>
   <data name="AppUserAgentTemplate" xml:space="preserve">
-    <value>Mozilla/5.0 ({0} {1}; {2}; {3}) {4}/{5})</value>
+    <value>Mozilla/5.0 ({0} {1}; {2}; {3}) {4}/{5}</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="HtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
