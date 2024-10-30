@@ -152,7 +152,7 @@
     <value>{0} {1} # {2}</value>
   </data>
   <data name="OSFriendlyNameWin" xml:space="preserve">
-    <value>NT</value>
+    <value>{0} NT</value>
   </data>
   <data name="OSVersionTemplate" xml:space="preserve">
     <value>{0}.{1}</value>

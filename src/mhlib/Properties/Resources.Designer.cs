@@ -171,7 +171,7 @@ namespace mhed.lib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NT.
+        ///   Looks up a localized string similar to {0} NT.
         /// </summary>
         internal static string OSFriendlyNameWin {
             get {
