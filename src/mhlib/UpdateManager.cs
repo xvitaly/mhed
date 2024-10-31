@@ -7,7 +7,6 @@
 using System;
 using System.IO;
 using System.Net;
-using System.Reflection;
 using System.Threading.Tasks;
 using System.Xml;
 
@@ -86,7 +85,7 @@ namespace mhed.lib
         /// <returns>Return True if application update available.</returns>
         public bool CheckAppUpdate()
         {
-            return AppUpdateVersion > Assembly.GetCallingAssembly().GetName().Version;
+            return AppUpdateVersion > CurrentApp.AppVersion;
         }
 
         /// <summary>
