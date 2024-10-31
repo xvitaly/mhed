@@ -72,7 +72,7 @@ namespace mhed.lib
         /// <summary>
         /// Get application version from the resource section of calling assembly.
         /// </summary>
-        public static string AppVersion => Assembly.GetCallingAssembly().GetName().Version.ToString();
+        public static Version AppVersion => Assembly.GetCallingAssembly().GetName().Version;
 
         /// <summary>
         /// Get application developer name from the resource section of calling assembly.
