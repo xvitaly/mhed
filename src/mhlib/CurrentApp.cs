@@ -137,7 +137,7 @@ namespace mhed.lib
             FullAppPath = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
 
             // Getting full to application user directory...
-            AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), Properties.Resources.PortableLocalDir) : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName);
+            AppUserDir = IsPortable ? Path.Combine(FullAppPath, Properties.Resources.PortableLocalDir) : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName);
 
             // Getting full paths to local application directories...
             AppLogFile = GetLogFileName();
