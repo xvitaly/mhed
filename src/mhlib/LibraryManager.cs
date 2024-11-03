@@ -5,7 +5,6 @@
 */
 
 using System;
-using System.Reflection;
 
 namespace mhed.lib
 {
@@ -21,7 +20,7 @@ namespace mhed.lib
         /// <returns>Check results.</returns>
         public static bool CheckLibraryVersion()
         {
-            return Assembly.GetCallingAssembly().GetName().Version == Assembly.GetExecutingAssembly().GetName().Version;
+            return CurrentApp.AppVersion == CurrentApp.LibVersion;
         }
 
         /// <summary>
@@ -31,7 +30,7 @@ namespace mhed.lib
         /// <returns>Check results.</returns>
         public static bool CheckLibraryVersion(string RequiredVersion)
         {
-            return Assembly.GetCallingAssembly().GetName().Version == new Version(RequiredVersion);
+            return CurrentApp.AppVersion == new Version(RequiredVersion);
         }
     }
 }
