@@ -105,7 +105,7 @@ namespace mhed.lib
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public virtual void RestartApplicationAsAdmin()
         {
-            StartElevatedProcess(CurrentApp.AssemblyLocation);
+            StartElevatedProcess(CurrentApp.AppLocation);
             Environment.Exit(ReturnCodes.Success);
         }
 
