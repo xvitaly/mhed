@@ -139,7 +139,7 @@ namespace mhed.lib
             IsAdmin = ProcessManager.IsCurrentUserAdmin();
 
             // Getting full path to application installation directory...
-            FullAppPath = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
+            FullAppPath = Path.GetDirectoryName(AppLocation);
 
             // Getting full to application user directory...
             AppUserDir = IsPortable ? Path.Combine(FullAppPath, Properties.Resources.PortableLocalDir) : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName);
