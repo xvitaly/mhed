@@ -58,7 +58,7 @@ namespace mhed.lib
         public bool IsAdmin { get; private set; }
 
         /// <summary>
-        /// Get application name from the resource section of calling assembly.
+        /// Get the application name from the resource section of the entry assembly.
         /// </summary>
         public static string AppProduct
         {
@@ -70,17 +70,17 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Get application version from the resource section of calling assembly.
+        /// Get the application version from the resource section of the entry assembly.
         /// </summary>
         public static Version AppVersion => Assembly.GetEntryAssembly().GetName().Version;
 
         /// <summary>
-        /// Get the library version from the resource section of current assembly.
+        /// Get the library version from the resource section of the executing assembly.
         /// </summary>
         public static Version LibVersion => Assembly.GetExecutingAssembly().GetName().Version;
 
         /// <summary>
-        /// Get application developer name from the resource section of calling assembly.
+        /// Get the application developer name from the resource section of the entry assembly.
         /// </summary>
         public static string AppCompany
         {
@@ -92,7 +92,7 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Get application copyright from the resource section of calling assembly.
+        /// Get the application copyright from the resource section of the entry assembly.
         /// </summary>
         public static string AppCopyright
         {
