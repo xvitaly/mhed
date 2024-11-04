@@ -104,7 +104,7 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Get the full path to the running assembly.
+        /// Get the full path to the application executable file.
         /// </summary>
         public static string AppLocation => Assembly.GetEntryAssembly().Location;
 
