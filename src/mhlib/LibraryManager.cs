@@ -14,9 +14,8 @@ namespace mhed.lib
     public static class LibraryManager
     {
         /// <summary>
-        /// Checks if required library version is equal to current library version.
+        /// Checks if the library version matches the application version.
         /// </summary>
-        /// <param name="RequiredVersion">Required ABI version.</param>
         /// <returns>Check results.</returns>
         public static bool CheckLibraryVersion()
         {
@@ -24,7 +23,7 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Checks if required library version is equal to current library version.
+        /// Checks if the required library version is equal with the specified library version.
         /// </summary>
         /// <param name="RequiredVersion">Required library version.</param>
         /// <returns>Check results.</returns>
