@@ -37,7 +37,7 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Check if required library version is equal with current library version.
+        /// Checks if the library version matches the application version.
         /// </summary>
         private static void CheckLibrary()
         {
