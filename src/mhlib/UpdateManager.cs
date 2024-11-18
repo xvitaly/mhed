@@ -103,7 +103,7 @@ namespace mhed.lib
         /// </summary>
         private async Task CheckForUpdates()
         {
-            await DownloadXML();
+            await Task.Run(() => DownloadXML());
             ParseXML();
         }
 
