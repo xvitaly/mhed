@@ -90,7 +90,7 @@ namespace mhed.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExUpdChk);
+                Logger.Error(Ex, DebugStrings.AppDbgExUpdChk);
                 UpdAppImg.Image = Properties.Resources.IconUpdateError;
                 UpdAppStatus.Text = AppStrings.AHE_UpdateCheckFailure;
             }
