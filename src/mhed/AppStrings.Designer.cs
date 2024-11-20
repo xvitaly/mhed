@@ -196,7 +196,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hosts file: {0}. Show it in file manager?.
+        ///   Looks up a localized string similar to The active Hosts file is located in {0}. Show it in file manager?.
         /// </summary>
         internal static string AHE_HMessg {
             get {

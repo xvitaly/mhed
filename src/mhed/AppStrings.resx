@@ -121,7 +121,7 @@
     <value>Warning! A parsing error was encountered. The file {0} was probably loaded with errors.</value>
   </data>
   <data name="AHE_HMessg" xml:space="preserve">
-    <value>Hosts file: {0}. Show it in file manager?</value>
+    <value>The active Hosts file is located in {0}. Show it in file manager?</value>
   </data>
   <data name="AHE_NoFileDetected" xml:space="preserve">
     <value>The Hosts file {0} couldn't be found!</value>
