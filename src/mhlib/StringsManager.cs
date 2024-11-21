@@ -110,7 +110,7 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Remove different special characters from specified string.
+        /// Remove special characters from the source string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>
         /// <param name="CleanQuotes">Enable removal of quotes.</param>
@@ -130,7 +130,8 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Remove different special characters from specified string.
+        /// Remove special characters (tabulations, NUL-bytes, multiple spaces
+        /// and comments) from the source string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>
         /// <returns>Clean string with removed special characters.</returns>
@@ -140,7 +141,7 @@ namespace mhed.lib
         }
 
         /// <summary>
-        /// Get mutex name for the internal purposes.
+        /// Get the mutex name for internal purposes.
         /// </summary>
         /// <param name="AppNameInternal">Internal application name.</param>
         /// <returns>Mutex name.</returns>
