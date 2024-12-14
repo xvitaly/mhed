@@ -152,28 +152,28 @@
   <data name="&gt;&gt;DN_WlcMsg.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="DN_PrgBr.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="DN_Progress.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="DN_PrgBr.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="DN_Progress.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 33</value>
   </data>
-  <data name="DN_PrgBr.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="DN_Progress.Size" type="System.Drawing.Size, System.Drawing">
     <value>354, 29</value>
   </data>
-  <data name="DN_PrgBr.TabIndex" type="System.Int32, mscorlib">
+  <data name="DN_Progress.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;DN_PrgBr.Name" xml:space="preserve">
-    <value>DN_PrgBr</value>
+  <data name="&gt;&gt;DN_Progress.Name" xml:space="preserve">
+    <value>DN_Progress</value>
   </data>
-  <data name="&gt;&gt;DN_PrgBr.Type" xml:space="preserve">
+  <data name="&gt;&gt;DN_Progress.Type" xml:space="preserve">
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DN_PrgBr.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DN_Progress.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;DN_PrgBr.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DN_Progress.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -193,7 +193,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Download tool</value>
+    <value>File download module</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmDnWrk</value>

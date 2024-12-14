@@ -121,6 +121,6 @@
     <value>Скачиваю файл... Пожалуйста, подождите.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Модуль загрузки</value>
+    <value>Модуль загрузки файлов</value>
   </data>
 </root>

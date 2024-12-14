@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDnWrk));
             this.DN_WlcMsg = new System.Windows.Forms.Label();
-            this.DN_PrgBr = new System.Windows.Forms.ProgressBar();
+            this.DN_Progress = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // DN_WlcMsg
@@ -38,17 +38,17 @@
             resources.ApplyResources(this.DN_WlcMsg, "DN_WlcMsg");
             this.DN_WlcMsg.Name = "DN_WlcMsg";
             // 
-            // DN_PrgBr
+            // DN_Progress
             // 
-            resources.ApplyResources(this.DN_PrgBr, "DN_PrgBr");
-            this.DN_PrgBr.Name = "DN_PrgBr";
+            resources.ApplyResources(this.DN_Progress, "DN_Progress");
+            this.DN_Progress.Name = "DN_Progress";
             // 
             // FrmDnWrk
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
-            this.Controls.Add(this.DN_PrgBr);
+            this.Controls.Add(this.DN_Progress);
             this.Controls.Add(this.DN_WlcMsg);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -66,6 +66,6 @@
         #endregion
 
         private System.Windows.Forms.Label DN_WlcMsg;
-        private System.Windows.Forms.ProgressBar DN_PrgBr;
+        private System.Windows.Forms.ProgressBar DN_Progress;
     }
 }
