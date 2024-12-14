@@ -14,87 +14,52 @@ using NLog;
 namespace mhed.gui
 {
     /// <summary>
-    /// Class of Internet downloader window.
+    /// Class of the file download module.
     /// </summary>
     public partial class FrmDnWrk : Form
     {
         /// <summary>
-        /// Logger instance for FrmDnWrk class.
+        /// Logger instance for the FrmDnWrk class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Stores URL of download.
+        /// Stores the full download URL.
         /// </summary>
         private readonly string RemoteURI;
 
         /// <summary>
-        /// Stores full path of local destination file.
+        /// Stores the full path to the destination file.
         /// </summary>
         private readonly string LocalFile;
 
         /// <summary>
-        /// Stores full path to the destination directory.
+        /// Stores the full path to the destination directory.
         /// </summary>
         private readonly string LocalDirectory;
 
         /// <summary>
-        /// Stores status of currently running process.
+        /// Stores the status of the currently running process.
         /// </summary>
         private bool IsRunning = true;
 
         /// <summary>
         /// FrmDnWrk class constructor.
         /// </summary>
-        /// <param name="R">Download URL.</param>
-        /// <param name="L">Full path to destination file.</param>
-        public FrmDnWrk(string R, string L)
+        /// <param name="URI">Full download URL.</param>
+        /// <param name="FileName">Full path to destination file.</param>
+        public FrmDnWrk(string URI, string FileName)
         {
             InitializeComponent();
-            RemoteURI = R;
-            LocalFile = L;
-            LocalDirectory = Path.GetDirectoryName(L);
+            RemoteURI = URI;
+            LocalFile = FileName;
+            LocalDirectory = Path.GetDirectoryName(FileName);
         }
 
         /// <summary>
-        /// Reports progress to progress bar on form.
+        /// Creates the destination directory.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void DownloaderProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-        {
-            try
-            {
-                DN_Progress.Value = e.ProgressPercentage;
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExDnProgressChanged);
-            }
-        }
-
-        /// <summary>
-        /// Finalizes download sequence.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void DownloaderCompleted(object sender, AsyncCompletedEventArgs e)
-        {
-            // Download task completed. Checking for errors...
-            if (e.Error != null)
-            {
-                Logger.Error(e.Error, DebugStrings.AppDbgExDnWrkDownloadFile, RemoteURI, LocalFile);
-            }
-
-            // Performing additional actions...
-            DownloaderVerifyResult();
-            DownloaderFinalize();
-        }
-
-        /// <summary>
-        /// Checks if the destination directory exists. If not - creates it.
-        /// </summary>
-        private void DownloaderCheckLocalDirectory()
+        private void CreateLocalDirectory()
         {
             if (!Directory.Exists(LocalDirectory))
             {
@@ -103,9 +68,9 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Checks if the destination file exists. If so - deletes it.
+        /// Removes the destination file.
         /// </summary>
-        private void DownloaderCheckLocalFile()
+        private void RemoveLocalFile()
         {
             if (File.Exists(LocalFile))
             {
@@ -114,40 +79,41 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Performs preliminary checks.
+        /// Prepares the download process.
         /// </summary>
-        private void DownloaderRunChecks()
+        private void PrepareDownloadProcess()
         {
-            DownloaderCheckLocalDirectory();
-            DownloaderCheckLocalFile();
+            CreateLocalDirectory();
+            RemoveLocalFile();
         }
 
         /// <summary>
-        /// Asynchronously downloads file from the Internet in a separate thread.
+        /// Asynchronously downloads file from the Internet in a separate thread
+        /// and reports progress.
         /// </summary>
-        private void DownloaderStart()
+        private void FormStart()
         {
             try
             {
-                DownloaderRunChecks();
+                PrepareDownloadProcess();
                 using (WebClient FileDownloader = new WebClient())
                 {
                     FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDownloadUserAgent);
-                    FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloaderCompleted);
-                    FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloaderProgressChanged);
+                    FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(FrmDnWrk_DownloadFileCompleted);
+                    FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(FrmDnWrk_DownloadProgressChanged);
                     FileDownloader.DownloadFileAsync(new Uri(RemoteURI), LocalFile);
                 }
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExDnWrkTask, RemoteURI, LocalFile);
+                Logger.Warn(Ex, DebugStrings.AppDbgExDnTaskStart, RemoteURI, LocalFile);
             }
         }
 
         /// <summary>
         /// Checks if the downloaded file exists and is not empty.
         /// </summary>
-        private void DownloaderVerifyResult()
+        private void VerifyResult()
         {
             try
             {
@@ -159,14 +125,14 @@ namespace mhed.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExDnResultVerify, LocalFile);
+                Logger.Warn(Ex, DebugStrings.AppDbgExDnVerifyResult, LocalFile);
             }
         }
 
         /// <summary>
         /// Performs finalizing actions and closes the form.
         /// </summary>
-        private void DownloaderFinalize()
+        private void FormFinalize()
         {
             IsRunning = false;
             Close();
@@ -179,7 +145,42 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void FrmDnWrk_Load(object sender, EventArgs e)
         {
-            DownloaderStart();
+            FormStart();
+        }
+
+        /// <summary>
+        /// "Download progress changed" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void FrmDnWrk_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            try
+            {
+                DN_Progress.Value = e.ProgressPercentage;
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExDnProgressChanged);
+            }
+        }
+
+        /// <summary>
+        /// "Download file completed" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event completion arguments and results.</param>
+        private void FrmDnWrk_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            // Download task completed. Checking for errors...
+            if (e.Error != null)
+            {
+                Logger.Error(e.Error, DebugStrings.AppDbgExDnTaskError, RemoteURI, LocalFile);
+            }
+
+            // Performing additional actions...
+            VerifyResult();
+            FormFinalize();
         }
 
         /// <summary>

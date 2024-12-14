@@ -124,7 +124,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to report download progress to form..
+        ///   Looks up a localized string similar to Exception while trying to report the progress of a file download to the form..
         /// </summary>
         internal static string AppDbgExDnProgressChanged {
             get {
@@ -133,29 +133,29 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while verifying the downloaded file &quot;{0}&quot;..
+        ///   Looks up a localized string similar to Exception while downloading the &quot;{0}&quot; file from the remote server to the local file &quot;{1}&quot;..
         /// </summary>
-        internal static string AppDbgExDnResultVerify {
+        internal static string AppDbgExDnTaskError {
             get {
-                return ResourceManager.GetString("AppDbgExDnResultVerify", resourceCulture);
+                return ResourceManager.GetString("AppDbgExDnTaskError", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while downloading file &quot;{0}&quot; from the remote server to local file &quot;{1}&quot;..
+        ///   Looks up a localized string similar to Exception while trying to start downloading the &quot;{0}&quot; file from the remote server to the local file &quot;{1}&quot;..
         /// </summary>
-        internal static string AppDbgExDnWrkDownloadFile {
+        internal static string AppDbgExDnTaskStart {
             get {
-                return ResourceManager.GetString("AppDbgExDnWrkDownloadFile", resourceCulture);
+                return ResourceManager.GetString("AppDbgExDnTaskStart", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to start downloading file &quot;{0}&quot; to &quot;{1}&quot;..
+        ///   Looks up a localized string similar to Exception while trying to verify the downloaded file &quot;{0}&quot;..
         /// </summary>
-        internal static string AppDbgExDnWrkTask {
+        internal static string AppDbgExDnVerifyResult {
             get {
-                return ResourceManager.GetString("AppDbgExDnWrkTask", resourceCulture);
+                return ResourceManager.GetString("AppDbgExDnVerifyResult", resourceCulture);
             }
         }
         

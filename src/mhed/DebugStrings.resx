@@ -139,16 +139,16 @@
     <value>Exception while trying to delete selected row.</value>
   </data>
   <data name="AppDbgExDnProgressChanged" xml:space="preserve">
-    <value>Exception while trying to report download progress to form.</value>
+    <value>Exception while trying to report the progress of a file download to the form.</value>
   </data>
-  <data name="AppDbgExDnResultVerify" xml:space="preserve">
-    <value>Exception while verifying the downloaded file "{0}".</value>
+  <data name="AppDbgExDnTaskError" xml:space="preserve">
+    <value>Exception while downloading the "{0}" file from the remote server to the local file "{1}".</value>
   </data>
-  <data name="AppDbgExDnWrkDownloadFile" xml:space="preserve">
-    <value>Exception while downloading file "{0}" from the remote server to local file "{1}".</value>
+  <data name="AppDbgExDnTaskStart" xml:space="preserve">
+    <value>Exception while trying to start downloading the "{0}" file from the remote server to the local file "{1}".</value>
   </data>
-  <data name="AppDbgExDnWrkTask" xml:space="preserve">
-    <value>Exception while trying to start downloading file "{0}" to "{1}".</value>
+  <data name="AppDbgExDnVerifyResult" xml:space="preserve">
+    <value>Exception while trying to verify the downloaded file "{0}".</value>
   </data>
   <data name="AppDbgExExportTask" xml:space="preserve">
     <value>Exception while trying to export to file.</value>
