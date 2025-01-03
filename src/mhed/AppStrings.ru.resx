@@ -270,4 +270,7 @@
   <data name="AHE_IncorrectComment" xml:space="preserve">
     <value>Введён недействительный комментарий!</value>
   </data>
+  <data name="AHE_Version" xml:space="preserve">
+    <value>Версия: {0}</value>
+  </data>
 </root>

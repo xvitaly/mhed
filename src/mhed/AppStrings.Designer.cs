@@ -511,6 +511,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Version: {0}.
+        /// </summary>
+        internal static string AHE_Version {
+            get {
+                return ResourceManager.GetString("AHE_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Checking for updates... Please wait!.
         /// </summary>
         internal static string AHE_WrkInProgress {
