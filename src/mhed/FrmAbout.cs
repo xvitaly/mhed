@@ -24,16 +24,6 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// "OK" button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void AHE_Okay_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        /// <summary>
         /// "Form create" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -45,6 +35,16 @@ namespace mhed.gui
             AHE_Version.Text = string.Format("Version: {0}", CurrentApp.AppVersion);
             AHE_Copyright.Text = CurrentApp.AppCopyright;
             AHE_CompanyName.Text = CurrentApp.AppCompany;
+        }
+
+        /// <summary>
+        /// "OK" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void AHE_Okay_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
