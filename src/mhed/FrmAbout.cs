@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace mhed.gui
 {
     /// <summary>
-    /// "About" form class.
+    /// Class of the About module.
     /// </summary>
     public partial class FrmAbout : Form
     {
