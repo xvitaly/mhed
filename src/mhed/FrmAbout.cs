@@ -30,7 +30,6 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void FrmAbout_Load(object sender, EventArgs e)
         {
-            // Adding information about product version and copyrights...
             AHE_AppName.Text = CurrentApp.AppProduct;
             AHE_Version.Text = string.Format(AppStrings.AHE_Version, CurrentApp.AppVersion);
             AHE_Copyright.Text = CurrentApp.AppCopyright;
