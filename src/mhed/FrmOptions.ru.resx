@@ -149,6 +149,6 @@
     <value>Выберите приложение</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Настройки {0}</value>
+    <value>Настройки</value>
   </data>
 </root>

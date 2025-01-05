@@ -454,7 +454,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>{0}'s options</value>
+    <value>Options</value>
   </data>
   <data name="&gt;&gt;MO_SearchBin.Name" xml:space="preserve">
     <value>MO_SearchBin</value>

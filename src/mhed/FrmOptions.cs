@@ -34,9 +34,6 @@ namespace mhed.gui
             MO_PreserveFormState.Checked = Properties.Settings.Default.PreserveFormState;
             MO_AutoCheckUpdates.Checked = Properties.Settings.Default.AutoUpdateCheck;
             MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
-
-            // Settig application name in window title...
-            Text = string.Format(Text, Properties.Resources.AppName);
         }
 
         /// <summary>
