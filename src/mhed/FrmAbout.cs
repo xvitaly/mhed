@@ -30,10 +30,10 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void FrmAbout_Load(object sender, EventArgs e)
         {
-            AHE_AppName.Text = CurrentApp.AppProduct;
-            AHE_Version.Text = string.Format(AppStrings.AHE_Version, CurrentApp.AppVersion);
-            AHE_Copyright.Text = CurrentApp.AppCopyright;
-            AHE_CompanyName.Text = CurrentApp.AppCompany;
+            AF_ProductName.Text = CurrentApp.AppProduct;
+            AF_ProductVersion.Text = string.Format(AppStrings.AHE_Version, CurrentApp.AppVersion);
+            AF_Copyright.Text = CurrentApp.AppCopyright;
+            AF_CompanyName.Text = CurrentApp.AppCompany;
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void AHE_Okay_Click(object sender, EventArgs e)
+        private void AF_Okay_Click(object sender, EventArgs e)
         {
             Close();
         }

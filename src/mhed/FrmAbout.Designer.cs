@@ -28,78 +28,78 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbout));
-            this.AHE_AppIcon = new System.Windows.Forms.PictureBox();
-            this.AHE_AppName = new System.Windows.Forms.Label();
-            this.AHE_Version = new System.Windows.Forms.Label();
-            this.AHE_CompanyName = new System.Windows.Forms.Label();
-            this.AHE_Description = new System.Windows.Forms.TextBox();
-            this.AHE_License = new System.Windows.Forms.Label();
-            this.AHE_Copyright = new System.Windows.Forms.Label();
-            this.AHE_Okay = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.AHE_AppIcon)).BeginInit();
+            this.AF_ProductIcon = new System.Windows.Forms.PictureBox();
+            this.AF_ProductName = new System.Windows.Forms.Label();
+            this.AF_ProductVersion = new System.Windows.Forms.Label();
+            this.AF_CompanyName = new System.Windows.Forms.Label();
+            this.AF_Description = new System.Windows.Forms.TextBox();
+            this.AF_License = new System.Windows.Forms.Label();
+            this.AF_Copyright = new System.Windows.Forms.Label();
+            this.AF_Okay = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.AF_ProductIcon)).BeginInit();
             this.SuspendLayout();
             // 
-            // AHE_AppIcon
+            // AF_ProductIcon
             // 
-            this.AHE_AppIcon.Image = global::mhed.gui.Properties.Resources.ImageAppLogo;
-            resources.ApplyResources(this.AHE_AppIcon, "AHE_AppIcon");
-            this.AHE_AppIcon.Name = "AHE_AppIcon";
-            this.AHE_AppIcon.TabStop = false;
+            this.AF_ProductIcon.Image = global::mhed.gui.Properties.Resources.ImageAppLogo;
+            resources.ApplyResources(this.AF_ProductIcon, "AF_ProductIcon");
+            this.AF_ProductIcon.Name = "AF_ProductIcon";
+            this.AF_ProductIcon.TabStop = false;
             // 
-            // AHE_AppName
+            // AF_ProductName
             // 
-            resources.ApplyResources(this.AHE_AppName, "AHE_AppName");
-            this.AHE_AppName.Name = "AHE_AppName";
+            resources.ApplyResources(this.AF_ProductName, "AF_ProductName");
+            this.AF_ProductName.Name = "AF_ProductName";
             // 
-            // AHE_Version
+            // AF_ProductVersion
             // 
-            resources.ApplyResources(this.AHE_Version, "AHE_Version");
-            this.AHE_Version.Name = "AHE_Version";
+            resources.ApplyResources(this.AF_ProductVersion, "AF_ProductVersion");
+            this.AF_ProductVersion.Name = "AF_ProductVersion";
             // 
-            // AHE_CompanyName
+            // AF_CompanyName
             // 
-            resources.ApplyResources(this.AHE_CompanyName, "AHE_CompanyName");
-            this.AHE_CompanyName.Name = "AHE_CompanyName";
+            resources.ApplyResources(this.AF_CompanyName, "AF_CompanyName");
+            this.AF_CompanyName.Name = "AF_CompanyName";
             // 
-            // AHE_Description
+            // AF_Description
             // 
-            resources.ApplyResources(this.AHE_Description, "AHE_Description");
-            this.AHE_Description.Name = "AHE_Description";
-            this.AHE_Description.ReadOnly = true;
-            this.AHE_Description.TabStop = false;
+            resources.ApplyResources(this.AF_Description, "AF_Description");
+            this.AF_Description.Name = "AF_Description";
+            this.AF_Description.ReadOnly = true;
+            this.AF_Description.TabStop = false;
             // 
-            // AHE_License
+            // AF_License
             // 
-            resources.ApplyResources(this.AHE_License, "AHE_License");
-            this.AHE_License.Name = "AHE_License";
+            resources.ApplyResources(this.AF_License, "AF_License");
+            this.AF_License.Name = "AF_License";
             // 
-            // AHE_Copyright
+            // AF_Copyright
             // 
-            resources.ApplyResources(this.AHE_Copyright, "AHE_Copyright");
-            this.AHE_Copyright.Name = "AHE_Copyright";
+            resources.ApplyResources(this.AF_Copyright, "AF_Copyright");
+            this.AF_Copyright.Name = "AF_Copyright";
             // 
-            // AHE_Okay
+            // AF_Okay
             // 
-            this.AHE_Okay.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.AHE_Okay, "AHE_Okay");
-            this.AHE_Okay.Name = "AHE_Okay";
-            this.AHE_Okay.UseVisualStyleBackColor = true;
-            this.AHE_Okay.Click += new System.EventHandler(this.AHE_Okay_Click);
+            this.AF_Okay.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.AF_Okay, "AF_Okay");
+            this.AF_Okay.Name = "AF_Okay";
+            this.AF_Okay.UseVisualStyleBackColor = true;
+            this.AF_Okay.Click += new System.EventHandler(this.AF_Okay_Click);
             // 
             // FrmAbout
             // 
-            this.AcceptButton = this.AHE_Okay;
+            this.AcceptButton = this.AF_Okay;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.AHE_Okay;
-            this.Controls.Add(this.AHE_Okay);
-            this.Controls.Add(this.AHE_Copyright);
-            this.Controls.Add(this.AHE_License);
-            this.Controls.Add(this.AHE_Description);
-            this.Controls.Add(this.AHE_CompanyName);
-            this.Controls.Add(this.AHE_Version);
-            this.Controls.Add(this.AHE_AppName);
-            this.Controls.Add(this.AHE_AppIcon);
+            this.CancelButton = this.AF_Okay;
+            this.Controls.Add(this.AF_Okay);
+            this.Controls.Add(this.AF_Copyright);
+            this.Controls.Add(this.AF_License);
+            this.Controls.Add(this.AF_Description);
+            this.Controls.Add(this.AF_CompanyName);
+            this.Controls.Add(this.AF_ProductVersion);
+            this.Controls.Add(this.AF_ProductName);
+            this.Controls.Add(this.AF_ProductIcon);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -108,7 +108,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.FrmAbout_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.AHE_AppIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AF_ProductIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,14 +116,14 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox AHE_AppIcon;
-        private System.Windows.Forms.Label AHE_AppName;
-        private System.Windows.Forms.Label AHE_Version;
-        private System.Windows.Forms.Label AHE_CompanyName;
-        private System.Windows.Forms.TextBox AHE_Description;
-        private System.Windows.Forms.Label AHE_License;
-        private System.Windows.Forms.Label AHE_Copyright;
-        private System.Windows.Forms.Button AHE_Okay;
+        private System.Windows.Forms.PictureBox AF_ProductIcon;
+        private System.Windows.Forms.Label AF_ProductName;
+        private System.Windows.Forms.Label AF_ProductVersion;
+        private System.Windows.Forms.Label AF_CompanyName;
+        private System.Windows.Forms.TextBox AF_Description;
+        private System.Windows.Forms.Label AF_License;
+        private System.Windows.Forms.Label AF_Copyright;
+        private System.Windows.Forms.Button AF_Okay;
 
     }
 }
