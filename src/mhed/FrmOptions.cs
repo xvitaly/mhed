@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace mhed.gui
 {
     /// <summary>
-    /// Class of settings editor window.
+    /// Class of the Options module.
     /// </summary>
     public partial class FrmOptions : Form
     {
