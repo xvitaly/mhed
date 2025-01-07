@@ -34,6 +34,18 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Writes the application settings to the configuration file.
+        /// </summary>
+        private void WriteSettings()
+        {
+            Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
+            Properties.Settings.Default.PreserveFormState = MO_PreserveFormState.Checked;
+            Properties.Settings.Default.AutoUpdateCheck = MO_AutoCheckUpdates.Checked;
+            Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
+            Properties.Settings.Default.Save();
+        }
+
+        /// <summary>
         /// "Form create" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -50,14 +62,8 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void MO_Okay_Click(object sender, EventArgs e)
         {
-            // Storing settings...
-            Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
-            Properties.Settings.Default.PreserveFormState = MO_PreserveFormState.Checked;
-            Properties.Settings.Default.AutoUpdateCheck = MO_AutoCheckUpdates.Checked;
-            Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
-
-            // Saving settings to disk...
-            Properties.Settings.Default.Save();
+            // Writing application settings to the configuration file...
+            WriteSettings();
 
             // Showing message and closing form...
             MessageBox.Show(AppStrings.AHE_OptionsSaved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
