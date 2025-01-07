@@ -23,17 +23,24 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Reads the application settings from the configuration file.
+        /// </summary>
+        private void ReadSettings()
+        {
+            MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
+            MO_PreserveFormState.Checked = Properties.Settings.Default.PreserveFormState;
+            MO_AutoCheckUpdates.Checked = Properties.Settings.Default.AutoUpdateCheck;
+            MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
+        }
+
+        /// <summary>
         /// "Form create" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
         private void FrmOptions_Load(object sender, EventArgs e)
         {
-            // Reading current settings from configuration file...
-            MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
-            MO_PreserveFormState.Checked = Properties.Settings.Default.PreserveFormState;
-            MO_AutoCheckUpdates.Checked = Properties.Settings.Default.AutoUpdateCheck;
-            MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
+            ReadSettings();
         }
 
         /// <summary>
