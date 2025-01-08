@@ -34,9 +34,9 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Writes the application settings to the configuration file.
+        /// Saves the application options to the configuration file.
         /// </summary>
-        private void WriteSettings()
+        private void SaveOptions()
         {
             Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
             Properties.Settings.Default.PreserveFormState = MO_PreserveFormState.Checked;
@@ -62,8 +62,8 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void MO_Okay_Click(object sender, EventArgs e)
         {
-            // Writing application settings to the configuration file...
-            WriteSettings();
+            // Saving application settings to the configuration file...
+            SaveOptions();
 
             // Showing message and closing form...
             MessageBox.Show(AppStrings.AHE_OptionsSaved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
