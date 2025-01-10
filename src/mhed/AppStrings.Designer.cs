@@ -340,7 +340,7 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Settings were saved successfully!.
+        ///   Looks up a localized string similar to The options have been saved successfully!.
         /// </summary>
         internal static string AHE_OptionsSaved {
             get {

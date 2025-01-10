@@ -172,7 +172,7 @@
     <value>The core library version does not match the application's version. Please reinstall or report this issue to developers.</value>
   </data>
   <data name="AHE_OptionsSaved" xml:space="preserve">
-    <value>Settings were saved successfully!</value>
+    <value>The options have been saved successfully!</value>
   </data>
   <data name="AHE_LangPrefix" xml:space="preserve">
     <value>en</value>
