@@ -46,6 +46,15 @@ namespace mhed.gui
         }
 
         /// <summary>
+        /// Shows a message and closes the form.
+        /// </summary>
+        private void FormFinalize()
+        {
+            MessageBox.Show(AppStrings.AHE_OptionsSaved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
+        }
+
+        /// <summary>
         /// "Form create" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -62,12 +71,8 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void MO_Okay_Click(object sender, EventArgs e)
         {
-            // Saving application settings to the configuration file...
             SaveOptions();
-
-            // Showing message and closing form...
-            MessageBox.Show(AppStrings.AHE_OptionsSaved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Close();
+            FormFinalize();
         }
 
         /// <summary>
