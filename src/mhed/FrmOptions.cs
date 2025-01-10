@@ -82,7 +82,6 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void MO_Cancel_Click(object sender, EventArgs e)
         {
-            // Closing form without saving anything...
             Close();
         }
 
