@@ -78,21 +78,21 @@ namespace mhed.gui
             {
                 if (await IsUpdatesAvailable(UserAgent))
                 {
-                    UpdAppImg.Image = Properties.Resources.IconUpdateAvailable;
-                    UpdAppStatus.Text = string.Format(AppStrings.AHE_UpdateAvailable, UpMan.AppUpdateVersion);
+                    UP_Icon.Image = Properties.Resources.IconUpdateAvailable;
+                    UP_Status.Text = string.Format(AppStrings.AHE_UpdateAvailable, UpMan.AppUpdateVersion);
                 }
                 else
                 {
-                    UpdAppImg.Image = Properties.Resources.IconUpdateNotAvailable;
-                    UpdAppStatus.Text = AppStrings.AHE_UpdateNotAvailable;
+                    UP_Icon.Image = Properties.Resources.IconUpdateNotAvailable;
+                    UP_Status.Text = AppStrings.AHE_UpdateNotAvailable;
                 }
                 Properties.Settings.Default.LastUpdateTime = DateTime.Now;
             }
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExUpdChk);
-                UpdAppImg.Image = Properties.Resources.IconUpdateError;
-                UpdAppStatus.Text = AppStrings.AHE_UpdateCheckFailure;
+                UP_Icon.Image = Properties.Resources.IconUpdateError;
+                UP_Status.Text = AppStrings.AHE_UpdateCheckFailure;
             }
             IsCompleted = true;
         }
@@ -207,7 +207,7 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void UpdAppStatus_Click(object sender, EventArgs e)
+        private void UP_Status_Click(object sender, EventArgs e)
         {
             if (IsCompleted)
             {
@@ -244,7 +244,7 @@ namespace mhed.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void UpdClose_Click(object sender, EventArgs e)
+        private void UP_Close_Click(object sender, EventArgs e)
         {
             Close();
         }

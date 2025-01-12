@@ -117,87 +117,87 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="UpdAppImg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="UP_Icon.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="UpdAppImg.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="UP_Icon.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 12</value>
   </data>
-  <data name="UpdAppImg.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="UP_Icon.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="UpdAppImg.TabIndex" type="System.Int32, mscorlib">
+  <data name="UP_Icon.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;UpdAppImg.Name" xml:space="preserve">
-    <value>UpdAppImg</value>
+  <data name="&gt;&gt;UP_Icon.Name" xml:space="preserve">
+    <value>UP_Icon</value>
   </data>
-  <data name="&gt;&gt;UpdAppImg.Type" xml:space="preserve">
+  <data name="&gt;&gt;UP_Icon.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;UpdAppImg.Parent" xml:space="preserve">
+  <data name="&gt;&gt;UP_Icon.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;UpdAppImg.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;UP_Icon.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="UpdAppStatus.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="UP_Status.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="UpdAppStatus.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="UP_Status.Location" type="System.Drawing.Point, System.Drawing">
     <value>53, 12</value>
   </data>
-  <data name="UpdAppStatus.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="UP_Status.Size" type="System.Drawing.Size, System.Drawing">
     <value>203, 32</value>
   </data>
-  <data name="UpdAppStatus.TabIndex" type="System.Int32, mscorlib">
+  <data name="UP_Status.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="UpdAppStatus.Text" xml:space="preserve">
+  <data name="UP_Status.Text" xml:space="preserve">
     <value>Checking for main application updates. Please wait...</value>
   </data>
-  <data name="UpdAppStatus.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="UP_Status.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;UpdAppStatus.Name" xml:space="preserve">
-    <value>UpdAppStatus</value>
+  <data name="&gt;&gt;UP_Status.Name" xml:space="preserve">
+    <value>UP_Status</value>
   </data>
-  <data name="&gt;&gt;UpdAppStatus.Type" xml:space="preserve">
+  <data name="&gt;&gt;UP_Status.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;UpdAppStatus.Parent" xml:space="preserve">
+  <data name="&gt;&gt;UP_Status.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;UpdAppStatus.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;UP_Status.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="UpdClose.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="UP_Close.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="UpdClose.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="UP_Close.Location" type="System.Drawing.Point, System.Drawing">
     <value>70, 60</value>
   </data>
-  <data name="UpdClose.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="UP_Close.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 23</value>
   </data>
-  <data name="UpdClose.TabIndex" type="System.Int32, mscorlib">
+  <data name="UP_Close.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="UpdClose.Text" xml:space="preserve">
+  <data name="UP_Close.Text" xml:space="preserve">
     <value>Close</value>
   </data>
-  <data name="&gt;&gt;UpdClose.Name" xml:space="preserve">
-    <value>UpdClose</value>
+  <data name="&gt;&gt;UP_Close.Name" xml:space="preserve">
+    <value>UP_Close</value>
   </data>
-  <data name="&gt;&gt;UpdClose.Type" xml:space="preserve">
+  <data name="&gt;&gt;UP_Close.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;UpdClose.Parent" xml:space="preserve">
+  <data name="&gt;&gt;UP_Close.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;UpdClose.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;UP_Close.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

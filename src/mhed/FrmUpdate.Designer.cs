@@ -29,44 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpdate));
-            this.UpdAppImg = new System.Windows.Forms.PictureBox();
-            this.UpdAppStatus = new System.Windows.Forms.Label();
-            this.UpdClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).BeginInit();
+            this.UP_Icon = new System.Windows.Forms.PictureBox();
+            this.UP_Status = new System.Windows.Forms.Label();
+            this.UP_Close = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.UP_Icon)).BeginInit();
             this.SuspendLayout();
             // 
-            // UpdAppImg
+            // UP_Icon
             // 
-            this.UpdAppImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdAppImg.Image = global::mhed.gui.Properties.Resources.IconUpdateChecking;
-            resources.ApplyResources(this.UpdAppImg, "UpdAppImg");
-            this.UpdAppImg.Name = "UpdAppImg";
-            this.UpdAppImg.TabStop = false;
-            this.UpdAppImg.Click += new System.EventHandler(this.UpdAppStatus_Click);
+            this.UP_Icon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UP_Icon.Image = global::mhed.gui.Properties.Resources.IconUpdateChecking;
+            resources.ApplyResources(this.UP_Icon, "UP_Icon");
+            this.UP_Icon.Name = "UP_Icon";
+            this.UP_Icon.TabStop = false;
+            this.UP_Icon.Click += new System.EventHandler(this.UP_Status_Click);
             // 
-            // UpdAppStatus
+            // UP_Status
             // 
-            this.UpdAppStatus.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.UpdAppStatus, "UpdAppStatus");
-            this.UpdAppStatus.Name = "UpdAppStatus";
-            this.UpdAppStatus.Click += new System.EventHandler(this.UpdAppStatus_Click);
+            this.UP_Status.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.UP_Status, "UP_Status");
+            this.UP_Status.Name = "UP_Status";
+            this.UP_Status.Click += new System.EventHandler(this.UP_Status_Click);
             // 
-            // UpdClose
+            // UP_Close
             // 
-            this.UpdClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.UpdClose, "UpdClose");
-            this.UpdClose.Name = "UpdClose";
-            this.UpdClose.UseVisualStyleBackColor = true;
-            this.UpdClose.Click += new System.EventHandler(this.UpdClose_Click);
+            this.UP_Close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.UP_Close, "UP_Close");
+            this.UP_Close.Name = "UP_Close";
+            this.UP_Close.UseVisualStyleBackColor = true;
+            this.UP_Close.Click += new System.EventHandler(this.UP_Close_Click);
             // 
             // FrmUpdate
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.UpdClose;
-            this.Controls.Add(this.UpdClose);
-            this.Controls.Add(this.UpdAppStatus);
-            this.Controls.Add(this.UpdAppImg);
+            this.CancelButton = this.UP_Close;
+            this.Controls.Add(this.UP_Close);
+            this.Controls.Add(this.UP_Status);
+            this.Controls.Add(this.UP_Icon);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -76,15 +76,15 @@
             this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmUpdate_FormClosing);
             this.Load += new System.EventHandler(this.FrmUpdate_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UP_Icon)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox UpdAppImg;
-        private System.Windows.Forms.Label UpdAppStatus;
-        private System.Windows.Forms.Button UpdClose;
+        private System.Windows.Forms.PictureBox UP_Icon;
+        private System.Windows.Forms.Label UP_Status;
+        private System.Windows.Forms.Button UP_Close;
     }
 }
