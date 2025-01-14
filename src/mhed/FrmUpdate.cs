@@ -113,7 +113,7 @@ namespace mhed.gui
         /// </summary>
         /// <param name="UpdateURL">Full download URL.</param>
         /// <returns>Result of operation.</returns>
-        private bool InstallBinaryUpdate(string UpdateURL)
+        private bool InstallUpdate(string UpdateURL)
         {
             // Setting default value for result...
             bool Result = false;
@@ -215,7 +215,7 @@ namespace mhed.gui
                 {
                     if (Platform.AutoUpdateSupported && !Properties.Settings.Default.IsPortable)
                     {
-                        if (InstallBinaryUpdate(UpMan.AppUpdateURL))
+                        if (InstallUpdate(UpMan.AppUpdateURL))
                         {
                             Platform.Exit(ReturnCodes.AppUpdatePending);
                         }
