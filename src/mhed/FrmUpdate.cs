@@ -14,171 +14,233 @@ using mhed.lib;
 namespace mhed.gui
 {
     /// <summary>
-    /// Class of the update checker window.
+    /// Class of the Update center module.
     /// </summary>
     public partial class FrmUpdate : Form
     {
         /// <summary>
-        /// Logger instance for FrmUpdate class.
+        /// Logger instance for the FrmUpdate class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// CurrentPlatform instance for FrmMute class.
+        /// CurrentPlatform instance for the FrmUpdate class.
         /// </summary>
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
-        /// Store User-Agent header for outgoing HTTP queries.
+        /// Stores the User-Agent header for outgoing HTTP queries.
         /// </summary>
         private readonly string UserAgent;
 
         /// <summary>
-        /// Store full path to the local updates directory.
-        /// </summary>
-        private readonly string AppUpdateDir;
-
-        /// <summary>
-        /// Store app's installation directory.
+        /// Stores full path to the application installation directory.
         /// </summary>
         private readonly string FullAppPath;
 
         /// <summary>
-        /// Store an instance of UpdateManager class for working
+        /// Stores the full path to the local updates directory.
+        /// </summary>
+        private readonly string AppUpdateDir;
+
+        /// <summary>
+        /// Stores an instance of the UpdateManager class for working
         /// with updates.
         /// </summary>
         private UpdateManager UpMan;
 
         /// <summary>
-        /// Store current state of the async tasks.
+        /// Stores the status of the currently running process.
         /// </summary>
         private bool IsCompleted = false;
 
         /// <summary>
         /// FrmUpdate class constructor.
         /// </summary>
-        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
-        /// <param name="A">App's installation directory.</param>
-        /// <param name="U">App's local updates directory.</param>
-        public FrmUpdate(string UA, string A, string U)
+        /// <param name="Agent">User-Agent header for outgoing HTTP queries.</param>
+        /// <param name="AppDir">Full path to the application installation directory.</param>
+        /// <param name="UpdateDir">Full path to the local updates directory.</param>
+        public FrmUpdate(string Agent, string AppDir, string UpdateDir)
         {
             InitializeComponent();
-            UserAgent = UA;
-            FullAppPath = A;
-            AppUpdateDir = U;
+            UserAgent = Agent;
+            FullAppPath = AppDir;
+            AppUpdateDir = UpdateDir;
         }
 
         /// <summary>
-        /// Launch a program update checker in a separate thread, waits for the
-        /// result and returns a message if found.
+        /// Launches the update checker in a separate thread, waits for the
+        /// result and then updates the form.
         /// </summary>
         private async Task CheckForUpdates()
         {
             try
             {
-                if (await IsUpdatesAvailable(UserAgent))
+                if (await IsUpdateAvailable())
                 {
                     UP_Icon.Image = Properties.Resources.IconUpdateAvailable;
-                    UP_Status.Text = string.Format(AppStrings.AHE_UpdateAvailable, UpMan.AppUpdateVersion);
+                    UP_Status.Text = string.Format(AppStrings.UP_UpdateAvailable, UpMan.AppUpdateVersion);
                 }
                 else
                 {
                     UP_Icon.Image = Properties.Resources.IconUpdateNotAvailable;
-                    UP_Status.Text = AppStrings.AHE_UpdateNotAvailable;
+                    UP_Status.Text = AppStrings.UP_UpdateNotAvailable;
                 }
                 Properties.Settings.Default.LastUpdateTime = DateTime.Now;
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExUpdChk);
+                Logger.Error(Ex, DebugStrings.AppDbgExUpCheckForUpdates);
                 UP_Icon.Image = Properties.Resources.IconUpdateError;
-                UP_Status.Text = AppStrings.AHE_UpdateCheckFailure;
+                UP_Status.Text = AppStrings.UP_UpdateCheckFailure;
             }
             IsCompleted = true;
         }
 
         /// <summary>
-        /// Check for application updates in a separate thread.
+        /// Checks for the updates in a separate thread.
         /// </summary>
-        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
-        /// <returns>Returns True if updates were found.</returns>
-        private async Task<bool> IsUpdatesAvailable(string UA)
+        /// <returns>Returns True if the updates were found.</returns>
+        private async Task<bool> IsUpdateAvailable()
         {
-            UpMan = await UpdateManager.Create(UA);
+            UpMan = await UpdateManager.Create(UserAgent);
             return UpMan.CheckAppUpdate();
         }
 
         /// <summary>
-        /// Install standalone update.
+        /// Retries checking for updates.
         /// </summary>
-        /// <param name="UpdateURL">Full download URL.</param>
-        /// <returns>Result of operation.</returns>
-        private bool InstallUpdate(string UpdateURL)
+        private async Task RetryUpdateCheck()
         {
-            // Setting default value for result...
+            if (MessageBox.Show(AppStrings.UP_RetryUpdateCheckQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                IsCompleted = false;
+                UP_Icon.Image = Properties.Resources.IconUpdateChecking;
+                UP_Status.Text = AppStrings.UP_RetryUpdateCheck;
+                await CheckForUpdates();
+            }
+        }
+
+        /// <summary>
+        /// Installs the downloaded update file.
+        /// </summary>
+        /// <param name="UpdateFileName">Full path to the downloaded update file.</param>
+        private void StartUpdateInstaller(string UpdateFileName)
+        {
+            // Checking if the application installation directory is writable...
+            if (FileManager.IsDirectoryWritable(FullAppPath))
+            {
+                // Running the installer with current access rights...
+                Platform.StartRegularProcess(UpdateFileName);
+            }
+            else
+            {
+                // Running the installer with UAC access rights elevation...
+                Platform.StartElevatedProcess(UpdateFileName);
+            }
+        }
+
+        /// <summary>
+        /// Downloads and installs the standalone update.
+        /// </summary>
+        /// <returns>The result of the operation.</returns>
+        private bool InstallBinaryUpdate()
+        {
+            // Setting the default value for the result...
             bool Result = false;
 
-            // Generating full paths to files...
-            string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUpdateDir, Path.GetFileName(UpdateURL)));
+            // Generating full path to the update file...
+            string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUpdateDir, Path.GetFileName(UpMan.AppUpdateURL)));
 
-            // Downloading update from server...
+            // Downloading the update from the server...
             GuiHelpers.FormShowDownloader(UpMan.AppUpdateURL, UpdateFileName);
 
-            // Checking if downloaded file exists...
+            // Checking if the downloaded file is exists...
             if (File.Exists(UpdateFileName))
             {
-                // Checking hashes...
+                // Checking the downloaded file hash...
                 if (UpMan.CheckAppHash(FileManager.CalculateFileSHA512(UpdateFileName)))
                 {
-                    // Showing message about successful download...
-                    MessageBox.Show(AppStrings.AHE_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Showing a message about the successful download...
+                    MessageBox.Show(AppStrings.UP_DownloadSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Installing standalone update...
+                    // Installing the standalone update...
                     try
                     {
-                        // Checking if app's installation directory is writable...
-                        if (FileManager.IsDirectoryWritable(FullAppPath))
-                        {
-                            // Running installer with current access rights...
-                            Platform.StartRegularProcess(UpdateFileName);
-                        }
-                        else
-                        {
-                            // Running installer with UAC access rights elevation...
-                            Platform.StartElevatedProcess(UpdateFileName);
-                        }
+                        StartUpdateInstaller(UpdateFileName);
                         Result = true;
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Error(Ex, DebugStrings.AppDbgExUpdBinInst);
-                        MessageBox.Show(AppStrings.AHE_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Logger.Error(Ex, DebugStrings.AppDbgExUpInstallBinaryUpdate);
+                        MessageBox.Show(AppStrings.UP_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    // Hash missmatch. File was damaged. Removing it...
+                    // Hash missmatch. Writing to the log...
+                    Logger.Error(DebugStrings.AppDbgUpHashMissmatch);
+
+                    // Removing the downloaded file...
                     try
                     {
                         File.Delete(UpdateFileName);
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, DebugStrings.AppDbgExUpdBinRem);
+                        Logger.Warn(Ex, DebugStrings.AppDbgExUpDeleteFile);
                     }
 
-                    // Showing message about hash missmatch...
-                    MessageBox.Show(AppStrings.AHE_UpdateHashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Showing a message about the hash missmatch...
+                    MessageBox.Show(AppStrings.UP_HashMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                // Showing error about update failure...
-                MessageBox.Show(AppStrings.AHE_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Writing to the log and showing an error message about the download failure...
+                Logger.Error(DebugStrings.AppDbgUpDownloadFailure);
+                MessageBox.Show(AppStrings.UP_DownloadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             // Returning result...
             return Result;
+        }
+
+        /// <summary>
+        /// Installs an update or displays an update notification depending on
+        /// the currently running platform.
+        /// </summary>
+        private void InstallUpdate()
+        {
+            if (Platform.AutoUpdateSupported && !Properties.Settings.Default.IsPortable)
+            {
+                if (InstallBinaryUpdate())
+                {
+                    Platform.Exit(ReturnCodes.AppUpdatePending);
+                }
+            }
+            else
+            {
+                if (MessageBox.Show(string.Format(AppStrings.UP_OtherPlatform, UpMan.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Platform.OpenWebPage(UpMan.AppUpdateInfo);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Checks whether the update is available and attempts to install it.
+        /// </summary>
+        private void CheckAndInstallUpdate()
+        {
+            if (UpMan.CheckAppUpdate())
+            {
+                InstallUpdate();
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.UP_LatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         /// <summary>
@@ -188,54 +250,35 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private async void FrmUpdate_Load(object sender, EventArgs e)
         {
-            // Starting checking for updates...
             await CheckForUpdates();
         }
 
         /// <summary>
-        /// "Form close" event handler.
+        /// "Install update" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void FrmUpdate_FormClosing(object sender, FormClosingEventArgs e)
+        private async void UP_Status_Click(object sender, EventArgs e)
         {
-            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && !IsCompleted;
-        }
-
-        /// <summary>
-        /// "Install app update" button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void UP_Status_Click(object sender, EventArgs e)
-        {
-            if (IsCompleted)
+            try
             {
-                if (UpMan.CheckAppUpdate())
+                if (IsCompleted && (UpMan == null))
                 {
-                    if (Platform.AutoUpdateSupported && !Properties.Settings.Default.IsPortable)
-                    {
-                        if (InstallUpdate(UpMan.AppUpdateURL))
-                        {
-                            Platform.Exit(ReturnCodes.AppUpdatePending);
-                        }
-                    }
-                    else
-                    {
-                        if (MessageBox.Show(string.Format(AppStrings.AHE_UpdateOtherPlatform, UpMan.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            Platform.OpenWebPage(UpMan.AppUpdateInfo);
-                        }
-                    }
+                    await RetryUpdateCheck();
+                }
+                else if (IsCompleted)
+                {
+                    CheckAndInstallUpdate();
                 }
                 else
                 {
-                    MessageBox.Show(AppStrings.AHE_UpdateLatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.UP_WorkInProgress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else
+            catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.AHE_WrkInProgress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Logger.Error(Ex, DebugStrings.AppDbgExUpInstallUpdate);
+                MessageBox.Show(AppStrings.UP_InstallUpdateError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -247,6 +290,16 @@ namespace mhed.gui
         private void UP_Close_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        /// <summary>
+        /// "Form close" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void FrmUpdate_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && !IsCompleted;
         }
     }
 }

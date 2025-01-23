@@ -210,31 +210,31 @@
   <data name="AHE_ShowLogFileError" xml:space="preserve">
     <value>Не удалось отобразить отладочный журнал программы!</value>
   </data>
-  <data name="AHE_UpdateAvailable" xml:space="preserve">
+  <data name="UP_UpdateAvailable" xml:space="preserve">
     <value>Доступно обновление программы. Новая версия: {0}.</value>
   </data>
-  <data name="AHE_UpdateCheckFailure" xml:space="preserve">
+  <data name="UP_UpdateCheckFailure" xml:space="preserve">
     <value>Произошла ошибка во время проверки обновлений программы.</value>
   </data>
-  <data name="AHE_UpdateFailure" xml:space="preserve">
-    <value>Произошла ошибка при попытке запуска программы установки новой версии. Программа не была обновлена. Запустите обновление повторно позднее!</value>
+  <data name="UP_DownloadFailure" xml:space="preserve">
+    <value>Произошла ошибка при загрузке модуля установки новой версии с сервера! Программа не была обновлена.</value>
   </data>
-  <data name="AHE_UpdateHashFailure" xml:space="preserve">
-    <value>Контрольная сумма загруженного файла отличается от эталона. Обновление не было установлено!</value>
+  <data name="UP_HashMissmatch" xml:space="preserve">
+    <value>Контрольная сумма загруженного инсталлятора отличается от эталонной! Возможно он был повреждён при передаче. Попробуйте повторить попытку позднее.</value>
   </data>
-  <data name="AHE_UpdateLatestInstalled" xml:space="preserve">
-    <value>Обновление не требуется, т.к. у вас установлена последняя версия программы.</value>
+  <data name="UP_LatestInstalled" xml:space="preserve">
+    <value>Обновление не требуется, т.к. у вас установлена последняя версия программы!</value>
   </data>
-  <data name="AHE_UpdateNotAvailable" xml:space="preserve">
+  <data name="UP_UpdateNotAvailable" xml:space="preserve">
     <value>Нет новых обновлений программы. Установлена новейшая версия.</value>
   </data>
-  <data name="AHE_UpdateOtherPlatform" xml:space="preserve">
+  <data name="UP_OtherPlatform" xml:space="preserve">
     <value>Доступна новая версия {0} программы, однако автоматические обновления на данной платформе не поддерживаются. Показать список изменений и ссылки для скачивания в веб-браузере?</value>
   </data>
-  <data name="AHE_UpdateSuccessful" xml:space="preserve">
+  <data name="UP_DownloadSuccessful" xml:space="preserve">
     <value>Новая версия была успешно получена с сервера. Сейчас будет произведена её установка!</value>
   </data>
-  <data name="AHE_WrkInProgress" xml:space="preserve">
+  <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Пожалуйста, дождитесь завершения проверки обновлений!</value>
   </data>
   <data name="AHE_NewVersionAvailable" xml:space="preserve">
@@ -272,5 +272,17 @@
   </data>
   <data name="AHE_Version" xml:space="preserve">
     <value>Версия: {0}</value>
+  </data>
+  <data name="UP_UpdateFailure" xml:space="preserve">
+    <value>Произошла ошибка при попытке запуска модуля установки новой версии! Программа не была обновлена.</value>
+  </data>
+  <data name="UP_InstallUpdateError" xml:space="preserve">
+    <value>Произошла ошибка во время загрузки и установки обновления программы!</value>
+  </data>
+  <data name="UP_RetryUpdateCheck" xml:space="preserve">
+    <value>Повтор проверки обновлений. Пожалуйста, подождите...</value>
+  </data>
+  <data name="UP_RetryUpdateCheckQuestion" xml:space="preserve">
+    <value>Повторить попытку проверки обновлений?</value>
   </data>
 </root>

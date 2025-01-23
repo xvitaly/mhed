@@ -430,78 +430,6 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Application update available. New version: {0}..
-        /// </summary>
-        internal static string AHE_UpdateAvailable {
-            get {
-                return ResourceManager.GetString("AHE_UpdateAvailable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Update check failed. Please try again later..
-        /// </summary>
-        internal static string AHE_UpdateCheckFailure {
-            get {
-                return ResourceManager.GetString("AHE_UpdateCheckFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to run the installer. The program has not been updated. Run the update again later!.
-        /// </summary>
-        internal static string AHE_UpdateFailure {
-            get {
-                return ResourceManager.GetString("AHE_UpdateFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Downloaded file has incorrect hash. Maybe it was corrupted during transfer. Please try again later!.
-        /// </summary>
-        internal static string AHE_UpdateHashFailure {
-            get {
-                return ResourceManager.GetString("AHE_UpdateHashFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Update is not required because you have the latest version of the program..
-        /// </summary>
-        internal static string AHE_UpdateLatestInstalled {
-            get {
-                return ResourceManager.GetString("AHE_UpdateLatestInstalled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No new updates available. Your application is up to date..
-        /// </summary>
-        internal static string AHE_UpdateNotAvailable {
-            get {
-                return ResourceManager.GetString("AHE_UpdateNotAvailable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
-        /// </summary>
-        internal static string AHE_UpdateOtherPlatform {
-            get {
-                return ResourceManager.GetString("AHE_UpdateOtherPlatform", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The new version has been successfully received from server. We will install it now!.
-        /// </summary>
-        internal static string AHE_UpdateSuccessful {
-            get {
-                return ResourceManager.GetString("AHE_UpdateSuccessful", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Failed to load URL in default web browser!.
         /// </summary>
         internal static string AHE_UrlOpenError {
@@ -520,11 +448,119 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while downloading the installer of the new version from the remote server! The application has not been updated..
+        /// </summary>
+        internal static string UP_DownloadFailure {
+            get {
+                return ResourceManager.GetString("UP_DownloadFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The new version has been successfully received from the server. We will install it now!.
+        /// </summary>
+        internal static string UP_DownloadSuccessful {
+            get {
+                return ResourceManager.GetString("UP_DownloadSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The downloaded installer has an incorrect hash! It may have been corrupted during transfer. Please try again later..
+        /// </summary>
+        internal static string UP_HashMissmatch {
+            get {
+                return ResourceManager.GetString("UP_HashMissmatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to download and install the application update!.
+        /// </summary>
+        internal static string UP_InstallUpdateError {
+            get {
+                return ResourceManager.GetString("UP_InstallUpdateError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The update is not required as you already have the latest version of the application installed!.
+        /// </summary>
+        internal static string UP_LatestInstalled {
+            get {
+                return ResourceManager.GetString("UP_LatestInstalled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
+        /// </summary>
+        internal static string UP_OtherPlatform {
+            get {
+                return ResourceManager.GetString("UP_OtherPlatform", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retrying the update check. Please wait....
+        /// </summary>
+        internal static string UP_RetryUpdateCheck {
+            get {
+                return ResourceManager.GetString("UP_RetryUpdateCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retry the update check?.
+        /// </summary>
+        internal static string UP_RetryUpdateCheckQuestion {
+            get {
+                return ResourceManager.GetString("UP_RetryUpdateCheckQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The application update is available. New version: {0}..
+        /// </summary>
+        internal static string UP_UpdateAvailable {
+            get {
+                return ResourceManager.GetString("UP_UpdateAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update check failed. Please try again later..
+        /// </summary>
+        internal static string UP_UpdateCheckFailure {
+            get {
+                return ResourceManager.GetString("UP_UpdateCheckFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to run the installer of the new version! The application has not been updated..
+        /// </summary>
+        internal static string UP_UpdateFailure {
+            get {
+                return ResourceManager.GetString("UP_UpdateFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No new updates available. The application is up to date..
+        /// </summary>
+        internal static string UP_UpdateNotAvailable {
+            get {
+                return ResourceManager.GetString("UP_UpdateNotAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Checking for updates... Please wait!.
         /// </summary>
-        internal static string AHE_WrkInProgress {
+        internal static string UP_WorkInProgress {
             get {
-                return ResourceManager.GetString("AHE_WrkInProgress", resourceCulture);
+                return ResourceManager.GetString("UP_WorkInProgress", resourceCulture);
             }
         }
     }

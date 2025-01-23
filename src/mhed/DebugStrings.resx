@@ -192,14 +192,17 @@
   <data name="AppDbgExShowLogFile" xml:space="preserve">
     <value>Exception while trying to show debug log file.</value>
   </data>
-  <data name="AppDbgExUpdBinInst" xml:space="preserve">
-    <value>Exception while trying to install binary update.</value>
+  <data name="AppDbgExUpCheckForUpdates" xml:space="preserve">
+    <value>Exception while checking for updates by the Updates center.</value>
   </data>
-  <data name="AppDbgExUpdBinRem" xml:space="preserve">
-    <value>Exception while trying to remove binary update file.</value>
+  <data name="AppDbgExUpDeleteFile" xml:space="preserve">
+    <value>Exception when trying to delete the downloaded file with an incorrect hash.</value>
   </data>
-  <data name="AppDbgExUpdChk" xml:space="preserve">
-    <value>Exception while checking for updates during the Updates form initialization.</value>
+  <data name="AppDbgExUpInstallBinaryUpdate" xml:space="preserve">
+    <value>Exception while trying to run the installer of the new version.</value>
+  </data>
+  <data name="AppDbgExUpInstallUpdate" xml:space="preserve">
+    <value>Exception while trying to download and install the application update.</value>
   </data>
   <data name="AppDbgHostsFileDoesNotExists" xml:space="preserve">
     <value>Hosts file does not exists.</value>
@@ -221,5 +224,11 @@
   </data>
   <data name="AppDbgRestartAsAdminNotImplemented" xml:space="preserve">
     <value>Trying to restart an application on unsupported platform.</value>
+  </data>
+  <data name="AppDbgUpDownloadFailure" xml:space="preserve">
+    <value>Failed to download the the application update from the remote server.</value>
+  </data>
+  <data name="AppDbgUpHashMissmatch" xml:space="preserve">
+    <value>Failed to install the application update. The downloaded file has an incorrect hash and will be deleted.</value>
   </data>
 </root>

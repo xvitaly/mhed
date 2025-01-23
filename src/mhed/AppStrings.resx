@@ -210,31 +210,31 @@
   <data name="AHE_ShowLogFileError" xml:space="preserve">
     <value>Failed to show debug log file!</value>
   </data>
-  <data name="AHE_UpdateAvailable" xml:space="preserve">
-    <value>Application update available. New version: {0}.</value>
+  <data name="UP_UpdateAvailable" xml:space="preserve">
+    <value>The application update is available. New version: {0}.</value>
   </data>
-  <data name="AHE_UpdateCheckFailure" xml:space="preserve">
+  <data name="UP_UpdateCheckFailure" xml:space="preserve">
     <value>Update check failed. Please try again later.</value>
   </data>
-  <data name="AHE_UpdateFailure" xml:space="preserve">
-    <value>An error occurred while trying to run the installer. The program has not been updated. Run the update again later!</value>
+  <data name="UP_DownloadFailure" xml:space="preserve">
+    <value>An error occurred while downloading the installer of the new version from the remote server! The application has not been updated.</value>
   </data>
-  <data name="AHE_UpdateHashFailure" xml:space="preserve">
-    <value>Downloaded file has incorrect hash. Maybe it was corrupted during transfer. Please try again later!</value>
+  <data name="UP_HashMissmatch" xml:space="preserve">
+    <value>The downloaded installer has an incorrect hash! It may have been corrupted during transfer. Please try again later.</value>
   </data>
-  <data name="AHE_UpdateLatestInstalled" xml:space="preserve">
-    <value>Update is not required because you have the latest version of the program.</value>
+  <data name="UP_LatestInstalled" xml:space="preserve">
+    <value>The update is not required as you already have the latest version of the application installed!</value>
   </data>
-  <data name="AHE_UpdateNotAvailable" xml:space="preserve">
-    <value>No new updates available. Your application is up to date.</value>
+  <data name="UP_UpdateNotAvailable" xml:space="preserve">
+    <value>No new updates available. The application is up to date.</value>
   </data>
-  <data name="AHE_UpdateOtherPlatform" xml:space="preserve">
+  <data name="UP_OtherPlatform" xml:space="preserve">
     <value>A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?</value>
   </data>
-  <data name="AHE_UpdateSuccessful" xml:space="preserve">
-    <value>The new version has been successfully received from server. We will install it now!</value>
+  <data name="UP_DownloadSuccessful" xml:space="preserve">
+    <value>The new version has been successfully received from the server. We will install it now!</value>
   </data>
-  <data name="AHE_WrkInProgress" xml:space="preserve">
+  <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Checking for updates... Please wait!</value>
   </data>
   <data name="AHE_NewVersionAvailable" xml:space="preserve">
@@ -272,5 +272,17 @@
   </data>
   <data name="AHE_Version" xml:space="preserve">
     <value>Version: {0}</value>
+  </data>
+  <data name="UP_UpdateFailure" xml:space="preserve">
+    <value>An error occurred while trying to run the installer of the new version! The application has not been updated.</value>
+  </data>
+  <data name="UP_InstallUpdateError" xml:space="preserve">
+    <value>An error occurred while trying to download and install the application update!</value>
+  </data>
+  <data name="UP_RetryUpdateCheck" xml:space="preserve">
+    <value>Retrying the update check. Please wait...</value>
+  </data>
+  <data name="UP_RetryUpdateCheckQuestion" xml:space="preserve">
+    <value>Retry the update check?</value>
   </data>
 </root>

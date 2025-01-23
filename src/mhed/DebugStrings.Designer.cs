@@ -286,29 +286,38 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to install binary update..
+        ///   Looks up a localized string similar to Exception while checking for updates by the Updates center..
         /// </summary>
-        internal static string AppDbgExUpdBinInst {
+        internal static string AppDbgExUpCheckForUpdates {
             get {
-                return ResourceManager.GetString("AppDbgExUpdBinInst", resourceCulture);
+                return ResourceManager.GetString("AppDbgExUpCheckForUpdates", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to remove binary update file..
+        ///   Looks up a localized string similar to Exception when trying to delete the downloaded file with an incorrect hash..
         /// </summary>
-        internal static string AppDbgExUpdBinRem {
+        internal static string AppDbgExUpDeleteFile {
             get {
-                return ResourceManager.GetString("AppDbgExUpdBinRem", resourceCulture);
+                return ResourceManager.GetString("AppDbgExUpDeleteFile", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while checking for updates during the Updates form initialization..
+        ///   Looks up a localized string similar to Exception while trying to run the installer of the new version..
         /// </summary>
-        internal static string AppDbgExUpdChk {
+        internal static string AppDbgExUpInstallBinaryUpdate {
             get {
-                return ResourceManager.GetString("AppDbgExUpdChk", resourceCulture);
+                return ResourceManager.GetString("AppDbgExUpInstallBinaryUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to download and install the application update..
+        /// </summary>
+        internal static string AppDbgExUpInstallUpdate {
+            get {
+                return ResourceManager.GetString("AppDbgExUpInstallUpdate", resourceCulture);
             }
         }
         
@@ -372,6 +381,24 @@ namespace mhed.gui {
         internal static string AppDbgRestartAsAdminNotImplemented {
             get {
                 return ResourceManager.GetString("AppDbgRestartAsAdminNotImplemented", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to download the the application update from the remote server..
+        /// </summary>
+        internal static string AppDbgUpDownloadFailure {
+            get {
+                return ResourceManager.GetString("AppDbgUpDownloadFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to install the application update. The downloaded file has an incorrect hash and will be deleted..
+        /// </summary>
+        internal static string AppDbgUpHashMissmatch {
+            get {
+                return ResourceManager.GetString("AppDbgUpHashMissmatch", resourceCulture);
             }
         }
     }
