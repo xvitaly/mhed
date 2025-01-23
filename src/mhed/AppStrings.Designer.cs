@@ -61,6 +61,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Version: {0}.
+        /// </summary>
+        internal static string AF_Version {
+            get {
+                return ResourceManager.GetString("AF_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The program is already running. Starting the second copy is not allowed..
         /// </summary>
         internal static string AHE_AlreadyRunning {
@@ -340,15 +349,6 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The options have been saved successfully!.
-        /// </summary>
-        internal static string AHE_OptionsSaved {
-            get {
-                return ResourceManager.GetString("AHE_OptionsSaved", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Failed to restart the application with administrator rights!.
         /// </summary>
         internal static string AHE_RestartAsAdminError {
@@ -439,11 +439,11 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Version: {0}.
+        ///   Looks up a localized string similar to The options have been saved successfully!.
         /// </summary>
-        internal static string AHE_Version {
+        internal static string MO_OptionsSaved {
             get {
-                return ResourceManager.GetString("AHE_Version", resourceCulture);
+                return ResourceManager.GetString("MO_OptionsSaved", resourceCulture);
             }
         }
         

@@ -168,7 +168,7 @@
   <data name="AHE_LibraryVersionMissmatch" xml:space="preserve">
     <value>Обнаружено несоответствие между версиями приложения и основной библиотеки функций! Сообщите об этом разработчикам, либо переустановите программу.</value>
   </data>
-  <data name="AHE_OptionsSaved" xml:space="preserve">
+  <data name="MO_OptionsSaved" xml:space="preserve">
     <value>Настройки были успешно сохранены!</value>
   </data>
   <data name="AHE_UrlOpenError" xml:space="preserve">
@@ -270,7 +270,7 @@
   <data name="AHE_IncorrectComment" xml:space="preserve">
     <value>Введён недействительный комментарий!</value>
   </data>
-  <data name="AHE_Version" xml:space="preserve">
+  <data name="AF_Version" xml:space="preserve">
     <value>Версия: {0}</value>
   </data>
   <data name="UP_UpdateFailure" xml:space="preserve">

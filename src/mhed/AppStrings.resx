@@ -171,7 +171,7 @@
   <data name="AHE_LibraryVersionMissmatch" xml:space="preserve">
     <value>The core library version does not match the application's version. Please reinstall or report this issue to developers.</value>
   </data>
-  <data name="AHE_OptionsSaved" xml:space="preserve">
+  <data name="MO_OptionsSaved" xml:space="preserve">
     <value>The options have been saved successfully!</value>
   </data>
   <data name="AHE_LangPrefix" xml:space="preserve">
@@ -270,7 +270,7 @@
   <data name="AHE_IncorrectComment" xml:space="preserve">
     <value>Incorrect comment entered!</value>
   </data>
-  <data name="AHE_Version" xml:space="preserve">
+  <data name="AF_Version" xml:space="preserve">
     <value>Version: {0}</value>
   </data>
   <data name="UP_UpdateFailure" xml:space="preserve">

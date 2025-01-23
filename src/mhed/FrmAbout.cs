@@ -31,7 +31,7 @@ namespace mhed.gui
         private void FrmAbout_Load(object sender, EventArgs e)
         {
             AF_ProductName.Text = CurrentApp.AppProduct;
-            AF_ProductVersion.Text = string.Format(AppStrings.AHE_Version, CurrentApp.AppVersion);
+            AF_ProductVersion.Text = string.Format(AppStrings.AF_Version, CurrentApp.AppVersion);
             AF_Copyright.Text = CurrentApp.AppCopyright;
             AF_CompanyName.Text = CurrentApp.AppCompany;
         }
