@@ -11,7 +11,6 @@
 
 # Importing some Python modules.
 from os import getenv
-from time import strftime
 
 # -- General configuration ------------------------------------------------
 
@@ -46,7 +45,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Micro Hosts Editor'
-copyright = '2011 - {}, EasyCoding Team. All rights reserved'.format(strftime('%Y'))
+copyright = '2011-2025 EasyCoding Team. All rights reserved'
 author = 'EasyCoding Team'
 
 # The version info for the project you're documenting, acts as replacement for
