@@ -198,11 +198,11 @@
   <data name="AppDbgExUpDeleteFile" xml:space="preserve">
     <value>Exception when trying to delete the downloaded file with an incorrect hash.</value>
   </data>
-  <data name="AppDbgExUpInstallBinaryUpdate" xml:space="preserve">
-    <value>Exception while trying to run the installer of the new version.</value>
-  </data>
   <data name="AppDbgExUpInstallUpdate" xml:space="preserve">
     <value>Exception while trying to download and install the application update.</value>
+  </data>
+  <data name="AppDbgExUpStartUpdateInstaller" xml:space="preserve">
+    <value>Exception while trying to run the installer of the new version.</value>
   </data>
   <data name="AppDbgHostsFileDoesNotExists" xml:space="preserve">
     <value>Hosts file does not exists.</value>

@@ -273,7 +273,7 @@
   <data name="AF_Version" xml:space="preserve">
     <value>Version: {0}</value>
   </data>
-  <data name="UP_UpdateFailure" xml:space="preserve">
+  <data name="UP_StartUpdateInstallerFailure" xml:space="preserve">
     <value>An error occurred while trying to run the installer of the new version! The application has not been updated.</value>
   </data>
   <data name="UP_InstallUpdateError" xml:space="preserve">

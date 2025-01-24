@@ -172,8 +172,8 @@ namespace mhed.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Error(Ex, DebugStrings.AppDbgExUpInstallBinaryUpdate);
-                        MessageBox.Show(AppStrings.UP_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Logger.Error(Ex, DebugStrings.AppDbgExUpStartUpdateInstaller);
+                        MessageBox.Show(AppStrings.UP_StartUpdateInstallerFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else

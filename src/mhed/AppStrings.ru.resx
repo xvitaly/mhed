@@ -273,7 +273,7 @@
   <data name="AF_Version" xml:space="preserve">
     <value>Версия: {0}</value>
   </data>
-  <data name="UP_UpdateFailure" xml:space="preserve">
+  <data name="UP_StartUpdateInstallerFailure" xml:space="preserve">
     <value>Произошла ошибка при попытке запуска модуля установки новой версии! Программа не была обновлена.</value>
   </data>
   <data name="UP_InstallUpdateError" xml:space="preserve">

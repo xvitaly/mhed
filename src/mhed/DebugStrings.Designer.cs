@@ -304,20 +304,20 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to run the installer of the new version..
-        /// </summary>
-        internal static string AppDbgExUpInstallBinaryUpdate {
-            get {
-                return ResourceManager.GetString("AppDbgExUpInstallBinaryUpdate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to download and install the application update..
         /// </summary>
         internal static string AppDbgExUpInstallUpdate {
             get {
                 return ResourceManager.GetString("AppDbgExUpInstallUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to run the installer of the new version..
+        /// </summary>
+        internal static string AppDbgExUpStartUpdateInstaller {
+            get {
+                return ResourceManager.GetString("AppDbgExUpStartUpdateInstaller", resourceCulture);
             }
         }
         
