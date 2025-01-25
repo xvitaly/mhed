@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="AHE_AppIcon.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="AHE_AppIcon.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 36</value>
@@ -147,9 +144,6 @@
   <data name="&gt;&gt;AHE_AppIcon.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="AHE_AppName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="AHE_AppName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt</value>
   </data>
@@ -161,9 +155,6 @@
   </data>
   <data name="AHE_AppName.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="AHE_AppName.Text" xml:space="preserve">
-    <value>%PRODUCT_NAME%</value>
   </data>
   <data name="AHE_AppName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -180,9 +171,6 @@
   <data name="&gt;&gt;AHE_AppName.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="AHE_Version.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="AHE_Version.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 36</value>
   </data>
@@ -191,9 +179,6 @@
   </data>
   <data name="AHE_Version.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="AHE_Version.Text" xml:space="preserve">
-    <value>%APPVERSION%</value>
   </data>
   <data name="&gt;&gt;AHE_Version.Name" xml:space="preserve">
     <value>AHE_Version</value>
@@ -207,9 +192,6 @@
   <data name="&gt;&gt;AHE_Version.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="AHE_CompanyName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="AHE_CompanyName.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 52</value>
   </data>
@@ -218,9 +200,6 @@
   </data>
   <data name="AHE_CompanyName.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="AHE_CompanyName.Text" xml:space="preserve">
-    <value>%COMPANY_NAME%</value>
   </data>
   <data name="&gt;&gt;AHE_CompanyName.Name" xml:space="preserve">
     <value>AHE_CompanyName</value>
@@ -234,9 +213,6 @@
   <data name="&gt;&gt;AHE_CompanyName.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="AHE_Description.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="AHE_Description.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 189</value>
   </data>
@@ -252,23 +228,6 @@
   <data name="AHE_Description.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="AHE_Description.Text" xml:space="preserve">
-    <value>Un ringraziamento speciale a tutti i contributori e tester, nonché agli sviluppatori e agli autori delle librerie e delle risorse usate in questa applicazione.
-
-Grafica di:
- - Designkindle;
- - Everaldo Coelho;
- - FatCow;
- - Artisti icona GNOME;
- - PixelMixer.
-
-Icona dell'editor Micro Host degli artisti delle icone di GNOME. Concesso in licenza secondo i termini della licenza GPLv2.
-
-Librerie di terze parti (collegate dinamicamente):
- - NLog (licenza BSD).
-
-Ulteriori informazioni sui componenti utilizzati in questo progetto, incluso il nome dell'autore di ciascun componente, i nomi completi delle licenze e collegamenti importanti, possono essere trovate nel sistema di aiuto nella pagina Legale.</value>
-  </data>
   <data name="&gt;&gt;AHE_Description.Name" xml:space="preserve">
     <value>AHE_Description</value>
   </data>
@@ -281,9 +240,6 @@ Ulteriori informazioni sui componenti utilizzati in questo progetto, incluso il 
   <data name="&gt;&gt;AHE_Description.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="AHE_License.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="AHE_License.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 72</value>
   </data>
@@ -292,9 +248,6 @@ Ulteriori informazioni sui componenti utilizzati in questo progetto, incluso il 
   </data>
   <data name="AHE_License.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="AHE_License.Text" xml:space="preserve">
-    <value>Fornito secondo i termini della licenza GPLv3+. I componenti inclusi possono usare una varietà di altre licenze.</value>
   </data>
   <data name="&gt;&gt;AHE_License.Name" xml:space="preserve">
     <value>AHE_License</value>
@@ -308,9 +261,6 @@ Ulteriori informazioni sui componenti utilizzati in questo progetto, incluso il 
   <data name="&gt;&gt;AHE_License.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="AHE_Copyright.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="AHE_Copyright.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 152</value>
   </data>
@@ -319,9 +269,6 @@ Ulteriori informazioni sui componenti utilizzati in questo progetto, incluso il 
   </data>
   <data name="AHE_Copyright.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="AHE_Copyright.Text" xml:space="preserve">
-    <value>%COPYRIGHT%</value>
   </data>
   <data name="&gt;&gt;AHE_Copyright.Name" xml:space="preserve">
     <value>AHE_Copyright</value>
@@ -335,9 +282,6 @@ Ulteriori informazioni sui componenti utilizzati in questo progetto, incluso il 
   <data name="&gt;&gt;AHE_Copyright.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="AHE_Okay.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="AHE_Okay.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 297</value>
   </data>
@@ -346,9 +290,6 @@ Ulteriori informazioni sui componenti utilizzati in questo progetto, incluso il 
   </data>
   <data name="AHE_Okay.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
-  </data>
-  <data name="AHE_Okay.Text" xml:space="preserve">
-    <value>OK</value>
   </data>
   <data name="&gt;&gt;AHE_Okay.Name" xml:space="preserve">
     <value>AHE_Okay</value>
@@ -362,12 +303,6 @@ Ulteriori informazioni sui componenti utilizzati in questo progetto, incluso il 
   <data name="&gt;&gt;AHE_Okay.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -389,4 +324,55 @@ Ulteriori informazioni sui componenti utilizzati in questo progetto, incluso il 
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="AF_Description.Text" xml:space="preserve">
+    <value>Un ringraziamento speciale a tutti i contributori e tester, nonché agli sviluppatori e agli autori delle librerie e delle risorse usate in questa applicazione.
+
+Grafica di:
+ - Designkindle;
+ - Everaldo Coelho;
+ - FatCow;
+ - Artisti icona GNOME;
+ - PixelMixer.
+
+Icona dell'editor Micro Host degli artisti delle icone di GNOME. Concesso in licenza secondo i termini della licenza GPLv2.
+
+Librerie di terze parti (collegate dinamicamente):
+ - NLog (licenza BSD).
+
+Ulteriori informazioni sui componenti utilizzati in questo progetto, incluso il nome dell'autore di ciascun componente, i nomi completi delle licenze e collegamenti importanti, possono essere trovate nel sistema di aiuto nella pagina Legale.</value>
+  </data>
+  <data name="AF_License.Text" xml:space="preserve">
+    <value>Fornito secondo i termini della licenza GPLv3+. 
+I componenti inclusi possono usare una varietà di altre licenze.</value>
+  </data>
+  <metadata name="AHE_AppIcon.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AHE_AppName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AHE_Version.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AHE_CompanyName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AHE_Description.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AHE_License.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AHE_Copyright.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AHE_Okay.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

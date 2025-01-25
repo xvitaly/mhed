@@ -171,9 +171,6 @@
   <data name="AHE_LibraryVersionMissmatch" xml:space="preserve">
     <value>La versione della libreria principale non corrisponde alla versione dell'applicazione. Reinstallala o segnala il problema agli sviluppatori.</value>
   </data>
-  <data name="AHE_OptionsSaved" xml:space="preserve">
-    <value>Le impostazioni sono state salvate correttamente!</value>
-  </data>
   <data name="AHE_LangPrefix" xml:space="preserve">
     <value>it</value>
   </data>
@@ -210,33 +207,6 @@
   <data name="AHE_ShowLogFileError" xml:space="preserve">
     <value>Impossibile visualizzare il file registro eventi debug!</value>
   </data>
-  <data name="AHE_UpdateAvailable" xml:space="preserve">
-    <value>Disponibile aggiornamento dell'applicazione. Nuova versione: {0}.</value>
-  </data>
-  <data name="AHE_UpdateCheckFailure" xml:space="preserve">
-    <value>Controllo aggiornamenti non riuscito. Riprova più tardi.</value>
-  </data>
-  <data name="AHE_UpdateFailure" xml:space="preserve">
-    <value>Si è verificato un errore durante il tentativo di eseguire il programma di installazione. Il programma non è stato aggiornato. Esegui nuovamente l'aggiornamento più tardi!</value>
-  </data>
-  <data name="AHE_UpdateHashFailure" xml:space="preserve">
-    <value>Il file scaricato ha un hash errato. Forse si è danneggiato durante il trasferimento. Per favore riprova più tardi!</value>
-  </data>
-  <data name="AHE_UpdateLatestInstalled" xml:space="preserve">
-    <value>L'aggiornamento non è necessario perché questa versione è aggiornata.</value>
-  </data>
-  <data name="AHE_UpdateNotAvailable" xml:space="preserve">
-    <value>Nessun nuovo aggiornamento disponibile. L'applicazione è aggiornata.</value>
-  </data>
-  <data name="AHE_UpdateOtherPlatform" xml:space="preserve">
-    <value>È disponibile una nuova versione di {0}, ma gli aggiornamenti automatici non sono supportati in questa piattaforma. Vuoi visualizzare la pagina delle novità del programma, inclusi i collegamenti per il download, in un browser web?</value>
-  </data>
-  <data name="AHE_UpdateSuccessful" xml:space="preserve">
-    <value>La nuova versione è stata scaricata dal server. Ora partirà l'installazione!</value>
-  </data>
-  <data name="AHE_WrkInProgress" xml:space="preserve">
-    <value>Controllo aggiornamenti...</value>
-  </data>
   <data name="AHE_NewVersionAvailable" xml:space="preserve">
     <value>È disponibile un nuovo aggiornamento per {0}. Ti consigliamo di eseguire l'aggiornamento il prima possibile tramite Guida - Verifica aggiornamenti o manualmente.</value>
   </data>
@@ -270,7 +240,56 @@
   <data name="AHE_IncorrectComment" xml:space="preserve">
     <value>È stato inserito un commento errato!</value>
   </data>
-  <data name="AHE_Version" xml:space="preserve">
+  <data name="MO_OptionsSaved" xml:space="preserve">
+    <value>Le opzioni sono state correttamente salvate!</value>
+  </data>
+  <data name="UP_UpdateAvailable" xml:space="preserve">
+    <value>È disponibile l'aggiornamento dell'applicazione. Nuova versione: {0}.</value>
+  </data>
+  <data name="UP_UpdateCheckFailure" xml:space="preserve">
+    <value>Controllo aggiornamenti non riuscito. Riprova più tardi.</value>
+  </data>
+  <data name="UP_DownloadFailure" xml:space="preserve">
+    <value>Si è verificato un errore durante il download del programma di installazione della nuova versione dal server remoto!
+L'applicazione non è stata aggiornata.</value>
+  </data>
+  <data name="UP_HashMissmatch" xml:space="preserve">
+    <value>Il programma di installazione scaricato ha un hash errato!
+Potrebbe essere stato danneggiato durante il trasferimento.
+Riprova più tardi.</value>
+  </data>
+  <data name="UP_LatestInstalled" xml:space="preserve">
+    <value>L'applicazione è aggiornata!</value>
+  </data>
+  <data name="UP_UpdateNotAvailable" xml:space="preserve">
+    <value>Nessun nuovo aggiornamento disponibile.
+L'applicazione è aggiornata.</value>
+  </data>
+  <data name="UP_OtherPlatform" xml:space="preserve">
+    <value>È disponibile una nuova versione {0}, ma gli aggiornamenti automatici non sono supportati in questa piattaforma.
+Vuoi aprire in un browser web la pagina del registro delle modifiche, inclusi i collegamenti per il download?</value>
+  </data>
+  <data name="UP_DownloadSuccessful" xml:space="preserve">
+    <value>La nuova versione è stata correttamente scaricata.
+Ora verrà installata!</value>
+  </data>
+  <data name="UP_WorkInProgress" xml:space="preserve">
+    <value>Controllo aggiornamenti...</value>
+  </data>
+  <data name="AF_Version" xml:space="preserve">
     <value>Versione: {0}</value>
+  </data>
+  <data name="UP_InstallUpdateError" xml:space="preserve">
+    <value>Si è verificato un errore durante il tentativo di scaricare e installare l'aggiornamento dell'applicazione!</value>
+  </data>
+  <data name="UP_RetryUpdateCheck" xml:space="preserve">
+    <value>Nuovo tentativo controllo aggiornamenti. Attendi...</value>
+  </data>
+  <data name="UP_RetryUpdateCheckQuestion" xml:space="preserve">
+    <value>Vuoi riprovare il controllo aggiornamenti?</value>
+  </data>
+  <data name="UP_StartUpdateInstallerFailure" xml:space="preserve">
+    <value>Si è verificato un errore durante il tentativo di eseguire il programma di installazione della nuova versione!
+L'applicazione non è stata aggiornata.</value>
   </data>
 </root>
