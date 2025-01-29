@@ -117,22 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AHE_ExceptionDetected" xml:space="preserve">
+  <data name="AHE_HostsLoadParseError" xml:space="preserve">
     <value>Во время открытия файла {0} произошла ошибка. Он мог быть загружен некорректно!</value>
   </data>
-  <data name="AHE_HMessg" xml:space="preserve">
+  <data name="AHE_HostsLocation" xml:space="preserve">
     <value>Активный файл Hosts расположен в {0}. Показать его в файловом менеджере?</value>
   </data>
-  <data name="AHE_NoFileDetected" xml:space="preserve">
+  <data name="AHE_HostsNotFound" xml:space="preserve">
     <value>Файл Hosts по пути {0} не найден!</value>
   </data>
-  <data name="AHE_RestDef" xml:space="preserve">
+  <data name="AHE_RestoreDefaultsQuestion" xml:space="preserve">
     <value>Восстановить стандартные значения файла Hosts?</value>
   </data>
   <data name="AHE_Saved" xml:space="preserve">
     <value>Изменения в файле hosts были успешно сохранены!</value>
   </data>
-  <data name="AHE_SaveException" xml:space="preserve">
+  <data name="AHE_SaveError" xml:space="preserve">
     <value>Внимание! Произошла ошибка во время записи в файл {0}. Возможно, у вас недостаточно для этого прав, либо кто-то блокирует попытку записи.</value>
   </data>
   <data name="AHE_NoAdminRights" xml:space="preserve">
@@ -249,7 +249,7 @@
   <data name="AHE_Exported" xml:space="preserve">
     <value>Содержимое файла Hosts было успешно экспортировано!</value>
   </data>
-  <data name="AHE_ExportException" xml:space="preserve">
+  <data name="AHE_ExportError" xml:space="preserve">
     <value>Внимание! Произошла ошибка при попытке экспорта в файл. Возможно, у вас недостаточно для этого прав, либо кто-то блокирует попытку записи.</value>
   </data>
   <data name="AHE_Imported" xml:space="preserve">
@@ -258,7 +258,7 @@
   <data name="AHE_ImportFileNotFound" xml:space="preserve">
     <value>Выбранный файл для импорта не найден!</value>
   </data>
-  <data name="AHE_ImportFileException" xml:space="preserve">
+  <data name="AHE_ImportError" xml:space="preserve">
     <value>Произошла ошибка во время импорта выбранного файла!</value>
   </data>
   <data name="AHE_ClipboardNonComment" xml:space="preserve">

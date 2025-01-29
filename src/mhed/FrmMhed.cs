@@ -712,7 +712,7 @@ namespace mhed.gui
                 catch (Exception Ex)
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExSaveTask);
-                    MessageBox.Show(string.Format(AppStrings.AHE_SaveException, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(string.Format(AppStrings.AHE_SaveError, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -736,7 +736,7 @@ namespace mhed.gui
                 catch (Exception Ex)
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExExportTask);
-                    MessageBox.Show(AppStrings.AHE_ExportException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(AppStrings.AHE_ExportError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -753,13 +753,13 @@ namespace mhed.gui
             catch (FileNotFoundException Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgHostsFileDoesNotExists);
-                MessageBox.Show(string.Format(AppStrings.AHE_NoFileDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(AppStrings.AHE_HostsNotFound, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 App.Platform.Exit(ReturnCodes.HostsFileDoesNotExists);
             }
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExHostsLoadParse);
-                MessageBox.Show(string.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error));
+                MessageBox.Show(string.Format(AppStrings.AHE_HostsLoadParseError, App.HostsFile.FilePath, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error));
             }
         }
 
@@ -785,7 +785,7 @@ namespace mhed.gui
                     catch (Exception Ex)
                     {
                         Logger.Error(Ex, DebugStrings.AppDbgExImportTask);
-                        MessageBox.Show(AppStrings.AHE_ImportFileException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(AppStrings.AHE_ImportError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -807,7 +807,7 @@ namespace mhed.gui
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExHostsLoadParse);
-                MessageBox.Show(string.Format(AppStrings.AHE_ExceptionDetected, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(AppStrings.AHE_HostsLoadParseError, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1003,7 +1003,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private async void HE_MenuRestoreDefaultsItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(AppStrings.AHE_RestDef, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(AppStrings.AHE_RestoreDefaultsQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 App.HostsFile.Restore();
                 await SaveToFile();
@@ -1227,7 +1227,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_StatusBarHostsLocation_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(string.Format(AppStrings.AHE_HMessg, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(string.Format(AppStrings.AHE_HostsLocation, App.HostsFile.FilePath), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 HelperShowFile(App.HostsFile.FilePath);
             }

@@ -169,15 +169,6 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! A parsing error was encountered. The file {0} was probably loaded with errors..
-        /// </summary>
-        internal static string AHE_ExceptionDetected {
-            get {
-                return ResourceManager.GetString("AHE_ExceptionDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exit {0} without saving changes?.
         /// </summary>
         internal static string AHE_ExitConfirmation {
@@ -198,18 +189,36 @@ namespace mhed.gui {
         /// <summary>
         ///   Looks up a localized string similar to Warning! An error occurred while exporting to file. Maybe you don&apos;t have enough rights to do this, or someone is blocking write attempts..
         /// </summary>
-        internal static string AHE_ExportException {
+        internal static string AHE_ExportError {
             get {
-                return ResourceManager.GetString("AHE_ExportException", resourceCulture);
+                return ResourceManager.GetString("AHE_ExportError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning! A parsing error was encountered. The file {0} was probably loaded with errors..
+        /// </summary>
+        internal static string AHE_HostsLoadParseError {
+            get {
+                return ResourceManager.GetString("AHE_HostsLoadParseError", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The active Hosts file is located in {0}. Show it in file manager?.
         /// </summary>
-        internal static string AHE_HMessg {
+        internal static string AHE_HostsLocation {
             get {
-                return ResourceManager.GetString("AHE_HMessg", resourceCulture);
+                return ResourceManager.GetString("AHE_HostsLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Hosts file {0} couldn&apos;t be found!.
+        /// </summary>
+        internal static string AHE_HostsNotFound {
+            get {
+                return ResourceManager.GetString("AHE_HostsNotFound", resourceCulture);
             }
         }
         
@@ -225,9 +234,9 @@ namespace mhed.gui {
         /// <summary>
         ///   Looks up a localized string similar to An error occurred while importing the selected file!.
         /// </summary>
-        internal static string AHE_ImportFileException {
+        internal static string AHE_ImportError {
             get {
-                return ResourceManager.GetString("AHE_ImportFileException", resourceCulture);
+                return ResourceManager.GetString("AHE_ImportError", resourceCulture);
             }
         }
         
@@ -322,15 +331,6 @@ namespace mhed.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Hosts file {0} couldn&apos;t be found!.
-        /// </summary>
-        internal static string AHE_NoFileDetected {
-            get {
-                return ResourceManager.GetString("AHE_NoFileDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Failed to load Hosts file into the selected text editor!.
         /// </summary>
         internal static string AHE_OpenInNotepadError {
@@ -387,9 +387,9 @@ namespace mhed.gui {
         /// <summary>
         ///   Looks up a localized string similar to Restore default Hosts file?.
         /// </summary>
-        internal static string AHE_RestDef {
+        internal static string AHE_RestoreDefaultsQuestion {
             get {
-                return ResourceManager.GetString("AHE_RestDef", resourceCulture);
+                return ResourceManager.GetString("AHE_RestoreDefaultsQuestion", resourceCulture);
             }
         }
         
@@ -405,9 +405,9 @@ namespace mhed.gui {
         /// <summary>
         ///   Looks up a localized string similar to Warning! An error occurred while writing to file {0}. Maybe you don&apos;t have enough rights to do this, or someone is blocking write attempts..
         /// </summary>
-        internal static string AHE_SaveException {
+        internal static string AHE_SaveError {
             get {
-                return ResourceManager.GetString("AHE_SaveException", resourceCulture);
+                return ResourceManager.GetString("AHE_SaveError", resourceCulture);
             }
         }
         

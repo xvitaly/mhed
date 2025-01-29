@@ -117,22 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AHE_ExceptionDetected" xml:space="preserve">
+  <data name="AHE_HostsLoadParseError" xml:space="preserve">
     <value>Warning! A parsing error was encountered. The file {0} was probably loaded with errors.</value>
   </data>
-  <data name="AHE_HMessg" xml:space="preserve">
+  <data name="AHE_HostsLocation" xml:space="preserve">
     <value>The active Hosts file is located in {0}. Show it in file manager?</value>
   </data>
-  <data name="AHE_NoFileDetected" xml:space="preserve">
+  <data name="AHE_HostsNotFound" xml:space="preserve">
     <value>The Hosts file {0} couldn't be found!</value>
   </data>
-  <data name="AHE_RestDef" xml:space="preserve">
+  <data name="AHE_RestoreDefaultsQuestion" xml:space="preserve">
     <value>Restore default Hosts file?</value>
   </data>
   <data name="AHE_Saved" xml:space="preserve">
     <value>Hosts file saved successfully!</value>
   </data>
-  <data name="AHE_SaveException" xml:space="preserve">
+  <data name="AHE_SaveError" xml:space="preserve">
     <value>Warning! An error occurred while writing to file {0}. Maybe you don't have enough rights to do this, or someone is blocking write attempts.</value>
   </data>
   <data name="AHE_NoAdminRights" xml:space="preserve">
@@ -249,7 +249,7 @@
   <data name="AHE_Exported" xml:space="preserve">
     <value>Hosts file has been successfully exported!</value>
   </data>
-  <data name="AHE_ExportException" xml:space="preserve">
+  <data name="AHE_ExportError" xml:space="preserve">
     <value>Warning! An error occurred while exporting to file. Maybe you don't have enough rights to do this, or someone is blocking write attempts.</value>
   </data>
   <data name="AHE_Imported" xml:space="preserve">
@@ -258,7 +258,7 @@
   <data name="AHE_ImportFileNotFound" xml:space="preserve">
     <value>The selected file to import was not found!</value>
   </data>
-  <data name="AHE_ImportFileException" xml:space="preserve">
+  <data name="AHE_ImportError" xml:space="preserve">
     <value>An error occurred while importing the selected file!</value>
   </data>
   <data name="AHE_ClipboardNonComment" xml:space="preserve">
