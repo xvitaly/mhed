@@ -764,7 +764,30 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Try to import Hosts file entries from file.
+        /// Try to import Hosts file entries from the specified text file.
+        /// </summary>
+        /// <param name="FileName">Full path to the file for importing.</param>
+        private async Task ImportEntriesFromFile(string FileName)
+        {
+            try
+            {
+                await App.HostsFile.Load(FileName);
+                MessageBox.Show(AppStrings.AHE_Imported, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (FileNotFoundException Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgImportFileDoesNotExists);
+                MessageBox.Show(AppStrings.AHE_ImportFileNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExImportTask);
+                MessageBox.Show(AppStrings.AHE_ImportError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Show a file selection dialog and try to import Hosts file entries from file.
         /// </summary>
         private async Task ImportFromFile()
         {
@@ -772,21 +795,7 @@ namespace mhed.gui
             {
                 if (HE_ImportDialog.ShowDialog() == DialogResult.OK)
                 {
-                    try
-                    {
-                        await App.HostsFile.Load(HE_ImportDialog.FileName);
-                        MessageBox.Show(AppStrings.AHE_Imported, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (FileNotFoundException Ex)
-                    {
-                        Logger.Error(Ex, DebugStrings.AppDbgImportFileDoesNotExists);
-                        MessageBox.Show(AppStrings.AHE_ImportFileNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    catch (Exception Ex)
-                    {
-                        Logger.Error(Ex, DebugStrings.AppDbgExImportTask);
-                        MessageBox.Show(AppStrings.AHE_ImportError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    await ImportEntriesFromFile(HE_ImportDialog.FileName);
                 }
             }
             else
