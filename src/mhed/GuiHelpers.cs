@@ -26,7 +26,7 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Open "About applicaion" form window.
+        /// Open the about module.
         /// </summary>
         public static void FormShowAbout()
         {
