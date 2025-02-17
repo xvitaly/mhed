@@ -12,11 +12,11 @@ namespace mhed.gui
     public static class GuiHelpers
     {
         /// <summary>
-        /// Open downloader window and download a specified file
-        /// to a specified location.
+        /// Open the file downloader module and downloads the specified URL
+        /// to the specified location.
         /// </summary>
-        /// <param name="URI">Download URL.</param>
-        /// <param name="FileName">Full path to destination file.</param>
+        /// <param name="URI">Full download URL.</param>
+        /// <param name="FileName">Full path to the destination file.</param>
         public static void FormShowDownloader(string URI, string FileName)
         {
             using (FrmDnWrk DnW = new FrmDnWrk(URI, FileName))
