@@ -1106,7 +1106,7 @@ namespace mhed.gui
         /// <param name="e">Event arguments.</param>
         private void HE_MenuAboutItem_Click(object sender, EventArgs e)
         {
-            GuiHelpers.FormShowAboutApp();
+            GuiHelpers.FormShowAbout();
         }
 
         /// <summary>
