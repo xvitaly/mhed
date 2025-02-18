@@ -37,11 +37,11 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Open updater window.
+        /// Open the update center module.
         /// </summary>
         /// <param name="UserAgent">User-Agent header for outgoing HTTP queries.</param>
-        /// <param name="FullAppPath">App's installation directory.</param>
-        /// <param name="AppUpdateDir">App's local updates directory.</param>
+        /// <param name="FullAppPath">Full path to the application installation directory.</param>
+        /// <param name="AppUpdateDir">Full path to the local updates directory.</param>
         public static void FormShowUpdater(string UserAgent, string FullAppPath, string AppUpdateDir)
         {
             using (FrmUpdate UpdFrm = new FrmUpdate(UserAgent, FullAppPath, AppUpdateDir))
