@@ -12,7 +12,7 @@ namespace mhed.gui
     public static class GuiHelpers
     {
         /// <summary>
-        /// Open the file downloader module and downloads the specified URL
+        /// Open the file downloader module and download the specified URL
         /// to the specified location.
         /// </summary>
         /// <param name="URI">Full download URL.</param>
