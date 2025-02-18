@@ -51,7 +51,7 @@ namespace mhed.gui
         }
 
         /// <summary>
-        /// Open "Program options" form window.
+        /// Open the options module.
         /// </summary>
         public static void FormShowOptions()
         {
