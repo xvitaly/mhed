@@ -19,9 +19,9 @@ namespace mhed.gui
         /// <param name="FileName">Full path to the destination file.</param>
         public static void FormShowDownloader(string URI, string FileName)
         {
-            using (FrmDnWrk DnW = new FrmDnWrk(URI, FileName))
+            using (FrmDnWrk DnWrkForm = new FrmDnWrk(URI, FileName))
             {
-                DnW.ShowDialog();
+                DnWrkForm.ShowDialog();
             }
         }
 
@@ -30,9 +30,9 @@ namespace mhed.gui
         /// </summary>
         public static void FormShowAbout()
         {
-            using (FrmAbout AboutFrm = new FrmAbout())
+            using (FrmAbout AboutForm = new FrmAbout())
             {
-                AboutFrm.ShowDialog();
+                AboutForm.ShowDialog();
             }
         }
 
@@ -44,9 +44,9 @@ namespace mhed.gui
         /// <param name="AppUpdateDir">Full path to the local updates directory.</param>
         public static void FormShowUpdater(string UserAgent, string FullAppPath, string AppUpdateDir)
         {
-            using (FrmUpdate UpdFrm = new FrmUpdate(UserAgent, FullAppPath, AppUpdateDir))
+            using (FrmUpdate UpdateForm = new FrmUpdate(UserAgent, FullAppPath, AppUpdateDir))
             {
-                UpdFrm.ShowDialog();
+                UpdateForm.ShowDialog();
             }
         }
 
@@ -55,9 +55,9 @@ namespace mhed.gui
         /// </summary>
         public static void FormShowOptions()
         {
-            using (FrmOptions OptsFrm = new FrmOptions())
+            using (FrmOptions OptionsForm = new FrmOptions())
             {
-                OptsFrm.ShowDialog();
+                OptionsForm.ShowDialog();
             }
         }
     }
