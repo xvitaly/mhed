@@ -16,7 +16,7 @@ from os import getenv
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-needs_sphinx = '1.6'
+needs_sphinx = '1.8'
 
 # If true, keep warnings as system message paragraphs in the built documents.
 #
@@ -38,7 +38,7 @@ gettext_compact = False
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = {'.rst': 'restructuredtext'}
 
 # The master toctree document.
 master_doc = 'index'
