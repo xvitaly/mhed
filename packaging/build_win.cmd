@@ -9,7 +9,7 @@ rem
 title Building Micro Hosts Editor release binaries...
 
 set GPGKEY=A989AAAA
-set RELVER=160
+set RELVER=161
 
 if [%CI_HASH%] == [] (
     set PREFIX=mhed_%RELVER%

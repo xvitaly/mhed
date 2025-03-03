@@ -10,7 +10,7 @@
 
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = mhed
-PROJECT_NUMBER         = 1.6.0
+PROJECT_NUMBER         = 1.6.1
 PROJECT_BRIEF          = "Micro Hosts Editor is a small, simple, cross-platform, free and completely open-source Hosts editor"
 PROJECT_LOGO           =
 PROJECT_ICON           =
