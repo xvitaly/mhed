@@ -124,6 +124,24 @@ namespace mhed.gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://github.com/xvitaly/mhed/raw/refs/heads/master/assets/updates.xml.
+        /// </summary>
+        internal static string AppURLUpdateMirror {
+            get {
+                return ResourceManager.GetString("AppURLUpdateMirror", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://www.easycoding.org/files/mhed/updates/updates.xml.
+        /// </summary>
+        internal static string AppURLUpdatePrimary {
+            get {
+                return ResourceManager.GetString("AppURLUpdatePrimary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap IconCopy {

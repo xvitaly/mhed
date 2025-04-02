@@ -178,4 +178,10 @@
   <data name="AppPrivacyPolicyPageName" xml:space="preserve">
     <value>privacy.html</value>
   </data>
+  <data name="AppURLUpdateMirror" xml:space="preserve">
+    <value>https://github.com/xvitaly/mhed/raw/refs/heads/master/assets/updates.xml</value>
+  </data>
+  <data name="AppURLUpdatePrimary" xml:space="preserve">
+    <value>https://www.easycoding.org/files/mhed/updates/updates.xml</value>
+  </data>
 </root>

@@ -6,6 +6,7 @@
 
 using System;
 using System.IO;
+using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NLog;
@@ -103,8 +104,17 @@ namespace mhed.gui
         /// <returns>Returns True if the updates were found.</returns>
         private async Task<bool> IsUpdateAvailable()
         {
-            UpMan = await UpdateManager.Create(UserAgent);
-            return UpMan.CheckAppUpdate();
+            try
+            {
+                UpMan = await UpdateManager.Create(Properties.Resources.AppURLUpdatePrimary, UserAgent);
+                return UpMan.CheckAppUpdate();
+            }
+            catch (WebException Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExCheckForUpdatesPrimary);
+                UpMan = await UpdateManager.Create(Properties.Resources.AppURLUpdateMirror, UserAgent);
+                return UpMan.CheckAppUpdate();
+            }
         }
 
         /// <summary>

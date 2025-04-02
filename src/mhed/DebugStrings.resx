@@ -123,6 +123,9 @@
   <data name="AppDbgExCheckForUpdates" xml:space="preserve">
     <value>Exception while trying to check for application updates.</value>
   </data>
+  <data name="AppDbgExCheckForUpdatesPrimary" xml:space="preserve">
+    <value>Failed to check for updates using the primary server.</value>
+  </data>
   <data name="AppDbgExClipboardCopy" xml:space="preserve">
     <value>Exception while trying to copy cell's contents to the clipboard.</value>
   </data>

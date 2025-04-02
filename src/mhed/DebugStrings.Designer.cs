@@ -79,6 +79,15 @@ namespace mhed.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to check for updates using the primary server..
+        /// </summary>
+        internal static string AppDbgExCheckForUpdatesPrimary {
+            get {
+                return ResourceManager.GetString("AppDbgExCheckForUpdatesPrimary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to copy cell&apos;s contents to the clipboard..
         /// </summary>
         internal static string AppDbgExClipboardCopy {
