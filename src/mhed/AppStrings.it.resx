@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AHE_ExceptionDetected" xml:space="preserve">
+    <value>Avviso! Si è verificato un errore di analisi. Probabilmente il file {0} è stato caricato con errori.</value>
+  </data>
+  <data name="AHE_HMessg" xml:space="preserve">
+    <value>Il file hosts attivo si trova in {0}. Vuoi visualizzarlo nel gestore file?</value>
+  </data>
+  <data name="AHE_NoFileDetected" xml:space="preserve">
+    <value>Impossibile trovare il file Hosts {0}!</value>
+  </data>
+  <data name="AHE_RestDef" xml:space="preserve">
+    <value>Vuoi ripristinare il file Hosts predefinito?</value>
+  </data>
+  <data name="AHE_Saved" xml:space="preserve">
+    <value>File host salvato correttamente!</value>
+  </data>
+  <data name="AHE_SaveException" xml:space="preserve">
+    <value>Attenzione! Si è verificato un errore durante la scrittura nel file {0}. Forse non disponi di diritti sufficienti per farlo o qualcuno sta bloccando i tentativi di scrittura.</value>
+  </data>
+  <data name="AHE_NoAdminRights" xml:space="preserve">
+    <value>Per eseguire l'azione richiesta sono necessari i diritti di amministratore!</value>
+  </data>
+  <data name="AHE_AlreadyRunning" xml:space="preserve">
+    <value>Il programma è già in esecuzione. Non è consentito avviare la seconda copia.</value>
+  </data>
+  <data name="AHE_IncorrectIPAddress" xml:space="preserve">
+    <value>È stato inserito un indirizzo IP errato!</value>
+  </data>
+  <data name="AHE_ClipboardCopyError" xml:space="preserve">
+    <value>Impossibile copiare i dati selezionati negli appunti!</value>
+  </data>
+  <data name="AHE_ClipboardCutError" xml:space="preserve">
+    <value>Impossibile tagliare i dati selezionati negli appunti!</value>
+  </data>
+  <data name="AHE_ClipboardPasteError" xml:space="preserve">
+    <value>Impossibile incollare i dati dagli appunti!</value>
+  </data>
+  <data name="AHE_DeleteRowError" xml:space="preserve">
+    <value>Impossibile eliminare le righe selezionate!</value>
+  </data>
+  <data name="AHE_OpenInNotepadError" xml:space="preserve">
+    <value>Impossibile caricare il file Hosts nell'editor testo selezionato!</value>
+  </data>
+  <data name="AHE_UrlOpenError" xml:space="preserve">
+    <value>Impossibile caricare l'URL nel browser web predefinito!</value>
+  </data>
+  <data name="AHE_OpenShellError" xml:space="preserve">
+    <value>Impossibile visualizzare il file Hosts nel file manager predefinito!</value>
+  </data>
+  <data name="AHE_ExitConfirmation" xml:space="preserve">
+    <value>Exit {0} without saving changes?</value>
+  </data>
+  <data name="AHE_LibraryVersionMissmatch" xml:space="preserve">
+    <value>La versione della libreria principale non corrisponde alla versione dell'applicazione. Reinstallala o segnala il problema agli sviluppatori.</value>
+  </data>
+  <data name="AHE_LangPrefix" xml:space="preserve">
+    <value>it</value>
+  </data>
+  <data name="AHE_ChmFileNotFound" xml:space="preserve">
+    <value>Il file di sistema della guida offline non è installato o non è supportato dalla lingua del programma selezionata!</value>
+  </data>
+  <data name="AHE_ShowHelpError" xml:space="preserve">
+    <value>Impossibile avviare il visualizzatore della guida offline con la pagina della documentazione richiesta!</value>
+  </data>
+  <data name="AHE_IncorrectHostname" xml:space="preserve">
+    <value>È stato inserito un nome host errato!</value>
+  </data>
+  <data name="AHE_RestartAsAdminError" xml:space="preserve">
+    <value>Impossibile riavviare l'applicazione con diritti di amministratore!</value>
+  </data>
+  <data name="AHE_RestartAsAdminNotImplemented" xml:space="preserve">
+    <value>Il riavvio dell'applicazione non è ancora stato implementato nella piattaforma attuale!</value>
+  </data>
+  <data name="AHE_RestartAsAdminQuestion" xml:space="preserve">
+    <value>Vuoi riavviare questa applicazione come amministratore?</value>
+  </data>
+  <data name="AHE_RestartAsAdminRunning" xml:space="preserve">
+    <value>Questa applicazione è già in esecuzione con diritti di amministratore!</value>
+  </data>
+  <data name="AHE_AppStatusRO" xml:space="preserve">
+    <value>S/L</value>
+  </data>
+  <data name="AHE_ImportSettingsError" xml:space="preserve">
+    <value>Impossibile importare le impostazioni da una versione precedente dell'applicazione! Tutte le impostazioni verranno ripristinate ai valori predefiniti.</value>
+  </data>
+  <data name="AHE_LogFileNotFound" xml:space="preserve">
+    <value>Il file registro eventi è vuoto o non esiste!</value>
+  </data>
+  <data name="AHE_ShowLogFileError" xml:space="preserve">
+    <value>Impossibile visualizzare il file registro eventi debug!</value>
+  </data>
+  <data name="AHE_NewVersionAvailable" xml:space="preserve">
+    <value>È disponibile un nuovo aggiornamento per {0}. Ti consigliamo di eseguire l'aggiornamento il prima possibile tramite Guida - Verifica aggiornamenti o manualmente.</value>
+  </data>
+  <data name="AHE_ClipboardNonIPAddress" xml:space="preserve">
+    <value>Gli appunti non contengono un indirizzo IP valido!</value>
+  </data>
+  <data name="AHE_ClipboardNonHostname" xml:space="preserve">
+    <value>Gli appunti non contengono un nome host valido!</value>
+  </data>
+  <data name="AHE_Exported" xml:space="preserve">
+    <value>Il file Hosts è stato esportato correttamente</value>
+  </data>
+  <data name="AHE_ExportException" xml:space="preserve">
+    <value>Attenzione! Si è verificato un errore durante l'esportazione nel file. Forse non disponi dei diritti sufficienti per farlo o qualcuno sta bloccando i tentativi di scrittura.</value>
+  </data>
+  <data name="AHE_Imported" xml:space="preserve">
+    <value>Il contenuto è stato importato e aggiunto correttamente alla tabella!</value>
+  </data>
+  <data name="AHE_ImportFileNotFound" xml:space="preserve">
+    <value>Il file selezionato per l'importazione non è stato trovato!</value>
+  </data>
+  <data name="AHE_ImportFileException" xml:space="preserve">
+    <value>Si è verificato un errore durante l'importazione del file selezionato!</value>
+  </data>
+  <data name="AHE_ClipboardNonComment" xml:space="preserve">
+    <value>Gli appunti non contengono un commento valido!</value>
+  </data>
+  <data name="AHE_ClipboardFormatError" xml:space="preserve">
+    <value>Impossibile incollare le righe dagli appunti a causa di un errore di formato!</value>
+  </data>
+  <data name="AHE_IncorrectComment" xml:space="preserve">
+    <value>È stato inserito un commento errato!</value>
+  </data>
+  <data name="MO_OptionsSaved" xml:space="preserve">
+    <value>Le opzioni sono state correttamente salvate!</value>
+  </data>
+  <data name="UP_UpdateAvailable" xml:space="preserve">
+    <value>È disponibile l'aggiornamento dell'applicazione. Nuova versione: {0}.</value>
+  </data>
+  <data name="UP_UpdateCheckFailure" xml:space="preserve">
+    <value>Controllo aggiornamenti non riuscito. Riprova più tardi.</value>
+  </data>
+  <data name="UP_DownloadFailure" xml:space="preserve">
+    <value>Si è verificato un errore durante il download del programma di installazione della nuova versione dal server remoto!
+L'applicazione non è stata aggiornata.</value>
+  </data>
+  <data name="UP_HashMissmatch" xml:space="preserve">
+    <value>Il programma di installazione scaricato ha un hash errato!
+Potrebbe essere stato danneggiato durante il trasferimento.
+Riprova più tardi.</value>
+  </data>
+  <data name="UP_LatestInstalled" xml:space="preserve">
+    <value>L'applicazione è aggiornata!</value>
+  </data>
+  <data name="UP_UpdateNotAvailable" xml:space="preserve">
+    <value>Nessun nuovo aggiornamento disponibile.
+L'applicazione è aggiornata.</value>
+  </data>
+  <data name="UP_OtherPlatform" xml:space="preserve">
+    <value>È disponibile una nuova versione {0}, ma gli aggiornamenti automatici non sono supportati in questa piattaforma.
+Vuoi aprire in un browser web la pagina del registro delle modifiche, inclusi i collegamenti per il download?</value>
+  </data>
+  <data name="UP_DownloadSuccessful" xml:space="preserve">
+    <value>La nuova versione è stata correttamente scaricata.
+Ora verrà installata!</value>
+  </data>
+  <data name="UP_WorkInProgress" xml:space="preserve">
+    <value>Controllo aggiornamenti...</value>
+  </data>
+  <data name="AF_Version" xml:space="preserve">
+    <value>Versione: {0}</value>
+  </data>
+  <data name="UP_InstallUpdateError" xml:space="preserve">
+    <value>Si è verificato un errore durante il tentativo di scaricare e installare l'aggiornamento dell'applicazione!</value>
+  </data>
+  <data name="UP_RetryUpdateCheck" xml:space="preserve">
+    <value>Nuovo tentativo controllo aggiornamenti. Attendi...</value>
+  </data>
+  <data name="UP_RetryUpdateCheckQuestion" xml:space="preserve">
+    <value>Vuoi riprovare il controllo aggiornamenti?</value>
+  </data>
+  <data name="UP_StartUpdateInstallerFailure" xml:space="preserve">
+    <value>Si è verificato un errore durante il tentativo di eseguire il programma di installazione della nuova versione!
+L'applicazione non è stata aggiornata.</value>
+  </data>
+</root>
