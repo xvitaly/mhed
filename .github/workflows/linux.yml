@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - name: Fetching sources
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Updating apt package metadata
       run: |
         sudo apt-get update
